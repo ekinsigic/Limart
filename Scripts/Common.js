@@ -18,6 +18,7 @@ $(document).ready(function () {
     checkDevice();
     scrollEvents();
     setGlobals();
+    popupSettings();
 
     openCloseMenu();
 });
@@ -70,6 +71,40 @@ function scrollEvents() {
         }
     });
 }
+
+
+
+function popupSettings() {
+    if (deviceIs != 'smartphone') {
+        $(document).keydown(function (e) {
+            if (e.keyCode == 27) {
+                if (isSearchMenuActive) {
+                    openOrCloseSearchMenu();
+                }
+            }
+        });
+
+        $('html').click(function () {
+            if (isSearchMenuActive) {
+                openOrCloseSearchMenu();
+            }
+        });
+
+        $('#search').click(function (e) {
+            e.stopPropagation();
+        });
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 function openCloseMenu() {
     if (isMobile) {
@@ -164,5 +199,22 @@ function openCloseMenu() {
         $('.divNav').bind('click', function (e) {
             e.stopPropagation();
         });
+    }
+}
+
+
+
+
+var isSearchMenuActive = false;
+
+function openOrCloseSearchMenu() {
+    if (!isSearchMenuActive) {
+        isSearchMenuActive = true;
+        $('#search').stop(true, false).animate({ top: 90 });
+        $('#search input').focus();
+    }
+    else {
+        $('#search').stop(true, false).animate({ top: 30 });
+        isSearchMenuActive = false;
     }
 }

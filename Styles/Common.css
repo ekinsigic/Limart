@@ -2,7 +2,7 @@
 #search{
     position:fixed;
     z-index:15;
-    top:90px;
+    top:30px;
     width:100%;
     height:60px;
     background-color:#ececef;
@@ -19,10 +19,11 @@
     right:0;
     width:12px;
     height:12px;
-    background-image:url('../Images/search.png');
-    background-repeat:no-repeat;
-    background-size:contain;
-    border-bottom:0 !important;
+}
+
+#search .aSearchButton img{
+    width:100%;
+    height:auto;
 }
 
 

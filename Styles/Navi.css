@@ -44,14 +44,18 @@ nav .divNav ul.level1 > li .aSearch:link,
 nav .divNav ul.level1 > li .aSearch:visited{
     width:12px;
     height:12px;
-    background-image:url('../Images/search.png');
-    background-repeat:no-repeat;
-    background-size:contain;
     border-bottom:0 !important;
 }
 
 nav .divNav ul.level1 > li .aSearch:hover,
 nav .divNav ul.level1 > li .aSearch:active{
+}
+
+nav .divNav ul.level1 > li .aSearch img{
+    position:absolute;
+    top:1px;
+    width:100%;
+    height:auto;
 }
 
 

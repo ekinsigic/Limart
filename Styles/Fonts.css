@@ -82,7 +82,7 @@
 
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'NovaCond';
 	src: url('../fonts/ProximaNovaCondSemiboldIt.eot');
 	src: local('☺'), url('../fonts/ProximaNovaCondSemiboldIt.woff') format('woff'), url('../fonts/ProximaNovaCondSemiboldIt.ttf') format('truetype'), url('../fonts/ProximaNovaCondSemiboldIt.svg') format('svg');
 	font-weight: 500;
@@ -90,7 +90,7 @@
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'NovaCond';
 	src: url('../fonts/ProximaNovaCondSemibold.eot');
 	src: local('☺'), url('../fonts/ProximaNovaCondSemibold.woff') format('woff'), url('../fonts/ProximaNovaCondSemibold.ttf') format('truetype'), url('../fonts/ProximaNovaCondSemibold.svg') format('svg');
 	font-weight: 500;
@@ -98,7 +98,7 @@
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'NovaCond';
 	src: url('../fonts/ProximaNovaCondRegularIt.eot');
 	src: local('☺'), url('../fonts/ProximaNovaCondRegularIt.woff') format('woff'), url('../fonts/ProximaNovaCondRegularIt.ttf') format('truetype'), url('../fonts/ProximaNovaCondRegularIt.svg') format('svg');
 	font-weight: 400;
@@ -106,7 +106,7 @@
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'NovaCond';
 	src: url('../fonts/ProximaNovaCondRegular.eot');
 	src: local('☺'), url('../fonts/ProximaNovaCondRegular.woff') format('woff'), url('../fonts/ProximaNovaCondRegular.ttf') format('truetype'), url('../fonts/ProximaNovaCondRegular.svg') format('svg');
 	font-weight: 400;
@@ -114,7 +114,7 @@
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'NovaCond';
 	src: url('../fonts/ProximaNovaCondLightIt.eot');
 	src: local('☺'), url('../fonts/ProximaNovaCondLightIt.woff') format('woff'), url('../fonts/ProximaNovaCondLightIt.ttf') format('truetype'), url('../fonts/ProximaNovaCondLightIt.svg') format('svg');
 	font-weight: 300;
@@ -122,7 +122,7 @@
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'NovaCond';
 	src: url('../fonts/ProximaNovaCondLight.eot');
 	src: local('☺'), url('../fonts/ProximaNovaCondLight.woff') format('woff'), url('../fonts/ProximaNovaCondLight.ttf') format('truetype'), url('../fonts/ProximaNovaCondLight.svg') format('svg');
 	font-weight: 300;

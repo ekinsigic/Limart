@@ -1,0 +1,200 @@
+﻿footer{
+    margin:auto;
+    width:100%;
+    padding:0 0 30px 0;
+    border:1px solid #f00;
+}
+
+footer .divContent{
+    position:relative;
+    margin:auto;
+    height:24px;
+}
+
+footer .divContent .aLogo{
+    position:absolute;
+    top:0;
+    left:0;
+    width:66px;
+    height:auto; 
+}
+
+footer .divContent .aLogo img{
+    width:100%;
+    height:auto; 
+}
+
+
+
+/* ul level 1 */
+footer .divContent ul.level1{
+    display:table;
+    position:absolute;
+    top:10px;
+    right:0;
+}
+
+footer .divContent ul.level1 li{
+    display:table-cell;
+    position:relative;
+}
+
+footer .divContent ul.level1 li a:link,
+footer .divContent ul.level1 li a:visited{
+    margin:0 0 0 31px;
+    text-decoration:none;
+    color:#000;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.10em;
+    border-bottom:2px solid transparent;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+footer .divContent ul.level1 li a:hover,
+footer .divContent ul.level1 li a:active{
+}
+
+
+
+
+footer .divContent > span{
+    display:inline-block;
+    color:#000;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.08em;
+}
+
+footer .divContent ul.level2{
+    display:table;
+    position:absolute;
+    top:4px;
+    right:0;
+}
+
+footer .divContent ul.level2 li{
+    display:table-cell;
+    position:relative;
+}
+
+footer .divContent ul.level2 li a:link,
+footer .divContent ul.level2 li a:visited{
+    text-decoration:none;
+    color:#ccc;
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:0.08em;
+    border-bottom:2px solid transparent;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+footer .divContent ul.level2 li a:hover,
+footer .divContent ul.level2 li a:active{
+}
+
+footer .divContent ul.level2 .liSeparator{
+    margin:0 15px 0 15px;
+}
+
+footer .divContent ul.level2 .liSeparator span{
+    display:block;
+    width:1px;
+    height:8px;
+    margin:0 15px 0 15px;
+    background-color:#ccc;
+}
+
+
+footer .divLine{
+    margin:30px auto 30px auto;
+    width:1280px;
+    height:1px;
+    background-color:#e5e5e5;
+}
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 1018px) {
+   footer .divContent{
+        width:670px;
+        border:1px solid #000;
+   }
+
+    footer .divContent ul.level2 li a:link,
+    footer .divContent ul.level2 li a:visited{
+        font-size:11px;
+    }
+
+    footer .divLine{
+        width:100%;
+   }
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    footer .divContent{
+        width:960px;
+    }
+}
+
+@media all and (min-width: 1435px) {
+   footer .divContent{
+        width:1080px;
+    }
+}
+
+
+
+/* Smartphone & Tablet (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (max-device-width : 599px),
+screen and (orientation : landscape) and (max-device-width : 760px),
+screen and (orientation : portrait) and (min-device-width : 600px), 
+screen and (orientation : landscape) and (min-device-width : 761px){
+    
+}
+
+/* Smartphone (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (max-device-width : 599px),
+screen and (orientation : landscape) and (max-device-width : 760px){
+    footer .divContent{
+        width:100%;
+    }
+}
+
+/* Smartphone (portrait) */
+@media only screen and (orientation : portrait) and (max-device-width : 599px) {
+    
+}
+
+/* Smartphone (landscape) */
+@media only screen and (orientation : landscape) and (max-device-width : 760px) {
+
+}
+
+
+
+
+/* Tablet - (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (min-device-width : 600px), 
+screen and (orientation : landscape) and (min-device-width : 761px) {
+    
+}
+
+/* Tablet (portrait) */
+@media only screen and (orientation : portrait) and (min-device-width : 600px) {
+    
+}
+
+/* Tablet (landscape) */
+@media only screen and (orientation : landscape) and (min-device-width : 761px) {
+   
+}

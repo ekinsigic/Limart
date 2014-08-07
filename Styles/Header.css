@@ -1,0 +1,65 @@
+﻿header{
+    width:100%; 
+    background-color:#fff;
+}
+
+header .divContent{
+    position:relative;
+    margin:auto;
+    height:90px;
+}
+
+header .divContent .aLogo:link,
+header .divContent .aLogo:visited{
+    display:block;
+    position:absolute;
+    z-index:15;
+    top:25px;
+    left:0;
+    width:106px;
+    height:39px;
+}
+
+header .divContent .aLogo:hover,
+header .divContent .aLogo:active{
+
+}
+
+header .divContent .aLogo img{
+    width:100%;
+    height:auto;
+}
+
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+    header .divContent{
+        width:340px;
+    }
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+    header .divContent{
+        width:550px;
+    }
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    header .divContent{
+        width:670px;
+    }
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    header .divContent{
+        width:960px;
+    }
+}
+
+@media all and (min-width: 1435px) {
+   header .divContent{
+        width:1080px;
+    }
+}

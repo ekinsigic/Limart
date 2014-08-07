@@ -1,0 +1,129 @@
+﻿main{
+    margin:auto;
+    width:1280px;
+}
+
+
+
+/* BREADCRUMBS */
+#breadcrumbs{
+    position:relative;
+    width:100%;
+    padding:10px 0 10px 40px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#breadcrumbs ul.breadcrumbs {
+    float:left;
+}
+
+#breadcrumbs ul.breadcrumbs li {
+    display:block;
+    float:left;
+}
+
+#breadcrumbs ul.breadcrumbs li img{
+    width:5px;
+}
+
+#breadcrumbs ul.breadcrumbs li a:link,
+#breadcrumbs ul.breadcrumbs li a:visited {
+    text-decoration:none;
+    font-size:16px;
+    color:#000;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+#breadcrumbs ul.breadcrumbs li a:hover,
+#breadcrumbs ul.breadcrumbs li a:active {
+    color:#9e9e9d;
+}
+
+#breadcrumbs ul.breadcrumbs li.active{
+    font-size:16px;
+    color:#9e9e9d;
+}
+
+#breadcrumbs ul.breadcrumbs .liSeparator{
+    padding:4px 5px 0 5px;
+}
+/* END - BREADCRUMBS */
+
+
+
+
+/* PAGE HEADER */
+#pageHeader{
+    position:relative;
+    width:100%;
+    padding:10px 0 10px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+/* END - PAGE HEADER */
+
+
+
+
+/* Screen */
+@media all and (max-width: 1018px) {
+
+}
+
+@media all  and (min-width: 1019px) and (max-width: 1434px) {
+
+}
+
+@media all and (min-width: 1435px) {
+
+}
+
+
+
+/* Smartphone & Tablet (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (max-device-width : 599px),
+screen and (orientation : landscape) and (max-device-width : 760px),
+screen and (orientation : portrait) and (min-device-width : 600px), 
+screen and (orientation : landscape) and (min-device-width : 761px){
+    
+}
+
+
+
+/* Smartphone (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (max-device-width : 599px),
+screen and (orientation : landscape) and (max-device-width : 760px){
+    
+}
+
+/* Smartphone (portrait) */
+@media only screen and (orientation : portrait) and (max-device-width : 599px) {
+
+}
+
+/* Smartphone (landscape) */
+@media only screen and (orientation : landscape) and (max-device-width : 760px) {
+
+}
+
+
+
+
+/* Tablet (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (min-device-width : 600px), 
+screen and (orientation : landscape) and (min-device-width : 761px) {
+    
+}
+
+/* Tablet (portrait) */
+@media only screen and (orientation : portrait) and (min-device-width : 600px) {
+    
+}
+
+/* Tablet (landscape) */
+@media only screen and (orientation : landscape) and (min-device-width : 761px) {
+   
+}

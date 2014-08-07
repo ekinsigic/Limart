@@ -1,0 +1,401 @@
+﻿.overlayA {
+    position:fixed;
+    z-index:5;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:#000;
+    opacity:0.5;
+    display:none;
+}
+
+
+
+
+
+.aArrow.up{
+    position:absolute;
+    top:25px;
+    right:25px;
+    width:13px;
+    height:7px;
+}
+
+.aArrow.right{
+    position:absolute;
+    top:5px;
+    right:10px;
+    width:7px;
+    height:13px;
+}
+
+.aArrow.down{
+    position:absolute;
+    top:25px;
+    right:10px;
+    width:13px;
+    height:7px;
+}
+
+.aArrow.left{
+    position:absolute;
+    top:5px;
+    right:25px;
+    width:7px;
+    height:13px;
+}
+
+.aArrow img{
+    width:100%;
+    height:auto;
+}
+
+
+
+
+
+.aButton:link,
+.aButton:visited{
+    width:15px;
+    height:22px;
+}
+
+.aButton:hover,
+.aButton:active{
+
+}
+
+.aButton img{
+    width:100%;
+    height:auto;
+}
+
+
+
+
+
+.aCloseA:link,
+.aCloseA:visited{
+    position:absolute;
+    width:13px;
+    height:13px;
+    top:10px;
+    right:50px;
+}
+
+.aCloseA:hover,
+.aCloseA:active{
+
+}
+
+.aCloseA img{
+    width:100%;
+    height:auto;
+}
+
+
+
+
+
+.aCloseB:link,
+.aCloseB:hover{
+    position:absolute;
+    width:13px;
+    height:13px;
+    top:10px;
+    right:50px;
+}
+
+.aCloseB:hover,
+.aCloseB:active{
+
+}
+
+.aCloseB img{
+    width:100%;
+    height:auto;
+}
+
+
+
+
+
+.aCloseC {
+    position:absolute;
+    z-index:1;
+    top:20px;
+    right:300px;
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+
+.aCloseC div {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5px;
+    margin-top: -4px;
+    width: 3px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.aCloseC div:nth-child(1) {
+    border-radius: 0px 0px 5px 5px;
+    transform: rotate(-45deg) translate(0px,5px);
+    -webkit-transform: rotate(-45deg) translate(0px,5px);
+    -moz-transform: rotate(-45deg) translate(0px,5px);
+    -ms-transform: rotate(-45deg) translate(0px,5px);
+    -o-transform: rotate(-45deg) translate(0px,5px);
+}
+
+.aCloseC div:nth-child(2) {
+    border-radius: 5px 5px 0px 0px;
+    transform: rotate(45deg) translate(0px,-5px);
+    -webkit-transform: rotate(45deg) translate(0px,-5px);
+    -moz-transform: rotate(45deg) translate(0px,-5px);
+    -ms-transform: rotate(45deg) translate(0px,-5px);
+    -o-transform: rotate(45deg) translate(0px,-5px);
+}
+
+.aCloseC div:nth-child(3) {
+    border-radius: 0px 0px 5px 5px;
+    transform: rotate(-45deg) translate(0px,-5px);
+    -webkit-transform: rotate(-45deg) translate(0px,-5px);
+    -moz-transform: rotate(-45deg) translate(0px,-5px);
+    -ms-transform: rotate(-45deg) translate(0px,-5px);
+    -o-transform: rotate(-45deg) translate(0px,-5px);
+}
+
+.aCloseC div:nth-child(4) {
+    border-radius: 0px 0px 5px 5px;
+    transform: rotate(45deg) translate(0px,5px);
+    -webkit-transform: rotate(45deg) translate(0px,5px);
+    -moz-transform: rotate(45deg) translate(0px,5px);
+    -ms-transform: rotate(45deg) translate(0px,5px);
+    -o-transform: rotate(45deg) translate(0px,5px);
+}
+
+
+
+
+
+
+.socialsA{
+    position:absolute;
+    z-index:20;
+    top:50px;
+    right:50px;
+    width:auto;
+}
+
+.socialsA li{
+    float:left;
+}
+
+.socialsA li a:link,
+.socialsA li a:visited{
+    display:block;
+    padding:10px;
+    border:2px solid #fff;
+    border-right:1px solid #fff;
+    border-left:1px solid #fff;
+    opacity:0.5;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+.socialsA li a:hover,
+.socialsA li a:active{
+    opacity:1;
+}
+
+.socialsA li a span {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+}
+
+.socialsA li .aGeneric span{
+    background-image:url('../Images/share.png');
+}
+
+.socialsA li .aFacebook span{
+    background-image:url('../Images/facebook.png');
+}
+
+.socialsA li .aTwitter span{
+    background-image:url('../Images/twitter.png');
+}
+
+.socialsA li .aInstagram span{
+    background-image:url('../Images/instagram.png');
+}
+
+.socialsA li .aWhatsapp span{
+    background-image:url('../Images/whatsapp.png');
+}
+
+.socialsA li .aLinked span{
+    background-image:url('../Images/link.png');
+}
+
+.socialsA li .aGoogleplus span{
+    background-image:url('../Images/gplus.png');
+}
+
+.socialsA li .aPinterest span{
+    background-image:url('../Images/pinterest.png');
+}
+
+
+
+
+
+.socialsB{
+    position:absolute;
+    top:50px;
+    right:0;
+    width:auto;
+}
+
+.socialsB li{
+    float:left;
+}
+
+.socialsB li a:link,
+.socialsB li a:visited{
+    display:block;
+    padding:6px;
+    border:2px solid #000;
+    border-right:1px solid #000;
+    border-left:1px solid #000;
+    opacity:0.4;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+.socialsB li a:hover,
+.socialsB li a:active{
+    opacity:1;
+}
+
+.socialsB li a span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+}
+
+.socialsB li .aGeneric span{
+    background-image:url('../Images/share-black.png');
+}
+
+.socialsB li .aFacebook span{
+    background-image:url('../Images/facebook-black.png');
+}
+
+.socialsB li .aTwitter span{
+    background-image:url('../Images/twitter-black.png');
+}
+
+.socialsB li .aInstagram span{
+    background-image:url('../Images/instagram-black.png');
+}
+
+.socialsB li .aWhatsapp span{
+    background-image:url('../Images/whatsapp-black.png');
+}
+
+.socialsB li .aLinked span{
+    background-image:url('../Images/link-black.png');
+}
+
+.socialsB li .aGoogleplus span{
+    background-image:url('../Images/gplus-black.png');
+}
+
+.socialsB li .aPinterest span{
+    background-image:url('../Images/pinterest-black.png');
+}
+
+
+
+
+
+.socialsC{
+    position:absolute;
+    top:0;
+    left:0;
+    width:auto;
+}
+
+.socialsC li{
+    float:left;
+}
+
+.socialsC li a:link,
+.socialsC li a:visited{
+    display:block;
+    padding:6px;
+    border:2px solid #fff;
+    border-right:1px solid #fff;
+    border-left:1px solid #fff;
+    opacity:0.5;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+.socialsC li a:hover,
+.socialsC li a:active{
+    opacity:1;
+}
+
+.socialsC li a span {
+    display:block;
+    width: 20px;
+    height: 20px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+}
+
+.socialsC li .aGeneric span{
+    background-image:url('../Images/share.png');
+}
+
+.socialsC li .aFacebook span{
+    background-image:url('../Images/facebook.png');
+}
+
+.socialsC li .aTwitter span{
+    background-image:url('../Images/twitter.png');
+}
+
+.socialsC li .aInstagram span{
+    background-image:url('../Images/instagram.png');
+}
+
+.socialsC li .aWhatsapp span{
+    background-image:url('../Images/whatsapp.png');
+}
+
+.socialsC li .aLinked span{
+    background-image:url('../Images/link.png');
+}
+
+.socialsC li .aGoogleplus span{
+    background-image:url('../Images/gplus.png');
+}
+
+.socialsC li .aPinterest span{
+    background-image:url('../Images/pinterest.png');
+}

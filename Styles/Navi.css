@@ -1,0 +1,180 @@
+﻿
+nav{
+    position:relative;
+    width:100%;
+    height:90px;
+}
+
+nav .divNav{
+    position:absolute;
+    z-index:0;
+    top:38px;
+    right:0;
+}
+
+nav .divNav ul.level1{
+    display:table;
+}
+
+nav .divNav ul.level1 > li{
+    display:table-cell;
+    position:relative;
+}
+
+nav .divNav ul.level1 > li a:link,
+nav .divNav ul.level1 > li a:visited{
+    margin:0 0 0 31px;
+    padding-bottom:10px;
+    text-decoration:none;
+    color:#000;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.10em;
+    border-bottom:2px solid transparent;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+nav .divNav ul.level1 > li a:hover,
+nav .divNav ul.level1 > li a:active{
+    border-bottom:2px solid #2f3140;
+}
+
+
+nav .divNav ul.level1 > li .aSearch:link,
+nav .divNav ul.level1 > li .aSearch:visited{
+    width:12px;
+    height:12px;
+    background-image:url('../Images/search.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    border-bottom:0 !important;
+}
+
+nav .divNav ul.level1 > li .aSearch:hover,
+nav .divNav ul.level1 > li .aSearch:active{
+}
+
+
+
+nav .divNavIcon{
+    display:none;
+    position:absolute;
+    z-index:10;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:#fff;
+}
+
+nav .divNavIcon .imgNav{
+    position:absolute;
+    top:35px;
+    right:0;
+    width:24px;
+    padding:5px 0 5px 5px;
+    box-sizing:border-box;
+}
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 1018px) {
+    nav .divNav{
+        top:-110px;
+        width:100%;
+        height:200px;
+        background-color:#fff2ad;
+    }
+
+    nav .divNav  ul.level1 > li{
+        display:table-row;
+    }
+
+    nav .divNavIcon{
+         display:block;
+    }
+
+
+     /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
+    .menuOn {
+        -webkit-transform:translate3d(0px,200px,0px);
+        -moz-transform:translate3d(0px,200px,0px);
+        -ms-transform:translate3d(0px,200px,0px);
+        -o-transform:translate3d(0px,200px,0px);
+        transform:translate3d(0px,200px,0px);
+    }
+
+    nav .divNav, main, footer {
+        transition:transform 0.5s;
+    }
+    /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
+
+}
+
+@media all  and (min-width: 1019px) and (max-width: 1274px) {
+    
+}
+
+@media all and (min-width: 1275px) and (max-width: 1360px) {
+    
+}
+
+@media all and (min-width: 1361px) {
+   
+}
+
+
+
+/* Smartphone & Tablet (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (max-device-width : 599px),
+screen and (orientation : landscape) and (max-device-width : 760px),
+screen and (orientation : portrait) and (min-device-width : 600px), 
+screen and (orientation : landscape) and (min-device-width : 761px){
+    
+}
+
+
+
+/* Smartphone (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (max-device-width : 599px),
+screen and (orientation : landscape) and (max-device-width : 760px){
+    nav .divNavIcon .imgNav{
+         margin-right:10px;
+    }
+}
+
+/* Smartphone (portrait) */
+@media only screen and (orientation : portrait) and (max-device-width : 599px) {
+
+}
+
+/* Smartphone (landscape) */
+@media only screen and (orientation : landscape) and (max-device-width : 760px) {
+
+}
+
+
+
+
+/* Tablet - (portrait and landscape) */
+@media only 
+screen and (orientation : portrait) and (min-device-width : 600px), 
+screen and (orientation : landscape) and (min-device-width : 761px) {
+    
+}
+
+/* Tablet (portrait) */
+@media only screen and (orientation : portrait) and (min-device-width : 600px) {
+    
+}
+
+/* Tablet (landscape) */
+@media only screen and (orientation : landscape) and (min-device-width : 761px) {
+   
+}

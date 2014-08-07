@@ -1,0 +1,238 @@
+﻿
+/* LOGIN WINDOW */
+#divMembership{
+    position:fixed;
+    left:50%;
+    top:50%;
+    z-index:20;
+    margin:-288px 0 0 -363px;
+    width:726px;
+    height:577px;
+    background-color:#fff;
+    display:none;
+}
+
+#divMembership .aCloseB:link,
+#divMembership .aCloseB:visited{
+    z-index:15;
+    top:10px;
+    right:10px;
+}
+
+#divMembership .aCloseB:hover,
+#divMembership .aCloseB:active{
+}
+
+#divMembership .divContent{
+    position:absolute; 
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    border:1px solid #000;
+}
+
+#divMembership .divLogin{
+    position:absolute;
+    z-index:5;
+    top:0;
+    left:0;
+    width:363px;
+    height:577px;
+    background-color:#f8f8f8;
+}
+
+#divMembership .divLogin h4.faceD,
+#divMembership .divNewMemberForm h4.faceD{
+    margin:30px 0 20px 50px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+
+
+
+#divMembership .divLogin .inputStyleA,
+#divMembership .divNewMemberForm .inputStyleA{
+    margin-left:50px;
+    width:260px;
+    height:50px;
+    color:#555;
+    letter-spacing:1px;
+}
+
+.inputStyleA::-webkit-input-placeholder { /* WebKit browsers */
+    color:#555;
+}
+
+.inputStyleA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#555;
+}
+
+.inputStyleA::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#555;
+}
+
+.inputStyleA:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#555;
+}
+
+
+
+#divMembership .divLogin .divRememberMe ,
+#divMembership .divNewMemberForm .divAgreement {
+    display:inline-block;
+    margin:18px 0 18px 55px;
+}
+
+/* Checkbox */
+#divMembership .divRememberMe input[type=checkbox] ,
+#divMembership .divAgreement input[type=checkbox] {
+    display:none;
+}
+
+#divMembership .divRememberMe .labelStyleA,
+#divMembership .divAgreement .labelStyleA{
+    float:right;
+    cursor:pointer;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+#divMembership .divRememberMe .labelStyleA:hover ,
+#divMembership .divAgreement .labelStyleA:hover {
+    color:#000;
+}
+
+#divMembership .divRememberMe label:before,
+#divMembership .divAgreement label:before  {  
+    display: inline-block;  
+    position: absolute;  
+    left: 0;  
+    bottom:-3px;
+    width: 16px;  
+    height: 16px;  
+    background-color: transparent;  
+    border:1px solid #e5e5e5;
+    content: "";  
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}  
+
+#divMembership .divRememberMe input[type=checkbox]:checked + label:before ,
+#divMembership .divAgreement input[type=checkbox]:checked + label:before {  
+    background-color:#000;
+    border:1px solid #000;
+}
+
+#divMembership .divRememberMe input[type=checkbox]:checked ~ label,
+#divMembership .divAgreement input[type=checkbox]:checked ~ label{  
+    color:#000;
+}
+/* END - Checkbox */
+
+
+#divMembership .divLogin .aForgotPass:link,
+#divMembership .divLogin .aForgotPass:visited{
+    display:block;
+    float:right;
+    margin:19px 55px 0 0;
+    color:#a3a3a3;
+    font-size:12px;
+    letter-spacing:0.050em;
+    text-decoration:none;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+#divMembership .divLogin .aForgotPass:hover,
+#divMembership .divLogin .aForgotPass:active{
+    color:#000;
+}
+
+#divMembership .divLogin .aFacebook:link,
+#divMembership .divLogin .aFacebook:visited{
+    display:block;
+    width:225px;
+    margin:30px auto 30px auto;
+    padding:12px 30px 12px 42px;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:1px;
+    background-color:#3a55a2;
+    background-image:url('../Images/facebook.png');
+    background-repeat:no-repeat;
+    background-position:left 13px center;
+    background-size:15px;
+}
+
+#divMembership .divLogin .aFacebook:hover,
+#divMembership .divLogin .aFacebook:active{
+
+}
+
+#divMembership .divLogin .aNewMember{
+    display:block;
+    width:80px;
+    margin:auto;
+}
+
+#divMembership .divLogin .aNewMember span{
+    float:left;
+    color:#a3a3a3;
+}
+
+#divMembership .divLogin .aNewMember img{
+    float:left;
+    width:9px;
+    margin:1px 0 0 10px;
+}
+
+
+#divMembership .divNewMemberForm{
+    position:absolute;
+    z-index:5;
+    top:0;
+    right:0;
+    width:363px;
+    height:577px;
+    background-color:#f8f8f8;
+}
+
+#divMembership .divNewMemberForm .aStyleA{
+    float:left;
+    margin:0 0 0 55px;
+    color:#555;
+    font-size:11px;
+    text-decoration:underline;
+}
+
+#divMembership .divNewMemberForm .aStyleA.privacy{
+    text-decoration:underline;
+    font-weight:400;
+    letter-spacing:0;
+    float:right;
+    margin:0 55px 0 0;
+}
+
+#divMembership .divNewMemberForm .inputStyleB{
+    margin-top:10px;
+}
+
+#divMembership .divNewMemberForm .aBack{
+    display:block;
+    width:100px;
+    margin:12px 0 0 50px;
+}
+
+#divMembership .divNewMemberForm .aBack span{
+    float:left;
+    margin-top:3px;
+    color:#a3a3a3;
+    font-size:12px;
+}
+
+#divMembership .divNewMemberForm .aBack img{
+    float:left;
+    width:9px;
+    margin:0 10px 0 0;
+}

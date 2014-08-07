@@ -4,7 +4,7 @@ select option,
 button,
 label,
 textarea{
-    font-family:'Proxima Nova';
+    font-family:'Nova';
 }
 
 input[type="text"]{
@@ -81,28 +81,28 @@ textarea{
 /* Customized */
 .inputStyleA{
     float:right;
-    margin:19px 45px 10px 0;
+    margin:19px 45px 10px 0 !important;
     padding:0 !important;
-    width:460px !important;
+    width:470px !important;
     height:20px !important;
+    color:#000 !important;
     text-align:right;
-    font-family:'Proxima Nova'!important
+    font-family:'Nova' !important;
     border:0 !important;
     background-color:transparent;
 }
 
 .inputStyleA::-webkit-input-placeholder { /* WebKit browsers */
-    color:#ff0;
 }
 .inputStyleA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:#ff0;
 }
 .inputStyleA::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:#ff0;
 }
 .inputStyleA:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:#ff0;
 }
+
+
+
 
 
 .inputStyleB{
@@ -148,6 +148,7 @@ textarea{
 
 
 
+
 .textareaStyleA{
 
 }
@@ -155,6 +156,7 @@ textarea{
 .textareaStyleB{
 
 }
+
 
 
 

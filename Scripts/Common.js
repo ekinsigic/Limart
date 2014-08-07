@@ -203,14 +203,6 @@ function openCloseMenu() {
     }
 }
 
-<<<<<<< HEAD
-function miscImgLoader() {
-    $('body').find('img.miscImg').each(function(){
-        var miscIdentifier = $(this).attr('data-misc-identifier');
-        $(this).attr('src','images/'+miscIdentifier+'.png')
-    });
-=======
-
 
 
 var isSearchMenuActive = false;
@@ -225,5 +217,4 @@ function openOrCloseSearchMenu() {
         $('#search').stop(true, false).animate({ top: 30 });
         isSearchMenuActive = false;
     }
->>>>>>> FETCH_HEAD
 }

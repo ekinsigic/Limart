@@ -136,6 +136,10 @@ nav .divNavIcon .imgNav{
 
     nav .divNav, main, footer {
         transition:transform 0.5s;
+        -webkit-transition:-webkit-transform 0.5s;
+        -moz-transition:-moz-transform 0.5s;
+        -ms-transition:-ms-transform 0.5s;
+        -o-transition:-o-transform 0.5s;
     }
     /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
 

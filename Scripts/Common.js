@@ -20,12 +20,12 @@ $(document).ready(function () {
     setGlobals();
     popupSettings();
 
-    miscImgLoader();
     openCloseMenu();
+    openOrCloseSearch();
 });
 
 
-$(window).resize(function () {m
+$(window).resize(function () {
     setGlobals();
 });
 
@@ -76,33 +76,20 @@ function scrollEvents() {
 
 
 function popupSettings() {
-    if (deviceIs != 'smartphone') {
-        $(document).keydown(function (e) {
-            if (e.keyCode == 27) {
-                if (isSearchMenuActive) {
-                    openOrCloseSearchMenu();
-                }
-            }
-        });
+    $(document).keydown(function (e) {
+        if (e.keyCode == 27) {
+            closeSearch();
+        }
+    });
 
-        $('html').click(function () {
-            if (isSearchMenuActive) {
-                openOrCloseSearchMenu();
-            }
-        });
+    $('html').click(function () {
+        closeSearch();
+    });
 
-        $('#search').click(function (e) {
-            e.stopPropagation();
-        });
-    }
+    $('#search').click(function (e) {
+        e.stopPropagation();
+    });
 }
-
-
-
-
-
-
-
 
 
 
@@ -192,7 +179,6 @@ function openCloseMenu() {
             setTimeout(function () {
                 isMenuOpen = false;
                 isScroll = false;
-                console.log(isScroll);
                 $(window).unbind("touchmove");
             }, 300);
         });
@@ -205,16 +191,30 @@ function openCloseMenu() {
 
 
 
-var isSearchMenuActive = false;
 
-function openOrCloseSearchMenu() {
-    if (!isSearchMenuActive) {
-        isSearchMenuActive = true;
-        $('#search').stop(true, false).animate({ top: 90 });
-        $('#search input').focus();
+var isSearchActive = false;
+
+function openOrCloseSearch() {
+    if (!isMobile) {
+
+        $('nav .liSearch img').bind('click', function (e) {
+            if (!isSearchActive) {
+                isSearchActive = true;
+                $('#search').addClass('topSearch');
+                $('#search input').focus();
+            }
+            else {
+                closeSearch();
+            }
+        });
     }
-    else {
-        $('#search').stop(true, false).animate({ top: 30 });
-        isSearchMenuActive = false;
+}
+
+function closeSearch() {
+    if (isSearchActive) {
+        $('#search').removeClass('topSearch');
+        setTimeout(function () {
+            isSearchActive = false;
+        }, 300);
     }
 }

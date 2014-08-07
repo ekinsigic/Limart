@@ -1,12 +1,16 @@
 ﻿header{
+    position:fixed;
+    z-index:20;
+    top:0;
+    left:0;
     width:100%; 
-    background-color:#fff;
+    height:90px;
+    background-color:#b6ff00;
 }
 
 header .divContent{
-    position:relative;
     margin:auto;
-    height:90px;
+    height:100%;
 }
 
 header .divContent .aLogo:link,
@@ -53,6 +57,10 @@ header .divContent .aLogo img{
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
+    header{
+        border:1px solid #f00;
+    }
+
     header .divContent{
         width:960px;
     }

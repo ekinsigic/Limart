@@ -1,8 +1,7 @@
 ﻿
 nav{
-    position:relative;
     width:100%;
-    height:90px;
+    height:100%;
 }
 
 nav .divNav{
@@ -65,6 +64,14 @@ nav .divNavIcon{
     right:0;
     bottom:0;
     left:0;
+}
+
+nav .divNavIcon .divNavIconBg {
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    height:90px;
     background-color:#fff;
 }
 
@@ -82,16 +89,35 @@ nav .divNavIcon .imgNav{
 
 
 /* Screen */
-@media all and (max-width: 1018px) {
+@media all and (max-width: 400px) {
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
     nav .divNav{
+        position:fixed;
         top:-110px;
-        width:100%;
+        right:0;
+        left:0;
         height:200px;
         background-color:#fff2ad;
     }
 
+    nav .divNav .divNavContent{
+        margin:auto;
+        width:670px;
+        border:1px solid #f00;
+    }
+
     nav .divNav  ul.level1 > li{
-        display:table-row;
+        display:block;
+    }
+
+    nav .divNav ul.level1 > li a:link,
+    nav .divNav ul.level1 > li a:visited{
+        margin:0;
     }
 
     nav .divNavIcon{
@@ -115,66 +141,10 @@ nav .divNavIcon .imgNav{
 
 }
 
-@media all  and (min-width: 1019px) and (max-width: 1274px) {
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
     
 }
 
-@media all and (min-width: 1275px) and (max-width: 1360px) {
-    
-}
-
-@media all and (min-width: 1361px) {
-   
-}
-
-
-
-/* Smartphone & Tablet (portrait and landscape) */
-@media only 
-screen and (orientation : portrait) and (max-device-width : 599px),
-screen and (orientation : landscape) and (max-device-width : 760px),
-screen and (orientation : portrait) and (min-device-width : 600px), 
-screen and (orientation : landscape) and (min-device-width : 761px){
-    
-}
-
-
-
-/* Smartphone (portrait and landscape) */
-@media only 
-screen and (orientation : portrait) and (max-device-width : 599px),
-screen and (orientation : landscape) and (max-device-width : 760px){
-    nav .divNavIcon .imgNav{
-         margin-right:10px;
-    }
-}
-
-/* Smartphone (portrait) */
-@media only screen and (orientation : portrait) and (max-device-width : 599px) {
-
-}
-
-/* Smartphone (landscape) */
-@media only screen and (orientation : landscape) and (max-device-width : 760px) {
-
-}
-
-
-
-
-/* Tablet - (portrait and landscape) */
-@media only 
-screen and (orientation : portrait) and (min-device-width : 600px), 
-screen and (orientation : landscape) and (min-device-width : 761px) {
-    
-}
-
-/* Tablet (portrait) */
-@media only screen and (orientation : portrait) and (min-device-width : 600px) {
-    
-}
-
-/* Tablet (landscape) */
-@media only screen and (orientation : landscape) and (min-device-width : 761px) {
-   
+@media all and (min-width: 1435px) {
 }

@@ -19,11 +19,12 @@ $(document).ready(function () {
     scrollEvents();
     setGlobals();
 
+    miscImgLoader();
     openCloseMenu();
 });
 
 
-$(window).resize(function () {
+$(window).resize(function () {m
     setGlobals();
 });
 
@@ -165,4 +166,11 @@ function openCloseMenu() {
             e.stopPropagation();
         });
     }
+}
+
+function miscImgLoader() {
+    $('body').find('img.miscImg').each(function(){
+        var miscIdentifier = $(this).attr('data-misc-identifier');
+        $(this).attr('src','images/'+miscIdentifier+'.png')
+    });
 }

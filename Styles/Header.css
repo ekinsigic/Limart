@@ -57,10 +57,6 @@ header .divContent .aLogo img{
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    header{
-        border:1px solid #f00;
-    }
-
     header .divContent{
         width:960px;
     }

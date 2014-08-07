@@ -156,6 +156,7 @@ function openCloseMenu() {
             setTimeout(function () {
                 isMenuOpen = false;
                 isScroll = false;
+                console.log(isScroll);
                 $(window).unbind("touchmove");
             }, 300);
         });

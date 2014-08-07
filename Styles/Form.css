@@ -80,7 +80,15 @@ textarea{
 
 /* Customized */
 .inputStyleA{
-    margin-bottom:10px;
+    float:right;
+    margin:19px 45px 10px 0;
+    padding:0 !important;
+    width:460px !important;
+    height:20px !important;
+    text-align:right;
+    font-family:'Proxima Nova'!important
+    border:0 !important;
+    background-color:transparent;
 }
 
 .inputStyleA::-webkit-input-placeholder { /* WebKit browsers */

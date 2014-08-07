@@ -128,9 +128,9 @@ footer .divLine{
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px){
-   footer .divContent{
+    footer .divContent{
         width:670px;
-   }
+    }
 
     footer .divContent ul.level2 li a:link,
     footer .divContent ul.level2 li a:visited{

@@ -10,20 +10,6 @@ footer .divContent{
     height:24px;
 }
 
-footer .divContent .aLogo{
-    position:absolute;
-    top:0;
-    left:0;
-    width:66px;
-    height:auto; 
-}
-
-footer .divContent .aLogo img{
-    width:100%;
-    height:auto; 
-}
-
-
 
 /* ul level 1 */
 footer .divContent ul.level1{

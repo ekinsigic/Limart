@@ -19,22 +19,19 @@ nav .divNav ul.level1 li{
     display:table-cell;
 }
 
-nav .divNav ul.level1 li a:link,
-nav .divNav ul.level1 li a:visited{
+nav .divNav ul.level1 li a.faceA:link,
+nav .divNav ul.level1 li a.faceA:visited{
     margin:0 0 0 31px;
     padding-bottom:10px;
     text-decoration:none;
-    color:#000;
-    font-size:13px;
-    font-weight:500;
     letter-spacing:0.11em;
     border-bottom:2px solid transparent;
     transition:all 0.5s;
     -webkit-transition:all 0.5s;
 }
 
-nav .divNav ul.level1 li a:hover,
-nav .divNav ul.level1 li a:active{
+nav .divNav ul.level1 li a.faceA:hover,
+nav .divNav ul.level1 li a.faceA:active{
     border-bottom:2px solid #2f3140;
 }
 
@@ -117,8 +114,8 @@ nav .divNavIcon .imgNav{
         display:none;
     }
 
-    nav .divNav ul.level1 > li a:link,
-    nav .divNav ul.level1 > li a:visited{
+    nav .divNav ul.level1 > li a.faceA:link,
+    nav .divNav ul.level1 > li a.faceA:visited{
         margin:0;
     }
 
@@ -129,6 +126,7 @@ nav .divNavIcon .imgNav{
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
     .menuOn {
+        display:block;
         -webkit-transform:translate3d(0px,200px,0px);
         -moz-transform:translate3d(0px,200px,0px);
         -ms-transform:translate3d(0px,200px,0px);

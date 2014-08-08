@@ -24,31 +24,25 @@ footer .divContent ul.level1 li{
     position:relative;
 }
 
-footer .divContent ul.level1 li a:link,
-footer .divContent ul.level1 li a:visited{
+footer .divContent ul.level1 li a.faceL:link,
+footer .divContent ul.level1 li a.faceL:visited{
     margin:0 0 0 31px;
     text-decoration:none;
-    color:#000;
-    font-size:13px;
-    font-weight:500;
     letter-spacing:0.10em;
     border-bottom:2px solid transparent;
     transition:all 0.5s;
     -webkit-transition:all 0.5s;
 }
 
-footer .divContent ul.level1 li a:hover,
-footer .divContent ul.level1 li a:active{
+footer .divContent ul.level1 li a.faceL:hover,
+footer .divContent ul.level1 li a.faceL:active{
 }
 
 
 
 
-footer .divContent > span{
+footer .divContent span.faceM{
     display:inline-block;
-    color:#000;
-    font-size:12px;
-    font-weight:700;
     letter-spacing:0.08em;
 }
 
@@ -64,8 +58,8 @@ footer .divContent ul.level2 li{
     position:relative;
 }
 
-footer .divContent ul.level2 li a:link,
-footer .divContent ul.level2 li a:visited{
+footer .divContent ul.level2 li a.faceN:link,
+footer .divContent ul.level2 li a.faceN:visited{
     text-decoration:none;
     color:#ccc;
     font-size:12px;
@@ -76,8 +70,8 @@ footer .divContent ul.level2 li a:visited{
     -webkit-transition:all 0.5s;
 }
 
-footer .divContent ul.level2 li a:hover,
-footer .divContent ul.level2 li a:active{
+footer .divContent ul.level2 li a.faceN:hover,
+footer .divContent ul.level2 li a.faceN:active{
 }
 
 footer .divContent ul.level2 .liSeparator{
@@ -118,18 +112,16 @@ footer .divLine{
         width:670px;
     }
 
-    footer .divContent ul.level2 li a:link,
-    footer .divContent ul.level2 li a:visited{
+    footer .divContent ul.level2 li a.faceN:link,
+    footer .divContent ul.level2 li a.faceN:visited{
         font-size:11px;
     }
-
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
     footer .divContent{
         width:960px;
     }
-    
 }
 
 @media all and (min-width: 1435px) {

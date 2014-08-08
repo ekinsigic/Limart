@@ -282,73 +282,22 @@ img[data-sixtythree="logotype-white"] {
 
 
 .socialsA{
-    position:absolute;
-    z-index:20;
-    top:50px;
-    right:50px;
-    width:auto;
+    margin:50px auto 0 auto !important;
+    width:195px;
 }
 
 .socialsA li{
     float:left;
+    margin-left:10px;
 }
 
 .socialsA li a:link,
 .socialsA li a:visited{
     display:block;
-    padding:10px;
-    border:2px solid #fff;
-    border-right:1px solid #fff;
-    border-left:1px solid #fff;
-    opacity:0.5;
-    transition:all 0.5s;
-    -webkit-transition:all 0.5s;
 }
 
 .socialsA li a:hover,
 .socialsA li a:active{
-    opacity:1;
-}
-
-.socialsA li a span {
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-size:contain;
-}
-
-.socialsA li .aGeneric span{
-    background-image:url('../Images/share.png');
-}
-
-.socialsA li .aFacebook span{
-    background-image:url('../Images/facebook.png');
-}
-
-.socialsA li .aTwitter span{
-    background-image:url('../Images/twitter.png');
-}
-
-.socialsA li .aInstagram span{
-    background-image:url('../Images/instagram.png');
-}
-
-.socialsA li .aWhatsapp span{
-    background-image:url('../Images/whatsapp.png');
-}
-
-.socialsA li .aLinked span{
-    background-image:url('../Images/link.png');
-}
-
-.socialsA li .aGoogleplus span{
-    background-image:url('../Images/gplus.png');
-}
-
-.socialsA li .aPinterest span{
-    background-image:url('../Images/pinterest.png');
 }
 
 

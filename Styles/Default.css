@@ -21,4 +21,44 @@
 #mainEntry .divText{
     position:absolute;
     z-index:5;
+    left:50%;
+    margin-left:-540px;
+    width:1080px;
+    border:1px solid #f00;
+}
+
+#mainEntry .divText .faceB{
+    letter-spacing:15px;
+}
+
+#mainEntry .divText .faceC{
+    letter-spacing:17px;
+}
+
+
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px){
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    #mainEntry .divText{
+        width:960px;
+        margin-left:-480px;
+    }
+}
+
+@media all and (min-width: 1435px) {
+    
 }

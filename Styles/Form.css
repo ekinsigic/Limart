@@ -116,16 +116,15 @@ textarea{
 
 /* Customized */
 .inputTextA{
-    float:right;
-    margin:19px 45px 10px 0 !important;
-    padding:0 !important;
-    width:470px !important;
-    height:20px !important;
-    color:#000 !important;
-    text-align:right;
-    font-family:'Nova' !important;
-    border:0 !important;
+    padding:0 40px 0 20px !important;
+    width:205px !important;
+    height:36px !important;
+    color:#231f20 !important;
+    font-size:12px !important;
+    font-weight:400 !important;
+    letter-spacing:0.05em !important;
     background-color:transparent;
+    border:1px solid #e5e5e5 !important;
 }
 
 .inputTextA::-webkit-input-placeholder { /* WebKit browsers */
@@ -145,6 +144,9 @@ textarea{
     color:#fff !important;
     background-color:#b5b5b5 !important;
 }
+
+
+
 
 
 

@@ -1,27 +1,38 @@
 ﻿footer{
-    margin:auto;
+    margin:100px auto 0 auto;
     width:100%;
-    padding:0 0 30px 0;
+    padding:30px 0 100px 0;
 }
 
 footer .divContent{
-    position:relative;
     margin:auto;
-    height:24px;
+    height:70px;
+}
+
+footer .aLogo{
+    display:inline-block;
+    position:absolute;
+    top:5px;
+    left:50%;
+    margin-left:-33px;
 }
 
 
 /* ul level 1 */
 footer .divContent ul.level1{
     display:table;
-    position:absolute;
-    top:10px;
-    right:0;
+    float:left;
+    margin-top:30px;
 }
 
 footer .divContent ul.level1 li{
     display:table-cell;
     position:relative;
+}
+
+footer .divContent ul.level1 li a:link,
+footer .divContent ul.level1 li a:visited{
+     font-size:12px;
 }
 
 footer .divContent ul.level1 li a:hover,
@@ -30,19 +41,41 @@ footer .divContent ul.level1 li a:active{
 }
 
 
+footer .divContent .divMailingContent{
+    float:right;
+    margin-top:16px;
+}
+
+footer .divContent .divMailingContent .aButton{
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height:36px;
+}
+
+footer .divContent .divMailingContent .aButton img{
+    width:15px;
+    margin-top:14px;
+    margin-left:12px;
+}
 
 
 
+footer .divContent .spanStyleA{
+    float:left;
+    margin-top:28px;
+}
+
+/* ul level 2 */
 footer .divContent ul.level2{
     display:table;
-    position:absolute;
-    top:4px;
-    right:0;
+    float:right;
+    margin-top:28px;
 }
 
 footer .divContent ul.level2 li{
     display:table-cell;
-    position:relative;
 }
 
 footer .divContent ul.level2 .liSeparator{
@@ -58,7 +91,7 @@ footer .divContent ul.level2 .liSeparator span{
 }
 
 footer .divLine{
-    margin:30px auto 30px auto;
+    margin:0 auto 0 auto;
     max-width:1280px;
     width:100%;
     height:1px;
@@ -72,9 +105,55 @@ footer .divLine{
 
 /* Screen */
 @media all and (max-width: 400px) {
+    footer .divContent{
+        width:100%;
+        height:auto;
+    }
+
+    footer .divContent.first,
+    footer .divLine.two,
+    footer .divLine.three{
+        display:none;
+    }
+
+    footer .divContent .spanStyleA{
+        position:absolute;
+        top:260px;
+        left:50%;
+        margin-left:-75px;
+        width:150px;
+        font-size:13px;
+    }
+
+    footer .divContent ul.level2{
+        margin:30px auto 30px auto !important;
+        width:100%;
+    }
+
+    footer .divContent ul.level2 li{
+        display:block;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    footer .divContent ul.level2 li.liSeparator{
+        display:none;
+    }
+
+    footer .divContent ul.level2 li a{
+        display:block;
+        padding:20px 0 20px 0;
+        text-align:center;
+        color:#d0d0d0;
+        font-size:14px;
+    }
+
+    footer .socialsA{
+        margin-top:80px !important;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+    
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px){
@@ -82,9 +161,34 @@ footer .divLine{
         width:670px;
     }
 
+    footer .divContent.first,
+    footer .divLine.two{
+        display:none;
+    }
+
+    footer .divContent .spanStyleA{
+        position:absolute;
+        top:72px;
+        left:50%;
+        margin-left:-68px;
+        width:135px;
+    }
+
+    footer .divContent ul.level2{
+        margin:0 auto 0 auto !important;
+        padding-top:28px;
+        float:none;
+    }
+
     footer .divContent ul.level2 li a{
         font-size:11px;
     }
+
+    footer .socialsA{
+        margin-top:85px !important;
+        opacity:0.1;
+    }
+
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
@@ -94,7 +198,7 @@ footer .divLine{
 }
 
 @media all and (min-width: 1435px) {
-   footer .divContent{
+    footer .divContent{
         width:1080px;
     }
 }

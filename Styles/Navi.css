@@ -43,13 +43,10 @@ nav .divNav ul.level1 .liSearch {
 }
 
 nav .divNav ul.level1 .liSearch img {
-    position:absolute;
-    top:-6px;
-    right:0;
-    width:22px;
-    padding:5px;
     cursor:pointer;
+    width: 10px;
     opacity:0.2;
+    height: 10px;
 }
 
 
@@ -114,7 +111,6 @@ nav .divNavIcon .imgNav{
     }
 
     nav .divNav ul.level1 .liSearch{
-        display:none;
     }
 
     nav .divNav ul.level1 > li a:link,

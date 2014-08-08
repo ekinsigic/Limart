@@ -15,32 +15,32 @@
 /* THESE STYLES ARE FOR LIMART SPECIFIC - NOT A PART OF STOP63 DEFAULT TEMPLATE */
 
 /* ICONS AND OTHERS */
-img[data-misc-identifier="arrow-next"] {
+img[data-sixtythree="arrow-next"] {
     width:24px;
     height:11px;
 }
 
-img[data-misc-identifier="arrow-down"]{
+img[data-sixtythree="arrow-down"]{
     width:11px;
     height:24px;
 }
 
-img[data-misc-identifier="arrow-previous"]{
+img[data-sixtythree="arrow-previous"]{
     width:24px;
     height:11px;
 }
 
-img[data-misc-identifier="arrow-up"]{
+img[data-sixtythree="arrow-up"]{
     width:11px;
     height:24px;
 }
 
-img[data-misc-identifier="icon-search"] {
+img[data-sixtythree="icon-search"] {
     width: 12px;
     height: 12px;
 }
 
-img[data-misc-identifier="icon-room-view"] {
+img[data-sixtythree="icon-room-view"] {
     display: block;
     width: 18px;
     height: 12px;
@@ -53,7 +53,7 @@ img[data-misc-identifier="icon-room-view"] {
     opacity: 0.3;
 }
 
-img[data-misc-identifier="icon-share"] {
+img[data-sixtythree="icon-share"] {
     display: block;
     width: 13px;
     height: 14px;
@@ -66,7 +66,7 @@ img[data-misc-identifier="icon-share"] {
     opacity: 0.3;
 }
 
-img[data-misc-identifier="icon-zoom-in"] {
+img[data-sixtythree="icon-zoom-in"] {
     display: block;
     width: 24px;
     height: 24px;
@@ -74,39 +74,48 @@ img[data-misc-identifier="icon-zoom-in"] {
     opacity: 0.3;
 }
 
-.mergerLine1 {
-
+img[data-sixtythree="icon-social-*"] {
+    display: block;
+    width: 36px;
+    height: 36px;
+    box-sizing:content-box;
+    opacity: 0.3;
 }
+
 /* END - ICONS AND OTHERS */
 
 
 
 
 /* LOGOTYPE */
-img[data-misc-identifier="logotype-symbol"] {
+img[data-sixtythree="logotype-symbol"] {
     width: 33px;
     height: 33px;
     transition:all 0.15s;
 }
 
-img[data-misc-identifier="logotype-symbol"]:hover {
+img[data-sixtythree="logotype-symbol"]:hover {
     -webkit-transform:rotate(-47deg);
 }
 
-img[data-misc-identifier="logotype-symbol"]:active {
+img[data-sixtythree="logotype-symbol"]:active {
     -webkit-transform:rotate(0deg);
 }
 
-img[data-misc-identifier="logotype"] {
+img[data-sixtythree="logotype"] {
     width: 106px;
     height: 39px;
 }
 
-img[data-misc-identifier="logotype"].smallLogo {
+img[data-sixtythree="logotype"].smallLogo {
     width: 66px;
     height: 24px;
     transition:all 0.15s;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 /* END LOGOTYPE */
 
 

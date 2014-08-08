@@ -38,12 +38,14 @@ button{
     cursor: pointer;
     transition:all 0.2s;
 }
+
 input[type="button"]:hover,
 button:hover{
     background: #000;
     color: #fff;
     border: 3px solid #000;
 }
+
 input[type="button"]:active,
 button:active{
     background: #404040 !important;
@@ -54,12 +56,15 @@ button:active{
 input::-webkit-input-placeholder { /* WebKit browsers */
     color:#000;
 }
+
 input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color:#000;
 }
+
 input::-moz-placeholder { /* Mozilla Firefox 19+ */
     color:#000;
 }
+
 input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color:#000;
 }

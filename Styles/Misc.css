@@ -83,6 +83,22 @@
     img[data-misc-identifier="logotype-symbol"] {
         width: 33px;
         height: 33px;
+        transition:all 0.15s;
+    }
+    img[data-misc-identifier="logotype-symbol"]:hover {
+        -webkit-transform:rotate(45deg);
+    }
+    img[data-misc-identifier="logotype-symbol"] {
+        -webkit-transform:rotate(0deg);
+    }
+    img[data-misc-identifier="logotype"] {
+        width: 106px;
+        height: 39px;
+    }
+    img[data-misc-identifier="logotype"].smallLogo {
+        width: 66px;
+        height: 24px;
+        transition:all 0.15s;
     }
 
 

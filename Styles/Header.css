@@ -20,21 +20,7 @@ header .divContent .aLogo:visited{
     z-index:15;
     top:25px;
     left:0;
-    width:106px;
-    height:39px;
 }
-
-header .divContent .aLogo:hover,
-header .divContent .aLogo:active{
-
-}
-
-header .divContent .aLogo img{
-    width:100%;
-    height:auto;
-}
-
-
 
 
 /* Screen */

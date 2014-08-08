@@ -96,27 +96,27 @@ function popupSettings() {
 
 function openCloseMenu() {
     if (isMobile) {
-        var isMenuOpen = false;//Menünün açık olup olmadığını kontrol etmek için, sayfa başlangıcında kapalı varsayıyoruz.
-        $('nav .imgNav').bind('touchstart', function (e) {//imgNav class'lı div'e dokunma işlemi başladığında..
-            e.stopPropagation();//sayfanın gerisine eklenen window.touchstart işleminden muaf tutuyoruz.
-            var isScroll = false;//kullanıcının scroll amaçlı dokunup dokunmadığını tespit etmek için dokunma işleminin başında scroll amaçlı dokunmadığını varsayıyoruz.
-            $(this).bind('touchmove', function () {//kullanıcının ekrana dokunduğu parmağını hareket ettirmesi durumunda sayfaya scroll amaçlı dokunduğunu deklare ediyoruz.
+        var isMenuOpen = false;//MenÃ¼nÃ¼n aÃ§Ã½k olup olmadÃ½Ã°Ã½nÃ½ kontrol etmek iÃ§in, sayfa baÃ¾langÃ½cÃ½nda kapalÃ½ varsayÃ½yoruz.
+        $('nav .imgNav').bind('touchstart', function (e) {//imgNav class'lÃ½ div'e dokunma iÃ¾lemi baÃ¾ladÃ½Ã°Ã½nda..
+            e.stopPropagation();//sayfanÃ½n gerisine eklenen window.touchstart iÃ¾leminden muaf tutuyoruz.
+            var isScroll = false;//kullanÃ½cÃ½nÃ½n scroll amaÃ§lÃ½ dokunup dokunmadÃ½Ã°Ã½nÃ½ tespit etmek iÃ§in dokunma iÃ¾leminin baÃ¾Ã½nda scroll amaÃ§lÃ½ dokunmadÃ½Ã°Ã½nÃ½ varsayÃ½yoruz.
+            $(this).bind('touchmove', function () {//kullanÃ½cÃ½nÃ½n ekrana dokunduÃ°u parmaÃ°Ã½nÃ½ hareket ettirmesi durumunda sayfaya scroll amaÃ§lÃ½ dokunduÃ°unu deklare ediyoruz.
                 isScroll = true;
             });
-            $(this).one('touchend', function (e) {//kullanıcının parmağını kaldırması durumunda..
-                if (!isMenuOpen && !isScroll) {//eğer menü kapalıysa, ve eylem scroll amaçlı değilse..
-                    isMenuOpen = true;//değişkenleri eski haline getiriyoruz
+            $(this).one('touchend', function (e) {//kullanÃ½cÃ½nÃ½n parmaÃ°Ã½nÃ½ kaldÃ½rmasÃ½ durumunda..
+                if (!isMenuOpen && !isScroll) {//eÃ°er menÃ¼ kapalÃ½ysa, ve eylem scroll amaÃ§lÃ½ deÃ°ilse..
+                    isMenuOpen = true;//deÃ°iÃ¾kenleri eski haline getiriyoruz
                     isScroll = false;
-                    $('nav .divNav, main, footer').addClass('menuOn');//aşağı doğru hareket etmesini istediğimiz elementlere aşağı doğru hareket etmiş hallerini içeren class'ı ekliyoruz
-                    e.stopPropagation();//sayfanın gerisine eklenen window.touchend işleminden muaf tutuyoruz.
-                    $(window).bind('touchmove', function (e) {//sayfanın scroll olmasını engelliyoruz
+                    $('nav .divNav, main, footer').addClass('menuOn');//aÃ¾aÃ°Ã½ doÃ°ru hareket etmesini istediÃ°imiz elementlere aÃ¾aÃ°Ã½ doÃ°ru hareket etmiÃ¾ hallerini iÃ§eren class'Ã½ ekliyoruz
+                    e.stopPropagation();//sayfanÃ½n gerisine eklenen window.touchend iÃ¾leminden muaf tutuyoruz.
+                    $(window).bind('touchmove', function (e) {//sayfanÃ½n scroll olmasÃ½nÃ½ engelliyoruz
                         e.preventDefault();
                     });
                 }
-                else if (isMenuOpen && !isScroll) {//eğer menü açıktıysa, ve eylem scroll amaçlı değilse..
-                    $('nav .divNav, main, footer').removeClass('menuOn');//verdiğimiz, elementleri aşağıda gösteren class'ı geri alıyoruz.
-                    setTimeout(function () {//setTimeout kurarak kullanıcıyı animasyonu beklemek zorunda bırakıyoruz
-                        //tespit değişkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
+                else if (isMenuOpen && !isScroll) {//eÃ°er menÃ¼ aÃ§Ã½ktÃ½ysa, ve eylem scroll amaÃ§lÃ½ deÃ°ilse..
+                    $('nav .divNav, main, footer').removeClass('menuOn');//verdiÃ°imiz, elementleri aÃ¾aÃ°Ã½da gÃ¶steren class'Ã½ geri alÃ½yoruz.
+                    setTimeout(function () {//setTimeout kurarak kullanÃ½cÃ½yÃ½ animasyonu beklemek zorunda bÃ½rakÃ½yoruz
+                        //tespit deÃ°iÃ¾kenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
                         isMenuOpen = false;
                         isScroll = false;
                         $(window).unbind("touchmove");
@@ -126,7 +126,7 @@ function openCloseMenu() {
             });
         });
 
-        $(window).bind('touchstart', function () {//kullanıcının sayfanın herhangi bir yerine tıklaması durumunda menünün kapanmasını sağlıyoruz.
+        $(window).bind('touchstart', function () {//kullanÃ½cÃ½nÃ½n sayfanÃ½n herhangi bir yerine tÃ½klamasÃ½ durumunda menÃ¼nÃ¼n kapanmasÃ½nÃ½ saÃ°lÃ½yoruz.
             $('.divNav, main, footer').removeClass('menuOn');
 
             setTimeout(function () {
@@ -145,7 +145,7 @@ function openCloseMenu() {
             });
         });
 
-        $('.divNav').bind('touchstart', function (e) {//yukarıda sayfanın herhangi bir yerine basıldığında menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
+        $('.divNav').bind('touchstart', function (e) {//yukarÃ½da sayfanÃ½n herhangi bir yerine basÃ½ldÃ½Ã°Ã½nda menÃ¼yÃ¼ kapatan fonksiyondan, menÃ¼nÃ¼n kendisini muaf tutuyoruz.
             e.stopPropagation();
             $(this).bind('touchend', function (e) {
                 e.stopPropagation();
@@ -189,6 +189,8 @@ function openCloseMenu() {
     }
 }
 
+
+// misc imajlarÄ±nÄ± sayfa aÃ§Ä±lÄ±ÅŸÄ±nda retina olup olmadÄŸÄ±na gÃ¶re yÃ¼kleme fonksiyonu
 function miscImgLoader() {
     $('body').find('img.miscImg').each(function(){
         var miscIdentifier = $(this).attr('data-misc-identifier');
@@ -201,6 +203,8 @@ function miscImgLoader() {
         }
     });
 }
+
+
 
 var isSearchActive = false;
 

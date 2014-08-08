@@ -10,26 +10,79 @@
     display:none;
 }
 
-img[data-misc-identifier="arrow-next"] {
-    width:24px;
-    height:11px;
-}
+/* THESE STYLES ARE FOR LIMART SPECIFIC - NOT A PART OF STOP63 DEFAULT TEMPLATE */
 
-img[data-misc-identifier="arrow-down"]{
-    width:11px;
-    height:24px;
-}
+    /* ICONS AND OTHERS */
 
-img[data-misc-identifier="arrow-previous"]{
-    width:24px;
-    height:11px;
-}
+        img[data-misc-identifier="arrow-next"] {
+            width:24px;
+            height:11px;
+        }
+
+        img[data-misc-identifier="arrow-down"]{
+            width:11px;
+            height:24px;
+        }
+
+        img[data-misc-identifier="arrow-previous"]{
+            width:24px;
+            height:11px;
+        }
 
 
-img[data-misc-identifier="arrow-up"]{
-    width:13px;
-    height:7px;
-}
+        img[data-misc-identifier="arrow-up"]{
+            width:11px;
+            height:24px;
+        }
+
+
+        img[data-misc-identifier="icon-search"] {
+            width: 12px;
+            height: 12px;
+        }
+
+        img[data-misc-identifier="icon-room-view"] {
+            width: 18px;
+            height: 12px;
+            display: block;
+            border: 1px solid rgba(0,0,0,0.66666666);
+            padding-top: 11px;
+            padding-bottom: 11px;
+            padding-left: 8px;
+            padding-right: 8px;
+            box-sizing:content-box;
+            opacity: 0.3;
+        }
+
+        img[data-misc-identifier="icon-share"] {
+            width: 13px;
+            height: 14px;
+            display: block;
+            border: 1px solid rgba(0,0,0,0.66666666);
+            padding-top: 11px;
+            padding-bottom: 9px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing:content-box;
+            opacity: 0.3;
+        }
+
+        img[data-misc-identifier="icon-zoom-in"] {
+            width: 24px;
+            height: 24px;
+            display: block;
+            box-sizing:content-box;
+            opacity: 0.3;
+        }
+
+    /* END - ICONS AND OTHERS */
+
+    /* LOGOTYPE */
+
+    img[data-misc-identifier="logotype-symbol"] {
+        
+    }
+
 
 .SmallArrow.right{
     width:24px;

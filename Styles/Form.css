@@ -18,6 +18,9 @@ input[type="text"]{
     font-weight:500;
 }
 
+
+
+
 /* DEFAULT BUTTON STYLE */
 input[type="button"],
 button{
@@ -46,100 +49,6 @@ button:active{
     background: #404040 !important;
     border: 3px solid #404040 !important;
 }
-        /* SMALL BUTTON STYLE */
-
-        input[type="button"].smallButton,
-        button.smallButton {
-            background: #000;
-            color: #fff;
-            border: 3px solid #000;
-            font-weight: 400;
-            padding: 10px 25px;
-            padding-top: 12px;
-        }
-        input[type="button"].smallButton:hover,
-        button.smallButton:hover {
-            background: #404040;
-            color: #fff;
-            border: 3px solid #404040;
-        }
-
-        /* END SMALL BUTTON STYLE */
-/* END - DEFAULT BUTTON STYLE */
-
-    /*PURPLE BUTTON STYLE */
-
-    input[type="button"].purpleButton,
-    button.purpleButton{
-        color: #4b4d63;
-    }
-    input[type="button"]:hover.purpleButton,
-    button:hover.purpleButton{
-        background: #4b4d63;
-        color: #fff;
-        border: 3px solid #4b4d63;
-    }
-    input[type="button"].purpleButton:active,
-    button.purpleButton:active{
-        background: #6f7182 !important;
-        border: 3px solid #6f7182 !important;
-    }
-
-        /* SMALL PURPLE BUTTON STYLE */
-
-        input[type="button"].smallButton.purpleButton,
-        button.smallButton.purpleButton {
-            background: #4b4d63;
-            color: #fff;
-            border: 3px solid #4b4d63;
-        }
-        input[type="button"].smallButton.purpleButton:hover,
-        button.smallButton.purpleButton:hover {
-            background: #6f7182;
-            color: #fff;
-            border: 3px solid #6f7182;
-        }
-        /* END SMALL PURPLE BUTTON STYLE */
-
-
-    /*END PURPLE BUTTON STYLE */
-
-
-    /*RED BUTTON STYLE */
-
-    input[type="button"].redButton,
-    button.redButton{
-        color: #dd354b;
-    }
-    input[type="button"].redButton:hover,
-    button.redButton:hover{
-        background: #dd354b;
-        color: #fff;
-        border: 3px solid #dd354b;
-    }
-    input[type="button"].redButton:active,
-    button.redButton:active{
-        background: #e0495d !important;
-        border: 3px solid #e0495d !important;
-    }
-        /* SMALL RED BUTTON STYLE */
-
-        input[type="button"].smallButton.redButton,
-        button.smallButton.redButton {
-            background: #dd354b;
-            color: #fff;
-            border: 3px solid #dd354b;
-        }
-        input[type="button"].smallButton.redButton:hover,
-        button.smallButton.redButton:hover {
-            background: #e0495d;
-            color: #fff;
-            border: 3px solid #e0495d;
-        }
-        /* END SMALL RED BUTTON STYLE */
-    /*END RED BUTTON STYLE */
-
-
 
 
 input::-webkit-input-placeholder { /* WebKit browsers */
@@ -189,7 +98,7 @@ textarea{
 
 
 /* Customized */
-.inputStyleA{
+.inputTextA{
     float:right;
     margin:19px 45px 10px 0 !important;
     padding:0 !important;
@@ -202,20 +111,17 @@ textarea{
     background-color:transparent;
 }
 
-.inputStyleA::-webkit-input-placeholder { /* WebKit browsers */
+.inputTextA::-webkit-input-placeholder { /* WebKit browsers */
 }
-.inputStyleA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.inputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 }
-.inputStyleA::-moz-placeholder { /* Mozilla Firefox 19+ */
+.inputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
 }
-.inputStyleA:-ms-input-placeholder { /* Internet Explorer 10+ */
+.inputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 
 
-
-
-
-.inputStyleB{
+.inputTextB{
     margin:auto;
     width:260px !important;
     height:50px !important;
@@ -227,15 +133,112 @@ textarea{
 
 
 
-.buttonStyleA{
 
+
+
+
+/* BUTTON STARTS HERE */
+
+/*PURPLE BUTTON STYLE */
+
+.buttonB{
+    color: #4b4d63;
+}
+.buttonB:hover{
+    background: #4b4d63;
+    color: #fff;
+    border: 3px solid #4b4d63;
+}
+.buttonB:active{
+    background: #6f7182 !important;
+    border: 3px solid #6f7182 !important;
 }
 
-.buttonStyleB{
+/* END PURPLE BUTTON STYLE */
 
+
+
+/*RED BUTTON STYLE */
+
+.buttonB{
+    color: #4b4d63;
+}
+.buttonB:hover{
+    background: #4b4d63;
+    color: #fff;
+    border: 3px solid #4b4d63;
+}
+.buttonB:active{
+    background: #6f7182 !important;
+    border: 3px solid #6f7182 !important;
 }
 
+/* END RED BUTTON STYLE */
 
+/*RED BUTTON STYLE */
+
+.buttonC{
+    color: #dd354b;
+}
+.buttonC:hover{
+    background: #dd354b;
+    color: #fff;
+    border: 3px solid #dd354b;
+}
+.buttonC:active{
+    background: #e0495d !important;
+    border: 3px solid #e0495d !important;
+}
+/* SMALL RED BUTTON STYLE */
+
+
+/* SMALL BUTTON STYLES */
+.buttonD{
+    background: #000;
+    color: #fff;
+    border: 3px solid #000;
+    font-weight: 400;
+    padding: 10px 25px;
+    padding-top: 12px;
+}
+.buttonD:hover {
+    background: #404040;
+    color: #fff;
+    border: 3px solid #404040;
+}
+
+.buttonE {
+    background: #4b4d63;
+    color: #fff;
+    border: 3px solid #4b4d63;
+    font-weight: 400;
+    padding: 10px 25px;
+    padding-top: 12px;
+}
+
+.buttonE:hover {
+    background: #6f7182;
+    color: #fff;
+    border: 3px solid #6f7182;
+}
+
+.buttonF {
+    background: #dd354b;
+    color: #fff;
+    border: 3px solid #dd354b;
+    font-weight: 400;
+    padding: 10px 25px;
+    padding-top: 12px;
+}
+.buttonF:hover {
+    background: #e0495d;
+    color: #fff;
+    border: 3px solid #e0495d;
+}
+
+/* END SMALL BUTTON STYLES */
+
+/* BUTTON ENDS HERE */
 
 
 

@@ -73,7 +73,7 @@ img[data-sixtythree="icon-zoom-in"] {
     box-sizing:content-box;
     opacity: 0.3;
 }
-
+/* SOCIAL MEDIA ICONS STYLES */
 img[data-sixtythree^="icon-social-"] {
     display: block;
     width: 36px;
@@ -89,7 +89,7 @@ img[data-sixtythree^="icon-social-"]:hover {
 img[data-sixtythree^="icon-social-"]:not('.white') {
     opacity: 0.1;
 }
-
+/*  END - SOCIAL MEDIA ICONS STYLES */
 
 /* END - ICONS AND OTHERS */
 

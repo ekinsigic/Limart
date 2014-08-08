@@ -12,7 +12,7 @@ var isPortrait = false;
 var scrollTopVal = 0;
 var scrollDir;
 var lastScrollAmount = 0;
-
+var ppi = 0;
 
 $(document).ready(function () {
     checkDevice();
@@ -20,8 +20,11 @@ $(document).ready(function () {
     setGlobals();
     popupSettings();
 
+    miscImgLoader();
     openCloseMenu();
     openOrCloseSearch();
+    // PPI = getPPI();
+    // console.log(PPI);
 });
 
 
@@ -29,7 +32,9 @@ $(window).resize(function () {
     setGlobals();
 });
 
-
+$(window).load(function(){
+    getPPI();
+});
 
 function setGlobals() {
     wW = $(window).width();
@@ -189,7 +194,24 @@ function openCloseMenu() {
     }
 }
 
+function miscImgLoader() {
+    $('body').find('img.miscImg').each(function(){
+        var miscIdentifier = $(this).attr('data-misc-identifier');
+        if (ppi() > 192) {
+        $(this).attr('src','images/'+miscIdentifier+'@2x.png');
+        }
+        else {
+        $(this).attr('src','images/'+miscIdentifier+'.png');
+        }
+    });
+}
 
+
+function getPPI(){
+         $('body').append('<div id="ppiObserver" style="width:1in; ">');
+         $('#ppiObserver').width('1in');
+         ppi = $('#ppiObserver').width();
+}
 
 
 var isSearchActive = false;

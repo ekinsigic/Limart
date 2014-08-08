@@ -24,13 +24,15 @@ nav .divNav ul.level1 .liSearch {
 }
 
 nav .divNav ul.level1 .liSearch img {
-    cursor:pointer;
+    position:absolute;
+    right:0;
     width: 10px;
-    opacity:0.2;
     height: 10px;
+    opacity:0.2;
+    cursor:pointer;
 }
 
-nav .divNav ul.level1 li .aStyleA{
+nav .divNav ul.level1 li a{
     padding-bottom:10px;
 }
 
@@ -96,6 +98,7 @@ nav .divNavIcon .imgNav{
     }
 
     nav .divNav ul.level1 .liSearch{
+        display:none;
     }
 
     nav .divNav ul.level1 li .aStyleA:link,

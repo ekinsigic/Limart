@@ -24,16 +24,10 @@ footer .divContent ul.level1 li{
     position:relative;
 }
 
-footer .divContent ul.level1 li a.aStyleA:link,
-footer .divContent ul.level1 li a.aStyleA:visited{
-
-}
-
-footer .divContent ul.level1 li a.aStyleA:hover,
-footer .divContent ul.level1 li a.aStyleA:active{
+footer .divContent ul.level1 li a:hover,
+footer .divContent ul.level1 li a:active{
      border-bottom:2px solid transparent;
 }
-
 
 
 
@@ -88,8 +82,7 @@ footer .divLine{
         width:670px;
     }
 
-    footer .divContent ul.level2 li a.faceN:link,
-    footer .divContent ul.level2 li a.faceN:visited{
+    footer .divContent ul.level2 li a{
         font-size:11px;
     }
 }

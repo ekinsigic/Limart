@@ -26,8 +26,8 @@ nav .divNav ul.level1 li a:visited{
     text-decoration:none;
     color:#000;
     font-size:13px;
-    font-weight:600;
-    letter-spacing:0.10em;
+    font-weight:500;
+    letter-spacing:0.11em;
     border-bottom:2px solid transparent;
     transition:all 0.5s;
     -webkit-transition:all 0.5s;
@@ -48,6 +48,7 @@ nav .divNav ul.level1 .liSearch img {
     width:22px;
     padding:5px;
     cursor:pointer;
+    opacity:0.2;
 }
 
 
@@ -109,6 +110,10 @@ nav .divNavIcon .imgNav{
 
     nav .divNav  ul.level1 > li{
         display:block;
+    }
+
+    nav .divNav ul.level1 .liSearch{
+        display:none;
     }
 
     nav .divNav ul.level1 > li a:link,

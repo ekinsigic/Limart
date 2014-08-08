@@ -112,6 +112,11 @@ img[data-sixtythree="logotype"].smallLogo {
     height: 24px;
     transition:all 0.15s;
 }
+
+img[data-sixtythree="logotype-white"] {
+    width: 122px;
+    height: 45px;
+}
 /* END LOGOTYPE */
 
 

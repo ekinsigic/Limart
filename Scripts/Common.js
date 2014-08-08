@@ -193,13 +193,11 @@ function miscImgLoader() {
     $('body').find('img.miscImg').each(function(){
         var miscIdentifier = $(this).attr('data-misc-identifier');
         if (window.devicePixelRatio >= 1.5) {
-        $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
-         $('main').append('<h1>'+window.devicePixelRatio+'</h1>');
+            $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
 
         }
         else {
-        $(this).attr('src','images/'+miscIdentifier+'.png');
-         $('main').append('<h1>'+window.devicePixelRatio+'</h1>');
+            $(this).attr('src','images/'+miscIdentifier+'.png');
         }
     });
 }

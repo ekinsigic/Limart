@@ -10,32 +10,23 @@
     display:none;
 }
 
-
-
-
-
-.BigArrow.up{
-    width:13px;
-    height:7px;
-}
-
 img[data-misc-identifier="arrow-next"] {
     width:24px;
     height:11px;
 }
 
-.BigArrow.down{
+img[data-misc-identifier="arrow-down"]{
     width:11px;
     height:24px;
 }
 
-.BigArrow.left{
-    width:7px;
-    height:13px;
+img[data-misc-identifier="arrow-previous"]{
+    width:24px;
+    height:11px;
 }
 
 
-.SmallArrow.up{
+img[data-misc-identifier="arrow-up"]{
     width:13px;
     height:7px;
 }

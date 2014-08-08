@@ -89,6 +89,15 @@ button:active{
 
     /*END RED BUTTON STYLE */
 
+    /* SMALL BUTTON STYLE */
+    input[type="button"].smallButton,
+    button.smallButton {
+        padding: 10px 35px;
+        padding-top: 12px;
+    }
+    /* END - SMALL BUTTON STYLE */
+
+
 
 input::-webkit-input-placeholder { /* WebKit browsers */
     color:#000;

@@ -76,6 +76,10 @@
 
         }
 
+        .mergerLine1 {
+
+        }
+
     /* END - ICONS AND OTHERS */
 
     /* LOGOTYPE */
@@ -101,6 +105,7 @@
         transition:all 0.15s;
     }
 
+/* END LOGOTYPE */
 
 .SmallArrow.right{
     width:24px;

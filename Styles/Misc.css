@@ -14,34 +14,43 @@
 
 
 
-.aArrow.up{
-    position:absolute;
-    top:25px;
-    right:25px;
+.BigArrow.up{
     width:13px;
     height:7px;
 }
 
-.aArrow.right{
-    position:absolute;
-    top:5px;
-    right:10px;
+img[data-misc-identifier="arrow-next"] {
+    width:24px;
+    height:11px;
+}
+
+.BigArrow.down{
+    width:11px;
+    height:24px;
+}
+
+.BigArrow.left{
     width:7px;
     height:13px;
 }
 
-.aArrow.down{
-    position:absolute;
-    top:25px;
-    right:10px;
+
+.SmallArrow.up{
     width:13px;
     height:7px;
 }
 
-.aArrow.left{
-    position:absolute;
-    top:5px;
-    right:25px;
+.SmallArrow.right{
+    width:24px;
+    height:11px;
+}
+
+.SmallArrow.down{
+    width:11px;
+    height:24px;
+}
+
+.SmallArrow.left{
     width:7px;
     height:13px;
 }
@@ -51,7 +60,15 @@
     height:auto;
 }
 
-
+.fontTest {
+    font-family: 'Nova';
+    font-size:10px;
+    line-height: 1.909;
+    color: black;
+    width: 100px;
+    text-align: center;
+    margin: 300px;
+}
 
 
 

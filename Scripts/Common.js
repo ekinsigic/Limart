@@ -12,7 +12,6 @@ var isPortrait = false;
 var scrollTopVal = 0;
 var scrollDir;
 var lastScrollAmount = 0;
-var ppi = 0;
 
 $(document).ready(function () {
     checkDevice();
@@ -30,10 +29,6 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     setGlobals();
-});
-
-$(window).load(function(){
-    getPPI();
 });
 
 function setGlobals() {
@@ -197,22 +192,17 @@ function openCloseMenu() {
 function miscImgLoader() {
     $('body').find('img.miscImg').each(function(){
         var miscIdentifier = $(this).attr('data-misc-identifier');
-        if (ppi() > 192) {
-        $(this).attr('src','images/'+miscIdentifier+'@2x.png');
+        if (window.devicePixelRatio >= 1.5) {
+        $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
+         $('main').append('<h1>'+window.devicePixelRatio+'</h1>');
+
         }
         else {
         $(this).attr('src','images/'+miscIdentifier+'.png');
+         $('main').append('<h1>'+window.devicePixelRatio+'</h1>');
         }
     });
 }
-
-
-function getPPI(){
-         $('body').append('<div id="ppiObserver" style="width:1in; ">');
-         $('#ppiObserver').width('1in');
-         ppi = $('#ppiObserver').width();
-}
-
 
 var isSearchActive = false;
 

@@ -2,3 +2,9 @@ main .miscImg {
 margin: 30px;
 display: inline-block;
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

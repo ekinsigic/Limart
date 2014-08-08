@@ -73,6 +73,7 @@
             display: block;
             box-sizing:content-box;
             opacity: 0.3;
+
         }
 
     /* END - ICONS AND OTHERS */
@@ -80,7 +81,8 @@
     /* LOGOTYPE */
 
     img[data-misc-identifier="logotype-symbol"] {
-        
+        width: 33px;
+        height: 33px;
     }
 
 

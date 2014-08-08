@@ -32,6 +32,7 @@ $(document).ready(function () {
 $(window).resize(function () {
     setGlobals();
     closeMenu();
+    closeSearch();
 });
 
 function setGlobals() {

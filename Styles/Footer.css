@@ -24,27 +24,20 @@ footer .divContent ul.level1 li{
     position:relative;
 }
 
-footer .divContent ul.level1 li a.faceL:link,
-footer .divContent ul.level1 li a.faceL:visited{
-    margin:0 0 0 31px;
-    text-decoration:none;
-    letter-spacing:0.10em;
-    border-bottom:2px solid transparent;
-    transition:all 0.5s;
-    -webkit-transition:all 0.5s;
+footer .divContent ul.level1 li a.aStyleA:link,
+footer .divContent ul.level1 li a.aStyleA:visited{
+
 }
 
-footer .divContent ul.level1 li a.faceL:hover,
-footer .divContent ul.level1 li a.faceL:active{
+footer .divContent ul.level1 li a.aStyleA:hover,
+footer .divContent ul.level1 li a.aStyleA:active{
+     border-bottom:2px solid transparent;
 }
 
 
 
 
-footer .divContent span.faceM{
-    display:inline-block;
-    letter-spacing:0.08em;
-}
+
 
 footer .divContent ul.level2{
     display:table;
@@ -58,22 +51,6 @@ footer .divContent ul.level2 li{
     position:relative;
 }
 
-footer .divContent ul.level2 li a.faceN:link,
-footer .divContent ul.level2 li a.faceN:visited{
-    text-decoration:none;
-    color:#ccc;
-    font-size:12px;
-    font-weight:400;
-    letter-spacing:0.08em;
-    border-bottom:2px solid transparent;
-    transition:all 0.5s;
-    -webkit-transition:all 0.5s;
-}
-
-footer .divContent ul.level2 li a.faceN:hover,
-footer .divContent ul.level2 li a.faceN:active{
-}
-
 footer .divContent ul.level2 .liSeparator{
     margin:0 15px 0 15px;
 }
@@ -85,7 +62,6 @@ footer .divContent ul.level2 .liSeparator span{
     margin:0 15px 0 15px;
     background-color:#ccc;
 }
-
 
 footer .divLine{
     margin:30px auto 30px auto;

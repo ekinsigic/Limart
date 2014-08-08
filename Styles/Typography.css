@@ -133,19 +133,50 @@ a:active{
 
 .aStyleA:link,
 .aStyleA:visited{
-    display:inline-block;
-    margin:15px 0 15px 0;
-    color:#0026ff;
-    font-size:12px;
-    font-weight:bold;
-    line-height:16px;
+    margin:0 0 0 31px;
+    text-decoration:none;
+    color:#000;
+    font-size:13px;
+    font-weight: 600;
+    letter-spacing:0.11em;
+    border-bottom:2px solid transparent;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
 }
 
 .aStyleA:hover,
 .aStyleA:active{
+    border-bottom:2px solid #2f3140;
 }
 
 
+
+
+
+.aStyleB:link,
+.aStyleB:visited{
+    text-decoration:none;
+    color:#ddd;
+    font-size:11px;
+    font-weight: 400;
+    letter-spacing:0.08em;
+}
+
+.aStyleB:hover,
+.aStyleB:active{
+}
+
+
+
+
+
+.spanStyleA{
+    display:inline-block;
+    color:#000;
+    font-size:11px;
+    font-weight: 500;
+    letter-spacing:0.08em;
+}
 
 
 

@@ -19,22 +19,6 @@ nav .divNav ul.level1 li{
     display:table-cell;
 }
 
-nav .divNav ul.level1 li a.faceA:link,
-nav .divNav ul.level1 li a.faceA:visited{
-    margin:0 0 0 31px;
-    padding-bottom:10px;
-    text-decoration:none;
-    letter-spacing:0.11em;
-    border-bottom:2px solid transparent;
-    transition:all 0.5s;
-    -webkit-transition:all 0.5s;
-}
-
-nav .divNav ul.level1 li a.faceA:hover,
-nav .divNav ul.level1 li a.faceA:active{
-    border-bottom:2px solid #2f3140;
-}
-
 nav .divNav ul.level1 .liSearch {
     width:40px;
 }
@@ -47,6 +31,10 @@ nav .divNav ul.level1 .liSearch img {
     padding:5px;
     cursor:pointer;
     opacity:0.2;
+}
+
+nav .divNav ul.level1 li .aStyleA{
+    padding-bottom:10px;
 }
 
 
@@ -106,7 +94,7 @@ nav .divNavIcon .imgNav{
         border:1px solid #f00;
     }
 
-    nav .divNav  ul.level1 > li{
+    nav .divNav  ul.level1 li{
         display:block;
     }
 
@@ -114,13 +102,17 @@ nav .divNavIcon .imgNav{
         display:none;
     }
 
-    nav .divNav ul.level1 > li a.faceA:link,
-    nav .divNav ul.level1 > li a.faceA:visited{
+    nav .divNav ul.level1 li .aStyleA:link,
+    nav .divNav ul.level1 li .aStyleA:visited{
         margin:0;
     }
 
     nav .divNavIcon{
          display:block;
+    }
+
+    nav .divSearch {
+        display:block;
     }
 
 

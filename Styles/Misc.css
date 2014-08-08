@@ -86,9 +86,9 @@
         transition:all 0.15s;
     }
     img[data-misc-identifier="logotype-symbol"]:hover {
-        -webkit-transform:rotate(45deg);
+        -webkit-transform:rotate(-47deg);
     }
-    img[data-misc-identifier="logotype-symbol"] {
+    img[data-misc-identifier="logotype-symbol"]:active {
         -webkit-transform:rotate(0deg);
     }
     img[data-misc-identifier="logotype"] {

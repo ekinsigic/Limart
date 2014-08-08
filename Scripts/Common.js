@@ -162,6 +162,7 @@ function openCloseMenu() {
             if (!isMenuOpen) {
                 isMenuOpen = true;
                 isScroll = false;
+
                 setupSearchForm();
                 $('.divNav, main, footer').addClass('menuOn');
                 e.stopPropagation();
@@ -219,6 +220,7 @@ function setupSearchForm() {
             var searchFormHTML = $('#search').html();
             $('#search').empty();
             $('nav .divSearch').html(searchFormHTML);
+            $('nav .divSearch .divSearchContent input').focus();
         }
     }
     else {

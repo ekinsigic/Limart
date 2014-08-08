@@ -37,6 +37,7 @@ nav .divNav ul.level1 li a:hover,
 nav .divNav ul.level1 li a:active{
     border-bottom:2px solid #2f3140;
 }
+
 nav .divNav ul.level1 .liSearch {
     width:40px;
 }
@@ -148,7 +149,6 @@ nav .divNavIcon .imgNav{
 
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    
 }
 
 @media all and (min-width: 1435px) {

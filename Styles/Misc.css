@@ -10,102 +10,10 @@
     display:none;
 }
 
+
+
 /* THESE STYLES ARE FOR LIMART SPECIFIC - NOT A PART OF STOP63 DEFAULT TEMPLATE */
 
-<<<<<<< HEAD
-    /* ICONS AND OTHERS */
-
-        img[data-sixtyThree="arrow-next"] {
-            width:24px;
-            height:11px;
-        }
-
-        img[data-sixtyThree="arrow-down"]{
-            width:11px;
-            height:24px;
-        }
-
-        img[data-sixtyThree="arrow-previous"]{
-            width:24px;
-            height:11px;
-        }
-
-
-        img[data-sixtyThree="arrow-up"]{
-            width:11px;
-            height:24px;
-        }
-
-
-        img[data-sixtyThree="icon-search"] {
-            width: 12px;
-            height: 12px;
-        }
-
-        img[data-sixtyThree="icon-room-view"] {
-            width: 18px;
-            height: 12px;
-            display: block;
-            border: 1px solid rgba(0,0,0,0.66666666);
-            padding-top: 11px;
-            padding-bottom: 11px;
-            padding-left: 8px;
-            padding-right: 8px;
-            box-sizing:content-box;
-            opacity: 0.3;
-        }
-
-        img[data-sixtyThree="icon-share"] {
-            width: 13px;
-            height: 14px;
-            display: block;
-            border: 1px solid rgba(0,0,0,0.66666666);
-            padding-top: 11px;
-            padding-bottom: 9px;
-            padding-left: 10px;
-            padding-right: 10px;
-            box-sizing:content-box;
-            opacity: 0.3;
-        }
-
-        img[data-sixtyThree="icon-zoom-in"] {
-            width: 24px;
-            height: 24px;
-            display: block;
-            box-sizing:content-box;
-            opacity: 0.3;
-
-        }
-
-        .mergerLine1 {
-
-        }
-
-    /* END - ICONS AND OTHERS */
-
-    /* LOGOTYPE */
-
-    img[data-sixtyThree="logotype-symbol"] {
-        width: 33px;
-        height: 33px;
-        transition:all 0.15s;
-    }
-    img[data-sixtyThree="logotype-symbol"]:hover {
-        -webkit-transform:rotate(-47deg);
-    }
-    img[data-sixtyThree="logotype-symbol"]:active {
-        -webkit-transform:rotate(0deg);
-    }
-    img[data-sixtyThree="logotype"] {
-        width: 106px;
-        height: 39px;
-    }
-    img[data-sixtyThree="logotype"].smallLogo {
-        width: 66px;
-        height: 24px;
-        transition:all 0.15s;
-    }
-=======
 /* ICONS AND OTHERS */
 img[data-misc-identifier="arrow-next"] {
     width:24px;
@@ -199,9 +107,9 @@ img[data-misc-identifier="logotype"].smallLogo {
     height: 24px;
     transition:all 0.15s;
 }
->>>>>>> FETCH_HEAD
-
 /* END LOGOTYPE */
+
+
 
 .SmallArrow.right{
     width:24px;

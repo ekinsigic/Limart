@@ -18,7 +18,6 @@ $(document).ready(function () {
     scrollEvents();
     setGlobals();
     popupSettings();
-    styleScript()
     miscImgLoader();
     openCloseMenu();
     openOrCloseSearch();

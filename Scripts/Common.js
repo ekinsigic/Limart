@@ -189,12 +189,22 @@ function closeMenu() {
 function miscImgLoader() {
     $('body').find('img.miscImg').each(function(){
         var miscIdentifier = $(this).attr('data-misc-identifier');
+        var thisIcon = $(this);
         if (window.devicePixelRatio >= 1.5) {
-            $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
-
+            if (thisIcon.hasClass('white')) {
+                $(this).attr('src','images/@2x/'+miscIdentifier+'-white@2x.png');
+            }
+            else {
+                $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
+            }
         }
         else {
-            $(this).attr('src','images/'+miscIdentifier+'.png');
+            if (thisIcon.hasClass('white')) {
+                $(this).attr('src','images/'+miscIdentifier+'-white.png');
+            }
+            else {
+                $(this).attr('src','images/'+miscIdentifier+'.png');
+            }
         }
     });
 }

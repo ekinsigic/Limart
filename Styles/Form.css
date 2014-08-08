@@ -1,4 +1,4 @@
-﻿input,
+﻿input, 
 select,
 select option,
 button,
@@ -15,12 +15,12 @@ input[type="text"]{
     padding:0 15px 0 15px;
     border:3px solid #000;
     color:#000;
-    line-height: 12px;
+    line-height: 15px;
     font-size:14px;
     letter-spacing: 1px;
     font-weight:500;
     transition:all 0.2s, width 0.2s;
-    padding-left: 25px;
+    padding-left: 15px;
     opacity: 0.2;
 }
 input[type="text"]:focus{
@@ -81,26 +81,31 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color:#000;
 }
 
-
-label{
-    color:#ff6a00;
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
 select{
-    width:200px;
-    height:30px;
-    margin: 0;
-    padding:0 15px 0 15px;
-    color: #555;
-    font-size: 16px;
-    border:1px solid #f2f2f2;
-    background-image: url(../Images/select-arrow.png);
+    display:block;
+    width:100px;
+    height:40px;
+    background: url(../images/arrow-down-form-select.png);
     background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size:10px;
+    background-position: 90% center;
+    padding:0 15px 0 15px;
+    border:3px solid #000;
+    color:#000;
+    line-height: 15px;
+    font-size:14px;
+    letter-spacing: 1px;
+    font-weight:500;
+    transition:all 0.2s, width 0.2s;
+    padding-left: 15px;
+    opacity: 0.2;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select:after {
+    content: url(../images/arrow-down-form-select.png);
+    display: block;
+    position: absolute;
+    right: 3px;
 }
 
 textarea{
@@ -111,7 +116,43 @@ textarea{
 }
 
 
+input[type="checkbox"]{
+    width: 22px;
+    height: 22px;
+    top: 6px;
+    border: 3px solid #000;
+    margin-right: 10px;
+}
+input[type="checkbox"]:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #000;
+}
 
+input[type="checkbox"]:hover:after{
+}
+
+label{
+    display: inline-block;
+    height: 21px;
+    line-height: 21px;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    background: black;
+}
 
 
 /* Customized */

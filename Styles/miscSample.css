@@ -1,8 +1,11 @@
-.sampleStripe .miscImg {
+.sampleStripe .miscImg , .sampleStripe input, .sampleStripe label{
 margin: 30px;
 display: inline-block;
 }
-
+label > input {
+	margin: 0px !important;
+	margin-right:10px !important;
+}
 .sampleStripe {
 	height: 110px;
   display: flex;

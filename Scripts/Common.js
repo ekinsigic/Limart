@@ -22,6 +22,8 @@ $(document).ready(function () {
     miscImgLoader();
     openCloseMenu();
     openOrCloseSearch();
+
+    setupSearchForm();
     // PPI = getPPI();
     // console.log(PPI);
 });
@@ -107,6 +109,8 @@ function openCloseMenu() {
                 if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
                     isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
                     isScroll = false;
+
+                    setupSearchForm(); // search form un html ini bu menu için adapte et
                     $('nav .divNav, main, footer').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
                     e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
                     $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
@@ -158,6 +162,7 @@ function openCloseMenu() {
             if (!isMenuOpen) {
                 isMenuOpen = true;
                 isScroll = false;
+                setupSearchForm();
                 $('.divNav, main, footer').addClass('menuOn');
                 e.stopPropagation();
                 $(window).bind('touchmove', function (e) {
@@ -206,14 +211,35 @@ function miscImgLoader() {
 
 
 
+
+// search form ile ilgili fonksiyonlar
+function setupSearchForm() {
+    if ($('nav .divNavIcon').is(':visible')) {
+        if ($('nav .divSearch').is(':empty')) {
+            var searchFormHTML = $('#search').html();
+            $('#search').empty();
+            $('nav .divSearch').html(searchFormHTML);
+        }
+    }
+    else {
+        if ($('#search').is(':empty')) {
+            searchFormHTML = $('nav .divSearch').html();
+            $('nav .divSearch').empty();
+            $('#search').html(searchFormHTML);
+        }
+    }
+}
+
+
+
 var isSearchActive = false;
 
 function openOrCloseSearch() {
     if (!isMobile) {
-
         $('nav .liSearch img').bind('click', function (e) {
             if (!isSearchActive) {
                 isSearchActive = true;
+                setupSearchForm();
                 $('#search').addClass('topSearch');
                 $('#search input').focus();
             }

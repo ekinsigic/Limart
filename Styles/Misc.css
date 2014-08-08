@@ -74,13 +74,22 @@ img[data-sixtythree="icon-zoom-in"] {
     opacity: 0.3;
 }
 
-img[data-sixtythree="icon-social-*"] {
+img[data-sixtythree^="icon-social-"] {
     display: block;
     width: 36px;
     height: 36px;
     box-sizing:content-box;
-    opacity: 0.3;
+    transition:all 0.2s;
 }
+
+img[data-sixtythree^="icon-social-"]:hover {
+    opacity: 1;
+}
+
+img[data-sixtythree^="icon-social-"]:not('.white') {
+    opacity: 0.1;
+}
+
 
 /* END - ICONS AND OTHERS */
 

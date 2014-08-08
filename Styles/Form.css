@@ -9,10 +9,11 @@ textarea{
 
 input[type="text"]{
     display:block;
-    width:200px;
-    height:30px;
+    width:186;
+    height:40px;
+    background-color: transparent;
     padding:0 15px 0 15px;
-    border:1px solid #f2f2f2;
+    border:3px solid #000;
     color:#000;
     font-size:13px;
     font-weight:500;
@@ -143,6 +144,24 @@ textarea{
 
 
 /* BUTTON STARTS HERE */
+
+/*BLACK BUTTON STYLE */
+.buttonA{
+    color: #000;
+}
+
+.buttonA:hover{
+    background: #000;
+    color: #fff;
+    border: 3px solid #000;
+}
+
+.buttonA:active{
+    background: #404040 !important;
+    border: 3px solid #404040 !important;
+}
+/*END BLACK BUTTON STYLE*/
+
 
 /*PURPLE BUTTON STYLE */
 

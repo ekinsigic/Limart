@@ -14,34 +14,34 @@
 
     /* ICONS AND OTHERS */
 
-        img[data-misc-identifier="arrow-next"] {
+        img[data-sixtyThree="arrow-next"] {
             width:24px;
             height:11px;
         }
 
-        img[data-misc-identifier="arrow-down"]{
+        img[data-sixtyThree="arrow-down"]{
             width:11px;
             height:24px;
         }
 
-        img[data-misc-identifier="arrow-previous"]{
+        img[data-sixtyThree="arrow-previous"]{
             width:24px;
             height:11px;
         }
 
 
-        img[data-misc-identifier="arrow-up"]{
+        img[data-sixtyThree="arrow-up"]{
             width:11px;
             height:24px;
         }
 
 
-        img[data-misc-identifier="icon-search"] {
+        img[data-sixtyThree="icon-search"] {
             width: 12px;
             height: 12px;
         }
 
-        img[data-misc-identifier="icon-room-view"] {
+        img[data-sixtyThree="icon-room-view"] {
             width: 18px;
             height: 12px;
             display: block;
@@ -54,7 +54,7 @@
             opacity: 0.3;
         }
 
-        img[data-misc-identifier="icon-share"] {
+        img[data-sixtyThree="icon-share"] {
             width: 13px;
             height: 14px;
             display: block;
@@ -67,7 +67,7 @@
             opacity: 0.3;
         }
 
-        img[data-misc-identifier="icon-zoom-in"] {
+        img[data-sixtyThree="icon-zoom-in"] {
             width: 24px;
             height: 24px;
             display: block;
@@ -84,22 +84,22 @@
 
     /* LOGOTYPE */
 
-    img[data-misc-identifier="logotype-symbol"] {
+    img[data-sixtyThree="logotype-symbol"] {
         width: 33px;
         height: 33px;
         transition:all 0.15s;
     }
-    img[data-misc-identifier="logotype-symbol"]:hover {
+    img[data-sixtyThree="logotype-symbol"]:hover {
         -webkit-transform:rotate(-47deg);
     }
-    img[data-misc-identifier="logotype-symbol"]:active {
+    img[data-sixtyThree="logotype-symbol"]:active {
         -webkit-transform:rotate(0deg);
     }
-    img[data-misc-identifier="logotype"] {
+    img[data-sixtyThree="logotype"] {
         width: 106px;
         height: 39px;
     }
-    img[data-misc-identifier="logotype"].smallLogo {
+    img[data-sixtyThree="logotype"].smallLogo {
         width: 66px;
         height: 24px;
         transition:all 0.15s;

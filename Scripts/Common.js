@@ -187,11 +187,10 @@ function closeMenu() {
 
 // misc imajlarını sayfa açılışında retina olup olmadğına göre yükleme fonksiyonu
 function miscImgLoader() {
-    $('body').find('img.miscImg').each(function(){
-        var miscIdentifier = $(this).attr('data-misc-identifier');
-        var thisIcon = $(this);
+    $('body').find('img[data-sixtyThree]').each(function(){
+        var miscIdentifier = $(this).attr('data-sixtyThree');
         if (window.devicePixelRatio >= 1.5) {
-            if (thisIcon.hasClass('white')) {
+            if ($(this).hasClass('white')) {
                 $(this).attr('src','images/@2x/'+miscIdentifier+'-white@2x.png');
             }
             else {
@@ -199,7 +198,7 @@ function miscImgLoader() {
             }
         }
         else {
-            if (thisIcon.hasClass('white')) {
+            if ($(this).hasClass('white')) {
                 $(this).attr('src','images/'+miscIdentifier+'-white.png');
             }
             else {

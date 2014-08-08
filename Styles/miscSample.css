@@ -4,12 +4,15 @@ display: inline-block;
 }
 
 .sampleStripe {
-	height: 200px;
+	height: 110px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
-
+.sampleStripe.black {
+	background: black;
+}
 main {
+padding:50px 100px;
 background: transparent;
 }

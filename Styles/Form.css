@@ -22,11 +22,11 @@ input[type="text"]{
 input[type="button"],
 button{
     font-family: 'Nova';
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     line-height: 12px;
     color: #000;
-    letter-spacing: 0.8px;
+    letter-spacing: 1.3px;
     border: 3px solid;
     padding: 10px 35px;
     padding-top: 12px;
@@ -46,6 +46,25 @@ button:active{
     background: #404040 !important;
     border: 3px solid #404040 !important;
 }
+        /* SMALL BUTTON STYLE */
+
+        input[type="button"].smallButton,
+        button.smallButton {
+            background: #000;
+            color: #fff;
+            border: 3px solid #000;
+            font-weight: 400;
+            padding: 10px 25px;
+            padding-top: 12px;
+        }
+        input[type="button"].smallButton:hover,
+        button.smallButton:hover {
+            background: #404040;
+            color: #fff;
+            border: 3px solid #404040;
+        }
+
+        /* END SMALL BUTTON STYLE */
 /* END - DEFAULT BUTTON STYLE */
 
     /*PURPLE BUTTON STYLE */
@@ -65,6 +84,23 @@ button:active{
         background: #6f7182 !important;
         border: 3px solid #6f7182 !important;
     }
+
+        /* SMALL PURPLE BUTTON STYLE */
+
+        input[type="button"].smallButton.purpleButton,
+        button.smallButton.purpleButton {
+            background: #4b4d63;
+            color: #fff;
+            border: 3px solid #4b4d63;
+        }
+        input[type="button"].smallButton.purpleButton:hover,
+        button.smallButton.purpleButton:hover {
+            background: #6f7182;
+            color: #fff;
+            border: 3px solid #6f7182;
+        }
+        /* END SMALL PURPLE BUTTON STYLE */
+
 
     /*END PURPLE BUTTON STYLE */
 
@@ -86,16 +122,23 @@ button:active{
         background: #e0495d !important;
         border: 3px solid #e0495d !important;
     }
+        /* SMALL RED BUTTON STYLE */
 
+        input[type="button"].smallButton.redButton,
+        button.smallButton.redButton {
+            background: #dd354b;
+            color: #fff;
+            border: 3px solid #dd354b;
+        }
+        input[type="button"].smallButton.redButton:hover,
+        button.smallButton.redButton:hover {
+            background: #e0495d;
+            color: #fff;
+            border: 3px solid #e0495d;
+        }
+        /* END SMALL RED BUTTON STYLE */
     /*END RED BUTTON STYLE */
 
-    /* SMALL BUTTON STYLE */
-    input[type="button"].smallButton,
-    button.smallButton {
-        padding: 10px 35px;
-        padding-top: 12px;
-    }
-    /* END - SMALL BUTTON STYLE */
 
 
 

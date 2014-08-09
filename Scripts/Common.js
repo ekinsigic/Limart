@@ -22,7 +22,6 @@ $(document).ready(function () {
     openCloseMenu();
     openOrCloseSearch();
 
-    setupSearchForm();
     // PPI = getPPI();
     // console.log(PPI);
 });
@@ -30,7 +29,9 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     setGlobals();
-    closeMenu();
+    if (!isMobile) {
+        closeMenu();
+    }
     closeSearch();
 });
 
@@ -113,7 +114,6 @@ function openCloseMenu() {
                     isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
                     isScroll = false;
 
-                    setupSearchForm(); // search form un html ini bu menu için adapte et
                     $('nav .divNav, main, footer').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
                     e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
                     $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
@@ -133,7 +133,7 @@ function openCloseMenu() {
 
         $('header nav .divNav').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
             e.stopPropagation();
-            $(this).bind('touchend', function (e) {
+            $('header nav .divNav').bind('touchend', function (e) {
                 e.stopPropagation();
             });
         });
@@ -144,7 +144,6 @@ function openCloseMenu() {
                 isMenuOpen = true;
                 isScroll = false;
 
-                setupSearchForm();
                 $('.divNav, main, footer').addClass('menuOn');
                 e.stopPropagation();
             }
@@ -210,7 +209,7 @@ function miscImgLoader() {
 
 
 
-
+/*
 // search form ile ilgili fonksiyonlar
 function setupSearchForm() {
     if ($('nav .divNavIcon').is(':visible')) {
@@ -229,7 +228,7 @@ function setupSearchForm() {
         }
     }
 }
-
+*/
 
 
 var isSearchActive = false;
@@ -239,7 +238,6 @@ function openOrCloseSearch() {
         $('nav .liSearch img').bind('click', function (e) {
             if (!isSearchActive) {
                 isSearchActive = true;
-                setupSearchForm();
                 $('#search').addClass('topSearch');
                 $('#search input').focus();
             }

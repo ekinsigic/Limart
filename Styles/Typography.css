@@ -258,14 +258,11 @@ a:active {
 
 /* Screen */
 @media all and (max-width: 400px) {
-}
-
-@media all and (min-width: 401px) and (max-width: 700px) {
     header nav .aStyleA:link,
     header nav .aStyleA:visited {
         margin:0 !important;
-        font-size: 17.966px;
-        line-height: 4.21;
+        font-size: 15px;
+        line-height: 40px;
         text-align: center;
         border:0;
     }
@@ -274,6 +271,10 @@ a:active {
     header nav .aStyleA:active {
         border-bottom:0;
     }
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+    
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

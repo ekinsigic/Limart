@@ -170,7 +170,7 @@ function openCloseMenu() {
 
 function closeMenu() {
     if (isMobile) {
-        $('nav .divNav, main, footer, .listingFilters.fa').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
+        $('nav .divNav, main, footer').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
         setTimeout(function () {//setTimeout kurarak kullanýcýyý animasyonu beklemek zorunda býrakýyoruz
             //tespit deðiþkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
             isMenuOpen = false;

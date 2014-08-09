@@ -1,7 +1,7 @@
 enoughtTimeStoppedToLoadItems = true;
 
 $(document).ready(function () {
-stylelisting();
+styleArtist();
 filterSticky();
 listingMasonry();
 listLoad();
@@ -15,7 +15,7 @@ stylelisting();
 });
 
 
-function stylelisting() {
+function styleArtist() {
 	$('.listingWelcome').css({
 		'height':(wH-90)*0.666+'px',
 	})

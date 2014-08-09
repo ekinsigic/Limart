@@ -130,6 +130,11 @@ main{
     nav .divSearch {
         display:block;
     }
+
+    
+    main{
+        margin:70px auto 0 auto;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {

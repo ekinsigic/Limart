@@ -100,16 +100,15 @@ nav .divNav .divMenuContent .divMailingContent .aButton img{
 @media all and (max-width: 400px) {
     nav .divNav{
         position:fixed;
-        top:-660px;
+        top:-350px;
         /*top:90px;*/
         right:0;
         left:0;
-        height:746px;
+        height:420px;
         padding-top:20px;
         background-color:#fff;
         box-shadow: inset 0px 20px 30px -10px #ececec,
                     inset 0px -20px 30px -10px #ececec; 
-        border:1px solid #f00;
     }
 
     nav .divNav  ul.level1{
@@ -131,35 +130,55 @@ nav .divNav .divMenuContent .divMailingContent .aButton img{
 
     nav .divNav .divMenuContent{
         display:block;
-    }
-
-    nav .divNav .divMenuContent p{
-        margin:30px auto 0 auto;
-        width: 300px;
-        font-size: 12px;
+        margin-top:30px;
     }
 
     nav .divNav .divMenuContent .divMailingContent{
+        width:240px !important;
         margin:15px auto 0 auto;
+    }
+
+    nav .divNav .divMenuContent p{
+        display:none;
+    }
+
+    nav .divNav .divMenuContent .divMailingContent .aButton img{
+        width:24px;
+        margin-top:17px;
+        margin-left:20px;
+    }
+
+    nav .divMenuContent .socialsA{
+        margin-top:40px !important;
     }
 
     nav .divNavIcon{
         display:block;
     }
 
+    nav .divNavIcon .imgNav{
+        top: 2px;
+    }
+
     nav .divSearch {
         display:block;
     }
+
+    nav .divNavIcon .divNavIconBg {
+        height:70px;
+    }
+
+    
 
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
     .menuOn {
         display:block;
-        -webkit-transform:translate3d(0px,746px,0px);
-        -moz-transform:translate3d(0px,746px,0px);
-        -ms-transform:translate3d(0px,746px,0px);
-        -o-transform:translate3d(0px,746px,0px);
-        transform:translate3d(0px,746px,0px);
+        -webkit-transform:translate3d(0px,420px,0px);
+        -moz-transform:translate3d(0px,420px,0px);
+        -ms-transform:translate3d(0px,420px,0px);
+        -o-transform:translate3d(0px,420px,0px);
+        transform:translate3d(0px,420px,0px);
     }
 
     nav .divNav, main, footer {
@@ -179,8 +198,8 @@ nav .divNav .divMenuContent .divMailingContent .aButton img{
 @media all and (min-width: 701px) and (max-width: 1018px) {
     nav .divNav{
         position:fixed;
-        /*top:-660px;*/
-        top:90px;
+        top:-660px;
+        /*top:90px;*/
         right:0;
         left:0;
         height:746px;
@@ -243,13 +262,7 @@ nav .divNav .divMenuContent .divMailingContent .aButton img{
 
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    nav .divNav .divMenuContent{
-        display:none;
-    }
 }
 
 @media all and (min-width: 1435px) {
-    nav .divNav .divMenuContent{
-        display:none;
-    }
 }

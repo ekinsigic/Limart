@@ -25,8 +25,23 @@ header .divContent .aLogo:visited{
 
 /* Screen */
 @media all and (max-width: 400px) {
+    header{
+        height:70px !important;
+        background-color:#ff0 !important;
+    }
+
     header .divContent{
-        width:340px;
+        width:90%;
+    }
+
+    header .divContent .aLogo:link,
+    header .divContent .aLogo:visited{
+        top:18px;
+    }
+
+    header .divContent .aLogo img {
+        width: 90px;
+        height: auto;
     }
 }
 

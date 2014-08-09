@@ -381,8 +381,8 @@ label:after {
 @media all and (max-width: 400px) {
     header nav .divMailingContent .inputTextA{
         padding:0 60px 0 20px !important;
-        width:270px !important;
-        height:52px !important;
+        width:240px !important;
+        height:46px !important;
         font-size:13px !important;
         letter-spacing:0.09em !important;
         opacity:1 !important;

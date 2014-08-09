@@ -1,0 +1,26 @@
+.listingWelcome {
+	width: 100%;
+	min-height: 300px;
+}
+.listingWelcome > * {
+	z-index: 3;
+}
+.listingWelcome:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	background: url(../images/overlay-purple.png) center no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+
+.listingFilters {
+	height: 65px;
+	border-bottom: 8px solid #f1f1f1;
+	border-top: 1px solid #f1f1f1;
+	background-color:#fff;
+	width: 100%;
+}

@@ -460,6 +460,9 @@ img[data-sixtythree="logotype-white"] {
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+    header nav img[data-sixtythree^="icon-social-"]:not(.white) {
+        opacity: 1;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

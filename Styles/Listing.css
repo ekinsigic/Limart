@@ -37,15 +37,25 @@
 	text-align: center;
 	margin-top: 100px;
 }
+.listingContainer h1{
+	margin-bottom:20px;
+}
 .listingList {
 	margin: 0 auto;
 }
 
 .listItem {
-	/*dev*/
-	width: 326px;
-	height: 400px;
-	background: tomato;
-	/*end - dev*/
-	margin-bottom: 20px;
+	display: inline-block;
+	width: 300px;
+	border: 5px solid #fff;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+	margin-bottom: 30px;
 }
+.listItem img {
+	width: 100%;
+	height: auto;
+}
+
+
+
+

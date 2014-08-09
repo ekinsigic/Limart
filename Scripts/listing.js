@@ -4,6 +4,8 @@ filterSticky();
 listingMasonry();
 });
 
+$(document).load(function(){
+});
 
 $(window).resize(function () {
 stylelisting();
@@ -32,10 +34,12 @@ function filterSticky() {
 }
 
 function listingMasonry() {
-	$('.listingList').masonry({
-	  columnWidth: 335,
-	  itemSelector: '.listItem',
-	  gutter: 9,
-	  isFitWidth: true
-	});
+	setTimeout(function(){
+		$('.listingList').masonry({
+		  columnWidth: 300,
+		  itemSelector: '.listItem',
+		  gutter: 30,
+		  isFitWidth: true
+		});
+	},300);
 }

@@ -18,6 +18,12 @@
     width:960px;
 }
 
+#search .divSearchContent .inputTextA{
+    position:absolute;
+    top:12px;
+    right:40px;
+}
+
 #search .aSearchButton{
     position:absolute;
     top:23px;

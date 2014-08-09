@@ -26,8 +26,6 @@ nav .divNav ul.level1 .liSearch {
 nav .divNav ul.level1 .liSearch img {
     position:absolute;
     right:0;
-    width: 10px;
-    height: 10px;
     opacity:0.2;
     cursor:pointer;
 }
@@ -80,34 +78,35 @@ nav .divNavIcon .imgNav{
 @media all and (min-width: 701px) and (max-width: 1018px) {
     nav .divNav{
         position:fixed;
-        top:-110px;
+        /*top:-660px;*/
+        top:90px;
         right:0;
         left:0;
-        height:200px;
-        background-color:#fff2ad;
+        height:746px;
+        background-color:#fff;
     }
 
-    nav .divNav .divNavContent{
-        margin:auto;
-        width:670px;
-        border:1px solid #f00;
+    nav .divNav  ul.level1{
+        width:100%;
     }
 
     nav .divNav  ul.level1 li{
         display:block;
+        border-bottom:1px solid #f2f2f2;
     }
 
     nav .divNav ul.level1 .liSearch{
         display:none;
     }
 
-    nav .divNav ul.level1 li .aStyleA:link,
-    nav .divNav ul.level1 li .aStyleA:visited{
-        margin:0;
+    nav .divNav ul.level1 li a{
+        padding-bottom:0;
     }
 
+    
+
     nav .divNavIcon{
-         display:block;
+        display:block;
     }
 
     nav .divSearch {
@@ -118,11 +117,11 @@ nav .divNavIcon .imgNav{
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
     .menuOn {
         display:block;
-        -webkit-transform:translate3d(0px,200px,0px);
-        -moz-transform:translate3d(0px,200px,0px);
-        -ms-transform:translate3d(0px,200px,0px);
-        -o-transform:translate3d(0px,200px,0px);
-        transform:translate3d(0px,200px,0px);
+        -webkit-transform:translate3d(0px,746px,0px);
+        -moz-transform:translate3d(0px,746px,0px);
+        -ms-transform:translate3d(0px,746px,0px);
+        -o-transform:translate3d(0px,746px,0px);
+        transform:translate3d(0px,746px,0px);
     }
 
     nav .divNav, main, footer {

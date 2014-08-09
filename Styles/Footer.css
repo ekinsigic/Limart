@@ -153,7 +153,51 @@ footer .divLine{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    
+    footer .divContent{
+        width:100%;
+        height:auto;
+    }
+
+    footer .divContent.first,
+    footer .divLine.two,
+    footer .divLine.three{
+        display:none;
+    }
+
+    footer .divContent .spanStyleA{
+        position:absolute;
+        top:260px;
+        left:50%;
+        margin-left:-75px;
+        width:150px;
+        font-size:13px;
+    }
+
+    footer .divContent ul.level2{
+        margin:30px auto 30px auto !important;
+        width:100%;
+    }
+
+    footer .divContent ul.level2 li{
+        display:block;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    footer .divContent ul.level2 li.liSeparator{
+        display:none;
+    }
+
+    footer .divContent ul.level2 li a{
+        display:block;
+        padding:20px 0 20px 0;
+        text-align:center;
+        color:#d0d0d0;
+        font-size:14px;
+    }
+
+    footer .socialsA{
+        margin-top:80px !important;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px){

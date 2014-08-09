@@ -6,7 +6,9 @@ $(document).ready(function () {
 
 
 $(window).resize(function () {
-    mainHeight();
+    if(!isMobile){
+        mainHeight();
+    }
 });
 
 

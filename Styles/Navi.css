@@ -57,11 +57,8 @@ nav .divNavIcon .divNavIconBg {
 
 nav .divNavIcon .imgNav{
     position:absolute;
-    top:35px;
-    right:0;
-    width:24px;
-    padding:5px 0 5px 5px;
-    box-sizing:border-box;
+    top: 10px;
+    right: -25px;
 }
 
 

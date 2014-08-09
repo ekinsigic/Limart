@@ -17,20 +17,20 @@ function stylelisting() {
 
 function filterSticky() {
 	$(window).scroll(function(){
-		console.log($('.listingFilters').offset().top > scrollTopVal);
-		var listingFilters = $('.listingFilters');
-		var listingFiltersOffsetTop = listingFilters.offset().top - scrollTopVal;
-		if (listingFiltersOffsetTop < 90) {
-			listingFilters.css({
-				'position':'fixed',
-				'top':'90px'
-			})
+		if ( scrollTopVal > ((wH-90)*0.666) ) {
+			$('.listingFilters').addClass('sticky');
 		}
 		else {
-			listingFilters.css({
-				'position':'relative',
-				'top':'auto'
-			})
+			$('.listingFilters').removeClass('sticky');
 		}
+	});
+}
+
+function listingMasonry() {
+	$('.listWrapper').masonry({
+	  columnWidth: 335,
+	  itemSelector: '.listItem',
+	  gutter: 9,
+	  isFitWidth: true
 	});
 }

@@ -23,4 +23,9 @@
 	border-top: 1px solid #f1f1f1;
 	background-color:#fff;
 	width: 100%;
+	transition:;
+}
+.sticky {
+	position: fixed;
+	top: 90px;
 }

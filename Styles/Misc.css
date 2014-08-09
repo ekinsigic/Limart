@@ -73,6 +73,13 @@ img[data-sixtythree="icon-zoom-in"] {
     box-sizing:content-box;
     opacity: 0.3;
 }
+
+img[data-sixtythree="icon-mobile-nav"] {
+width: 69px;
+height: 65px;
+padding: 25px 25px 25px 25px;
+box-sizing: border-box;
+}
 /* SOCIAL MEDIA ICONS STYLES */
 img[data-sixtythree^="icon-social-"] {
     display: block;
@@ -80,14 +87,14 @@ img[data-sixtythree^="icon-social-"] {
     height: 36px;
     box-sizing:content-box;
     transition:all 0.2s;
+    cursor: pointer;
 }
 
-img[data-sixtythree^="icon-social-"]:hover {
-    opacity: 1;
-}
-
-img[data-sixtythree^="icon-social-"]:not('.white') {
+img[data-sixtythree^="icon-social-"]:not(.white) {
     opacity: 0.1;
+}
+img[data-sixtythree^="icon-social-"]:not(.white):hover {
+    opacity: 1;
 }
 /*  END - SOCIAL MEDIA ICONS STYLES */
 

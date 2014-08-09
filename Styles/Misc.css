@@ -452,3 +452,27 @@ img[data-sixtythree="logotype-white"] {
 .socialsC li .aPinterest span{
     background-image:url('../Images/pinterest.png');
 }
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    header nav img[data-sixtythree^="icon-social-"]:not(.white) {
+        opacity: 1;
+    }
+}
+
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    
+}
+
+@media all and (min-width: 1435px) {
+    
+}

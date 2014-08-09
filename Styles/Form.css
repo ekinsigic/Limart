@@ -159,16 +159,15 @@ label:after {
 
 /* Customized */
 .inputTextA{
-    padding:0 0 0 20px !important;
+    padding:0 40px 0 20px !important;
     width:205px !important;
     height:36px !important;
     color:#231f20 !important;
     font-size:12px !important;
     font-weight:400 !important;
     letter-spacing:0.05em !important;
-    text-align:right;
     background-color:transparent;
-    border:1px solid transparent !important;
+    border:1px solid #e5e5e5 !important;
 }
 
 .inputTextA::-webkit-input-placeholder { /* WebKit browsers */
@@ -184,11 +183,16 @@ label:after {
 
 
 .inputTextB{
-    margin:auto;
-    width:260px !important;
-    height:50px !important;
-    color:#fff !important;
-    background-color:#b5b5b5 !important;
+    padding:0 0 0 20px !important;
+    width:205px !important;
+    height:36px !important;
+    color:#231f20 !important;
+    font-size:12px !important;
+    font-weight:400 !important;
+    letter-spacing:0.05em !important;
+    text-align:right;
+    background-color:transparent;
+    border:1px solid transparent !important;
 }
 
 
@@ -381,6 +385,14 @@ label:after {
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
+    header nav .divMailingContent .inputTextA{
+        padding:0 60px 0 20px !important;
+        width:270px !important;
+        height:52px !important;
+        font-size:13px !important;
+        letter-spacing:0.09em !important;
+        opacity:1 !important;
+    }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {

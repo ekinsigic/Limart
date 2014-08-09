@@ -6,24 +6,13 @@ main {
 	width: 100%;
 	min-height: 300px;
 	text-align: center;
-	align-items: center;
 	display: flex;
+	align-items: center;
 }
 
 .artistWelcome > .artistWelcomeWrapper {
     width: 100%;
 }
-
-.artistWelcome h2, .artistWelcome p {
-	width: 960px;
-	margin: 0 auto;
-	padding-left: 100px;
-	padding-right: 100px;
-}
-
-.artistWelcome h2 {
-	margin-bottom: 40px;
-} 
 
 .artistWelcome > * {
 	z-index: 3;
@@ -36,17 +25,50 @@ main {
 	position:absolute;
 	top: 0px;
 	left: 0px;
-	background: url(../images/overlay-purple.png) center no-repeat;
+	background:rgba(39,40,48,0.9);
 	background-size: cover;
 	z-index: 1;
 }
 
-.artistWelcome img {
-	margin: 40px auto;
-	margin-bottom: 0px;
+.artistInfo {
+	width: 550px;
+	margin: 0 auto;
+}
+.artistInfo img.artistPhoto {
+	margin:0 auto;
+	width: 140px;
+	height: 140px;
+	margin-bottom: 40px;
+	border-radius: 50%;
+}
+.artistName {
+	margin-bottom: 14px;
+}
+.artistDetail {
+	margin-bottom:100px;
+}
+.artistDividant {
+	height: 6px;
+	width: 30px;
+	background: #dd354b;
+	margin: 20px auto;
+	margin-top: 20px;
 }
 
 
+
+.seeArtistArtworks {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: 30px;
+}
+.seeArtistArtworks * {
+	margin: 0 auto;
+}
+.seeArtistArtworks p {
+	margin-bottom: 20px;
+}
 
 
 
@@ -276,21 +298,68 @@ main.menuOn .sticky {
 
 /* Screen */
 @media all and (max-width: 400px) {
-    .listingWelcome h2, .listingWelcome p {
-		width: 90%;
+
+	.artistWelcome{
+		box-sizing:content-box;
+		padding-top: 20px;
 	}
 
 	.listingFilters{
-		position: fixed !important;
-		top: 69px !important;
+		height: 100px;
+		z-index: 3;
 	}
 
-	main {
-		padding-top: 50px;
+	.artistInfo img.artistPhoto {
+		width: 100px;
+		height: 100px;
 	}
 
-	.listingWelcome{
-		display: none;
+	.artistInfo {
+		width: 90%;
+	}
+
+	.artistDetail{
+		display:none;
+	}
+
+	.artistName {
+		width:60%;
+		/* background: tomato; */
+		margin: 0 auto;
+	
+		margin-bottom: 20px;
+		line-height: 30px;
+	}
+
+
+	.artistDividant {
+		margin-top: 50px;
+	}
+
+
+	.listingFilters .listingFilterFirstLayer {
+		background:white;
+		height: 46px;
+		width: 50%;
+		margin-left: -2px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.listingFilters .listingFilterFirstLayer:last-child {		
+		border-left: 1px solid #f0f0f0;
+		border-right: 1px solid #f0f0f0;
+	}
+
+	.listingFilters .listingFilterFirstLayer:last-child select{
+		border-left: 0px;
+	}
+
+	.listingFilters .listingFilterFirstLayer select {
+		height: 100%;
+	}
+
+	.listingContainer {
+		margin-top: 50px;
 	}
 }
 
@@ -302,16 +371,60 @@ main.menuOn .sticky {
 	.listingFilters{
 		position: fixed !important;
 		top: 90px !important;
+		height: 100px;
+		z-index: 3;
 	}
 	
 	.listingWelcome{
 		display: none;
+	}
+
+	main {
+		padding-top: 100px;
+	}
+
+	.listingFilters .listingFilterFirstLayer {
+		background:white;
+		height: 46px;
+		width: 50%;
+		margin-left: -2px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.listingFilters .listingFilterFirstLayer select {
+		height: 100%;
+		width: 100%;
 	}
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     .listingWelcome h2, .listingWelcome p {
 		width: 670px;
+	}
+
+	.artistInfo img.artistPhoto {
+		width: 120px;
+		height: 120px;
+	}
+
+	.artistOccupation {
+
+	}
+
+	.artistName {
+    font-size: 20px;
+		
+	}
+
+	.artistDetail {
+
+	}
+
+	.seeArtistArtworks img{
+
+	}
+
+	.seeArtistArtworks p{
+
 	}
 }
 

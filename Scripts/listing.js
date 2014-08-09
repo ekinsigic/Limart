@@ -24,14 +24,20 @@ function stylelisting() {
 function filterSticky() {
 	$('.listingFilters').css({
 	})
-	$(window).scroll(function(){
-		if ( scrollTopVal > ((wH-90)*0.666) ) {
-			$('.listingFilters').addClass('sticky');
-		}
-		else {
-			$('.listingFilters').removeClass('sticky');
-		}
-	});
+	if ($('.listingWelcome').css('display') == 'none') {
+	}
+	else {
+		$(window).scroll(function(){
+			if ( scrollTopVal > ((wH-90)*0.666) ) {
+				$('.listingFilters').addClass('sticky');
+				$('main').css('padding-top','65px');
+			}
+			else {
+				$('.listingFilters').removeClass('sticky');
+				$('main').css('padding-top','0px');
+			}
+		});
+	}
 }
 
 function listingMasonry() {

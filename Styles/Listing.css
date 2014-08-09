@@ -107,7 +107,7 @@ main.menuOn .sticky {
 
 .listingContainer {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 30px;
 }
 .listingContainer h1{
 	top:30px;
@@ -260,14 +260,26 @@ main.menuOn .sticky {
 	.listingFilters{
 		position: fixed !important;
 		top: 69px !important;
+		height: 100px;
 	}
 
 	main {
-		padding-top: 50px;
+		padding-top: 100px;
 	}
 
 	.listingWelcome{
 		display: none;
+	}
+
+	.listingFilters .listingFilterFirstLayer {
+		background:white;
+		height: 46px;
+		width: 50%;
+		margin-left: -2px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.listingFilters .listingFilterFirstLayer select {
+		height: 100%;
 	}
 }
 
@@ -279,9 +291,26 @@ main.menuOn .sticky {
 	.listingFilters{
 		position: fixed !important;
 		top: 90px !important;
+		height: 100px;
 	}
 	.listingWelcome{
 		display: none;
+	}
+
+	main {
+		padding-top: 100px;
+	}
+
+	.listingFilters .listingFilterFirstLayer {
+		background:white;
+		height: 46px;
+		width: 50%;
+		margin-left: -2px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.listingFilters .listingFilterFirstLayer select {
+		height: 100%;
+		width: 100%;
 	}
 }
 

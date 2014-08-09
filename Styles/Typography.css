@@ -206,8 +206,36 @@ a:active {
     font-weight: 400;
 }
 
+.faceAA {
+    color:white;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
 
+.faceBB {
+    color:white;
+    opacity: 0.3;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
 
+.faceCC {
+    color: white;
+    opacity: 0.3;
+    font-size: 11px;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.faceDD {
+    color: white;
+    font-size: 11px;
+    font-weight: 200;
+    letter-spacing: 3.5px;
+}
 
 
 

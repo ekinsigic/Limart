@@ -1,6 +1,7 @@
 $(document).ready(function () {
 stylelisting();
 filterSticky();
+listingMasonry();
 });
 
 
@@ -16,6 +17,10 @@ function stylelisting() {
 }
 
 function filterSticky() {
+	$('.listingFilters').css({
+		'position':'absolute',
+		'top':(wH-90)*0.666+'px'
+	})
 	$(window).scroll(function(){
 		if ( scrollTopVal > ((wH-90)*0.666) ) {
 			$('.listingFilters').addClass('sticky');
@@ -27,7 +32,7 @@ function filterSticky() {
 }
 
 function listingMasonry() {
-	$('.listWrapper').masonry({
+	$('.listingList').masonry({
 	  columnWidth: 335,
 	  itemSelector: '.listItem',
 	  gutter: 9,

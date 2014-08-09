@@ -24,6 +24,12 @@ $(document).ready(function () {
 
     // PPI = getPPI();
     // console.log(PPI);
+
+    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
+    if(deviceIs == 'smartphone' && sH <= 500){
+        $('nav .divNav').css({ overflow: 'auto' });
+        $('nav .divNav .divMenuContent').css({height:230});
+    }
 });
 
 

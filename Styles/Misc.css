@@ -93,6 +93,7 @@ img[data-sixtythree^="icon-social-"] {
 img[data-sixtythree^="icon-social-"]:not(.white) {
     opacity: 0.2;
 }
+
 img[data-sixtythree^="icon-social-"]:not(.white):hover {
     opacity: 1;
 }
@@ -134,6 +135,21 @@ img[data-sixtythree="logotype-white"] {
     height: 45px;
 }
 /* END LOGOTYPE */
+
+
+/**/
+.divLineA{
+    width:1px;
+    height:62px;
+    background-color:#fff;
+}
+
+.divLineB{
+    width:1px;
+    height:62px;
+    background-color:#000;
+}
+
 
 
 

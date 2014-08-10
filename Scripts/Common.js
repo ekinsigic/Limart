@@ -241,10 +241,11 @@ var isSearchActive = false;
 
 function openOrCloseSearch() {
     if (!isMobile) {
-        $('nav .liSearch img').bind('click', function (e) {
+        $('nav .divSearchIcon').bind('click', function (e) {
+            e.stopPropagation();
             if (!isSearchActive) {
                 isSearchActive = true;
-                $('#search').addClass('topSearch');
+                $('#search, main, footer').addClass('topSearch');
                 $('#search input').focus();
             }
             else {
@@ -256,7 +257,7 @@ function openOrCloseSearch() {
 
 function closeSearch() {
     if (isSearchActive) {
-        $('#search').removeClass('topSearch');
+        $('#search, main, footer').removeClass('topSearch');
         setTimeout(function () {
             isSearchActive = false;
         }, 300);

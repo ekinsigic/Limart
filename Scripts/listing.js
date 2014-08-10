@@ -62,7 +62,7 @@ function listingMasonry() {
 }
 
 function listLoad(){
-		if ((($('body').height()-270)-(scrollTopVal+wH)) < 0) {
+		if ((($('body').height()-350)-(scrollTopVal+wH)) < 0) {
 			if (enoughtTimeStoppedToLoadItems) {
 				enoughtTimeStoppedToLoadItems = false;
 				$('.preloader').addClass('loading');

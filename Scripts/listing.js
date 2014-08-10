@@ -3,12 +3,12 @@ enoughtTimeStoppedToLoadItems = true;
 $(document).ready(function () {
 stylelisting();
 filterSticky();
-listingMasonry();
 listLoad();
 mobilePseudoHover();
 });
 
-$(document).load(function(){
+$(window).load(function(){
+	listingMasonry();
 });
 
 $(window).resize(function () {
@@ -45,6 +45,9 @@ function filterSticky() {
 }
 
 function listingMasonry() {
+		$('.listItem').each(function(){
+			$(this).removeClass('newItem');
+		});
 	setTimeout(function(){
 		$('.listingList').masonry({
 		  columnWidth: 300,
@@ -54,6 +57,8 @@ function listingMasonry() {
 		  transitionDuration: 0
 		});
 	},50);
+	setTimeout(function(){
+	},100);
 }
 
 function listLoad(){

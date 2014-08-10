@@ -180,8 +180,16 @@ main.menuOn .sticky {
 	background-color:rgba(255,255,255,0.97);
 	border: 3px solid #000;
 	text-align: center;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
 	display: flex;
-	align-items:center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	opacity: 0;
 	transition:all 0.4s;
 }

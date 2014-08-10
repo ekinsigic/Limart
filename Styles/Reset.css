@@ -60,3 +60,7 @@ input, textarea, select {
     -webkit-appearance: none;
     border-radius:0;
 }
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

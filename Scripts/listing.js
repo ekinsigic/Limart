@@ -81,7 +81,6 @@ function listLoad(){
 function mobilePseudoHover() {
 	$('.listItem').bind('touchstart',function(e){
 		e.stopPropagation();
-		else {
 			$('.listItem').each(function(){
 				 $(this).removeClass('hover');
 			})
@@ -91,6 +90,5 @@ function mobilePseudoHover() {
 					$(this).removeClass('hover');
 				});
 			});
-		}
 	});
 }

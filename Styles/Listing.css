@@ -148,6 +148,9 @@ main.menuOn .sticky {
 .listItem:hover .listItemOverlay{
 	opacity: 1 ;
 }
+.listItem.hover .listItemOverlay{
+	opacity: 1 ;
+}
 .overlayWrapper {
 	position: absolute;
 	bottom: 27%;
@@ -157,6 +160,9 @@ main.menuOn .sticky {
 	padding-right: 25px; 
 	transition:all 0.4s;
 	-webkit-transform:translate3d(0px,5px,0px);
+}
+.listItem.hover .overlayWrapper {
+	-webkit-transform:translate3d(0px,0px,0px);
 }
 .listItem:hover .overlayWrapper {
 	-webkit-transform:translate3d(0px,0px,0px);

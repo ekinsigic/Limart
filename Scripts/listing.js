@@ -5,6 +5,7 @@ stylelisting();
 filterSticky();
 listingMasonry();
 listLoad();
+mobilePseudoHover();
 });
 
 $(document).load(function(){
@@ -13,7 +14,10 @@ $(document).load(function(){
 $(window).resize(function () {
 stylelisting();
 });
-
+$(window).bind('scroll',function(){
+	listLoad();
+	console.log( ($('body').height()-340) - (scrollTopVal+wH) );
+});
 
 function stylelisting() {
 	$('.listingWelcome').css({
@@ -74,7 +78,19 @@ function listLoad(){
 		}
 }
 
-	$(window).bind('scroll',function(){
-		listLoad();
-		console.log( ($('body').height()-340) - (scrollTopVal+wH) );
+function mobilePseudoHover() {
+	$('.listItem').bind('touchstart',function(e){
+		e.stopPropagation();
+		else {
+			$('.listItem').each(function(){
+				 $(this).removeClass('hover');
+			})
+			$(this).addClass('hover');
+			$(window).bind('touchstart',function(){
+				$('.listItem').each(function(){
+					$(this).removeClass('hover');
+				});
+			});
+		}
 	});
+}

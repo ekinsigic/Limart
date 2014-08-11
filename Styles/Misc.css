@@ -492,6 +492,9 @@ img[data-sixtythree="logotype-white"] {
 
 
 
+
+
+
 /* Screen */
 @media all and (max-width: 400px) {
     header nav img[data-sixtythree^="icon-social-"]:not(.white) {

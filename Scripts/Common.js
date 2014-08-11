@@ -30,6 +30,12 @@ $(document).ready(function () {
         $('nav .divNav').css({ overflow: 'auto' });
         $('nav .divNav .divMenuContent').css({height:230});
     }
+
+    /* mobile yatayda gelecek ekranın yüksekliği */
+    $('#smartphoneLandscape').css({ height: wH - hH });
+
+    $('.divPreloader').addClass('loading');
+
 });
 
 
@@ -126,8 +132,8 @@ function popupSettings() {
 
 
 
-var isMenuOpen = false;//Menünün açýk olup olmadýðýný kontrol etmek için, sayfa baþlangýcýnda kapalý varsayýyoruz.
-var isScroll = false;//kullanýcýnýn scroll amaçlý dokunup dokunmadýðýný tespit etmek için dokunma iþleminin baþýnda scroll amaçlý dokunmadýðýný varsayýyoruz.
+var isMenuOpen = false;//Menünün açık olup olmadığını kontrol etmek için, sayfa başlangıcında kapalı varsayıyoruz.
+var isScroll = false;//kullanıcının scroll amaçlı dokunup dokunmadığını tespit etmek için dokunma işleminin başında scroll amaçlı dokunmadığını varsayıyoruz.
 
 function openCloseMenu() {
     if (isMobile) {
@@ -252,7 +258,7 @@ function closeMenu() {
 
 
 
-// misc imajlarını sayfa açılışında retina olup olmadğına göre yükleme fonksiyonu
+// misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
 function miscImgLoader() {
     $('body').find('img[data-sixtyThree]').each(function(){
         var miscIdentifier = $(this).attr('data-sixtyThree');

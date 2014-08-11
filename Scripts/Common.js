@@ -34,17 +34,25 @@ $(document).ready(function () {
         $('nav .divNav .divMenuContent').css({height:230});
     }
 
+});
 
 
+
+var orientationChangeTimer = null;
+$(window).on("orientationchange", function () {
+    if (orientationChangeTimer == null) {
+        clearTimeout(orientationChangeTimer);
+    }
+
+    orientationChangeTimer = setTimeout(function () {
+        smartphoneLandscape();
+    }, 300);
 });
 
 
 
 $(window).resize(function () {
     setGlobals();
-
-    smartphoneLandscape();
-
     if (!isMobile) {
         closeMenu();
     }
@@ -141,13 +149,11 @@ function popupSettings() {
 /* mobilde yatayda gelecek ekran */
 function smartphoneLandscape() {
     if (isMobile && isLandscape) {
-        $('header, main, footer').fadeOut();
-        $('#smartphoneLandscape').fadeIn();
+        $('#smartphoneLandscape').show();
         $('.divPreloader').addClass('loading');
     }
-    else {
-        $('header, main, footer').fadeIn();
-        $('#smartphoneLandscape').fadeOut();
+    else if(isMobile && isPortrait) {
+        $('#smartphoneLandscape').hide();
         $('.divPreloader').removeClass('loading');
     }
 }

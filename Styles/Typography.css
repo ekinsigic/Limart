@@ -332,7 +332,7 @@ a:active {
 @media all and (min-width: 401px) and (max-width: 700px) {
 
     #smartphoneLandscape .faceA{
-        font-size:30px;
+        font-size:24px;
     }
 
     header nav .aStyleA:link,

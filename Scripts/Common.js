@@ -32,8 +32,6 @@ $(document).ready(function () {
     }
 
     /* mobile yatayda gelecek ekranın yüksekliği */
-    $('#smartphoneLandscape').css({ height: wH - hH });
-
     $('.divPreloader').addClass('loading');
 
 });

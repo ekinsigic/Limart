@@ -1,7 +1,7 @@
 ﻿
 #smartphoneLandscape{
     display:none;
-    position:absolute;
+    position:fixed;
     z-index:200;
     top:0;
     right:0;
@@ -14,8 +14,7 @@
     position:absolute;
     top:50%;
     left:50%;
-    margin:-16px 0 0 -16px;
-	
+    margin:-40px 0 0 -16px;
 }
 
 #smartphoneLandscape .divPreloader.loading{
@@ -35,10 +34,12 @@
 	-webkit-transform:none;
 }
 
-#smartphoneLandscape p{
-    top:80%;
-    left:50%;
-    margin-left:-100px;
+#smartphoneLandscape p.faceA{
+    position:absolute;
+    top:50%;
+    margin-top:50px;
+    line-height:30px;
+    text-align:center;
 }
 
 
@@ -218,7 +219,11 @@ main{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-<<<<<<< HEAD
+    header, main, footer{
+        display:none;
+    }
+
+
     #smartphoneLandscape{
         display:block;
     }
@@ -227,8 +232,6 @@ main{
         top: 10px;
     }
 
-=======
->>>>>>> origin/master
     #search .divSearchContent{
         width:550px;
     }

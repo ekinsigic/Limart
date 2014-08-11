@@ -157,7 +157,7 @@ function openCloseMenu() {
                             isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
                             isScroll = false;
 
-                            $('nav .divNav, main, footer, .filtersInHeader').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+                            $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
                             e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
                             $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                                 e.preventDefault();
@@ -174,7 +174,7 @@ function openCloseMenu() {
                         isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
                         isScroll = false;
 
-                        $('nav .divNav, main, footer, .filtersInHeader').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+                        $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
                         e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
                         $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                             e.preventDefault();
@@ -209,7 +209,7 @@ function openCloseMenu() {
                         setTimeout(function(){
                             isMenuOpen = true
                         },100);
-                        $('.divNav, main, footer, .filtersInHeader').addClass('menuOn');
+                        $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');
                         e.stopPropagation();
                     }
                     else if (isMenuOpen) {
@@ -221,7 +221,7 @@ function openCloseMenu() {
                 if (!isMenuOpen) {
                     isMenuOpen = true;
 
-                    $('.divNav, main, footer, .filtersInHeader').addClass('menuOn');
+                    $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');
                     e.stopPropagation();
                 }
                 else if (isMenuOpen) {
@@ -243,7 +243,7 @@ function openCloseMenu() {
 
 function closeMenu() {
     if (isMobile) {
-        $('nav .divNav, main, footer, .filtersInHeader').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
+        $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
         setTimeout(function () {//setTimeout kurarak kullanýcýyý animasyonu beklemek zorunda býrakýyoruz
             //tespit deðiþkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
             isMenuOpen = false;
@@ -252,7 +252,7 @@ function closeMenu() {
         }, 300);
     }
     else {
-        $('.divNav, main, footer, .filtersInHeader').removeClass('menuOn');
+        $('.divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('menuOn');
         setTimeout(function () {
             isMenuOpen = false;
             isScroll = false;
@@ -322,7 +322,7 @@ function openOrCloseSearch() {
                 setTimeout(function(){
                     if (!isSearchActive) {
                         isSearchActive = true;
-                        $('#search, main, footer, .filtersInHeader').addClass('topSearch');
+                        $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                         if (!isMobile) {
                             $('#search input').focus();
                         }
@@ -341,7 +341,7 @@ function openOrCloseSearch() {
             else {
                 if (!isSearchActive) {
                     isSearchActive = true;
-                    $('#search, main, footer, .filtersInHeader').addClass('topSearch');
+                    $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                     if (!isMobile) {
                         $('#search input').focus();
                     };
@@ -371,7 +371,7 @@ function openOrCloseSearch() {
                                 setTimeout(function(){
                                     if (!isSearchActive) {
                                         isSearchActive = true;
-                                        $('#search, main, footer, .filtersInHeader').addClass('topSearch');
+                                        $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                                             if (!isMobile) {
                                                 $('#search input').focus();
                                             }
@@ -394,7 +394,7 @@ function openOrCloseSearch() {
                                 if (!isSearchActive) {
                                     e.stopPropagation();
                                     isSearchActive = true;
-                                    $('#search, main, footer, .filtersInHeader').addClass('topSearch');
+                                    $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                                         if (!isMobile) {
                                             $('#search input').focus();
                                         }
@@ -421,7 +421,7 @@ function openOrCloseSearch() {
                                 setTimeout(function(){
                                     if (!isSearchActive) {
                                         isSearchActive = true;
-                                        $('#search, main, footer, .filtersInHeader').addClass('topSearch');
+                                        $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                                             if (!isMobile) {
                                                 $('#search input').focus();
                                             }
@@ -444,7 +444,7 @@ function openOrCloseSearch() {
                                 if (!isSearchActive) {
                                     e.stopPropagation();
                                     isSearchActive = true;
-                                    $('#search, main, footer, .filtersInHeader').addClass('topSearch');
+                                    $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                                         if (!isMobile) {
                                             $('#search input').focus();
                                         }
@@ -470,7 +470,7 @@ function openOrCloseSearch() {
 
 function closeSearch() {
     if (isSearchActive) {
-        $('#search, main, footer, .filtersInHeader').removeClass('topSearch');
+        $('#search, main, footer, .filtersInHeader, .listingFilters').removeClass('topSearch');
         $('.pseudoCursor').remove();
         setTimeout(function () {
             isSearchActive = false;

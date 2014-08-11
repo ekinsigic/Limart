@@ -27,22 +27,38 @@ function styleArtist() {
 }
 
 function filterSticky() {
-	if (!isMobile) {
 		$('.listingFilters').css({
+			'top': (wH - $('header').height()) +'px'
 		})
+	if (!isMobile) {
 		if ($('.artistDetail').css('display') == 'none') {
+
+			$(window).scroll(function(){
+				if ( scrollTopVal > $('.artistWelcome').height() ) {
+					$('.listingFilters').addClass('sticky');
+					$('.divNav').addClass('withSticky');
+					$('#search').addClass('withSticky');
+				}
+				else {
+					$('.listingFilters').removeClass('sticky');
+					$('.divNav').removeClass('withSticky');
+					$('#search').removeClass('withSticky');
+				}
+			});
 
 		}
 		else {
 			
 			$(window).scroll(function(){
-				if ( scrollTopVal > (wH-90) ) {
+				if ( scrollTopVal > $('.artistWelcome').height() ) {
 					$('.listingFilters').addClass('sticky');
-					$('main').css('padding-top','65px');
+					$('.divNav').addClass('withSticky');
+					$('#search').addClass('withSticky');
 				}
 				else {
 					$('.listingFilters').removeClass('sticky');
-					$('main').css('padding-top','0');
+					$('.divNav').removeClass('withSticky');
+					$('#search').removeClass('withSticky');
 				}
 			});
 

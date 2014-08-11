@@ -286,7 +286,7 @@ main.menuOn .sticky {
 
 .clickLoader {
 	display: none;
-	top: -210px;
+	top: 80px;
 	margin: 0 auto;
 	z-index: 19;
 }
@@ -335,12 +335,14 @@ footer {
 
 	.listingFilters{
 		height: 100px;
-		z-index: 99;
+		z-index: 19;
 	}
 
 	.sticky {
 		top: 70px !important;
-	}
+	
+		z-index: 19;
+}
 
 	.artistInfo img.artistPhoto {
 		width: 100px;

@@ -18,9 +18,7 @@ $(document).ready(function () {
     scrollEvents();
     setGlobals();
     popupSettings();
-    headerShadow();
     smartphoneLandscape();
-    headerShadow();
     miscImgLoader();
     openCloseMenu();
     openOrCloseSearch();
@@ -193,7 +191,7 @@ function openCloseMenu() {
                         else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
                             closeMenu();
                         }
-                    },300);
+                    },500);
 
                 }
                 else {
@@ -242,7 +240,7 @@ function openCloseMenu() {
                     else if (isMenuOpen) {
                         closeMenu();
                     }
-                },301)
+                },501)
             }
             else {
                 if (!isMenuOpen) {
@@ -276,14 +274,14 @@ function closeMenu() {
             isMenuOpen = false;
             isScroll = false;
             $(window).unbind("touchmove");
-        }, 300);
+        }, 500);
     }
     else {
         $('.divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('menuOn');
         setTimeout(function () {
             isMenuOpen = false;
             isScroll = false;
-        }, 300);
+        }, 500);
     }
 }
 
@@ -312,30 +310,6 @@ function miscImgLoader() {
         }
     });
 }
-
-
-
-
-/*
-// search form ile ilgili fonksiyonlar
-function setupSearchForm() {
-    if ($('nav .divNavIcon').is(':visible')) {
-        if ($('nav .divSearch').is(':empty')) {
-            var searchFormHTML = $('#search').html();
-            $('#search').empty();
-            $('nav .divSearch').html(searchFormHTML);
-            $('nav .divSearch .divSearchContent input').focus();
-        }
-    }
-    else {
-        if ($('#search').is(':empty')) {
-            searchFormHTML = $('nav .divSearch').html();
-            $('nav .divSearch').empty();
-            $('#search').html(searchFormHTML);
-        }
-    }
-}
-*/
 
 
 var isSearchActive = false;
@@ -430,7 +404,7 @@ function openOrCloseSearch() {
                                     else {
                                         closeSearch();
                                     }
-                                },300)
+                                },500)
                             }
                             else {
                                 if (!isSearchActive) {
@@ -455,7 +429,7 @@ function openOrCloseSearch() {
                                 } 
                             }
                         }
-                    },300)
+                    },500)
                 }
                 else {
                         e.stopPropagation();
@@ -527,15 +501,6 @@ function closeSearch() {
         setTimeout(function () {
             isSearchActive = false;
             $(window).unbind("touchmove");
-        }, 300);
+        }, 500);
     }
-}
-
-
-function headerShadow(){
-    $(window).scroll(function(){
-        if (scrollTopVal > 0) {
-            $('header').addClass('headerShadow');
-        };
-    });
 }

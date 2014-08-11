@@ -120,40 +120,29 @@ main{
 
 
 
-
 /* Screen */
 @media all and (max-width: 400px) {
-    #search{
-        display:none;
+    #search {
+        top: 10px;
+    }
+    #search .divSearchContent{
+        width:90%;
     }
 
-    nav .divSearch {
-        display:block;
-    }
-
-    
     main{
         margin:70px auto 0 auto;
     }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    #search{
-        display:none;
-    }
-
-    nav .divSearch {
-        display:block;
+    #search .divSearchContent{
+        width:550px;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #search{
-        display:none;
-    }
-
-    nav .divSearch {
-        display:block;
+    #search .divSearchContent{
+        width:670px;
     }
 }
 
@@ -161,18 +150,10 @@ main{
     #search .divSearchContent{
         width:960px;
     }
-
-    nav .divSearch {
-        display:none;
-    }
 }
 
 @media all and (min-width: 1435px) {
     #search .divSearchContent{
         width:1080px;
-    }
-
-    nav .divSearch {
-        display:none;
     }
 }

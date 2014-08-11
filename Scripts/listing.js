@@ -3,7 +3,12 @@ enoughtTimeStoppedToLoadItems = true;
 $(document).ready(function () {
 stylelisting();
 filterSticky();
-listLoad();
+if (!isMobile) {
+	listLoad();
+}
+else {
+	clickLoad();
+}
 mobilePseudoHover();
 carryFilters();
 });
@@ -17,7 +22,9 @@ carryFilters();
 stylelisting();
 });
 $(window).bind('scroll',function(){
-	listLoad();
+	if (!isMobile) {
+		listLoad();
+	};
 });
 
 function stylelisting() {
@@ -83,6 +90,33 @@ function listLoad(){
 			}
 		}
 }
+function clickLoad(){
+		$('.preloader').css('display','none');
+		$('.clickLoader').addClass('active');
+		$('.clickLoader').bind('touchstart', function(){
+			$('.clickLoader').bind('touchend', function(){
+				disableTouchScroll(1);
+				if (enoughtTimeStoppedToLoadItems) {
+					enoughtTimeStoppedToLoadItems = false;
+					$('.preloader').addClass('loading');
+					setTimeout(function(){
+						var newBatch = $('.listItem').clone().addClass('newItem');
+						$('.preloader').removeClass('loading');
+						$('.listingList').append(newBatch).masonry( 'appended', newBatch, true);
+						setTimeout(function(){
+							$('.listItem').each(function(){
+								disableTouchScroll(0);
+								$(this).removeClass('newItem');
+							});
+						},100);
+					},3300);
+					setTimeout(function(){
+						enoughtTimeStoppedToLoadItems = true;
+					},400);
+				}
+			});
+		});
+}
 
 function mobilePseudoHover() {
 	if (isMobile) {
@@ -132,5 +166,18 @@ function carryFilters() {
 	else {
 		$('.listingContainer').before($('.listingFilters').removeClass('filtersInHeader'));
 		$('header .listingFilters').remove();
+	}
+}
+
+function disableTouchScroll(offOrOn) {
+	if (offOrOn == 1) {
+		console.log('eakr');
+		$('html').bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
+		    e.preventDefault();
+		});
+	}
+	else {
+		console.log('eaksewr');
+		$('html').unbind('touchmove');
 	}
 }

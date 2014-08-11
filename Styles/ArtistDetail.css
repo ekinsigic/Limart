@@ -6,7 +6,15 @@ main {
 	width: 100%;
 	min-height: 300px;
 	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	display: -ms-flex;
 	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
 	align-items: center;
 }
 
@@ -78,9 +86,10 @@ main {
 	border-top: 1px solid #f1f1f1;
 	background-color:#fff;
 	width: 100%;
-	transition:border 0.2s, -webkit-transform 0.2s;
+	transition:border 0.2s, -webkit-transform 0.3s;
 	z-index: 2;
 	text-align: center;
+	position: absolute;
 }
 
 .sticky {
@@ -88,6 +97,7 @@ main {
 	top: 90px !important;
 	border-bottom: 4px solid #f1f1f1;
 
+	z-index: 99;
 }
 
 .listingFilters ul {
@@ -274,7 +284,18 @@ main.menuOn .sticky {
 }
 
 
-
+.clickLoader {
+	display: none;
+	top: -210px;
+	margin: 0 auto;
+	z-index: 19;
+}
+.active {
+	display: block;
+}
+footer {
+	text-align: center;
+}
 
 
 
@@ -314,7 +335,11 @@ main.menuOn .sticky {
 
 	.listingFilters{
 		height: 100px;
-		z-index: 3;
+		z-index: 99;
+	}
+
+	.sticky {
+		top: 70px !important;
 	}
 
 	.artistInfo img.artistPhoto {
@@ -349,7 +374,7 @@ main.menuOn .sticky {
 		background:white;
 		height: 46px;
 		width: 50%;
-		margin-left: -2px;
+		margin-left: -10px;
 		border-bottom: 1px solid #f0f0f0;
 	}
 
@@ -367,29 +392,22 @@ main.menuOn .sticky {
 	}
 
 	.listingContainer {
-		margin-top: 50px;
+		margin-top: 130px;
 	}
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    .listingWelcome h2, .listingWelcome p {
-		width: 550px;
+	.artistWelcome {
+		padding-bottom:20px;
+		box-sizing:content-box
 	}
 
-	.listingFilters{
-		position: fixed !important;
-		top: 90px !important;
-		height: 100px;
-		z-index: 3;
-	}
-	
-	.listingWelcome{
-		display: none;
+	.sticky {
+		top: 70px !important;
 	}
 
 	main {
-		padding-top: 100px;
-	}
+		margin-top: 70px;}
 
 	.listingFilters .listingFilterFirstLayer {
 		background:white;

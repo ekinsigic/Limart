@@ -28,6 +28,7 @@ main {
 }
 .listingWelcome h2 {
 	margin-bottom: 40px;
+	line-height: 36px;
 } 
 .listingWelcome > * {
 	z-index: 3;

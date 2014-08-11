@@ -25,7 +25,7 @@ $(document).ready(function () {
     // PPI = getPPI();
     // console.log(PPI);
 
-    // özellikle iphone4 için menüyü scroll edilebilir kıldık.
+    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
     if(deviceIs == 'smartphone' && sH <= 500){
         $('nav .divNav').css({ overflow: 'auto' });
         $('nav .divNav .divMenuContent').css({height:230});
@@ -283,6 +283,29 @@ function miscImgLoader() {
 
 
 
+
+/*
+// search form ile ilgili fonksiyonlar
+function setupSearchForm() {
+    if ($('nav .divNavIcon').is(':visible')) {
+        if ($('nav .divSearch').is(':empty')) {
+            var searchFormHTML = $('#search').html();
+            $('#search').empty();
+            $('nav .divSearch').html(searchFormHTML);
+            $('nav .divSearch .divSearchContent input').focus();
+        }
+    }
+    else {
+        if ($('#search').is(':empty')) {
+            searchFormHTML = $('nav .divSearch').html();
+            $('nav .divSearch').empty();
+            $('#search').html(searchFormHTML);
+        }
+    }
+}
+*/
+
+
 var isSearchActive = false;
 
 function openOrCloseSearch() {
@@ -295,7 +318,15 @@ function openOrCloseSearch() {
                     if (!isSearchActive) {
                         isSearchActive = true;
                         $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                        $('#search input').focus();
+                        if (!isMobile) {
+                            $('#search input').focus();
+                        }
+                        else {
+                            $('.divSearchContent').append('<div class="pseudoCursor">');
+                            $(document).keydown(function (e) {
+                                    $('.pseudoCursor').remove();
+                            });
+                        }
                     }
                     else {
                         closeSearch();
@@ -306,7 +337,9 @@ function openOrCloseSearch() {
                 if (!isSearchActive) {
                     isSearchActive = true;
                     $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                    $('#search input').focus();
+                    if (!isMobile) {
+                        $('#search input').focus();
+                    };
                 }
                 else {
                     closeSearch();
@@ -334,7 +367,15 @@ function openOrCloseSearch() {
                                     if (!isSearchActive) {
                                         isSearchActive = true;
                                         $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                        $('#search input').focus();
+                                            if (!isMobile) {
+                                                $('#search input').focus();
+                                            }
+                                        else {
+                                            $('.divSearchContent').append('<div class="pseudoCursor">');
+                                            $(document).keydown(function (e) {
+                                                    $('.pseudoCursor').remove();
+                                            });
+                                        }
                                         $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                                             e.preventDefault();
                                         });
@@ -349,7 +390,15 @@ function openOrCloseSearch() {
                                     e.stopPropagation();
                                     isSearchActive = true;
                                     $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                    $('#search input').focus();
+                                        if (!isMobile) {
+                                            $('#search input').focus();
+                                        }
+                                        else {
+                                            $('.divSearchContent').append('<div class="pseudoCursor">');
+                                            $(document).keydown(function (e) {
+                                                    $('.pseudoCursor').remove();
+                                            });
+                                        }
                                 }
                                 else {
                                     closeSearch();
@@ -368,7 +417,15 @@ function openOrCloseSearch() {
                                     if (!isSearchActive) {
                                         isSearchActive = true;
                                         $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                        $('#search input').focus();
+                                            if (!isMobile) {
+                                                $('#search input').focus();
+                                            }
+                                        else {
+                                            $('.divSearchContent').append('<div class="pseudoCursor">');
+                                            $(document).keydown(function (e) {
+                                                    $('.pseudoCursor').remove();
+                                            });
+                                        }
                                         $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                                             e.preventDefault();
                                         });
@@ -383,7 +440,15 @@ function openOrCloseSearch() {
                                     e.stopPropagation();
                                     isSearchActive = true;
                                     $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                    $('#search input').focus();
+                                        if (!isMobile) {
+                                            $('#search input').focus();
+                                        }
+                                        else {
+                                            $('.divSearchContent').append('<div class="pseudoCursor">');
+                                            $(document).keydown(function (e) {
+                                                    $('.pseudoCursor').remove();
+                                            });
+                                        }
                                 }
                                 else {
                                     closeSearch();
@@ -401,6 +466,7 @@ function openOrCloseSearch() {
 function closeSearch() {
     if (isSearchActive) {
         $('#search, main, footer, .filtersInHeader').removeClass('topSearch');
+        $('.pseudoCursor').remove();
         setTimeout(function () {
             isSearchActive = false;
             $(window).unbind("touchmove");

@@ -22,6 +22,17 @@ header .divContent .aLogo:visited{
     left:0;
 }
 
+.shadowHeader:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 70px;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.3);
+    z-index: 99999999999;
+}
 
 /* Screen */
 @media all and (max-width: 400px) {

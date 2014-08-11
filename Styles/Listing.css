@@ -28,6 +28,7 @@ main {
 }
 .listingWelcome h2 {
 	margin-bottom: 40px;
+	line-height: 36px;
 } 
 .listingWelcome > * {
 	z-index: 3;
@@ -246,8 +247,18 @@ main.menuOn .sticky {
 }
 
 
-
-
+.clickLoader {
+	display: none;
+	top: -210px;
+	margin: 0 auto;
+	z-index: 19;
+}
+.active {
+	display: block;
+}
+footer {
+	text-align: center;
+}
 
 
 
@@ -300,12 +311,14 @@ main.menuOn .sticky {
 		background:white;
 		height: 46px;
 		width: 50%;
-		margin-left: -2px;
+		overflow: hidden;
+		margin-left: -8px;
 		border-bottom: 1px solid #f0f0f0;
 	}
 	.listingFilters .listingFilterFirstLayer select {
 		height: 100%;
-	}
+	
+}
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -315,7 +328,7 @@ main.menuOn .sticky {
 
 	.listingFilters{
 		position: fixed !important;
-		top: 90px !important;
+		top: 69px !important;
 		height: 100px;
 	}
 	.listingWelcome{
@@ -344,7 +357,11 @@ main.menuOn .sticky {
 		width: 670px;
 	}
 }
-
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    .listingWelcome h2, .listingWelcome p {
+		width: 670px;
+	}
+}
 @media all and (min-width: 1435px) {
     .listingWelcome h2, .listingWelcome p {
 		width: 1080px;

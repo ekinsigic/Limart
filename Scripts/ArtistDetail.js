@@ -100,12 +100,12 @@ function listLoad(){
 		}
 }
 function clickLoad(){
-		$(window).bind('touchmove',function (e){
-			e.preventDefault();
-		});
 		$('.preloader').css('display','none');
 		$('.clickLoader').addClass('active');
 		$('.clickLoader').bind('touchstart', function(){
+			$(window).bind('touchmove',function (e){
+				e.preventDefault();
+			});
 			if (enoughtTimeStoppedToLoadItems) {
 				enoughtTimeStoppedToLoadItems = false;
 				$('.preloader').addClass('loading');
@@ -118,7 +118,7 @@ function clickLoad(){
 							$(this).removeClass('newItem');
 						});
 					},100);
-				},300);
+				},6300);
 				setTimeout(function(){
 					enoughtTimeStoppedToLoadItems = true;
 				},400);

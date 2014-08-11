@@ -351,6 +351,9 @@ function openOrCloseSearch() {
                             $(document).keydown(function (e) {
                                     $('.pseudoCursor').remove();
                             });
+                            $('input').on('focus', function(){
+                                    $('.pseudoCursor').remove();
+                            });
                         }
                     }
                     else {
@@ -364,7 +367,16 @@ function openOrCloseSearch() {
                     $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
                     if (!isMobile) {
                         $('#search input').focus();
-                    };
+                    }
+                    else {
+                        $('.divSearchContent').append('<div class="pseudoCursor">');
+                        $(document).keydown(function (e) {
+                                $('.pseudoCursor').remove();
+                        });
+                        $('input').on('focus', function(){
+                                $('.pseudoCursor').remove();
+                        });
+                    }
                 }
                 else {
                     closeSearch();
@@ -400,6 +412,9 @@ function openOrCloseSearch() {
                                             $(document).keydown(function (e) {
                                                     $('.pseudoCursor').remove();
                                             });
+                                            $('input').on('focus', function(){
+                                                    $('.pseudoCursor').remove();
+                                            });
                                         }
                                         $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                                             e.preventDefault();
@@ -421,6 +436,9 @@ function openOrCloseSearch() {
                                         else {
                                             $('.divSearchContent').append('<div class="pseudoCursor">');
                                             $(document).keydown(function (e) {
+                                                    $('.pseudoCursor').remove();
+                                            });
+                                            $('input').on('focus', function(){
                                                     $('.pseudoCursor').remove();
                                             });
                                         }
@@ -450,6 +468,9 @@ function openOrCloseSearch() {
                                             $(document).keydown(function (e) {
                                                     $('.pseudoCursor').remove();
                                             });
+                                            $('input').on('focus', function(){
+                                                    $('.pseudoCursor').remove();
+                                            });
                                         }
                                         $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                                             e.preventDefault();
@@ -473,6 +494,9 @@ function openOrCloseSearch() {
                                             $(document).keydown(function (e) {
                                                     $('.pseudoCursor').remove();
                                             });
+                                            $('input').on('focus', function(){
+                                                    $('.pseudoCursor').remove();
+                                            });
                                         }
                                 }
                                 else {
@@ -492,6 +516,7 @@ function closeSearch() {
     if (isSearchActive) {
         $('#search, main, footer, .filtersInHeader, .listingFilters').removeClass('topSearch');
         $('.pseudoCursor').remove();
+        $('#textarea').blur();
         setTimeout(function () {
             isSearchActive = false;
             $(window).unbind("touchmove");

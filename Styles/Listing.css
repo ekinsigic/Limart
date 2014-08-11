@@ -247,8 +247,18 @@ main.menuOn .sticky {
 }
 
 
-
-
+.clickLoader {
+	display: none;
+	top: -210px;
+	margin: 0 auto;
+	z-index: 19;
+}
+.active {
+	display: block;
+}
+footer {
+	text-align: center;
+}
 
 
 

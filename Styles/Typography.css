@@ -1,7 +1,4 @@
-﻿/* TEST COMMENT */
-
-
-body {
+﻿body {
     font-family: 'Nova';
 }
 
@@ -103,13 +100,15 @@ a:active {
 .faceJ {
     color: #fff;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 5px;
 }
 
 .faceK {
     color: #adadad;
     font-size: 11px;
     font-weight: 400;
+    letter-spacing: 2.5px;
 }
 
 .faceL {
@@ -214,14 +213,14 @@ a:active {
 }
 
 .faceAA {
-    color:white;
+    color: white;
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 6px;
 }
 
 .faceBB {
-    color:white;
+    color: white;
     opacity: 0.3;
     font-size: 12px;
     font-weight: 300;
@@ -301,8 +300,8 @@ a:active {
 
 /* Screen */
 @media all and (max-width: 400px) {
-    header nav .aStyleA:link,
-    header nav .aStyleA:visited {
+    .aStyleA:link,
+    .aStyleA:visited {
         margin: 0 !important;
         font-size: 13px;
         letter-spacing: 0.09em;
@@ -310,36 +309,41 @@ a:active {
         border: 0;
     }
 
-    header nav .aStyleA:hover,
-    header nav .aStyleA:active {
+    .aStyleA:hover,
+    .aStyleA:active {
         border-bottom: 0;
     }
 
-    #mainEntry .divText .faceB {
+    .faceB {
         font-size: 22px;
-        font-weight:700;
+        font-weight: 700;
         letter-spacing: 5px;
     }
 
-    #mainEntry .divText .faceC {
+    .faceC {
         font-size: 24px;
         letter-spacing: 5.30px;
     }
 
-    #welcomeText .faceD {
+    .faceD {
         font-size: 20px;
         letter-spacing: 5px;
+    }
+
+    .faceJ {
+        font-size: 12px;
+        letter-spacing: 5.5px;
+    }
+
+    .faceK {
+        font-size: 11px;
+        letter-spacing: 1.5px;
     }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-
-    #smartphoneLandscape .faceA{
-        font-size:24px;
-    }
-
-    header nav .aStyleA:link,
-    header nav .aStyleA:visited {
+    .aStyleA:link,
+    .aStyleA:visited {
         margin: 0 !important;
         font-size: 13px;
         letter-spacing: 0.09em;
@@ -354,8 +358,8 @@ a:active {
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    header nav .aStyleA:link,
-    header nav .aStyleA:visited {
+    .aStyleA:link,
+    .aStyleA:visited {
         margin: 0 !important;
         font-size: 17.966px;
         line-height: 4.21;
@@ -363,19 +367,24 @@ a:active {
         border: 0;
     }
 
-    header nav .aStyleA:hover,
-    header nav .aStyleA:active {
+    .aStyleA:hover,
+    .aStyleA:active {
         border-bottom: 0;
     }
 
-    #mainEntry .divText .faceB {
+    .faceB {
         font-size: 49px;
         letter-spacing: 11px;
     }
 
-    #mainEntry .divText .faceC {
+    .faceC {
         font-size: 50px;
         letter-spacing: 14px;
+    }
+
+    .faceJ {
+        font-size: 20px;
+        letter-spacing: 5.5px;
     }
 }
 

@@ -504,7 +504,7 @@ img[data-sixtythree="logotype-white"] {
     }
 
     .divLineA {
-        height: 50px;
+        height: 30px;
     }
 
     .divLineB {
@@ -513,6 +513,7 @@ img[data-sixtythree="logotype-white"] {
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+    
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

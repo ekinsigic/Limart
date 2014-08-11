@@ -27,7 +27,6 @@ header .divContent .aLogo:visited{
 @media all and (max-width: 400px) {
     header{
         height:70px !important;
-        background-color:#ff0 !important;
     }
 
     header .divContent{
@@ -46,8 +45,22 @@ header .divContent .aLogo:visited{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+    header{
+        height:70px !important;
+    }
+
     header .divContent{
-        width:550px;
+        width:90%;
+    }
+
+    header .divContent .aLogo:link,
+    header .divContent .aLogo:visited{
+        top:18px;
+    }
+
+    header .divContent .aLogo img {
+        width: 90px;
+        height: auto;
     }
 }
 

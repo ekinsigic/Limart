@@ -138,6 +138,10 @@ main{
     #search .divSearchContent{
         width:550px;
     }
+
+    main{
+        margin:70px auto 0 auto;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

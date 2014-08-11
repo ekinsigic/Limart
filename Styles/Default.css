@@ -309,6 +309,44 @@
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+   #mainEntry .divText {
+        width: 90%;
+        margin: -200px 0 0 -45%;
+        padding-top:0;
+    }
+
+        #mainEntry .divText .slideNo,
+        #mainEntry .divText .divLineF {
+            display:none;
+        }
+        
+        #mainEntry .divText .slideSubHeader {
+            margin-top:20px;
+        }
+
+        #mainEntry .divText img {
+            margin-top: 35px;
+            width: 90px;
+            height: auto;
+        }
+
+    
+
+
+    /* welcome text */
+    #welcomeText {
+        padding-top: 100px;
+    }
+
+        #welcomeText .mainHeader {
+            margin: auto;
+            width: 90%;
+            line-height: 30px;
+        }
+
+        #welcomeText .pText {
+            width: 90%;
+        }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

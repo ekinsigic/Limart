@@ -32,7 +32,14 @@ $(document).ready(function () {
     }
 
     /* mobile yatayda gelecek ekranın yüksekliği */
-    $('.divPreloader').addClass('loading');
+    if (isMobile && isLandscape) {
+
+        $('header, main, footer').fadeOut();
+        $('#smartphoneLandscape').fadeIn();
+        $('.divPreloader').addClass('loading');
+    }
+
+
 
 });
 

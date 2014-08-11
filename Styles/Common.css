@@ -1,72 +1,4 @@
 ﻿
-#smartphoneLandscape{
-    display:none;
-    position:fixed;
-    z-index:200;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    background-color:#fff;
-}
-
-#smartphoneLandscape .divPreloader {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin:-40px 0 0 -16px;
-}
-
-#smartphoneLandscape .divPreloader.loading{
-	opacity: 1 !important;
-}
-
-#smartphoneLandscape .divPreloader img {
-	-webkit-transform:rotate(-45deg);
-}
-
-#smartphoneLandscape .divPreloader.loading img {
-	-webkit-animation: preload 2s infinite;
-	-webkit-animation-play-state:running;
-}
-
-#smartphoneLandscape .divPreloader img:hover {
-	-webkit-transform:none;
-}
-
-#smartphoneLandscape p.faceA{
-    width:100%;
-    position:absolute;
-    top:50%;
-    margin-top:50px;
-    line-height:30px;
-    text-align:center;
-}
-
-
-@-webkit-keyframes preload {
-	0% {
-		-webkit-transform:rotate(-45deg);
-	}
-	25% {
-		-webkit-transform:rotate(-135deg);
-	} 
-	50% {
-		-webkit-transform:rotate(-225deg);
-	}
-	75% {
-		-webkit-transform:rotate(-315deg);
-	}
-	100% {
-		-webkit-transform:rotate(-405deg);
-	}
-}
-
-
-
-
-
-
 #search{
     position:fixed;
     z-index:15;
@@ -113,15 +45,7 @@
     transform:translate3d(0px,60px,0px);
 }
 
-#search .pseudoCursor {
-    position: absolute;
-    width: 1px;
-    height: 17px;
-    background: rgba(0,0,0,1);
-    top: 21px;
-    right: 40px;
-    -webkit-animation:pseudoCursor 0.6s infinite alternate
-}
+
 
 
 
@@ -131,16 +55,7 @@ main{
 }
 
 
-@-webkit-keyframes pseudoCursor {
-    from {
-        opacity: 0;
-        animation-timing-function:  steps(0);
-    }
-    to {
-        opacity: 1;
-        animation-timing-function:  steps(0);
-    }
-}
+
 
 
 
@@ -220,12 +135,12 @@ main{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    #search {
-        top: 10px;
-    }
-
     #search .divSearchContent{
         width:550px;
+    }
+
+    main{
+        margin:70px auto 0 auto;
     }
 }
 

@@ -22,25 +22,27 @@ function styleArtist() {
 }
 
 function filterSticky() {
-	$('.listingFilters').css({
-	})
-	if ($('.artistDetail').css('display') == 'none') {
+	if (!isMobile) {
+		$('.listingFilters').css({
+		})
+		if ($('.artistDetail').css('display') == 'none') {
 
-	}
-	else {
-		
-		$(window).scroll(function(){
-			if ( scrollTopVal > (wH-90) ) {
-				$('.listingFilters').addClass('sticky');
-				$('main').css('padding-top','65px');
-			}
-			else {
-				$('.listingFilters').removeClass('sticky');
-				$('main').css('padding-top','0');
-			}
-		});
+		}
+		else {
+			
+			$(window).scroll(function(){
+				if ( scrollTopVal > (wH-90) ) {
+					$('.listingFilters').addClass('sticky');
+					$('main').css('padding-top','65px');
+				}
+				else {
+					$('.listingFilters').removeClass('sticky');
+					$('main').css('padding-top','0');
+				}
+			});
 
-	}
+		}
+	};
 }
 
 function listingMasonry() {

@@ -22,7 +22,9 @@ carryFilters();
 stylelisting();
 });
 $(window).bind('scroll',function(){
-	listLoad();
+	if (!isMobile) {
+		listLoad();
+	};
 });
 
 function stylelisting() {
@@ -104,10 +106,10 @@ function clickLoad(){
 							$(this).removeClass('newItem');
 						});
 					},100);
-				},2000);
+				},300);
 				setTimeout(function(){
 					enoughtTimeStoppedToLoadItems = true;
-				},2100);
+				},400);
 			}
 		});
 }

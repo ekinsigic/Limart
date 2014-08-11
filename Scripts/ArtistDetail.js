@@ -4,7 +4,12 @@ $(document).ready(function () {
 styleArtist();
 filterSticky();
 listingMasonry();
-listLoad();
+if (!isMobile) {
+	listLoad();
+}
+else {
+	clickLoad();
+}
 });
 
 $(document).load(function(){
@@ -78,8 +83,34 @@ function listLoad(){
 			}
 		}
 }
+function clickLoad(){
+		$('.preloader').css('display','none');
+		$('.clickLoader').addClass('active');
+		$('.clickLoader').bind('touchstart', function(){
+			if (enoughtTimeStoppedToLoadItems) {
+				enoughtTimeStoppedToLoadItems = false;
+				$('.preloader').addClass('loading');
+				setTimeout(function(){
+					var newBatch = $('.listItem').clone().addClass('newItem');
+					$('.preloader').removeClass('loading');
+					$('.listingList').append(newBatch).masonry( 'appended', newBatch, true);
+					setTimeout(function(){
+						$('.listItem').each(function(){
+							$(this).removeClass('newItem');
+						});
+					},100);
+				},300);
+				setTimeout(function(){
+					enoughtTimeStoppedToLoadItems = true;
+				},400);
+			}
+		});
+}
+
 
 	$(window).bind('scroll',function(){
+	if (!isMobile) {
 		listLoad();
+	};
 		console.log( ($('body').height()-340) - (scrollTopVal+wH) );
 	});

@@ -52,45 +52,49 @@ a:active {
     color: #fff;
     font-size: 63px;
     font-weight: 800;
+    letter-spacing: 15px;
 }
 
 .faceC {
     color: #202132;
     font-size: 68px;
     font-weight: 400;
+    letter-spacing: 16.7px;
 }
 
 .faceD {
     color: #202132;
     font-size: 23px;
     font-weight: 500;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 }
 
 .faceE {
     color: #a8a8ac;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.909;
+    letter-spacing: 1.80px;
 }
 
 .faceF {
     color: #fff;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
 .faceG {
     color: #fff;
     font-size: 12px;
     font-weight: 400;
+    letter-spacing: 1.8px;
 }
 
 .faceH {
     color: #6c6d75;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.455;
+    letter-spacing: 1px;
 }
 
 .faceJ {
@@ -134,7 +138,7 @@ a:active {
     color: #9d9da6;
     font-size: 11px;
     font-weight: 400;
-    line-height:1.909;
+    line-height: 1.909;
     letter-spacing: 2.15px;
 }
 
@@ -150,7 +154,7 @@ a:active {
     color: #737272;
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 1.5px;   
+    letter-spacing: 1.5px;
 }
 
 .faceS {
@@ -158,14 +162,14 @@ a:active {
     font-size: 15px;
     letter-spacing: 2.5px;
     font-weight: 600;
-    line-height:1.705;
+    line-height: 1.705;
 }
 
 .faceT {
     color: #9d9c97;
     font-size: 11px;
     font-weight: 400;
-    line-height:2.097;
+    line-height: 2.097;
     letter-spacing: 3px;
 }
 
@@ -185,7 +189,7 @@ a:active {
     color: #4d4f65;
     font-size: 22px;
     font-weight: 800;
-    line-height:1.396;
+    line-height: 1.396;
 }
 
 .faceX {
@@ -296,36 +300,60 @@ a:active {
 @media all and (max-width: 400px) {
     header nav .aStyleA:link,
     header nav .aStyleA:visited {
-        margin:0 !important;
+        margin: 0 !important;
         font-size: 13px;
         letter-spacing: 0.09em;
         text-align: center;
-        border:0;
+        border: 0;
     }
 
     header nav .aStyleA:hover,
     header nav .aStyleA:active {
-        border-bottom:0;
+        border-bottom: 0;
+    }
+
+    .faceB {
+        font-size: 40px;
+        letter-spacing: 12px;
+    }
+
+    .faceC {
+        font-size: 45px;
+        letter-spacing: 15px;
+    }
+
+    .faceD {
+        font-size: 20px;
+        letter-spacing: 5px;
     }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     header nav .aStyleA:link,
     header nav .aStyleA:visited {
-        margin:0 !important;
+        margin: 0 !important;
         font-size: 17.966px;
         line-height: 4.21;
         text-align: center;
-        border:0;
+        border: 0;
     }
 
     header nav .aStyleA:hover,
     header nav .aStyleA:active {
-        border-bottom:0;
+        border-bottom: 0;
+    }
+
+    .faceB {
+        font-size: 49px;
+        letter-spacing: 11px;
+    }
+
+    .faceC {
+        font-size: 50px;
+        letter-spacing: 14px;
     }
 }
 

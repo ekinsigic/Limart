@@ -23,6 +23,7 @@
     <!-- SLIDER - STYLESHEET FILES -->
     <link type="text/css" media="screen" href="SliderFiles/royalslider.css" rel="stylesheet" />
     <link type="text/css" media="screen" href="SliderFiles/rs-minimal-white.css" rel="stylesheet">
+    <link type="text/css" media="screen" href="SliderFiles/rs-custom-nearby.css" rel="stylesheet">
     <!-- END - STYLESHEET FILES -->
 
 
@@ -32,7 +33,7 @@
 
     <header>
         <div class="divContent">
-            <a href="#" class="aLogo"><img data-sixtyThree="logotype" /></a>
+            <a href="#" class="aLogo"><img data-sixtythree="logotype" /></a>
 
             <nav>
                 <div class="divNav">
@@ -42,6 +43,7 @@
                         <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
                         <li><a href="#" class="aStyleA">E-SHOP</a></li>
                         <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
+                        <li class="liSearch"><img data-sixtythree="icon-search"></li>
                     </ul>
 
                     <div class="divMenuContent">
@@ -69,9 +71,7 @@
                 <div class="divNavIcon">
                     <div class="divNavIconBg"></div>
                     <img data-sixtythree="icon-mobile-nav" class="imgNav" />
-                </div>
-                <div class="divSearchIcon">
-                    <img data-sixtyThree="icon-search" class="imgSearch">
+                    <!--<img data-sixtythree="icon-search" class="imgSearch" />-->
                 </div>
             </nav>
         </div>
@@ -82,29 +82,27 @@
     <section id="search">
         <div class="divSearchContent">
             <input type="text" class="inputTextB" />
-            <a href="#" class="aSearchButton"><img data-sixtyThree="icon-search"></a>
-        </div> 
+            <a href="#" class="aSearchButton"><img data-sixtythree="icon-search"></a>
+        </div>
     </section>
 
 
 
-
-
-
     <main>
+
         <section id="mainEntry">
             <div class="divBg"></div>
 
             <div class="divText">
-                <span class="faceF">03</span>
-                <div class="divLine"></div>
+                <span class="faceF slideNo">03</span>
+                <div class="divLineF"></div>
 
-                <h1 class="faceB">MODERN SANATIN</h1>
-                <h1 class="faceC">KEYFİNİ YAŞAYIN</h1>
-                <img data-sixtythree="logotype-white" /> 
+                <h1 class="faceB slideMainHeader">MODERN SANATIN</h1>
+                <h1 class="faceC slideSubHeader">KEYFİNİ YAŞAYIN</h1>
+                <img data-sixtythree="logotype-white" />
             </div>
 
-            <img data-sixtythree="arrow-down" class="white down" >
+            <img data-sixtythree="arrow-down" class="white arrowDown">
 
             <div class="divLineA"></div>
             <div class="divLineB"></div>
@@ -112,79 +110,149 @@
 
 
 
-        <section id="welcomeText" >
-            <h1 class="faceD">LIMART DÜNYASINA HOŞGELDİNİZ</h1>
-            <p class="faceE">
-                LIMART, SEÇKIN MODERN SANAT ESERLERINI DAHA ÇOK SAYIDA SANATSEVERE ULAŞTIRMAK AMACI ILE KURULMUŞ BIR PLATFORMDUR. LIMART, KONUSUNDA UZMAN BIR EKIP ILE, ORIJINAL SANAT ESERLERININ, SINIRLI SAYIDA ÖZEL ÜRETIM POSTERINI, UYGUN FIYATLARLA SAHIP OLUNMASINA OLANAK TANIMAKTADIR.
+        <section id="welcomeText">
+            <h2 class="faceD mainHeader">LIMART DÜNYASINA HOŞGELDİNİZ</h2>
+            <p class="faceE pText">
+                LIMART, SEÇKİN MODERN SANAT ESERLERINI DAHA ÇOK SAYIDA SANATSEVERE ULAŞTIRMAK AMACI ILE KURULMUŞ BIR PLATFORMDUR. LIMART, KONUSUNDA UZMAN BIR EKIP ILE, ORIJINAL SANAT ESERLERININ, SINIRLI SAYIDA ÖZEL ÜRETIM POSTERINI, UYGUN FIYATLARLA SAHIP OLUNMASINA OLANAK TANIMAKTADIR.
             </p>
 
-            <button class="buttonA">KOLEKSİYONU KEŞFET</button>
+            <button class="buttonA">KOLEKSİYONU KEŞFEDİN</button>
         </section>
 
 
 
         <section id="sectionGallerySlider">
-            <div class="divLineA"></div>
-            <div class="divLineB"></div>
+            <div class="divLineC lineTop"></div>
+            <div class="divLineD lineTop"></div>
 
-            <div id="gallerySlider" class="royalSlider rsMinW">
-                <div class="rsContent">
-                    <div class="divSliderImg"></div>
-                    <a href="Files/Products/01/Pictures/zoom.jpg" class="rsImg"></a>
-
-                    <div class="divText">
-                        <h5 class="faceG">ANDY WARHOL</h5>
-                        <h6 class="faceH">Neque porro quisquam est qui who loves pain itself</h6>
-                    </div>
-                </div>
-
-                <div class="rsContent">
-                    <div class="divSliderImg"></div>
-                    <a href="Files/Products/02/Pictures/zoom.jpg" class="rsImg"></a>
-
-                    <div class="divText">
-                        <h5 class="faceG">ANDY WARHOL</h5>
-                        <h6 class="faceH">Neque porro quisquam est qui who loves pain itself</h6>
-                    </div>
-                </div>
-
-                <div class="rsContent">
-                    <div class="divSliderImg"></div>
-                    <a href="Files/Products/03/Pictures/zoom.jpg" class="rsImg"></a>
-
-                    <div class="divText">
-                        <h5 class="faceG">ANDY WARHOL</h5>
-                        <h6 class="faceH">Neque porro quisquam est qui who loves pain itself</h6>
-                    </div>
-                </div>
+            <div id="gallerySlider" class="royalSlider rsDefault visibleNearby">
+                <a class="rsImg" href="Files/Products/01/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/02/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/03/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/04/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/02/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/03/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/01/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/02/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/01/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/02/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
+                <a class="rsImg" href="Files/Products/03/Pictures/thumbnail.jpg"> <h3 class="faceG nearbyArtTitle">ANDY WARHOL</h3><p class="faceH nearbyArtist">NEQUE PORRO QUISQUAM EST QUI</p></a>
             </div>
 
-
-          
+            <div class="divLineC lineBottom"></div>
+            <div class="divLineE lineBottom"></div>
         </section>
 
 
 
         <section id="artists">
-            <div class="divLineA"></div>
-            <div class="divLineB"></div>
 
+            <h4 class="faceD">SANATÇILAR</h4>
+
+            <!-- Artist Havuzu : Bu icerik Default.js te slider yaratilirken kullaniliyor. Cozunurluge gore slider 2li ya da 4lu kolon yapisi ile olusturuluyor. -->
+            <div class="divArtists" style="display:none;">
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/01/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/02/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/03/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/04/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/01/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/02/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/03/profile.jpg" class="rsImg"></a>
+                </div>
+
+                <div class="divArtist">
+                    <a href="#" class="aArtist">
+                        <div class="divArtistInfo">
+                            <h5 class="faceO">ÖZLEM ŞİMŞEK</h5>
+                            <h6 class="faceE">RESSAM, YAYINCI</h6>
+                        </div>
+                        <div class="divArtistLinkBg"></div>
+                    </a>
+                    <a href="Files/Artists/04/profile.jpg" class="rsImg"></a>
+                </div>
+
+            </div>
+
+            <div class="divArtistSliderContainer"></div>
 
         </section>
 
-
-
-        
-      
     </main>
 
-
-
-
+    <div class="separator"></div>
 
     <footer>
         <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
-        
+
         <div class="divLine" style="margin-top:30px;"></div>
 
         <div class="divContent first">
@@ -238,8 +306,6 @@
 
 
 
-
-
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery-ui.js"></script>
@@ -247,8 +313,6 @@
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Default.js"></script>
     <!-- END - SCRIPTS -->
-
-
 
 </body>
 </html>

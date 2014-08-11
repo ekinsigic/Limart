@@ -13,14 +13,13 @@ nav .divNav{
 
 nav .divNav ul.level1{
     display:table;
-    margin-right: 40px;
 }
 
 nav .divNav ul.level1 li{
     display:table-cell;
 }
 
-/*nav .divNav ul.level1 .liSearch {
+nav .divNav ul.level1 .liSearch {
     width:40px;
 }
 
@@ -29,7 +28,7 @@ nav .divNav ul.level1 .liSearch img {
     right:0;
     opacity:0.2;
     cursor:pointer;
-}*/
+}
 
 nav .divNav ul.level1 li a{
     padding-bottom:10px;
@@ -59,23 +58,7 @@ nav .divNavIcon .imgNav{
     top: 10px;
     right: -25px;
 }
-/* Search için eklediğim kısım */
-nav .divSearchIcon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    right: -14px;
-    top: 26px;
-    opacity: 0.2;
-    cursor: pointer;
-}
-nav .divSearchIcon .imgSearch {
-    position: absolute;
-    
-    right: 14px;
-    bottom: 14px;
-}
-/* search kısmı bitti */
+
 nav .divNav .divMenuContent {
     display:none;
 }
@@ -201,14 +184,9 @@ nav .divNav, main, footer {
     nav .divNavIcon .divNavIconBg {
         height:70px;
     }
-    
-    nav .divSearchIcon {
-        z-index: 99;
-        right: 35px;
-        top: 16px;
-    }
+
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
-    .menuOn.menuOn.menuOn {
+    .menuOn {
         display:block;
         -webkit-transform:translate3d(0px,370px,0px);
         -moz-transform:translate3d(0px,370px,0px);
@@ -265,13 +243,6 @@ nav .divNav, main, footer {
     nav .divSearch {
         display:block;
     }
-
-    nav .divSearchIcon {
-        z-index: 99;
-        right: 35px;
-        top: 23px;
-    }
-}
 
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */

@@ -123,27 +123,37 @@ main{
 
 /* Screen */
 @media all and (max-width: 400px) {
-    #search {
-        top: 10px;
-    }
-    #search .divSearchContent{
-        width:90%;
+    #search{
+        display:none;
     }
 
+    nav .divSearch {
+        display:block;
+    }
+
+    
     main{
         margin:70px auto 0 auto;
     }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    #search .divSearchContent{
-        width:550px;
+    #search{
+        display:none;
+    }
+
+    nav .divSearch {
+        display:block;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #search .divSearchContent{
-        width:670px;
+    #search{
+        display:none;
+    }
+
+    nav .divSearch {
+        display:block;
     }
 }
 
@@ -151,10 +161,18 @@ main{
     #search .divSearchContent{
         width:960px;
     }
+
+    nav .divSearch {
+        display:none;
+    }
 }
 
 @media all and (min-width: 1435px) {
     #search .divSearchContent{
         width:1080px;
+    }
+
+    nav .divSearch {
+        display:none;
     }
 }

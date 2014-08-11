@@ -22,27 +22,25 @@ function styleArtist() {
 }
 
 function filterSticky() {
-	if (!isMobile) {
-		$('.listingFilters').css({
-		})
-		if ($('.artistDetail').css('display') == 'none') {
+	$('.listingFilters').css({
+	})
+	if ($('.artistDetail').css('display') == 'none') {
 
-		}
-		else {
-			
-			$(window).scroll(function(){
-				if ( scrollTopVal > (wH-90) ) {
-					$('.listingFilters').addClass('sticky');
-					$('main').css('padding-top','65px');
-				}
-				else {
-					$('.listingFilters').removeClass('sticky');
-					$('main').css('padding-top','0');
-				}
-			});
+	}
+	else {
+		
+		$(window).scroll(function(){
+			if ( scrollTopVal > (wH-90) ) {
+				$('.listingFilters').addClass('sticky');
+				$('main').css('padding-top','65px');
+			}
+			else {
+				$('.listingFilters').removeClass('sticky');
+				$('main').css('padding-top','0');
+			}
+		});
 
-		}
-	};
+	}
 }
 
 function listingMasonry() {
@@ -58,7 +56,7 @@ function listingMasonry() {
 }
 
 function listLoad(){
-		if ((($('body').height()-350)-(scrollTopVal+wH)) < 0) {
+		if ((($('body').height()-270)-(scrollTopVal+wH)) < 0) {
 			if (enoughtTimeStoppedToLoadItems) {
 				enoughtTimeStoppedToLoadItems = false;
 				$('.preloader').addClass('loading');

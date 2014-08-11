@@ -33,6 +33,7 @@ $(document).ready(function () {
 });
 
 
+
 $(window).resize(function () {
     setGlobals();
     if (!isMobile) {
@@ -40,6 +41,8 @@ $(window).resize(function () {
     }
     closeSearch();
 });
+
+
 
 function setGlobals() {
     wW = $(window).width();
@@ -50,7 +53,6 @@ function setGlobals() {
     isLandscape = (wW >= wH);
     isPortrait = (wW < wH);
 }
-
 
 
 
@@ -86,40 +88,19 @@ function scrollEvents() {
 
 
 function popupSettings() {
-    if (!isMobile) {
-        $(document).keydown(function (e) {
-            if (e.keyCode == 27) {
-                closeSearch();
-                closeMenu();
-            }
-        });
-
-        $(window).click(function () {
+    $(document).keydown(function (e) {
+        if (e.keyCode == 27) {
             closeSearch();
-            closeMenu();
-        });
+        }
+    });
 
-        $('#search').click(function (e) {
-            e.stopPropagation();
-        });
-    }
-    else {
-        $(window).bind('touchstart',function () {
-            closeSearch();
-        });
+    $('html').click(function () {
+        closeSearch();
+    });
 
-        $('#search').bind('touchstart',function (e) {
-            e.stopPropagation();
-        });
-
-        $(window).bind('touchend',function () {
-            closeSearch();
-        });
-
-        $('#search').bind('touchend',function (e) {
-            e.stopPropagation();
-        });
-    }
+    $('#search').click(function (e) {
+        e.stopPropagation();
+    });
 }
 
 
@@ -131,45 +112,24 @@ function openCloseMenu() {
     if (isMobile) {
         $('nav .imgNav').bind('touchstart', function (e) {//imgNav class'lý div'e dokunma iþlemi baþladýðýnda..
             e.stopPropagation();//sayfanýn gerisine eklenen window.touchstart iþleminden muaf tutuyoruz.
-
+            
             $(this).bind('touchmove', function () {//kullanýcýnýn ekrana dokunduðu parmaðýný hareket ettirmesi durumunda sayfaya scroll amaçlý dokunduðunu deklare ediyoruz.
                 isScroll = true;
             });
 
             $(this).one('touchend', function (e) {//kullanýcýnýn parmaðýný kaldýrmasý durumunda..
-                if (isSearchActive) {
-                    closeSearch();
-                    setTimeout(function(){
-                        if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
-                            isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
-                            isScroll = false;
+                if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
+                    isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
+                    isScroll = false;
 
-                            $('nav .divNav, main, footer, .filtersInHeader').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
-                            e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
-                            $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                                e.preventDefault();
-                            });
-                        }
-                        else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
-                            closeMenu();
-                        }
-                    },300);
-
+                    $('nav .divNav, main, footer').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+                    e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
+                    $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
+                        e.preventDefault();
+                    });
                 }
-                else {
-                    if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
-                        isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
-                        isScroll = false;
-
-                        $('nav .divNav, main, footer, .filtersInHeader').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
-                        e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
-                        $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                            e.preventDefault();
-                        });
-                    }
-                    else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
-                        closeMenu();
-                    }
+                else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
+                    closeMenu();
                 }
             });
         });
@@ -188,32 +148,15 @@ function openCloseMenu() {
     }
     else {
         $('header nav .imgNav').bind('click', function (e) {
-            if (isSearchActive) {
-                closeSearch();
-                setTimeout(function(){
-                    if (!isMenuOpen) {
-                        //çok saçma bir bug yapıyordu, search kapatma fonksiyonuyla kesişip ismenuopen'ı tekrar false a çekiyordu, böyle çözdüm
-                        setTimeout(function(){
-                            isMenuOpen = true
-                        },100);
-                        $('.divNav, main, footer, .filtersInHeader').addClass('menuOn');
-                        e.stopPropagation();
-                    }
-                    else if (isMenuOpen) {
-                        closeMenu();
-                    }
-                },301)
-            }
-            else {
-                if (!isMenuOpen) {
-                    isMenuOpen = true;
+            if (!isMenuOpen) {
+                isMenuOpen = true;
+                isScroll = false;
 
-                    $('.divNav, main, footer, .filtersInHeader').addClass('menuOn');
-                    e.stopPropagation();
-                }
-                else if (isMenuOpen) {
-                    closeMenu();
-                }
+                $('.divNav, main, footer').addClass('menuOn');
+                e.stopPropagation();
+            }
+            else if (isMenuOpen) {
+                closeMenu();
             }
         });
 
@@ -229,7 +172,7 @@ function openCloseMenu() {
 
 function closeMenu() {
     if (isMobile) {
-        $('nav .divNav, main, footer, .filtersInHeader').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
+        $('nav .divNav, main, footer').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
         setTimeout(function () {//setTimeout kurarak kullanýcýyý animasyonu beklemek zorunda býrakýyoruz
             //tespit deðiþkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
             isMenuOpen = false;
@@ -238,7 +181,7 @@ function closeMenu() {
         }, 300);
     }
     else {
-        $('.divNav, main, footer, .filtersInHeader').removeClass('menuOn');
+        $('.divNav, main, footer').removeClass('menuOn');
         setTimeout(function () {
             isMenuOpen = false;
             isScroll = false;
@@ -300,122 +243,24 @@ var isSearchActive = false;
 
 function openOrCloseSearch() {
     if (!isMobile) {
-        $('nav .divSearchIcon').bind('click', function (e) {
-            e.stopPropagation();
-            if (isMenuOpen) {
-                closeMenu();
-                setTimeout(function(){
-                    if (!isSearchActive) {
-                        isSearchActive = true;
-                        $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                        $('#search input').focus();
-                    }
-                    else {
-                        closeSearch();
-                    }
-                },300)
+        $('nav .liSearch img').bind('click', function (e) {
+            if (!isSearchActive) {
+                isSearchActive = true;
+                $('#search').addClass('topSearch');
+                $('#search input').focus();
             }
             else {
-                if (!isSearchActive) {
-                    isSearchActive = true;
-                    $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                    $('#search input').focus();
-                }
-                else {
-                    closeSearch();
-                } 
+                closeSearch();
             }
-        });
-    }
-    else {
-        $('nav .divSearchIcon').bind('touchstart', function (e) {
-            e.stopPropagation();
-            isScroll = false
-            $('nav .divSearchIcon').bind('touchmove', function(){
-                isScroll = true
-            });
-            $('nav .divSearchIcon').one('touchend',function (e) {
-                if (isMenuOpen) {
-                    closeMenu();
-                    setTimeout(function(){
-                        e.stopPropagation();
-                        isScroll = false
-                        if (!isScroll) {
-                            if (isMenuOpen) {
-                                closeMenu();
-                                setTimeout(function(){
-                                    if (!isSearchActive) {
-                                        isSearchActive = true;
-                                        $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                        $('#search input').focus();
-                                        $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                                            e.preventDefault();
-                                        });
-                                    }
-                                    else {
-                                        closeSearch();
-                                    }
-                                },300)
-                            }
-                            else {
-                                if (!isSearchActive) {
-                                    e.stopPropagation();
-                                    isSearchActive = true;
-                                    $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                    $('#search input').focus();
-                                }
-                                else {
-                                    closeSearch();
-                                } 
-                            }
-                        }
-                    },300)
-                }
-                else {
-                        e.stopPropagation();
-                        isScroll = false
-                        if (!isScroll) {
-                            if (isMenuOpen) {
-                                closeMenu();
-                                setTimeout(function(){
-                                    if (!isSearchActive) {
-                                        isSearchActive = true;
-                                        $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                        $('#search input').focus();
-                                        $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                                            e.preventDefault();
-                                        });
-                                    }
-                                    else {
-                                        closeSearch();
-                                    }
-                                },300)
-                            }
-                            else {
-                                if (!isSearchActive) {
-                                    e.stopPropagation();
-                                    isSearchActive = true;
-                                    $('#search, main, footer, .filtersInHeader').addClass('topSearch');
-                                    $('#search input').focus();
-                                }
-                                else {
-                                    closeSearch();
-                                } 
-                            }
-                        }
-                    
-                }
-            })
         });
     }
 }
 
 function closeSearch() {
     if (isSearchActive) {
-        $('#search, main, footer, .filtersInHeader').removeClass('topSearch');
+        $('#search').removeClass('topSearch');
         setTimeout(function () {
             isSearchActive = false;
-            $(window).unbind("touchmove");
         }, 300);
     }
 }

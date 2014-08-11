@@ -309,7 +309,7 @@
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-   #mainEntry .divText {
+    #mainEntry .divText {
         width: 90%;
         margin: -200px 0 0 -45%;
         padding-top:0;
@@ -360,7 +360,7 @@
         }
 
         #mainEntry .divText .divLineF {
-            left: 50px;
+            left: 37px;
         }
 }
 

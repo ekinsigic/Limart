@@ -20,17 +20,6 @@ nav .divNav ul.level1 li{
     display:table-cell;
 }
 
-/*nav .divNav ul.level1 .liSearch {
-    width:40px;
-}
-
-nav .divNav ul.level1 .liSearch img {
-    position:absolute;
-    right:0;
-    opacity:0.2;
-    cursor:pointer;
-}*/
-
 nav .divNav ul.level1 li a{
     padding-bottom:10px;
 }
@@ -60,23 +49,21 @@ nav .divNavIcon .imgNav{
     right: -25px;
 }
 
-/* Search için eklediğim kısım */
 nav .divSearchIcon {
     position: absolute;
+    top: 26px;
+    right: -14px;
     width: 40px;
     height: 40px;
-    right: -14px;
-    top: 26px;
     opacity: 0.2;
     cursor: pointer;
 }
+
 nav .divSearchIcon .imgSearch {
     position: absolute;
     right: 14px;
     bottom: 14px;
 }
-/* end */
-
 
 nav .divNav .divMenuContent {
     display:none;
@@ -289,22 +276,18 @@ nav .divNav, main, footer {
         display:block;
     }
 
-    nav .divNavIcon .imgNav{
-        top: 2px;
-    }
-
-    nav .divSearch {
-        display:block;
-    }
-
     nav .divNavIcon .divNavIconBg {
         height:70px;
     }
 
+    nav .divNavIcon .imgNav{
+        top: 2px;
+    }
+
     nav .divSearchIcon {
         z-index: 99;
-        right: 25px;
         top: 16px;
+        right: 25px;
     }
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
@@ -358,14 +341,10 @@ nav .divNav, main, footer {
         display:block;
     }
 
-    nav .divSearch {
-        display:block;
-    }
-
     nav .divSearchIcon {
         z-index: 99;
-        right: 35px;
         top: 24px;
+        right: 35px;
     }
 }
 

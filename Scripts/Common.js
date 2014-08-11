@@ -18,6 +18,9 @@ $(document).ready(function () {
     scrollEvents();
     setGlobals();
     popupSettings();
+
+    smartphoneLandscape();
+
     miscImgLoader();
     openCloseMenu();
     openOrCloseSearch();
@@ -31,14 +34,6 @@ $(document).ready(function () {
         $('nav .divNav .divMenuContent').css({height:230});
     }
 
-    /* mobile yatayda gelecek ekranın yüksekliği */
-    if (isMobile && isLandscape) {
-
-        $('header, main, footer').fadeOut();
-        $('#smartphoneLandscape').fadeIn();
-        $('.divPreloader').addClass('loading');
-    }
-
 
 
 });
@@ -47,10 +42,14 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     setGlobals();
+
+    smartphoneLandscape();
+
     if (!isMobile) {
         closeMenu();
     }
     closeSearch();
+
 });
 
 
@@ -134,6 +133,27 @@ function popupSettings() {
         });
     }
 }
+
+
+
+
+
+/* mobilde yatayda gelecek ekran */
+function smartphoneLandscape() {
+    if (isMobile && isLandscape) {
+        $('header, main, footer').fadeOut();
+        $('#smartphoneLandscape').fadeIn();
+        $('.divPreloader').addClass('loading');
+    }
+    else {
+        $('header, main, footer').fadeIn();
+        $('#smartphoneLandscape').fadeOut();
+        $('.divPreloader').removeClass('loading');
+    }
+}
+
+
+
 
 
 

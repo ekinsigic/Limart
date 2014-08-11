@@ -35,6 +35,7 @@
 }
 
 #smartphoneLandscape p.faceA{
+    width:100%;
     position:absolute;
     top:50%;
     margin-top:50px;

@@ -34,7 +34,7 @@ function filterSticky() {
 		if ($('.artistDetail').css('display') == 'none') {
 
 			$(window).scroll(function(){
-				if ( scrollTopVal > $('.artistWelcome').height() ) {
+				if ( scrollTopVal > ($('.artistWelcome').height() + parseInt($('.artistWelcome').css('padding-top'))) ) {
 					$('.listingFilters').addClass('sticky');
 					$('.divNav').addClass('withSticky');
 					$('#search').addClass('withSticky');

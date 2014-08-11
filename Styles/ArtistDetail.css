@@ -328,9 +328,11 @@ footer {
 	.listingFilters{
 		height: 100px;
 		z-index: 99;
-	
-		top: 69px !important;
-}
+	}
+
+	.sticky {
+		top: 70px !important;
+	}
 
 	.artistInfo img.artistPhoto {
 		width: 100px;
@@ -390,6 +392,10 @@ footer {
 	.artistWelcome {
 		padding-bottom:20px;
 		box-sizing:content-box
+	}
+
+	.sticky {
+		top: 70px !important;
 	}
 
 	main {

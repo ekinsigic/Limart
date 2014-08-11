@@ -20,7 +20,7 @@ $(document).ready(function () {
     popupSettings();
     headerShadow();
     smartphoneLandscape();
-
+    headerShadow();
     miscImgLoader();
     openCloseMenu();
     openOrCloseSearch();
@@ -534,6 +534,8 @@ function closeSearch() {
 
 function headerShadow(){
     $(window).scroll(function(){
-
+        if (scrollTopVal > 0) {
+            $('header').addClass('headerShadow');
+        };
     });
 }

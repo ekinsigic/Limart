@@ -326,7 +326,7 @@ footer {
 
 	.listingFilters{
 		position: fixed !important;
-		top: 90px !important;
+		top: 69px !important;
 		height: 100px;
 	}
 	.listingWelcome{
@@ -355,7 +355,11 @@ footer {
 		width: 670px;
 	}
 }
-
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    .listingWelcome h2, .listingWelcome p {
+		width: 670px;
+	}
+}
 @media all and (min-width: 1435px) {
     .listingWelcome h2, .listingWelcome p {
 		width: 1080px;

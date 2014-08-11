@@ -218,7 +218,6 @@ main{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-<<<<<<< HEAD
     #smartphoneLandscape{
         display:block;
     }
@@ -227,8 +226,6 @@ main{
         top: 10px;
     }
 
-=======
->>>>>>> origin/master
     #search .divSearchContent{
         width:550px;
     }

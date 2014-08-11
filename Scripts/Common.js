@@ -419,7 +419,3 @@ function closeSearch() {
         }, 300);
     }
 }
-setInterval(function(){
-    console.log('<<<search active:'+isSearchActive);
-    console.log('<<<scroll:'+isScroll);
-},1000)

@@ -18,7 +18,6 @@ stylelisting();
 });
 $(window).bind('scroll',function(){
 	listLoad();
-	console.log( ($('body').height()-340) - (scrollTopVal+wH) );
 });
 
 function stylelisting() {
@@ -86,23 +85,47 @@ function listLoad(){
 }
 
 function mobilePseudoHover() {
-	$('.listItem').bind('touchstart',function(e){
-		e.stopPropagation();
-			$('.listItem').each(function(){
-				 $(this).removeClass('hover');
-			})
-			$(this).addClass('hover');
-			$(window).bind('touchstart',function(){
+	if (isMobile) {
+
+		$('.listItemLink').css({
+			'display':'none'
+		})
+
+		$('.listItem').bind('touchstart',function(e){
+			e.stopPropagation();
 				$('.listItem').each(function(){
-					$(this).removeClass('hover');
+					 $(this).removeClass('hover');
+				})
+				$(this).addClass('hover');
+				$(window).bind('touchstart',function(){
+					$('.listItem').each(function(){
+						$(this).removeClass('hover');
+					});
 				});
-			});
-	});
+		});
+
+		// deneme
+
+		// var doWeHaveANumber = false
+		// document.addEventListener('touchmove', function(e) {
+		//     var touch = e.touches[0];
+		// 	var startingCoordinates = e.touches[0].pageY
+		// 	$('.listItem').bind('touchmove',function(){
+				
+		// 	});
+		// 	$('.listItem').bind('touchend', function(){
+		// 		var banavar = startingCoordinates
+		// 		console.log(canavar+''+banavar)
+		// 	});
+
+		// }, false);
+
+	};
 }
+
 
 function carryFilters() {
 	if ($('.listingWelcome').css('display') == 'none' && $('header .listingFilters').length < 1) {
-		console.log('go')
 		$('header').append($('.listingFilters').addClass('filtersInHeader'));
 		$('main .listingFilters').remove();
 	}

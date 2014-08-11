@@ -10,10 +10,12 @@
         width: 100%;
         position: static;
         float: left;
+        clear:left;
         left: auto;
         bottom: auto;
         margin-top: 20px;
         text-align: center;
+        line-height: 20px;
     }
 
         .visibleNearby .rsGCaption p.nearbyArtist {
@@ -37,7 +39,7 @@
     }
 
     .visibleNearby .rsActiveSlide img {
-        box-shadow:0 0 25px #111;
+        box-shadow: 0 0 5px #111;
         opacity: 1;
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
@@ -50,11 +52,11 @@
     /* Arrow Stylings */
     .visibleNearby .rsArrow {
         position: absolute;
+        z-index: 10;
         width: 50px;
         height: 40px;
         bottom: 47px;
         opacity: 0.2;
-        transition: all 0.5s;
     }
 
         .visibleNearby .rsArrow:hover {

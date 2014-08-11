@@ -332,7 +332,7 @@ a:active {
 
     .faceJ {
         font-size: 12px;
-        letter-spacing: 5.5px;
+        letter-spacing: 4.5px;
     }
 
     .faceK {
@@ -351,8 +351,8 @@ a:active {
         border: 0;
     }
 
-    header nav .aStyleA:hover,
-    header nav .aStyleA:active {
+    .aStyleA:hover,
+    .aStyleA:active {
         border-bottom: 0;
     }
 }
@@ -382,17 +382,21 @@ a:active {
         letter-spacing: 14px;
     }
 
-    .faceF {
-        font-size:22px;
-    }
-
     .faceJ {
         font-size: 20px;
         letter-spacing: 5.5px;
     }
 }
 
-@media all and (min-width: 1019px) and (max-width: 1434px) {
+@media all and (min-width: 1019px) and (max-width: 1275px) {
+    .faceJ {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 4px;
+    }
+}
+
+@media all and (min-width: 1276px) and (max-width: 1434px) {
 }
 
 @media all and (min-width: 1435px) {

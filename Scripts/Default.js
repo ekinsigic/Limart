@@ -41,12 +41,13 @@ function triggerGallerySlider() {
         dragUsingMouse: true,
         numImagesToPreload: 8,
         usePreloader: true,
+        slidesSpacing:0,
         visibleNearby: {
             enabled: true,
-            centerArea: 0.45,
+            centerArea: isMobile ? 0.60 : 0.45,
             center: true,
-            breakpoint: 650,
-            breakpointCenterArea: 0.64,
+            breakpoint: 0,
+            breakpointCenterArea: 0,
             navigateByCenterClick: true
         }
     });
@@ -59,7 +60,7 @@ function triggerGallerySlider() {
 // 2. Cozunurluge gore 2 ya da 4 lu kolon yapisi saptaniyor.
 var artistSlider = null;
 var artistSliderColNo = -1;
-var artistSliderResBase = 850;
+var artistSliderResBase = 950;
 var artistSliderResizeIsOnCheck = null;
 
 function triggerArtistSlider(isInitiation) {

@@ -147,8 +147,8 @@
 
     #artists #artistSlider {
         width: 100%;
-        max-width:1280px;
-        margin:0 auto 0 auto;
+        max-width: 1280px;
+        margin: 0 auto 0 auto;
         background-color: #2f3140;
     }
 
@@ -194,15 +194,33 @@
         }
 
             #artists #artistSlider .divArtists .divArtist .aArtist .divArtistInfo {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: flex;
+                align-items: center;
+                -webkit-align-items: center;
                 position: absolute;
-                z-index: 20;
-                top: 50%;
+                top: 10px;
                 right: 10px;
+                bottom: 10px;
                 left: 10px;
-                margin-top: -20px;
-                line-height: 30px;
+                z-index: 20;
+                line-height: 26px;
                 text-align: center;
-                
+            }
+
+                #artists #artistSlider .divArtists .divArtist .aArtist .divArtistInfo * {
+                    width: 100%;
+                }
+
+                #artists #artistSlider .divArtists .divArtist .aArtist .divArtistInfo h5 span {
+                    border-bottom: 1px solid transparent;
+                    transition: all 0.5s;
+                }
+
+            #artists #artistSlider .divArtists .divArtist .aArtist:hover .divArtistInfo h5 span {
+                border-bottom: 1px solid #fff;
             }
 
             #artists #artistSlider .divArtists .divArtist .aArtist .divArtistLinkBg {
@@ -224,22 +242,31 @@
         /* Arrow Stylings */
         #artists #artistSlider .rsArrow {
             position: absolute;
-            width: 50px;
-            height: 40px;
-            top:-118px;
-            left:50%;
-            transition: all 0.5s;
+            width: 30px;
+            height: 20px;
+            top: -108px;
+            left: 50%;
+            opacity: 0.5;
+            transition: all 0.3s;
         }
+
+            #artists #artistSlider .rsArrow:hover {
+                opacity: 1;
+            }
 
             #artists #artistSlider .rsArrow .rsArrowIcn {
                 background-position: center center;
                 background-repeat: no-repeat;
-                width: 100%;
-                height: 100%;
+                background-size: contain;
+                width: 16px;
+                height: 7px;
+                margin-top: 7px;
+                margin-right: auto;
+                margin-left: auto;
             }
 
             #artists #artistSlider .rsArrow.rsArrowLeft {
-                margin-left: -160px;
+                margin-left: -147px;
             }
 
                 #artists #artistSlider .rsArrow.rsArrowLeft .rsArrowIcn {
@@ -247,7 +274,7 @@
                 }
 
             #artists #artistSlider .rsArrow.rsArrowRight {
-                margin-left: 100px;
+                margin-left: 113px;
             }
 
                 #artists #artistSlider .rsArrow.rsArrowRight .rsArrowIcn {
@@ -265,16 +292,16 @@
     #mainEntry .divText {
         width: 90%;
         margin: -80px 0 0 -45%;
-        padding-top:0;
+        padding-top: 0;
     }
 
         #mainEntry .divText .slideNo,
         #mainEntry .divText .divLineF {
-            display:none;
+            display: none;
         }
-        
+
         #mainEntry .divText .slideSubHeader {
-            margin-top:8px;
+            margin-top: 8px;
         }
 
         #mainEntry .divText img {
@@ -291,8 +318,6 @@
         bottom: -50px;
     }
 
-
-    /* welcome text */
     #welcomeText {
         padding-top: 100px;
     }
@@ -306,47 +331,52 @@
         #welcomeText .pText {
             width: 90%;
         }
+
+    #artists {
+        margin-top: 100px;
+    }
+
+        #artists h4 {
+            margin-bottom: 50px;
+        }
+
+        #artists #artistSlider .divArtists .divArtist .aArtist .divArtistInfo {
+            line-height: 16px;
+        }
+
+        #artists #artistSlider .divArtists .divArtist .aArtist:hover .divArtistInfo h5 span {
+            border-bottom: 1px solid transparent;
+        }
+
+        #artists #artistSlider .divArtists .divArtist .aArtist .divArtistInfo h6 {
+            margin-top: 5px;
+        }
+
+        #artists #artistSlider .divArtists .divArtist .aArtist .divArtistLinkBg {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        #artists #artistSlider .divArtists .divArtist .aArtist:hover .divArtistLinkBg {
+            opacity: 0;
+        }
+
+        #artists #artistSlider .rsArrow {
+            top: -72px;
+        }
+
+            #artists #artistSlider .rsArrow.rsArrowLeft {
+                margin-left: -127px;
+            }
+
+            #artists #artistSlider .rsArrow.rsArrowRight {
+                margin-left: 93px;
+            }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    #mainEntry .divText {
-        width: 90%;
-        margin: -200px 0 0 -45%;
-        padding-top:0;
-    }
-
-        #mainEntry .divText .slideNo,
-        #mainEntry .divText .divLineF {
-            display:none;
-        }
-        
-        #mainEntry .divText .slideSubHeader {
-            margin-top:20px;
-        }
-
-        #mainEntry .divText img {
-            margin-top: 35px;
-            width: 90px;
-            height: auto;
-        }
-
-    
-
-
-    /* welcome text */
-    #welcomeText {
-        padding-top: 100px;
-    }
-
-        #welcomeText .mainHeader {
-            margin: auto;
-            width: 90%;
-            line-height: 30px;
-        }
-
-        #welcomeText .pText {
-            width: 90%;
-        }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -360,7 +390,7 @@
         }
 
         #mainEntry .divText .divLineF {
-            left: 37px;
+            left: 50px;
         }
 }
 

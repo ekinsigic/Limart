@@ -4,12 +4,7 @@ $(document).ready(function () {
 styleArtist();
 filterSticky();
 listingMasonry();
-if (!isMobile) {
-	listLoad();
-}
-else {
-	clickLoad();
-}
+listLoad();
 });
 
 $(document).load(function(){
@@ -27,38 +22,22 @@ function styleArtist() {
 }
 
 function filterSticky() {
-		$('.listingFilters').css({
-			'top': (wH - $('header').height()) +'px'
-		})
 	if (!isMobile) {
+		$('.listingFilters').css({
+		})
 		if ($('.artistDetail').css('display') == 'none') {
-
-			$(window).scroll(function(){
-				if ( scrollTopVal > ($('.artistWelcome').height() + parseInt($('.artistWelcome').css('padding-top'))) ) {
-					$('.listingFilters').addClass('sticky');
-					$('.divNav').addClass('withSticky');
-					$('#search').addClass('withSticky');
-				}
-				else {
-					$('.listingFilters').removeClass('sticky');
-					$('.divNav').removeClass('withSticky');
-					$('#search').removeClass('withSticky');
-				}
-			});
 
 		}
 		else {
 			
 			$(window).scroll(function(){
-				if ( scrollTopVal > $('.artistWelcome').height() ) {
+				if ( scrollTopVal > (wH-90) ) {
 					$('.listingFilters').addClass('sticky');
-					$('.divNav').addClass('withSticky');
-					$('#search').addClass('withSticky');
+					$('main').css('padding-top','65px');
 				}
 				else {
 					$('.listingFilters').removeClass('sticky');
-					$('.divNav').removeClass('withSticky');
-					$('#search').removeClass('withSticky');
+					$('main').css('padding-top','0');
 				}
 			});
 
@@ -99,45 +78,8 @@ function listLoad(){
 			}
 		}
 }
-function clickLoad(){
-		$('.preloader').css('display','none');
-		$('.clickLoader').addClass('active');
-		$('.clickLoader').bind('touchstart', function(){
-			$('.clickLoader').bind('touchend', function(){
-				disableTouchScroll(1);
-				if (enoughtTimeStoppedToLoadItems) {
-					enoughtTimeStoppedToLoadItems = false;
-					$('.preloader').addClass('loading');
-					setTimeout(function(){
-						var newBatch = $('.listItem').clone().addClass('newItem');
-						$('.preloader').removeClass('loading');
-						$('.listingList').append(newBatch).masonry( 'appended', newBatch, true);
-						setTimeout(function(){
-							$('.listItem').each(function(){
-								disableTouchScroll(0);
-								$(this).removeClass('newItem');
-							});
-						},100);
-					},1300);
-					setTimeout(function(){
-						enoughtTimeStoppedToLoadItems = true;
-					},400);
-				}
-			});
-		});
-}
 
-function disableTouchScroll(offOrOn) {
-	if (offOrOn == 1) {
-		$('html').bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-		    e.preventDefault();
-		});
-	}
-	else {
-		$('html').unbind('touchmove');
-	}
-}
 	$(window).bind('scroll',function(){
-	if (!isMobile) {
 		listLoad();
+		console.log( ($('body').height()-340) - (scrollTopVal+wH) );
 	});

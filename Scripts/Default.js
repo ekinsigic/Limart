@@ -39,6 +39,8 @@ function triggerGallerySlider() {
         keyboardNavEnabled: true,
         globalCaptionInside: false,
         dragUsingMouse: true,
+        numImagesToPreload: 8,
+        usePreloader: true,
         visibleNearby: {
             enabled: true,
             centerArea: 0.45,

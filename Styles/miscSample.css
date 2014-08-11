@@ -8,14 +8,26 @@ label > input {
 }
 .sampleStripe {
 	height: 110px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
+  -webkit-justify-content: left;
+  -moz-justify-content: left;
+  -ms-justify-content: left;
+  -o-justify-content: left;
   justify-content: left;
 }
 .sampleStripe.black {
 	background: rgba(0,0,0,0.7);
 }
 main {
-padding:50px 100px;
-background: transparent;
+	padding:50px 100px;
+	background: transparent;
 }

@@ -18,7 +18,7 @@ $(document).ready(function () {
     scrollEvents();
     setGlobals();
     popupSettings();
-
+    headerShadow();
     smartphoneLandscape();
 
     miscImgLoader();
@@ -169,6 +169,7 @@ var isScroll = false;//kullanıcının scroll amaçlı dokunup dokunmadığını
 function openCloseMenu() {
     if (isMobile) {
         $('nav .imgNav').bind('touchstart', function (e) {//imgNav class'lý div'e dokunma iþlemi baþladýðýnda..
+            isScroll = false;
             e.stopPropagation();//sayfanýn gerisine eklenen window.touchstart iþleminden muaf tutuyoruz.
 
             $(this).bind('touchmove', function () {//kullanýcýnýn ekrana dokunduðu parmaðýný hareket ettirmesi durumunda sayfaya scroll amaçlý dokunduðunu deklare ediyoruz.
@@ -528,4 +529,11 @@ function closeSearch() {
             $(window).unbind("touchmove");
         }, 300);
     }
+}
+
+
+function headerShadow(){
+    $(window).scroll(function(){
+
+    });
 }

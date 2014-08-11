@@ -6,7 +6,15 @@ main {
 	width: 100%;
 	min-height: 300px;
 	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	display: -ms-flex;
 	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
 	align-items: center;
 }
 
@@ -366,7 +374,7 @@ footer {
 		background:white;
 		height: 46px;
 		width: 50%;
-		margin-left: -2px;
+		margin-left: -10px;
 		border-bottom: 1px solid #f0f0f0;
 	}
 

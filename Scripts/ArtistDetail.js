@@ -103,33 +103,41 @@ function clickLoad(){
 		$('.preloader').css('display','none');
 		$('.clickLoader').addClass('active');
 		$('.clickLoader').bind('touchstart', function(){
-			$(window).bind('touchmove',function (e){
-				e.preventDefault();
-			});
-			if (enoughtTimeStoppedToLoadItems) {
-				enoughtTimeStoppedToLoadItems = false;
-				$('.preloader').addClass('loading');
-				setTimeout(function(){
-					var newBatch = $('.listItem').clone().addClass('newItem');
-					$('.preloader').removeClass('loading');
-					$('.listingList').append(newBatch).masonry( 'appended', newBatch, true);
+			$('.clickLoader').bind('touchend', function(){
+				disableTouchScroll(1);
+				if (enoughtTimeStoppedToLoadItems) {
+					enoughtTimeStoppedToLoadItems = false;
+					$('.preloader').addClass('loading');
 					setTimeout(function(){
-						$('.listItem').each(function(){
-							$(this).removeClass('newItem');
-						});
-					},100);
-				},6300);
-				setTimeout(function(){
-					enoughtTimeStoppedToLoadItems = true;
-				},400);
-			}
+						var newBatch = $('.listItem').clone().addClass('newItem');
+						$('.preloader').removeClass('loading');
+						$('.listingList').append(newBatch).masonry( 'appended', newBatch, true);
+						setTimeout(function(){
+							$('.listItem').each(function(){
+								disableTouchScroll(0);
+								$(this).removeClass('newItem');
+							});
+						},100);
+					},1300);
+					setTimeout(function(){
+						enoughtTimeStoppedToLoadItems = true;
+					},400);
+				}
+			});
 		});
 }
 
-
+function disableTouchScroll(offOrOn) {
+	if (offOrOn == 1) {
+		$('html').bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
+		    e.preventDefault();
+		});
+	}
+	else {
+		$('html').unbind('touchmove');
+	}
+}
 	$(window).bind('scroll',function(){
 	if (!isMobile) {
 		listLoad();
-	};
-		console.log( ($('body').height()-340) - (scrollTopVal+wH) );
 	});

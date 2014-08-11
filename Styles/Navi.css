@@ -59,6 +59,7 @@ nav .divNavIcon .imgNav{
     top: 10px;
     right: -25px;
 }
+
 /* Search için eklediğim kısım */
 nav .divSearchIcon {
     position: absolute;
@@ -71,11 +72,12 @@ nav .divSearchIcon {
 }
 nav .divSearchIcon .imgSearch {
     position: absolute;
-    
     right: 14px;
     bottom: 14px;
 }
-/* search kısmı bitti */
+/* end */
+
+
 nav .divNav .divMenuContent {
     display:none;
 }
@@ -206,6 +208,7 @@ nav .divNav, main, footer {
         right: 35px;
         top: 16px;
     }
+
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
     .menuOn.menuOn.menuOn {
         display:block;
@@ -298,6 +301,12 @@ nav .divNav, main, footer {
         height:70px;
     }
 
+    nav .divSearchIcon {
+        z-index: 99;
+        right: 35px;
+        top: 16px;
+    }
+
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
     .menuOn {
         display:block;
@@ -356,7 +365,7 @@ nav .divNav, main, footer {
     nav .divSearchIcon {
         z-index: 99;
         right: 35px;
-        top: 23px;
+        top: 24px;
     }
 }
 

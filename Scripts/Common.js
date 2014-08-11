@@ -247,7 +247,9 @@ function openOrCloseSearch() {
             if (!isSearchActive) {
                 isSearchActive = true;
                 $('#search').addClass('topSearch');
-                $('#search input').focus();
+                if (!isMobile) {
+                    $('#search input').focus();
+                };
             }
             else {
                 closeSearch();

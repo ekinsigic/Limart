@@ -100,7 +100,7 @@ function listLoad(){
 		}
 }
 function clickLoad(){
-		$(window).bind('touchmove',function(e){
+		$(window).bind('touchmove',function (e){
 			e.preventDefault();
 		});
 		$('.preloader').css('display','none');

@@ -219,11 +219,14 @@ main{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+<<<<<<< HEAD
     header, main, footer{
         display:none;
     }
 
 
+=======
+>>>>>>> origin/master
     #smartphoneLandscape{
         display:block;
     }

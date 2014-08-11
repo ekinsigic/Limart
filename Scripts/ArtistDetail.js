@@ -84,6 +84,9 @@ function listLoad(){
 		}
 }
 function clickLoad(){
+		$(window).bind('touchmove',function(e){
+			e.preventDefault();
+		});
 		$('.preloader').css('display','none');
 		$('.clickLoader').addClass('active');
 		$('.clickLoader').bind('touchstart', function(){

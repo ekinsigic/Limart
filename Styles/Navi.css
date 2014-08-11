@@ -210,7 +210,7 @@ nav .divNav, main, footer {
     }
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
-    .menuOn.menuOn.menuOn {
+    .menuOn.menuOn.menuOn.menuOn.menuOn.menuOn {
         display:block;
         -webkit-transform:translate3d(0px,370px,0px);
         -moz-transform:translate3d(0px,370px,0px);
@@ -308,7 +308,7 @@ nav .divNav, main, footer {
     }
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
-    .menuOn {
+    .menuOn.menuOn.menuOn.menuOn {
         display:block;
         -webkit-transform:translate3d(0px,370px,0px);
         -moz-transform:translate3d(0px,370px,0px);
@@ -371,7 +371,7 @@ nav .divNav, main, footer {
 
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
-    .menuOn {
+    .menuOn.menuOn.menuOn {
         display:block;
         -webkit-transform:translate3d(0px,746px,0px);
         -moz-transform:translate3d(0px,746px,0px);

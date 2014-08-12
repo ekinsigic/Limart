@@ -1,7 +1,6 @@
 ﻿
 #payment{
-    margin:auto;
-    border:1px solid #f00;
+    margin:50px auto 0 auto;
 }
 
 #address{
@@ -9,34 +8,37 @@
     width:674px;
 }
 
-
 #address .divAddress{
     float:left;
     padding:20px 0 0 20px;
     width:50%;
     height:246px;
     background-color:#f2f2f2;
-    cursor:pointer;
     border-bottom:10px solid #000;
+    cursor:pointer;
 }
 
-    #address .divAddress span.homeAddress{
-        display:block;
-        margin:30px 0 5px 0;
-    }
+#address .divAddress .homeAddress{
+    display:block;
+    margin:30px 0 5px 0;
+}
 
-    #address .divAddress h3{
-        display:inline-block;
-    }
+#address .divAddress h3{
+    display:inline-block;
+}
 
-    #address .divAddress p{
-        width:290px;
-        margin-top:20px;
-    }
+#address .divAddress p{
+    width:290px;
+    margin-top:20px;
+}
 
-    #address .divAddress .aStyleD.edit{
-        margin-top:30px;
-    }
+#address .divAddress .edit{
+    margin-top:30px;
+}
+
+
+
+
 
 #address .divPayment{
     float:right;
@@ -47,74 +49,190 @@
     cursor:pointer;
 }
 
-    #address .divPayment p{
-        margin-top:30px;
-    }
+#address .divPayment p{
+    margin-top:30px;
+}
+
+
+
 
 #address .divContent{
     width:100%;
-    height:474px;
+    padding:0 0 50px 32px;
     background-color:#f2f2f2;
-    padding-left:32px;
 }
 
 #address .divContent .divAddressContent{
     width:608px;
 }
 
-    #address .divContent .divAddressContent h3{
-        padding:30px 0 0 0;
-    }
+#address .divContent .divAddressContent .divAddressText {
+    float:left;
+    margin:0 0 25px 0;
+}
 
-    #address .divContent .divAddressContent > p{
-        width:350px;
-        margin:25px 0 25px 0;
-    }
+#address .divContent .divAddressContent h3{
+    padding:30px 0 0 0;
+}
 
-    #address .divContent .divAddressContent input[type="button"]{
-        position:absolute;
-        top:30px;
-        right:0;
-    }
+#address .divContent .divAddressContent .pDescription{
+    width:350px;
+    margin:25px 0 0 0;
+}
 
-    #address .divContent .divAddressContent .divAddressOption,
-    #address .divContent .divAddressContent .divBusinessAddressOption{
-        float:left;
-        padding-left:20px;
-        width:294px;
-        height:200px;
-        background-color:#fff;
-        border-right:1px solid #fcfcfc;
-    }
+#address .divContent .divAddressContent .saveBtn{
+    float:right;
+    margin:30px 0 0 0;
+    padding:10px 20px;
+}
 
-    #address .divContent .divAddressContent .divBusinessAddressOption{
-        float:right;
-        background-color:transparent;
-        border:1px solid #fcfcfc;
-    }
 
-    #address .divContent .divAddressContent .divAddressOption label{
-        border:1px solid #f00;
-    }
 
-    #address .divContent .divAddressContent .divAddressOption h4,
-    #address .divContent .divAddressContent .divBusinessAddressOption h4{
-        display:inline-block;
-        margin:20px 0 0 38px;
-    }
 
-    #address .divContent .divAddressContent .divAddressOption p,
-    #address .divContent .divAddressContent .divBusinessAddressOption p{
-        margin:20px 0 0 38px;
-        width:210px;
-        border:1px solid #f00;
-    }
+#address .divContent .divAddressContent .divAddressOption,
+#address .divContent .divAddressContent .divBusinessAddressOption,
+#address .divContent .divAddressContent .divBillingAddressOption{
+    float:left;
+    padding-left:20px;
+    width:294px;
+    height:200px;
+    background-color:#fff;
+    border-right:1px solid #fcfcfc;
+}
 
-    #address .divContent .divAddressContent .divAddressOption .aStyleD,
-    #address .divContent .divAddressContent .divBusinessAddressOption .aStyleD{
-        float:right;
-        margin:20px 20px 0 0;
-    }
+#address .divContent .divAddressContent .divBusinessAddressOption{
+    float:right;
+    background-color:transparent;
+    border:1px solid #fcfcfc;
+}
+
+#address .divContent .divAddressContent .divAddressOption label{
+    border:1px solid #f00;
+}
+
+#address .divContent .divAddressContent .divAddressOption h4,
+#address .divContent .divAddressContent .divBusinessAddressOption h4,
+#address .divContent .divAddressContent .divBillingAddressOption h4{
+    display:inline-block;
+    margin:20px 0 0 38px;
+}
+
+#address .divContent .divAddressContent .divAddressOption p,
+#address .divContent .divAddressContent .divBusinessAddressOption p,
+#address .divContent .divAddressContent .divBillingAddressOption p{
+    margin:20px 0 0 38px;
+    width:210px;
+}
+
+#address .divContent .divAddressContent .divAddressOption a,
+#address .divContent .divAddressContent .divBusinessAddressOption a,
+#address .divContent .divAddressContent .divBillingAddressOption a{
+    float:right;
+    margin:20px 20px 0 0;
+}
+
+
+#address .divContent .divAddressContent .divBillingAddress{
+    margin:50px 0 50px 0;
+}
+
+#address .divContent .saveBtnA{
+    margin-top:40px;
+}
+    
+
+
+
+
+
+#address .divContent .divPaymentContent{
+    width:608px;
+    padding-top:50px;
+}
+
+#address .divContent .divPaymentContent .divPaymentText{
+    float:left;
+    margin-bottom:40px;
+}
+
+#address .divContent .divPaymentContent .pDescription{
+    width:350px;
+    margin:25px 0 0 0;
+}
+
+#address .divContent .divPaymentContent .aInstallments{
+    float:right;
+    margin-top:50px;
+}
+
+#address .divContent .divPaymentContent .divKartName{
+    width:405px;
+    margin-bottom:25px;
+}
+
+#address .divContent .divPaymentContent .divKartNumber{
+    width:100%;
+    margin-bottom:25px;
+}
+
+#address .divContent .divPaymentContent .divKartNumber span{
+    display:inline-block !important;
+}
+
+#address .divContent .divPaymentContent .divKartNumber .divBankCard{
+    position:absolute;
+    top:30px;
+    right:0;
+    width:200px;
+}
+
+#address .divContent .divPaymentContent .divKartNumber .divBankCard img{
+    float:left;
+    width:auto;
+    height:20px;
+}
+
+#address .divContent .divPaymentContent .divKartName span,
+#address .divContent .divPaymentContent .divKartNumber span,
+#address .divContent .divPaymentContent .divExpirationDate span,
+#address .divContent .divPaymentContent .divSecurity span{
+    display:block;
+    margin-bottom:10px;
+}
+
+#address .divContent .divPaymentContent .divExpirationDate{
+    float:left;
+    width:250px;
+}
+
+#address .divContent .divPaymentContent .divExpirationDate select{
+    float:left;
+}
+
+#address .divContent .divPaymentContent .divSecurity{
+    float:left;
+}
+
+#address .divContent .divPaymentContent .divPay{
+    float:right;
+    margin-top:50px;
+    width:170px;
+}
+
+#address .divContent .divPaymentContent .divPay .paymentBtn{
+    float:right;
+}
+
+#address .divContent .divPaymentContent .divPay label{
+    width:100%;
+    text-align:left;
+}
+
+
+
+
+
+    
 
 
 
@@ -123,7 +241,7 @@
 
 #orderSummary{
     float:right;
-    margin-right:20px;
+    margin:20px 20px 0 0;
     width:354px;
 }
 
@@ -134,23 +252,25 @@
 #orderSummary table tr td{
     padding:20px 0 20px 0;
     border-bottom:1px solid #ededed;
-    vertical-align:middle;
     text-align:left;
+    vertical-align:middle;
 }
 
 #orderSummary table tr td.tdImg{
     width:90px;
 }
 
+#orderSummary table tr td.tdImg img{
+    width:90px;
+    height:auto;
+    border:1px solid #f0f0f0;
+}
+
 #orderSummary table tr td.tdDescription{
     padding-left:20px;
 }
 
-#orderSummary table tr td.tdImg img{
-    width:90px;
-    height:auto;
-    border:1px solid #000;
-}
+
 
 #orderSummary table tr td div{
     margin-top:10px;
@@ -173,15 +293,15 @@
     border-bottom:1px solid #4b4b4b;
 }
 
-    #orderSummary .divSubTotal .divLeft{
-        float:left;
-        text-align:left;
-    }
+#orderSummary .divSubTotal .divLeft{
+    float:left;
+    text-align:left;
+}
 
-    #orderSummary .divSubTotal .divRight{
-        float:right;
-        text-align:right;
-    }
+#orderSummary .divSubTotal .divRight{
+    float:right;
+    text-align:right;
+}
 
 #orderSummary .divSubTotal span{
     display:block;
@@ -194,10 +314,15 @@
 
 #orderSummary .divDiscount{
     margin-top:45px;
+    padding:35px 5% 0 5%;
     width:100%;
     height:154px;
     background-color:#fafafa;
-    padding:35px 0 0 20px;
+}
+
+#orderSummary .divDiscount .text{
+    width:100% !important;
+    margin-top:15px;
 }
 
 
@@ -222,21 +347,327 @@
 
 /* Screen */
 @media all and (max-width: 400px) {
-    
+    #address{
+        float:none;
+        width:100%;
+    }
+
+    #address .divAddress{
+        padding:20px 0 10px 0;
+        height:60px;
+        text-align:center;
+    }
+
+    #address .divAddress h2{
+        font-size:10px;
+    }
+
+    #address .divAddress .homeAddress,
+    #address .divAddress h3,
+    #address .divAddress .number,
+    #address .divAddress p,
+    #address .divAddress .edit,
+    #address .divPayment p{
+        display:none;
+    }
+
+
+    #address .divPayment{
+        padding:20px 0 10px 0;
+        height:60px;
+        text-align:center;
+    }
+
+    #address .divPayment h2{
+        font-size:10px;
+    }
+
+    #address .divContent{
+        padding:0 0 50px 0;
+    }
+
+    #address .divContent .divAddressContent{
+        margin:auto;
+        width:90%;
+    }
+
+    #address .divContent .divAddressContent .divAddressText{
+        width:100%;
+        margin:0 0 15px 0;
+    }
+
+    #address .divContent .divAddressContent .pDescription{
+        width:90%;
+    }
+
+    #address .divContent .divAddressContent .saveBtn{
+        float:left;
+        margin-bottom:30px;
+    }
+
+
+
+
+    #address .divContent .divAddressContent .divAddressOption,
+    #address .divContent .divAddressContent .divBusinessAddressOption,
+    #address .divContent .divAddressContent .divBillingAddressOption{
+        float:none;
+        padding:0 10px 0 10px;
+        margin-top:20px;
+        width:100%;
+        height:200px;
+    }
+
+    #address .divContent .divAddressContent .divAddressOption h4,
+    #address .divContent .divAddressContent .divBusinessAddressOption h4,
+    #address .divContent .divAddressContent .divBillingAddressOption h4{
+        margin:10px 0 0 0;
+    }
+
+    #address .divContent .divAddressContent .divAddressOption p,
+    #address .divContent .divAddressContent .divBusinessAddressOption p,
+    #address .divContent .divAddressContent .divBillingAddressOption p{
+        margin:20px 0 0 0;
+        width:95%;
+    }
+
+    #address .divContent .divAddressContent .divAddressOption a,
+    #address .divContent .divAddressContent .divBusinessAddressOption a,
+    #address .divContent .divAddressContent .divBillingAddressOption a{
+        margin:20px 10px 0 0;
+    }
+
+    #address .divContent .saveBtnA{
+        margin-left:5%;
+    }
+
+
+
+
+
+    #address .divContent .divPaymentContent{
+        margin:auto;
+        width:90%;
+    }
+
+    #address .divContent .divPaymentContent .divPaymentText{
+        float:none;
+        width:100%;
+    }
+
+    #address .divContent .divPaymentContent .pDescription{
+        width:100%;
+    }
+
+    #address .divContent .divPaymentContent .aInstallments{
+        float:none;
+        margin:0 0 40px 0;
+    }
+
+    #address .divContent .divPaymentContent .divKartName{
+        width:100%;
+    }
+
+    #address .divContent .divPaymentContent .divKartNumber .divBankCard{
+        position:relative;
+        margin:0 0 40px 0;
+    }
+
+    #address .divContent .divPaymentContent .divExpirationDate{
+        float:none;
+        margin:0 0 20px 0;
+        width:100%;
+    }
+
+    #address .divContent .divPaymentContent .divSecurity{
+        float:none;
+        width:100%;
+    }
+
+
+
+    #orderSummary{
+        display:none;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+    #address{
+        float:none;
+        width:100%;
+    }
+
+    #address .divAddress{
+        padding:20px 0 10px 0;
+        height:60px;
+        text-align:center;
+    }
+
+    #address .divAddress h2{
+        font-size:10px;
+    }
+
+    #address .divAddress .homeAddress,
+    #address .divAddress h3,
+    #address .divAddress .number,
+    #address .divAddress p,
+    #address .divAddress .edit{
+        display:none;
+    }
+
+
+    #address .divPayment{
+        padding:20px 0 10px 0;
+        height:60px;
+        text-align:center;
+    }
+
+    #address .divPayment h2{
+        font-size:10px;
+    }
+
+    #address .divContent{
+        padding:0 0 50px 0;
+    }
+
+    #address .divContent .divAddressContent{
+        margin:auto;
+        width:90%;
+    }
+
+    #address .divContent .divAddressContent .divAddressText{
+        width:100%;
+        margin:0 0 15px 0;
+    }
+
+    #address .divContent .divAddressContent .pDescription{
+        width:90%;
+    }
+
+    #address .divContent .divAddressContent .saveBtn{
+        float:left;
+        margin-bottom:30px;
+    }
+
+
+
+
+    #address .divContent .divAddressContent .divAddressOption,
+    #address .divContent .divAddressContent .divBusinessAddressOption,
+    #address .divContent .divAddressContent .divBillingAddressOption{
+        float:none;
+        padding:0 10px 0 10px;
+        margin-top:20px;
+        width:100%;
+        height:200px;
+    }
+
+    #address .divContent .divAddressContent .divAddressOption h4,
+    #address .divContent .divAddressContent .divBusinessAddressOption h4,
+    #address .divContent .divAddressContent .divBillingAddressOption h4{
+        margin:10px 0 0 0;
+    }
+
+    #address .divContent .divAddressContent .divAddressOption p,
+    #address .divContent .divAddressContent .divBusinessAddressOption p,
+    #address .divContent .divAddressContent .divBillingAddressOption p{
+        margin:20px 0 0 0;
+        width:95%;
+    }
+
+    #address .divContent .divAddressContent .divAddressOption a,
+    #address .divContent .divAddressContent .divBusinessAddressOption a,
+    #address .divContent .divAddressContent .divBillingAddressOption a{
+        margin:20px 10px 0 0;
+    }
+
+    #address .divContent .saveBtnA{
+        margin-left:5%;
+    }
+
+    #address .divContent .divPaymentContent{
+        margin:30px auto 0 auto;
+        width:90%;
+    }
+
+    #address .divContent .divPaymentContent .aInstallments{
+        float:left;
+        margin:0 0 40px 0;
+    }
+
+    #address .divContent .divPaymentContent .divKartNumber .divBankCard{
+        position:relative;
+        margin:0 0 40px 0;
+    }
+
+    #address .divContent .divPaymentContent .divExpirationDate{
+        float:none;
+        margin:0 0 20px 0;
+        width:100%;
+    }
+
+    #address .divContent .divPaymentContent .divSecurity{
+        float:none;
+        width:100%;
+    }
+
+    #orderSummary{
+        display:none;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     #payment{
         width:670px;
     }
+
+    #address{
+        float:none;
+        width:100%;
+    }
+
+    #address .divContent{
+        padding-left:0;
+    }
+
+    #address .divContent .divAddressContent{
+        margin:auto;
+    }
+
+    #address .divContent .saveBtnA{
+        margin-left:35px;
+    }
+
+
+    #address .divContent .divPaymentContent{
+        margin:0 auto 0 auto;
+    }
+
+
+     #orderSummary{
+         display:none;
+     }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
     #payment{
         width:960px;
+    }
+
+    #orderSummary{
+        width:236px;
+    }
+
+    #orderSummary table tr td.tdImg{
+        width:80px;
+    }
+
+    #orderSummary table tr td.tdImg img{
+        width:80px;
+    }
+
+    #orderSummary table tr td.tdDescription{
+        padding-left:15px;
     }
 }
 

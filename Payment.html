@@ -81,10 +81,15 @@
 
 
     <main>
-        <section id="payment">
-            <h4 class="faceD">ÖDEME</h4>
+        <section id="pageHeader">
+            <h1 class="faceEE">ÖDEME</h1>
+        </section>
 
+
+
+        <section id="payment">
             <div id="address">
+
                 <div class="divAddress">
                     <h2 class="faceD">Adres Bilgileri</h2>
                     <span class="homeAddress">EV ADRESİ</span>
@@ -107,13 +112,17 @@
                 <div class="divContent">
 
                     <div class="divAddressContent">
-                        <h3 class="faceD">Teslimat Adresi Seçiniz</h3>
-                        <p>
-                            Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu? Yeni bir adres ekleyin
-                        </p>
 
-                        <input type="button" value="KAYDET VE DEVAM ET" />
+                        <div class="divAddressText">
+                            <h3 class="faceD">Teslimat Adresi Seçiniz</h3>
+                            <p class="pDescription">
+                                Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu? Yeni bir adres ekleyin
+                            </p>
+                        </div>
 
+                        <input type="button" value="KAYDET VE DEVAM ET" class="saveBtn" />
+
+                        <div class="separator"></div>
 
                         <div class="divAddressOption">
                             <label for="sampleC"><input type="checkbox" id="sampleC" />Ev Adresi</label>
@@ -141,14 +150,115 @@
                             <a href="#" class="aStyleD edit">DÜZENLE</a>
                         </div>
 
+
+                        <div class="separator"></div>
+
+                        <div class="divBillingAddress">
+
+                            <h3 class="faceD">Fatura Adresi Seçiniz</h3>
+                            <p class="pDescription">
+                                Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin. Aradığınız adres yok mu? Yeni bir adres ekleyin
+                            </p>
+
+                            <div class="divBillingAddressOption">
+                                <label for="sampleC"><input type="checkbox" id="sampleC" />Fatura Adresi</label>
+                                <div class="separator"></div>
+
+                                <h4>BAMBİ TERLİK</h4><span> - 0212 450 00 00</span>
+                                <p>
+                                    Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                </p>
+
+                                <a href="#" class="aStyleD delete">SİL</a>
+                                <a href="#" class="aStyleD edit">DÜZENLE</a>
+                            </div>
+
+
+
+                            <div class="separator"></div>
+                        </div>
+
+                        
                         <label for="sampleC"><input type="checkbox" id="sampleC" />Fatura Adresim ile teslimat adresim aynı</label>
 
                         <div class="separator"></div>
                     </div>
 
-                    <div class="divPaymentContent"></div>
-                </div>
 
+                    <div class="divPaymentContent">
+                        <div class="divPaymentText">
+                            <h3 class="faceD">Ödeme Seçenekleri</h3>
+                            <p class="pDescription">
+                                Ödeme yapamak istediğiniz kredi kartı ya da banka kartının bilgilerini giriniz.
+                            </p>
+                        </div>
+
+                        <a href="#" class="aInstallments">TAKSİT SEÇENEKLERİNİ İNCELE</a>
+
+                        <div class="separator"></div>
+
+                        <div class="divKartName">
+                            <span>Kart Üzerindeki İsim</span>
+                            <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" />
+                        </div>
+
+                        <div class="divKartNumber">
+                            <span>Kredi Kartı / Banka Kartı Numarası</span>
+                            <input type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" />
+
+                            <div class="divBankCard">
+                                <img src="Images/card1.jpg" />
+                                <img src="Images/card2.png" />
+                                <img src="Images/card3.jpg" />
+                                <div class="separator"></div>
+                            </div>
+
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="divExpirationDate">
+                            <span>Son Kullanma Tarihi</span>
+                            <select>
+                                <option>Ay</option>
+                                <option>Ay</option>
+                            </select>
+
+                            <select>
+                                <option>Yıl</option>
+                            </select>
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="divSecurity">
+                            <span>Güvenlik</span>
+                            <input type="text" placeholder="GÜVENLİK" />
+                        </div>
+
+
+                        <div class="separator"></div>
+
+                        <div class="divPay">
+                            <input type="button" value="ÖDEME YAP" class="paymentBtn" />
+
+                            <label for="sampleC"><input type="checkbox" id="sampleC" />
+                                Ön Bilgilendirme Koşulları'nı ve
+                                Mesafeli Satış Sözleşmesi'ni
+                                    okudum, onaylıyorum
+                            </label>
+
+
+
+                        </div>
+
+
+                        <div class="separator"></div>
+
+                    </div>
+
+                    <input type="button" value="KAYDET VE DEVAM ET" class="saveBtnA" />
+
+
+                </div>
             </div>
 
             <div id="orderSummary">
@@ -234,8 +344,6 @@
                     <p>İndirim kuponu kullanmak ya da kampanya kodu mu girmek istiyorsunuz?</p>
                     <input type="text" class="inputTextA text" />
                 </div>
-
-                
             </div>
 
 
@@ -247,7 +355,6 @@
 
 
 
-    <div class="separator"></div>
 
     <footer>
         <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>

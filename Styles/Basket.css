@@ -1,159 +1,309 @@
-﻿
-#basketDetails{
-    margin:auto;
-    width:100%;
+﻿#basketDetails {
+    margin: 50px auto 0 auto;
+    width: 100%;
 }
 
-#basketDetails .tableBasket{
-    width:100%;
-}
-
-#basketDetails .tableBasket tr th{
-    padding-bottom:8px;
-    border-bottom:1px solid #eaeaea;
-    text-align:center;
-}
-
-#basketDetails .tableBasket tr th.product{
-    padding-left:20px;
-    text-align:left;
-}
-
-#basketDetails .tableBasket tr th.total{
-    text-align:right;
-}
-
-#basketDetails .tableBasket tr td{
-    padding:20px 0 20px 0;
-    border-bottom:1px solid #eaeaea;
-    text-align:center;
-    vertical-align:middle;
-}
-
-#basketDetails .tableBasket tr td.tdImg{
-    padding-left:20px;
-    border:1px solid #f00;
-}
-
-#basketDetails .tableBasket tr td.tdImg img{
-    float:left;
-    width:90px;
-    height:auto;
-    border:5px solid #fff;
-    box-shadow:0 0 10px #282828;
-
-}
-
-#basketDetails .tableBasket tr td.tdImg .divProduct{
-    float:left;
-    margin-left:20px;
-    text-align:left;
-    border:1px solid #f00;
-}
-
-
-
-#basketDetails .tableBasket tr td.tdProductName{
-    width:370px;
-    text-align:left;
-    padding-left:20px;
-}
-
-#basketDetails .tableBasket tr td.tdPrice{
-    width:140px;
-}
-
-#basketDetails .tableBasket tr td.tdPiece{
-    width:140px;
-}
-
-    #basketDetails .tableBasket tr td.tdPiece select{
-        margin:auto;
+    #basketDetails .divItem {
+        background-color: #ccc;
+        width: 100%;
     }
 
-#basketDetails .tableBasket tr td.tdTotal{
-    width:150px;
-    text-align:right;
-}
-
-#basketDetails .tableBasket tr td.tdClose img{
-    margin:auto;
-    width:7px;
-}
-
-
-
-
-#basketDetails .divTotal{
-    width:100%;
-    height:216px;
-    margin-top:55px;
-    background-color:#fafafa;
-}
-
-    #basketDetails .divTotal .divDiscount{
-        width:260px;
-        border:1px solid #f00;
-        float:left;
-        margin:35px 0 0 40px;
-    }
-
-        #basketDetails .divTotal .divDiscount .text{
-            margin-top:20px;
-            width:100% !important;
+        #basketDetails .divItem .imgItemPic {
+            float: left;
+            z-index: 10;
+            max-width: 90px;
+            height: auto;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px #282828;
         }
 
-    #basketDetails .divTotal table{
-        float:right;
-        margin:35px 40px 0 0;
-        width:350px;
-        border:1px solid #f00;
-    }
-
-        #basketDetails .divTotal table tr td{
-            padding-bottom:10px;
-            text-align:right;
+        #basketDetails .divItem .divDescription {
+            z-index: 5;
+            padding-right: 20px;
+            padding-left: 90px;
+            background-color: #ddd;
         }
 
+            #basketDetails .divItem .divDescription,
+            #basketDetails .divItem .divDescription .divInfo,
+            #basketDetails .divItem .divDescription .divUnitPrice,
+            #basketDetails .divItem .divDescription .divQuantity,
+            #basketDetails .divItem .divDescription .divTotalPrice {
+                min-height: 80px;
+            }
 
-#basketDetails .aStylec{
-    float:left;
-    margin:60px 0 0 40px;
-}
+                #basketDetails .divItem .divDescription .divInfo,
+                #basketDetails .divItem .divDescription .divUnitPrice,
+                #basketDetails .divItem .divDescription .divQuantity,
+                #basketDetails .divItem .divDescription .divTotalPrice {
+                    float: left;
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -o-flex;
+                    display: -ms-flex;
+                    display: flex;
+                    -webkit-align-items: center;
+                    -moz-align-items: center;
+                    -ms-align-items: center;
+                    -o-align-items: center;
+                    align-items: center;
+                }
 
-#basketDetails input[type="button"] {
-    float:right;
-    margin:50px 40px 0 0;
-}
+                #basketDetails .divItem .divDescription .divInfo {
+                    background-color: green;
+                }
+
+                    #basketDetails .divItem .divDescription .divInfo div.content {
+                        width: 210px;
+                        padding-left: 10px;
+                    }
+
+                        #basketDetails .divItem .divDescription .divInfo div.content h2.header1 {
+                        }
+
+                        #basketDetails .divItem .divDescription .divInfo div.content h3.header2 {
+                        }
+
+                        #basketDetails .divItem .divDescription .divInfo div.content span.info1 {
+                        }
+
+                #basketDetails .divItem .divDescription .divUnitPrice {
+                    background-color: purple;
+                }
+
+                    #basketDetails .divItem .divDescription .divUnitPrice div.content {
+                        width: 120px;
+                        text-align: right;
+                    }
+
+                        #basketDetails .divItem .divDescription .divUnitPrice div.content span.amount {
+                        }
+
+                        #basketDetails .divItem .divDescription .divUnitPrice div.content span.currency {
+                        }
+
+                #basketDetails .divItem .divDescription .divQuantity {
+                    background-color: #aaa;
+                }
+
+                    #basketDetails .divItem .divDescription .divQuantity div.content {
+                        width: 100px;
+                    }
+
+                        #basketDetails .divItem .divDescription .divQuantity div.content select {
+                            width: 50px;
+                            margin: 0 auto 0 auto;
+                        }
+
+                #basketDetails .divItem .divDescription .divTotalPrice {
+                    background-color: blue;
+                }
+
+                    #basketDetails .divItem .divDescription .divTotalPrice div.content {
+                        text-align: right;
+                    }
+
+                        #basketDetails .divItem .divDescription .divTotalPrice div.content span.amount {
+                        }
+
+                        #basketDetails .divItem .divDescription .divTotalPrice div.content span.currency {
+                        }
+
+                #basketDetails .divItem .divDescription .aDelete {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    width: 20px;
+                    height: 100%;
+                    background-color: red;
+                }
+
+                    #basketDetails .divItem .divDescription .aDelete img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 10px;
+                        height: 10px;
+                        margin: -5px 0 0 -5px;
+                    }
+
+    #basketDetails .itemSeparator {
+        padding: 10px 0 0 0;
+        margin: 0 0 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #basketDetails .divTotal {
+        margin-top: 55px;
+        width: 100%;
+        height: 216px;
+    }
+
+        #basketDetails .divTotal .divDiscount {
+            float: left;
+            margin: 35px 0 0 40px;
+            width: 260px;
+        }
+
+            #basketDetails .divTotal .divDiscount .inputTextA.text {
+                margin-top: 20px;
+                width: 100% !important;
+            }
+
+        #basketDetails .divTotal table {
+            float: right;
+            margin: 35px 40px 0 0;
+            width: 350px;
+            border: 1px solid #f00;
+        }
+
+            #basketDetails .divTotal table tr td {
+                padding-bottom: 10px;
+                text-align: right;
+            }
 
 
+    #basketDetails .contShopping {
+        float: left;
+        margin: 60px 0 0 40px;
+    }
+
+    #basketDetails .btnCompleteOrder {
+        float: right;
+        margin: 50px 40px 0 0;
+    }
 
 
-
-
-
-/* Screen */
 @media all and (max-width: 400px) {
-    
+    #basketDetails .divItem .divDescription,
+    #basketDetails .divItem .divDescription .divInfo {
+        min-height: 70px !important;
+    }
+
+        #basketDetails .divItem .divDescription .divInfo,
+        #basketDetails .divItem .divDescription .divUnitPrice,
+        #basketDetails .divItem .divDescription .divQuantity,
+        #basketDetails .divItem .divDescription .divTotalPrice {
+            min-height: initial;
+        }
+
+            #basketDetails .divItem .divDescription .divInfo div.content,
+            #basketDetails .divItem .divDescription .divUnitPrice div.content,
+            #basketDetails .divItem .divDescription .divQuantity div.content,
+            #basketDetails .divItem .divDescription .divTotalPrice div.content {
+                width: 90%;
+                min-width: 150px;
+                max-width: 260px;
+                text-align: left;
+                border-right: 1px solid black;
+                padding-left: 10px;
+            }
+
+                #basketDetails .divItem .divDescription .divQuantity div.content select {
+                    width: 50px;
+                    margin: 0 0 0 0;
+                }
+
+    #basketDetails .divTotal .divDiscount {
+        width: 210px;
+    }
+
+    #basketDetails .divTotal table {
+        width: 210px;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+    #basketDetails .divItem .divDescription,
+    #basketDetails .divItem .divDescription .divInfo {
+        min-height: 70px !important;
+    }
+
+        #basketDetails .divItem .divDescription .divInfo,
+        #basketDetails .divItem .divDescription .divUnitPrice,
+        #basketDetails .divItem .divDescription .divQuantity,
+        #basketDetails .divItem .divDescription .divTotalPrice {
+            min-height: initial;
+        }
+
+            #basketDetails .divItem .divDescription .divInfo div.content,
+            #basketDetails .divItem .divDescription .divUnitPrice div.content,
+            #basketDetails .divItem .divDescription .divQuantity div.content,
+            #basketDetails .divItem .divDescription .divTotalPrice div.content {
+                width: 90%;
+                min-width: 290px;
+                max-width: 700px;
+                text-align: left;
+                border-right: 1px solid black;
+                padding-left: 10px;
+            }
+
+                #basketDetails .divItem .divDescription .divQuantity div.content select {
+                    width: 50px;
+                    margin: 0 0 0 0;
+                }
+
+    #basketDetails .divTotal table {
+        width: 210px;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #basketDetails{
-        width:670px;
+    #basketDetails {
+        width: 670px;
     }
+
+        #basketDetails .divItem .divDescription .divInfo div.content {
+            width: 270px;
+        }
+
+        #basketDetails .divItem .divDescription .divUnitPrice div.content {
+            width: 90px;
+        }
+
+        #basketDetails .divItem .divDescription .divQuantity div.content {
+            width: 100px;
+        }
+
+        #basketDetails .divTotal table {
+            width: 250px;
+        }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    #basketDetails{
-        width:960px;
+    #basketDetails {
+        width: 960px;
     }
+
+        #basketDetails .divItem .divDescription .divInfo div.content {
+            width: 550px;
+            padding-right: 50px;
+        }
+
+        #basketDetails .divItem .divDescription .divUnitPrice div.content {
+            width: 90px;
+        }
+
+        #basketDetails .divItem .divDescription .divQuantity div.content {
+            width: 100px;
+        }
 }
 
 @media all and (min-width: 1435px) {
-    #basketDetails{
-        width:1080px;
+    #basketDetails {
+        width: 1080px;
     }
+
+        #basketDetails .divItem .divDescription .divInfo div.content {
+            width: 670px;
+            padding-right: 50px;
+        }
+
+        #basketDetails .divItem .divDescription .divUnitPrice div.content {
+            width: 90px;
+        }
+
+        #basketDetails .divItem .divDescription .divQuantity div.content {
+            width: 100px;
+        }
 }

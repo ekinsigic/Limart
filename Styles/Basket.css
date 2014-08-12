@@ -1,0 +1,151 @@
+﻿
+#basketDetails{
+    margin:auto;
+    width:100%;
+}
+
+#basketDetails .tableBasket{
+    width:100%;
+}
+
+#basketDetails .tableBasket tr th{
+    padding-bottom:8px;
+    border-bottom:1px solid #eaeaea;
+    text-align:center;
+}
+
+#basketDetails .tableBasket tr th.product{
+    padding-left:20px;
+    text-align:left;
+}
+
+#basketDetails .tableBasket tr th.total{
+    text-align:right;
+}
+
+#basketDetails .tableBasket tr td{
+    padding:20px 0 20px 0;
+    text-align:center;
+    vertical-align:middle;
+    border-bottom:1px solid #eaeaea;
+}
+
+#basketDetails .tableBasket tr td.tdImg{
+    width:120px;
+    padding-left:20px;
+    border:1px solid #f00;
+}
+
+#basketDetails .tableBasket tr td.tdImg img{
+    width:90px;
+    height:auto;
+    border:5px solid #fff;
+    box-shadow:0 0 10px #282828;
+}
+
+
+
+#basketDetails .tableBasket tr td.tdProductName{
+    width:370px;
+    text-align:left;
+    padding-left:20px;
+}
+
+#basketDetails .tableBasket tr td.tdPrice{
+    width:140px;
+}
+
+#basketDetails .tableBasket tr td.tdPiece{
+    width:140px;
+}
+
+    #basketDetails .tableBasket tr td.tdPiece select{
+        margin:auto;
+    }
+
+#basketDetails .tableBasket tr td.tdTotal{
+    width:150px;
+    text-align:right;
+}
+
+#basketDetails .tableBasket tr td.tdClose img{
+    margin:auto;
+    width:7px;
+}
+
+
+
+
+#basketDetails .divTotal{
+    width:100%;
+    height:216px;
+    margin-top:55px;
+    background-color:#fafafa;
+}
+
+    #basketDetails .divTotal .divDiscount{
+        width:260px;
+        border:1px solid #f00;
+        float:left;
+        margin:35px 0 0 40px;
+    }
+
+        #basketDetails .divTotal .divDiscount .text{
+            margin-top:20px;
+            width:100% !important;
+        }
+
+    #basketDetails .divTotal table{
+        float:right;
+        margin:35px 40px 0 0;
+        width:350px;
+        border:1px solid #f00;
+    }
+
+        #basketDetails .divTotal table tr td{
+            padding-bottom:10px;
+            text-align:right;
+        }
+
+
+#basketDetails .aStylec{
+    float:left;
+    margin:60px 0 0 40px;
+}
+
+#basketDetails input[type="button"] {
+    float:right;
+    margin:50px 40px 0 0;
+}
+
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+    
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    #basketDetails{
+        width:670px;
+    }
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    #basketDetails{
+        width:960px;
+    }
+}
+
+@media all and (min-width: 1435px) {
+    #basketDetails{
+        width:1080px;
+    }
+}

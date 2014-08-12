@@ -287,6 +287,40 @@ a:active {
 
 
 
+.aStyleC:link,
+.aStyleC:visited {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.aStyleC:hover,
+.aStyleC:active {
+}
+
+
+
+
+
+.aStyleD:link,
+.aStyleD:visited {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.aStyleD:hover,
+.aStyleD:active {
+}
+
+
+
+
+
 .spanStyleA {
     display: inline-block;
     color: #000;

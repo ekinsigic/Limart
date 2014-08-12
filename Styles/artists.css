@@ -252,6 +252,10 @@
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
+    
+    #artists .divArtists .divArtist {
+        width: 50%;
+    }
 }
 
 

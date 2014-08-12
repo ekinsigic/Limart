@@ -48,7 +48,7 @@ function triggerGallerySlider() {
             center: true,
             breakpoint: 0,
             breakpointCenterArea: 0,
-            navigateByCenterClick: true
+            navigateByCenterClick: false
         }
     });
 }

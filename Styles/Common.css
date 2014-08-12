@@ -74,11 +74,11 @@
     width:100%;
     height:60px;
     background-color:#ececef;
-    transition:transform 0.3s;
-    -webkit-transition:-webkit-transform 0.3s;
-    -moz-transition:-moz-transform 0.3s;
-    -ms-transition:-ms-transform 0.3s;
-    -o-transition:-o-transform 0.3s;
+    transition:transform 0.5s ease;
+    -webkit-transition:-webkit-transform 0.5s ease;
+    -moz-transition:-moz-transform 0.5s ease;
+    -ms-transition:-ms-transform 0.5s ease;
+    -o-transition:-o-transform 0.5s ease;
 }
 
 #search .divSearchContent{

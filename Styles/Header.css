@@ -22,7 +22,7 @@ header .divContent .aLogo:visited{
     left:0;
 }
 
-.shadowHeader:after {
+header:after {
     content: '';
     display: block;
     position: fixed;
@@ -30,8 +30,9 @@ header .divContent .aLogo:visited{
     height: 20px;
     width: 100%;
     background-color: transparent;
-    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.15);
     z-index: 99999999999;
+    transition:box-shadow 0.3s ease;
 }
 
 /* Screen */
@@ -53,6 +54,9 @@ header .divContent .aLogo:visited{
         width: 90px;
         height: auto;
     }
+    header:after {
+    top: 50px;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -72,6 +76,9 @@ header .divContent .aLogo:visited{
     header .divContent .aLogo img {
         width: 90px;
         height: auto;
+    }
+    header:after {
+        top: 50px;
     }
 }
 

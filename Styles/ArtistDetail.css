@@ -86,8 +86,8 @@ main {
 	border-top: 1px solid #f1f1f1;
 	background-color:#fff;
 	width: 100%;
-	transition:border 0.2s, -webkit-transform 0.3s;
-	z-index: 2;
+	transition:border 0.2s, -webkit-transform 0.5s ease;
+	z-index: 19;
 	text-align: center;
 	position: absolute;
 }
@@ -286,7 +286,7 @@ main.menuOn .sticky {
 
 .clickLoader {
 	display: none;
-	top: -210px;
+	top: 80px;
 	margin: 0 auto;
 	z-index: 19;
 }
@@ -335,12 +335,14 @@ footer {
 
 	.listingFilters{
 		height: 100px;
-		z-index: 99;
+		z-index: 19;
 	}
 
 	.sticky {
 		top: 70px !important;
-	}
+	
+		z-index: 19;
+}
 
 	.artistInfo img.artistPhoto {
 		width: 100px;
@@ -368,7 +370,15 @@ footer {
 	.artistDividant {
 		margin-top: 50px;
 	}
+	
+	.listingContainer {
+		text-align: center;
+		margin-top: 150px;
+	}
 
+	.listingFilters{
+		height: 100px;
+	}
 
 	.listingFilters .listingFilterFirstLayer {
 		background:white;
@@ -409,6 +419,15 @@ footer {
 	main {
 		margin-top: 70px;}
 
+	.listingContainer {
+		text-align: center;
+		margin-top: 150px;
+	}
+	
+	.listingFilters{
+		height: 100px;
+	}
+
 	.listingFilters .listingFilterFirstLayer {
 		background:white;
 		height: 46px;
@@ -416,6 +435,7 @@ footer {
 		margin-left: -2px;
 		border-bottom: 1px solid #f0f0f0;
 	}
+
 	.listingFilters .listingFilterFirstLayer select {
 		height: 100%;
 		width: 100%;

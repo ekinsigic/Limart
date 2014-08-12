@@ -18,12 +18,9 @@ $(document).ready(function () {
     scrollEvents();
     setGlobals();
     popupSettings();
-    headerShadow();
     smartphoneLandscape();
-    headerShadow();
     miscImgLoader();
-    openCloseMenu();
-    openOrCloseSearch();
+    aggregateHeader();
 
     // PPI = getPPI();
     // console.log(PPI);
@@ -57,6 +54,7 @@ $(window).resize(function () {
         closeMenu();
     }
     closeSearch();
+    closeBasket();
 
 });
 
@@ -80,11 +78,11 @@ function checkDevice() {
     if (!isMobile) {
         deviceIs = "laptop";
     }
-    else if (isMobile && (screen.width / window.devicePixelRatio) > 380) { // tablet
-        deviceIs = "tablet";
+    else if (screen.width < 580 || window.devicePixelRatio == 3) { // tablet
+        deviceIs = "smartphone";
     }
     else {
-        deviceIs = "smartphone";
+        deviceIs = "tablet";
     }
 }
 
@@ -148,20 +146,25 @@ function popupSettings() {
 
 /* mobilde yatayda gelecek ekran */
 function smartphoneLandscape() {
-    if (isMobile && isLandscape) {
+    if (deviceIs == 'smartphone' && isLandscape) {
         $('#smartphoneLandscape').show();
         $('.divPreloader').addClass('loading');
     }
-    else if(isMobile && isPortrait) {
+    else if(deviceIs == 'smartphone' && isPortrait) {
         $('#smartphoneLandscape').hide();
         $('.divPreloader').removeClass('loading');
     }
 }
 
+// AGGREGATE HEADER FUNCTIONALITIES
+function aggregateHeader(){
+    openCloseMenu();
+    openOrCloseSearch();
+    openCloseBasket();
+}
+//
 
-
-
-
+// MENU OPEN CLOSE FUNCTION
 
 var isMenuOpen = false;//Menünün açık olup olmadığını kontrol etmek için, sayfa başlangıcında kapalı varsayıyoruz.
 var isScroll = false;//kullanıcının scroll amaçlı dokunup dokunmadığını tespit etmek için dokunma işleminin başında scroll amaçlı dokunmadığını varsayıyoruz.
@@ -180,36 +183,12 @@ function openCloseMenu() {
                 if (isSearchActive) {
                     closeSearch();
                     setTimeout(function(){
-                        if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
-                            isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
-                            isScroll = false;
-
-                            $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
-                            e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
-                            $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                                e.preventDefault();
-                            });
-                        }
-                        else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
-                            closeMenu();
-                        }
-                    },300);
+                        openMenu();
+                    },500);
 
                 }
                 else {
-                    if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
-                        isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
-                        isScroll = false;
-
-                        $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
-                        e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
-                        $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                            e.preventDefault();
-                        });
-                    }
-                    else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
-                        closeMenu();
-                    }
+                    openMenu();
                 }
             });
         });
@@ -231,29 +210,11 @@ function openCloseMenu() {
             if (isSearchActive) {
                 closeSearch();
                 setTimeout(function(){
-                    if (!isMenuOpen) {
-                        //çok saçma bir bug yapıyordu, search kapatma fonksiyonuyla kesişip ismenuopen'ı tekrar false a çekiyordu, böyle çözdüm
-                        setTimeout(function(){
-                            isMenuOpen = true
-                        },100);
-                        $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');
-                        e.stopPropagation();
-                    }
-                    else if (isMenuOpen) {
-                        closeMenu();
-                    }
-                },301)
+                    openMenu();
+                },501)
             }
             else {
-                if (!isMenuOpen) {
-                    isMenuOpen = true;
-
-                    $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');
-                    e.stopPropagation();
-                }
-                else if (isMenuOpen) {
-                    closeMenu();
-                }
+                openMenu();
             }
         });
 
@@ -266,8 +227,6 @@ function openCloseMenu() {
         });
     }
 }
-
-
 function closeMenu() {
     if (isMobile) {
         $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('menuOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
@@ -276,67 +235,48 @@ function closeMenu() {
             isMenuOpen = false;
             isScroll = false;
             $(window).unbind("touchmove");
-        }, 300);
+        }, 500);
     }
     else {
         $('.divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('menuOn');
         setTimeout(function () {
             isMenuOpen = false;
             isScroll = false;
-        }, 300);
+        }, 500);
     }
 }
+function openMenu() {
+    if (isMobile) {
+        if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
+            isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
+            isScroll = false;
 
-
-
-
-// misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
-function miscImgLoader() {
-    $('body').find('img[data-sixtyThree]').each(function(){
-        var miscIdentifier = $(this).attr('data-sixtyThree');
-        if (window.devicePixelRatio >= 1.5) {
-            if ($(this).hasClass('white')) {
-                $(this).attr('src','images/@2x/'+miscIdentifier+'-white@2x.png');
-            }
-            else {
-                $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
-            }
+            $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+            e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
+            $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
+                e.preventDefault();
+            });
         }
-        else {
-            if ($(this).hasClass('white')) {
-                $(this).attr('src','images/'+miscIdentifier+'-white.png');
-            }
-            else {
-                $(this).attr('src','images/'+miscIdentifier+'.png');
-            }
-        }
-    });
-}
-
-
-
-
-/*
-// search form ile ilgili fonksiyonlar
-function setupSearchForm() {
-    if ($('nav .divNavIcon').is(':visible')) {
-        if ($('nav .divSearch').is(':empty')) {
-            var searchFormHTML = $('#search').html();
-            $('#search').empty();
-            $('nav .divSearch').html(searchFormHTML);
-            $('nav .divSearch .divSearchContent input').focus();
+        else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
+            closeMenu();
         }
     }
     else {
-        if ($('#search').is(':empty')) {
-            searchFormHTML = $('nav .divSearch').html();
-            $('nav .divSearch').empty();
-            $('#search').html(searchFormHTML);
+        if (!isMenuOpen) {
+            //çok saçma bir bug yapıyordu, search kapatma fonksiyonuyla kesişip ismenuopen'ı tekrar false a çekiyordu, böyle çözdüm
+            setTimeout(function(){
+                isMenuOpen = true
+            },100);
+            $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');
+            e.stopPropagation();
+        }
+        else if (isMenuOpen) {
+            closeMenu();
         }
     }
 }
-*/
 
+// SEARCH OPEN CLOSE FUNCTION
 
 var isSearchActive = false;
 
@@ -347,47 +287,11 @@ function openOrCloseSearch() {
             if (isMenuOpen) {
                 closeMenu();
                 setTimeout(function(){
-                    if (!isSearchActive) {
-                        isSearchActive = true;
-                        $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
-                        if (!isMobile) {
-                            $('#search input').focus();
-                        }
-                        else {
-                            $('.divSearchContent').append('<div class="pseudoCursor">');
-                            $(document).keydown(function (e) {
-                                    $('.pseudoCursor').remove();
-                            });
-                            $('input').on('focus', function(){
-                                    $('.pseudoCursor').remove();
-                            });
-                        }
-                    }
-                    else {
-                        closeSearch();
-                    }
+                    openSearch();
                 },300)
             }
             else {
-                if (!isSearchActive) {
-                    isSearchActive = true;
-                    $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
-                    if (!isMobile) {
-                        $('#search input').focus();
-                    }
-                    else {
-                        $('.divSearchContent').append('<div class="pseudoCursor">');
-                        $(document).keydown(function (e) {
-                                $('.pseudoCursor').remove();
-                        });
-                        $('input').on('focus', function(){
-                                $('.pseudoCursor').remove();
-                        });
-                    }
-                }
-                else {
-                    closeSearch();
-                } 
+                openSearch();
             }
         });
     }
@@ -430,7 +334,7 @@ function openOrCloseSearch() {
                                     else {
                                         closeSearch();
                                     }
-                                },300)
+                                },500)
                             }
                             else {
                                 if (!isSearchActive) {
@@ -455,7 +359,7 @@ function openOrCloseSearch() {
                                 } 
                             }
                         }
-                    },300)
+                    },500)
                 }
                 else {
                         e.stopPropagation();
@@ -464,51 +368,10 @@ function openOrCloseSearch() {
                             if (isMenuOpen) {
                                 closeMenu();
                                 setTimeout(function(){
-                                    if (!isSearchActive) {
-                                        isSearchActive = true;
-                                        $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
-                                            if (!isMobile) {
-                                                $('#search input').focus();
-                                            }
-                                        else {
-                                            $('.divSearchContent').append('<div class="pseudoCursor">');
-                                            $(document).keydown(function (e) {
-                                                    $('.pseudoCursor').remove();
-                                            });
-                                            $('input').on('focus', function(){
-                                                    $('.pseudoCursor').remove();
-                                            });
-                                        }
-                                        $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
-                                            e.preventDefault();
-                                        });
-                                    }
-                                    else {
-                                        closeSearch();
-                                    }
                                 },300)
                             }
                             else {
-                                if (!isSearchActive) {
-                                    e.stopPropagation();
-                                    isSearchActive = true;
-                                    $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
-                                        if (!isMobile) {
-                                            $('#search input').focus();
-                                        }
-                                        else {
-                                            $('.divSearchContent').append('<div class="pseudoCursor">');
-                                            $(document).keydown(function (e) {
-                                                    $('.pseudoCursor').remove();
-                                            });
-                                            $('input').on('focus', function(){
-                                                    $('.pseudoCursor').remove();
-                                            });
-                                        }
-                                }
-                                else {
-                                    closeSearch();
-                                } 
+                                openSearch();
                             }
                         }
                     
@@ -517,8 +380,6 @@ function openOrCloseSearch() {
         });
     }
 }
-
-
 function closeSearch() {
     if (isSearchActive) {
         $('#search, main, footer, .filtersInHeader, .listingFilters').removeClass('topSearch');
@@ -527,15 +388,163 @@ function closeSearch() {
         setTimeout(function () {
             isSearchActive = false;
             $(window).unbind("touchmove");
-        }, 300);
+        }, 500);
+    }
+}
+function openSearch() {
+    if (!isSearchActive) {
+        isSearchActive = true;
+        $('#search, main, footer, .filtersInHeader, .listingFilters').addClass('topSearch');
+            if (!isMobile) {
+                $('#search input').focus();
+            }
+        else {
+            $('.divSearchContent').append('<div class="pseudoCursor">');
+            $(document).keydown(function (e) {
+                    $('.pseudoCursor').remove();
+            });
+            $('input').on('focus', function(){
+                    $('.pseudoCursor').remove();
+            });
+        }
+        $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
+            e.preventDefault();
+        });
+    }
+    else {
+        closeSearch();
     }
 }
 
+// BASKET OPEN CLOSE FUNCTION
+var isBasketOpen = false;//Menünün açık olup olmadığını kontrol etmek için, sayfa başlangıcında kapalı varsayıyoruz.
+var isScroll = false;//kullanıcının scroll amaçlı dokunup dokunmadığını tespit etmek için dokunma işleminin başında scroll amaçlı dokunmadığını varsayıyoruz.
 
-function headerShadow(){
-    $(window).scroll(function(){
-        if (scrollTopVal > 0) {
-            $('header').addClass('headerShadow');
+function openCloseBasket() {
+    if (isMobile) {
+        $('.basketOpen').bind('touchstart', function (e) {//imgNav class'lý div'e dokunma iþlemi baþladýðýnda..
+            isScroll = false;
+            e.stopPropagation();//sayfanýn gerisine eklenen window.touchstart iþleminden muaf tutuyoruz.
+
+            $(this).bind('touchmove', function () {//kullanýcýnýn ekrana dokunduðu parmaðýný hareket ettirmesi durumunda sayfaya scroll amaçlý dokunduðunu deklare ediyoruz.
+                isScroll = true;
+            });
+
+            $(this).one('touchend', function (e) {//kullanýcýnýn parmaðýný kaldýrmasý durumunda..
+                if (isSearchActive || isMenuOpen) {
+                    closeSearch();
+                    closeMenu();
+                    setTimeout(function(){
+                        openBasket();
+                    },500);
+
+                }
+                else {
+                    openBasket();
+                }
+            });
+        });
+
+        $(window).bind('touchstart', function () {//kullanýcýnýn sayfanýn herhangi bir yerine týklamasý durumunda menünün kapanmasýný saðlýyoruz.
+            closeBasket();
+            $(this).bind('touchend');
+        });
+
+        $('#basket').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
+            e.stopPropagation();
+            $('#basket').bind('touchend', function (e) {
+                e.stopPropagation();
+            });
+        });
+    }
+    else {
+        $('.basketOpen').bind('click', function (e) {
+            if (isSearchActive) {
+                closeSearch();
+                setTimeout(function(){
+                    openMenu();
+                },501)
+            }
+            else {
+                openMenu();
+            }
+        });
+
+        $(window).bind('click', function () {
+            closeMenu();
+        });
+
+        $('#basket').bind('click', function (e) {
+            e.stopPropagation();
+        });
+    }
+}
+function closeBasket() {
+    $('.divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');
+    $('head style').remove();
+    setTimeout(function () {
+        isMenuOpen = false;
+        if (isMobile) {
+            isScroll = false;
         };
+    }, 500);
+}
+function openBasket() {
+    if (isMobile) {
+        if (!isMenuOpen && !isScroll) {//eðer menü kapalýysa, ve eylem scroll amaçlý deðilse..
+            isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
+            isScroll = false;
+
+
+            $('head').append('<style>.basketOn{display:block;-webkit-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-moz-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-ms-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-o-transform:translate3d(0px,'+$('#basket').height()+'px,0px);transform: translate3d(0px,'+$('#basket').height()+'px,0px);}</style>');
+            $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');
+            //aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+            e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
+            $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
+                e.preventDefault();
+            });
+        }
+        else if (isMenuOpen && !isScroll) {//eðer menü açýktýysa, ve eylem scroll amaçlý deðilse..
+            closeMenu();
+        }
+    }
+    else {
+        if (!isMenuOpen) {
+            //çok saçma bir bug yapıyordu, search kapatma fonksiyonuyla kesişip ismenuopen'ı tekrar false a çekiyordu, böyle çözdüm
+            setTimeout(function(){
+                isMenuOpen = true
+            },100);
+
+            $('head').append('<style>.basketOn{display:block;-webkit-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-moz-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-ms-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-o-transform:translate3d(0px,'+$('#basket').height()+'px,0px);transform: translate3d(0px,'+$('#basket').height()+'px,0px);}</style>');
+            $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');
+            e.stopPropagation();
+        }
+        else if (isMenuOpen) {
+            closeMenu();
+        }
+    }
+}
+//
+
+// misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
+function miscImgLoader() {
+    $('body').find('img[data-sixtyThree]').each(function(){
+        var miscIdentifier = $(this).attr('data-sixtyThree');
+        if (window.devicePixelRatio >= 1.5) {
+            if ($(this).hasClass('white')) {
+                $(this).attr('src','images/@2x/'+miscIdentifier+'-white@2x.png');
+            }
+            else {
+                $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
+            }
+        }
+        else {
+            if ($(this).hasClass('white')) {
+                $(this).attr('src','images/'+miscIdentifier+'-white.png');
+            }
+            else {
+                $(this).attr('src','images/'+miscIdentifier+'.png');
+            }
+        }
     });
 }

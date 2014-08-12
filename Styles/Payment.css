@@ -149,7 +149,7 @@
 #orderSummary table tr td.tdImg img{
     width:90px;
     height:auto;
-    border:1px solid #f0f0f0;
+    border:1px solid #000;
 }
 
 #orderSummary table tr td div{

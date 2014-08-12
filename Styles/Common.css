@@ -194,10 +194,9 @@ main{
 
 /* PAGE HEADER */
 #pageHeader{
-    position:relative;
+    margin:150px auto 50px auto;
     width:100%;
-    padding:10px 0 10px 40px;
-    border-bottom: 1px solid #e5e5e5;
+    text-align:center;
 }
 /* END - PAGE HEADER */
 
@@ -243,6 +242,10 @@ main{
 
 @media all and (min-width: 1435px) {
     #search .divSearchContent{
+        width:1080px;
+    }
+
+    #pageHeader{
         width:1080px;
     }
 }

@@ -193,10 +193,11 @@ main{
 
 
 /* PAGE HEADER */
-#pageHeader{
-    margin:150px auto 50px auto;
-    width:100%;
-    text-align:center;
+#pageHeader {
+    height: 100px;
+    line-height: 100px;
+    background-color: #f0f0f0;
+    text-align: center;
 }
 /* END - PAGE HEADER */
 
@@ -225,6 +226,9 @@ main{
 
     #search .divSearchContent{
         width:550px;
+    }
+    main {
+        margin: 70px auto 0 auto;
     }
 }
 

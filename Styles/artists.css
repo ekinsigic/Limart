@@ -2,6 +2,16 @@
 
 
 /* ARTISTS */
+.artistsHeader {
+    height: 100px;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.artistsHeader {
+    line-height: 100px;
+}
+
 .artistsHeading {
     height: 400px;
     text-align: center;
@@ -9,14 +19,32 @@
     -webkit-align-items: center;
 }
 
+.artistsArrow {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
 .artistsHeading p {
     margin: 30px auto 0 auto;
     line-height: 1.909;
-    width: 665px;
+    width: 100%;
 }
-.artistsHeading h2 {
+
+.artistsHeadingWrapper {
     width: 665px;
+    left:calc(50% - 332px);
 }
+
+.artistsHeadingWrapper .pText {
+    margin: 30px auto 0 auto;
+    width: 665px;
+    line-height: 1.909;
+}
+
+.artistsHeadingWrapper .buttonA {
+    margin-top: 30px;
+}
+
 #artists {
     margin-top: 130px;
 }
@@ -207,11 +235,27 @@
             #artists .rsArrow.rsArrowRight {
                 margin-left: 93px;
             }
+
+    .artistsHeadingWrapper {
+        width: 90%;
+        left: 5%;
+    }
+
+
+    #artists .divArtists .divArtist {
+        width: 50%;
+    }
 }
 
 /* Screen */
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+
+    .artistsHeadingWrapper {
+        width: 90%;
+        left: 5%;
+    }
+
     #artists .divArtists .divArtist {
         width: 50%;
     }

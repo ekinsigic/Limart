@@ -1,4 +1,11 @@
-﻿
+﻿@font-face {
+	font-family: 'Nova';
+	src: url('../fonts/ProximaNovaLight.eot');
+	src: local('☺'), url('../fonts/ProximaNovaLight.woff') format('woff'), url('../fonts/ProximaNovaLight.ttf') format('truetype'), url('../fonts/ProximaNovaLight.svg') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
 @font-face {
 	font-family: 'Nova';
 	src: url('../fonts/ProximaNovaRegular.eot');

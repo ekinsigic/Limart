@@ -85,7 +85,6 @@
         margin: 30px auto 0 auto;
         width: 665px;
         line-height: 1.909;
-        transform: translate3d();
     }
 
     #welcomeText .buttonA {
@@ -377,6 +376,11 @@
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
+
+        #welcomeText .pText {
+            width: 90%;
+        }
+        
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

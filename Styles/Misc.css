@@ -173,6 +173,16 @@ img[data-sixtythree="logotype-white"] {
     height: 2px;
     background-color: #dd354b;
 }
+
+.divLineG {
+    width: 56px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: calc(50% - 28px);
+    z-index: 1;
+    top: 144px;
+}
 /* END - THIN DESIGN LINES */
 
 

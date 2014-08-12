@@ -37,7 +37,7 @@
 
         #mainEntry .divText .divLineF {
             position: absolute;
-            top: 12px;
+            top: 9px;
             left: 150px;
         }
 
@@ -386,11 +386,11 @@
     }
 
         #mainEntry .divText .slideNo {
-            left: 0;
+            left: -3px;
         }
 
         #mainEntry .divText .divLineF {
-            left: 50px;
+            left: 35px;
         }
 }
 

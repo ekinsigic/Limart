@@ -255,14 +255,25 @@
 
 <section class="sixtyThreeOverlay noDisplay demoWindow">
     <div class="demoArtworkImageContainer">
-        <div class="demoSingleArtworkImageContainer big">
-            <img class="artworkBackgroundImage" src="files/categories/01/welcome.jpg">
-        </div>
-        <div class="demoSingleArtworkImageContainer small">
-            <img class="artworkDemoActualImage" src="files/products/04/pictures/detail.jpg">
+        <div class="demoSingleArtworkImageContainer">
+            <img class="artworkBackgroundImage" data-wallsize="3" src="images/sample-room.jpg">
+            <div class="artworkDemoActualImageCenterer">
+                <img class="artworkDemoActualImage" src="files/products/04/pictures/detail.jpg">
+            </div>
         </div>
     </div>
     <div class="closeWindow"><img data-sixtythree="icon-close"></div>
+    <select id="demoWindowSelector">
+        <option selected="selected">
+            0.50
+        </option>
+        <option>
+            0.75
+        </option>
+        <option>
+            1
+        </option>
+    </select>
 </section>
 
     <!-- SCRIPTS -->

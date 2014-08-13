@@ -180,8 +180,11 @@ function openCloseMenu() {
             });
 
             $(this).one('touchend', function (e) {//kullanýcýnýn parmaðýný kaldýrmasý durumunda..
-                if (isSearchActive || isMenuOpen || isBasketOpen || isUserOpen || isScroll) {
-                    aggregateHeaderClose();
+                if (isSearchActive || isBasketOpen || isUserOpen || isScroll) {
+                    
+                    closeBasket();
+                    closeSearch();
+                    closeUser();
                     setTimeout(function(){
                         openMenu();
                     },500);
@@ -207,8 +210,11 @@ function openCloseMenu() {
     }
     else {
         $('header nav .imgNav').bind('click', function (e) {
-                if (isSearchActive || isMenuOpen || isBasketOpen || isUserOpen) {
-                    aggregateHeaderClose();
+                if (isSearchActive || isBasketOpen || isUserOpen) {
+                    
+                closeBasket();
+                closeSearch();
+                closeUser();
                 setTimeout(function(){
                     openMenu();
                 },501)
@@ -284,8 +290,11 @@ function openOrCloseSearch() {
     if (!isMobile) {
         $('nav .divSearchIcon').bind('click', function (e) {
             e.stopPropagation();
-            if (isSearchActive || isMenuOpen || isBasketOpen || isUserOpen) {
-                aggregateHeaderClose();
+            if (isMenuOpen || isBasketOpen || isUserOpen) {
+                
+                closeBasket();
+                closeMenu();
+                closeUser();
                 setTimeout(function(){
                     openSearch();
                 },300)
@@ -303,14 +312,20 @@ function openOrCloseSearch() {
                 isScroll = true
             });
             $('nav .divSearchIcon').one('touchend',function (e) {
-                if (isSearchActive || isMenuOpen || isBasketOpen || isUserOpen) {
-                    aggregateHeaderClose();
+                if (isMenuOpen || isBasketOpen || isUserOpen) {
+                    
+                    closeBasket();
+                    closeMenu();
+                    closeUser();
                     setTimeout(function(){
                         e.stopPropagation();
                         isScroll = false
                         if (!isScroll) {
-                        if (isSearchActive || isMenuOpen || isBasketOpen || isUserOpen) {
-                                aggregateHeaderClose();
+                        if (isMenuOpen || isBasketOpen || isUserOpen) {
+                                
+                                closeBasket();
+                                closeMenu();
+                                closeUser();
                                 setTimeout(function(){
                                     if (!isSearchActive) {
                                         isSearchActive = true;
@@ -365,8 +380,11 @@ function openOrCloseSearch() {
                         e.stopPropagation();
                         isScroll = false
                         if (!isScroll) {
-                        if (isSearchActive || isMenuOpen || isBasketOpen || isUserOpen) {
-                                aggregateHeaderClose();
+                        if (isMenuOpen || isBasketOpen || isUserOpen) {
+                                
+                                closeBasket();
+                                closeMenu();
+                                closeUser();
                                 setTimeout(function(){
                                 },300)
                             }
@@ -638,10 +656,6 @@ user
 //
 
 function aggregateHeaderClose() {
-    closeBasket();
-    closeMenu();
-    closeSearch();
-    closeUser();
 }
 
 

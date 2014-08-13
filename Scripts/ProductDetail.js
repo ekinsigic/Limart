@@ -82,17 +82,33 @@ function productDetailPopUps() {
 
 
 function demoPreview() {
-    var demobgW = $('.demoSingleArtworkImageContainer.big').width();
-    var demobgH = $('.demoSingleArtworkImageContainer.big').height();
-    var bgProportions =  demobgW / demobgH;
-    $('.demoArtworkImageContainer').height(demobgW / bgProportions);
-
-    $(window).resize(function(){
-        var demobgW = $('.demoSingleArtworkImageContainer.big').width();
-        var demobgH = $('.demoSingleArtworkImageContainer.big').height();
-        demobgW = demobgH * bgProportions;
-        $('.demoSingleArtworkImageContainer.small').height(demobgH/4);
+var artworkSize = $('#demoWindowSelector').val();
+var wallSize = $('.demoSingleArtworkImageContainer .artworkBackgroundImage').attr('data-wallsize');
+console.log(wallSize);
+console.log(artworkSize);
+var finalImageProportions = wallSize / artworkSize
+console.log(finalImageProportions);
+    $('#demoWindowSelector').change(function(){
+        artworkSize = $(this).val();
+        finalImageProportions = wallSize / artworkSize
+        $('.artworkDemoActualImageCenterer').height($('.artworkBackgroundImage').height()/finalImageProportions);
+        $('.artworkDemoActualImage').css({
+            'margin-top': -($('.artworkBackgroundImage').height()/finalImageProportions)/2 + 'px'
+        });
+        console.log(artworkSize);
+    })
+$('.artworkDemoActualImageCenterer').height($('.artworkBackgroundImage').height()/finalImageProportions);
+$('.artworkDemoActualImage').css({
+    'margin-top': -($('.artworkBackgroundImage').height()/finalImageProportions)/2 + 'px'
+});
+$('.artworkDemoActualImageCenterer').width($('.artworkBackgroundImage').width());
+$(window).resize(function(){
+    $('.artworkDemoActualImageCenterer').height($('.artworkBackgroundImage').height()/finalImageProportions);
+    $('.artworkDemoActualImage').css({
+        'margin-top': -($('.artworkBackgroundImage').height()/finalImageProportions)/2 + 'px'
     });
+    $('.artworkDemoActualImageCenterer').width($('.artworkBackgroundImage').width());
+});
 }
 
 

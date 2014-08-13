@@ -59,29 +59,37 @@ section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer {
 	height: 100%;
 	padding: 20px;
 	text-align: center;
+	display: flex;
+	align-items: center;
 }
 section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer {
 	width: 100%;
 	margin: 0 auto;
 }
-section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer.small {
-	height: 25%;
-}
-section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer img {
+
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer .artworkBackgroundImage {
 	width: 100%;
 	max-height: 100%;
 	margin: 0 auto;
 }
-section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer.small img {
+
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer .artworkDemoActualImageCenterer {
+	position: absolute;
+	top: 22%;
+}
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer .artworkDemoActualImageCenterer .artworkDemoActualImage {
 	height: 100%;
 	width: auto;
-	position: absolute;
-	top: -282%;
-	left: 4%;
+	margin: 0 auto;
 }
 
-
-
+section.sixtyThreeOverlay.demoWindow select {
+	position: absolute;
+	left: 50%;
+	width: 150px;
+	margin-left: -75px;
+	top: 23px;
+}
 
 /**************************/
 .closeWindow {

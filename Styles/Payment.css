@@ -101,9 +101,13 @@
         border:1px solid #f00;
     }
 
+        #address .divContent .divAddressContent label{
+            margin-top:10px;
+        }
+
         #address .divContent .divAddressContent .divAddressText {
             float:left;
-            margin:0 0 25px 0;
+            margin:0 0 55px 0;
         }
         /* face */
         #address .divContent .divAddressContent h3{
@@ -132,7 +136,6 @@
         #address .divContent .divAddressContent .saveBtn{
             float:right;
             margin:33px 0 0 0;
-            padding:10px 20px;
         }
 
 
@@ -143,43 +146,71 @@
         #address .divContent .divAddressContent .divBusinessAddressOption,
         #address .divContent .divAddressContent .divBillingAddressOption{
             float:left;
-            padding-left:20px;
-            width:294px;
+            padding-left:15px;
+            width:286px;
             height:200px;
             background-color:#fff;
-            border-right:1px solid #fcfcfc;
+            border:1px solid #f2f2f2;
+        }
+
+        #address .divContent .active{
+            background-color:#f2f2f2 !important;
+            border:1px solid #f8f8f8;
         }
 
         #address .divContent .divAddressContent .divBusinessAddressOption{
             float:right;
             background-color:transparent;
-            border:1px solid #fcfcfc;
         }
 
+
+        /*face*/
         #address .divContent .divAddressContent .divAddressOption h4,
         #address .divContent .divAddressContent .divBusinessAddressOption h4,
         #address .divContent .divAddressContent .divBillingAddressOption h4{
             display:inline-block;
-            margin:20px 0 0 38px;
+            margin:20px 0 0 34px;
+            color:#3d3d3d;
+            font-size:12px;
+            font-weight:500;
         }
 
+        #address .divContent .divAddressContent .divAddressOption .number,
+        #address .divContent .divAddressContent .divBusinessAddressOption .number,
+        #address .divContent .divAddressContent .divBillingAddressOption .number{
+            display:inline-block;
+            margin:0 0 0 5px;
+            color:#3d3d3d;
+            font-size:12px;
+            font-weight:500;
+        }
+        /*face*/
         #address .divContent .divAddressContent .divAddressOption p,
         #address .divContent .divAddressContent .divBusinessAddressOption p,
         #address .divContent .divAddressContent .divBillingAddressOption p{
-            margin:20px 0 0 38px;
-            width:210px;
+            margin:15px 0 0 35px;
+            width:200px;
+            color:#4d4d4d;
+            font-size:11px;
+            font-weight:500;
+            line-height:15px;
+            letter-spacing:0.020em;
         }
 
         #address .divContent .divAddressContent .divAddressOption a,
         #address .divContent .divAddressContent .divBusinessAddressOption a,
         #address .divContent .divAddressContent .divBillingAddressOption a{
             float:right;
-            margin:20px 20px 0 0;
+            margin:25px 20px 0 0;
+            color:#6d6e89;
+            font-size:11px;
+            border:1px solid #f00;
         }
 
 
         #address .divContent .divAddressContent .divBillingAddress{
             margin:50px 0 50px 0;
+            display:none;
         }
 
 

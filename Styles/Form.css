@@ -127,7 +127,7 @@ input[type="checkbox"] {
     margin-right: 10px;
     width: 22px;
     height: 22px;
-    border: 3px solid #000;
+    border: 2px solid #000;
     transition: all 0.2s;
 }
 
@@ -141,7 +141,7 @@ input[type="checkbox"] {
     font-size: 12px;
     font-weight: 500;
     line-height: 21px;
-    letter-spacing: 1px;
+    letter-spacing: 0.040em;
     transition: all 0.2s;
     border:1px solid #f00;
 }
@@ -152,11 +152,11 @@ input[type="checkbox"] {
 
     .labelA:after {
         position: absolute;
-        top: 19px;
-        left: 10px;
+        top: 20px;
+        left: 11px;
         width: 4px;
         height: 4px;
-        border: 3px solid #000;
+        border: 2px solid #000;
         opacity: 0;
         content: '';
         transition: all 0.2s;
@@ -168,11 +168,11 @@ input[type="checkbox"] {
 
 input[type="radio"] {
     display: inline-block;
-    top:6px;
+    top:4px;
     margin-right: 10px;
-    width: 22px;
-    height: 22px;
-    border: 3px solid #000;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000;
     border-radius:50%;
     transition: all 0.2s;
 }
@@ -184,11 +184,12 @@ input[type="radio"] {
 .labelB {
     display: inline-block;
     height: 38px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 21px;
-    letter-spacing: 1px;
+    letter-spacing: 0.010em;
     transition: all 0.2s;
+    border:1px solid #f00;
 }
 
     .labelB:hover:after {
@@ -197,11 +198,11 @@ input[type="radio"] {
 
     .labelB:after {
         position: absolute;
-        top: 15px;
-        left: 11px;
-        width: 4px;
-        height: 4px;
-        border: 3px solid #000;
+        top: 12px;
+        left: 10px;
+        width: 8px;
+        height: 8px;
+        background-color: #000;
         border-radius:50%;
         opacity: 0;
         content: '';

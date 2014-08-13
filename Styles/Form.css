@@ -274,6 +274,24 @@ input[type="radio"] {
 
 
 
+.inputTextC {
+    padding: 0 20px 0 20px !important;
+    width:388px !important;
+    height:45px !important;
+    color: #000 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em !important;
+    background-color: transparent;
+    border: 1px solid #000 !important;
+}
+
+   
+
+
+
+
+
 /* BUTTON STARTS HERE */
 
 /*BLACK BUTTON STYLE */

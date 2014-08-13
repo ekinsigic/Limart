@@ -8,7 +8,8 @@
     width:674px;
 }
 
-#address .divAddress{
+#address .divAddress,
+#address .divPayment{
     float:left;
     padding:26px 0 0 40px;
     width:50%;
@@ -17,40 +18,23 @@
     border-bottom:10px solid #6d6e89;
     cursor:pointer;
 }
-    /* face */
-    #address .divAddress h2{
-        color:#fff;
-        font-size:18px;
-        letter-spacing:2px;
-    }
 
     #address .divAddress .homeAddress{
-        display:block;
         margin:30px 0 5px 0;
-        color:#f2f2f2;
     }
 
     #address .divAddress h3{
         display:inline-block;
-        color:#f2f2f2;
-        font-weight:500;
-        font-size:13px;
     }
 
     #address .divAddress .number{
         display:inline-block;
         margin-left:5px;
-        color:#f2f2f2;
-        font-weight:400;
-        font-size:13px;
     }
 
     #address .divAddress p{
         width:290px;
         margin-top:20px;
-        color:#6d6f80;
-        font-size:12px;
-        font-weight:500;
     }
 
     #address .divAddress .edit{
@@ -63,26 +47,18 @@
 
 #address .divPayment{
     float:right;
-    padding:26px 0 0 40px;
-    width:50%;
     height:236px;
     background-color:#f8f8f9;
-    cursor:pointer;
+    border-bottom:0;
 }
 
     /* face */
     #address .divPayment h2{
         color:#cacaca;
-        font-size:18px;
-        letter-spacing:2px;
     }
 
     #address .divPayment p{
         margin-top:30px;
-        color:#bdbdbd;
-        font-size:12px;
-        font-weight:500;
-        letter-spacing:0.040em;
     }
 
 
@@ -98,29 +74,20 @@
 
     #address .divContent .divAddressContent{
         width:100%;
-        border:1px solid #f00;
-        display:none;
     }
 
         #address .divContent .divAddressContent .divAddressText {
             float:left;
         }
+
         /* face */
         #address .divContent .divAddressContent h3{
             padding:40px 0 0 0;
-            color:#000;
-            font-size:24px;
-            font-weight:400;
-            letter-spacing:0 !important;
         }
 
         #address .divContent .divAddressContent .pDescription{
             width:350px;
             margin:20px 0 55px 0;
-            color:#4d4d4d;
-            font-size:12px;
-            font-weight:500;
-            letter-spacing:0.030em;
         }
 
             #address .divContent .divAddressContent .pDescription .aNewAddress{
@@ -165,14 +132,11 @@
 
 
         /*face*/
-        #address .divContent .divAddressContent .divAddressOption h4,
-        #address .divContent .divAddressContent .divBusinessAddressOption h4,
-        #address .divContent .divAddressContent .divBillingAddressOption h4{
+        #address .divContent .divAddressContent .divAddressOption h4.name,
+        #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
+        #address .divContent .divAddressContent .divBillingAddressOption h4.name{
             display:inline-block;
             margin:20px 0 0 34px;
-            color:#3d3d3d;
-            font-size:12px;
-            font-weight:500;
         }
 
         #address .divContent .divAddressContent .divAddressOption .number,
@@ -180,30 +144,19 @@
         #address .divContent .divAddressContent .divBillingAddressOption .number{
             display:inline-block;
             margin:0 0 0 5px;
-            color:#3d3d3d;
-            font-size:12px;
-            font-weight:500;
         }
-        /*face*/
+
         #address .divContent .divAddressContent .divAddressOption p,
         #address .divContent .divAddressContent .divBusinessAddressOption p,
         #address .divContent .divAddressContent .divBillingAddressOption p{
             margin:15px 0 0 35px;
             width:200px;
-            color:#4d4d4d;
-            font-size:11px;
-            font-weight:500;
             line-height:15px;
-            letter-spacing:0.020em;
         }
-        /*face*/
+      
         #address .divContent .divAddressContent a.icon{
             float:right;
             margin:25px 20px 0 0;
-            color:#6d6e89;
-            font-size:11px;
-            font-weight:500;
-            letter-spacing:0.040em;
         }
 
         #address .divContent .divAddressContent a.icon img{
@@ -231,38 +184,22 @@
 
 #address .divContent .divPaymentContent{
     width:100%;
-    border:1px solid #f00;
 }
 
     #address .divContent .divPaymentContent .divPaymentText{
         float:left;
+        margin:40px 0 0 0;
     }
 
-        /* face */
-        #address .divContent .divPaymentContent h3{
-            padding:40px 0 0 0;
-            color:#000;
-            font-size:24px;
-            font-weight:400;
-            letter-spacing:0 !important;
-        }
-        /*face*/
-        #address .divContent .divPaymentContent .pDescription{
+        #address .divContent .divPaymentContent .divPaymentText .pDescription{
             width:300px;
             margin:20px 0 35px 0;
-            color:#4d4d4d;
-            font-size:12px;
-            font-weight:500;
-            letter-spacing:0.030em;
         }
 
     #address .divContent .divPaymentContent .aInstallments{
         float:right;
         margin-top:50px;
         text-decoration:underline;
-        color:#6d6e89;
-        font-size:12px;
-        font-weight:500;
     }
 
 
@@ -280,30 +217,20 @@
 
         #address .divContent .divPaymentContent .divCartNumber .divBankCard{
             position:absolute;
-            top:10px;
+            top:6px;
             right:0;
-            width:200px;
         }
 
             #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
                 float:left;
-                width:auto;
-                height:20px;
+                margin-left:8px;
             }
 
-        #address .divContent .divPaymentContent .inputCart{
-            width:388px !important;
-            height:45px !important;
-        }
-        /*face*/
         #address .divContent .divPaymentContent .divExpirationDate span,
         #address .divContent .divPaymentContent .divSecurity span{
             display:block;
             margin-bottom:10px;
             padding-left:20px;
-            color:#404040;
-            font-size:12px;
-            font-weight:500;
         }
 
         #address .divContent .divPaymentContent .divSecurity span{
@@ -374,20 +301,15 @@
 #orderSummary{
     float:right;
     width:374px;
-    border:1px solid #f00;
 }
 
     #orderSummary h3.order{
         margin-top:30px;
-        color:#000;
-        font-weight:600;
-        letter-spacing: 1px;
         text-align:center;
     }
 
     #orderSummary table{
         width:100%;
-        border:1px solid #000;
     }
 
         #orderSummary table tr td{
@@ -404,11 +326,21 @@
                 #orderSummary table tr td.tdImg img{
                     width:90px;
                     height:auto;
-                    border:1px solid #f0f0f0;
+                    border: 5px solid #fff;
+                    box-shadow: 0 0 10px #ccc;
                 }
 
+            
             #orderSummary table tr td.tdDescription{
                 padding-left:20px;
+            }
+
+            #orderSummary table tr td.tdDescription h4.productName{
+                line-height:18px;
+            }
+
+            #orderSummary table tr td.tdDescription h5.subName{
+                margin-top:5px;
             }
 
 
@@ -419,10 +351,12 @@
 
     #orderSummary table tr td div .spanPrice{
         float:left;
+        color:#000;
     }
 
     #orderSummary table tr td div .spanTime{
         float:right;
+        color:#000;
     }
 
 
@@ -430,9 +364,15 @@
 #orderSummary .divSubTotal{
     width:100%;
     margin-top:20px;
-    padding-bottom:20px;
+    padding-bottom:10px;
     border-bottom:1px solid #4b4b4b;
 }
+
+    #orderSummary .divSubTotal span{
+        display:block;
+        color:#000;
+        margin-bottom:8px;
+    }
 
     #orderSummary .divSubTotal .divLeft{
         float:left;
@@ -444,22 +384,60 @@
         text-align:right;
     }
 
-    #orderSummary .divSubTotal span{
-        display:block;
+    #orderSummary .divSubTotal .divRight .price{
+        font-size:14px;
     }
+
+    
 
 #orderSummary .divTotal{
     margin-top:30px;
     text-align:center;
 }
 
+    #orderSummary .divTotal p.date{
+        margin-top:10px;
+    }
+
 #orderSummary .divDiscount{
     margin-top:45px;
-    padding:35px 5% 0 5%;
+    padding:30px 5% 0 5%;
     width:100%;
     height:154px;
     background-color:#fafafa;
+    text-align:center;
 }
+
+    #orderSummary .divDiscount .discount{
+        margin:auto;
+        width:250px;
+    }
+
+    #orderSummary .divDiscount .divDiscountInput {
+        margin-top: 20px;
+        width: 100% !important;
+    }
+
+        #orderSummary .divDiscount .divDiscountInput input[type=text] {
+            width: 100% !important;
+            padding-right: 50px !important;
+        }
+
+        #orderSummary .divDiscount .divDiscountInput input[type=image] {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 40px;
+            height: 29px;
+            padding: 10px 17px 10px 0;
+            margin-top: -15px;
+            opacity: 0.3;
+            transition: all 0.5s;
+        }
+
+            #orderSummary .divDiscount .divDiscountInput input[type=image]:hover {
+                opacity: 1;
+            }
 
     #orderSummary .divDiscount .text{
         width:100% !important;
@@ -495,12 +473,9 @@
 
     #address .divAddress{
         padding:20px 0 10px 0;
-        height:60px;
+        height:55px;
         text-align:center;
-    }
-
-    #address .divAddress h2{
-        font-size:10px;
+        border-bottom:5px solid #6d6e89;
     }
 
     #address .divAddress .homeAddress,
@@ -512,38 +487,34 @@
         display:none;
     }
 
-
     #address .divPayment{
-        padding:20px 0 10px 0;
-        height:60px;
+        padding:10px 0 10px 0;
+        height:50px;
         text-align:center;
-    }
-
-    #address .divPayment h2{
-        font-size:10px;
     }
 
     #address .divContent{
         padding:0 0 50px 0;
     }
 
-    #address .divContent .divAddressContent{
-        margin:auto;
-        width:90%;
-    }
+        #address .divContent .divAddressContent{
+            margin:auto;
+            width:90%;
+        }
 
     #address .divContent .divAddressContent .divAddressText{
         width:100%;
-        margin:0 0 15px 0;
+        margin:0;
     }
 
     #address .divContent .divAddressContent .pDescription{
         width:90%;
+        margin:10px 0 0 0;
     }
 
     #address .divContent .divAddressContent .saveBtn{
         float:left;
-        margin-bottom:30px;
+        margin:25px 0 50px 0;
     }
 
 
@@ -554,14 +525,14 @@
     #address .divContent .divAddressContent .divBillingAddressOption{
         float:none;
         padding:0 10px 0 10px;
-        margin-top:20px;
+        margin-bottom:20px;
         width:100%;
         height:200px;
     }
 
-    #address .divContent .divAddressContent .divAddressOption h4,
-    #address .divContent .divAddressContent .divBusinessAddressOption h4,
-    #address .divContent .divAddressContent .divBillingAddressOption h4{
+    #address .divContent .divAddressContent .divAddressOption h4.name,
+    #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
+    #address .divContent .divAddressContent .divBillingAddressOption h4.name{
         margin:10px 0 0 0;
     }
 
@@ -572,17 +543,21 @@
         width:95%;
     }
 
-    #address .divContent .divAddressContent .divAddressOption a,
-    #address .divContent .divAddressContent .divBusinessAddressOption a,
-    #address .divContent .divAddressContent .divBillingAddressOption a{
+    #address .divContent .divAddressContent a.icon{
         margin:20px 10px 0 0;
     }
 
+        #address .divContent .divAddressContent a.icon img{
+        }
+
     #address .divContent .saveBtnA{
+        float:left;
         margin-left:5%;
     }
 
-
+#address .divContent .divAddressContent .divBillingAddressOption{
+    margin:50px 0 0 0;
+}
 
 
 
@@ -597,7 +572,8 @@
     }
 
     #address .divContent .divPaymentContent .pDescription{
-        width:100%;
+        width:90% !important;
+        margin:10px 0 35px 0 !important;
     }
 
     #address .divContent .divPaymentContent .aInstallments{
@@ -605,14 +581,24 @@
         margin:0 0 40px 0;
     }
 
-    #address .divContent .divPaymentContent .divKartName{
-        width:100%;
+    #address .divContent .divPaymentContent .divCartName{
+        width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .divKartNumber .divBankCard{
-        position:relative;
-        margin:0 0 40px 0;
+    #address .divContent .divPaymentContent .inputCart{
+        width:100% !important;
     }
+
+        #address .divContent .divPaymentContent .divCartNumber .divBankCard{
+            position:relative;
+            margin:0 0 40px 0;
+        }
+
+            #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
+                margin:10px 0 0 8px;
+                width:auto;
+                height:30px;
+            }
 
     #address .divContent .divPaymentContent .divExpirationDate{
         float:none;
@@ -622,6 +608,26 @@
 
     #address .divContent .divPaymentContent .divSecurity{
         float:none;
+        width:80px
+    }
+
+    #address .divContent .divPaymentContent .divExpirationDate span,
+    #address .divContent .divPaymentContent .divSecurity span{
+        padding-left:0;
+    }
+
+    #address .divContent .divPaymentContent .divPay{
+        float:left;
+        margin:70px auto 0 auto !important;
+        width:100% !important;
+    }
+
+    #address .divContent .divPaymentContent .divPay .paymentBtn{
+        margin:auto;
+        padding:13px 85px;
+    }
+
+    #address .divContent .divPaymentContent .divPay label{
         width:100%;
     }
 
@@ -640,54 +646,48 @@
 
     #address .divAddress{
         padding:20px 0 10px 0;
-        height:60px;
+        height:55px;
         text-align:center;
-    }
-
-    #address .divAddress h2{
-        font-size:10px;
+        border-bottom:5px solid #6d6e89;
     }
 
     #address .divAddress .homeAddress,
     #address .divAddress h3,
     #address .divAddress .number,
     #address .divAddress p,
-    #address .divAddress .edit{
+    #address .divAddress .edit,
+    #address .divPayment p{
         display:none;
     }
 
-
     #address .divPayment{
-        padding:20px 0 10px 0;
-        height:60px;
+        padding:10px 0 10px 0;
+        height:50px;
         text-align:center;
-    }
-
-    #address .divPayment h2{
-        font-size:10px;
     }
 
     #address .divContent{
         padding:0 0 50px 0;
     }
 
-    #address .divContent .divAddressContent{
-        margin:auto;
-        width:90%;
-    }
+        #address .divContent .divAddressContent{
+            margin:auto;
+            width:90%;
+        }
 
     #address .divContent .divAddressContent .divAddressText{
         width:100%;
-        margin:0 0 15px 0;
+        margin:0;
     }
 
     #address .divContent .divAddressContent .pDescription{
         width:90%;
+        margin:10px 0 0 0;
     }
 
     #address .divContent .divAddressContent .saveBtn{
         float:left;
-        margin-bottom:30px;
+        margin:25px 0 50px 0;
     }
 
 
@@ -698,14 +698,14 @@
     #address .divContent .divAddressContent .divBillingAddressOption{
         float:none;
         padding:0 10px 0 10px;
-        margin-top:20px;
+        margin-bottom:20px;
         width:100%;
         height:200px;
     }
 
-    #address .divContent .divAddressContent .divAddressOption h4,
-    #address .divContent .divAddressContent .divBusinessAddressOption h4,
-    #address .divContent .divAddressContent .divBillingAddressOption h4{
+    #address .divContent .divAddressContent .divAddressOption h4.name,
+    #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
+    #address .divContent .divAddressContent .divBillingAddressOption h4.name{
         margin:10px 0 0 0;
     }
 
@@ -716,30 +716,62 @@
         width:95%;
     }
 
-    #address .divContent .divAddressContent .divAddressOption a,
-    #address .divContent .divAddressContent .divBusinessAddressOption a,
-    #address .divContent .divAddressContent .divBillingAddressOption a{
+    #address .divContent .divAddressContent a.icon{
         margin:20px 10px 0 0;
     }
 
+        #address .divContent .divAddressContent a.icon img{
+        }
+
     #address .divContent .saveBtnA{
+        float:left;
         margin-left:5%;
     }
 
+#address .divContent .divAddressContent .divBillingAddressOption{
+    margin:50px 0 0 0;
+}
+
+
+
     #address .divContent .divPaymentContent{
-        margin:30px auto 0 auto;
+        margin:auto;
         width:90%;
     }
 
+    #address .divContent .divPaymentContent .divPaymentText{
+        float:none;
+        width:100%;
+    }
+
+    #address .divContent .divPaymentContent .pDescription{
+        width:90% !important;
+        margin:10px 0 35px 0 !important;
+    }
+
     #address .divContent .divPaymentContent .aInstallments{
-        float:left;
+        float:none;
         margin:0 0 40px 0;
     }
 
-    #address .divContent .divPaymentContent .divKartNumber .divBankCard{
-        position:relative;
-        margin:0 0 40px 0;
+    #address .divContent .divPaymentContent .divCartName{
+        width:100% !important;
     }
+
+    #address .divContent .divPaymentContent .inputCart{
+        width:100% !important;
+    }
+
+        #address .divContent .divPaymentContent .divCartNumber .divBankCard{
+            position:relative;
+            margin:0 0 40px 0;
+        }
+
+            #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
+                margin:10px 0 0 8px;
+                width:auto;
+                height:30px;
+            }
 
     #address .divContent .divPaymentContent .divExpirationDate{
         float:none;
@@ -749,8 +781,30 @@
 
     #address .divContent .divPaymentContent .divSecurity{
         float:none;
+        width:80px
+    }
+
+    #address .divContent .divPaymentContent .divExpirationDate span,
+    #address .divContent .divPaymentContent .divSecurity span{
+        padding-left:0;
+    }
+
+    #address .divContent .divPaymentContent .divPay{
+        float:left;
+        margin:70px auto 0 auto !important;
+        width:100% !important;
+    }
+
+    #address .divContent .divPaymentContent .divPay .paymentBtn{
+        margin:auto;
+        padding:13px 85px;
+    }
+
+    #address .divContent .divPaymentContent .divPay label{
         width:100%;
     }
+
+
 
     #orderSummary{
         display:none;
@@ -768,26 +822,16 @@
     }
 
     #address .divContent{
-        padding-left:0;
-    }
-
-    #address .divContent .divAddressContent{
-        margin:auto;
+        padding:0 20px 50px 20px;
     }
 
     #address .divContent .saveBtnA{
         margin-left:35px;
     }
 
-
-    #address .divContent .divPaymentContent{
-        margin:0 auto 0 auto;
+    #orderSummary{
+        display:none;
     }
-
-
-     #orderSummary{
-         display:none;
-     }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
@@ -796,20 +840,20 @@
     }
 
     #orderSummary{
-        width:236px;
+        width:276px;
     }
 
-    #orderSummary table tr td.tdImg{
-        width:80px;
-    }
+        #orderSummary table tr td.tdImg{
+            width:80px;
+        }
 
-    #orderSummary table tr td.tdImg img{
-        width:80px;
-    }
+            #orderSummary table tr td.tdImg img{
+                width:80px;
+            }
 
-    #orderSummary table tr td.tdDescription{
-        padding-left:15px;
-    }
+        #orderSummary table tr td.tdDescription{
+            padding-left:15px;
+        }
 }
 
 @media all and (min-width: 1435px) {

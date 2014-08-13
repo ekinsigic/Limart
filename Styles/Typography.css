@@ -424,6 +424,26 @@ a:active {
     color:#000;
 }
 
+.aStyleF:link ,
+.aStyleF:visited{
+    display: table;
+    width: auto;
+    padding: 10px 25px;
+    padding-top: 12px;
+    background: #4b4d63;
+    color: #fff;
+    border: 3px solid #4b4d63;
+    font-weight: 400;
+    text-align: center;
+}
+
+    .aStyleF:hover ,
+    .aStyleF:active {
+        background: #6f7182;
+        color: #fff;
+        border: 3px solid #6f7182;
+    }
+
 
 
 

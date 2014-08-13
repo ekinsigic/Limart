@@ -331,7 +331,6 @@
         }
 
         #basketDetails .btnCompleteOrder {
-            display: block;
             float: initial;
             margin-left: auto;
             margin-right: auto;
@@ -431,7 +430,6 @@
         }
 
         #basketDetails .btnCompleteOrder {
-            display: block;
             float: initial;
             margin-left: auto;
             margin-right: auto;

@@ -290,8 +290,10 @@
         position: absolute;
         right: 2px;
         top: 240px;
-    }
-    .artworkInfo .artworkBuy button{
+    
+        z-index: 2;
+}
+    .artworkInfo .artworkBuy input[type="button"]{
         width: 81px;
     }
     .artworkInfo .artworkSelection {
@@ -556,8 +558,7 @@
     }
     .artworkInfo .artworkPrice{
         margin-top: 54px;
-        padding-bottom: 36px;
-                                                
+        padding-bottom: 36px;           
         opacity: 1;
         text-align: left;
     }
@@ -594,8 +595,7 @@
     }
     .artworkInfo .artworkDetails h5{
         opacity: 0.5;
-        margin-bottom: 11px;
-                                                
+        margin-bottom: 11px;                    
         text-align: left;
     }
 
@@ -623,7 +623,6 @@
         display: block;
         top: 8px;
         opacity: 0.06;
-    
         right: 0px;
         left: auto;
     }

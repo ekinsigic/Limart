@@ -9,7 +9,10 @@ $(document).ready(function () {
 $(window).resize(function(){
     if ($('.topFullWidth h5').css('display') == 'none') {
         carryHeading();
-    };
+    }
+    else {
+        $('.topFullWidth .artworkHeading').remove();
+    }
 });
 function triggerGallerySlider() {
     $('#gallerySlider').royalSlider({
@@ -46,6 +49,33 @@ function carryHeading() {
     $('.topFullWidth').append(itemsToCarry);
 }
 
-function productDetailPopUps() {
-    $('.sixtyThreeOverlay').removeClass('noDisplay');
+function openPopUps(elementSelector) {
+    $(elementSelector).removeClass('noDisplay');
+    setTimeout(function(){
+        $(elementSelector).css({
+            'opacity':'1'
+        })
+    });
+
+    $(elementSelector + ' .closeWindow').click(function(){
+        $(elementSelector).css({
+            'opacity':'0'
+        });
+        setTimeout(function(){
+            $(elementSelector).addClass('noDisplay');
+        },500);
+    })
 }
+
+function productDetailPopUps() {
+    $('.zoomArtwork').click(function(){
+        openPopUps('.zoomWindow');
+    });
+}
+
+
+
+
+
+
+

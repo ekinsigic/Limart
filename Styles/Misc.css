@@ -34,6 +34,14 @@ img[data-sixtythree="arrow-up"] {
     width: 11px;
     height: 24px;
 }
+img[data-sixtythree="arrow-next-short"] {
+    width: 8px;
+    height: 12px;
+}
+img[data-sixtythree="arrow-previous-short"] {
+    width: 8px;
+    height: 12px;
+}
 
 img[data-sixtythree="icon-search"] {
     width: 12px;

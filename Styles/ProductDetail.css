@@ -81,7 +81,7 @@
 }
 
 .artworkInfo .artworkSelection{
-    margin-top: 0px;
+    margin-top: 20px;
     width: 100%;
     float: left;
 }
@@ -187,12 +187,12 @@
     .topFullWidth img {
         float:left;                           
         position: absolute;
-        top: -94px;
+        top: -88px;
         left: 0px;
         opacity: 1;
         margin-left: 0px;
     
-        margin-top: 21px;
+        margin-top: 16px;
 }
     .topFullWidth img:first-child{
         right: 0px;
@@ -261,11 +261,13 @@
         text-align: center;
         line-height: 20px;
         font-size: 18px;
+        z-index: 1;
 }
     .artworkHeading .artworkArtist {
         text-align: right;
         text-align: center;
         top: 5px;
+        z-index: 1;
 }
     .artworkInfo .artworkDetails h5{
         opacity: 0.5;
@@ -287,6 +289,11 @@
     }
     .artworkInfo .artworkBuy button{
         width: 81px;
+    }
+    .artworkInfo .artworkSelection {
+        margin-top: 0px;
+        width: 100%;
+        float: left;
     }
     .divLineG {
         display: none;
@@ -314,17 +321,19 @@
     .artworkHeading img.next {
         display: block;
         top: 8px;
-        opacity: 0.2;
+        opacity: 0.1;
     
         right: 0px;
         left: auto;
+        z-index: 2;
 }
     .artworkHeading img.previous {
         display: block;
         top: 8px;
-        opacity: 0.2;
+        opacity: 0.1;
     
         left: 0px;
+        z-index: 2;
 }
 
 #alternativesText .pText{

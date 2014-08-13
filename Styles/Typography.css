@@ -190,20 +190,21 @@ a:active {
 .faceW {
     color: #4d4f65;
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.396;
 }
 
 .faceX {
-    color: #4d4f65;
-    font-size: 22px;
-    font-weight: 800;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.5;
 }
 
 .faceY {
     color: #dd354b;
     font-size: 28px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .faceZ {
@@ -300,6 +301,14 @@ a:active {
 
 
 
+
+
+
+
+
+
+
+
 .aStyleA:link,
 .aStyleA:visited {
     margin: 0 0 0 31px;
@@ -318,6 +327,10 @@ a:active {
     border-bottom: 2px solid #2f3140;
 }
 
+
+
+
+
 .aStyleB:link,
 .aStyleB:visited {
     text-decoration: none;
@@ -330,6 +343,10 @@ a:active {
 .aStyleB:hover,
 .aStyleB:active {
 }
+
+
+
+
 
 .aStyleC:link,
 .aStyleC:visited {
@@ -344,6 +361,10 @@ a:active {
 .aStyleC:active {
 }
 
+
+
+
+
 .aStyleD:link,
 .aStyleD:visited {
     text-decoration: none;
@@ -356,6 +377,9 @@ a:active {
 .aStyleD:hover,
 .aStyleD:active {
 }
+
+
+
 
 .aStyleE:link,
 .aStyleE:visited {
@@ -399,6 +423,8 @@ a:active {
 .aStyleE:active span {
     color:#000;
 }
+
+
 
 
 
@@ -459,7 +485,6 @@ a:active {
         font-size: 11px;
         letter-spacing: 1.5px;
     }
-
     .faceEE {
         font-size: 20px;
         letter-spacing: 4px;
@@ -484,7 +509,6 @@ a:active {
     .aStyleA:active {
         border-bottom: 0;
     }
-
     .faceEE {
         font-size: 20px;
         letter-spacing: 4px;
@@ -524,7 +548,6 @@ a:active {
         font-size: 20px;
         letter-spacing: 5.5px;
     }
-
     .faceII {
         font-size: 15px;
         letter-spacing: 0.5px;

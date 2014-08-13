@@ -144,8 +144,8 @@
                                 Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                             </p>
 
-                            <a href="#" class="aStyleD delete">SİL</a>
-                            <a href="#" class="aStyleD edit">DÜZENLE</a>
+                            <a href="#" class="aStyleD icon delete"><img data-sixtythree="arrow-next-short-purple"/>SİL</a>
+                            <a href="#" class="aStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                         </div>
 
 
@@ -161,8 +161,8 @@
                                 Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                             </p>
 
-                            <a href="#" class="aStyleD delete">SİL</a>
-                            <a href="#" class="aStyleD edit">DÜZENLE</a>
+                            <a href="#" class="aStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                            <a href="#" class="aStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                         </div>
 
                         <div class="separator"></div>
@@ -175,20 +175,20 @@
 
                             <h3 class="faceD">Fatura Adresi</h3>
                             <p class="pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin. Aradığınız adres yok mu? Yeni bir adres ekleyin
+                                Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin. Aradığınız adres yok mu? <a href="#" class="aNewAddress">Yeni bir adres ekleyin.</a>
                             </p>
 
-                            <div class="divBillingAddressOption">
-                                <label for="sampleC"><input type="checkbox" id="sampleC" />Fatura Adresi</label>
+                            <div class="divBillingAddressOption active">
+                                <label for="sampleB" class="labelB"><input type="radio" id="sampleB" />Fatura Adresi</label>
                                 <div class="separator"></div>
 
-                                <h4>BAMBİ TERLİK</h4><span> - 0212 450 00 00</span>
+                                <h4>BAMBİ TERLİK</h4><span class="number"> - 0212 450 00 00</span>
                                 <p>
                                     Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                 </p>
 
-                                <a href="#" class="aStyleD delete">SİL</a>
-                                <a href="#" class="aStyleD edit">DÜZENLE</a>
+                                <a href="#" class="aStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                <a href="#" class="aStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                             </div>
 
                             <div class="separator"></div>
@@ -199,6 +199,9 @@
 
                         <div class="separator"></div>
                     </div>
+
+
+
 
 
                     <div class="divPaymentContent">
@@ -213,14 +216,15 @@
 
                         <div class="separator"></div>
 
-                        <div class="divKartName">
-                            <span>Kart Üzerindeki İsim</span>
-                            <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" />
+
+
+
+                        <div class="divCartName">
+                            <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="inputTextA inputCart" />
                         </div>
 
-                        <div class="divKartNumber">
-                            <span>Kredi Kartı / Banka Kartı Numarası</span>
-                            <input type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" />
+                        <div class="divCartNumber">
+                            <input type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="inputTextA inputCart" />
 
                             <div class="divBankCard">
                                 <img src="Images/card1.jpg" />
@@ -232,37 +236,37 @@
                             <div class="separator"></div>
                         </div>
 
+
                         <div class="divExpirationDate">
-                            <span>Son Kullanma Tarihi</span>
-                            <select>
-                                <option>Ay</option>
-                                <option>Ay</option>
+                            <span>SON KULLANMA TARİHİ</span>
+                            <select class="selectA selectExpirationDate">
+                                <option>04</option>
+                                <option>05</option>
                             </select>
 
-                            <select>
-                                <option>Yıl</option>
+                            <select class="selectA selectExpirationDate">
+                                <option>18</option>
                             </select>
                             <div class="separator"></div>
                         </div>
 
                         <div class="divSecurity">
-                            <span>Güvenlik</span>
-                            <input type="text" placeholder="GÜVENLİK" />
+                            <span>GÜVENLİK</span>
+                            <input type="text" class="inputTextA inputSecurity" />
                         </div>
-
 
                         <div class="separator"></div>
 
+
+
                         <div class="divPay">
-                            <input type="button" value="ÖDEME YAP" class="paymentBtn" />
+                            <input type="button" value="ÖDEME YAP" class="buttonE paymentBtn" />
 
-                            <label for="sampleC"><input type="checkbox" id="sampleC" />
-                                Ön Bilgilendirme Koşulları'nı ve
-                                Mesafeli Satış Sözleşmesi'ni
-                                    okudum, onaylıyorum
+                            <label for="sampleD" class="labelA labelC">
+                                <input type="checkbox" id="sampleD" class="input" />
+                                <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve
+                                <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum
                             </label>
-
-
 
                         </div>
 
@@ -274,11 +278,18 @@
                     <input type="button" value="KAYDET VE DEVAM ET" class="buttonE saveBtnA" />
 
 
+                    <div class="separator"></div>
                 </div>
             </div>
 
+
+
+
+
             <div id="orderSummary">
-                <h3 class="faceD">Sipariş Özeti</h3>
+                <h3 class="faceJ order">SİPARİŞ ÖZETİ</h3>
+
+                <div class="divLineH"></div>
 
                 <table>
                     <tr>

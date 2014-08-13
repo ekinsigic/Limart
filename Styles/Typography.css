@@ -249,6 +249,55 @@ a:active {
     letter-spacing: 5px;
 }
 
+.faceFF {
+    color: #6d6e89;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.faceGG {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.faceHH {
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.faceII {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.faceJJ {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.faceKK {
+    color: #656565;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.faceLL {
+    color: #a3a3a3;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
 
 
 .aStyleA:link,
@@ -269,10 +318,6 @@ a:active {
     border-bottom: 2px solid #2f3140;
 }
 
-
-
-
-
 .aStyleB:link,
 .aStyleB:visited {
     text-decoration: none;
@@ -285,10 +330,6 @@ a:active {
 .aStyleB:hover,
 .aStyleB:active {
 }
-
-
-
-
 
 .aStyleC:link,
 .aStyleC:visited {
@@ -303,10 +344,6 @@ a:active {
 .aStyleC:active {
 }
 
-
-
-
-
 .aStyleD:link,
 .aStyleD:visited {
     text-decoration: none;
@@ -319,6 +356,50 @@ a:active {
 .aStyleD:hover,
 .aStyleD:active {
 }
+
+.aStyleE:link,
+.aStyleE:visited {
+    display:block;
+    height:30px;
+    width:180px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.aStyleE img {
+    float:left;
+    width:24px !important;
+    height:11px !important;
+    margin-top:9px;
+    opacity:0.25;
+    transition:all 0.5s;
+}
+
+.aStyleE span {
+    display:inline-block;
+    float:right;
+    margin-top:10px;
+    transition:all 0.5s;
+}
+
+.aStyleE:hover,
+.aStyleE:active {
+
+}
+
+.aStyleE:hover img,
+.aStyleE:active img {
+    margin-left:-5px;
+}
+
+.aStyleE:hover span,
+.aStyleE:active span {
+    color:#000;
+}
+
 
 
 
@@ -378,8 +459,12 @@ a:active {
     }
 
     .faceEE {
-        font-size: 14px;
-        letter-spacing: 3px;
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .faceII {
+        font-size: 13px;
     }
 }
 
@@ -399,8 +484,12 @@ a:active {
     }
 
     .faceEE {
-        font-size: 16px;
-        letter-spacing: 2px;
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .faceII {
+        font-size: 13px;
     }
 }
 
@@ -434,9 +523,14 @@ a:active {
         letter-spacing: 5.5px;
     }
 
-    .faceEE {
-        font-size: 18px;
-        letter-spacing: 13px;
+    .faceII {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .faceJJ {
+        font-size: 15px;
+        letter-spacing: 0.5px;
     }
 }
 

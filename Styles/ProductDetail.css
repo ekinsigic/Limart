@@ -1,0 +1,655 @@
+/* Product Detail Özelindeki kısım */
+
+#pageHeader {
+    height:69px
+}
+
+.productDetail {
+    padding-bottom: 90px;
+    
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.breadcrumbsWrapper {
+    width:960px;
+    margin:0 auto;
+}
+
+.product, .artworkImage, .artworkInfo {
+    float:left;
+}
+.artworkImage, .artworkInfo {
+    float:left;
+    width: 50%;
+}
+.breadcrumbs li{
+    float:left;
+    width:auto;
+    line-height:74px;
+    margin-right:8px;
+    letter-spacing:0.6px;
+}
+
+.breadcrumbs li:after {
+    content:'/';
+    margin-left:7px;
+}
+
+.breadcrumbs li:last-child:after {
+    content:'';
+}
+
+.topFullWidth {
+    float:left;
+    width:100%;
+    height:74px;
+}
+
+.topFullWidth h5 {
+    float:left;
+    top:29px;
+}
+
+.topFullWidth img {
+    float:left;
+    top:31px;
+    margin-left:20px;
+}
+
+.artworkImage .artworkImageActual {
+    width:100%;
+    margin-bottom: 12px;
+}
+
+.artworkImage .artworkImageUtilities div {
+    float: right;
+    cursor:pointer;
+}
+
+.artworkImage .artworkImageUtilities div:first-child {
+    float:left;
+}
+
+.artworkHeading img {
+    display: none;
+}
+
+.artworkImage .artworkImageUtilities:last-child {
+}
+
+.artworkImage .artworkImageUtilities .zoomArtwork {
+    margin-right:12px;
+    padding-top:6px
+}
+
+.artworkInfo {
+    padding-left:55px;
+    padding-top:44px;
+}
+
+.artworkInfo .artworkHeading{
+}
+
+.artworkInfo .artworkHeading .artworkName{
+    margin-bottom: 6px;
+    
+}
+
+.artworkInfo .artworkPrice{
+    margin-top: 38px;
+    border-bottom: 2px solid black;
+    padding-bottom: 63px;
+}
+
+.artworkInfo .artworkSelection{
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+}
+.artworkInfo .artworkSelection select {
+    opacity: 1;
+    float: left;
+    margin-right: 10px;
+    height: 43px;
+    width: auto;
+    padding-right: 37px;
+    background-position: 90% 15px;
+}
+
+.artworkInfo .artworkDetails{
+    margin-top: 115px;
+    
+}
+
+.artworkInfo .artworkDetails h5{
+    opacity: 0.5;
+    margin-bottom: 13px;
+}
+
+.artworkInfo .artworkDetails p{
+    font-size: 12px;
+    color: rgb(65, 65, 65);
+}
+
+.artworkInfo .artworkBuy{
+    margin-top: 78px;
+    
+}
+.topFullWidth img:first-child{
+    display: none;
+}
+/* END - Product Detail Özelindeki kısım */
+
+
+
+/* ALTERNATIVES TEXT */
+#alternativesText {
+    padding-top: 108px;
+    text-align: center;
+    padding-bottom: 28px;
+}
+
+    #alternativesText .pText {
+        margin: 30px auto 0 auto;
+        width: 665px;
+        line-height: 1.909;
+    }
+/* END - ALTERNATIVES TEXT */
+
+
+/* GALLERY SLIDER */
+#sectionGallerySlider {
+    margin-top: 100px;
+}
+
+    #sectionGallerySlider .divLineC.lineTop {
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        top: 0;
+    }
+
+    #sectionGallerySlider .divLineD.lineTop {
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        top: -13px;
+    }
+
+    #sectionGallerySlider .divLineC.lineBottom {
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        bottom: 0;
+    }
+
+    #sectionGallerySlider .divLineE.lineBottom {
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        bottom: -57px;
+    }
+/* END - GALLERY SLIDER */
+
+@media all and (max-width: 400px) {
+
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:90%;
+        margin:0 auto;
+        text-align: center;
+    }
+    .breadcrumbs{
+        text-align: center;
+    }
+    .breadcrumbs ul{
+        margin-right: -7px !important;
+        display: inline-block;
+    
+        float: right;
+}
+    .breadcrumbs ul li:last-child{
+        display: none;
+    }
+    .artworkImage, .artworkInfo {
+        float:left;
+        width: 100%;
+    }
+
+    .topFullWidth {
+        float: none;
+        margin-bottom: 20px;
+    }
+    .topFullWidth h5 {
+        display: none;
+    }
+
+    .topFullWidth img {
+        float:left;                           
+        position: absolute;
+        top: -94px;
+        left: 0px;
+        opacity: 1;
+        margin-left: 0px;
+    
+        margin-top: 21px;
+}
+    .topFullWidth img:first-child{
+        right: 0px;
+        left: auto;
+        display: block;
+    }
+
+    .artworkImage .artworkImageActual {
+        width:100%;
+        padding-bottom: 19px;
+
+        border-bottom: 1px solid #D8D8D8;
+        margin-bottom: 9px;
+    }
+
+    .artworkInfo {
+        padding-left: 0px;
+    }
+    .artworkInfo .artworkPrice{
+        margin-top: 54px;
+        padding-bottom: 36px;
+                                                
+        opacity: 1;
+        text-align: left;
+    }
+
+    .artworkInfo .artworkSelection{
+        float: right;              
+    }
+    .artworkInfo .artworkSelection select {     
+        float: right;
+        position: absolute;
+        right: 0px;
+        top: -94px;
+    }
+    .artworkInfo .artworkSelection select:last-child {
+        top: 58px;
+    }
+    .artworkInfo .artworkSelection select:first-child {
+        right: 137px;
+    }
+
+    .artworkInfo .artworkDetails{
+        margin-top: 49px;                                              
+    }
+    .topFullWidth .artworkHeading {
+        margin-top: 35px;
+
+    }
+    .artworkHeading .artworkName {
+        letter-spacing: 3px;
+        margin-bottom: 6px;
+    
+        text-align: right;
+        text-align: center;
+        line-height: 21px;
+        font-size: 18px;
+}
+    .artworkHeading .artworkArtist {
+        text-align: right;
+        text-align: center;
+}
+    .artworkInfo .artworkDetails h5{
+        opacity: 0.5;
+        margin-bottom: 11px;
+                                                
+        text-align: left;
+    }
+
+    .artworkInfo .artworkDetails p{
+        width: 50%;
+        text-align: left;
+        line-height: 20px;
+    }
+
+    .artworkInfo .artworkBuy{
+        position: absolute;
+        right: 0px;
+        top: 216px;
+    }
+    .divLineG {
+        display: none;
+    }    
+
+    #alternativeText {
+        padding-top: 100px;
+    }
+
+        #alternativeText .mainHeader {
+            margin: auto;
+            width: 90%;
+            line-height: 30px;
+        }
+
+        #alternativeText .pText {
+            width: 90%;
+        }
+
+    .artworkHeading img {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    }
+    .artworkHeading img.next {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    
+        right: 0px;
+        left: auto;
+}
+    .artworkHeading img.previous {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    
+        left: 0px;
+}
+}
+
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:90%;
+        margin:0 auto;
+    }
+    .artworkImage, .artworkInfo {
+        float:left;
+        width: 100%;
+    }
+    .breadcrumbs{
+        text-align: center;
+    }
+    .breadcrumbs ul{
+        margin:0 auto;
+        display: inline-block;
+    }
+
+    .artworkImage, .artworkInfo {
+        float:left;
+        width: 100%;
+    }
+
+    .topFullWidth {
+        float: none;
+        margin-bottom: 21px;
+    }
+    .topFullWidth h5 {
+
+        display: none;
+    }
+
+    .topFullWidth img {
+        float:left;
+                                                
+        position: absolute;
+        top: -94px;
+        left: 0px;
+        opacity: 0.4;
+        margin-left: 0px;
+    }
+    .topFullWidth img:first-child{
+        right: 0px;
+        left: auto;
+        display: block;
+    }
+
+    .artworkImage .artworkImageActual {
+        width:100%;
+        padding-bottom: 19px;
+
+        border-bottom: 1px solid #D8D8D8;
+        margin-bottom: 9px;
+    }
+
+    .artworkInfo {
+        padding-left: 0px;
+    }
+    .artworkInfo .artworkPrice{
+        margin-top: 54px;
+        padding-bottom: 36px;
+                                                
+        opacity: 1;
+        text-align: left;
+    }
+
+    .artworkInfo .artworkSelection{
+        float: right;              
+    }
+    .artworkInfo .artworkSelection select {     
+        float: right;
+        position: absolute;
+        right: 0px;
+        top: -94px;
+    }
+    .artworkInfo .artworkSelection select:last-child {
+        top: 58px;
+    }
+    .artworkInfo .artworkSelection select:first-child {
+        right: 137px;
+    }
+
+    .artworkInfo .artworkDetails{
+        margin-top: 49px;                                              
+    }
+    .topFullWidth .artworkHeading {
+        margin-top: 56px;
+
+    }
+    .artworkHeading .artworkName {
+        letter-spacing: 3px;
+        margin-bottom: 6px;
+    }
+    .artworkInfo .artworkDetails h5{
+        opacity: 0.5;
+        margin-bottom: 11px;
+                                                
+        text-align: left;
+    }
+
+    .artworkInfo .artworkDetails p{
+        width: 50%;
+        text-align: left;
+        line-height: 20px;
+    }
+
+    .artworkInfo .artworkBuy{
+        position: absolute;
+        right: 0px;
+        top: 216px;
+    }
+    .divLineG {
+        display: none;
+    }
+
+    #alternativeText {
+        padding-top: 100px;
+    }
+
+        #alternativeText .mainHeader {
+            margin: auto;
+            width: 90%;
+            line-height: 30px;
+        }
+
+        #alternativeText .pText {
+            width: 90%;
+        }
+
+    .artworkHeading img {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    }
+    .artworkHeading img.next {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    
+        right: 0px;
+        left: auto;
+}
+    .artworkHeading img.previous {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    
+        left: 0px;
+}
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+
+
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:670px;
+        margin:0 auto;
+        text-align: center;
+    }
+    .breadcrumbs{
+        text-align: center;
+    }
+    .breadcrumbs ul{
+        margin:0 auto;
+        display: inline-block;
+    }
+    .artworkImage, .artworkInfo {
+        float:left;
+        width: 100%;
+    }
+
+    .topFullWidth {
+        float: none;
+        margin-bottom: 21px;
+    }
+    .topFullWidth h5 {
+
+        display: none;
+    }
+
+    .topFullWidth img {
+        float:left;
+                                                
+        position: absolute;
+        top: -94px;
+        left: 0px;
+        opacity: 0.4;
+        margin-left: 0px;
+    }
+    .topFullWidth img:first-child{
+        right: 0px;
+        left: auto;
+        display: block;
+    }
+    .topFullWidth img {
+        display:block;
+    }
+
+    .artworkImage .artworkImageActual {
+        width:100%;
+        padding-bottom: 19px;
+
+        border-bottom: 1px solid #D8D8D8;
+        margin-bottom: 9px;
+    }
+
+    .artworkInfo {
+        padding-left: 0px;
+    }
+    .artworkInfo .artworkPrice{
+        margin-top: 54px;
+        padding-bottom: 36px;
+                                                
+        opacity: 1;
+        text-align: left;
+    }
+
+    .artworkInfo .artworkSelection{
+        float: right;              
+    }
+    .artworkInfo .artworkSelection select {     
+        float: right;
+        position: absolute;
+        right: 0px;
+        top: -94px;
+    }
+    .artworkInfo .artworkSelection select:last-child {
+        top: 58px;
+    }
+    .artworkInfo .artworkSelection select:first-child {
+        right: 137px;
+    }
+
+    .artworkInfo .artworkDetails{
+        margin-top: 49px;                                              
+    }
+    .topFullWidth .artworkHeading {
+        margin-top: 56px;
+
+    }
+    .artworkHeading .artworkName {
+        letter-spacing: 3px;
+        margin-bottom: 6px;
+    }
+    .artworkInfo .artworkDetails h5{
+        opacity: 0.5;
+        margin-bottom: 11px;
+                                                
+        text-align: left;
+    }
+
+    .artworkInfo .artworkDetails p{
+        width: 50%;
+        text-align: left;
+        line-height: 20px;
+    }
+
+    .artworkInfo .artworkBuy{
+        position: absolute;
+        right: 0px;
+        top: 216px;
+    }
+    .divLineG {
+        display: none;
+    }
+
+    .artworkHeading img {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    }
+    .artworkHeading img.next {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    
+        right: 0px;
+        left: auto;
+}
+    .artworkHeading img.previous {
+        display: block;
+        top: 8px;
+        opacity: 0.2;
+    
+        left: 0px;
+}
+
+}
+
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:960px;
+        margin:0 auto;
+    }
+}
+
+@media all and (min-width: 1435px) {
+    .breadcrumbsWrapper, .divDetailWrapper {
+        widt

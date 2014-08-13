@@ -1,198 +1,257 @@
-﻿input, 
+﻿input,
 select,
 select option,
 button,
 label,
-textarea{
-    font-family:'Nova';
-}
-
-input[type="text"]{
-    display:block;
-    width:186px;
-    height:40px;
-    background-color: transparent;
-    padding:0 15px 0 15px;
-    border:3px solid #000;
-    color:#000;
-    line-height: 15px;
-    font-size:14px;
-    letter-spacing: 1px;
-    font-weight:500;
-    transition:all 0.2s, width 0.2s;
-    padding-left: 15px;
-    opacity: 0.2;
-}
-input[type="text"]:focus{
-    opacity: 1;
-    width: 200px;
-}
-
-
-
-
-/* DEFAULT BUTTON STYLE */
-input[type="button"],
-button{
-    padding: 10px 35px;
-    padding-top: 12px;
-    color: #000;
-    font-size: 14px;
-    font-weight: 500;
+textarea {
     font-family: 'Nova';
-    line-height: 12px;
-    letter-spacing: 1.3px;
-    border: 3px solid;
-    box-sizing:content-box;
-    background:transparent;
-    cursor: pointer;
-    transition:all 0.2s;
 }
 
-input[type="button"]:hover,
-button:hover{
-    color: #fff;
-    background: #000;
-    border: 3px solid #000;
-}
+    input[type="text"] {
+        display: block;
+        width: 186px;
+        height: 40px;
+        background-color: transparent;
+        padding: 0 15px 0 15px;
+        border: 3px solid #000;
+        color: #000;
+        line-height: 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        transition: all 0.2s, width 0.2s;
+        padding-left: 15px;
+        opacity: 0.2;
+    }
 
-input[type="button"]:active,
-button:active{
-    background: #404040 !important;
-    border: 3px solid #404040 !important;
-}
+        input[type="text"]:focus {
+            opacity: 1;
+            width: 200px;
+        }
 
 
-input::-webkit-input-placeholder { /* WebKit browsers */
-    position: relative;
-    top: 2px;
-    color:#000;
-}
 
-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:#000;
-}
 
-input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:#000;
-}
+    /* DEFAULT BUTTON STYLE */
+    input[type="button"],
+    button {
+        padding: 10px 35px;
+        padding-top: 12px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Nova';
+        line-height: 12px;
+        letter-spacing: 1.3px;
+        border: 3px solid;
+        box-sizing: content-box;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
 
-input:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:#000;
-}
+        input[type="button"]:hover,
+        button:hover {
+            color: #fff;
+            background: #000;
+            border: 3px solid #000;
+        }
 
-select{
-    display:block;
-    width:100px;
-    height:40px;
+        input[type="button"]:active,
+        button:active {
+            background: #404040 !important;
+            border: 3px solid #404040 !important;
+        }
+
+
+    input::-webkit-input-placeholder { /* WebKit browsers */
+        position: relative;
+        top: 2px;
+        color: #000;
+    }
+
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #000;
+    }
+
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #000;
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #000;
+    }
+
+select {
+    display: block;
+    width: 100px;
+    height: 40px;
     background: url(../images/arrow-down-form-select.png);
     background-repeat: no-repeat;
     background-position: 90% center;
-    padding:0 15px 0 15px;
-    border:3px solid #000;
-    color:#000;
+    padding: 0 15px 0 15px;
+    border: 3px solid #000;
+    color: #000;
     line-height: 15px;
-    font-size:14px;
+    font-size: 14px;
     letter-spacing: 1px;
-    font-weight:500;
-    transition:all 0.2s, width 0.2s;
+    font-weight: 500;
+    transition: all 0.2s, width 0.2s;
     padding-left: 15px;
     opacity: 0.2;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-select:after {
-    content: url(../images/arrow-down-form-select.png);
-    display: block;
-    position: absolute;
-    right: 3px;
+
+    select:after {
+        content: url(../images/arrow-down-form-select.png);
+        display: block;
+        position: absolute;
+        right: 3px;
+    }
+
+textarea {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
 }
 
-textarea{
-    width:200px;
-    height:100px;
-    padding:10px;
-    border:1px solid #f2f2f2;
-}
 
 
-input[type="checkbox"]{
+
+
+input[type="checkbox"] {
+    display: inline-block;
+    top:10px;
+    margin-right: 10px;
     width: 22px;
     height: 22px;
-    top: 6px;
     border: 3px solid #000;
-    margin-right: 10px;
     transition: all 0.2s;
 }
 
-input[type="checkbox"]:checked{
-    background-color:#000;
-}
+    input[type="checkbox"]:checked {
+        background-color: #000;
+    }
 
-label{
-    top: -6px;
+.labelA {
     display: inline-block;
-    height: 21px;
+    height: 38px;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 21px;
-    font-size:12px;
-    font-weight:500;
-    letter-spacing:1px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    border:1px solid #f00;
+}
+
+    .labelA:hover:after {
+        opacity: 1;
+    }
+
+    .labelA:after {
+        position: absolute;
+        top: 19px;
+        left: 10px;
+        width: 4px;
+        height: 4px;
+        border: 3px solid #000;
+        opacity: 0;
+        content: '';
+        transition: all 0.2s;
+    }
+
+
+
+
+
+input[type="radio"] {
+    display: inline-block;
+    top:6px;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #000;
+    border-radius:50%;
     transition: all 0.2s;
 }
 
-label:hover:after {
-    opacity: 1;
-}
+    input[type="radio"]:checked {
+        background-color: #000;
+    }
 
-label:after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 6px;
-    width: 4px;
-    height: 4px;
-    border: 3px solid;
-    opacity: 0;
+.labelB {
+    display: inline-block;
+    height: 38px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 1px;
     transition: all 0.2s;
 }
+
+    .labelB:hover:after {
+        opacity: 1;
+    }
+
+    .labelB:after {
+        position: absolute;
+        top: 15px;
+        left: 11px;
+        width: 4px;
+        height: 4px;
+        border: 3px solid #000;
+        border-radius:50%;
+        opacity: 0;
+        content: '';
+        transition: all 0.2s;
+    }
+
+
+
+
 
 
 /* Customized */
-.inputTextA{
-    padding:0 40px 0 20px !important;
-    width:205px !important;
-    height:36px !important;
-    color:#231f20 !important;
-    font-size:12px !important;
-    font-weight:400 !important;
-    letter-spacing:0.05em !important;
-    background-color:transparent;
-    border:1px solid #e5e5e5 !important;
+.inputTextA {
+    padding: 0 40px 0 20px !important;
+    width: 205px !important;
+    height: 36px !important;
+    color: #231f20 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em !important;
+    background-color: transparent;
+    border: 1px solid #000 !important;
 }
 
-.inputTextA::-webkit-input-placeholder { /* WebKit browsers */
-}
-.inputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-}
-.inputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
-}
-.inputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
-}
+    .inputTextA::-webkit-input-placeholder { /* WebKit browsers */
+    }
+
+    .inputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    }
+
+    .inputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
+    }
+
+    .inputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
+    }
 
 
 
 
-.inputTextB{
-    padding:0 0 0 20px !important;
-    width:205px !important;
-    height:36px !important;
-    color:#231f20 !important;
-    font-size:12px !important;
-    font-weight:400 !important;
-    letter-spacing:0.05em !important;
-    text-align:right;
-    background-color:transparent;
-    border:1px solid transparent !important;
+.inputTextB {
+    padding: 0 0 0 20px !important;
+    width: 205px !important;
+    height: 36px !important;
+    color: #231f20 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em !important;
+    text-align: right;
+    background-color: transparent;
+    border: 1px solid transparent !important;
 }
 
 
@@ -202,20 +261,23 @@ label:after {
 /* BUTTON STARTS HERE */
 
 /*BLACK BUTTON STYLE */
-.buttonA{
+input[type="button"].buttonA,
+button.buttonA {
     color: #000;
 }
 
-.buttonA:hover{
-    background: #000;
-    color: #fff;
-    border: 3px solid #000;
-}
+    input[type="button"].buttonA:hover,
+    button.buttonA:hover {
+        background: #000;
+        color: #fff;
+        border: 3px solid #000;
+    }
 
-.buttonA:active{
-    background: #404040 !important;
-    border: 3px solid #404040 !important;
-}
+    input[type="button"].buttonA:active,
+    button.buttonA:active {
+        background: #404040 !important;
+        border: 3px solid #404040 !important;
+    }
 /*END BLACK BUTTON STYLE*/
 
 
@@ -223,18 +285,23 @@ label:after {
 
 
 /*PURPLE BUTTON STYLE */
-.buttonB{
+input[type="button"].buttonB,
+button.buttonB {
     color: #4b4d63;
 }
-.buttonB:hover{
-    background: #4b4d63;
-    color: #fff;
-    border: 3px solid #4b4d63;
-}
-.buttonB:active{
-    background: #6f7182 !important;
-    border: 3px solid #6f7182 !important;
-}
+
+    input[type="button"].buttonB:hover,
+    button.buttonB:hover {
+        background: #4b4d63;
+        color: #fff;
+        border: 3px solid #4b4d63;
+    }
+
+    input[type="button"].buttonB:active,
+    button.buttonB:active {
+        background: #6f7182 !important;
+        border: 3px solid #6f7182 !important;
+    }
 /* END PURPLE BUTTON STYLE */
 
 
@@ -242,37 +309,23 @@ label:after {
 
 
 /*RED BUTTON STYLE */
-.buttonB{
-    color: #4b4d63;
-}
-.buttonB:hover{
-    background: #4b4d63;
-    color: #fff;
-    border: 3px solid #4b4d63;
-}
-.buttonB:active{
-    background: #6f7182 !important;
-    border: 3px solid #6f7182 !important;
-}
-/* END RED BUTTON STYLE */
-
-
-
-
-
-/*RED BUTTON STYLE */
-.buttonC{
+input[type="button"].buttonC,
+button.buttonC {
     color: #dd354b;
 }
-.buttonC:hover{
-    background: #dd354b;
-    color: #fff;
-    border: 3px solid #dd354b;
-}
-.buttonC:active{
-    background: #e0495d !important;
-    border: 3px solid #e0495d !important;
-}
+
+    input[type="button"].buttonC:hover,
+    button.buttonC:hover {
+        background: #dd354b;
+        color: #fff;
+        border: 3px solid #dd354b;
+    }
+
+    input[type="button"].buttonC:active,
+    button.buttonC:active {
+        background: #e0495d !important;
+        border: 3px solid #e0495d !important;
+    }
 /* SMALL RED BUTTON STYLE */
 
 
@@ -280,7 +333,8 @@ label:after {
 
 
 /* SMALL BUTTON STYLES */
-.buttonD{
+input[type="button"].buttonD,
+button.buttonD {
     background: #000;
     color: #fff;
     border: 3px solid #000;
@@ -288,13 +342,20 @@ label:after {
     padding: 10px 25px;
     padding-top: 12px;
 }
-.buttonD:hover {
-    background: #404040;
-    color: #fff;
-    border: 3px solid #404040;
-}
 
-.buttonE {
+    input[type="button"].buttonD:hover,
+    button.buttonD {
+        background: #404040;
+        color: #fff;
+        border: 3px solid #404040;
+    }
+
+
+
+
+
+input[type="button"].buttonE,
+button.buttonE {
     background: #4b4d63;
     color: #fff;
     border: 3px solid #4b4d63;
@@ -303,13 +364,19 @@ label:after {
     padding-top: 12px;
 }
 
-.buttonE:hover {
-    background: #6f7182;
-    color: #fff;
-    border: 3px solid #6f7182;
-}
+    input[type="button"].buttonE:hover,
+    button.buttonE {
+        background: #6f7182;
+        color: #fff;
+        border: 3px solid #6f7182;
+    }
 
-.buttonF {
+
+
+
+
+input[type="button"].buttonF,
+button.buttonF {
     background: #dd354b;
     color: #fff;
     border: 3px solid #dd354b;
@@ -317,58 +384,60 @@ label:after {
     padding: 10px 25px;
     padding-top: 12px;
 }
-.buttonF:hover {
-    background: #e0495d;
-    color: #fff;
-    border: 3px solid #e0495d;
-}
 
+    input[type="button"].buttonF:hover,
+    button.buttonF {
+        background: #e0495d;
+        color: #fff;
+        border: 3px solid #e0495d;
+    }
 /* END SMALL BUTTON STYLES */
 
 /* BUTTON ENDS HERE */
 
 
 
-.selectStyleA{
-
-}
-
-.selectStyleA option{
-
-}
-
-.selectStyleB{
-
-}
-
-.selectStyleB option{
-
-}
-
-
-
-
-
-.textareaStyleA{
-
-}
-
-.textareaStyleB{
-
+.selectA {
+    display: block;
+    width: 70px;
+    height: 40px;
+    background: url(../images/arrow-down-form-select.png);
+    background-repeat: no-repeat;
+    background-position: 45px center;
+    padding: 0 15px 0 15px;
+    border: 1px solid #000;
+    color: #000;
+    line-height: 15px;
+    font-size: 13px;
+    letter-spacing: 0;
+    font-weight: 400;
+    transition: all 0.2s, width 0.2s;
+    padding-left: 15px;
+    opacity: 0.2;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 
 
 
-
-.labelStyleA{
-    display: inline-block; 
-    padding:0 0 0 25px;
-    color:#a3a3a3;
+.textareaStyleA {
 }
 
-.labelStyleB{
+.textareaStyleB {
+}
 
+
+
+
+
+.labelStyleA {
+    display: inline-block;
+    padding: 0 0 0 25px;
+    color: #a3a3a3;
+}
+
+.labelStyleB {
 }
 
 
@@ -379,36 +448,50 @@ label:after {
 
 /* Screen */
 @media all and (max-width: 400px) {
-    header nav .divMailingContent .inputTextA{
-        padding:0 60px 0 20px !important;
-        width:240px !important;
-        height:46px !important;
-        font-size:13px !important;
-        letter-spacing:0.09em !important;
-        opacity:1 !important;
+    header nav .divMailingContent .inputTextA {
+        padding: 0 60px 0 20px !important;
+        width: 240px !important;
+        height: 46px !important;
+        font-size: 13px !important;
+        letter-spacing: 0.09em !important;
+        opacity: 1 !important;
+    }
+
+    .selectA {
+        width: 60px;
+        background-position: 40px center;
     }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    header nav .divMailingContent .inputTextA{
-        padding:0 60px 0 20px !important;
-        width:240px !important;
-        height:46px !important;
-        font-size:13px !important;
-        letter-spacing:0.09em !important;
-        opacity:1 !important;
+    header nav .divMailingContent .inputTextA {
+        padding: 0 60px 0 20px !important;
+        width: 240px !important;
+        height: 46px !important;
+        font-size: 13px !important;
+        letter-spacing: 0.09em !important;
+        opacity: 1 !important;
     }
-    
+
+    .selectA {
+        width: 60px;
+        background-position: 40px center;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    header nav .divMailingContent .inputTextA{
-        padding:0 60px 0 20px !important;
-        width:270px !important;
-        height:52px !important;
-        font-size:13px !important;
-        letter-spacing:0.09em !important;
-        opacity:1 !important;
+    header nav .divMailingContent .inputTextA {
+        padding: 0 60px 0 20px !important;
+        width: 270px !important;
+        height: 52px !important;
+        font-size: 13px !important;
+        letter-spacing: 0.09em !important;
+        opacity: 1 !important;
+    }
+
+    .selectA {
+        width: 60px;
+        background-position: 40px center;
     }
 }
 

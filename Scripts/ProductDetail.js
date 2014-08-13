@@ -71,10 +71,29 @@ function productDetailPopUps() {
     $('.zoomArtwork').click(function(){
         openPopUps('.zoomWindow');
     });
+
+    $('.roomViewArtwork').click(function(){
+        openPopUps('.demoWindow');
+        setTimeout(function(){
+            demoPreview();
+        },50)
+    });
 }
 
 
+function demoPreview() {
+    var demobgW = $('.demoSingleArtworkImageContainer.big').width();
+    var demobgH = $('.demoSingleArtworkImageContainer.big').height();
+    var bgProportions =  demobgW / demobgH;
+    $('.demoArtworkImageContainer').height(demobgW / bgProportions);
 
+    $(window).resize(function(){
+        var demobgW = $('.demoSingleArtworkImageContainer.big').width();
+        var demobgH = $('.demoSingleArtworkImageContainer.big').height();
+        demobgW = demobgH * bgProportions;
+        $('.demoSingleArtworkImageContainer.small').height(demobgH/4);
+    });
+}
 
 
 

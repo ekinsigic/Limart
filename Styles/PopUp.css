@@ -11,24 +11,79 @@ section.sixtyThreeOverlay {
 }
 
 section.sixtyThreeOverlay.noDisplay {
-	display: none;
+	display: none !important; 
 }
 
-.zoomWindow {
+section.sixtyThreeOverlay.zoomWindow {
 	background-color: rgba(255,255,255,0.95);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-align-items:center;
+	-moz-align-items:center;
+	-ms-align-items:center;
+	-o-align-items:center;
+	align-items:center;
+}
+section.sixtyThreeOverlay.demoWindow {
+	background-color: rgba(255,255,255,0.95);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-align-items:center;
+	-moz-align-items:center;
+	-ms-align-items:center;
+	-o-align-items:center;
+	align-items:center;
 }
 
-.zoomedArtworkImageContainer {
+section.sixtyThreeOverlay.zoomWindow .zoomedArtworkImageContainer {
 	width: 100%;
 	padding: 100px;
 	text-align: center;
 }
-.zoomedArtworkImageActual {
+section.sixtyThreeOverlay.zoomWindow .zoomedArtworkImageContainer .zoomedArtworkImageActual {
 	max-width: 100%;
 	max-height: 100%;
 	margin: 0 auto;
 }
 
+/***********************/
+
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	text-align: center;
+}
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer {
+	width: 100%;
+	margin: 0 auto;
+}
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer.small {
+	height: 25%;
+}
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer img {
+	width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer.small img {
+	height: 100%;
+	width: auto;
+	position: absolute;
+	top: -282%;
+	left: 4%;
+}
+
+
+
+
+/**************************/
 .closeWindow {
 	position: absolute;
 	right: 30px;
@@ -41,7 +96,7 @@ section.sixtyThreeOverlay.noDisplay {
 
 /* Screen */
 @media all and (max-width: 400px) {
-	.zoomedArtworkImageContainer {
+	section.sixtyThreeOverlay.zoomWindow .zoomedArtworkImageContainer  {
 		width: 100%;
 		padding: 5%;
 		text-align: center;
@@ -54,7 +109,7 @@ section.sixtyThreeOverlay.noDisplay {
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-	.zoomedArtworkImageContainer {
+	section.sixtyThreeOverlay.zoomWindow .zoomedArtworkImageContainer  {
 		width: 100%;
 		padding: 5%;
 		text-align: center;
@@ -67,7 +122,7 @@ section.sixtyThreeOverlay.noDisplay {
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-	.zoomedArtworkImageContainer {
+	section.sixtyThreeOverlay.zoomWindow .zoomedArtworkImageContainer  {
 		width: 100%;
 		padding: 5%;
 		text-align: center;

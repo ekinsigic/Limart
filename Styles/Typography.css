@@ -446,7 +446,9 @@ a:active {
     .faceD {
         font-size: 20px;
         letter-spacing: 5px;
-    }
+    
+        line-height: 30px;
+}
 
     .faceJ {
         font-size: 12px;

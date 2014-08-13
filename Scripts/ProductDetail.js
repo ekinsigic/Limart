@@ -3,7 +3,10 @@ $(document).ready(function () {
     triggerGallerySlider();
     if ($('.topFullWidth h5').css('display') == 'none') {
         carryHeading();
-    };
+    }
+    else {
+        
+    }
 });
 $(window).resize(function(){
     if ($('.topFullWidth h5').css('display') == 'none') {

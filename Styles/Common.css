@@ -145,47 +145,23 @@ main{
 
 
 /* BREADCRUMBS */
-#breadcrumbs{
-    position:relative;
-    width:100%;
-    padding:10px 0 10px 40px;
-    border-bottom: 1px solid #f2f2f2;
+.breadcrumbsWrapper {
+    width:960px;
+    margin:0 auto;
 }
-
-#breadcrumbs ul.breadcrumbs {
+.breadcrumbs li{
     float:left;
+    width:auto;
+    line-height:74px;
+    margin-right:8px;
+    letter-spacing:0.6px;
 }
-
-#breadcrumbs ul.breadcrumbs li {
-    display:block;
-    float:left;
+.breadcrumbs li:after {
+    content:'/';
+    margin-left:7px;
 }
-
-#breadcrumbs ul.breadcrumbs li img{
-    width:5px;
-}
-
-#breadcrumbs ul.breadcrumbs li a:link,
-#breadcrumbs ul.breadcrumbs li a:visited {
-    text-decoration:none;
-    font-size:16px;
-    color:#000;
-    transition:all 0.5s;
-    -webkit-transition:all 0.5s;
-}
-
-#breadcrumbs ul.breadcrumbs li a:hover,
-#breadcrumbs ul.breadcrumbs li a:active {
-    color:#9e9e9d;
-}
-
-#breadcrumbs ul.breadcrumbs li.active{
-    font-size:16px;
-    color:#9e9e9d;
-}
-
-#breadcrumbs ul.breadcrumbs .liSeparator{
-    padding:4px 5px 0 5px;
+.breadcrumbs li:last-child:after {
+    content:'';
 }
 /* END - BREADCRUMBS */
 
@@ -221,6 +197,23 @@ main{
         height:75px;
         line-height: 80px;     
     }
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:90%;
+        margin:0 auto;
+        text-align: center;
+    }
+    .breadcrumbs{
+        text-align: center;
+    }
+    .breadcrumbs ul{
+        margin-right: -7px !important;
+        display: inline-block;
+    
+        float: right;
+    }
+    .breadcrumbs ul li:last-child{
+        display: none;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -234,11 +227,34 @@ main{
     main {
         margin: 70px auto 0 auto;
     }
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:90%;
+        margin:0 auto;
+    }
+    .breadcrumbs{
+        text-align: center;
+    }
+    .breadcrumbs ul{
+        margin:0 auto;
+        display: inline-block;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     #search .divSearchContent{
         width:670px;
+    }
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:670px;
+        margin:0 auto;
+        text-align: center;
+    }
+    .breadcrumbs{
+        text-align: center;
+    }
+    .breadcrumbs ul{
+        margin:0 auto;
+        display: inline-block;
     }
 }
 

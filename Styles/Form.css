@@ -167,7 +167,7 @@ label:after {
     font-weight:400 !important;
     letter-spacing:0.05em !important;
     background-color:transparent;
-    border:1px solid #e5e5e5 !important;
+    border:1px solid #000 !important;
 }
 
 .inputTextA::-webkit-input-placeholder { /* WebKit browsers */
@@ -202,17 +202,20 @@ label:after {
 /* BUTTON STARTS HERE */
 
 /*BLACK BUTTON STYLE */
-.buttonA{
+input[type="button"].buttonA, 
+button.buttonA {
     color: #000;
 }
 
-.buttonA:hover{
+input[type="button"].buttonA:hover,
+button.buttonA:hover {
     background: #000;
     color: #fff;
     border: 3px solid #000;
 }
 
-.buttonA:active{
+input[type="button"].buttonA:active,
+button.buttonA:active {
     background: #404040 !important;
     border: 3px solid #404040 !important;
 }
@@ -223,15 +226,18 @@ label:after {
 
 
 /*PURPLE BUTTON STYLE */
-.buttonB{
+input[type="button"].buttonB,
+button.buttonB {
     color: #4b4d63;
 }
-.buttonB:hover{
+input[type="button"].buttonB:hover,
+button.buttonB:hover {
     background: #4b4d63;
     color: #fff;
     border: 3px solid #4b4d63;
 }
-.buttonB:active{
+input[type="button"].buttonB:active,
+button.buttonB:active {
     background: #6f7182 !important;
     border: 3px solid #6f7182 !important;
 }
@@ -242,34 +248,18 @@ label:after {
 
 
 /*RED BUTTON STYLE */
-.buttonB{
-    color: #4b4d63;
-}
-.buttonB:hover{
-    background: #4b4d63;
-    color: #fff;
-    border: 3px solid #4b4d63;
-}
-.buttonB:active{
-    background: #6f7182 !important;
-    border: 3px solid #6f7182 !important;
-}
-/* END RED BUTTON STYLE */
-
-
-
-
-
-/*RED BUTTON STYLE */
-.buttonC{
+input[type="button"].buttonC,
+button.buttonC {
     color: #dd354b;
 }
-.buttonC:hover{
+input[type="button"].buttonC:hover,
+button.buttonC:hover {
     background: #dd354b;
     color: #fff;
     border: 3px solid #dd354b;
 }
-.buttonC:active{
+input[type="button"].buttonC:active,
+button.buttonC:active {
     background: #e0495d !important;
     border: 3px solid #e0495d !important;
 }
@@ -280,7 +270,8 @@ label:after {
 
 
 /* SMALL BUTTON STYLES */
-.buttonD{
+input[type="button"].buttonD,
+button.buttonD {
     background: #000;
     color: #fff;
     border: 3px solid #000;
@@ -288,13 +279,15 @@ label:after {
     padding: 10px 25px;
     padding-top: 12px;
 }
-.buttonD:hover {
+input[type="button"].buttonD:hover,
+button.buttonD:hover {
     background: #404040;
     color: #fff;
     border: 3px solid #404040;
 }
 
-.buttonE {
+input[type="button"].buttonE,
+button.buttonE {
     background: #4b4d63;
     color: #fff;
     border: 3px solid #4b4d63;
@@ -303,13 +296,15 @@ label:after {
     padding-top: 12px;
 }
 
-.buttonE:hover {
+input[type="button"].buttonE:hover,
+button.buttonE:hover {
     background: #6f7182;
     color: #fff;
     border: 3px solid #6f7182;
 }
 
-.buttonF {
+input[type="button"].buttonF,
+button.buttonF {
     background: #dd354b;
     color: #fff;
     border: 3px solid #dd354b;
@@ -317,7 +312,8 @@ label:after {
     padding: 10px 25px;
     padding-top: 12px;
 }
-.buttonF:hover {
+input[type="button"].buttonF:hover,
+button.buttonF:hover {
     background: #e0495d;
     color: #fff;
     border: 3px solid #e0495d;
@@ -348,6 +344,14 @@ label:after {
     opacity: 0.2;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+.selectStyleB{
+
+}
+
+.selectStyleB option{
+
 }
 
 
@@ -392,6 +396,10 @@ label:after {
         letter-spacing:0.09em !important;
         opacity:1 !important;
     }
+    .selectA {
+        width: 60px;
+        background-position: 40px center;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -402,6 +410,10 @@ label:after {
         font-size:13px !important;
         letter-spacing:0.09em !important;
         opacity:1 !important;
+    }
+    .selectA {
+        width: 60px;
+        background-position: 40px center;
     }
     
 }
@@ -415,7 +427,12 @@ label:after {
         letter-spacing:0.09em !important;
         opacity:1 !important;
     }
+    .selectA {
+        width: 60px;
+        background-position: 40px center;
+    }
 }
+
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
 }

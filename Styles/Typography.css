@@ -250,6 +250,63 @@ a:active {
     letter-spacing: 5px;
 }
 
+.faceFF {
+    color: #6d6e89;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.faceGG {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.faceHH {
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.faceII {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.faceJJ {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.faceKK {
+    color: #656565;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.faceLL {
+    color: #a3a3a3;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
 
 
 .aStyleA:link,
@@ -324,6 +381,55 @@ a:active {
 
 
 
+.aStyleE:link,
+.aStyleE:visited {
+    display:block;
+    height:30px;
+    width:180px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.aStyleE img {
+    float:left;
+    width:24px !important;
+    height:11px !important;
+    margin-top:9px;
+    opacity:0.25;
+    transition:all 0.5s;
+}
+
+.aStyleE span {
+    display:inline-block;
+    float:right;
+    margin-top:10px;
+    transition:all 0.5s;
+}
+
+.aStyleE:hover,
+.aStyleE:active {
+
+}
+
+.aStyleE:hover img,
+.aStyleE:active img {
+    margin-left:-5px;
+}
+
+.aStyleE:hover span,
+.aStyleE:active span {
+    color:#000;
+}
+
+
+
+
+
+
+
 
 .spanStyleA {
     display: inline-block;
@@ -377,6 +483,14 @@ a:active {
         font-size: 11px;
         letter-spacing: 1.5px;
     }
+    .faceEE {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .faceII {
+        font-size: 13px;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -392,6 +506,14 @@ a:active {
     .aStyleA:hover,
     .aStyleA:active {
         border-bottom: 0;
+    }
+    .faceEE {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .faceII {
+        font-size: 13px;
     }
 }
 
@@ -423,6 +545,15 @@ a:active {
     .faceJ {
         font-size: 20px;
         letter-spacing: 5.5px;
+    }
+    .faceII {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .faceJJ {
+        font-size: 15px;
+        letter-spacing: 0.5px;
     }
 }
 

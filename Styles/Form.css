@@ -190,22 +190,7 @@ input[type="radio"] {
     transition: all 0.2s;
 }
 
-    .labelB:hover:after {
-        opacity: 1;
-    }
-
-    .labelB:after {
-        position: absolute;
-        top: 12px;
-        left: 10px;
-        width: 8px;
-        height: 8px;
-        background-color: #000;
-        border-radius:50%;
-        opacity: 0;
-        content: '';
-        transition: all 0.2s;
-    }
+    
 
 
 
@@ -525,9 +510,21 @@ button.buttonF {
         width: 60px;
         background-position: 40px center;
     }
+
+
+    input[type="radio"] {
+        top:6px;
+    }
+
+    .labelB:after {
+        top: 14px;
+        left: 7px;
+    }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
+
+    
 }
 
 @media all and (min-width: 1435px) {

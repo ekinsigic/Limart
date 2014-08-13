@@ -142,6 +142,19 @@ img[data-sixtythree="logotype-white"] {
     width: 122px;
     height: 45px;
 }
+
+
+
+img[data-sixtythree^="logotype-card-"] {
+    width: 49px;
+    height: 31px;
+}
+
+
+img[data-sixtythree="arrow-next-short-purple"] {
+    width: 4px;
+    height: 7px;
+}
 /* END LOGOTYPE */
 
 

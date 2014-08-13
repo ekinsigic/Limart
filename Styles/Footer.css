@@ -46,30 +46,16 @@
         margin-top: 16px;
     }
 
-        footer .divContent .divMailingContent .inputButton {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40px;
-            height: 36px;
-            border:1px solid #f00;
-        }
-
         footer .divContent .divMailingContent input[type=image] {
             position: absolute;
             top: 50%;
             right: 0;
-            width: 40px;
-            height: 29px;
-            padding: 10px 17px 10px 0;
-            margin-top: -15px;
+            margin-top: -16px;
+            padding: 13px 15px 12px 1px;
+            width: 33px;
+            height: 32px;
             opacity: 1;
             transition: all 0.5s;
-            border:1px solid #000;
-        }
-
-        footer .divContent .divMailingContent input[type=image]:hover {
-            opacity: 1;
         }
 
 

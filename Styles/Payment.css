@@ -85,7 +85,7 @@
             float:left;
         }
 
-        /* face */
+        
         #address .divContent .divAddressContent h3{
             padding:40px 0 0 0;
         }
@@ -491,11 +491,16 @@
 
     #address .divContent{
         padding:0 0 50px 0;
+        border:0;
     }
 
     #address .divContent .divAddressContent{
         margin:auto;
         width:90%;
+    }
+
+     #address .divContent .divAddressContent h3{
+        padding:0;
     }
 
     #address .divContent .divAddressContent .divAddressText{
@@ -595,14 +600,12 @@
     }
 
     #address .divContent .divPaymentContent .divExpirationDate{
-        float:none;
         margin:0 0 20px 0;
-        width:100%;
+        width:200px !important;
     }
 
     #address .divContent .divPaymentContent .divSecurity{
-        float:none;
-        width:80px
+        width:80px;
     }
 
     #address .divContent .divPaymentContent .divExpirationDate span,
@@ -612,7 +615,7 @@
 
     #address .divContent .divPaymentContent .divPay{
         float:left;
-        margin:70px auto 0 auto !important;
+        margin:40px auto 0 auto !important;
         width:100% !important;
     }
 

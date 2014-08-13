@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
     triggerGallerySlider();
+    productDetailPopUps()
     if ($('.topFullWidth h5').css('display') == 'none') {
         carryHeading();
     }
@@ -43,4 +44,8 @@ function triggerGallerySlider() {
 function carryHeading() {
     var itemsToCarry = $('.artworkHeading')
     $('.topFullWidth').append(itemsToCarry);
+}
+
+function productDetailPopUps() {
+    $('.sixtyThreeOverlay').removeClass('noDisplay');
 }

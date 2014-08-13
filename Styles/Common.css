@@ -130,6 +130,13 @@ main{
     margin:90px auto 0 auto;
 }
 
+.noDisplay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 
 @-webkit-keyframes pseudoCursor {
     from {
@@ -176,8 +183,6 @@ main{
     text-align: center;
 }
 /* END - PAGE HEADER */
-
-
 
 
 

@@ -407,10 +407,20 @@ a:active {
 
 .faceDDD{
     color:#000;
-    font-size:40px;
+    font-size:13px;
     font-weight:400;
-    letter-spacing: 5px;
+    letter-spacing:0.060em;
 }
+
+.faceEEE{
+    color:#656565;
+    font-size:12px;
+    font-weight:400;
+}
+
+
+
+
 
 
 
@@ -663,6 +673,37 @@ a.aStyleI {
     font-weight:500;
 }
 
+.spanStyleF{
+    display: block;
+    color:#000;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing: 1.5px;
+}
+
+.spanStyleG{
+    display: block;
+    color:#6d6e89;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing: 0.01em;
+}
+
+.spanStyleH{
+    display: block;
+    color:#000;
+    font-size:15px;
+    font-weight:500;
+}
+
+
+.spanStyleI{
+    display: block;
+    color:#7f7f7f;
+    font-size:12px;
+    font-weight:400;
+}
+
 
 
 
@@ -722,6 +763,15 @@ a.aStyleI {
     .faceTT{
         font-size:15px;
     }
+
+    .faceCCC{
+        font-size:24px;
+    }
+
+    .spanStyleF{
+        font-size:13px;
+    }
+   
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {

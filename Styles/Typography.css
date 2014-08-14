@@ -589,7 +589,18 @@ a:active {
 .aStyleH:active {
 }
 
+a.aStyleI {
+    display: inline;
+    font-size: 11px;
+    text-decoration: underline;
+    color: #4d4d4d;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
 
+.aStyleI:hover {
+    opacity: 1;
+}
 
 
 

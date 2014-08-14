@@ -95,12 +95,6 @@
             margin:20px 0 55px 0;
         }
 
-            #address .divContent .divAddressContent .pDescription .aNewAddress{
-                display:inline-block;
-                text-decoration:underline;
-                color:#4d4d4d;
-            }
-
         #address .divContent .divAddressContent .saveBtn{
             float:right;
             margin:33px 0 0 0;
@@ -451,7 +445,113 @@
 
 
 
+/* SAYFAYI DİNAMİK YAPACAK CLASS TANIMLAMALARI */
 
+#payment.adressInfo .divAddress{
+    float: left;
+    padding: 26px 0 0 40px;
+    width: 50%;
+    height: 246px;
+    background-color: #4b4d63;
+    border-bottom: 10px solid #6d6e89;
+    cursor: pointer;
+}
+    #payment.adressInfo .divAddress h2 {
+        color: white;
+    }
+    #payment.adressInfo .divAddress p {
+        color: #f2f2f2
+    }
+    #payment.adressInfo .divAddress a.edit {
+        display: none;
+    }
+
+#payment.paymentOptions .divPayment{
+    float: left;
+    padding: 26px 0 0 40px;
+    width: 50%;
+    height: 246px;
+    background-color: #4b4d63;
+    border-bottom: 10px solid #6d6e89;
+    cursor: pointer;
+}
+    #payment.adressInfo .divAddress h2 {
+        color: white;
+    }
+    #payment.adressInfo .divAddress p {
+        color: #f2f2f2
+    }
+
+
+#payment.paymentOptions .divAddress{
+    float: left;
+    padding: 26px 0 0 40px;
+    width: 50%;
+    height: 236px;
+    background-color: #f8f8f9;
+    cursor: pointer;
+    border-bottom: 0px;
+}
+    #payment.paymentOptions .divAddress h2,
+     #payment.paymentOptions .divAddress .homeAddress,
+     #payment.paymentOptions .divAddress h3,
+     #payment.paymentOptions .divAddress .aNumber span{
+        color:#cacaca;
+    }
+
+
+.divBillingAddress.billingAddressOff {
+    display: none;
+}
+.divAddNewAddress.divAddNewAddressOff {
+    display: none;
+}
+.divAddressContent.divAddNewAddressOff {
+    display: none;
+}
+#payment.paymentOptions .divAddressContent{
+    display: none;
+}
+#payment.adressInfo .divPaymentContent{
+    display: none;
+}
+.divAddressOption {
+    transition:all 0.5s;
+}
+.addBtn.addingNewAddress {
+    float: right;
+}
+.floatRight {
+    margin-left: 5px;
+}
+
+.floatLeft {
+    margin-right: 5px;
+}
+/* END - SAYFAYI DİNAMİK YAPACAK CLASS TANIMLAMALARI */
+
+
+
+
+/* YENİ ADRES EKLEME FORMU */
+.divAddNewAddress input[type="text"], select{
+    float: left;
+    margin-top: 10px;
+    width: 291px;
+}
+textarea {
+    float: left;
+    width: calc(100%)
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.divContent a.cancelAddingNewAddress{
+    display: table;
+    float: left;    
+    margin-top: 28px;
+}
+
+/* END - YENİ ADRES EKLEME FORMU */
 
 
 
@@ -634,6 +734,31 @@
     #orderSummary{
         display:none;
     }
+
+    /* YENİ ADRES EKLEME FORMU */
+    .divAddNewAddress input[type="text"], select{
+        float: left;
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    textarea {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .addBtn.addingNewAddress {
+        width: 100%;
+        margin-top: 25px;
+    }
+    .addBtn.cancelAddingAddress {
+        margin-top: 20px;
+    }
+    /* END - YENİ ADRES EKLEME FORMU */
+
+
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -798,6 +923,28 @@
     #orderSummary{
         display:none;
     }
+
+    /* YENİ ADRES EKLEME FORMU */
+    .divAddNewAddress input[type="text"], select{
+        float: left;
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    textarea {
+        float: left;
+        width: calc(100%)
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .addBtn.addingNewAddress {
+        float: none;
+        margin: auto;
+        margin-top: 50px;
+    }
+    /* END - YENİ ADRES EKLEME FORMU */
+
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -831,6 +978,21 @@
     #orderSummary{
         display:none;
     }
+
+    /* YENİ ADRES EKLEME FORMU */
+    .divAddNewAddress input[type="text"], select{
+        float: left;
+        margin-top: 10px;
+        width: 299px;
+    }
+    textarea {
+        float: left;
+        width: calc(100%)
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    /* END - YENİ ADRES EKLEME FORMU */
+
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {

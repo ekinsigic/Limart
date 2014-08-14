@@ -88,7 +88,7 @@
 
 
 
-        <section id="payment">
+        <section id="payment" class="adressInfo">
             <div id="address">
 
                 <div class="divAddress">
@@ -127,7 +127,7 @@
                         <div class="divAddressText">
                             <h3 class="faceXX">Teslimat Adresi</h3>
                             <p class="faceYY pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu? <a href="#" class="aNewAddress">Yeni bir adres ekleyin.</a>
+                                Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu? <a href="#" class="aNewAddress aStyleI">Yeni bir adres ekleyin.</a>
                             </p>
                         </div>
 
@@ -138,7 +138,7 @@
 
 
                         <div class="divAddressOption active">
-                            <label for="sampleA" class="labelB"><input name="address" type="radio" id="sampleA" />Ev Adresi</label>
+                            <label for="sampleA" class="labelB"><input name="address" type="radio" id="sampleA" checked />Ev Adresi</label>
 
                             <div class="separator"></div>
 
@@ -158,7 +158,7 @@
 
 
 
-                        <div class="divBusinessAddressOption">
+                        <div class="divBusinessAddressOption divAddressOption">
                             <label for="sampleC" class="labelB"><input type="radio" name="address" id="sampleC" />İş Adresi</label>
                             <div class="separator"></div>
 
@@ -182,7 +182,7 @@
 
 
 
-                        <div class="divBillingAddress">
+                        <div class="divBillingAddress billingAddressOff">
 
                             <h3 class="faceXX">Fatura Adresi</h3>
                             <p class="faceYY pDescription">
@@ -211,11 +211,52 @@
                         </div>
 
                         
-                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" />Fatura Adresim ile teslimat adresim aynı.</label>
+                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" checked />Fatura Adresim ile teslimat adresim aynı.</label>
                         <div class="separator"></div>
 
                         <a href="#" class="aStyleF saveBtnA">KAYDET VE DEVAM ET</a>
 
+                        <div class="separator"></div>
+                    </div>
+
+
+                    <div class="divAddressContent divAddNewAddress divAddNewAddressOff">
+                        <div class="divAddressText">
+                            <h3 class="faceXX">Yeni Adres</h3>
+                            <p class="faceYY pDescription">
+                                Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu?
+                            </p>
+                        </div>
+
+                        <div class="separator"></div>
+                        <input type="text" class="inputTextD floatLeft" placeholder="AD,SOYAD" />
+                        <input type="text" class="inputTextD floatRight" placeholder="TCKN" />
+                        <select class="selectB floatLeft">
+                            <option>
+                                İL
+                            </option>
+                            <option>
+                                İL
+                            </option>
+                        </select>
+                        <select class="selectB floatRight">
+                            <option>
+                                İLÇE
+                            </option>
+                            <option>
+                                İL
+                            </option>
+                        </select>
+                        <textarea class="textareaStyleA" type="text" placeholder="ADRES"></textarea>
+                        <input type="text" class="inputTextD floatLeft" placeholder="TELEFON" />
+                        <input type="text" class="inputTextD floatRight" placeholder="GSM" />
+                        <input type="text" class="inputTextD floatLeft" placeholder="VERGİ DAİRESİ" />
+                        <input type="text" class="inputTextD floatRight" placeholder="VERGİ NUMARASI" />
+                        <div class="separator"></div>
+                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" checked />Fatura Adresim ile teslimat adresim aynı.</label>
+                        <div class="separator" style="height:40px;"></div>
+                        <a href="#" class="aStyleI addBtn addingNewAddress cancelAddingNewAddress">GERİ DÖN</a>
+                        <input type="button" value="KAYDET VE DEVAM ET" class="buttonE addBtn addingNewAddress saveAddingNewAddress" />
                         <div class="separator"></div>
                     </div>
 
@@ -280,7 +321,7 @@
 
 
                         <div class="divPay">
-                            <a href="#" class="aStyleF paymentBtn">ÖDEME YAP</a>
+                            <input type="button" value="ÖDEME YAP" class="buttonE paymentBtn" />
 
                             <label for="sampleD" class="labelA labelC">
                                 <input type="checkbox" id="sampleD" class="input" />
@@ -398,6 +439,9 @@
 
             <div class="separator"></div>
         </section>
+        <section id="paymentComplete">
+
+        </section>
 
     </main>
 
@@ -465,6 +509,7 @@
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery-ui.js"></script>
     <script type="text/javascript" src="Scripts/Common.js"></script>
+    <script type="text/javascript" src="Scripts/Payment.js"></script>
     <!-- END - SCRIPTS -->
 
 

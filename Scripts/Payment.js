@@ -7,24 +7,93 @@ $(document).ready(function () {
 $(window).load(function(){
 });
 
-function paymentDynamics() {
+var originalDivBillingAddressHeight = -1;
 
-		$('.divAddressContent label input[type="checkbox"]#sampleD').change(function(){
-			transitions('#payment');
-			setTimeout(function(){
-				if ($('.divAddressContent #sampleD').is(':checked')) {
-					$('.divBillingAddress').addClass('billingAddressOff');
+function paymentDynamics() {
+		$('#differentBillingAddress').change(function(){
+
+if(originalDivBillingAddressHeight == -1) originalDivBillingAddressHeight = $('.divBillingAddress').height();
+
+				if (!$('#differentBillingAddress').is(':checked')) {
+
+					
+					$('.divBillingAddress').css({
+						'height':'0px',
+						'transition':'all 0.7s',
+						'overflow':'hidden',
+						'margin':'0px',
+						'opacity':'0',
+						'-webkit-transform':'scale(0.9)'
+					});
+
+					setTimeout(function(){
+						$('.divBillingAddress').addClass('billingAddressOff');
+					},700);
 				}
 				else {
+
+
+					$('.divBillingAddress').css({
+						'height':'0px',
+						'transition':'all 0.0s',
+						'overflow':'hidden',
+						'margin':'0px',
+						'opacity':'0',
+						'-webkit-transform':'scale(0.8)'
+					});
+
 					$('.divBillingAddress').removeClass('billingAddressOff');
+
+					setTimeout(function(){
+						$('.divBillingAddress').css({
+							'height': originalDivBillingAddressHeight,
+							'transition':'all 0.7s',
+							'overflow':'hidden',
+							'opacity':'1',
+							'-webkit-transform':'scale(1)'
+						});
+					},5)
+				}
+		});
+
+		$('#giftNoteThis').change(function(){
+			transitions('.orderDetailNotes');
+			setTimeout(function(){
+				if ($('#giftNoteThis').is(':checked')) {
+					$('.giftNoteTextarea').addClass('innerPaymentMakeVisible');
+				}
+				else {
+					$('.giftNoteTextarea').removeClass('innerPaymentMakeVisible');
+				}
+			},700)
+		});
+
+		$('#someoneElse').change(function(){
+			transitions('.sendToSomeoneElse');
+			setTimeout(function(){
+				if ($('#someoneElse').is(':checked')) {
+					$('.sendToSomeoneElseDetails').addClass('innerPaymentMakeVisible');
+				}
+				else {
+					$('.sendToSomeoneElseDetails').removeClass('innerPaymentMakeVisible');
 				}
 			},700)
 		});
 
 		$('#newAddressRadio').change(function(){
-			transitions('#payment');
+			transitions('.divAddressContent');
 			setTimeout(function(){
 				if ($('#newAddressRadio').is(':checked')) {
+					$('.divAddressContent').addClass('divAddNewAddressOff');
+					$('.divAddNewAddress').removeClass('divAddNewAddressOff');
+				}
+			},700)
+		});
+
+		$('#newAddressInvoiceRadio').change(function(){
+			transitions('.divAddressContent');
+			setTimeout(function(){
+				if ($('#newAddressInvoiceRadio').is(':checked')) {
 					$('.divAddressContent').addClass('divAddNewAddressOff');
 					$('.divAddNewAddress').removeClass('divAddNewAddressOff');
 				}
@@ -75,19 +144,12 @@ function paymentDynamics() {
 	}
 
 
-	/////////////////////
-////YAPILACAKLAR!!! PAYMENT SUBMIT BUTTON A ÇEVİRİLECEK VE POST EDİLECEK
-
-////ANİMASYONLAR
-
-	/////////////////////	
-
-
 	else {
 		mobileTap('.divAddress a.edit', 'openAddressTab');
 		mobileTap('.divPay .paymentBtn', 'openPaymentTab');
 		mobileTap('.addBtn.addingNewAddress.saveAddingNewAddress', 'saveNewAddress');
 		mobileTap('.addBtn.addingNewAddress.cancelAddingNewAddress', 'cancelNewAddress');
+		mobileTap('.divPaymentContent .paymentOptions .singlePaymentOption', 'paymentOptions');
 	}
 
 }
@@ -119,6 +181,9 @@ function mobileTap(appliedElement, functionName) {
 				else if (functionName == 'cancelNewAddress') {
 					cancelNewAddress(e);
 				}
+				else if (functionName == 'paymentOptions') {
+					paymentOptions($(this));
+				}
 			};
 		})
 	});
@@ -126,7 +191,7 @@ function mobileTap(appliedElement, functionName) {
 
 function setupNewAddressForm(e) {
 	e.preventDefault()
-	transitions('#payment');
+	transitions('#address');
 	setTimeout(function(){
 		$('.divAddressContent').addClass('divAddNewAddressOff');
 		$('.divAddNewAddress').removeClass('divAddNewAddressOff');
@@ -136,14 +201,14 @@ function setupNewAddressForm(e) {
 function setupTabs(status,e) {
 		e.preventDefault();
 		if (status == 'payment') {
-			transitions('#payment');
+			transitions('#address', 'big');
 			setTimeout(function(){
 				$('#payment').removeClass('adressInfo');
 				$('#payment').addClass('paymentOptions');
 			},700)
 		}
 		else if (status == 'address') {
-			transitions('#payment');
+			transitions('#address', 'big');
 			setTimeout(function(){
 				$('#payment').addClass('adressInfo');
 				$('#payment').removeClass('paymentOptions');
@@ -156,7 +221,7 @@ function orderComplete() {
 }
 
 function saveNewAddress() {
-	transitions('#payment');
+	transitions('#address');
 	setTimeout(function(){
 		$('.divAddressContent').removeClass('divAddNewAddressOff');
 		$('.divAddNewAddress').addClass('divAddNewAddressOff');
@@ -165,7 +230,7 @@ function saveNewAddress() {
 
 function cancelNewAddress(e) {
 	if (e != null) e.preventDefault();
-		transitions('#payment');
+		transitions('#address');
 		setTimeout(function(){
 			$('.divAddressContent').removeClass('divAddNewAddressOff');
 			$('.divAddNewAddress').addClass('divAddNewAddressOff');
@@ -173,7 +238,47 @@ function cancelNewAddress(e) {
 }
 
 
-function transitions(elementName) {
+function paymentOptions(selectedElement) {
+	var selectedPayment = selectedElement.attr('data-payment-selection');
+	$('.singlePaymentOption').each(function(){
+		$(this).removeClass('activeOption');
+	});
+	selectedElement.addClass('activeOption');
+	transitions('.optionBox.activePayment');
+	setTimeout(function(){
+		$('.optionBox').each(function(){
+			$(this).removeClass('activePayment');
+		});
+		$('.divPaymentContent').find('.'+selectedPayment).addClass('activePayment');
+	},700);
+}
+
+
+
+
+
+function transitions(elementName, transitionType) {
+	$('body').animate({scrollTop: $(elementName).offset().top - 100}, '700');
+	if (elementName == null) {
+		elementName = '.divAddressContent';
+	};
+	if (transitionType == null) {
+		transitionType = 'small'
+	};
+
+	if (transitionType == 'small') {
+		$(elementName).css({
+			'transition':'all 0.7s',
+			'opacity':'0'
+		})
+		setTimeout(function(){
+			$(elementName).css({
+				'transition':'all 0.7s',
+				'opacity':'1'
+			})
+		},700);
+	}
+	else if (transitionType == 'big') {
 		$(elementName).css({
 			'transition':'all 0.7s',
 			'opacity':'0',
@@ -186,26 +291,9 @@ function transitions(elementName) {
 				'-webkit-transform':'scale(1)'
 			})
 		},700);
+	}
+
 }
-
-function paymentOptions(selectedElement) {
-	var selectedPayment = selectedElement.attr('data-payment-selection');
-	$('.singlePaymentOption').each(function(){
-		$(this).removeClass('activeOption');
-	});
-	selectedElement.addClass('activeOption');
-	transitions('.divPaymentContent');
-	setTimeout(function(){
-		$('.optionBox').each(function(){
-			$(this).removeClass('activePayment');
-		});
-		$('.divPaymentContent').find('.'+selectedPayment).addClass('activePayment');
-	},700);
-}
-
-
-
-
 
 
 

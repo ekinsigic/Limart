@@ -285,6 +285,7 @@
                 #address .divContent .divPaymentContent .divPay label{
                     float:left;
                     margin-top:20px;
+                    padding-left:0px;
                 }
 
                 #address .divContent .divPaymentContent .divPay label .input{
@@ -567,6 +568,10 @@ textarea {
     margin-top: 28px;
 }
 
+#payment .innerPaymentMakeVisible {
+    display: block;
+}
+
 /* END - YENİ ADRES EKLEME FORMU */
 
 
@@ -594,12 +599,12 @@ textarea {
 .divPaymentContent .paymentOptions .singlePaymentOption.activeOption {
     background-color: #F8F8F8;
     color: rgb(163, 163, 163);
-    border-bottom:3px solid #f0f0f0;
+    border-bottom: 3px solid #6d6e89;
 } 
 
 .divPaymentContent .paymentOptions .singlePaymentOption img {
-    height:60%;
-    top:25%;
+    height: 50%;
+    top: 29%;
     margin: 0 auto;
 }
 
@@ -759,8 +764,21 @@ textarea {
 #paymentCreditCard .tableInstalment tr td:nth-child(3){
     text-align:center;
 }
-
-
+.divInstalmentSelection {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
+}
+.giftNoteThis {
+    margin-left:20px;
+}
 /* END - KREDİ KARTI TABLOSU */
 
 /* GENEL YAPIYA EKLEMELER */
@@ -775,10 +793,60 @@ textarea {
     top: 66px;
     width: 100px;
 }
+#address .divContent .divAddressContent .addressNewOrSavedInvoice label{
+    margin-bottom:20px
+}
+#address .divContent .divAddressContent .addressNewOrSavedInvoice label:last-child{
+    margin-left: 30px;
+}
+
+
 #address .divContent .divAddressContent .addressNewOrSaved label{
 }
 #address .divContent .divAddressContent .addressNewOrSaved label:last-child{
     margin-left: 30px;
+}
+.demandPhoneNumber {
+    margin-top: 25px;
+    
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.demandPhoneNumber p {
+    margin-top: 0px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+.demandPhoneNumber input[type="text"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sendToSomeoneElse {
+    padding-bottom: 20px;
+    
+    border-bottom: 1px solid #f0f0f0;
+}
+.sendToSomeoneElseDetails {
+    margin-top: 15px;
+    display: none;
+}
+.sendToSomeoneElseDetails p {
+    margin-bottom: 5px;
+}
+.sendToSomeoneElseDetails input[type="text"] {
+    margin-bottom: 15px;
+}
+.orderDetailNotes textarea{
+    margin-top:30px;
+    display:none;
+}
+.divBillingAddress {
+    margin-top: 0px !important;
+}
+
+.divBillingAddressOptionWork {
+    margin-left: 15px;
 }
 
 /* END GENEL YAPIYA EKLEMELER */
@@ -1197,7 +1265,6 @@ textarea {
     }
 
     #address .divContent .divPay .paymentBtn{
-        width:250px;
     }
 
     #orderSummary{

@@ -33,7 +33,24 @@ $(document).ready(function () {
 
 });
 
+mobileTapping('body', randomFunction());
 
+function randomFunction() {
+    alert('wellAtLeast');
+}
+function mobileTapping(elementName, defineFunction) {
+    $(elementName).bind('touchstart', function(){
+        isScroll = false
+        $(this).bind('touchmove', function(){
+            isScroll = true;
+        });
+        $(this).bind('touchstart', function(){
+            if (!isScroll) {
+                defineFunction
+            }
+        })
+    });
+}
 
 var orientationChangeTimer = null;
 $(window).on("orientationchange", function () {
@@ -434,13 +451,15 @@ function openSearch() {
     }
 }
 
+
 // BASKET OPEN CLOSE FUNCTION
+
 var isBasketOpen = false;//Menünün açık olup olmadığını kontrol etmek için, sayfa başlangıcında kapalı varsayıyoruz.
 var isScroll = false;//kullanıcının scroll amaçlı dokunup dokunmadığını tespit etmek için dokunma işleminin başında scroll amaçlı dokunmadığını varsayıyoruz.
 
-function openCloseBasket() {
+function openCloseMenu() {
     if (isMobile) {
-        $('.basketOpen').bind('touchstart', function (e) {//imgNav class'lý div'e dokunma iþlemi baþladýðýnda..
+        $('nav .imgNav').bind('touchstart', function (e) {//imgNav class'lý div'e dokunma iþlemi baþladýðýnda..
             isScroll = false;
             e.stopPropagation();//sayfanýn gerisine eklenen window.touchstart iþleminden muaf tutuyoruz.
 
@@ -449,9 +468,11 @@ function openCloseBasket() {
             });
 
             $(this).one('touchend', function (e) {//kullanýcýnýn parmaðýný kaldýrmasý durumunda..
-                if (isSearchActive || isMenuOpen) {
-                    closeSearch();
+                if (isSearchActive || isMenuOpen || isUserOpen || isScroll) {
+                    
                     closeMenu();
+                    closeSearch();
+                    closeUser();
                     setTimeout(function(){
                         openBasket();
                     },500);
@@ -468,44 +489,56 @@ function openCloseBasket() {
             $(this).bind('touchend');
         });
 
-        $('#basket').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
+        $('header nav .divNav').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
             e.stopPropagation();
-            $('#basket').bind('touchend', function (e) {
+            $('header nav .divNav').bind('touchend', function (e) {
                 e.stopPropagation();
             });
         });
     }
     else {
-        $('.basketOpen').bind('click', function (e) {
-            if (isSearchActive) {
+        $('header nav .imgNav').bind('click', function (e) {
+                if (isSearchActive || isMenuOpen || isUserOpen) {
+                    
+                closeMenu();
                 closeSearch();
+                closeUser();
                 setTimeout(function(){
-                    openMenu();
+                    openBasket();
                 },501)
             }
             else {
-                openMenu();
+                openBasket();
+                e.stopPropagation();
             }
         });
 
         $(window).bind('click', function () {
-            closeMenu();
+            closeBasket();
         });
 
-        $('#basket').bind('click', function (e) {
+        $('.divNav').bind('click', function (e) {
             e.stopPropagation();
         });
     }
 }
-function closeBasket() {
-    $('.divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');
-    $('head style').remove();
-    setTimeout(function () {
-        isMenuOpen = false;
-        if (isMobile) {
+function closeMenu() {
+    if (isMobile) {
+        $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
+        setTimeout(function () {//setTimeout kurarak kullanýcýyý animasyonu beklemek zorunda býrakýyoruz
+            //tespit deðiþkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
+            isMenuOpen = false;
             isScroll = false;
-        };
-    }, 500);
+            $(window).unbind("touchmove");
+        }, 500);
+    }
+    else {
+        $('.divNav, main, footer, .filtersInHeader, .listingFilters').removeClass('menuOn');
+        setTimeout(function () {
+            isMenuOpen = false;
+            isScroll = false;
+        }, 500);
+    }
 }
 function openBasket() {
     if (isMobile) {
@@ -513,10 +546,7 @@ function openBasket() {
             isMenuOpen = true;//deðiþkenleri eski haline getiriyoruz
             isScroll = false;
 
-
-            $('head').append('<style>.basketOn{display:block;-webkit-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-moz-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-ms-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-o-transform:translate3d(0px,'+$('#basket').height()+'px,0px);transform: translate3d(0px,'+$('#basket').height()+'px,0px);}</style>');
-            $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');
-            //aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+            $('nav .divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
             e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
             $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
                 e.preventDefault();
@@ -532,17 +562,13 @@ function openBasket() {
             setTimeout(function(){
                 isMenuOpen = true
             },100);
-
-            $('head').append('<style>.basketOn{display:block;-webkit-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-moz-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-ms-transform:translate3d(0px,'+$('#basket').height()+'px,0px);-o-transform:translate3d(0px,'+$('#basket').height()+'px,0px);transform: translate3d(0px,'+$('#basket').height()+'px,0px);}</style>');
-            $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');
-            e.stopPropagation();
+            $('.divNav, main, footer, .filtersInHeader, .listingFilters').addClass('menuOn');
         }
         else if (isMenuOpen) {
             closeMenu();
         }
     }
 }
-//
 
 
 // BASKET OPEN CLOSE FUNCTION

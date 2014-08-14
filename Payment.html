@@ -131,8 +131,8 @@
                             </p>
 
                             <div class="addressNewOrSaved">
-                                <label for="savedAddressRadio" class="labelB"><input name="address" type="radio" id="savedAddressRadio" checked />Kayıtlı Adres</label>
-                                <label for="newAddressRadio" class="labelB"><input name="address" type="radio" id="newAddressRadio" checked />Yeni Adres</label>
+                                <label for="savedAddressRadio" class="labelB"><input name="addressNewOrSaved" type="radio" id="savedAddressRadio" checked />Kayıtlı Adres</label>
+                                <label for="newAddressRadio" class="labelB"><input name="addressNewOrSaved" type="radio" id="newAddressRadio" />Yeni Adres</label>
                             </div>
                         </div>
 
@@ -143,7 +143,7 @@
 
 
                         <div class="divAddressOption active">
-                            <label for="sampleA" class="labelB"><input name="address" type="radio" id="sampleA" checked />Ev Adresi</label>
+                            <label for="sampleA" class="labelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
 
                             <div class="separator"></div>
 
@@ -164,7 +164,7 @@
 
 
                         <div class="divBusinessAddressOption divAddressOption">
-                            <label for="sampleC" class="labelB"><input type="radio" name="address" id="sampleC" />İş Adresi</label>
+                            <label for="sampleC" class="labelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
                             <div class="separator"></div>
 
                             <h4 class="faceZZ name">BAMBİ TERLİK</h4>
@@ -191,11 +191,35 @@
 
                             <h3 class="faceXX">Fatura Adresi</h3>
                             <p class="faceYY pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin. Aradığınız adres yok mu? <a href="#" class="aNewAddress">Yeni bir adres ekleyin.</a>
+                                Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin.
                             </p>
 
-                            <div class="divBillingAddressOption active">
-                                <label for="sampleB" class="labelB"><input type="radio" id="sampleB" />Fatura Adresi</label>
+
+                            <div class="addressNewOrSavedInvoice">
+                                <label for="savedAddressInvoiceRadio" class="labelB"><input name="addressNewOrSavedInvoice" type="radio" id="savedAddressInvoiceRadio" checked />Kayıtlı Adres</label>
+                                <label for="newAddressInvoiceRadio" class="labelB"><input name="addressNewOrSavedInvoice" type="radio" id="newAddressInvoiceRadio" />Yeni Adres</label>
+                            </div>
+
+                            <div class="divBillingAddressOption divBillingAddressOptionHome  active">
+                                <label for="invoiceHomeAddress" class="labelB"><input class="radioTypeA" type="radio" id="invoiceHomeAddress" checked/>Fatura Ev Adresi</label>
+                                <div class="separator"></div>
+
+                                <h4 class="faceZZ name">BAMBİ TERLİK</h4>
+
+                                <a href="tel:0212 637 00 00" class="aNumber">
+                                    <span class="spanStyleC number">- 0212 637 00 00</span><br />
+                                </a>
+
+                                <p class="faceAAA">
+                                    Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                </p>
+
+                                <a href="#" class="aStyleH icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                <a href="#" class="aStyleH icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                            </div>
+
+                            <div class="divBillingAddressOption divBillingAddressOptionWork">
+                                <label for="invoiceWorkAddress" class="labelB"><input class="radioTypeA" type="radio" id="invoiceWorkAddress" />Fatura İş Adresi</label>
                                 <div class="separator"></div>
 
                                 <h4 class="faceZZ name">BAMBİ TERLİK</h4>
@@ -216,7 +240,7 @@
                         </div>
 
                         
-                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" />Fatura Adresim ile teslimat adresim aynı.</label>
+                        <label for="differentBillingAddress" class="labelA"><input type="checkbox" id="differentBillingAddress" />Fatura Adresim ile teslimat adresim farklı.</label>
                         <div class="separator"></div>
 
 
@@ -228,7 +252,7 @@
                         <div class="separator"></div>
 
                         <div class="sendToSomeoneElse">
-                            <label for="someoneElse" class="labelA"><input type="checkbox" id="someoneElse" />Siparişimi başka birinin teslim almasını istiyorum.</label>
+                            <label for="someoneElse" class="labelA"><input class="checkboxTypeA" type="checkbox" id="someoneElse" />Siparişimi başka birinin teslim almasını istiyorum.</label>
                             <div class="sendToSomeoneElseDetails">
                                 <p class="faceYY">Siparişinizi sizin dışınızda teslim alabilecek kişinin adı:</p>
                                 <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
@@ -242,9 +266,9 @@
 
                         <div class="orderDetailNotes">
                             <h3 class="faceXX">Ürün ve Sipariş Notları</h3>
-                            <label for="giftWrapThis" class="labelA"><input type="checkbox" id="giftWrapThis" />Hediye paketi istiyorum</label>
-                            <label for="giftNoteThis" class="labelA"><input type="checkbox" id="giftNoteThis" />Hediye notu eklemek istiyorum</label>
-                            <textarea class="textareaStyleA giftNoteTextarea"></textarea>
+                            <label for="giftWrapThis" class="labelA"><input class="checkboxTypeA" type="checkbox" id="giftWrapThis" />Hediye paketi istiyorum</label>
+                            <label for="giftNoteThis" class="labelA giftNoteThis"><input class="checkboxTypeA" type="checkbox" id="giftNoteThis" />Hediye notu eklemek istiyorum</label>
+                            <textarea class="textareaStyleA giftNoteTextarea" placeholder="NOTUNUZ"></textarea>
                         </div>
 
                         <div class="separator"></div>
@@ -288,7 +312,6 @@
                         <input type="text" class="inputTextD floatLeft" placeholder="VERGİ DAİRESİ" />
                         <input type="text" class="inputTextD floatRight" placeholder="VERGİ NUMARASI" />
                         <div class="separator"></div>
-                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" checked />Fatura Adresim ile teslimat adresim aynı.</label>
                         <div class="separator" style="height:40px;"></div>
                         <a href="#" class="aStyleI addBtn addingNewAddress cancelAddingNewAddress">GERİ DÖN</a>
                         <input type="button" value="KAYDET VE DEVAM ET" class="buttonE addBtn addingNewAddress saveAddingNewAddress" />
@@ -368,7 +391,7 @@
                                 <tr>
                                     <td>
                                         <div class="divInstalmentSelection radioStyleA">
-                                            <input type="radio" name="group2" id="rbInstalment1" value="0" checked="">
+                                            <input class="radioTypeA" type="radio" name="group2" id="rbInstalment1" value="0" checked="">
                                             <label for="rbInstalment1">Tek Çekim</label>
                                         </div>
                                     </td>
@@ -378,7 +401,7 @@
                                 <tr>
                                     <td>
                                         <div class="divInstalmentSelection radioStyleA">
-                                            <input type="radio" name="group2" id="rbInstalment2" value="1">
+                                            <input class="radioTypeA" type="radio" name="group2" id="rbInstalment2" value="1">
                                             <label for="rbInstalment2">2 Taksit</label>
                                         </div>
                                     </td>
@@ -388,7 +411,7 @@
                                 <tr>
                                     <td>
                                         <div class="divInstalmentSelection radioStyleA">
-                                            <input type="radio" name="group2" id="rbInstalment3" value="2">
+                                            <input class="radioTypeA" type="radio" name="group2" id="rbInstalment3" value="2">
                                             <label for="rbInstalment3">3 Taksit</label>
                                         </div>
                                     </td>
@@ -398,7 +421,7 @@
                                 <tr>
                                     <td>
                                         <div class="divInstalmentSelection radioStyleA">
-                                            <input type="radio" name="group2" id="rbInstalment4" value="3">
+                                            <input class="radioTypeA" type="radio" name="group2" id="rbInstalment4" value="3">
                                             <label for="rbInstalment4">4 Taksit</label>
                                         </div>
                                     </td>
@@ -408,7 +431,7 @@
                                 <tr>
                                     <td>
                                         <div class="divInstalmentSelection radioStyleA">
-                                            <input type="radio" name="group2" id="rbInstalment5" value="4">
+                                            <input class="radioTypeA" type="radio" name="group2" id="rbInstalment5" value="4">
                                             <label for="rbInstalment5">5 Taksit</label>
                                         </div>
                                     </td>
@@ -427,7 +450,7 @@
                                 <input type="button" value="ÖDEME YAP" class="buttonE paymentBtn" />
 
                                 <label for="sampleD" class="labelA labelC">
-                                    <input type="checkbox" id="sampleD" class="input" />
+                                    <input class="checkboxTypeA" type="checkbox" id="sampleD" class="input" />
                                     <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve
                                     <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum
                                 </label>
@@ -439,7 +462,7 @@
 
                         <div class="optionBox wireTransferOption">
                             <div class="divWirePaymentOption active">
-                                <label for="wirePaymentA" class="labelB"><input name="address" type="radio" id="wirePaymentA" checked /></label>
+                                <label for="wirePaymentA" class="labelB"><input class="radioTypeA" name="address" type="radio" id="wirePaymentA" checked /></label>
 
                                 <div class="separator"></div>
 
@@ -455,7 +478,7 @@
                             </div>
 
                             <div class="divWirePaymentOption">
-                                <label for="wirePaymentB" class="labelB"><input name="address" type="radio" id="wirePaymentB" /></label>
+                                <label for="wirePaymentB" class="labelB"><input class="radioTypeA" name="address" type="radio" id="wirePaymentB" /></label>
 
                                 <div class="separator"></div>
                                 <img src="images/garantibank.png">
@@ -468,7 +491,16 @@
                                     Şube Kodu: 717 Hesap No: 6295258
                                 </h4>
                             </div>
-                            <label for="wireTransferApproval"><a href="#">Ön bilgilendirme formunu</a> ve <a href="#">Mesafeli satış sözleşmesini</a> okudum ve kabul ediyorum.</label>
+                            <div class="divPay">
+                                <input type="button" value="ÖDEME YAP" class="buttonE paymentBtn" />
+
+                                <label for="sampleD" class="labelA labelC">
+                                    <input class="checkboxTypeA" type="checkbox" id="sampleD" class="input" />
+                                    <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve
+                                    <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum
+                                </label>
+
+                            </div>
                         </div>
 
                         <div class="optionBox paypalOption">
@@ -603,10 +635,12 @@
 
         </section>
 
+            <div class="separator"></div>
     </main>
 
 
 
+            <div class="separator"></div>
 
 
     <footer>

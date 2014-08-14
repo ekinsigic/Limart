@@ -1,0 +1,58 @@
+﻿
+
+#orderCompleted{
+    margin: 50px auto 0 auto;
+    padding-top:120px;
+    width: 100%;
+    border:1px solid #f00;
+    text-align:center;
+}
+
+#orderCompleted p.text{
+    margin:30px auto 0 auto;
+    width:600px;
+}
+
+#orderCompleted .smallLogo{
+    margin:40px auto 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+    
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+   
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    #orderCompleted{
+        width: 670px;
+    }
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    #orderCompleted{
+        width: 960px;
+    }
+}
+
+@media all and (min-width: 1435px) {
+    #orderCompleted{
+        width: 1080px;
+    }
+}

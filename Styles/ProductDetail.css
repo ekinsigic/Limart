@@ -641,5 +641,8 @@
 }
 
 @media all and (min-width: 1435px) {
-
+    .breadcrumbsWrapper, .divDetailWrapper {
+        width:1080px;
+        margin:0 auto;
+    }
 }

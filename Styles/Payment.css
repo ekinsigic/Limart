@@ -106,7 +106,8 @@
 
         #address .divContent .divAddressContent .divAddressOption,
         #address .divContent .divAddressContent .divBusinessAddressOption,
-        #address .divContent .divAddressContent .divBillingAddressOption{
+        #address .divContent .divAddressContent .divBillingAddressOption,
+        #address .divContent .divWirePaymentOption{
             float:left;
             padding-left:15px;
             width:286px;
@@ -132,21 +133,24 @@
 
         #address .divContent .divAddressContent .divAddressOption h4.name,
         #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
-        #address .divContent .divAddressContent .divBillingAddressOption h4.name{
+        #address .divContent .divAddressContent .divBillingAddressOption h4.name,
+        #address .divContent .divWirePaymentOption h4.name{
             display:inline-block;
             margin:20px 0 0 34px;
         }
 
         #address .divContent .divAddressContent .divAddressOption .number,
         #address .divContent .divAddressContent .divBusinessAddressOption .number,
-        #address .divContent .divAddressContent .divBillingAddressOption .number{
+        #address .divContent .divAddressContent .divBillingAddressOption .number,
+        #address .divContent .divWirePaymentOption .number{
             display:inline-block;
             margin:0;
         }
 
         #address .divContent .divAddressContent .divAddressOption p,
         #address .divContent .divAddressContent .divBusinessAddressOption p,
-        #address .divContent .divAddressContent .divBillingAddressOption p{
+        #address .divContent .divAddressContent .divBillingAddressOption p,
+        #address .divContent .divWirePaymentOption p{
             margin:15px 0 0 35px;
             width:200px;
             line-height:15px;
@@ -205,7 +209,7 @@
 
     #address .divContent .divPaymentContent .divCartName{
         width:388px;
-        margin-bottom:10px;
+        margin-bottom: 60px;
     }
 
     #address .divContent .divPaymentContent .divCartNumber{
@@ -215,8 +219,8 @@
 
         #address .divContent .divPaymentContent .divCartNumber .divBankCard{
             position:absolute;
-            top:6px;
-            right:0;
+            top: -45px;
+            left: 0;
         }
 
             #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
@@ -256,7 +260,9 @@
                 #address .divContent .divPaymentContent .divSecurity .inputSecurity{
                     width:100% !important;
                     height:45px !important;
-                }
+                
+                    margin-top: 20px;
+}
 
             #address .divContent .divPaymentContent .divPay{
                 float:left;
@@ -539,12 +545,14 @@
     margin-top: 10px;
     width: 291px;
 }
+
 textarea {
     float: left;
     width: calc(100%)
     margin-top: 10px;
     margin-left: 10px;
 }
+
 .divContent a.cancelAddingNewAddress{
     display: table;
     float: left;    
@@ -554,10 +562,198 @@ textarea {
 /* END - YENİ ADRES EKLEME FORMU */
 
 
+/*ÖDEME SEÇENEKLERİ LİSTESİ */
+.paymentOptions {
+    height:40px;
+    margin-bottom:30px
+}
+
+.divPaymentContent .paymentOptions .singlePaymentOption {
+    display:block;
+    float:left;
+    min-width:130px;
+    height:40px;
+    line-height:45px;
+    text-align:center;
+    background-color:#f0f0f0;
+    margin-left:1px;
+    padding-left:20px;
+    padding-right:20px;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+
+.divPaymentContent .paymentOptions .singlePaymentOption.activeOption {
+    background-color: #F8F8F8;
+    color: rgb(163, 163, 163);
+    border-bottom:3px solid #f0f0f0;
+} 
+
+.divPaymentContent .paymentOptions .singlePaymentOption img {
+    height:60%;
+    top:25%;
+    margin: 0 auto;
+}
+
+.optionBox {
+    display: none;
+}
+
+.activePayment {
+    display: block;
+}
+
+#payment .divContent .divPaymentContent .divWirePaymentOption {
+    transition: all 0.3s;
+}
+
+#payment .divContent .divPaymentContent .divWirePaymentOption label{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+}
+#payment .divContent .divPaymentContent .divWirePaymentOption img {
+    width: 60%;
+    margin: 20px;
+}
+#payment .divContent .divPaymentContent .divWirePaymentOption h4 {
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 75%;
+    line-height: 15px;
+}
+
+#payment .divContent .divPaymentContent .divWirePaymentOption input[type="radio"] {
+    left: 5px;
+    top: 5px;
+}
+
+#payment .divContent .divPaymentContent .optionBox.paypalOption p, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption p{
+    width: 70%;
+    float: left;
+    padding: 10px;
+}
+#payment .divContent .divPaymentContent .optionBox.paypalOption p a, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption p a{
+    display: inline;
+    color: #808080;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+#payment .divContent .divPaymentContent .optionBox.paypalOption img, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption img{
+    width: 25%;
+    float: left;
+    margin: 14px;
+}
+#payment .divContent .divPaymentContent .optionBox.paypalOption .paypalButton, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
+    margin: 10px;
+    margin-top: 20px;
+    width: 120px;
+}
+/* END - ÖDEME SEÇENEKLERİ LİSTESİ */
 
 
+/* KREDİ KARTI TABLOSI */
 
 
+#paymentCreditCard table{
+    margin:30px 0 0 0;
+    float: left;
+}
+
+#paymentCreditCard table tr td{
+    color:#000;
+    font-size:12px;
+    font-weight:600;
+    text-align:left;
+    vertical-align:middle;
+}
+
+#paymentCreditCard table tr .tdCards img {
+    display:block;
+    float:left;
+    margin-right:10px;
+    margin-top:0;
+}
+
+#paymentCreditCard table tr td > input.styleB{
+    width:200px;
+}
+
+#paymentCreditCard table tr td.cvc{
+    padding-left:20px;
+}
+
+#paymentCreditCard table tr td.cvc input.styleB{
+    width:30px;
+}
+
+#paymentCreditCard table select.styleA{
+    width: 60px;
+    background-position:85% center;
+    float:left;
+}
+
+#paymentCreditCard table tr td .divCvc{
+    width:20px;
+    height:16px;
+    border-radius:20px;
+    background-color:#a3a3a3;
+    font-family:Arial;
+    color:#fff;
+    font-size:13px;
+    text-align:center;
+    padding-top:4px;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+#paymentCreditCard img{
+    width:85px;
+    margin-top:15px;
+}
+
+#paymentCreditCard .tableInstalment tr:first-child{
+    border-top:1px solid #f2f2f2;
+    border-bottom:1px solid #f2f2f2;
+}
+
+#paymentCreditCard .tableInstalment tr th{
+    width:150px;
+    color:#cacaca;
+    font-size:12px;
+    letter-spacing:1px;
+    font-weight:600;
+    text-align:center;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+#paymentCreditCard .tableInstalment tr td{
+    letter-spacing:1px;
+    color:#a3a3a3;
+    font-size:12px;
+    padding-top:13px;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+
+#paymentCreditCard .tableInstalment tr:hover td{
+    color:#000;
+}
+
+#paymentCreditCard .tableInstalment tr td:nth-child(2),
+#paymentCreditCard .tableInstalment tr td:nth-child(3){
+    text-align:center;
+}
+
+
+/* END - KREDİ KARTI TABLOSU */
 
 
 
@@ -622,7 +818,8 @@ textarea {
 
     #address .divContent .divAddressContent .divAddressOption,
     #address .divContent .divAddressContent .divBusinessAddressOption,
-    #address .divContent .divAddressContent .divBillingAddressOption{
+    #address .divContent .divAddressContent .divBillingAddressOption,
+    #address .divContent .divAddressContent .divWirePaymentOption{
         float:none;
         padding:0 10px 0 10px;
         margin-bottom:20px;
@@ -632,13 +829,15 @@ textarea {
 
     #address .divContent .divAddressContent .divAddressOption h4.name,
     #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
-    #address .divContent .divAddressContent .divBillingAddressOption h4.name{
+    #address .divContent .divAddressContent .divBillingAddressOption h4.name,
+    #address .divContent .divAddressContent .divWirePaymentOption h4.name{
         margin:10px 0 0 0;
     }
 
     #address .divContent .divAddressContent .divAddressOption p,
     #address .divContent .divAddressContent .divBusinessAddressOption p,
-    #address .divContent .divAddressContent .divBillingAddressOption p{
+    #address .divContent .divAddressContent .divBillingAddressOption p,
+    #address .divContent .divAddressContent .divWirePaymentOption p{
         margin:20px 0 0 0;
         width:95%;
     }

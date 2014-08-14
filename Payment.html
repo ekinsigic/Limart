@@ -275,62 +275,187 @@
                         <a href="#" class="aStyleG aInstallments">TAKSİT SEÇENEKLERİNİ İNCELE</a>
 
                         <div class="separator"></div>
-
-
-
-
-                        <div class="divCartName">
-                            <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="inputTextC inputCart" />
-                        </div>
-
-                        <div class="divCartNumber">
-                            <input type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="inputTextC inputCart" />
-
-                            <div class="divBankCard">
-                                <img data-sixtythree="logotype-card-visa">
-                                <img data-sixtythree="logotype-card-master">
-                                <img data-sixtythree="logotype-card-bank">
-                                <div class="separator"></div>
-                            </div>
-
-                            <div class="separator"></div>
-                        </div>
-
-
-                        <div class="divExpirationDate">
-                            <span class="spanStyleE">SON KULLANMA TARİHİ</span>
-                            <select class="selectA selectExpirationDate">
-                                <option>04</option>
-                                <option>05</option>
-                            </select>
-
-                            <select class="selectA selectExpirationDate">
-                                <option>18</option>
-                            </select>
-                            <div class="separator"></div>
-                        </div>
-
-
-                        <div class="divSecurity">
-                            <span class="spanStyleE">GÜVENLİK</span>
-                            <input type="text" class="inputTextC inputSecurity" />
-                        </div>
-
+                        <ul class="paymentOptions">
+                            <li class="singlePaymentOption activeOption faceMM" data-payment-selection="creditCardOption">KREDİ KARTI</li>
+                            <li class="singlePaymentOption faceMM" data-payment-selection="wireTransferOption">HAVALE</li>
+                            <li class="singlePaymentOption" data-payment-selection="paypalOption"><img src="images/paypal.png" /></li>
+                            <li class="singlePaymentOption" data-payment-selection="bkmexpressOption"><img src="images/bkmexpress.png" /></li>
+                        </ul>
                         <div class="separator"></div>
 
 
+                        <div class="optionBox creditCardOption activePayment">
+                            <div class="divCartName">
+                                <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="inputTextC inputCart" />
+                            </div>
 
-                        <div class="divPay">
-                            <input type="button" value="ÖDEME YAP" class="buttonE paymentBtn" />
+                            <div class="divCartNumber">
+                                <input type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="inputTextC inputCart" />
 
-                            <label for="sampleD" class="labelA labelC">
-                                <input type="checkbox" id="sampleD" class="input" />
-                                <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve
-                                <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum
-                            </label>
+                                <div class="divBankCard">
+                                    <img data-sixtythree="logotype-card-visa">
+                                    <img data-sixtythree="logotype-card-master">
+                                    <div class="separator"></div>
+                                </div>
+
+                                <div class="separator"></div>
+                            </div>
+
+
+                            <div class="divExpirationDate">
+                                <span class="spanStyleE">SON KULLANMA TARİHİ</span>
+                                <select class="selectA selectExpirationDate">
+                                    <option>04</option>
+                                    <option>05</option>
+                                </select>
+
+                                <select class="selectA selectExpirationDate">
+                                    <option>18</option>
+                                </select>
+                                <div class="separator"></div>
+                            </div>
+
+
+                            <div class="divSecurity">
+                                <span class="spanStyleE">GÜVENLİK</span>
+                                <input type="text" class="inputTextC inputSecurity" />
+                            </div>
+
+                            <div id="paymentCreditCard">
+
+
+                            <table class="tableInstalment">
+                                <tbody><tr>
+                                    <th>TAKSİT SAYISI</th>
+                                    <th>AYLIK</th>
+                                    <th>TOPLAM</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="divInstalmentSelection radioStyleA">
+                                            <input type="radio" name="group2" id="rbInstalment1" value="0" checked="">
+                                            <label for="rbInstalment1">Tek Çekim</label>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>1.404,93</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="divInstalmentSelection radioStyleA">
+                                            <input type="radio" name="group2" id="rbInstalment2" value="1">
+                                            <label for="rbInstalment2">2 Taksit</label>
+                                        </div>
+                                    </td>
+                                    <td>702,46</td>
+                                    <td>1.504,93</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="divInstalmentSelection radioStyleA">
+                                            <input type="radio" name="group2" id="rbInstalment3" value="2">
+                                            <label for="rbInstalment3">3 Taksit</label>
+                                        </div>
+                                    </td>
+                                    <td>702,46</td>
+                                    <td>1.604,93</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="divInstalmentSelection radioStyleA">
+                                            <input type="radio" name="group2" id="rbInstalment4" value="3">
+                                            <label for="rbInstalment4">4 Taksit</label>
+                                        </div>
+                                    </td>
+                                    <td>702,46</td>
+                                    <td>1.704,93</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="divInstalmentSelection radioStyleA">
+                                            <input type="radio" name="group2" id="rbInstalment5" value="4">
+                                            <label for="rbInstalment5">5 Taksit</label>
+                                        </div>
+                                    </td>
+                                    <td>702,46</td>
+                                    <td>1.804,93</td>
+                                </tr>
+                            </tbody></table>
+
+
+                            </div>
+                            <div class="separator"></div>
+
+
+
+                            <div class="divPay">
+                                <input type="button" value="ÖDEME YAP" class="buttonE paymentBtn" />
+
+                                <label for="sampleD" class="labelA labelC">
+                                    <input type="checkbox" id="sampleD" class="input" />
+                                    <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve
+                                    <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum
+                                </label>
+
+                            </div>
 
                         </div>
 
+
+                        <div class="optionBox wireTransferOption">
+                            <div class="divWirePaymentOption active">
+                                <label for="wirePaymentA" class="labelB"><input name="address" type="radio" id="wirePaymentA" checked /></label>
+
+                                <div class="separator"></div>
+
+                                <img src="images/garantibank.png">
+                                <h4 class="faceZZ name">Türkiye Garanti Bankası</h4>
+                                <h4 class="faceZZ name">
+                                    IBAN: TRXX XXXX XXXX XXXX XXXX XXXX XX
+                                </h4><br />
+                                <h4 class="faceZZ name">
+                                    Garanti Bankası Kadıköy Şubesi
+                                    Şube Kodu: 717 Hesap No: 6295258
+                                </h4>
+                            </div>
+
+                            <div class="divWirePaymentOption">
+                                <label for="wirePaymentB" class="labelB"><input name="address" type="radio" id="wirePaymentB" /></label>
+
+                                <div class="separator"></div>
+                                <img src="images/garantibank.png">
+                                <h4 class="faceZZ name">Türkiye Garanti Bankası</h4>
+                                <h4 class="faceZZ name">
+                                    IBAN: TRXX XXXX XXXX XXXX XXXX XXXX XX
+                                </h4><br />
+                                <h4 class="faceZZ name">
+                                    Garanti Bankası Kadıköy Şubesi
+                                    Şube Kodu: 717 Hesap No: 6295258
+                                </h4>
+                            </div>
+                            <label for="wireTransferApproval"><a href="#">Ön bilgilendirme formunu</a> ve <a href="#">Mesafeli satış sözleşmesini</a> okudum ve kabul ediyorum.</label>
+                        </div>
+
+                        <div class="optionBox paypalOption">
+
+                            <p>79,90 TL tutarındaki ödemeniz <a href="https://www.paypal.com/tr/webapps/mpp/home">PayPal</a> ile yapılacaktır.<br>
+
+                            Lütfen, bir sonraki adıma geçmek için "aşağıdaki" butona tıklayınız.</p>
+
+                            <img class="paypalLogo" src="images/paypal.png">
+                            <input type="button" class="buttonE paypalButton" value="PAYPAL İLE ÖDE"/>
+                        </div>
+
+                        <div class="optionBox bkmexpressOption">
+
+                            <p>BKM Express ile ödeme yaparken <a href="https://www.bkmexpress.com.tr/BKMExpress/">www.bkmexpress.com.tr</a> sayfasına yönlendirileceksiniz.
+                            <br>BKM Express sitesine üye olurken kullandığınız kullanıcı adı ve şifreniz ile uygulamaya giriş yapmanız gerekmektedir.
+                            <br>Karşınıza gelen ödeme ekranından işlem yapmak istediğiniz kartı ve ödeme şeklini seçerek kolayca ödeme yapabilirsiniz.
+                            <br>Alışverişinizi tamamladıktan sonra otomatik olarak DESA'ya döneceksiniz.</p>
+                            <img class="bkmLogo" src="images/bkmexpress.png">
+                            <input type="button" class="buttonE bkmButton" value="BKM İLE ÖDE"/>
+
+                        </div>
 
                         <div class="separator"></div>
 

@@ -9,13 +9,16 @@ $(window).load(function(){
 
 function paymentDynamics() {
 
-		$('.divAddressContent #sampleD').change(function(){
-			if ($(this).is(':checked')) {
-				$('.divBillingAddress').addClass('billingAddressOff');
-			}
-			else {
-				$('.divBillingAddress').removeClass('billingAddressOff');
-			}
+		$('.divAddressContent label input[type="checkbox"]').change(function(){
+			transitions();
+			setTimeout(function(){
+				if ($('.divAddressContent #sampleD').is(':checked')) {
+					$('.divBillingAddress').addClass('billingAddressOff');
+				}
+				else {
+					$('.divBillingAddress').removeClass('billingAddressOff');
+				}
+			},700)
 		});
 
 		$('.divAddressContent .divAddressOption label input[type="radio"]').change(function(){
@@ -23,31 +26,40 @@ function paymentDynamics() {
 			$(this).parents('.divAddressOption').addClass('active');
 		});
 
+		$('.divPaymentContent .divWirePaymentOption label input[type="radio"]').change(function(){
+			$('.divPaymentContent .divWirePaymentOption').removeClass('active');
+			$(this).parents('.divWirePaymentOption').addClass('active');
+		});
+
 
 	if (!isMobile) {
 
-		$('.divAddressContent a.saveBtn, .divAddressContent a.saveBtnA').click(function(){
-			setupTabs('payment');
+		$('.divAddressContent a.saveBtn, .divAddressContent a.saveBtnA').click(function(e){
+			setupTabs('payment', e);
 		});
 
-		$('.divAddress a.edit').click(function(){
-			setupTabs('address');
+		$('.divAddress a.edit').click(function(e){
+			setupTabs('address', e);
 		});
 
 		$('.divPay .paymentBtn').click(function(e){
-			orderComplete(e);
+			orderComplete();
 		});
 
-		$('.aNewAddress').click(function (){
+		$('.aNewAddress').click(function(e){
 			setupNewAddressForm(e);
 		});
 
 		$('.addBtn.addingNewAddress.saveAddingNewAddress').click(function (){
-			saveNewAddress(e);
+			saveNewAddress();
 		});
 
-		$('a.addBtn.addingNewAddress.cancelAddingNewAddress').click(function (){
+		$('a.addBtn.addingNewAddress.cancelAddingNewAddress').click(function (e){
 			cancelNewAddress(e);
+		});
+
+		$('.divPaymentContent .paymentOptions .singlePaymentOption').click(function (){
+			paymentOptions($(this));
 		});
 	}
 
@@ -76,7 +88,7 @@ function mobileTap(appliedElement, functionName) {
 		$(this).bind('touchmove', function(){
 			isScroll = true
 		});
-		$(this).bind('touchend', function(){
+		$(this).bind('touchend', function(e){
 			if (!isScroll) {
 				if (functionName == 'newAddress') {
 					setupNewAddressForm();
@@ -101,19 +113,30 @@ function mobileTap(appliedElement, functionName) {
 	});
 }
 
-function setupNewAddressForm() {
-	$('.divAddressContent').addClass('divAddNewAddressOff');
-	$('.divAddNewAddress').removeClass('divAddNewAddressOff');
+function setupNewAddressForm(e) {
+	e.preventDefault()
+	transitions('#payment');
+	setTimeout(function(){
+		$('.divAddressContent').addClass('divAddNewAddressOff');
+		$('.divAddNewAddress').removeClass('divAddNewAddressOff');
+	},700);
 }
 
-function setupTabs(status) {
+function setupTabs(status,e) {
+		e.preventDefault();
 		if (status == 'payment') {
-			$('#payment').removeClass('adressInfo');
-			$('#payment').addClass('paymentOptions');
+			transitions('#payment');
+			setTimeout(function(){
+				$('#payment').removeClass('adressInfo');
+				$('#payment').addClass('paymentOptions');
+			},700)
 		}
 		else if (status == 'address') {
-			$('#payment').addClass('adressInfo');
-			$('#payment').removeClass('paymentOptions');
+			transitions('#payment');
+			setTimeout(function(){
+				$('#payment').addClass('adressInfo');
+				$('#payment').removeClass('paymentOptions');
+			},700);
 		}
 }
 
@@ -122,27 +145,52 @@ function orderComplete() {
 }
 
 function saveNewAddress() {
-	$('.divAddressContent').removeClass('divAddNewAddressOff');
-	$('.divAddNewAddress').addClass('divAddNewAddressOff');
+	transitions('#payment');
+	setTimeout(function(){
+		$('.divAddressContent').removeClass('divAddNewAddressOff');
+		$('.divAddNewAddress').addClass('divAddNewAddressOff');
+	},700);
 }
 
 function cancelNewAddress(e) {
 	if (e != null) e.preventDefault();
-		
-		$('.divAddNewAddress').css({
-			'transition':'all 0.3s',
-			'opacity':'0'
-		})
+		transitions('#payment');
 		setTimeout(function(){
 			$('.divAddressContent').removeClass('divAddNewAddressOff');
 			$('.divAddNewAddress').addClass('divAddNewAddressOff');
-		},300);
+		},700);
 }
 
 
+function transitions(elementName) {
+		$(elementName).css({
+			'transition':'all 0.7s',
+			'opacity':'0',
+			'-webkit-transform':'scale(0.98)'
+		})
+		setTimeout(function(){
+			$(elementName).css({
+				'transition':'all 0.7s',
+				'opacity':'1',
+				'-webkit-transform':'scale(1)'
+			})
+		},700);
+}
 
-
-
+function paymentOptions(selectedElement) {
+	var selectedPayment = selectedElement.attr('data-payment-selection');
+	$('.singlePaymentOption').each(function(){
+		$(this).removeClass('activeOption');
+	});
+	selectedElement.addClass('activeOption');
+	transitions('.divPaymentContent');
+	setTimeout(function(){
+		$('.optionBox').each(function(){
+			$(this).removeClass('activePayment');
+		});
+		$('.divPaymentContent').find('.'+selectedPayment).addClass('activePayment');
+	},700);
+}
 
 
 

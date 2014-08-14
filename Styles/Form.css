@@ -39,6 +39,7 @@ textarea {
     button {
         padding: 10px 35px;
         padding-top: 12px;
+        width:auto;
         color: #000;
         font-size: 14px;
         font-weight: 500;
@@ -279,9 +280,43 @@ input.inputTextD{
         padding-left: 15px;
         opacity: 0.7;
 }
+
 input.inputTextD:focus{
         width: 50%;
 }
+
+
+.inputTextE {
+    padding: 0 20px 0 20px !important;
+    width:100% !important;
+    height:45px !important;
+    color: #000 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+    background-color: transparent;
+    border: 1px solid #000 !important;
+}
+
+    .inputTextE::-webkit-input-placeholder { /* WebKit browsers */
+        color: #000 !important;
+    }
+
+    .inputTextE:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #000 !important;
+    }
+
+    .inputTextE::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #000 !important;
+    }
+
+    .inputTextE:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #000 !important;
+    }
+
+
+
+
 
 
 

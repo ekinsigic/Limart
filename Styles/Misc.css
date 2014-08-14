@@ -105,6 +105,28 @@ img[data-sixtythree^="icon-social-"] {
         img[data-sixtythree^="icon-social-"]:not(.white):hover {
             opacity: 1;
         }
+
+
+img[data-sixtythree="icon-social2-facebook"] {
+    display: block;
+    width: 10px;
+    height: 19px;
+}
+
+img[data-sixtythree="icon-social2-twitter"] {
+    display: block;
+    width: 17px;
+    height: 14px;
+}
+
+img[data-sixtythree="icon-social2-instagram"] {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+
+        
 /*  END - SOCIAL MEDIA ICONS STYLES */
 
 /* END - ICONS AND OTHERS */

@@ -1,238 +1,358 @@
 ﻿
-/* LOGIN WINDOW */
-#divMembership{
+#Login{
     position:fixed;
-    left:50%;
-    top:50%;
-    z-index:20;
-    margin:-288px 0 0 -363px;
-    width:726px;
-    height:577px;
-    background-color:#fff;
-    display:none;
-}
-
-#divMembership .aCloseB:link,
-#divMembership .aCloseB:visited{
-    z-index:15;
-    top:10px;
-    right:10px;
-}
-
-#divMembership .aCloseB:hover,
-#divMembership .aCloseB:active{
-}
-
-#divMembership .divContent{
-    position:absolute; 
-    overflow:hidden;
+    z-index:30;
+    top:90px;
     width:100%;
-    height:100%;
-    border:1px solid #000;
+    height:376px;
+    background-color:#ececef;
 }
 
-#divMembership .divLogin{
-    position:absolute;
-    z-index:5;
-    top:0;
-    left:0;
-    width:363px;
-    height:577px;
-    background-color:#f8f8f8;
-}
-
-#divMembership .divLogin h4.faceD,
-#divMembership .divNewMemberForm h4.faceD{
-    margin:30px 0 20px 50px;
-    font-weight:700;
-    letter-spacing:1px;
+#Login #pageHeader{
+   display:none;
 }
 
 
 
-
-#divMembership .divLogin .inputStyleA,
-#divMembership .divNewMemberForm .inputStyleA{
-    margin-left:50px;
-    width:260px;
-    height:50px;
-    color:#555;
-    letter-spacing:1px;
+#Login .divLoginContent{
+    margin:45px auto 0 auto;
 }
 
-.inputStyleA::-webkit-input-placeholder { /* WebKit browsers */
-    color:#555;
-}
-
-.inputStyleA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:#555;
-}
-
-.inputStyleA::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:#555;
-}
-
-.inputStyleA:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:#555;
-}
-
-
-
-#divMembership .divLogin .divRememberMe ,
-#divMembership .divNewMemberForm .divAgreement {
-    display:inline-block;
-    margin:18px 0 18px 55px;
-}
-
-/* Checkbox */
-#divMembership .divRememberMe input[type=checkbox] ,
-#divMembership .divAgreement input[type=checkbox] {
-    display:none;
-}
-
-#divMembership .divRememberMe .labelStyleA,
-#divMembership .divAgreement .labelStyleA{
-    float:right;
-    cursor:pointer;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-#divMembership .divRememberMe .labelStyleA:hover ,
-#divMembership .divAgreement .labelStyleA:hover {
-    color:#000;
-}
-
-#divMembership .divRememberMe label:before,
-#divMembership .divAgreement label:before  {  
-    display: inline-block;  
-    position: absolute;  
-    left: 0;  
-    bottom:-3px;
-    width: 16px;  
-    height: 16px;  
-    background-color: transparent;  
-    border:1px solid #e5e5e5;
-    content: "";  
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}  
-
-#divMembership .divRememberMe input[type=checkbox]:checked + label:before ,
-#divMembership .divAgreement input[type=checkbox]:checked + label:before {  
-    background-color:#000;
-    border:1px solid #000;
-}
-
-#divMembership .divRememberMe input[type=checkbox]:checked ~ label,
-#divMembership .divAgreement input[type=checkbox]:checked ~ label{  
-    color:#000;
-}
-/* END - Checkbox */
-
-
-#divMembership .divLogin .aForgotPass:link,
-#divMembership .divLogin .aForgotPass:visited{
-    display:block;
-    float:right;
-    margin:19px 55px 0 0;
-    color:#a3a3a3;
-    font-size:12px;
-    letter-spacing:0.050em;
-    text-decoration:none;
-    transition:all 0.5s;
-    -webkit-transition:all 0.5s;
-}
-
-#divMembership .divLogin .aForgotPass:hover,
-#divMembership .divLogin .aForgotPass:active{
-    color:#000;
-}
-
-#divMembership .divLogin .aFacebook:link,
-#divMembership .divLogin .aFacebook:visited{
-    display:block;
-    width:225px;
-    margin:30px auto 30px auto;
-    padding:12px 30px 12px 42px;
-    color:#fff;
-    font-size:12px;
-    letter-spacing:1px;
-    background-color:#3a55a2;
-    background-image:url('../Images/facebook.png');
-    background-repeat:no-repeat;
-    background-position:left 13px center;
-    background-size:15px;
-}
-
-#divMembership .divLogin .aFacebook:hover,
-#divMembership .divLogin .aFacebook:active{
-
-}
-
-#divMembership .divLogin .aNewMember{
-    display:block;
-    width:80px;
-    margin:auto;
-}
-
-#divMembership .divLogin .aNewMember span{
+#Login .divLoginContent .divLogin{
     float:left;
-    color:#a3a3a3;
+    width:350px;
 }
 
-#divMembership .divLogin .aNewMember img{
+#Login .divLoginContent .divLogin h1.logIn{
+    padding:0 0 15px 20px;
+    margin-bottom:30px;
+    border-bottom:1px solid #d9d9db;
+}
+
+#Login .divLoginContent .divLogin .input{
+    margin-bottom:10px;
+}
+
+#Login .divLoginContent .divLogin button{
     float:left;
-    width:9px;
-    margin:1px 0 0 10px;
+    margin-left:0px;
 }
 
-
-#divMembership .divNewMemberForm{
-    position:absolute;
-    z-index:5;
-    top:0;
-    right:0;
-    width:363px;
-    height:577px;
-    background-color:#f8f8f8;
-}
-
-#divMembership .divNewMemberForm .aStyleA{
-    float:left;
-    margin:0 0 0 55px;
-    color:#555;
-    font-size:11px;
-    text-decoration:underline;
-}
-
-#divMembership .divNewMemberForm .aStyleA.privacy{
-    text-decoration:underline;
-    font-weight:400;
-    letter-spacing:0;
+#Login .divLoginContent .divLogin a{
     float:right;
-    margin:0 55px 0 0;
 }
 
-#divMembership .divNewMemberForm .inputStyleB{
+#Login .divLoginContent .divLogin a.signUp{
+    margin-top:8px;
+}
+
+#Login .divLoginContent .divLogin a.forgotPassword{
     margin-top:10px;
+    color:#b1b1b3;
 }
 
-#divMembership .divNewMemberForm .aBack{
-    display:block;
-    width:100px;
-    margin:12px 0 0 50px;
-}
 
-#divMembership .divNewMemberForm .aBack span{
+
+
+#Login .divLoginContent .divOr{
     float:left;
-    margin-top:3px;
-    color:#a3a3a3;
-    font-size:12px;
+    margin:37px 0 0 160px;
+    height:180px;
+    border-left:2px solid #d9d9db;
 }
 
-#divMembership .divNewMemberForm .aBack img{
+#Login .divLoginContent .spanOr{
+    position:absolute;
+    left:-23px;
+    top:63px;
+    padding:20px 0 20px 0;
+    background-color:#ececef;
+}
+
+
+
+
+
+
+
+#Login .divLoginContent .divSocialIcons{
+    float:right;
+    width:400px;
+    margin-top:53px;
+}
+
+#Login .divLoginContent .divSocialIcons .aSocialIcon{
+    width:224px;
+    height:42px;
+    margin-bottom:10px;
+}
+
+#Login .divLoginContent .divSocialIcons .aSocialIcon.facebook{
+    background-color:#0b66af;
+}
+
+#Login .divLoginContent .divSocialIcons .aSocialIcon.twitter{
+    background-color:#26b1df;
+}
+
+#Login .divLoginContent .divSocialIcons .aSocialIcon.instagram{
+    background-color:#61534e;
+}
+
+#Login .divLoginContent .divSocialIcons .aSocialIcon img{
     float:left;
-    width:9px;
-    margin:0 10px 0 0;
+    margin-left:20px;
+    border:1px solid #f00;
+}
+
+#Login .divLoginContent .divSocialIcons .aSocialIcon span{
+    position:absolute;
+    left:62px;
+    height:100%;
+    padding-top:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+    #Login #pageHeader{
+        display:block;
+    }
+
+    #Login{
+        top:70px;
+        bottom:0;
+        height:auto;
+        background-color:#fff;
+    }
+
+    #Login .divLoginContent{
+        position:absolute;
+        top:30px;
+        bottom:0;
+        padding:30px 0 30px 0;
+        width:100%;
+        overflow:auto;
+    }
+
+    #Login .divLoginContent .divLogin{
+        float:none;
+        width:90%;
+        margin:auto;
+        text-align:center;
+    }
+
+    #Login .divLoginContent .divLogin h1.logIn{
+        display:none;
+    }
+
+    #Login .divLoginContent .divLogin button{
+        float:none;
+        margin:10px auto 10px auto;
+        font-size: 15px !important;
+    }
+
+    #Login .divLoginContent .divLogin a{
+        float:none;
+    }
+
+    #Login .divLoginContent .divOr{
+        float:none;
+        margin:65px auto 0 auto;
+        width:90%;
+        height:2px;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    #Login .divLoginContent .spanOr{
+        top:-6px;
+        left:50%;
+        margin-left:-45px;
+        padding:0 20px 0 20px;
+        background-color:#fff;
+    }
+
+    #Login .divLoginContent .divSocialIcons{
+        float:none;
+        width:90%;
+        margin:53px auto 0 auto;
+    }
+
+    #Login .divLoginContent .divSocialIcons .aSocialIcon{
+        margin:0 auto 10px auto;
+    }
+
+
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+
+    #Login #pageHeader{
+        display:block;
+    }
+
+    #Login{
+        top:70px;
+        bottom:0;
+        height:auto;
+        background-color:#fff;
+    }
+
+    #Login .divLoginContent{
+        position:absolute;
+        top:30px;
+        bottom:0;
+        padding:30px 0 30px 0;
+        width:100%;
+        overflow:auto;
+    }
+
+    #Login .divLoginContent .divLogin{
+        float:none;
+        width:90%;
+        margin:auto;
+        text-align:center;
+    }
+
+    #Login .divLoginContent .divLogin h1.logIn{
+        display:none;
+    }
+
+    #Login .divLoginContent .divLogin button{
+        float:none;
+        margin:10px auto 10px auto;
+        font-size: 15px !important;
+    }
+
+    #Login .divLoginContent .divLogin a{
+        float:none;
+    }
+
+    #Login .divLoginContent .divOr{
+        float:none;
+        margin:65px auto 0 auto;
+        width:90%;
+        height:2px;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    #Login .divLoginContent .spanOr{
+        top:-6px;
+        left:50%;
+        margin-left:-45px;
+        padding:0 20px 0 20px;
+        background-color:#fff;
+    }
+
+    #Login .divLoginContent .divSocialIcons{
+        float:none;
+        width:90%;
+        margin:53px auto 0 auto;
+    }
+
+    #Login .divLoginContent .divSocialIcons .aSocialIcon{
+        margin:0 auto 10px auto;
+    }
+    
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    #Login #pageHeader{
+       display:block;
+    }
+
+    #Login{
+        bottom:0;
+        height:auto;
+        background-color:#fff;
+    }
+
+    #Login .divLoginContent{
+        width:670px;
+    }
+
+    #Login .divLoginContent .divLogin{
+        float:none;
+        margin:auto;
+        width:455px;
+    }
+
+    #Login .divLoginContent .divLogin h1.logIn{
+        display:none;
+    }
+
+    #Login .divLoginContent .divLogin .input{
+        height:52px !important;
+        font-size: 13px !important;
+        text-align:center;
+    }
+
+    #Login .divLoginContent .divLogin button{
+        float:none;
+        margin:20px 0 20px 85px;
+        width:200px;
+        font-size: 15px !important;
+    }
+
+    #Login .divLoginContent .divLogin a{
+        float:none;
+        font-size: 13px !important;
+        text-align:center;
+    }
+
+
+    #Login .divLoginContent .divOr{
+        float:none;
+        margin:65px 0 0 0;
+        width:100%;
+        height:2px;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    #Login .divLoginContent .spanOr{
+        top:-6px;
+        left:50%;
+        margin-left:-45px;
+        padding:0 20px 0 20px;
+        background-color:#fff;
+    }
+
+
+    #Login .divLoginContent .divSocialIcons{
+        float:none;
+        margin:60px auto 0 auto;
+    }
+
+    #Login .divLoginContent .divSocialIcons .aSocialIcon{
+        margin:0 auto 10px auto;
+    }
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    #Login .divLoginContent{
+        width:960px;
+    }
+
+    #Login .divLoginContent .divOr{
+        margin:37px 0 0 135px;
+    }
+
+    #Login .divLoginContent .divSocialIcons{
+        width:340px;
+    }
+}
+
+@media all and (min-width: 1435px) {
+    #Login .divLoginContent{
+        width:1080px;
+    }
 }

@@ -127,8 +127,13 @@
                         <div class="divAddressText">
                             <h3 class="faceXX">Teslimat Adresi</h3>
                             <p class="faceYY pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu? <a href="#" class="aNewAddress aStyleI">Yeni bir adres ekleyin.</a>
+                                Siparişinizin teslim edilmesini istediğiniz adresi seçin.
                             </p>
+
+                            <div class="addressNewOrSaved">
+                                <label for="savedAddressRadio" class="labelB"><input name="address" type="radio" id="savedAddressRadio" checked />Kayıtlı Adres</label>
+                                <label for="newAddressRadio" class="labelB"><input name="address" type="radio" id="newAddressRadio" checked />Yeni Adres</label>
+                            </div>
                         </div>
 
 
@@ -211,7 +216,37 @@
                         </div>
 
                         
-                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" checked />Fatura Adresim ile teslimat adresim aynı.</label>
+                        <label for="sampleD" class="labelA"><input type="checkbox" id="sampleD" />Fatura Adresim ile teslimat adresim aynı.</label>
+                        <div class="separator"></div>
+
+
+                        <div class="demandPhoneNumber">
+                            <p class="demandPhoneNumberDescription">SİPARİŞİNİZİN SİZE HIZLI BİR ŞEKİLDE ULAŞABİLMESİ İÇİN MOBİL TELEFON NUMARANIZ:</p>
+                            <input class="inputTextC phoneNumberInput" type="text" placeholder="TELEFON NUMARASI" />
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="sendToSomeoneElse">
+                            <label for="someoneElse" class="labelA"><input type="checkbox" id="someoneElse" />Siparişimi başka birinin teslim almasını istiyorum.</label>
+                            <div class="sendToSomeoneElseDetails">
+                                <p class="faceYY">Siparişinizi sizin dışınızda teslim alabilecek kişinin adı:</p>
+                                <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+
+                                <p class="faceYY">Siparişinizi başka bir kişiye göndermek istiyorsanız lütfen ismini giriniz:</p>
+                                <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+                            </div>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="orderDetailNotes">
+                            <h3 class="faceXX">Ürün ve Sipariş Notları</h3>
+                            <label for="giftWrapThis" class="labelA"><input type="checkbox" id="giftWrapThis" />Hediye paketi istiyorum</label>
+                            <label for="giftNoteThis" class="labelA"><input type="checkbox" id="giftNoteThis" />Hediye notu eklemek istiyorum</label>
+                            <textarea class="textareaStyleA giftNoteTextarea"></textarea>
+                        </div>
+
                         <div class="separator"></div>
 
                         <a href="#" class="aStyleF saveBtnA">KAYDET VE DEVAM ET</a>
@@ -288,7 +323,7 @@
                             <div class="divCartName">
                                 <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="inputTextC inputCart" />
                             </div>
-
+                            <img src="images/bonuslogo.png" class="cardLogo">
                             <div class="divCartNumber">
                                 <input type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="inputTextC inputCart" />
 

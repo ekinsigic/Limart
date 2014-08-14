@@ -9,8 +9,8 @@ $(window).load(function(){
 
 function paymentDynamics() {
 
-		$('.divAddressContent label input[type="checkbox"]').change(function(){
-			transitions();
+		$('.divAddressContent label input[type="checkbox"]#sampleD').change(function(){
+			transitions('#payment');
 			setTimeout(function(){
 				if ($('.divAddressContent #sampleD').is(':checked')) {
 					$('.divBillingAddress').addClass('billingAddressOff');
@@ -20,6 +20,17 @@ function paymentDynamics() {
 				}
 			},700)
 		});
+
+		$('#newAddressRadio').change(function(){
+			transitions('#payment');
+			setTimeout(function(){
+				if ($('#newAddressRadio').is(':checked')) {
+					$('.divAddressContent').addClass('divAddNewAddressOff');
+					$('.divAddNewAddress').removeClass('divAddNewAddressOff');
+				}
+			},700)
+		});
+
 
 		$('.divAddressContent .divAddressOption label input[type="radio"]').change(function(){
 			$('.divAddressContent .divAddressOption').removeClass('active');

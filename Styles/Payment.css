@@ -43,8 +43,14 @@
     }
 
     #address .divAddress .edit{
-        margin-top:30px;
-    }
+        margin-top: 15px;
+    
+        padding-top: 15px;
+        display: block;
+        width: 140px;
+        height: 30px;
+        cursor: pointer;
+}
 
 
 
@@ -92,7 +98,7 @@
 
         #address .divContent .divAddressContent .pDescription{
             width:350px;
-            margin:20px 0 55px 0;
+            margin: 20px 0 10px 0;
         }
 
         #address .divContent .divAddressContent .saveBtn{
@@ -209,8 +215,10 @@
 
     #address .divContent .divPaymentContent .divCartName{
         width:388px;
-        margin-bottom: 60px;
-    }
+        margin-bottom: 10px;
+    
+        margin-top: 60px;
+}
 
     #address .divContent .divPaymentContent .divCartNumber{
         width:100%;
@@ -219,7 +227,7 @@
 
         #address .divContent .divPaymentContent .divCartNumber .divBankCard{
             position:absolute;
-            top: -45px;
+            top: -100px;
             left: 0;
         }
 
@@ -755,7 +763,25 @@ textarea {
 
 /* END - KREDİ KARTI TABLOSU */
 
+/* GENEL YAPIYA EKLEMELER */
 
+.addressNewOrSaved {
+    margin-bottom: 20px;
+}
+
+.optionBox.creditCardOption .cardLogo {
+    position: absolute;
+    left: 400px;
+    top: 66px;
+    width: 100px;
+}
+#address .divContent .divAddressContent .addressNewOrSaved label{
+}
+#address .divContent .divAddressContent .addressNewOrSaved label:last-child{
+    margin-left: 30px;
+}
+
+/* END GENEL YAPIYA EKLEMELER */
 
 
 

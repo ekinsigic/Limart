@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="Styles/Form.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/PopUp.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/Member.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Default.css" />
 
     <!-- SLIDER - STYLESHEET FILES -->
@@ -27,7 +27,6 @@
     <link type="text/css" media="screen" href="SliderFiles/rs-minimal-white.css" rel="stylesheet">
     <link type="text/css" media="screen" href="SliderFiles/rs-custom-nearby.css" rel="stylesheet">
     <!-- END - STYLESHEET FILES -->
-
 
 
 </head>
@@ -90,7 +89,7 @@
 
 
 
-    <section id="search">
+    <section id="search" class="sixtyThreeOpeners">
         <div class="divSearchContent">
             <input type="text" class="inputTextB" />
             <a href="#" class="aSearchButton"><img data-sixtythree="icon-search"></a>
@@ -100,14 +99,16 @@
 
 
 
-    <section id="Login">
-        <div id="pageHeader">
+    <section id="Login" class="sixtyThreeOpeners member">
+        
+        <!-- LOGIN CONTENT -->
+        <div class="openerHeader login">
             <h1 class="faceEE">GİRİŞ YAP</h1>
         </div>
-
+        
         <div class="divLoginContent">
             <div class="divLogin">
-                <h1 class="faceFFF logIn">GİRİŞ YAP</h1>
+                <h1 class="faceFFF login">GİRİŞ YAP</h1>
                 <input type="text" placeholder="KULLANICI ADI" class="inputTextE input" />
                 <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
 
@@ -140,34 +141,69 @@
 
             <div class="separator"></div>
         </div>
-
-    </section>
-
+        <!-- END - LOGIN CONTENT -->
 
 
-    <!-- NEW MEMBER -->
-    <section id="newMember">
-        <div id="pageHeader">
+
+        <!-- NEW MEMBER CONTENT -->
+        <div class="openerHeader member">
             <h1 class="faceEE">KAYIT OL</h1>
         </div>
 
+        <div class="divNewMemberContent">
 
 
-        <div class="divLogin">
-            <h1 class="faceFFF logIn">GİRİŞ YAP</h1>
+            <div class="divMemberA">
+                <h1 class="faceFFF login">KAYIT OL</h1>
 
-            <input type="text" placeholder="İSİM" class="inputTextE input" />
-            <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+                <input type="text" placeholder="İSİM" class="inputTextE input" />
+                <input type="text" placeholder="SOYİSİM" class="inputTextE input" />
+            </div>
 
-            <button class="buttonB">GİRİŞ YAP</button>
+            <div class="divMemberB">
+                <input type="text" placeholder="E-POSTA ADRESİ" class="inputTextE input" />
+                <input type="text" placeholder="CİNSİYET" class="inputTextE input" />
+            </div>
 
-            <a href="#" class="aStyleJ signUp">ÜYE OLMAK İSTİYORUM</a>
-            <a href="#" class="aStyleJ forgotPassword">ŞİFREMİ UNUTTUM</a>
+            <div class="divMemberC">
+                <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+                <input type="text" placeholder="ŞİFRE(TEKRAR)" class="inputTextE input" />
+            </div>
+
+            <div class="separator"></div>
+
+
+            <div class="divMemberD">
+                <button class="buttonB">KAYIT OL</button>
+                <label for="" class="labelA"><input type="checkbox" id="" /><a href="#">Üyelik sözleşmesini okudum.</a></label>
+                
+                <div class="separator"></div>
+            </div>
+
+
+
+
+            <div class="separator line"></div>
+
+
+
+            <a href="#" class="aStyleE contShopping">
+                <img data-sixtythree="arrow-previous"><span>ZATEN ÜYEYİM</span>
+            </a>
+
+            <div class="separator"></div>
         </div>
-
+        <!-- END - NEW MEMBER CONTENT -->
 
     </section>
-    <!-- END - NEW MEMBER -->
+
+
+
+    <section id="basket" class="sixtyThreeOpeners"></section>
+
+
+
+   
 
 
 

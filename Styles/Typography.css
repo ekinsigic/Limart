@@ -855,6 +855,18 @@ a.aStyleI {
     .aStyleA:active {
         border-bottom: 0;
     }
+
+    .faceB {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+
+    .faceC {
+        font-size: 30px;
+        letter-spacing: 5.30px;
+    }
+
     .faceEE {
         font-size: 20px;
         letter-spacing: 4px;

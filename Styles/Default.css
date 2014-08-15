@@ -377,6 +377,17 @@
 
 @media all and (min-width: 401px) and (max-width: 700px) {
 
+    #mainEntry .divText {
+        width: 90%;
+        margin: -80px 0 0 -45%;
+        padding-top: 0;
+    }
+
+        #mainEntry .divText .slideNo,
+        #mainEntry .divText .divLineF {
+            display: none;
+        }
+
         #welcomeText .pText {
             width: 90%;
         }

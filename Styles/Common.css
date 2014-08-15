@@ -67,10 +67,10 @@
 
 
 
-#search{
+#searchPanel{
     position:fixed;
     z-index:15;
-    top:30px;
+    top: 30px;
     width:100%;
     height:60px;
     background-color:#ececef;
@@ -81,18 +81,18 @@
     -o-transition:-o-transform 0.5s ease;
 }
 
-#search .divSearchContent{
+#searchPanel .divSearchContent{
     margin:auto;
     width:960px;
 }
 
-#search .divSearchContent .inputTextB{
+#searchPanel .divSearchContent .inputTextB{
     position:absolute;
     top:12px;
     right:40px;
 }
 
-#search .aSearchButton{
+#searchPanel .aSearchButton{
     position:absolute;
     top:23px;
     right:0;
@@ -100,7 +100,7 @@
     height:12px;
 }
 
-#search .aSearchButton img{
+#searchPanel .aSearchButton img{
     width:100%;
     height:auto;
 }
@@ -113,7 +113,7 @@
     transform:translate3d(0px,60px,0px);
 }
 
-#search .pseudoCursor {
+#searchPanel .pseudoCursor {
     position: absolute;
     width: 1px;
     height: 17px;
@@ -178,12 +178,54 @@ main{
 /* PAGE HEADER */
 #pageHeader {
     height: 100px;
-    line-height: 100px;
     background-color: #f0f0f0;
+    line-height: 100px;
     text-align: center;
 }
 /* END - PAGE HEADER */
 
+
+/* ADDITIONAL PANELS CSS */
+.sixtythreePanel {
+    transition:all 0.7s;
+    overflow: auto;
+    z-index: 19;
+}
+.divUserPanel, .divBasketPanel{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    padding: 100px;
+    background:tomato;
+}
+.divBasketPanel {
+    background: orange;
+}
+.userInnerPanel{
+    display: none;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 60px;
+    font-weight: 900;
+    opacity: 0;
+    -webkit-transform:scale(0.98);
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+}
+#userPanelInnerDivPassword{
+    color: cyan;
+}
+.activeInnerPanel {
+    opacity: 1;
+    -webkit-transform:scale(1);
+}
+.userPanelInnerPanelVisible {
+    display:block;
+}
+.panelInnerLink {
+    cursor: pointer;
+}
+/* END - ADDITIONAL PANEL CSS */
 
 
 /* Screen */

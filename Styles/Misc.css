@@ -47,6 +47,14 @@ img[data-sixtythree="icon-search"] {
     width: 12px;
     height: 12px;
 }
+img[data-sixtythree="icon-user"] {
+    width: 12px;
+    height: 12px;
+}
+img[data-sixtythree="icon-basket"] {
+    width: 12px;
+    height: 12px;
+}
 
 img[data-sixtythree="icon-room-view"] {
     display: block;

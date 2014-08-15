@@ -65,6 +65,55 @@ nav .divSearchIcon .imgSearch {
     bottom: 13px;
 }
 
+nav .divMenuIcon {
+    position: absolute;
+    top: 26px;
+    right: 68px;
+    width: 40px;
+    z-index: 99;
+    height: 40px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+nav .divMenuIcon .imgMenu {
+    position: absolute;
+    right: 1px;
+    bottom: -6px;
+}
+
+nav .divUserIcon {
+    position: absolute;
+    top: 26px;
+    right: -47px;
+    width: 40px;
+    z-index: 99;
+    height: 40px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+nav .divUserIcon .imgUser {
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+}
+nav .divBasketIcon {
+    position: absolute;
+    top: 26px;
+    right: 136px;
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+nav .divBasketIcon .imgBasket {
+    position: absolute;
+    right: 14px;
+    bottom: 13px;
+}
 nav .divNav .divMenuContent {
     display:none;
 }

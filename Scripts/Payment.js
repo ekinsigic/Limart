@@ -8,11 +8,13 @@ $(window).load(function(){
 });
 
 var originalDivBillingAddressHeight = -1;
+var originalGiftNoteTextareaHeight = -1;
+var originalsendToSomeoneElseHeight = -1;
 
 function paymentDynamics() {
 		$('#differentBillingAddress').change(function(){
 
-if(originalDivBillingAddressHeight == -1) originalDivBillingAddressHeight = $('.divBillingAddress').height();
+				if(originalDivBillingAddressHeight == -1) originalDivBillingAddressHeight = $('.divBillingAddress').height();
 
 				if (!$('#differentBillingAddress').is(':checked')) {
 
@@ -23,9 +25,8 @@ if(originalDivBillingAddressHeight == -1) originalDivBillingAddressHeight = $('.
 						'overflow':'hidden',
 						'margin':'0px',
 						'opacity':'0',
-						'-webkit-transform':'scale(0.9)'
+						'-webkit-transform':'scale(0.9) translate3d(0px,0px,0px)',
 					});
-
 					setTimeout(function(){
 						$('.divBillingAddress').addClass('billingAddressOff');
 					},700);
@@ -39,45 +40,110 @@ if(originalDivBillingAddressHeight == -1) originalDivBillingAddressHeight = $('.
 						'overflow':'hidden',
 						'margin':'0px',
 						'opacity':'0',
-						'-webkit-transform':'scale(0.8)'
+						'-webkit-transform':'scale(0.8) translate3d(0px,0px,0px)'
 					});
 
 					$('.divBillingAddress').removeClass('billingAddressOff');
 
 					setTimeout(function(){
+						scrollTo('.divBillingAddress');
 						$('.divBillingAddress').css({
 							'height': originalDivBillingAddressHeight,
 							'transition':'all 0.7s',
 							'overflow':'hidden',
 							'opacity':'1',
-							'-webkit-transform':'scale(1)'
+							'-webkit-transform':'scale(1) translate3d(0px,0px,0px)'
 						});
 					},5)
 				}
 		});
 
 		$('#giftNoteThis').change(function(){
-			transitions('.orderDetailNotes');
-			setTimeout(function(){
+
+			if(originalGiftNoteTextareaHeight == -1) originalGiftNoteTextareaHeight = $('.giftNoteTextarea').height();
+
 				if ($('#giftNoteThis').is(':checked')) {
+
+					scrollTo('.giftNoteTextarea');
+					$('.giftNoteTextarea').css({
+						'height':'0px',
+						'transition':'all 0.0s',
+						'overflow':'hidden',
+						'margin':'0px',
+						'opacity':'0',
+						'-webkit-transform':'scale(0.95) translate3d(0px,0px,0px)'
+					});
+
 					$('.giftNoteTextarea').addClass('innerPaymentMakeVisible');
+
+					setTimeout(function(){
+						$('.giftNoteTextarea').css({
+							'height': originalGiftNoteTextareaHeight,
+							'transition':'all 0.7s',
+							'overflow':'hidden',
+							'opacity':'1',
+							'-webkit-transform':'scale(1) translate3d(0px,0px,0px)'
+						});
+					},5)
+
 				}
 				else {
-					$('.giftNoteTextarea').removeClass('innerPaymentMakeVisible');
+					$('.giftNoteTextarea').css({
+						'height':'0px',
+						'transition':'all 0.7s',
+						'overflow':'hidden',
+						'margin':'0px',
+						'opacity':'0',
+						'-webkit-transform':'scale(0.9) translate3d(0px,0px,0px)'
+					});
+
+					setTimeout(function(){
+						$('.giftNoteTextarea').removeClass('innerPaymentMakeVisible');
+					},700);
 				}
-			},700)
 		});
 
 		$('#someoneElse').change(function(){
-			transitions('.sendToSomeoneElse');
-			setTimeout(function(){
+
+			if(originalsendToSomeoneElseHeight == -1) originalsendToSomeoneElseHeight = $('.sendToSomeoneElseDetails').height();
 				if ($('#someoneElse').is(':checked')) {
+					scrollTo('.sendToSomeoneElseDetails');
+					$('.sendToSomeoneElseDetails').css({
+						'height':'0px',
+						'transition':'all 0.0s',
+						'overflow':'hidden',
+						'margin':'0px',
+						'opacity':'0',
+						'-webkit-transform':'scale(0.95)'
+					});
+
 					$('.sendToSomeoneElseDetails').addClass('innerPaymentMakeVisible');
+
+					setTimeout(function(){
+						$('.sendToSomeoneElseDetails').css({
+							'height': originalsendToSomeoneElseHeight,
+							'transition':'all 0.3s',
+							'overflow':'hidden',
+							'opacity':'1',
+							'-webkit-transform':'scale(1)'
+						});
+					},5)
 				}
 				else {
-					$('.sendToSomeoneElseDetails').removeClass('innerPaymentMakeVisible');
+
+					$('.sendToSomeoneElseDetails').css({
+						'height':'0px',
+						'transition':'all 0.3s',
+						'overflow':'hidden',
+						'margin':'0px',
+						'opacity':'0',
+						'-webkit-transform':'scale(0.9)'
+					});
+
+					setTimeout(function(){
+						$('.sendToSomeoneElseDetails').removeClass('innerPaymentMakeVisible');
+					},300);
 				}
-			},700)
 		});
 
 		$('#newAddressRadio').change(function(){
@@ -201,14 +267,14 @@ function setupNewAddressForm(e) {
 function setupTabs(status,e) {
 		e.preventDefault();
 		if (status == 'payment') {
-			transitions('#address', 'big');
+			transitions('.divContent', 'big');
 			setTimeout(function(){
 				$('#payment').removeClass('adressInfo');
 				$('#payment').addClass('paymentOptions');
 			},700)
 		}
 		else if (status == 'address') {
-			transitions('#address', 'big');
+			transitions('.divContent', 'big');
 			setTimeout(function(){
 				$('#payment').addClass('adressInfo');
 				$('#payment').removeClass('paymentOptions');
@@ -221,7 +287,7 @@ function orderComplete() {
 }
 
 function saveNewAddress() {
-	transitions('#address');
+	transitions('.divContent');
 	setTimeout(function(){
 		$('.divAddressContent').removeClass('divAddNewAddressOff');
 		$('.divAddNewAddress').addClass('divAddNewAddressOff');
@@ -230,7 +296,7 @@ function saveNewAddress() {
 
 function cancelNewAddress(e) {
 	if (e != null) e.preventDefault();
-		transitions('#address');
+		transitions('.divContent');
 		setTimeout(function(){
 			$('.divAddressContent').removeClass('divAddNewAddressOff');
 			$('.divAddNewAddress').addClass('divAddNewAddressOff');
@@ -258,7 +324,6 @@ function paymentOptions(selectedElement) {
 
 
 function transitions(elementName, transitionType) {
-	$('body').animate({scrollTop: $(elementName).offset().top - 100}, '700');
 	if (elementName == null) {
 		elementName = '.divAddressContent';
 	};
@@ -295,12 +360,6 @@ function transitions(elementName, transitionType) {
 
 }
 
-
-
-
-
-
-
-
-
-
+function scrollTo(elementName) {
+	$('body').animate({scrollTop: $(elementName).offset().top - 100}, '700');
+}

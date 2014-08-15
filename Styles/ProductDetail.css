@@ -380,7 +380,6 @@
 
     .topFullWidth img {
         float:left;
-                                                
         position: absolute;
         top: -94px;
         left: 0px;
@@ -517,42 +516,41 @@
         float: none;
         margin-bottom: 21px;
     }
-    .topFullWidth h5 {
 
+    .topFullWidth h5 {
         display: none;
     }
 
     .topFullWidth img {
         float:left;
-                                                
         position: absolute;
         top: -94px;
-        left: 0px;
-        opacity: 0.4;
+        left: 0;
         margin-left: 0px;
+        opacity: 0.4;
     }
+
     .topFullWidth img:first-child{
-        right: 0px;
-        left: auto;
+        left: 0;
         display: block;
     }
+
     .topFullWidth img {
         display:block;
-    
         opacity: 1;
     }
 
     .artworkImage .artworkImageActual {
         width:100%;
         padding-bottom: 19px;
-
-        border-bottom: 1px solid #D8D8D8;
         margin-bottom: 9px;
+        border-bottom: 1px solid #D8D8D8;
     }
 
     .artworkInfo {
         padding-left: 0px;
     }
+
     .artworkInfo .artworkPrice{
         margin-top: 54px;
         padding-bottom: 36px;           
@@ -579,25 +577,30 @@
         right: 137px;
     }
 
-    .artworkInfo .artworkDetails{
-        margin-top: 49px;                                              
-    }
+    
     .topFullWidth .artworkHeading {
         margin-top: 56px;
 
     }
     .artworkHeading .artworkName {
+        display:inline-block;
         letter-spacing: 3px;
         margin-bottom: 6px;
     }
+
     .artworkInfo .artworkDetails h5{
         opacity: 0.5;
         margin-bottom: 11px;                    
         text-align: left;
     }
 
+    .artworkInfo .artworkDetails{
+        margin-top: 49px; 
+        width:400px;
+    }
+
     .artworkInfo .artworkDetails p{
-        width: 50%;
+        width: 100%;
         text-align: left;
         line-height: 20px;
     }
@@ -607,28 +610,37 @@
         right: 0px;
         top: 216px;
     }
+
     .divLineG {
         display: none;
     }
 
-    .artworkHeading img {
-        display: block;
-        top: 8px;
-        opacity: 0.2;
+
+
+    .artworkHeading a{
+        display:inline-block;
+        position:absolute;
+        top:5px;
+        width:15px;
+        height:15px;
+        opacity:0.07;
     }
-    .artworkHeading img.next {
-        display: block;
-        top: 8px;
-        opacity: 0.06;
-        right: 0px;
-        left: auto;
+
+    .artworkHeading a img{
+        top:0;
     }
-    .artworkHeading img.previous {
-        display: block;
-        top: 8px;
-        opacity: 0.06;
-        left: 0px;
+
+    .artworkHeading a.aPrev{
+        left: 0;
     }
+
+    .artworkHeading a.aNext{
+        right: 0;
+    }
+
+    
+
+    
 }
 
 

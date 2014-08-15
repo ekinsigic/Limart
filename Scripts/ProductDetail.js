@@ -11,7 +11,9 @@ $(window).resize(function(){
         carryHeading();
     }
     else {
+        var itemsToCarry = $('.topFullWidth .artworkHeading');
         $('.topFullWidth .artworkHeading').remove();
+        $('.artworkInfo').prepend(itemsToCarry);
     }
 });
 function triggerGallerySlider() {

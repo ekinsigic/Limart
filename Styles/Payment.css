@@ -19,43 +19,42 @@
     cursor:pointer;
 }
 
-    #address .divAddress .homeAddress{
-        margin:30px 0 5px 0;
-    }
+#address .divAddress .homeAddress{
+    margin:30px 0 5px 0;
+}
 
-    #address .divAddress h3{
-        display:inline-block;
-    }
+#address .divAddress h3{
+    display:inline-block;
+}
 
-    #address .aNumber{
-        display:inline-block;
-    }
+#address .aNumber{
+    display:inline-block;
+}
 
-    #address .divAddress .number{
-        display:inline-block;
-        margin-left:5px;
-        color:#f2f2f2;
-    }
+#address .divAddress .number{
+    display:inline-block;
+    margin-left:5px;
+    color:#f2f2f2;
+}
 
-    #address .divAddress p{
-        width:290px;
-        margin-top:20px;
-    }
+#address .divAddress p{
+    width:290px;
+    margin-top:20px;
+}
 
-    #address .divAddress .edit{
-        margin-top: 15px;
-    
-        padding-top: 15px;
-        display: block;
-        width: 140px;
-        height: 30px;
-        cursor: pointer;
+#address .divAddress .edit{
+    margin-top: 15px;
+    padding-top: 15px;
+    display: block;
+    width: 140px;
+    height: 30px;
+    cursor: pointer;
 }
 
 
 
 
-
+/* ÖDEME SEÇENEKLERİ */
 #address .divPayment{
     float:right;
     height:236px;
@@ -63,19 +62,18 @@
     border-bottom:0;
 }
 
-    /* face */
-    #address .divPayment h2{
-        color:#cacaca;
-    }
+#address .divPayment h2{
+    color:#cacaca;
+}
 
-    #address .divPayment p{
-        margin-top:30px;
-    }
-
+#address .divPayment p{
+    margin-top:30px;
+}
 
 
 
 
+/* CONTENT KISMI */
 #address .divContent{
     width:100%;
     padding:0 40px 50px 40px;
@@ -83,96 +81,86 @@
     border:1px solid #e5e5e5;
 }
 
-    #address .divContent .divAddressContent{
-        width:100%;
-    }
-
-        #address .divContent .divAddressContent .divAddressText {
-            float:left;
-        }
-
-        
-        #address .divContent .divAddressContent h3{
-            padding:40px 0 0 0;
-        }
-
-        #address .divContent .divAddressContent .pDescription{
-            width:350px;
-            margin: 20px 0 10px 0;
-        }
-
-        #address .divContent .divAddressContent .saveBtn{
-            float:right;
-            margin:33px 0 0 0;
-        }
 
 
-
-
-
-        #address .divContent .divAddressContent .divAddressOption,
-        #address .divContent .divAddressContent .divBusinessAddressOption,
-        #address .divContent .divAddressContent .divBillingAddressOption,
-        #address .divContent .divWirePaymentOption{
-            float:left;
-            padding-left:15px;
-            width:286px;
-            height:200px;
-            background-color:#fff;
-            border:1px solid #f2f2f2;
-        
-            margin-right: 8px;
+/* ADRES İÇERİK KISMI */
+#address .divContent .divAddressContent{
+    width:100%;
 }
 
-        #address .divContent .active{
-            background-color:#f2f2f2 !important;
-            border:1px solid #f8f8f8;
-        }
+#address .divContent .divAddressContent .divAddressText {
+    float:left;
+}
 
-        #address .divContent .divAddressContent label{
-            margin-top:10px;
-        }
+        
+#address .divContent .divAddressContent h3{
+    padding:40px 0 0 0;
+}
+
+#address .divContent .divAddressContent .pDescription{
+    width:350px;
+    margin: 20px 0 10px 0;
+}
+
+#address .divContent .divAddressContent .saveBtn{
+    float:right;
+    margin:33px 0 0 0;
+}
 
 
-        #address .divContent .divAddressContent .divAddressOption h4.name,
-        #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
-        #address .divContent .divAddressContent .divBillingAddressOption h4.name,
-        #address .divContent .divWirePaymentOption h4.name{
-            display:inline-block;
-            margin:20px 0 0 34px;
-        }
 
-        #address .divContent .divAddressContent .divAddressOption .number,
-        #address .divContent .divAddressContent .divBusinessAddressOption .number,
-        #address .divContent .divAddressContent .divBillingAddressOption .number,
-        #address .divContent .divWirePaymentOption .number{
-            display:inline-block;
-            margin:0;
-        }
 
-        #address .divContent .divAddressContent .divAddressOption p,
-        #address .divContent .divAddressContent .divBusinessAddressOption p,
-        #address .divContent .divAddressContent .divBillingAddressOption p,
-        #address .divContent .divWirePaymentOption p{
-            margin:15px 0 0 35px;
-            width:200px;
-            line-height:15px;
-        }
+/* OPTION KISMI */
+#address .divContent .divAddressContent .divAddressOption,
+#address .divContent .divAddressContent .divWirePaymentOption{
+    float:left;
+    margin-right: 8px;
+    padding-left:15px;
+    width:286px;
+    height:200px;
+    background-color:#fff;
+    border:1px solid #f2f2f2;
+}
+
+#address .divContent .active{
+    background-color:#f2f2f2 !important;
+    border:1px solid #f8f8f8;
+}
+
+#address .divContent .divAddressContent label{
+    margin-top:10px;
+}
+
+#address .divContent .divAddressContent .divAddressOption h4.name,
+#address .divContent .divWirePaymentOption h4.name{
+    display:inline-block;
+    margin:20px 0 0 34px;
+}
+
+#address .divContent .divAddressContent .divAddressOption .number,
+#address .divContent .divWirePaymentOption .number{
+    display:inline-block;
+    margin:0;
+}
+
+#address .divContent .divAddressContent .divAddressOption p,
+#address .divContent .divWirePaymentOption p{
+    margin:15px 0 0 35px;
+    width:200px;
+    line-height:15px;
+}
       
-        #address .divContent .divAddressContent a.icon{
-            float:right;
-            margin:25px 20px 0 0;
-        }
+#address .divContent .divAddressContent a.icon{
+    float:right;
+    margin:25px 20px 0 0;
+}
 
-        #address .divContent .divAddressContent a.icon img{
-            float:left;
-            margin:2px 6px 0 0;
-        }
+#address .divContent .divAddressContent a.icon img{
+    float:left;
+    margin:2px 6px 0 0;
+}
 
 
-        #address .divContent .divAddressContent .divBillingAddress{
-            margin:50px 0 0 0;
-        }
 
 
 
@@ -186,116 +174,114 @@
 
 
 
-
+/* PAYMENT İÇERİK */
 #address .divContent .divPaymentContent{
     width:100%;
 }
 
-    #address .divContent .divPaymentContent .divPaymentText{
-        float:left;
-        margin:40px 0 0 0;
-    }
-
-        #address .divContent .divPaymentContent .divPaymentText .pDescription{
-            width:300px;
-            margin:20px 0 35px 0;
-        }
-
-    #address .divContent .divPaymentContent .aInstallments{
-        float:right;
-        margin-top:50px;
-        text-decoration:underline;
-    }
-
-
-
-
-    #address .divContent .divPaymentContent .divCartName{
-        width:388px;
-        margin-bottom: 10px;
-    
-        margin-top: 60px;
+#address .divContent .divPaymentContent .divPaymentText{
+    float:left;
+    margin:40px 0 0 0;
 }
 
-    #address .divContent .divPaymentContent .divCartNumber{
-        width:100%;
-        margin-bottom:25px;
-    }
-
-        #address .divContent .divPaymentContent .divCartNumber .divBankCard{
-            position:absolute;
-            top: -100px;
-            left: 0;
-        }
-
-            #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
-                float:left;
-                margin-left:8px;
-            }
-
-        #address .divContent .divPaymentContent .divExpirationDate span,
-        #address .divContent .divPaymentContent .divSecurity span{
-            display:block;
-            margin-bottom:10px;
-            padding-left:20px;
-        }
-
-        #address .divContent .divPaymentContent .divSecurity span{
-            padding-left:0;
-        }
-
-        #address .divContent .divPaymentContent .divExpirationDate{
-            float:left;
-            width:250px;
-        }
-
-            #address .divContent .divPaymentContent .divExpirationDate .selectExpirationDate{
-                float:left;
-                margin-right:10px;
-                width:80px !important;
-                height:45px !important;
-                background-position: 60px center;
-            }
-
-            #address .divContent .divPaymentContent .divSecurity{
-                float:left;
-                width:140px;
-            }
-
-                #address .divContent .divPaymentContent .divSecurity .inputSecurity{
-                    width:100% !important;
-                    height:45px !important;
-                
-                    margin-top: 20px;
+#address .divContent .divPaymentContent .divPaymentText .pDescription{
+    width:300px;
+    margin:20px 0 35px 0;
 }
 
-            #address .divContent .divPaymentContent .divPay{
-                float:left;
-                margin-top:70px;
-                width:260px;
-            }
+#address .divContent .divPaymentContent .aInstallments{
+    float:right;
+    margin-top:50px;
+    text-decoration:underline;
+}
 
-                #address .divContent .divPaymentContent .divPay .paymentBtn{
-                    padding:13px 80px;
-                }
 
-                #address .divContent .divPaymentContent .divPay label{
-                    float:left;
-                    margin-top:20px;
-                    padding-left:0px;
-                }
 
-                #address .divContent .divPaymentContent .divPay label .input{
-                    position:absolute;
-                    top:-3px;
-                    left:20px;
-                }
 
-                #address .divContent .divPaymentContent .divPay label a{
-                    display:inline-block;
-                    text-decoration:underline;
-                    color:#000;
-                }
+#address .divContent .divPaymentContent .divCartName{
+    width:388px;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+#address .divContent .divPaymentContent .divCartNumber{
+    width:100%;
+    margin-bottom:25px;
+}
+
+#address .divContent .divPaymentContent .divCartNumber .divBankCard{
+    position:absolute;
+    top: -100px;
+    left: 0;
+}
+
+#address .divContent .divPaymentContent .divCartNumber .divBankCard img{
+    float:left;
+    margin-left:8px;
+}
+
+#address .divContent .divPaymentContent .divExpirationDate span,
+#address .divContent .divPaymentContent .divSecurity span{
+    display:block;
+    margin-bottom:10px;
+    padding-left:20px;
+}
+
+#address .divContent .divPaymentContent .divSecurity span{
+    padding-left:0;
+}
+
+#address .divContent .divPaymentContent .divExpirationDate{
+    float:left;
+    width:250px;
+}
+
+#address .divContent .divPaymentContent .divExpirationDate .selectExpirationDate{
+    float:left;
+    margin-right:10px;
+    width:80px !important;
+    height:45px !important;
+    background-position: 60px center;
+}
+
+#address .divContent .divPaymentContent .divSecurity{
+    float:left;
+    width:140px;
+}
+
+#address .divContent .divPaymentContent .divSecurity .inputSecurity{
+    width:100% !important;
+    height:45px !important;
+    margin-top: 20px;
+}
+
+#address .divContent .divPaymentContent .divPay{
+    float:left;
+    margin-top:70px;
+    width:260px;
+}
+
+#address .divContent .divPaymentContent .divPay .paymentBtn{
+    padding:13px 80px;
+}
+
+#address .divContent .divPaymentContent .divPay label{
+    float:left;
+    margin-top:20px;
+    padding-left:25px;
+}
+
+#address .divContent .divPaymentContent .divPay label .input{
+    position:absolute;
+    top:-3px;
+    left:-2px;
+}
+
+#address .divContent .divPaymentContent .divPay label a{
+    display:inline-block;
+    text-decoration:underline;
+    color:#000;
+}
 
 
 
@@ -313,45 +299,44 @@
     width:374px;
 }
 
-    #orderSummary h3.order{
-        margin-top:30px;
-        text-align:center;
-    }
+#orderSummary h3.order{
+    margin-top:30px;
+    text-align:center;
+}
 
-    #orderSummary table{
-        width:100%;
-    }
+#orderSummary table{
+    width:100%;
+}
 
-        #orderSummary table tr td{
-            padding:20px 0 20px 0;
-            border-bottom:1px solid #ededed;
-            text-align:left;
-            vertical-align:middle;
-        }
+#orderSummary table tr td{
+    padding:20px 0 20px 0;
+    border-bottom:1px solid #ededed;
+    text-align:left;
+    vertical-align:middle;
+}
 
-            #orderSummary table tr td.tdImg{
-                width:90px;
-            }
+#orderSummary table tr td.tdImg{
+    width:90px;
+}
 
-                #orderSummary table tr td.tdImg img{
-                    width:90px;
-                    height:auto;
-                    border: 5px solid #fff;
-                    box-shadow: 0 0 10px #ccc;
-                }
-
+#orderSummary table tr td.tdImg img{
+    width:90px;
+    height:auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px #ccc;
+}
             
-            #orderSummary table tr td.tdDescription{
-                padding-left:20px;
-            }
+#orderSummary table tr td.tdDescription{
+    padding-left:20px;
+}
 
-            #orderSummary table tr td.tdDescription h4.productName{
-                line-height:18px;
-            }
+#orderSummary table tr td.tdDescription h4.productName{
+    line-height:18px;
+}
 
-            #orderSummary table tr td.tdDescription h5.subName{
-                margin-top:5px;
-            }
+#orderSummary table tr td.tdDescription h5.subName{
+    margin-top:5px;
+}
 
 
 
@@ -359,15 +344,15 @@
     margin-top:10px;
 }
 
-    #orderSummary table tr td div .spanPrice{
-        float:left;
-        color:#000;
-    }
+#orderSummary table tr td div .spanPrice{
+    float:left;
+    color:#000;
+}
 
-    #orderSummary table tr td div .spanTime{
-        float:right;
-        color:#000;
-    }
+#orderSummary table tr td div .spanTime{
+    float:right;
+    color:#000;
+}
 
 
 
@@ -378,25 +363,25 @@
     border-bottom:1px solid #4b4b4b;
 }
 
-    #orderSummary .divSubTotal span{
-        display:block;
-        color:#000;
-        margin-bottom:8px;
-    }
+#orderSummary .divSubTotal span{
+    display:block;
+    color:#000;
+    margin-bottom:8px;
+}
 
-    #orderSummary .divSubTotal .divLeft{
-        float:left;
-        text-align:left;
-    }
+#orderSummary .divSubTotal .divLeft{
+    float:left;
+    text-align:left;
+}
 
-    #orderSummary .divSubTotal .divRight{
-        float:right;
-        text-align:right;
-    }
+#orderSummary .divSubTotal .divRight{
+    float:right;
+    text-align:right;
+}
 
-    #orderSummary .divSubTotal .divRight .price{
-        font-size:14px;
-    }
+#orderSummary .divSubTotal .divRight .price{
+    font-size:14px;
+}
 
     
 
@@ -405,9 +390,9 @@
     text-align:center;
 }
 
-    #orderSummary .divTotal p.date{
-        margin-top:10px;
-    }
+#orderSummary .divTotal p.date{
+    margin-top:10px;
+}
 
 #orderSummary .divDiscount{
     margin-top:45px;
@@ -418,41 +403,41 @@
     text-align:center;
 }
 
-    #orderSummary .divDiscount .discount{
-        margin:auto;
-        width:250px;
-    }
+#orderSummary .divDiscount .discount{
+    margin:auto;
+    width:250px;
+}
 
-    #orderSummary .divDiscount .divDiscountInput {
-        margin-top: 20px;
-        width: 100% !important;
-    }
+#orderSummary .divDiscount .divDiscountInput {
+    margin-top: 20px;
+    width: 100% !important;
+}
 
-        #orderSummary .divDiscount .divDiscountInput input[type=text] {
-            width: 100% !important;
-            padding-right: 50px !important;
-        }
+#orderSummary .divDiscount .divDiscountInput input[type=text] {
+    width: 100% !important;
+    padding-right: 50px !important;
+}
 
-        #orderSummary .divDiscount .divDiscountInput input[type=image] {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 40px;
-            height: 29px;
-            padding: 10px 17px 10px 0;
-            margin-top: -15px;
-            opacity: 0.3;
-            transition: all 0.5s;
-        }
+#orderSummary .divDiscount .divDiscountInput input[type=image] {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40px;
+    height: 29px;
+    padding: 10px 17px 10px 0;
+    margin-top: -15px;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
 
-            #orderSummary .divDiscount .divDiscountInput input[type=image]:hover {
-                opacity: 1;
-            }
+#orderSummary .divDiscount .divDiscountInput input[type=image]:hover {
+    opacity: 1;
+}
 
-    #orderSummary .divDiscount .text{
-        width:100% !important;
-        margin-top:15px;
-    }
+#orderSummary .divDiscount .text{
+    width:100% !important;
+    margin-top:15px;
+}
 
 
 
@@ -475,9 +460,6 @@
     #payment.adressInfo .divAddress p {
         color: #f2f2f2
     }
-    #payment.adressInfo .divAddress a.edit {
-        display: none;
-    }
 
 #payment.paymentOptions .divPayment{
     float: left;
@@ -489,9 +471,11 @@
     cursor: pointer;
     transition: all 0.7s;
 }
+
     #payment.adressInfo .divAddress h2 {
         color: white;
     }
+
     #payment.adressInfo .divAddress p {
         color: #f2f2f2
     }
@@ -507,7 +491,7 @@
     border-bottom: 0px;
     transition: all 0.7s;
 }
-    #payment.paymentOptions .divAddress h2,
+     #payment.paymentOptions .divAddress h2,
      #payment.paymentOptions .divAddress .homeAddress,
      #payment.paymentOptions .divAddress h3,
      #payment.paymentOptions .divAddress .aNumber span{
@@ -515,21 +499,12 @@
     }
 
 
-.divBillingAddress.billingAddressOff {
-    display: none;
+
+.divBillingAddress {
+    margin-top: 0px !important;
 }
-.divAddNewAddress.divAddNewAddressOff {
-    display: none;
-}
-.divAddressContent.divAddNewAddressOff {
-    display: none;
-}
-#payment.paymentOptions .divAddressContent{
-    display: none;
-}
-#payment.adressInfo .divPaymentContent{
-    display: none;
-}
+
+
 .divAddressOption {
     transition:all 0.5s;
 }
@@ -549,7 +524,8 @@
 
 
 /* YENİ ADRES EKLEME FORMU */
-.divAddNewAddress input[type="text"], select{
+.divAddNewAddress input[type="text"], 
+select{
     float: left;
     margin-top: 10px;
     width: 291px;
@@ -557,7 +533,7 @@
 
 textarea {
     float: left;
-    width: calc(100%)
+    width: calc(100%);
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -608,13 +584,12 @@ textarea {
     margin: 0 auto;
 }
 
-.optionBox {
-    display: none;
-}
-
 .activePayment {
     display: block;
 }
+
+
+
 
 #payment .divContent .divPaymentContent .divWirePaymentOption {
     transition: all 0.3s;
@@ -645,12 +620,14 @@ textarea {
     top: 5px;
 }
 
-#payment .divContent .divPaymentContent .optionBox.paypalOption p, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption p{
+#payment .divContent .divPaymentContent .optionBox.paypalOption p, 
+#payment .divContent .divPaymentContent .optionBox.bkmexpressOption p{
     width: 70%;
     float: left;
     padding: 10px;
 }
-#payment .divContent .divPaymentContent .optionBox.paypalOption p a, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption p a{
+#payment .divContent .divPaymentContent .optionBox.paypalOption p a, 
+#payment .divContent .divPaymentContent .optionBox.bkmexpressOption p a{
     display: inline;
     color: #808080;
     font-size: 14px;
@@ -658,12 +635,14 @@ textarea {
     line-height: 18px;
 }
 
-#payment .divContent .divPaymentContent .optionBox.paypalOption img, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption img{
+#payment .divContent .divPaymentContent .optionBox.paypalOption img, 
+#payment .divContent .divPaymentContent .optionBox.bkmexpressOption img{
     width: 25%;
     float: left;
     margin: 14px;
 }
-#payment .divContent .divPaymentContent .optionBox.paypalOption .paypalButton, #payment .divContent .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
+#payment .divContent .divPaymentContent .optionBox.paypalOption .paypalButton, 
+#payment .divContent .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
     margin: 10px;
     margin-top: 20px;
     width: 120px;
@@ -671,8 +650,9 @@ textarea {
 /* END - ÖDEME SEÇENEKLERİ LİSTESİ */
 
 
-/* KREDİ KARTI TABLOSI */
 
+
+/* KREDİ KARTI TABLOSI */
 
 #paymentCreditCard table{
     margin:30px 0 0 0;
@@ -764,22 +744,11 @@ textarea {
 #paymentCreditCard .tableInstalment tr td:nth-child(3){
     text-align:center;
 }
-.divInstalmentSelection {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-align-items: flex-end;
-    -moz-align-items: flex-end;
-    -ms-align-items: flex-end;
-    -o-align-items: flex-end;
-    align-items: flex-end;
-}
-.giftNoteThis {
-    margin-left:20px;
-}
 /* END - KREDİ KARTI TABLOSU */
+
+
+
+
 
 /* GENEL YAPIYA EKLEMELER */
 
@@ -829,7 +798,6 @@ textarea {
 }
 .sendToSomeoneElseDetails {
     margin-top: 15px;
-    display: none;
 }
 .sendToSomeoneElseDetails p {
     margin-bottom: 5px;
@@ -839,10 +807,10 @@ textarea {
 }
 .orderDetailNotes textarea{
     margin-top:30px;
-    display:none;
 }
-.divBillingAddress {
-    margin-top: 0px !important;
+
+.giftNoteThis {
+    margin-left:20px;
 }
 
 /* END GENEL YAPIYA EKLEMELER */
@@ -864,15 +832,6 @@ textarea {
     #address .divAddress,
     #address .divPayment{
        display:none;
-   }
-
-    #address .divAddress .homeAddress,
-    #address .divAddress h3,
-    #address .divAddress .number,
-    #address .divAddress p,
-    #address .divAddress .edit,
-    #address .divPayment p{
-        display:none;
     }
 
     #address .divContent{
@@ -883,9 +842,10 @@ textarea {
     #address .divContent .divAddressContent{
         margin:auto;
         width:90%;
+        border:1px solid #f00;
     }
 
-     #address .divContent .divAddressContent h3{
+    #address .divContent .divAddressContent h3{
         padding:0;
     }
 
@@ -907,26 +867,21 @@ textarea {
 
 
     #address .divContent .divAddressContent .divAddressOption,
-    #address .divContent .divAddressContent .divBusinessAddressOption,
-    #address .divContent .divAddressContent .divBillingAddressOption,
     #address .divContent .divAddressContent .divWirePaymentOption{
         float:none;
         padding:0 10px 0 10px;
         margin-bottom:20px;
         width:100%;
         height:200px;
+        border:1px solid #f00;
     }
 
     #address .divContent .divAddressContent .divAddressOption h4.name,
-    #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
-    #address .divContent .divAddressContent .divBillingAddressOption h4.name,
     #address .divContent .divAddressContent .divWirePaymentOption h4.name{
         margin:10px 0 0 0;
     }
 
     #address .divContent .divAddressContent .divAddressOption p,
-    #address .divContent .divAddressContent .divBusinessAddressOption p,
-    #address .divContent .divAddressContent .divBillingAddressOption p,
     #address .divContent .divAddressContent .divWirePaymentOption p{
         margin:20px 0 0 0;
         width:95%;
@@ -934,6 +889,7 @@ textarea {
 
     #address .divContent .divAddressContent a.icon{
         margin:20px 10px 0 0;
+        border:1px solid #f00;
     }
 
     #address .divContent .divAddressContent a.icon img{
@@ -944,9 +900,6 @@ textarea {
         width:100%;
     }
 
-    #address .divContent .divAddressContent .divBillingAddressOption{
-        margin:50px 0 0 0;
-    }
 
 
 
@@ -958,6 +911,7 @@ textarea {
     #address .divContent .divPaymentContent .divPaymentText{
         float:none;
         width:100%;
+        border:1px solid #000;
     }
 
     #address .divContent .divPaymentContent .pDescription{
@@ -1096,9 +1050,7 @@ textarea {
 
 
 
-    #address .divContent .divAddressContent .divAddressOption,
-    #address .divContent .divAddressContent .divBusinessAddressOption,
-    #address .divContent .divAddressContent .divBillingAddressOption{
+    #address .divContent .divAddressContent .divAddressOption{
         float:none;
         padding:0 10px 0 10px;
         margin-bottom:20px;
@@ -1106,15 +1058,11 @@ textarea {
         height:200px;
     }
 
-    #address .divContent .divAddressContent .divAddressOption h4.name,
-    #address .divContent .divAddressContent .divBusinessAddressOption h4.name,
-    #address .divContent .divAddressContent .divBillingAddressOption h4.name{
+    #address .divContent .divAddressContent .divAddressOption h4.name{
         margin:10px 0 0 0;
     }
 
-    #address .divContent .divAddressContent .divAddressOption p,
-    #address .divContent .divAddressContent .divBusinessAddressOption p,
-    #address .divContent .divAddressContent .divBillingAddressOption p{
+    #address .divContent .divAddressContent .divAddressOption p{
         margin:20px 0 0 0;
         width:95%;
     }
@@ -1223,7 +1171,7 @@ textarea {
     }
     textarea {
         float: left;
-        width: calc(100%)
+        width: calc(100%);
         margin-top: 10px;
         margin-left: 10px;
     }
@@ -1250,9 +1198,7 @@ textarea {
         padding:0 30px 50px 30px;
     }
 
-    #address .divContent .divAddressContent .divAddressOption,
-    #address .divContent .divAddressContent .divBusinessAddressOption,
-    #address .divContent .divAddressContent .divBillingAddressOption{
+    #address .divContent .divAddressContent .divAddressOption{
         width:296px;
     }
 
@@ -1260,22 +1206,21 @@ textarea {
         margin-left:35px;
     }
 
-    #address .divContent .divPay .paymentBtn{
-    }
-
     #orderSummary{
         display:none;
     }
 
     /* YENİ ADRES EKLEME FORMU */
-    .divAddNewAddress input[type="text"], select{
+    .divAddNewAddress input[type="text"], 
+    select{
         float: left;
         margin-top: 10px;
         width: 299px;
     }
+
     textarea {
         float: left;
-        width: calc(100%)
+        width: calc(100%);
         margin-top: 10px;
         margin-left: 10px;
     }

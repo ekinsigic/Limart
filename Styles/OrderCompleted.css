@@ -182,16 +182,20 @@
 }
 
 #orderSummaryDetail .divBillingAddressDetail .divAdressDetails span.header5{
+    display:block;
     margin-bottom:10px;
+}
+
+#orderSummaryDetail .divBillingAddressDetail .divAdressDetails .spanNumber{
+    display:inline-block !important;
+    color:#656565 !important;
 }
 
 #orderSummaryDetail .divBillingAddressDetail .divAdressDetails p.address{
     margin-bottom:20px;
 }
 
-#orderSummaryDetail .divBillingAddressDetail .divAdressDetails span{
-    display:block;
-}
+
 
 
 
@@ -501,6 +505,10 @@
         margin:auto;
         width:90%;
     }
+
+
+
+
 
     #orderSummaryDetail .divBillingAddressDetail .divTotalDetail{
         float:none;

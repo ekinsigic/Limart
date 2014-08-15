@@ -120,16 +120,13 @@
             height:200px;
             background-color:#fff;
             border:1px solid #f2f2f2;
-        }
+        
+            margin-right: 8px;
+}
 
         #address .divContent .active{
             background-color:#f2f2f2 !important;
             border:1px solid #f8f8f8;
-        }
-
-        #address .divContent .divAddressContent .divBusinessAddressOption{
-            float:right;
-            background-color:transparent;
         }
 
         #address .divContent .divAddressContent label{

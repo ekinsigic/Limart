@@ -184,8 +184,9 @@ function closePanel(closingPanel) {
 		'-o-transition':'-o-transform '+(animationTime/1000)+'s '+animationType,
 		'transition':'transform '+(animationTime/1000)+'s '+animationType
 	});
-
-	activePanel = null;
+	setTimeout(function(){
+		activePanel = null;
+	},animationTime)
 
 	$(window).unbind('touchmove');
 	$('body').css('overflow','auto');

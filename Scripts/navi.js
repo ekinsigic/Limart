@@ -26,6 +26,25 @@ var delayTime = 0;
 
 
 
+function isTouchClick(elem) {
+	var b = false
+	isScroll = false;
+
+	$(elem).bind('touchmove',function(e){
+		isScroll = true;
+	});
+
+	$(elem).bind('touchend',function(e){
+		if (!isScroll) {
+			b = true;
+		}
+	});
+
+	return b;
+}
+
+
+
 function triggerPanel() {
 	if (!isMobile) {
 		$('.triggerDiv').click(function(e){
@@ -47,14 +66,25 @@ function triggerPanel() {
 		})
 	}
 	else {
-		$('.triggerDiv').bind('touchstart',function(e){
+
+		$('.triggerDiv').bind('touchstart', function(e){
+
 			isScroll = false;
+
 			$(this).bind('touchmove',function(e){
 				isScroll = true;
 			});
+
 			if (!isScroll) {
 				$(this).bind('touchend',function(e){
 					e.stopPropagation();
+
+alert('true');
+
+
+return;
+
+
 					var triggerId = $(this).attr('id');
 					var triggerKey = triggerId.substring(0, (triggerId.length-7));
 					openingPanel = triggerKey + 'Panel';
@@ -67,31 +97,31 @@ function triggerPanel() {
 			}
 		});
 
-		$(window).bind('touchstart',function(e){
-			isScroll = false;
-			$(window).bind('touchmove',function(e){
-				isScroll = true;
-			});
-			$(window).one('touchend',function(e){
-				if (!isScroll) {
-					closePanel(activePanel);
-				};
-			});
-		});
+		// $(window).bind('touchstart',function(e){
+		// 	isScroll = false;
+		// 	$(window).bind('touchmove',function(e){
+		// 		isScroll = true;
+		// 	});
+		// 	$(window).one('touchend',function(e){
+		// 		if (!isScroll) {
+		// 			closePanel(activePanel);
+		// 		};
+		// 	});
+		// });
 
-		$('.sixtythreePanel').bind('touchstart',function(e){
-			e.stopPropagation();
-			isScroll = false;
-			$(this).bind('touchmove',function(e){
-				e.stopPropagation();
-				isScroll = true;
-			});
-			$(this).one('touchend',function(e){
-				if (!isScroll) {
-					e.stopPropagation();
-				};
-			});
-		});
+		// $('.sixtythreePanel').bind('touchstart',function(e){
+		// 	e.stopPropagation();
+		// 	isScroll = false;
+		// 	$(this).bind('touchmove',function(e){
+		// 		e.stopPropagation();
+		// 		isScroll = true;
+		// 	});
+		// 	$(this).one('touchend',function(e){
+		// 		if (!isScroll) {
+		// 			e.stopPropagation();
+		// 		};
+		// 	});
+		// });
 	}
 }
 
@@ -217,15 +247,6 @@ function stylePanels() {
 		})
 	},200);
 }
-
-
-
-
-
-
-
-
-
 
 
 

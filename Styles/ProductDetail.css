@@ -49,6 +49,72 @@
     float:left;
 }
 
+.artworkImage .artworkImageUtilities .shareArtwork {
+    overflow:hidden;
+    transition-delay:0.8s;
+    width: 40px;
+} 
+
+.artworkImage .artworkImageUtilities .shareArtwork:hover {
+    width: 200px;
+    transition-delay:0s;
+} 
+
+.artworkImage .artworkImageUtilities .shareArtwork.hover {
+    width: 200px;
+    transition-delay:0s;
+} 
+
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents {
+    position: absolute;
+    width: 160px;
+    top: 0px;
+    left: 40px;
+}
+
+.artworkImage .artworkImageUtilities .shareArtwork:hover .shareArtworkContents a {
+    opacity:1;
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+}
+
+.artworkImage .artworkImageUtilities .shareArtwork.hover .shareArtworkContents a {
+    opacity:1;
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+}
+
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents a {
+    opacity:0;
+    float:left;
+    margin-right: 4px;
+    transition: all 0.3s;
+    -webkit-transform:scale(0.75);
+    -moz-transform:scale(0.75);
+    -ms-transform:scale(0.75);
+    -o-transform:scale(0.75);
+    transform:scale(0.75);
+}
+
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents a:nth-child(1) {
+    transition-delay: 0.0s;
+}
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents a:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents a:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents a:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
 .artworkHeading img {
     display: none;
 }

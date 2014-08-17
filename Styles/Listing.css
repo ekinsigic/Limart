@@ -195,7 +195,7 @@ main.menuOn .sticky {
 	opacity: 0px;
 }
 
-.listItemLink.hover {
+.listItem.listingLinkOn .listItemLink {
 	display: block !important;
 }
 

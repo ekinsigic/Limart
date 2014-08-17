@@ -1,5 +1,5 @@
 enoughtTimeStoppedToLoadItems = true;
-
+var isScroll = false;
 $(document).ready(function () {
 stylelisting();
 filterSticky();
@@ -127,15 +127,29 @@ function mobilePseudoHover() {
 
 		$('.listItem').bind('touchstart',function(e){
 			e.stopPropagation();
-				$('.listItem').each(function(){
-					 $(this).removeClass('hover');
-				})
-				$(this).addClass('hover');
-				$(window).bind('touchstart',function(){
+			isScroll = false;
+			$('.listItem').bind('touchmove',function(){
+				isScroll = true;
+			});
+			$('.listItem').bind('touchend', function(e){
+				if (!isScroll) {
 					$('.listItem').each(function(){
-						$(this).removeClass('hover');
+						 $(this).removeClass('hover');
+					})
+					$(this).addClass('hover');
+					setTimeout(function(){
+						$('.listItem').each(function(){
+							 $(this).removeClass('listingLinkOn');
+						})
+						$('.hover').addClass('listingLinkOn');
+					},200);
+					$(window).bind('touchstart',function(){
+						$('.listItem').each(function(){
+							$(this).removeClass('hover listingLinkOn');
+						});
 					});
-				});
+				};
+			});
 		});
 
 		// deneme
@@ -171,13 +185,11 @@ function carryFilters() {
 
 function disableTouchScroll(offOrOn) {
 	if (offOrOn == 1) {
-		console.log('eakr');
 		$('html').bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
 		    e.preventDefault();
 		});
 	}
 	else {
-		console.log('eaksewr');
 		$('html').unbind('touchmove');
 	}
 }

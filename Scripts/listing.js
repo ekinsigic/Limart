@@ -152,22 +152,6 @@ function mobilePseudoHover() {
 			});
 		});
 
-		// deneme
-
-		// var doWeHaveANumber = false
-		// document.addEventListener('touchmove', function(e) {
-		//     var touch = e.touches[0];
-		// 	var startingCoordinates = e.touches[0].pageY
-		// 	$('.listItem').bind('touchmove',function(){
-				
-		// 	});
-		// 	$('.listItem').bind('touchend', function(){
-		// 		var banavar = startingCoordinates
-		// 		console.log(canavar+''+banavar)
-		// 	});
-
-		// }, false);
-
 	};
 }
 

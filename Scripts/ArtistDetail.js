@@ -4,6 +4,7 @@ $(document).ready(function () {
 styleArtist();
 filterSticky();
 listingMasonry();
+mobilePseudoHover();
 if (!isMobile) {
 	listLoad();
 }
@@ -67,6 +68,9 @@ function filterSticky() {
 }
 
 function listingMasonry() {
+		$('.listItem').each(function(){
+			$(this).removeClass('newItem');
+		});
 	setTimeout(function(){
 		$('.listingList').masonry({
 		  columnWidth: 300,
@@ -76,6 +80,8 @@ function listingMasonry() {
 		  transitionDuration: 0
 		});
 	},50);
+	setTimeout(function(){
+	},100);
 }
 
 function listLoad(){
@@ -142,3 +148,40 @@ function disableTouchScroll(offOrOn) {
 			listLoad();
 		}
 	});
+
+function mobilePseudoHover() {
+	if (isMobile) {
+
+		$('.listItemLink').css({
+			'display':'none'
+		})
+
+		$('.listItem').bind('touchstart',function(e){
+			e.stopPropagation();
+			isScroll = false;
+			$('.listItem').bind('touchmove',function(){
+				isScroll = true;
+			});
+			$('.listItem').bind('touchend', function(e){
+				if (!isScroll) {
+					$('.listItem').each(function(){
+						 $(this).removeClass('hover');
+					})
+					$(this).addClass('hover');
+					setTimeout(function(){
+						$('.listItem').each(function(){
+							 $(this).removeClass('listingLinkOn');
+						})
+						$('.hover').addClass('listingLinkOn');
+					},200);
+					$(window).bind('touchstart',function(){
+						$('.listItem').each(function(){
+							$(this).removeClass('hover listingLinkOn');
+						});
+					});
+				};
+			});
+		});
+
+	};
+}

@@ -91,9 +91,9 @@
         <section id="payment" class="adressInfo">
             <div id="address">
 
-                <div class="divAddress">
+                <div class="divAddress selectedTab">
                     <h2 class="faceTT">ADRES BİLGİLERİ</h2>
-                    <span class="spanStyleB homeAddress">EV ADRESİ</span>
+                    <span class="spanStyleB addressName">EV ADRESİ</span>
                     <h3 class="faceUU">BAMBİ TERLİK</h3>
 
                     <a href="tel:0212 637 00 00" class="aNumber">
@@ -124,86 +124,28 @@
 
 
                     <div class="divAddressContent">
+                        <div class="innerWrapper">
+                            <div class="divAddressText">
+                                <h3 class="faceXX">Teslimat Adresi</h3>
+                                <p class="faceYY pDescription">
+                                    Siparişinizin teslim edilmesini istediğiniz adresi seçin.
+                                </p>
 
-                        <div class="divAddressText">
-                            <h3 class="faceXX">Teslimat Adresi</h3>
-                            <p class="faceYY pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz adresi seçin.
-                            </p>
-
-                            <div class="addressNewOrSaved">
-                                <label for="savedAddressRadio" class="labelB"><input name="addressNewOrSaved" type="radio" id="savedAddressRadio" checked />Kayıtlı Adres</label>
-                                <label for="newAddressRadio" class="labelB"><input name="addressNewOrSaved" type="radio" id="newAddressRadio" />Yeni Adres</label>
+                                <div class="addressNewOrSaved">
+                                    <label for="savedAddressRadio" class="labelB"><input name="addressNewOrSaved" type="radio" id="savedAddressRadio" checked />Kayıtlı Adres</label>
+                                    <label for="newAddressRadio" class="labelB"><input name="addressNewOrSaved" type="radio" id="newAddressRadio" />Yeni Adres</label>
+                                </div>
                             </div>
-                        </div>
 
 
-                        <a href="#" class="aStyleF saveBtn">KAYDET VE DEVAM ET</a>
-
-                        <div class="separator"></div>
-
-
-                        <div class="divAddressOption active">
-                            <label for="sampleA" class="labelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
+                            <a href="#" class="aStyleF saveBtn">KAYDET VE DEVAM ET</a>
 
                             <div class="separator"></div>
-
-                            <h4 class="faceZZ name">BAMBİ TERLİK</h4>
-
-                            <a href="tel:0212 637 00 00" class="aNumber">
-                                <span class="spanStyleC number">- 0212 637 00 00</span><br />
-                            </a>
-
-                            <p class="faceAAA">
-                                Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                            </p>
-
-                            <a href="#" class="aStyleH icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                            <a href="#" class="aStyleH icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                        </div>
-
-
-
-                        <div class="divAddressOption">
-                            <label for="sampleC" class="labelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
-                            <div class="separator"></div>
-
-                            <h4 class="faceZZ name">BAMBİ TERLİK</h4>
-
-                            <a href="tel:0212 637 00 00" class="aNumber">
-                                <span class="spanStyleC number">- 0212 637 00 00</span><br />
-                            </a>
-
-                            <p class="faceAAA">
-                                Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                            </p>
-
-                            <a href="#" class="aStyleH icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                            <a href="#" class="aStyleH icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                        </div>
-
-                        <div class="separator"></div>
-
-
-
-
-
-                        <div class="divBillingAddress ">
-
-                            <h3 class="faceXX">Fatura Adresi</h3>
-                            <p class="faceYY pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin.
-                            </p>
-
-
-                            <div class="addressNewOrSavedInvoice">
-                                <label for="savedAddressInvoiceRadio" class="labelB"><input name="addressNewOrSavedInvoice" type="radio" id="savedAddressInvoiceRadio" checked />Kayıtlı Adres</label>
-                                <label for="newAddressInvoiceRadio" class="labelB"><input name="addressNewOrSavedInvoice" type="radio" id="newAddressInvoiceRadio" />Yeni Adres</label>
-                            </div>
 
 
                             <div class="divAddressOption active">
-                                <label for="invoiceHomeAddress" class="labelB"><input class="radioTypeA" name="invoiceAddressSelect" type="radio" id="invoiceHomeAddress" checked />Fatura Ev Adresi</label>
+                                <label for="sampleA" class="labelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
+
                                 <div class="separator"></div>
 
                                 <h4 class="faceZZ name">BAMBİ TERLİK</h4>
@@ -223,7 +165,7 @@
 
 
                             <div class="divAddressOption">
-                                <label for="invoiceWorkAddress" class="labelB"><input class="radioTypeA" name="invoiceAddressSelect" type="radio" id="invoiceWorkAddress" />Fatura İş Adresi</label>
+                                <label for="sampleC" class="labelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
                                 <div class="separator"></div>
 
                                 <h4 class="faceZZ name">BAMBİ TERLİK</h4>
@@ -241,105 +183,223 @@
                             </div>
 
                             <div class="separator"></div>
-                        </div>
 
 
 
 
-                        <label for="differentBillingAddress" class="labelA"><input type="checkbox" id="differentBillingAddress" />Fatura Adresim ile teslimat adresim farklı.</label>
-                        <div class="separator"></div>
+
+                            <div class="divBillingAddress closedAsDefault">
+                                <div class="innerWrapper">
+
+                                    <h3 class="faceXX">Fatura Adresi</h3>
+                                    <p class="faceYY pDescription">
+                                        Siparişinizin teslim edilmesini istediğiniz fatura adresi seçin.
+                                    </p>
 
 
-                        <div class="demandPhoneNumber">
-                            <p class="demandPhoneNumberDescription">SİPARİŞİNİZİN SİZE HIZLI BİR ŞEKİLDE ULAŞABİLMESİ İÇİN MOBİL TELEFON NUMARANIZ:</p>
-                            <input class="inputTextC phoneNumberInput" type="text" placeholder="TELEFON NUMARASI" />
-                        </div>
+                                    <div class="addressNewOrSavedInvoice">
+                                        <label for="savedAddressInvoiceRadio" class="labelB"><input name="addressNewOrSavedInvoice" type="radio" id="savedAddressInvoiceRadio" checked />Kayıtlı Adres</label>
+                                        <label for="newAddressInvoiceRadio" class="labelB"><input name="addressNewOrSavedInvoice" type="radio" id="newAddressInvoiceRadio" />Yeni Adres</label>
+                                    </div>
 
-                        <div class="separator"></div>
 
-                        <div class="sendToSomeoneElse">
-                            <label for="someoneElse" class="labelA"><input class="checkboxTypeA" type="checkbox" id="someoneElse" />Siparişimi başka birinin teslim almasını istiyorum.</label>
-                            <div class="sendToSomeoneElseDetails">
-                                <p class="faceYY">Siparişinizi sizin dışınızda teslim alabilecek kişinin adı:</p>
-                                <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+                                    <div class="divAddressOption active">
+                                        <label for="invoiceAddressOne" class="labelB"><input class="radioTypeA" name="invoiceAddressSelect" type="radio" id="invoiceAddressOne" checked />Fatura Ev Adresi</label>
+                                        <div class="separator"></div>
 
-                                <p class="faceYY">Siparişinizi başka bir kişiye göndermek istiyorsanız lütfen ismini giriniz:</p>
-                                <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+                                        <h4 class="faceZZ name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="spanStyleC number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="faceAAA">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="aStyleH icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="aStyleH icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+
+
+                                    <div class="divAddressOption">
+                                        <label for="invoiceAddressTwo" class="labelB"><input class="radioTypeA" name="invoiceAddressSelect" type="radio" id="invoiceAddressTwo" />Fatura İş Adresi</label>
+                                        <div class="separator"></div>
+
+                                        <h4 class="faceZZ name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="spanStyleC number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="faceAAA">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="aStyleH icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="aStyleH icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="separator"></div>
+                                </div>
                             </div>
+
+
+
+
+                            <label for="differentBillingAddress" class="labelA"><input type="checkbox" id="differentBillingAddress" />Fatura Adresim ile teslimat adresim farklı.</label>
+                            <div class="separator"></div>
+
+
+                            <div class="demandPhoneNumber">
+                                <p class="demandPhoneNumberDescription">SİPARİŞİNİZİN SİZE HIZLI BİR ŞEKİLDE ULAŞABİLMESİ İÇİN MOBİL TELEFON NUMARANIZ:</p>
+                                <input class="inputTextC phoneNumberInput" type="text" placeholder="TELEFON NUMARASI" />
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <div class="sendToSomeoneElse">
+                                <label for="someoneElse" class="labelA"><input class="checkboxTypeA" type="checkbox" id="someoneElse" />Siparişimi başka birinin teslim almasını istiyorum.</label>
+                                <div class="sendToSomeoneElseDetails closedAsDefault">
+                                    <div class="innerWrapper">
+                                        <p class="faceYY">Siparişinizi sizin dışınızda teslim alabilecek kişinin adı:</p>
+                                        <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+
+                                        <p class="faceYY">Siparişinizi başka bir kişiye göndermek istiyorsanız lütfen ismini giriniz:</p>
+                                        <input class="inputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="separator"></div>
+
+
+
+                            <div class="orderDetailNotes">
+                                <h3 class="faceXX">Ürün ve Sipariş Notları</h3>
+                                <label for="giftWrapThis" class="labelA"><input class="checkboxTypeA" type="checkbox" id="giftWrapThis" />Hediye paketi istiyorum</label>
+                                <label for="giftNoteThis" class="labelA giftNoteThis"><input class="checkboxTypeA" type="checkbox" id="giftNoteThis" />Hediye notu eklemek istiyorum</label>
+                                <div class="giftNoteTextareaWrapper closedAsDefault">
+                                        <textarea class="textareaStyleA giftNoteTextarea innerWrapper" placeholder="NOTUNUZ"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <a href="#" class="aStyleF saveBtnA">KAYDET VE DEVAM ET</a>
+
+                            <div class="separator"></div>
                         </div>
-
-
-
-                        <div class="separator"></div>
-
-
-
-                        <div class="orderDetailNotes">
-                            <h3 class="faceXX">Ürün ve Sipariş Notları</h3>
-                            <label for="giftWrapThis" class="labelA"><input class="checkboxTypeA" type="checkbox" id="giftWrapThis" />Hediye paketi istiyorum</label>
-                            <label for="giftNoteThis" class="labelA giftNoteThis"><input class="checkboxTypeA" type="checkbox" id="giftNoteThis" />Hediye notu eklemek istiyorum</label>
-                            <textarea class="textareaStyleA giftNoteTextarea" placeholder="NOTUNUZ"></textarea>
-                        </div>
-
-                        <div class="separator"></div>
-
-                        <a href="#" class="aStyleF saveBtnA">KAYDET VE DEVAM ET</a>
-
-                        <div class="separator"></div>
                     </div>
 
 
-                    <div class="divAddressContent divAddNewAddress divAddNewAddressOff">
-                        <div class="divAddressText">
-                            <h3 class="faceXX">Yeni Adres</h3>
-                            <p class="faceYY pDescription">
-                                Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu?
-                            </p>
+                    <div class="divAddressContent divAddNewAddress closedAsDefault">
+                        <div class="innerWrapper">
+                            <div class="divAddressText">
+                                <h3 class="faceXX">Yeni Adres</h3>
+                                <p class="faceYY pDescription">
+                                    Siparişinizin teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu?
+                                </p>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <input type="text" class="inputTextD floatLeft" placeholder="AD,SOYAD" />
+                            <input type="text" class="inputTextD floatRight" placeholder="TCKN" />
+
+                            <select class="selectB floatLeft">
+                                <option>
+                                    İL
+                                </option>
+                                <option>
+                                    İL
+                                </option>
+                            </select>
+                            <select class="selectB floatRight">
+                                <option>
+                                    İLÇE
+                                </option>
+                                <option>
+                                    İL
+                                </option>
+                            </select>
+
+                            <textarea class="textareaStyleA" type="text" placeholder="ADRES"></textarea>
+                            <input type="text" class="inputTextD floatLeft" placeholder="TELEFON" />
+                            <input type="text" class="inputTextD floatRight" placeholder="GSM" />
+                            <input type="text" class="inputTextD floatLeft" placeholder="VERGİ DAİRESİ" />
+                            <input type="text" class="inputTextD floatRight" placeholder="VERGİ NUMARASI" />
+
+                            <div class="separator"></div>
+                            <div class="separator" style="height:40px;"></div>
+
+                            <a href="#" class="aStyleI addBtn addingNewAddress cancelAddingNewAddress">GERİ DÖN</a>
+
+                            <a href="#" class="aStyleF addBtn addingNewAddress saveAddingNewAddress">KAYDET VE DEVAM ET</a>
+
+                            <div class="separator"></div>
                         </div>
+                    </div>
 
-                        <div class="separator"></div>
+                    <div class="divInvoiceAddressContent divAddNewInvoiceAddress closedAsDefault">
+                        <div class="innerWrapper">
+                            <div class="divInvoiceAddressText">
+                                <h3 class="faceXX">Yeni Fatura Adresi</h3>
+                                <p class="faceYY pDescription">
+                                    Faturanızın teslim edilmesini istediğiniz adresi seçin. Aradığınız adres yok mu?
+                                </p>
+                            </div>
 
-                        <input type="text" class="inputTextD floatLeft" placeholder="AD,SOYAD" />
-                        <input type="text" class="inputTextD floatRight" placeholder="TCKN" />
+                            <div class="separator"></div>
 
-                        <select class="selectB floatLeft">
-                            <option>
-                                İL
-                            </option>
-                            <option>
-                                İL
-                            </option>
-                        </select>
-                        <select class="selectB floatRight">
-                            <option>
-                                İLÇE
-                            </option>
-                            <option>
-                                İL
-                            </option>
-                        </select>
+                            <input type="text" class="inputTextD floatLeft" placeholder="AD,SOYAD" />
+                            <input type="text" class="inputTextD floatRight" placeholder="TCKN" />
 
-                        <textarea class="textareaStyleA" type="text" placeholder="ADRES"></textarea>
-                        <input type="text" class="inputTextD floatLeft" placeholder="TELEFON" />
-                        <input type="text" class="inputTextD floatRight" placeholder="GSM" />
-                        <input type="text" class="inputTextD floatLeft" placeholder="VERGİ DAİRESİ" />
-                        <input type="text" class="inputTextD floatRight" placeholder="VERGİ NUMARASI" />
+                            <select class="selectB floatLeft">
+                                <option>
+                                    İL
+                                </option>
+                                <option>
+                                    İL
+                                </option>
+                            </select>
+                            <select class="selectB floatRight">
+                                <option>
+                                    İLÇE
+                                </option>
+                                <option>
+                                    İL
+                                </option>
+                            </select>
 
-                        <div class="separator"></div>
-                        <div class="separator" style="height:40px;"></div>
+                            <textarea class="textareaStyleA" type="text" placeholder="ADRES"></textarea>
+                            <input type="text" class="inputTextD floatLeft" placeholder="TELEFON" />
+                            <input type="text" class="inputTextD floatRight" placeholder="GSM" />
+                            <input type="text" class="inputTextD floatLeft" placeholder="VERGİ DAİRESİ" />
+                            <input type="text" class="inputTextD floatRight" placeholder="VERGİ NUMARASI" />
 
-                        <a href="#" class="aStyleI addBtn addingNewAddress cancelAddingNewAddress">GERİ DÖN</a>
+                            <div class="separator"></div>
+                            <div class="separator" style="height:40px;"></div>
 
-                        <input type="button" value="KAYDET VE DEVAM ET" class="buttonE addBtn addingNewAddress saveAddingNewAddress" />
+                            <a href="#" class="aStyleI addBtn addingNewInvoiceAddress cancelAddingNewInvoiceAddress">GERİ DÖN</a>
 
-                        <div class="separator"></div>
+                            <a href="#" class="aStyleF addBtn addingNewInvoiceAddress saveAddingNewInvoiceAddress">KAYDET VE DEVAM ET</a>
+
+                            <div class="separator"></div>
+                        </div>
                     </div>
 
 
+                    <div class="separator"></div>
+                </div>
 
+            <!-- -->
 
-
-                    <div class="divPaymentContent">
+                <div class="divPaymentContent passiveSegment">
+                    <div class="innerWrapper">
                         <div class="divPaymentText">
                             <h3 class="faceXX">Ödeme Seçenekleri</h3>
                             <p class="faceYY pDescription">
@@ -481,7 +541,7 @@
 
                         <div class="optionBox wireTransferOption">
                             <div class="divWirePaymentOption active">
-                                <label for="wirePaymentA" class="labelB"><input class="radioTypeA" name="address" type="radio" id="wirePaymentA" checked /></label>
+                                <label for="wirePaymentA" class="labelB"><input class="radioTypeA" name="wireTransferType" type="radio" id="wirePaymentA" checked /></label>
 
                                 <div class="separator"></div>
 
@@ -497,7 +557,7 @@
                             </div>
 
                             <div class="divWirePaymentOption">
-                                <label for="wirePaymentB" class="labelB"><input class="radioTypeA" name="address" type="radio" id="wirePaymentB" /></label>
+                                <label for="wirePaymentB" class="labelB"><input class="radioTypeA" name="wireTransferType" type="radio" id="wirePaymentB" /></label>
 
                                 <div class="separator"></div>
                                 <img src="images/garantibank.png">
@@ -520,39 +580,38 @@
                                 </label>
                             </div>
                         </div>
-
-                        <div class="optionBox paypalOption">
-                            <p>
-                                79,90 TL tutarındaki ödemeniz <a href="https://www.paypal.com/tr/webapps/mpp/home">PayPal</a> ile yapılacaktır.<br>
-
-                                Lütfen, bir sonraki adıma geçmek için "aşağıdaki" butona tıklayınız.
-                            </p>
-
-                            <img class="paypalLogo" src="images/paypal.png">
-                            <input type="button" class="buttonE paypalButton" value="PAYPAL İLE ÖDE" />
-                        </div>
-
-                        <div class="optionBox bkmexpressOption">
-                            <p>
-                                BKM Express ile ödeme yaparken <a href="https://www.bkmexpress.com.tr/BKMExpress/">www.bkmexpress.com.tr</a> sayfasına yönlendirileceksiniz.
-                                <br>BKM Express sitesine üye olurken kullandığınız kullanıcı adı ve şifreniz ile uygulamaya giriş yapmanız gerekmektedir.
-                                <br>Karşınıza gelen ödeme ekranından işlem yapmak istediğiniz kartı ve ödeme şeklini seçerek kolayca ödeme yapabilirsiniz.
-                                <br>Alışverişinizi tamamladıktan sonra otomatik olarak DESA'ya döneceksiniz.
-                            </p>
-                            <img class="bkmLogo" src="images/bkmexpress.png">
-                            <input type="button" class="buttonE bkmButton" value="BKM İLE ÖDE" />
-                        </div>
-
-                        <div class="separator"></div>
-
                     </div>
 
+                    <div class="optionBox paypalOption">
+                        <p>
+                            79,90 TL tutarındaki ödemeniz <a href="https://www.paypal.com/tr/webapps/mpp/home">PayPal</a> ile yapılacaktır.<br>
+
+                            Lütfen, bir sonraki adıma geçmek için "aşağıdaki" butona tıklayınız.
+                        </p>
+
+                        <img class="paypalLogo" src="images/paypal.png">
+                        <input type="button" class="buttonE paypalButton" value="PAYPAL İLE ÖDE" />
+                    </div>
+
+                    <div class="optionBox bkmexpressOption">
+                        <p>
+                            BKM Express ile ödeme yaparken <a href="https://www.bkmexpress.com.tr/BKMExpress/">www.bkmexpress.com.tr</a> sayfasına yönlendirileceksiniz.
+                            <br>BKM Express sitesine üye olurken kullandığınız kullanıcı adı ve şifreniz ile uygulamaya giriş yapmanız gerekmektedir.
+                            <br>Karşınıza gelen ödeme ekranından işlem yapmak istediğiniz kartı ve ödeme şeklini seçerek kolayca ödeme yapabilirsiniz.
+                            <br>Alışverişinizi tamamladıktan sonra otomatik olarak DESA'ya döneceksiniz.
+                        </p>
+                        <img class="bkmLogo" src="images/bkmexpress.png">
+                        <input type="button" class="buttonE bkmButton" value="BKM İLE ÖDE" />
+                    </div>
 
                     <div class="separator"></div>
+
                 </div>
+
+            <!-- -->
+
+
             </div>
-
-
 
             <div id="orderSummary">
                 <h3 class="faceBBB order">SİPARİŞ ÖZETİ</h3>
@@ -649,7 +708,6 @@
             <div class="separator"></div>
         </section>
 
-        <section id="paymentComplete"></section>
 
         <div class="separator"></div>
     </main>

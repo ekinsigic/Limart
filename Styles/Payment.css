@@ -3,9 +3,22 @@
     margin:50px auto 0 auto;
 }
 
+#payment.paymentOptions a.edit{
+    display:block;
+}
+
 #address{
     float:left;
     width:674px;
+}
+
+.passiveSegment {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transform:scale(0.95);
+    transition:all 0.7s 0s, max-height 0s 0.7s !important;
 }
 
 #address .divAddress,
@@ -19,7 +32,7 @@
     cursor:pointer;
 }
 
-#address .divAddress .homeAddress{
+#address .divAddress .addressName{
     margin:30px 0 5px 0;
 }
 
@@ -45,7 +58,7 @@
 #address .divAddress .edit{
     margin-top: 15px;
     padding-top: 15px;
-    display: block;
+    display: none;
     width: 140px;
     height: 30px;
     cursor: pointer;
@@ -79,6 +92,8 @@
     padding:0 40px 50px 40px;
     background-color:#fff;
     border:1px solid #e5e5e5;
+    max-height: 999999px;
+    transition: all 0.7s;
 }
 
 
@@ -101,6 +116,10 @@
     width:350px;
     margin: 20px 0 10px 0;
 }
+#address .divContent .divInvoiceAddressContent .pDescription{
+    width:350px;
+    margin: 20px 0 10px 0;
+}
 
 #address .divContent .divAddressContent .saveBtn{
     float:right;
@@ -112,7 +131,7 @@
 
 /* OPTION KISMI */
 #address .divContent .divAddressContent .divAddressOption,
-#address .divContent .divAddressContent .divWirePaymentOption{
+.optionBox .divWirePaymentOption{
     float:left;
     margin-right: 8px;
     padding-left:15px;
@@ -122,7 +141,8 @@
     border:1px solid #f2f2f2;
 }
 
-#address .divContent .active{
+#address .divContent .active,
+.optionBox .divWirePaymentOption.active{
     background-color:#f2f2f2 !important;
     border:1px solid #f8f8f8;
 }
@@ -175,21 +195,23 @@
 
 
 /* PAYMENT İÇERİK */
-#address .divContent .divPaymentContent{
+#payment .divPaymentContent{
     width:100%;
+    max-height: 999999px;
+    transition: all 0.7s;
 }
 
-#address .divContent .divPaymentContent .divPaymentText{
+#payment .divPaymentContent .divPaymentText{
     float:left;
     margin:40px 0 0 0;
 }
 
-#address .divContent .divPaymentContent .divPaymentText .pDescription{
+#payment .divPaymentContent .divPaymentText .pDescription{
     width:300px;
     margin:20px 0 35px 0;
 }
 
-#address .divContent .divPaymentContent .aInstallments{
+#payment .divPaymentContent .aInstallments{
     float:right;
     margin-top:50px;
     text-decoration:underline;
@@ -198,45 +220,45 @@
 
 
 
-#address .divContent .divPaymentContent .divCartName{
+#payment .divPaymentContent .divCartName{
     width:388px;
     margin-bottom: 10px;
     margin-top: 60px;
 }
 
-#address .divContent .divPaymentContent .divCartNumber{
+#payment .divPaymentContent .divCartNumber{
     width:100%;
     margin-bottom:25px;
 }
 
-#address .divContent .divPaymentContent .divCartNumber .divBankCard{
+#payment .divPaymentContent .divCartNumber .divBankCard{
     position:absolute;
     top: -100px;
     left: 0;
 }
 
-#address .divContent .divPaymentContent .divCartNumber .divBankCard img{
+#payment .divPaymentContent .divCartNumber .divBankCard img{
     float:left;
     margin-left:8px;
 }
 
-#address .divContent .divPaymentContent .divExpirationDate span,
-#address .divContent .divPaymentContent .divSecurity span{
+#payment .divPaymentContent .divExpirationDate span,
+#payment .divPaymentContent .divSecurity span{
     display:block;
     margin-bottom:10px;
     padding-left:20px;
 }
 
-#address .divContent .divPaymentContent .divSecurity span{
+#payment .divPaymentContent .divSecurity span{
     padding-left:0;
 }
 
-#address .divContent .divPaymentContent .divExpirationDate{
+#payment .divPaymentContent .divExpirationDate{
     float:left;
     width:250px;
 }
 
-#address .divContent .divPaymentContent .divExpirationDate .selectExpirationDate{
+#payment .divPaymentContent .divExpirationDate .selectExpirationDate{
     float:left;
     margin-right:10px;
     width:80px !important;
@@ -244,40 +266,40 @@
     background-position: 60px center;
 }
 
-#address .divContent .divPaymentContent .divSecurity{
+#payment .divPaymentContent .divSecurity{
     float:left;
     width:140px;
 }
 
-#address .divContent .divPaymentContent .divSecurity .inputSecurity{
+#payment .divPaymentContent .divSecurity .inputSecurity{
     width:100% !important;
     height:45px !important;
     margin-top: 20px;
 }
 
-#address .divContent .divPaymentContent .divPay{
+#payment .divPaymentContent .divPay{
     float:left;
     margin-top:70px;
     width:260px;
 }
 
-#address .divContent .divPaymentContent .divPay .paymentBtn{
+#payment .divPaymentContent .divPay .paymentBtn{
     padding:13px 80px;
 }
 
-#address .divContent .divPaymentContent .divPay label{
+#payment .divPaymentContent .divPay label{
     float:left;
     margin-top:20px;
     padding-left:25px;
 }
 
-#address .divContent .divPaymentContent .divPay label .input{
+#payment .divPaymentContent .divPay label .input{
     position:absolute;
     top:-3px;
     left:-2px;
 }
 
-#address .divContent .divPaymentContent .divPay label a{
+#payment .divPaymentContent .divPay label a{
     display:inline-block;
     text-decoration:underline;
     color:#000;
@@ -444,6 +466,36 @@
 
 /* SAYFAYI DİNAMİK YAPACAK CLASS TANIMLAMALARI */
 
+.closedAsDefault {
+    overflow: hidden;
+    height:0px;
+    transition: all 0.7s 0.2s;
+}
+.closedAsDefault .innerWrapper {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.7s;
+    margin-top: 0px !important
+}
+
+.openOnOption {
+    transition: all 0.7s;
+}
+
+.openOnOption .innerWrapper {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.7s 0.2s;
+}
+
 #payment.adressInfo .divAddress{
     float: left;
     padding: 26px 0 0 40px;
@@ -486,6 +538,7 @@
     padding: 26px 0 0 40px;
     width: 50%;
     height: 236px;
+    margin-bottom: 10px;
     background-color: #f8f8f9;
     cursor: pointer;
     border-bottom: 0px;
@@ -504,11 +557,13 @@
     margin-top: 0px !important;
 }
 
-
 .divAddressOption {
     transition:all 0.5s;
 }
 .addBtn.addingNewAddress {
+    float: right;
+}
+.addBtn.addingNewInvoiceAddress {
     float: right;
 }
 .floatRight {
@@ -539,6 +594,23 @@ textarea {
 }
 
 .divContent a.cancelAddingNewAddress{
+    display: table;
+    float: left;    
+    margin-top: 28px;
+}
+
+#payment .innerPaymentMakeVisible {
+    display: block;
+}
+
+.divAddNewInvoiceAddress input[type="text"], 
+select{
+    float: left;
+    margin-top: 10px;
+    width: 291px;
+}
+
+.divContent a.cancelAddingNewInvoiceAddress{
     display: table;
     float: left;    
     margin-top: 28px;
@@ -584,18 +656,18 @@ textarea {
     margin: 0 auto;
 }
 
-.activePayment {
-    display: block;
+.divPaymentContent .optionBox.activePayment {
+    display: block !important;
 }
 
 
 
 
-#payment .divContent .divPaymentContent .divWirePaymentOption {
+#payment .divPaymentContent .divWirePaymentOption {
     transition: all 0.3s;
 }
 
-#payment .divContent .divPaymentContent .divWirePaymentOption label{
+#payment .divPaymentContent .divWirePaymentOption label{
     display: block;
     position: absolute;
     width: 100%;
@@ -604,30 +676,34 @@ textarea {
     left: 0px;
     z-index: 4;
 }
-#payment .divContent .divPaymentContent .divWirePaymentOption img {
+#payment .divPaymentContent .divWirePaymentOption img {
     width: 60%;
     margin: 20px;
 }
-#payment .divContent .divPaymentContent .divWirePaymentOption h4 {
+#payment .divPaymentContent .divWirePaymentOption h4 {
     margin-top: 5px;
     margin-left: 20px;
     width: 75%;
     line-height: 15px;
 }
 
-#payment .divContent .divPaymentContent .divWirePaymentOption input[type="radio"] {
+#payment .divPaymentContent .divWirePaymentOption input[type="radio"] {
     left: 5px;
     top: 5px;
 }
-
-#payment .divContent .divPaymentContent .optionBox.paypalOption p, 
-#payment .divContent .divPaymentContent .optionBox.bkmexpressOption p{
+#payment .divPaymentContent .optionBox {
+    display: none;
+    float: left;
+    transition: all 0.7s;
+}
+#payment .divPaymentContent .optionBox.paypalOption p, 
+#payment .divPaymentContent .optionBox.bkmexpressOption p{
     width: 70%;
     float: left;
     padding: 10px;
 }
-#payment .divContent .divPaymentContent .optionBox.paypalOption p a, 
-#payment .divContent .divPaymentContent .optionBox.bkmexpressOption p a{
+#payment .divPaymentContent .optionBox.paypalOption p a, 
+#payment .divPaymentContent .optionBox.bkmexpressOption p a{
     display: inline;
     color: #808080;
     font-size: 14px;
@@ -635,14 +711,14 @@ textarea {
     line-height: 18px;
 }
 
-#payment .divContent .divPaymentContent .optionBox.paypalOption img, 
-#payment .divContent .divPaymentContent .optionBox.bkmexpressOption img{
+#payment .divPaymentContent .optionBox.paypalOption img, 
+#payment .divPaymentContent .optionBox.bkmexpressOption img{
     width: 25%;
     float: left;
     margin: 14px;
 }
-#payment .divContent .divPaymentContent .optionBox.paypalOption .paypalButton, 
-#payment .divContent .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
+#payment .divPaymentContent .optionBox.paypalOption .paypalButton, 
+#payment .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
     margin: 10px;
     margin-top: 20px;
     width: 120px;
@@ -733,7 +809,12 @@ textarea {
     font-size:12px;
     padding-top:13px;
     transition:all 0.5s;
-    -webkit-transition:all 0.5s;
+}
+#paymentCreditCard .tableInstalment tr td label{
+    top:-4px
+}
+#paymentCreditCard .tableInstalment tr td label input[type="radio"]{
+    top:4px;
 }
 
 #paymentCreditCard .tableInstalment tr:hover td{
@@ -903,72 +984,72 @@ textarea {
 
 
 
-    #address .divContent .divPaymentContent{
+    #payment .divPaymentContent{
         margin:auto;
         width:90%;
     }
 
-    #address .divContent .divPaymentContent .divPaymentText{
+    #payment .divPaymentContent .divPaymentText{
         float:none;
         width:100%;
         border:1px solid #000;
     }
 
-    #address .divContent .divPaymentContent .pDescription{
+    #payment .divPaymentContent .pDescription{
         width:90% !important;
         margin:10px 0 35px 0 !important;
     }
 
-    #address .divContent .divPaymentContent .aInstallments{
+    #payment .divPaymentContent .aInstallments{
         float:none;
         margin:0 0 40px 0;
     }
 
-    #address .divContent .divPaymentContent .divCartName{
+    #payment .divPaymentContent .divCartName{
         width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .inputCart{
+    #payment .divPaymentContent .inputCart{
         width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .divCartNumber .divBankCard{
+    #payment .divPaymentContent .divCartNumber .divBankCard{
         position:relative;
         margin:0 0 40px 0;
     }
 
-    #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
+    #payment .divPaymentContent .divCartNumber .divBankCard img{
         margin:10px 0 0 8px;
         width:auto;
     }
 
-    #address .divContent .divPaymentContent .divExpirationDate{
+    #payment .divPaymentContent .divExpirationDate{
         margin:0 0 20px 0;
         width:200px !important;
     }
 
-    #address .divContent .divPaymentContent .divSecurity{
+    #payment .divPaymentContent .divSecurity{
         width:80px;
     }
 
-    #address .divContent .divPaymentContent .divExpirationDate span,
-    #address .divContent .divPaymentContent .divSecurity span{
+    #payment .divPaymentContent .divExpirationDate span,
+    #payment .divPaymentContent .divSecurity span{
         padding-left:0;
     }
 
-    #address .divContent .divPaymentContent .divPay{
+    #payment .divPaymentContent .divPay{
         float:left;
         margin:40px auto 0 auto !important;
         width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .divPay .paymentBtn{
+    #payment .divPaymentContent .divPay .paymentBtn{
         margin-left:auto !important;
         width:100%;
         text-align:center;
     }
 
-    #address .divContent .divPaymentContent .divPay label{
+    #payment .divPaymentContent .divPay label{
         width:100%;
     }
 
@@ -1085,73 +1166,73 @@ textarea {
 
 
 
-    #address .divContent .divPaymentContent{
+    #payment .divPaymentContent{
         margin:auto;
         width:90%;
     }
 
-    #address .divContent .divPaymentContent .divPaymentText{
+    #payment .divPaymentContent .divPaymentText{
         float:none;
         width:100%;
     }
 
-    #address .divContent .divPaymentContent .pDescription{
+    #payment .divPaymentContent .pDescription{
         width:90% !important;
         margin:10px 0 35px 0 !important;
     }
 
-    #address .divContent .divPaymentContent .aInstallments{
+    #payment .divPaymentContent .aInstallments{
         float:none;
         margin:0 0 40px 0;
     }
 
-    #address .divContent .divPaymentContent .divCartName{
+    #payment .divPaymentContent .divCartName{
         width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .inputCart{
+    #payment .divPaymentContent .inputCart{
         width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .divCartNumber .divBankCard{
+    #payment .divPaymentContent .divCartNumber .divBankCard{
         position:relative;
         margin:0 0 40px 0;
     }
 
-    #address .divContent .divPaymentContent .divCartNumber .divBankCard img{
+    #payment .divPaymentContent .divCartNumber .divBankCard img{
         margin:10px 0 0 8px;
         width:auto;
     }
 
-    #address .divContent .divPaymentContent .divExpirationDate{
+    #payment .divPaymentContent .divExpirationDate{
         float:none;
         margin:0 0 20px 0;
         width:100%;
     }
 
-    #address .divContent .divPaymentContent .divSecurity{
+    #payment .divPaymentContent .divSecurity{
         float:none;
         width:80px
     }
 
-    #address .divContent .divPaymentContent .divExpirationDate span,
-    #address .divContent .divPaymentContent .divSecurity span{
+    #payment .divPaymentContent .divExpirationDate span,
+    #payment .divPaymentContent .divSecurity span{
         padding-left:0;
     }
 
-    #address .divContent .divPaymentContent .divPay{
+    #payment .divPaymentContent .divPay{
         float:left;
         margin:70px auto 0 auto !important;
         width:100% !important;
     }
 
-    #address .divContent .divPaymentContent .divPay .paymentBtn{
+    #payment .divPaymentContent .divPay .paymentBtn{
         margin-left:auto !important;
         width:100%;
         text-align:center;
     }
 
-    #address .divContent .divPaymentContent .divPay label{
+    #payment .divPaymentContent .divPay label{
         width:100%;
     }
 
@@ -1190,7 +1271,6 @@ textarea {
     }
 
     #address{
-        float:none;
         width:100%;
     }
 
@@ -1224,6 +1304,13 @@ textarea {
         margin-top: 10px;
         margin-left: 10px;
     }
+    .divAddNewInvoiceAddress input[type="text"], 
+    select{
+        float: left;
+        margin-top: 10px;
+        width: 299px;
+    }
+
     /* END - YENİ ADRES EKLEME FORMU */
 
 }

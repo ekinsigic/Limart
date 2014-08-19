@@ -255,6 +255,146 @@
 
 
 
+/* face */
+
+/* faceCCC */
+.orderFaceA{
+    color:#000;
+    font-size:40px;
+    font-weight:400;
+    letter-spacing: 5px;
+}
+
+/* faceZ */
+.orderFaceB {
+    color: #676767;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* faceDDD */
+.orderFaceC{
+    color:#000;
+    font-size:13px;
+    font-weight:400;
+    letter-spacing:0.060em;
+}
+
+/* faceLL */
+.orderFaceD {
+    color: #a3a3a3;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* faceFF */
+.orderFaceE {
+    color: #6d6e89;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* faceGG */
+.orderFaceF {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+/* faceII */
+.orderFaceH {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* faceJJ */
+.orderFaceI {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* faceEEE */
+.orderFaceJ{
+    color:#656565;
+    font-size:12px;
+    font-weight:400;
+}
+
+/* faceOO */
+.orderFaceK{
+    color:#000;
+    font-size:18px;
+    font-weight:500;
+}
+
+/* facePP */
+.orderFaceL{
+    color:#6d6e89;
+    font-weight:600;
+    letter-spacing:0.070em;
+}
+
+/* faceRR */
+.orderFaceM{
+    color:#7f7f7f;
+    font-size: 11px;
+    letter-spacing:0.040em;
+}
+
+
+
+
+
+/* spanStyleF */
+.orderSpanStyleA{
+    display: block;
+    color:#000;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing: 1.5px;
+}
+
+/* faceHH */
+.orderSpanStyleB {
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* spanStyleG */
+.orderSpanStyleC{
+    display: block;
+    color:#6d6e89;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing: 0.01em;
+}
+
+/* spanStyleI */
+.orderSpanStyleD{
+    display: block;
+    color:#7f7f7f;
+    font-size:12px;
+    font-weight:400;
+}
+
+/* spanStyleH */
+.orderSpanStyleE{
+    display: block;
+    color:#000;
+    font-size:15px;
+    font-weight:500;
+}
+
 
 
 
@@ -366,6 +506,21 @@
     footer .aLogo {
         display: none !important;
     }
+
+    
+
+    .orderFaceA{
+        font-size:24px;
+    }
+
+    .orderFaceH {
+        font-size: 13px;
+    }
+
+    .orderSpanStyleA{
+        font-size:13px;
+    }
+
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -469,6 +624,21 @@
     footer .aLogo {
         display: none !important;
     }
+
+
+
+    .orderFaceA{
+        font-size:24px;
+    }
+
+    .orderFaceH {
+        font-size: 13px;
+    }
+
+    .orderSpanStyleA{
+        font-size:13px;
+    }
+
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -522,6 +692,12 @@
 
     #orderSummaryDetail .divBillingAddressDetail .divTotalDetail .divTotal{
         width:90%;
+    }
+
+
+    .orderFaceI {
+        font-size: 15px;
+        letter-spacing: 0.5px;
     }
 }
 

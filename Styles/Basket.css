@@ -245,6 +245,7 @@
 
 
 
+/* face */
 .basketFaceA {
     color: #a3a3a3;
     font-size: 11px;
@@ -339,7 +340,6 @@
 .basketaStyleE:active span {
     color:#000;
 }
-/* END - aStyleE */
 
 
 
@@ -364,7 +364,6 @@
     background: #6f7182;
     border: 3px solid #6f7182;
 }
-/* END - aStyleF */
 
 
 

@@ -1,0 +1,521 @@
+body {
+    font-family: 'Nova';
+}
+
+.subFont {
+    font-family: Roboto;
+}
+
+b, strong {
+    font-weight: 500;
+}
+
+i, em {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+p {
+    color: #808080;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+a:link,
+a:visited {
+    display: block;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+}
+
+
+
+
+/* COMPACT  TYPOGRAPHY */
+
+.stopFaceA { /*************************/
+    color: #202132;
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+.stopFaceB { /*************************/
+    color: #a8a8ac;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.80px;
+}
+
+.stopFaceC { /*************************/
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+}
+
+.stopFaceD { /*************************/
+    color: #6c6d75;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceE { /*************************/
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.stopFaceF { /*************************/
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stopFaceG { /*************************/
+    color: #4d4f65;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.396;
+}
+
+.stopFaceH { /*************************/
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.stopFaceI { /*************************/
+    color: #dd354b;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.stopFaceJ { /*************************/
+    color: #676767;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.stopFaceK { /*************************/
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.stopFaceL { /*************************/
+    color: #6d6e89;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceM { /*************************/
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceN { /*************************/
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceO { /*************************/
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceP { /*************************/
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceQ { /*************************/
+    color: #656565;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceR { /*************************/
+    color: #a3a3a3;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceS{ /*************************/
+    color:#999;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing: 0.040em;
+}
+
+.stopFaceT{ /*************************/
+    color:#b8b8b8;
+    font-size:10px;
+    font-weight:500;
+    letter-spacing: 0.050em;
+}
+
+.stopFaceU{ /*************************/
+    color:#000;
+    font-size:18px;
+    font-weight:500;
+}
+
+.stopFaceV{ /*************************/
+    color:#6d6e89;
+    font-weight:600;
+    letter-spacing:0.070em;
+}
+
+.stopFaceW{ /*************************/
+    color:#7f7f7f;
+    font-size: 11px;
+    letter-spacing:0.040em;
+}
+
+.stopFaceX{ /*************************/
+    color:#3f3f3f;
+    font-size: 10px;
+    letter-spacing:0.010em;
+}
+
+.stopFaceY{ /*************************/
+    color:#fff;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+
+.stopFaceZ{ /*************************/
+    color:#f2f2f2;
+    font-weight:500;
+    font-size:13px; 
+}
+
+.stopFaceAA { /*************************/
+    color:#6d6f80;
+    font-size:12px;
+    font-weight:500;
+}
+
+.stopFaceBB { /*************************/
+    color:#bdbdbd;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.040em;
+}
+
+
+.stopFaceCC { /*************************/
+    color:#000;
+    font-size:24px;
+    font-weight:400;
+    letter-spacing:0 !important;
+}
+
+.stopFaceDD { /*************************/
+    color:#4d4d4d;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.030em;
+}
+
+.stopFaceEE { /*************************/
+    color:#3d3d3d;
+    font-size:12px;
+    font-weight:500;
+}
+
+.stopFaceFF{ /*************************/
+    color:#4d4d4d;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.020em;
+}
+
+.stopFaceGG{ /*************************/
+    color:#000;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing: 1px;
+}
+
+.stopFaceHH{ /*************************/
+    color:#000;
+    font-size:40px;
+    font-weight:400;
+    letter-spacing: 5px;
+}
+
+.stopFaceII{ /*************************/
+    color:#000;
+    font-size:13px;
+    font-weight:400;
+    letter-spacing:0.060em;
+}
+
+.stopFaceJJ{ /*************************/
+    color:#656565;
+    font-size:12px;
+    font-weight:400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stopaStyleD { /*********************/
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.stopaStyleE { /*********************/
+    display:block;
+    height:30px;
+    width:180px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.stopaStyleE img { /*********************/
+    float:left;
+    width:24px !important;
+    height:11px !important;
+    margin-top:9px;
+    opacity:0.25;
+    transition:all 0.5s;
+}
+
+.stopaStyleE span { /*********************/
+    display:inline-block;
+    float:right;
+    margin-top:10px;
+    transition:all 0.5s;
+}
+
+.stopaStyleE:hover img { /*********************/
+    margin-left:-5px;
+}
+
+.stopaStyleE:hover span { /*********************/
+    color:#000;
+}
+
+.stopaStyleF{ /*********************/
+    display: table;
+    width: auto;
+    padding: 10px 25px;
+    padding-top: 12px;
+    color: #fff;
+    font-weight: 400;
+    border: 3px solid #4b4d63;
+    background-color: #4b4d63;
+    text-align: center;
+}
+
+    .stopaStyleF { /*********************/
+        color: #fff;
+        background: #6f7182;
+        border: 3px solid #6f7182;
+    }
+
+.stopaStyleF { /*********************/
+    display:block;
+    color:#6d6e89;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.040em;
+}
+
+.stopaStyleH { /*********************/
+    display:block;
+    color:#6d6e89;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.040em;
+}
+
+a.stopaStyleI { /*********************/
+    display: inline;
+    font-size: 11px;
+    text-decoration: underline;
+    color: #4d4d4d;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.stopaStyleK { /*********************/
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+
+
+
+
+
+
+.stopspanStyleB { /*************************/
+    display: block;
+    color: #f2f2f2;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.stopspanStyleC { /*************************/
+    display: block;
+    color:#3d3d3d;
+    font-size:12px;
+    font-weight:500;
+}
+
+.stopspanStyleE { /*************************/
+    display: block;
+    color:#404040;
+    font-size:12px;
+    font-weight:500;
+}
+
+.stopspanStyleF{ /*************************/
+    display: block;
+    color:#000;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing: 1.5px;
+}
+
+.stopspanStyleG{ /*************************/
+    display: block;
+    color:#6d6e89;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing: 0.01em;
+}
+
+.stopspanStyleH{ /*************************/
+    display: block;
+    color:#000;
+    font-size:15px;
+    font-weight:500;
+}
+
+
+.stopspanStyleI{ /*************************/
+    display: block;
+    color:#7f7f7f;
+    font-size:12px;
+    font-weight:400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 400px) {
+
+    .stopFaceA { /*************************/
+        font-size: 20px;
+        letter-spacing: 5px;
+        line-height: 30px;
+    }
+
+    .stopFaceEE { /*************************/
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .stopFaceII { /*************************/
+        font-size: 13px;
+    }
+
+    .stopFaceTT{ /*************************/
+        font-size:15px;
+    }
+
+    .stopFaceCCC{ /*************************/
+        font-size:24px;
+    }
+
+    .stopspanStyleF{ /*************************/
+        font-size:13px;
+    }
+   
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+
+    .stopFaceEE { /*************************/
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .stopFaceII { /*************************/
+        font-size: 13px;
+    }
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+
+    .stopFaceII { /*************************/
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .stopFaceJJ { /*************************/
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+}

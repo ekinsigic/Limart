@@ -242,16 +242,6 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-
 @media all and (max-width: 400px) {
     #basketDetails {
         width: 90%;
@@ -348,12 +338,6 @@
 
     footer .aLogo {
         display: none !important;
-    }
-
-
-
-    .basketFaceE {
-        font-size: 13px;
     }
 }
 
@@ -454,11 +438,6 @@
     footer .aLogo {
         display: none !important;
     }
-
-
-    .basketFaceE {
-        font-size: 13px;
-    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -504,18 +483,6 @@
         #basketDetails .divTotal .tableOrderTotal tr td:first-child {
             width: 140px;
         }
-
-
-
-    .basketFaceE {
-        font-size: 15px;
-        letter-spacing: 0.5px;
-    }
-
-    .basketFaceF{
-        font-size: 15px;
-        letter-spacing: 0.5px;
-    }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {

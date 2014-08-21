@@ -258,6 +258,12 @@
 
 
 
+
+
+
+
+
+
 /* Screen */
 @media all and (max-width: 400px) {
     #orderCompleted,
@@ -360,21 +366,6 @@
     footer .aLogo {
         display: none !important;
     }
-
-    
-
-    .orderFaceA{
-        font-size:24px;
-    }
-
-    .orderFaceH {
-        font-size: 13px;
-    }
-
-    .orderSpanStyleA{
-        font-size:13px;
-    }
-
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -478,21 +469,6 @@
     footer .aLogo {
         display: none !important;
     }
-
-
-
-    .orderFaceA{
-        font-size:24px;
-    }
-
-    .orderFaceH {
-        font-size: 13px;
-    }
-
-    .orderSpanStyleA{
-        font-size:13px;
-    }
-
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -546,12 +522,6 @@
 
     #orderSummaryDetail .divBillingAddressDetail .divTotalDetail .divTotal{
         width:90%;
-    }
-
-
-    .orderFaceI {
-        font-size: 15px;
-        letter-spacing: 0.5px;
     }
 }
 

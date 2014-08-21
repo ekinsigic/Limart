@@ -13,10 +13,10 @@
 }
 
 .passiveSegment {
-    position: absolute;
     max-height: 0px;
     opacity: 0;
     overflow: hidden;
+    position: absolute;
     -webkit-transform:scale(0.95);
     transition:all 0.7s 0s, max-height 0s 0.7s !important;
 }
@@ -82,8 +82,6 @@
 #address .divPayment p{
     margin-top:30px;
 }
-
-
 
 
 
@@ -200,7 +198,6 @@
 #payment .divPaymentContent{
     width:100%;
     max-height: 999999px;
-    padding:0 40px 50px 40px;
     transition: all 0.7s;
 }
 
@@ -835,6 +832,7 @@ select{
 
 
 /* GENEL YAPIYA EKLEMELER */
+
 .addressNewOrSaved {
     margin-bottom: 20px;
 }
@@ -858,19 +856,17 @@ select{
 #address .divContent .divAddressContent .addressNewOrSaved label:last-child{
     margin-left: 30px;
 }
-
 .demandPhoneNumber {
     margin-top: 25px;
+    
     padding-bottom: 15px;
     border-bottom: 1px solid #f0f0f0;
 }
-
 .demandPhoneNumber p {
     margin-top: 0px;
     border-top: 1px solid #f0f0f0;
     padding-top: 20px;
 }
-
 .demandPhoneNumber input[type="text"] {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -899,6 +895,13 @@ select{
 }
 
 /* END GENEL YAPIYA EKLEMELER */
+
+
+
+
+
+
+
 
 /* Screen */
 @media all and (max-width: 400px) {
@@ -1078,12 +1081,6 @@ select{
         margin-top: 20px;
     }
     /* END - YENİ ADRES EKLEME FORMU */
-
-
-
-    .paymentFaceA{
-        font-size:15px;
-    }
 
 
 }

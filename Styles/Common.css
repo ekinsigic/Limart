@@ -251,10 +251,10 @@ main{
 
 /* Screen */
 @media all and (max-width: 400px) {
-    #searchPanel {
+    #search {
         top: 10px;
     }
-    #searchPanel .divSearchContent{
+    #search .divSearchContent{
         width:90%;
     }
 
@@ -285,11 +285,11 @@ main{
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    #searchPanel {
+    #search {
         top: 10px;
     }
 
-    #searchPanel .divSearchContent{
+    #search .divSearchContent{
         width:550px;
     }
     main {
@@ -309,7 +309,7 @@ main{
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #searchPanel .divSearchContent{
+    #search .divSearchContent{
         width:670px;
     }
     .breadcrumbsWrapper, .divDetailWrapper {
@@ -327,13 +327,13 @@ main{
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    #searchPanel .divSearchContent{
+    #search .divSearchContent{
         width:960px;
     }
 }
 
 @media all and (min-width: 1435px) {
-    #searchPanel .divSearchContent{
+    #search .divSearchContent{
         width:1080px;
     }
 

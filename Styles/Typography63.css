@@ -1,0 +1,350 @@
+body {
+font-family: 'Nova';
+}
+
+
+/* faces */
+
+
+.stopFaceA{
+    color:#fff;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+
+
+.stopFaceB{
+    color:#f2f2f2;
+    font-size:13px; 
+    font-weight:500;
+}
+
+.stopFaceC {
+    color:#f2f2f2;
+    font-size:12px;
+    font-weight:500;
+}
+
+
+.stopFaceD {
+    color:#bdbdbd;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.040em;
+}
+
+
+.stopFaceE {
+    color:#000;
+    font-size:24px;
+    font-weight:400;
+    letter-spacing:0 !important;
+}
+
+
+.stopFaceF {
+    color:#4d4d4d;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.030em;
+}
+
+
+.stopFaceG {
+    color:#3d3d3d;
+    font-size:12px;
+    font-weight:500;
+}
+
+
+.stopFaceH{
+    color:#4d4d4d;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.020em;
+}
+
+
+.stopFaceI{
+    color:#999;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing: 0.040em;
+}
+
+
+.stopFaceJ{
+    color:#000;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing: 1px;
+}
+
+
+.stopFaceK {
+    color: #6d6e89;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+.stopFaceL{
+    color:#b8b8b8;
+    font-size:10px;
+    font-weight:500;
+    letter-spacing: 0.050em;
+}
+
+
+.stopFaceM{
+    color:#000;
+    font-size:18px;
+    font-weight:500;
+}
+
+
+.stopFaceN{
+    color:#6d6e89;
+    font-weight:600;
+    letter-spacing:0.070em;
+}
+
+
+.stopFaceO{
+    color:#7f7f7f;
+    font-size: 11px;
+    letter-spacing:0.040em;
+}
+
+
+.stopFaceP{
+    color:#3f3f3f;
+    font-size: 10px;
+    letter-spacing:0.010em;
+}
+
+.stopFaceQ {
+    color: #a3a3a3;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceR {
+    color: #6d6e89;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceS {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceT {
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stopFaceU {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceV {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.stopFaceW {
+    color: #656565;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* LINK STYLING */
+
+
+.stopAStyleA:link ,
+.stopAStyleA:visited{
+    display: table;
+    width: auto;
+    padding: 10px 25px;
+    padding-top: 12px;
+    color: #fff;
+    font-size:11px;
+    font-weight: 400;
+    letter-spacing:0.040em;
+    border: 3px solid #4b4d63;
+    background-color: #4b4d63;
+    text-align: center;
+}
+
+.stopAStyleA:hover ,
+.stopAStyleA:active {
+    background-color: #6f7182;
+    border: 3px solid #6f7182;
+}
+
+
+.stopAStyleB:link,
+.stopAStyleB:visited {
+    display:block;
+    color:#6d6e89;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.040em;
+}
+
+.stopAStyleB:hover,
+.stopAStyleB:active {
+}
+
+
+.stopAStyleC:link,
+.stopAStyleC:visited {
+    display: inline;
+    font-size: 11px;
+    text-decoration: underline;
+    color: #4d4d4d;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.stopAStyleC:hover ,
+.stopAStyleC:visited {
+    opacity: 1;
+}
+
+
+.stopAStyleD:link,
+.stopAStyleD:visited {
+    color:#6d6e89;
+    font-size:12px;
+    font-weight:500;
+}
+
+.stopAStyleD:hover,
+.stopAStyleD:active {
+}
+
+.stopaStyleE:link,
+.stopaStyleE:visited {
+    display:block;
+    height:30px;
+    width:180px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.stopaStyleE img {
+    float:left;
+    width:24px !important;
+    height:11px !important;
+    margin-top:9px;
+    opacity:0.25;
+    transition:all 0.5s;
+}
+
+.stopaStyleE span {
+    display:inline-block;
+    float:right;
+    margin-top:10px;
+    transition:all 0.5s;
+}
+
+.stopaStyleE:hover,
+.stopaStyleE:active {
+
+}
+
+.stopaStyleE:hover img,
+.stopaStyleE:active img {
+    margin-left:-5px;
+}
+
+.stopaStyleE:hover span,
+.stopaStyleE:active span {
+    color:#000;
+}
+
+
+.stopaStyleF:link ,
+.stopaStyleF:visited{
+    display: table;
+    width: auto;
+    padding: 10px 25px;
+    padding-top: 12px;
+    color: #fff;
+    font-weight: 400;
+    border: 3px solid #4b4d63;
+    background-color: #4b4d63;
+    text-align: center;
+}
+
+.stopaStyleF:hover ,
+.stopaStyleF:active {
+    color: #fff;
+    background: #6f7182;
+    border: 3px solid #6f7182;
+}
+
+
+
+/* SPAN STYLING */
+
+
+
+.stopSpanStyleA {
+    display: block;
+    color: #f2f2f2;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+
+.stopSpanStyleB {
+    display: block;
+    color:#3d3d3d;
+    font-size:12px;
+    font-weight:500;
+}
+
+
+.stopSpanStyleC {
+    display: block;
+    color:#404040;
+    font-size:12px;
+    font-weight:500;
+}
+
+
+
+/* aStyleE */
+
+
+
+
+
+
+
+
+/* end faces */

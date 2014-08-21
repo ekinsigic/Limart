@@ -2,6 +2,7 @@ $(document).ready(function () {
 	triggerPanel();
 	panelInnerLinks();
 	stylePanels();
+	panelMisc();
 });
 
 
@@ -248,6 +249,13 @@ function stylePanels() {
 	},200);
 }
 
+function panelMisc() {
+        $(document).keydown(function (e) {
+            if (e.keyCode == 27) {
+                closePanel(activePanel);
+            }
+        });
+}
 
 
 

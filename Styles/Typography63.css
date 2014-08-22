@@ -39,324 +39,145 @@ a:active {
 }
 
 
-
-
-/* Customized */
-.faceA {
-    color: #000;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.faceB {
-    color: #fff;
-    font-size: 63px;
-    font-weight: 800;
-    letter-spacing: 15px;
-}
-
-.faceC {
-    color: #202132;
-    font-size: 68px;
-    font-weight: 400;
-    letter-spacing: 16.7px;
-}
-
-.faceD {
-    color: #202132;
-    font-size: 23px;
-    font-weight: 500;
-    letter-spacing: 6px;
-}
-
-.faceE {
-    color: #a8a8ac;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1.80px;
-}
-
-.faceF {
-    color: #fff;
-    font-size: 21px;
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.faceG {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1.8px;
-}
-
-.faceH {
-    color: #6c6d75;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.faceJ {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 5px;
-}
-
-.faceK {
-    color: #adadad;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 2.5px;
-}
-
-.faceL {
-    color: #000;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.faceM {
-    color: #000;
-    font-size: 11px;
-    font-weight: 500;
-}
-
-.faceN {
-    color: #ddd;
-    font-size: 11px;
-    font-weight: 400;
-}
-
-.faceO {
-    color: #fff;
-    letter-spacing: 3px;
-    font-size: 23px;
-    font-weight: 500;
-}
-
-.faceP {
-    color: #9d9da6;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 1.909;
-    letter-spacing: 2.15px;
-}
-
-.faceQ {
-    color: #737272;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    font-weight: 500;
-}
-
-.faceR {
-    color: #737272;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-}
-
-.faceS {
-    color: #000;
-    font-size: 15px;
-    letter-spacing: 2.5px;
-    font-weight: 600;
-    line-height: 1.705;
-}
-
-.faceT {
-    color: #9d9c97;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 2.097;
-    letter-spacing: 3px;
-}
-
-.faceU {
-    color: #999;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.faceV {
+.stopFaceA { 
     color: #000;
     font-size: 16px;
     font-weight: 600;
 }
 
-.faceW {
+.stopFaceB { 
     color: #4d4f65;
     font-size: 22px;
     font-weight: 500;
-    line-height: 1.396;
+    line-hfeight: 1.396;
 }
 
-.faceX {
+.stopFaceC { 
     color: #000;
     font-size: 14px;
     font-weight: 400;
     opacity: 0.5;
 }
 
-.faceY {
+.stopFaceD { 
     color: #dd354b;
     font-size: 28px;
     font-weight: 700;
 }
 
-.faceZ {
+.stopFaceE { 
     color: #676767;
     font-size: 12px;
     font-weight: 400;
 }
 
-.faceAA {
-    color: white;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 6px;
-}
-
-.faceBB {
-    color: white;
-    opacity: 0.3;
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 4px;
-}
-
-.faceCC {
-    color: white;
-    opacity: 0.3;
-    font-size: 11px;
-    font-weight: 200;
-    line-height: 20px;
-    letter-spacing: 2px;
-}
-
-.faceDD {
-    color: white;
-    font-size: 11px;
-    font-weight: 200;
-    letter-spacing: 3.5px;
-}
-
-.faceEE {
-    font-size: 24px;
-    font-weight: 100;
-    letter-spacing: 5px;
-}
-
-.faceFF {
+.stopFaceF { 
     color: #6d6e89;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
-.faceGG {
+.stopFaceG { 
     color: #000;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
-.faceHH {
+.stopFaceH { 
     color: #a3a3a3;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
-.faceII {
+.stopFaceI { 
     color: #a3a3a3;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
-.faceJJ {
+.stopFaceJ { 
     color: #000;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
-.faceKK {
+.stopFaceK { 
     color: #656565;
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 0.5px;
 }
 
-.faceLL {
+.stopFaceL { 
     color: #a3a3a3;
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
-.faceMM{
+.stopFaceM{ 
     color:#999;
     font-size:12px;
     font-weight:500;
     letter-spacing: 0.040em;
 }
 
-.faceNN{
+.stopFaceN{ 
     color:#b8b8b8;
     font-size:10px;
     font-weight:500;
     letter-spacing: 0.050em;
 }
 
-.faceOO{
+.stopFaceO{ 
     color:#000;
     font-size:18px;
     font-weight:500;
 }
 
-.facePP{
+.stopFaceP{ 
     color:#6d6e89;
     font-weight:600;
     letter-spacing:0.070em;
 }
 
-.faceRR{
+.stopFaceQ{ 
     color:#7f7f7f;
     font-size: 11px;
     letter-spacing:0.040em;
 }
 
-.faceSS{
+.stopFaceR{ 
     color:#3f3f3f;
     font-size: 10px;
     letter-spacing:0.010em;
 }
 
-.faceTT{
+.stopFaceS{ 
     color:#fff;
     font-size:18px;
     font-weight:500;
     letter-spacing:2px;
 }
 
-.faceUU{
+.stopFaceT{ 
     color:#f2f2f2;
     font-weight:500;
     font-size:13px; 
 }
 
-.faceVV {
+.stopFaceU { 
     color:#6d6f80;
     font-size:12px;
     font-weight:500;
 }
 
-.faceWW {
+.stopFaceV { 
     color:#bdbdbd;
     font-size:12px;
     font-weight:500;
@@ -364,66 +185,60 @@ a:active {
 }
 
 
-.faceXX {
+.stopFaceW { 
     color:#000;
     font-size:24px;
     font-weight:400;
     letter-spacing:0 !important;
 }
 
-.faceYY {
+.stopFaceX { 
     color:#4d4d4d;
     font-size:12px;
     font-weight:500;
     letter-spacing:0.030em;
 }
 
-.faceZZ {
+.stopFaceY { 
     color:#3d3d3d;
     font-size:12px;
     font-weight:500;
 }
 
-.faceAAA{
+.stopFaceZ{ 
     color:#4d4d4d;
     font-size:11px;
     font-weight:500;
     letter-spacing:0.020em;
 }
 
-.faceBBB{
+.stopFaceAA{ 
     color:#000;
     font-size:18px;
     font-weight:600;
     letter-spacing: 1px;
 }
 
-.faceCCC{
+.stopFaceBB{ 
     color:#000;
     font-size:40px;
     font-weight:400;
     letter-spacing: 5px;
 }
 
-.faceDDD{
+.stopFaceCC{ 
     color:#000;
     font-size:13px;
     font-weight:400;
     letter-spacing:0.060em;
 }
 
-.faceEEE{
+.stopFaceDD{ 
     color:#656565;
     font-size:12px;
     font-weight:400;
 }
 
-.faceFFF{
-    color:#000;
-    font-size:22px;
-    font-weight:400;
-    letter-spacing:0.060em;
-}
 
 
 
@@ -431,121 +246,7 @@ a:active {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.aStyleA:link,
-.aStyleA:visited {
-    margin: 0 0 0 31px;
-    text-decoration: none;
-    color: #000;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.11em;
-    border-bottom: 2px solid transparent;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-.aStyleA:hover,
-.aStyleA:active {
-    border-bottom: 2px solid #2f3140;
-}
-
-
-
-
-
-.aStyleB:link,
-.aStyleB:visited {
-    text-decoration: none;
-    color: #ddd;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-}
-
-.aStyleB:hover,
-.aStyleB:active {
-}
-
-
-
-
-
-.aStyleC:link,
-.aStyleC:visited {
-    text-decoration: none;
-    color: #000;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-}
-
-.aStyleC:hover,
-.aStyleC:active {
-}
-
-
-.aStyleF:link,
-.aStyleF:visited {
-    display:block;
-    color:#6d6e89;
-    font-size:11px;
-    font-weight:500;
-    letter-spacing:0.040em;
-}
-
-.aStyleF:hover,
-.aStyleF:active {
-}
-
-
-
-.aStyleG:link,
-.aStyleG:visited {
-    color:#6d6e89;
-    font-size:12px;
-    font-weight:500;
-}
-
-.aStyleG:hover,
-.aStyleG:active {
-}
-
-
-
-
-
-
-
-.aStyleD:link,
-.aStyleD:visited {
-    text-decoration: none;
-    color: #000;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-}
-
-.aStyleD:hover,
-.aStyleD:active {
-}
-
-
-
-
-.aStyleE:link,
-.aStyleE:visited {
+.stopaStyleA { 
     display:block;
     height:30px;
     width:180px;
@@ -556,7 +257,7 @@ a:active {
     letter-spacing: 1px;
 }
 
-.aStyleE img {
+.stopaStyleA img { 
     float:left;
     width:24px !important;
     height:11px !important;
@@ -565,32 +266,23 @@ a:active {
     transition:all 0.5s;
 }
 
-.aStyleE span {
+.stopaStyleA span { 
     display:inline-block;
     float:right;
     margin-top:10px;
     transition:all 0.5s;
 }
-
-.aStyleE:hover,
-.aStyleE:active {
-
-}
-
-.aStyleE:hover img,
-.aStyleE:active img {
+.stopaStyleA:hover img{ 
     margin-left:-5px;
 }
 
-.aStyleE:hover span,
-.aStyleE:active span {
+.stopaStyleA:hover span{ 
     color:#000;
 }
 
 
 
-.aStyleF:link ,
-.aStyleF:visited{
+.stopaStyleB{ 
     display: table;
     width: auto;
     padding: 10px 25px;
@@ -602,8 +294,7 @@ a:active {
     text-align: center;
 }
 
-    .aStyleF:hover ,
-    .aStyleF:active {
+    .stopaStyleB:hover { 
         color: #fff;
         background: #6f7182;
         border: 3px solid #6f7182;
@@ -612,9 +303,22 @@ a:active {
 
 
 
+.stopaStyleB { 
+    display:block;
+    color:#fff;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.040em;
+    transition:all 0.3s;
+}
 
-.aStyleH:link,
-.aStyleH:visited {
+.stopaStyleC{ 
+    color:#6d6e89;
+    font-size:12px;
+    font-weight:500;
+}
+
+.stopaStyleD { 
     display:block;
     color:#6d6e89;
     font-size:11px;
@@ -622,12 +326,8 @@ a:active {
     letter-spacing:0.040em;
 }
 
-.aStyleH:hover,
-.aStyleH:active {
-}
 
-
-a.aStyleI {
+a.stopaStyleE { 
     display: inline;
     font-size: 11px;
     text-decoration: underline;
@@ -636,63 +336,17 @@ a.aStyleI {
     transition: opacity 0.2s;
 }
 
-.aStyleI:hover {
+.stopaStyleE:hover { 
     opacity: 1;
 }
 
 
 
-.aStyleJ:link,
-.aStyleJ:visited {
-    display:block;
-    text-decoration:underline;
-    color:#525253;
-    font-size:11px;
-    font-weight:500;
-    letter-spacing:0.010em;
-}
-
-.aStyleJ:hover,
-.aStyleJ:active {
-}
-
-
-
-.aStyleK:link,
-.aStyleK:visited {
-    color: #999;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-}
-
-.aStyleK:hover,
-.aStyleK:active {
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-.spanStyleA {
-    display: inline-block;
-    color: #000;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-}
-
-
-
-.spanStyleB {
+.stopSpanStyleA { 
     display: block;
     color: #f2f2f2;
     font-size: 12px;
@@ -700,31 +354,21 @@ a.aStyleI {
     letter-spacing: 0.08em;
 }
 
-
-
-.spanStyleC {
+.stopSpanStyleB { 
     display: block;
     color:#3d3d3d;
     font-size:12px;
     font-weight:500;
 }
 
-
-.spanStyleD {
-    display: block;
-    color:#3d3d3d;
-    font-size:12px;
-    font-weight:500;
-}
-
-.spanStyleE {
+.stopSpanStyleC { 
     display: block;
     color:#404040;
     font-size:12px;
     font-weight:500;
 }
 
-.spanStyleF{
+.stopSpanStyleD{ 
     display: block;
     color:#000;
     font-size:15px;
@@ -732,7 +376,7 @@ a.aStyleI {
     letter-spacing: 1.5px;
 }
 
-.spanStyleG{
+.stopSpanStyleE{ 
     display: block;
     color:#6d6e89;
     font-size:12px;
@@ -740,7 +384,7 @@ a.aStyleI {
     letter-spacing: 0.01em;
 }
 
-.spanStyleH{
+.stopSpanStyleF{ 
     display: block;
     color:#000;
     font-size:15px;
@@ -748,31 +392,12 @@ a.aStyleI {
 }
 
 
-.spanStyleI{
+.stopSpanStyleG{ 
     display: block;
     color:#7f7f7f;
     font-size:12px;
     font-weight:400;
 }
-
-
-.spanStyleJ{
-    display: block;
-    color:#4b4d63;
-    font-size:15px;
-    font-weight:600;
-    letter-spacing: 0.12em;
-}
-
-.spanStyleK{
-    display: block;
-    color:#fff;
-    font-size:11px;
-    font-weight:400;
-    letter-spacing: 0.08em;
-}
-
-
 
 
 
@@ -790,156 +415,39 @@ a.aStyleI {
 
 /* Screen */
 @media all and (max-width: 400px) {
-    .aStyleA:link,
-    .aStyleA:visited {
-        margin: 0 !important;
-        font-size: 13px;
-        letter-spacing: 0.09em;
-        text-align: center;
-        border: 0;
-    }
 
-    .aStyleA:hover,
-    .aStyleA:active {
-        border-bottom: 0;
-    }
-
-    .faceB {
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 5px;
-    }
-
-    .faceC {
-        font-size: 24px;
-        letter-spacing: 5.30px;
-    }
-
-    .faceD {
-        font-size: 20px;
-        letter-spacing: 5px;
-    
-        line-height: 30px;
-}
-
-    .faceJ {
-        font-size: 12px;
-        letter-spacing: 4.5px;
-    }
-
-    .faceK {
-        font-size: 11px;
-        letter-spacing: 1.5px;
-    }
-    .faceEE {
-        font-size: 20px;
-        letter-spacing: 4px;
-    }
-
-    .faceII {
+    .stopFaceI {
         font-size: 13px;
     }
 
-    .faceTT{
+    .stopFaceS{
         font-size:15px;
     }
 
-    .faceCCC{
+    .stopFaceBB{
         font-size:24px;
     }
 
-    .spanStyleF{
+    .stopSpanStyleF{
         font-size:13px;
     }
    
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    .aStyleA:link,
-    .aStyleA:visited {
-        margin: 0 !important;
-        font-size: 13px;
-        letter-spacing: 0.09em;
-        text-align: center;
-        border: 0;
-    }
-
-    .aStyleA:hover,
-    .aStyleA:active {
-        border-bottom: 0;
-    }
-
-    .faceB {
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: 5px;
-    }
-
-    .faceC {
-        font-size: 30px;
-        letter-spacing: 5.30px;
-    }
-
-    .faceEE {
-        font-size: 20px;
-        letter-spacing: 4px;
-    }
-
-    .faceII {
+    .stopFaceI {
         font-size: 13px;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    .aStyleA:link,
-    .aStyleA:visited {
-        margin: 0 !important;
-        font-size: 17.966px;
-        line-height: 4.21;
-        text-align: center;
-        border: 0;
-    }
-
-    .aStyleA:hover,
-    .aStyleA:active {
-        border-bottom: 0;
-    }
-
-    .faceB {
-        font-size: 49px;
-        letter-spacing: 11px;
-    }
-
-    .faceC {
-        font-size: 50px;
-        letter-spacing: 14px;
-    }
-
-    .faceJ {
-        font-size: 20px;
-        letter-spacing: 5.5px;
-    }
-    .faceII {
+    .stopFaceI {
         font-size: 15px;
         letter-spacing: 0.5px;
     }
 
-    .faceJJ {
+    .stopFaceJ {
         font-size: 15px;
         letter-spacing: 0.5px;
     }
-}
-
-@media all and (min-width: 1019px) and (max-width: 1275px) {
-    .faceJ {
-        font-size: 15px;
-        font-weight: 600;
-        letter-spacing: 4px;
-    }
-}
-
-@media all and (min-width: 1276px) and (max-width: 1434px) {
-}
-
-@media all and (min-width: 1435px) {
 }

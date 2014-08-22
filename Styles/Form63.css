@@ -1,4 +1,4 @@
-﻿input,
+input,
 select,
 select option,
 button,
@@ -131,7 +131,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-input[type="checkbox"].checkboxTypeA {
+input[type="checkbox"].stopCheckboxTypeA {
     width: 12px;
     height: 12px;
     top: 5px;
@@ -142,7 +142,7 @@ input[type="checkbox"].checkboxTypeA {
         background-size: 60%;
     }
 
-.labelA {
+.stopLabelA {
     display: inline-block;
     height: 38px;
     font-size: 12px;
@@ -152,12 +152,12 @@ input[type="checkbox"].checkboxTypeA {
     transition: all 0.2s;
 }
 
-    .labelA:hover:after {
+    .stopLabelA:hover:after {
         opacity: 1;
     }
 
 
-.labelA a {
+.stopLabelA a {
     display: inline-block;
     color:#000;
 }
@@ -184,14 +184,14 @@ input[type="radio"] {
         background-size: 60%;
     }
 
-input[type="radio"].radioTypeA {
+input[type="radio"].stopRadioTypeA {
     height: 12px;
 
     width: 12px;
     top: 2px;
 }
 
-.labelB {
+.stopLabelB {
     display: inline-block;
     height: 38px;
     font-size: 16px;
@@ -208,7 +208,7 @@ input[type="radio"].radioTypeA {
 
 
 
-.labelC {
+.stopLabelC {
     padding:0 5px 0 60px;
     height: 50px;
     font-size: 12px;
@@ -216,7 +216,7 @@ input[type="radio"].radioTypeA {
     letter-spacing: 0.030em;
 }
 
-    .labelC:after {
+    .stopLabelC:after {
         top: 7px;
         left: 31px;
     }
@@ -226,7 +226,7 @@ input[type="radio"].radioTypeA {
 
 
 /* Customized */
-.inputTextA {
+.stopInputTextA {
     padding: 0 40px 0 20px !important;
     width: 205px !important;
     height: 36px !important;
@@ -238,22 +238,22 @@ input[type="radio"].radioTypeA {
     border: 1px solid #000 !important;
 }
 
-    .inputTextA::-webkit-input-placeholder { /* WebKit browsers */
+    .stopInputTextA::-webkit-input-placeholder { /* WebKit browsers */
     }
 
-    .inputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    .stopInputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     }
 
-    .inputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
+    .stopInputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
     }
 
-    .inputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
+    .stopInputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
     }
 
 
 
 
-.inputTextB {
+.stopInputTextB {
     padding: 0 0 0 20px !important;
     width: 205px !important;
     height: 36px !important;
@@ -270,7 +270,7 @@ input[type="radio"].radioTypeA {
 
 
 
-.inputTextC {
+.stopInputTextC {
     padding: 0 20px 0 20px !important;
     width:388px !important;
     height:45px !important;
@@ -283,7 +283,7 @@ input[type="radio"].radioTypeA {
 }
 
    
-input.inputTextD{
+input.stopInputTextD{
         display: block;
         height: 48px;
         background-color: transparent;
@@ -299,38 +299,9 @@ input.inputTextD{
         opacity: 0.7;
 }
 
-input.inputTextD:focus{
+input.stopInputTextD:focus{
         width: 50%;
 }
-
-
-.inputTextE {
-    padding: 0 20px 0 20px !important;
-    width:100% !important;
-    height:45px !important;
-    color: #000 !important;
-    font-size: 12px !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.05em !important;
-    background-color: transparent;
-    border: 1px solid #000 !important;
-}
-
-    .inputTextE::-webkit-input-placeholder { /* WebKit browsers */
-        color: #000 !important;
-    }
-
-    .inputTextE:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: #000 !important;
-    }
-
-    .inputTextE::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: #000 !important;
-    }
-
-    .inputTextE:-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: #000 !important;
-    }
 
 
 
@@ -341,102 +312,9 @@ input.inputTextD:focus{
 
 /* BUTTON STARTS HERE */
 
-/*BLACK BUTTON STYLE */
-input[type="button"].buttonA,
-button.buttonA {
-    color: #000;
-}
 
-    input[type="button"].buttonA:hover,
-    button.buttonA:hover {
-        background: #000;
-        color: #fff;
-        border: 3px solid #000;
-    }
-
-    input[type="button"].buttonA:active,
-    button.buttonA:active {
-        background: #404040 !important;
-        border: 3px solid #404040 !important;
-    }
-/*END BLACK BUTTON STYLE*/
-
-
-
-
-
-/*PURPLE BUTTON STYLE */
-input[type="button"].buttonB,
-button.buttonB {
-    color: #4b4d63;
-}
-
-    input[type="button"].buttonB:hover,
-    button.buttonB:hover {
-        background: #4b4d63;
-        color: #fff;
-        border: 3px solid #4b4d63;
-    }
-
-    input[type="button"].buttonB:active,
-    button.buttonB:active {
-        background: #6f7182 !important;
-        border: 3px solid #6f7182 !important;
-    }
-/* END PURPLE BUTTON STYLE */
-
-
-
-
-
-/*RED BUTTON STYLE */
-input[type="button"].buttonC,
-button.buttonC {
-    color: #dd354b;
-}
-
-    input[type="button"].buttonC:hover,
-    button.buttonC:hover {
-        background: #dd354b;
-        color: #fff;
-        border: 3px solid #dd354b;
-    }
-
-    input[type="button"].buttonC:active,
-    button.buttonC:active {
-        background: #e0495d !important;
-        border: 3px solid #e0495d !important;
-    }
-/* SMALL RED BUTTON STYLE */
-
-
-
-
-
-/* SMALL BUTTON STYLES */
-input[type="button"].buttonD,
-button.buttonD {
-    background: #000;
-    color: #fff;
-    border: 3px solid #000;
-    font-weight: 400;
-    padding: 10px 25px;
-    padding-top: 12px;
-}
-
-    input[type="button"].buttonD:hover,
-    button.buttonD {
-        background: #404040;
-        color: #fff;
-        border: 3px solid #404040;
-    }
-
-
-
-
-
-input[type="button"].buttonE,
-button.buttonE {
+input[type="button"].stopButtonA,
+button.stopButtonA {
     padding: 10px 25px;
     color: #fff;
     font-weight: 400;
@@ -444,8 +322,8 @@ button.buttonE {
     border: 3px solid #4b4d63;
 }
 
-    input[type="button"].buttonE:hover,
-    button.buttonE {
+    input[type="button"].stopButtonA:hover,
+    button.stopButtonA {
         color: #fff;
         background: #6f7182;
         border: 3px solid #6f7182;
@@ -455,8 +333,8 @@ button.buttonE {
 
 
 
-input[type="button"].buttonF,
-button.buttonF {
+input[type="button"].stopButtonB,
+button.stopButtonB {
     padding: 10px 25px;
     padding-top: 12px;
     color: #fff;
@@ -465,8 +343,8 @@ button.buttonF {
     border: 3px solid #dd354b;
 }
 
-    input[type="button"].buttonF:hover,
-    button.buttonF {
+    input[type="button"].stopButtonB:hover,
+    button.stopButtonB {
         background: #e0495d;
         color: #fff;
         border: 3px solid #e0495d;
@@ -477,7 +355,7 @@ button.buttonF {
 
 
 
-.selectA {
+.stopSelectA {
     display: block;
     width: 70px;
     height: 40px;
@@ -497,7 +375,7 @@ button.buttonF {
     -moz-appearance: none;
 }
 
-.selectB{
+.stopSelectB{
         display: block;
         height: 48px;
         background-color: transparent;
@@ -513,24 +391,8 @@ button.buttonF {
         padding-left: 15px;
         opacity: 0.7;
 }
-.selectC {
-        display: block;
-        width: 50%;
-        height: 48px;
-        background-color: transparent;
-        padding: 0 15px 0 15px;
-        border: 1px solid rgba(0,0,0,0.2);
-        color: #000;
-        line-height: 15px;
-        font-size: 11px;
-        letter-spacing: 1px;
-        font-weight: 500;
-        transition: all 0.2s, width 0.2s;
-        padding-left: 15px;
-        opacity: 0.7;
-}
 
-.textareaStyleA {
+.stopTextareaStyleA {
         display: block;
         width: 100%;
         height: 110px;
@@ -549,22 +411,6 @@ button.buttonF {
         resize: none;
 }
 
-.textareaStyleB {
-}
-
-
-
-
-
-.labelStyleA {
-    display: inline-block;
-    padding: 0 0 0 25px;
-    color: #a3a3a3;
-}
-
-.labelStyleB {
-}
-
 
 
 
@@ -573,7 +419,7 @@ button.buttonF {
 
 /* Screen */
 @media all and (max-width: 400px) {
-    header nav .divMailingContent .inputTextA {
+    header nav .divMailingContent .stopInputTextA {
         padding: 0 60px 0 20px !important;
         width: 240px !important;
         height: 46px !important;
@@ -582,14 +428,14 @@ button.buttonF {
         opacity: 1 !important;
     }
 
-    .selectA {
+    .stopSelectA {
         width: 60px;
         background-position: 40px center;
     }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    header nav .divMailingContent .inputTextA {
+    header nav .divMailingContent .stopInputTextA {
         padding: 0 60px 0 20px !important;
         width: 240px !important;
         height: 46px !important;
@@ -598,14 +444,14 @@ button.buttonF {
         opacity: 1 !important;
     }
 
-    .selectA {
+    .stopSelectA {
         width: 60px;
         background-position: 40px center;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    header nav .divMailingContent .inputTextA {
+    header nav .divMailingContent .stopInputTextA {
         padding: 0 60px 0 20px !important;
         width: 270px !important;
         height: 52px !important;
@@ -614,7 +460,7 @@ button.buttonF {
         opacity: 1 !important;
     }
 
-    .selectA {
+    .stopSelectA {
         width: 60px;
         background-position: 40px center;
     }
@@ -624,16 +470,8 @@ button.buttonF {
         top:6px;
     }
 
-    .labelB:after {
+    .stopLabelB:after {
         top: 14px;
         left: 7px;
     }
-}
-
-@media all and (min-width: 1019px) and (max-width: 1434px) {
-
-    
-}
-
-@media all and (min-width: 1435px) {
 }

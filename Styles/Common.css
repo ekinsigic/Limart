@@ -67,12 +67,12 @@
 
 
 
-#searchPanel{
+#searchOpener{
     position:fixed;
     z-index:15;
-    top: 30px;
     width:100%;
     height:60px;
+    top: auto;
     background-color:#ececef;
     transition:transform 0.5s ease;
     -webkit-transition:-webkit-transform 0.5s ease;
@@ -81,18 +81,18 @@
     -o-transition:-o-transform 0.5s ease;
 }
 
-#searchPanel .divSearchContent{
+#searchOpener .divSearchContent{
     margin:auto;
     width:960px;
 }
 
-#searchPanel .divSearchContent .inputTextB{
+#searchOpener .divSearchContent .inputTextB{
     position:absolute;
     top:12px;
     right:40px;
 }
 
-#searchPanel .aSearchButton{
+#searchOpener .aSearchButton{
     position:absolute;
     top:23px;
     right:0;
@@ -100,7 +100,7 @@
     height:12px;
 }
 
-#searchPanel .aSearchButton img{
+#searchOpener .aSearchButton img{
     width:100%;
     height:auto;
 }
@@ -113,7 +113,7 @@
     transform:translate3d(0px,60px,0px);
 }
 
-#searchPanel .pseudoCursor {
+#searchOpener .pseudoCursor {
     position: absolute;
     width: 1px;
     height: 17px;
@@ -207,40 +207,32 @@ main{
 
 
 /* ADDITIONAL PANELS CSS */
-.sixtythreePanel {
+.sixtythreeOpener {
     transition:all 0.7s;
     overflow: auto;
-    z-index: 19;
+    z-index: 31;
 }
-.divUserPanel, .divBasketPanel{
+.divUserOpener, .divBasketOpener{
     position: fixed;
     width: 100%;
     left: 0px;
-    padding: 100px;
-    background:tomato;
 }
-.divBasketPanel {
-    background: orange;
+.divBasketOpener {
 }
-.userInnerPanel{
+.userInnerOpener{
     display: none;
     width: 100%;
-    text-align: center;
-    color:white;
-    font-size: 60px;
-    font-weight: 900;
     opacity: 0;
     -webkit-transform:scale(0.98);
     transition: opacity 0.5s, -webkit-transform 0.5s;
 }
-#userPanelInnerDivPassword{
-    color: cyan;
+#userOpenerInnerDivPassword{
 }
-.activeInnerPanel {
+.activeInnerOpener {
     opacity: 1;
     -webkit-transform:scale(1);
 }
-.userPanelInnerPanelVisible {
+.userOpenerInnerOpenerVisible {
     display:block;
 }
 .panelInnerLink {
@@ -251,10 +243,10 @@ main{
 
 /* Screen */
 @media all and (max-width: 400px) {
-    #search {
+    #searchOpener {
         top: 10px;
     }
-    #search .divSearchContent{
+    #searchOpener .divSearchContent{
         width:90%;
     }
 
@@ -282,14 +274,22 @@ main{
     .breadcrumbs ul li:last-child{
         display: none;
     }
+
+    #searchOpener .aSearchButton{
+        position:absolute;
+        top:23px;
+        right: 25px;
+        width:12px;
+        height:12px;
+    }
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
-    #search {
+    #searchOpener {
         top: 10px;
     }
 
-    #search .divSearchContent{
+    #searchOpener .divSearchContent{
         width:550px;
     }
     main {
@@ -306,12 +306,21 @@ main{
         margin:0 auto;
         display: inline-block;
     }
+    #searchOpener .aSearchButton{
+        position:absolute;
+        top:23px;
+        right:0;
+        width:12px;
+        height:12px;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #search .divSearchContent{
+    #searchOpener .divSearchContent{
         width:670px;
-    }
+    
+        position: relative;
+}
     .breadcrumbsWrapper, .divDetailWrapper {
         width:670px;
         margin:0 auto;
@@ -324,18 +333,38 @@ main{
         margin:0 auto;
         display: inline-block;
     }
+    #searchOpener .aSearchButton{
+        position:absolute;
+        top:23px;
+        right: 25px;
+        width:12px;
+        height:12px;
+    }
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    #search .divSearchContent{
+    #searchOpener .divSearchContent{
         width:960px;
+    }
+    #searchOpener .aSearchButton{
+        position:absolute;
+        top:23px;
+        right:0;
+        width:12px;
+        height:12px;
     }
 }
 
 @media all and (min-width: 1435px) {
-    #search .divSearchContent{
+    #searchOpener .divSearchContent{
         width:1080px;
     }
 
-    
+    #searchOpener .aSearchButton{
+        position:absolute;
+        top:23px;
+        right:0;
+        width:12px;
+        height:12px;
+    }
 }

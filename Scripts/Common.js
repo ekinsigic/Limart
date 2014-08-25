@@ -12,8 +12,9 @@ var isPortrait = false;
 var scrollTopVal = 0;
 var scrollDir;
 var lastScrollAmount = 0;
-var openPanel = null;
+var openOpener = null;
 $(document).ready(function () {
+    fullscreen();
     checkDevice();
     scrollEvents();
     setGlobals();
@@ -31,6 +32,13 @@ $(document).ready(function () {
     }
 
 });
+
+function fullscreen() {  
+    if (isMobile) {
+          document.body.requestFullscreen();
+          console.log('fullscreened');
+    };
+}
 
 var orientationChangeTimer = null;
 $(window).on("orientationchange", function () {
@@ -470,9 +478,9 @@ function smartphoneLandscape() {
     //             $(this).bind('touchend');
     //         });
 
-    //         $('#basketPanel').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
+    //         $('#basketOpener').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
     //             e.stopPropagation();
-    //             $('#basketPanel').bind('touchend', function (e) {
+    //             $('#basketOpener').bind('touchend', function (e) {
     //                 e.stopPropagation();
     //             });
     //         });
@@ -498,14 +506,14 @@ function smartphoneLandscape() {
     //             closeBasket();
     //         });
 
-    //         $('#basketPanel').bind('click', function (e) {
+    //         $('#basketOpener').bind('click', function (e) {
     //             e.stopPropagation();
     //         });
     //     }
     // }
     // function closeBasket() {
     //     if (isMobile) {
-    //         $('#basketPanel, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
+    //         $('#basketOpener, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
     //         setTimeout(function () {//setTimeout kurarak kullanýcýyý animasyonu beklemek zorunda býrakýyoruz
     //             //tespit deðiþkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
     //             isBasketOpen = false;
@@ -514,7 +522,7 @@ function smartphoneLandscape() {
     //         }, 500);
     //     }
     //     else {
-    //         $('#basketPanel, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');
+    //         $('#basketOpener, main, footer, .filtersInHeader, .listingFilters').removeClass('basketOn');
     //         setTimeout(function () {
     //             isBasketOpen = false;
     //             isScroll = false;
@@ -527,7 +535,7 @@ function smartphoneLandscape() {
     //             isBasketOpen = true;//deðiþkenleri eski haline getiriyoruz
     //             isScroll = false;
 
-    //             $('#basketPanel, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+    //             $('#basketOpener, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
     //             e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
     //             $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
     //                 e.preventDefault();
@@ -543,7 +551,7 @@ function smartphoneLandscape() {
     //             setTimeout(function(){
     //                 isBasketOpen = true
     //             },100);
-    //             $('#basketPanel, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');
+    //             $('#basketOpener, main, footer, .filtersInHeader, .listingFilters').addClass('basketOn');
     //         }
     //         else if (isBasketOpen) {
     //             closeBasket();
@@ -589,9 +597,9 @@ function smartphoneLandscape() {
     //             $(this).bind('touchend');
     //         });
 
-    //         $('#userPanel').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
+    //         $('#userOpener').bind('touchstart', function (e) {//yukarýda sayfanýn herhangi bir yerine basýldýðýnda menüyü kapatan fonksiyondan, menünün kendisini muaf tutuyoruz.
     //             e.stopPropagation();
-    //             $('#userPanel').bind('touchend', function (e) {
+    //             $('#userOpener').bind('touchend', function (e) {
     //                 e.stopPropagation();
     //             });
     //         });
@@ -617,14 +625,14 @@ function smartphoneLandscape() {
     //             closeUser();
     //         });
 
-    //         $('#userPanel').bind('click', function (e) {
+    //         $('#userOpener').bind('click', function (e) {
     //             e.stopPropagation();
     //         });
     //     }
     // }
     // function closeUser() {
     //     if (isMobile) {
-    //         $('#userPanel, main, footer, .filtersInHeader, .listingFilters').removeClass('userOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
+    //         $('#userOpener, main, footer, .filtersInHeader, .listingFilters').removeClass('userOn');//verdiðimiz, elementleri aþaðýda gösteren class'ý geri alýyoruz.
     //         setTimeout(function () {//setTimeout kurarak kullanýcýyý animasyonu beklemek zorunda býrakýyoruz
     //             //tespit deðiþkenlerini eski haline getirip scroll'u tekrar aktif hale getiriyoruz.
     //             isUserOpen = false;
@@ -633,7 +641,7 @@ function smartphoneLandscape() {
     //         }, 500);
     //     }
     //     else {
-    //         $('#userPanel, main, footer, .filtersInHeader, .listingFilters').removeClass('userOn');
+    //         $('#userOpener, main, footer, .filtersInHeader, .listingFilters').removeClass('userOn');
     //         setTimeout(function () {
     //             isUserOpen = false;
     //             isScroll = false;
@@ -646,7 +654,7 @@ function smartphoneLandscape() {
     //             isUserOpen = true;//deðiþkenleri eski haline getiriyoruz
     //             isScroll = false;
 
-    //             $('#userPanel, main, footer, .filtersInHeader, .listingFilters').addClass('userOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
+    //             $('#userOpener, main, footer, .filtersInHeader, .listingFilters').addClass('userOn');//aþaðý doðru hareket etmesini istediðimiz elementlere aþaðý doðru hareket etmiþ hallerini içeren class'ý ekliyoruz
     //             e.stopPropagation();//sayfanýn gerisine eklenen window.touchend iþleminden muaf tutuyoruz.
     //             $(window).bind('touchmove', function (e) {//sayfanýn scroll olmasýný engelliyoruz
     //                 e.preventDefault();
@@ -662,7 +670,7 @@ function smartphoneLandscape() {
     //             setTimeout(function(){
     //                 isUserOpen = true
     //             },100);
-    //             $('#userPanel, main, footer, .filtersInHeader, .listingFilters').addClass('userOn');
+    //             $('#userOpener, main, footer, .filtersInHeader, .listingFilters').addClass('userOn');
     //         }
     //         else if (isUserOpen) {
     //             closeUser();

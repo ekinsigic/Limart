@@ -579,7 +579,7 @@ a:active {
 
 .aStyleE:hover img,
 .aStyleE:active img {
-    margin-left:-5px;
+    -webkit-transform: translate(-5px,0px);
 }
 
 .aStyleE:hover span,

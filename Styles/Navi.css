@@ -7,8 +7,12 @@ nav{
 nav .divNav{
     position:absolute;
     z-index:0;
-    top:40px;
-    right:0;
+    top: 40px;
+    right: 90px;
+    height: auto;
+    width: auto;
+    padding-bottom: px;
+    background: transparent;
 }
 
 nav .divNav ul.level1{
@@ -51,8 +55,8 @@ nav .divNavIcon .imgNav{
 
 nav .divSearchIcon {
     position: absolute;
-    top: 26px;
-    right: -14px;
+    top: 25px;
+    right: -15px;
     width: 40px;
     height: 40px;
     opacity: 0.2;
@@ -69,6 +73,7 @@ nav .divMenuIcon {
     position: absolute;
     top: 26px;
     right: 68px;
+    display: none;
     width: 40px;
     z-index: 99;
     height: 40px;
@@ -78,14 +83,12 @@ nav .divMenuIcon {
 
 nav .divMenuIcon .imgMenu {
     position: absolute;
-    right: 1px;
-    bottom: -6px;
 }
 
 nav .divUserIcon {
     position: absolute;
-    top: 26px;
-    right: -47px;
+    top: 25px;
+    right: 60px;
     width: 40px;
     z-index: 99;
     height: 40px;
@@ -100,8 +103,8 @@ nav .divUserIcon .imgUser {
 }
 nav .divBasketIcon {
     position: absolute;
-    top: 26px;
-    right: 136px;
+    top: 25px;
+    right: 23px;
     width: 40px;
     height: 40px;
     z-index: 99;
@@ -157,6 +160,19 @@ nav .divNav, main, footer {
     -o-transition:-o-transform 0.5s ease;
 }
 
+.triggerDiv#menuTrigger {
+    top: 25px;
+    right: 10px;
+}
+.triggerDiv#basketTrigger {
+    display:block;
+}
+.triggerDiv#userTrigger {
+    display:block;
+}
+.triggerDiv#searchTrigger {
+    display:block;
+}
 
 /* Screen */
 @media all and (max-width: 400px) {
@@ -253,6 +269,107 @@ nav .divNav, main, footer {
         transform: translate3d(0px,370px,0px);
     }
     /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
+
+        
+/********************************* TOUCH ICONS ******/
+
+
+    nav .divNavIcon{
+        position:absolute;
+        z-index:10;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+
+    nav .divNavIcon .divNavIconBg {
+        position:fixed;
+        top:0;
+        right:0;
+        left:0;
+        height: 70px;
+        background-color:#fff;
+    }
+
+    nav .divNavIcon .imgNav{
+        position:absolute;
+        top: 10px;
+        right: -25px;
+    }
+
+    nav .divSearchIcon {
+        position: absolute;
+        top: 15px;
+        right: 52px;
+        width: 40px;
+        height: 40px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divSearchIcon .imgSearch {
+        position: absolute;
+        right: 14px;
+        bottom: 13px;
+    }
+
+    nav .divMenuIcon {
+        position: absolute;
+        display: block;
+        top: 15px !important;
+        right: 0px;
+        width: 40px;
+        z-index: 99;
+        height: 40px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divMenuIcon .imgMenu {
+        top: 10;
+        top: 12px;
+    
+        left: 10px;
+}
+
+    nav .divUserIcon {
+        position: absolute;
+        top: 13px;
+        right: 131px;
+        width: 40px;
+        z-index: 99;
+        height: 40px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divUserIcon .imgUser {
+        position: absolute;
+        right: 15px;
+        bottom: 11px;
+    
+        width: 15px;
+        height: 15px;
+}
+    nav .divBasketIcon {
+        position: absolute;
+        top: 16px;
+        right: 95px;
+        width: 40px;
+        height: 40px;
+        z-index: 99;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divBasketIcon .imgBasket {
+        position: absolute;
+        right: 14px;
+        bottom: 13px;
+        width: 15px;
+        height: 15px;
+}
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
@@ -351,11 +468,13 @@ nav .divNav, main, footer {
 @media all and (min-width: 701px) and (max-width: 1018px) {
     nav .divNav{
         position:fixed;
-        top:-660px;
+        top: auto;
+        overflow: scroll;
         right:0;
         left:0;
         height:746px;
         padding-top:30px;
+        padding-bottom: 30px;
         background-color:#fff; 
     }
 
@@ -389,6 +508,107 @@ nav .divNav, main, footer {
         top: 24px;
         right: 35px;
     }
+
+    
+/********************************* TOUCH ICONS ******/
+
+
+    nav .divNavIcon{
+        position:absolute;
+        z-index:10;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+
+    nav .divNavIcon .divNavIconBg {
+        position:fixed;
+        top:0;
+        right:0;
+        left:0;
+        height:90px;
+        background-color:#fff;
+    }
+
+    nav .divNavIcon .imgNav{
+        position:absolute;
+        top: 10px;
+        right: -25px;
+    }
+
+    nav .divSearchIcon {
+        position: absolute;
+        top: 27px;
+        right: 52px;
+        width: 40px;
+        height: 40px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divSearchIcon .imgSearch {
+        position: absolute;
+        right: 14px;
+        bottom: 13px;
+    }
+
+    nav .divMenuIcon {
+        position: absolute;
+        display: block;
+        top: 32px;
+        right: 0px;
+        width: 40px;
+        z-index: 99;
+        height: 40px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divMenuIcon .imgMenu {
+        top: 10;
+        top: 12px;
+    
+        left: 10px;
+}
+
+    nav .divUserIcon {
+        position: absolute;
+        top: 24px;
+        right: 131px;
+        width: 40px;
+        z-index: 99;
+        height: 40px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divUserIcon .imgUser {
+        position: absolute;
+        right: 15px;
+        bottom: 11px;
+    
+        width: 15px;
+        height: 15px;
+}
+    nav .divBasketIcon {
+        position: absolute;
+        top: 26px;
+        right: 95px;
+        width: 40px;
+        height: 40px;
+        z-index: 99;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+
+    nav .divBasketIcon .imgBasket {
+        position: absolute;
+        right: 14px;
+        bottom: 13px;
+        width: 15px;
+        height: 15px;
+}
 }
 
 
@@ -407,6 +627,7 @@ nav .divNav, main, footer {
 
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
+
 }
 
 @media all and (min-width: 1435px) {

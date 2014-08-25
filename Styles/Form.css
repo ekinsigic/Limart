@@ -101,7 +101,9 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-
+select:active {
+    opacity:1;
+}
     select:after {
         content: url(../images/arrow-down-form-select.png);
         display: block;

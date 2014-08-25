@@ -262,7 +262,6 @@
         margin-top: 16px;
     }
     .topFullWidth img:first-child{
-        right: 0px;
         left: auto;
         display: block;
     }

@@ -409,4 +409,7 @@ function panelInnerLinks() {
         }
         //
 
+function carryMenu() {
+	
+}
 

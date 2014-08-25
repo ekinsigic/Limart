@@ -88,7 +88,8 @@ main {
 	min-width: 160px;
 	padding-left: 30px;
     background: url(../images/arrow-down-form-select-second.png) no-repeat;
-    background-position-x:90%; 
+    
+	background-position-x: 85%; 
     background-position-y:50%;
     opacity: 0.6;
 	-webkit-appearance: none;
@@ -288,7 +289,7 @@ footer {
 
 
 /* Screen */
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
     .listingWelcome h2, .listingWelcome p {
 		width: 90%;
 	}
@@ -310,7 +311,7 @@ footer {
 	.listingFilters .listingFilterFirstLayer {
 		background:white;
 		height: 46px;
-		width: 50%;
+		width: 51.8%;
 		overflow: hidden;
 		margin-left: -8px;
 		border-bottom: 1px solid #f0f0f0;
@@ -321,36 +322,6 @@ footer {
 }
 }
 
-@media all and (min-width: 401px) and (max-width: 700px) {
-    .listingWelcome h2, .listingWelcome p {
-		width: 550px;
-	}
-
-	.listingFilters{
-		position: fixed !important;
-		top: 69px !important;
-		height: 100px;
-	}
-	.listingWelcome{
-		display: none;
-	}
-
-	main {
-		padding-top: 100px;
-	}
-
-	.listingFilters .listingFilterFirstLayer {
-		background:white;
-		height: 46px;
-		width: 50%;
-		margin-left: -2px;
-		border-bottom: 1px solid #f0f0f0;
-	}
-	.listingFilters .listingFilterFirstLayer select {
-		height: 100%;
-		width: 100%;
-	}
-}
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     .listingWelcome h2, .listingWelcome p {

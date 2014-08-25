@@ -86,10 +86,7 @@ function productDetailPopUps() {
 function demoPreview() {
 var artworkSize = $('#demoWindowSelector').val();
 var wallSize = $('.demoSingleArtworkImageContainer .artworkBackgroundImage').attr('data-wallsize');
-console.log(wallSize);
-console.log(artworkSize);
 var finalImageProportions = wallSize / artworkSize
-console.log(finalImageProportions);
     $('#demoWindowSelector').change(function(){
         artworkSize = $(this).val();
         finalImageProportions = wallSize / artworkSize
@@ -97,7 +94,6 @@ console.log(finalImageProportions);
         $('.artworkDemoActualImage').css({
             'margin-top': -($('.artworkBackgroundImage').height()/finalImageProportions)/2 + 'px'
         });
-        console.log(artworkSize);
     })
 $('.artworkDemoActualImageCenterer').height($('.artworkBackgroundImage').height()/finalImageProportions);
 $('.artworkDemoActualImage').css({

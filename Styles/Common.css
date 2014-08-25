@@ -1,4 +1,9 @@
-﻿
+﻿body {
+    opacity: 0;
+    transition: opacity 0.7s;
+    transition-delay: 0.2s;
+}
+
 #smartphoneLandscape{
     display:none;
     position:fixed;
@@ -90,6 +95,7 @@
     position:absolute;
     top:12px;
     right:40px;
+    border: 0;
 }
 
 #searchOpener .aSearchButton{
@@ -123,8 +129,6 @@
     -webkit-animation:pseudoCursor 0.6s infinite alternate
 }
 
-
-
 main{
     z-index:10;
     margin:90px auto 0 auto;
@@ -136,7 +140,6 @@ main{
     width: 100%;
     height: 100%;
 }
-
 
 @-webkit-keyframes pseudoCursor {
     from {
@@ -179,23 +182,6 @@ main{
 }
 /* END - BREADCRUMBS */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* PAGE HEADER */
 #pageHeader {
     height: 100px;
@@ -203,22 +189,29 @@ main{
     line-height: 100px;
     text-align: center;
 }
-/* END - PAGE HEADER */
 
+/* END - PAGE HEADER */
 
 /* ADDITIONAL PANELS CSS */
 .sixtythreeOpener {
-    transition:all 0.7s;
+    transition:transform 0.7s;
+    -webkit-transition:-webkit-transform 0.7s
+    -moz-transition:-moz-transform 0.7s
+    -ms-transition:-ms-transform 0.7s
+    -o-transition:-o-transform 0.7s
     overflow: auto;
     z-index: 31;
 }
+
 .divUserOpener, .divBasketOpener{
     position: fixed;
     width: 100%;
     left: 0px;
 }
+
 .divBasketOpener {
 }
+
 .userInnerOpener{
     display: none;
     width: 100%;
@@ -226,26 +219,31 @@ main{
     -webkit-transform:scale(0.98);
     transition: opacity 0.5s, -webkit-transform 0.5s;
 }
+
 #userOpenerInnerDivPassword{
 }
+
 .activeInnerOpener {
     opacity: 1;
     -webkit-transform:scale(1);
 }
+
 .userOpenerInnerOpenerVisible {
     display:block;
 }
+
 .panelInnerLink {
     cursor: pointer;
 }
+
 /* END - ADDITIONAL PANEL CSS */
 
-
 /* Screen */
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
     #searchOpener {
         top: 10px;
     }
+
     #searchOpener .divSearchContent{
         width:90%;
     }
@@ -253,24 +251,28 @@ main{
     main{
         margin:70px auto 0 auto;
     }
+
     #pageHeader {
         height:75px;
         line-height: 80px;     
     }
+
     .breadcrumbsWrapper, .divDetailWrapper {
         width:90%;
         margin:0 auto;
         text-align: center;
     }
+
     .breadcrumbs{
         text-align: center;
     }
+
     .breadcrumbs ul{
         margin-right: -7px !important;
         display: inline-block;
-    
         float: right;
     }
+
     .breadcrumbs ul li:last-child{
         display: none;
     }
@@ -282,57 +284,30 @@ main{
         width:12px;
         height:12px;
     }
-}
 
-@media all and (min-width: 401px) and (max-width: 700px) {
-    #searchOpener {
-        top: 10px;
-    }
-
-    #searchOpener .divSearchContent{
-        width:550px;
-    }
-    main {
-        margin: 70px auto 0 auto;
-    }
-    .breadcrumbsWrapper, .divDetailWrapper {
-        width:90%;
-        margin:0 auto;
-    }
-    .breadcrumbs{
-        text-align: center;
-    }
-    .breadcrumbs ul{
-        margin:0 auto;
-        display: inline-block;
-    }
-    #searchOpener .aSearchButton{
-        position:absolute;
-        top:23px;
-        right:0;
-        width:12px;
-        height:12px;
-    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     #searchOpener .divSearchContent{
         width:670px;
-    
         position: relative;
-}
+    }
+
     .breadcrumbsWrapper, .divDetailWrapper {
         width:670px;
         margin:0 auto;
         text-align: center;
     }
+
     .breadcrumbs{
         text-align: center;
     }
+
     .breadcrumbs ul{
         margin:0 auto;
         display: inline-block;
     }
+
     #searchOpener .aSearchButton{
         position:absolute;
         top:23px;
@@ -340,12 +315,14 @@ main{
         width:12px;
         height:12px;
     }
+
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
     #searchOpener .divSearchContent{
         width:960px;
     }
+
     #searchOpener .aSearchButton{
         position:absolute;
         top:23px;
@@ -353,6 +330,7 @@ main{
         width:12px;
         height:12px;
     }
+
 }
 
 @media all and (min-width: 1435px) {

@@ -181,7 +181,7 @@
 
 /* END - ARTISTS */
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
 
     #artists {
         margin-top: 100px;
@@ -238,18 +238,6 @@
 }
 
 /* Screen */
-
-@media all and (min-width: 401px) and (max-width: 700px) {
-
-    .artistsHeadingWrapper {
-        width: 90%;
-        left: 5%;
-    }
-
-    #artists .divArtists .divArtist {
-        width: 50%;
-    }
-}
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     

@@ -242,7 +242,7 @@
     }
 
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
     #basketDetails {
         width: 90%;
     }
@@ -341,104 +341,6 @@
     }
 }
 
-@media all and (min-width: 401px) and (max-width: 700px) {
-    #basketDetails {
-        width: 90%;
-    }
-
-        #basketDetails .divBasketItemHeaders {
-            display: none;
-        }
-
-            #basketDetails .divItem .divDescription .divInfo,
-            #basketDetails .divItem .divDescription .divUnitPrice,
-            #basketDetails .divItem .divDescription .divQuantity,
-            #basketDetails .divItem .divDescription .divTotalPrice {
-                min-height: initial;
-            }
-
-                #basketDetails .divItem .divDescription .divInfo div.content,
-                #basketDetails .divItem .divDescription .divUnitPrice div.content,
-                #basketDetails .divItem .divDescription .divQuantity div.content,
-                #basketDetails .divItem .divDescription .divTotalPrice div.content {
-                    text-align: left;
-                    padding-left: 10px;
-                }
-
-                #basketDetails .divItem .divDescription .divInfo div.content {
-                    width: 90%;
-                    min-width: 230px;
-                    max-width: 700px;
-                    padding-top: 5px;
-                }
-
-                #basketDetails .divItem .divDescription .divUnitPrice div.content {
-                    width: 180px;
-                    padding-top: 24px;
-                }
-
-            #basketDetails .divItem .divDescription .divQuantity {
-                float: right;
-                margin-top: 10px;
-                margin-right: -20px;
-            }
-
-                #basketDetails .divItem .divDescription .divQuantity div.content {
-                    width: auto;
-                    min-width: initial;
-                    padding-left: 0;
-                }
-
-            #basketDetails .divItem .divDescription .divTotalPrice {
-                display: none;
-            }
-
-            #basketDetails .divItem .divDescription .aDelete {
-                top: 0;
-                margin-top: 0;
-            }
-
-                #basketDetails .divItem .divDescription .aDelete img {
-                    position: absolute;
-                    top: 5px;
-                    margin: initial;
-                }
-
-        #basketDetails .divTotal {
-            height: initial;
-            padding-top: 35px;
-            padding-bottom: 35px;
-        }
-
-            #basketDetails .divTotal .divDiscount {
-                display: none;
-            }
-
-            #basketDetails .divTotal .tableOrderTotal {
-                float: initial;
-                width: 90%;
-                margin: 0 auto 0 auto;
-            }
-
-                #basketDetails .divTotal .tableOrderTotal tr td:first-child {
-                    width: 110px;
-                    text-align: left;
-                }
-
-        #basketDetails .contShopping {
-            display: none;
-        }
-
-        #basketDetails .btnCompleteOrder {
-            float: initial;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-    footer .aLogo {
-        display: none !important;
-    }
-}
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
     #basketDetails {

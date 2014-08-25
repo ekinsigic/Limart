@@ -789,7 +789,7 @@ a.aStyleI {
 
 
 /* Screen */
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
     .aStyleA:link,
     .aStyleA:visited {
         margin: 0 !important;
@@ -852,42 +852,6 @@ a.aStyleI {
         font-size:13px;
     }
    
-}
-
-@media all and (min-width: 401px) and (max-width: 700px) {
-    .aStyleA:link,
-    .aStyleA:visited {
-        margin: 0 !important;
-        font-size: 13px;
-        letter-spacing: 0.09em;
-        text-align: center;
-        border: 0;
-    }
-
-    .aStyleA:hover,
-    .aStyleA:active {
-        border-bottom: 0;
-    }
-
-    .faceB {
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: 5px;
-    }
-
-    .faceC {
-        font-size: 30px;
-        letter-spacing: 5.30px;
-    }
-
-    .faceEE {
-        font-size: 20px;
-        letter-spacing: 4px;
-    }
-
-    .faceII {
-        font-size: 13px;
-    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

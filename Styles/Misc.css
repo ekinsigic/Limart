@@ -131,6 +131,23 @@ img[data-sixtythree="icon-login-instagram"] {
     width: 22px;
     height: 22px;
 }
+img[data-sixtythree="icon-login-facebook-black"] {
+    display: block;
+    width: 10px;
+    height: 21px;
+}
+
+img[data-sixtythree="icon-login-twitter-black"] {
+    display: block;
+    width: 21px;
+    height: 17px;
+}
+
+img[data-sixtythree="icon-login-instagram-black"] {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
 
 
         
@@ -563,7 +580,7 @@ img[data-sixtythree="arrow-next-short-purple"] {
 
 
 /* Screen */
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
     header nav img[data-sixtythree="icon-search"] {
         width: 15px;
         height: 15px;
@@ -584,13 +601,6 @@ img[data-sixtythree="arrow-next-short-purple"] {
 
     .divLineB {
         height: 50px;
-    }
-}
-
-@media all and (min-width: 401px) and (max-width: 700px) {
-    header nav img[data-sixtythree="icon-search"] {
-        width: 15px;
-        height: 15px;
     }
 }
 

@@ -339,7 +339,7 @@ footer {
 
 
 /* Screen */
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
 
 	.artistWelcome{
 		box-sizing:content-box;
@@ -364,7 +364,9 @@ footer {
 
 	.artistInfo {
 		width: 90%;
-	}
+	
+		margin-top: -40px;
+}
 
 	.artistDetail{
 		display:none;
@@ -381,8 +383,10 @@ footer {
 
 
 	.artistDividant {
-		margin-top: 50px;
-	}
+		margin-top: 80px;
+	
+		height: 4px;
+}
 	
 	.listingContainer {
 		text-align: center;
@@ -416,42 +420,6 @@ footer {
 
 	.listingContainer {
 		margin-top: 130px;
-	}
-}
-
-@media all and (min-width: 401px) and (max-width: 700px) {
-	.artistWelcome {
-		padding-bottom:20px;
-		box-sizing:content-box
-	}
-
-	.sticky {
-		top: 70px !important;
-	}
-
-	main {
-		margin-top: 70px;}
-
-	.listingContainer {
-		text-align: center;
-		margin-top: 150px;
-	}
-	
-	.listingFilters{
-		height: 100px;
-	}
-
-	.listingFilters .listingFilterFirstLayer {
-		background:white;
-		height: 46px;
-		width: 50%;
-		margin-left: -2px;
-		border-bottom: 1px solid #f0f0f0;
-	}
-
-	.listingFilters .listingFilterFirstLayer select {
-		height: 100%;
-		width: 100%;
 	}
 }
 

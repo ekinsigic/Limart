@@ -414,7 +414,7 @@ a.stopaStyleE {
 
 
 /* Screen */
-@media all and (max-width: 400px) {
+@media all and (max-width: 700px) {
 
     .stopFaceI {
         font-size: 13px;
@@ -432,12 +432,6 @@ a.stopaStyleE {
         font-size:13px;
     }
    
-}
-
-@media all and (min-width: 401px) and (max-width: 700px) {
-    .stopFaceI {
-        font-size: 13px;
-    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

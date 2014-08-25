@@ -418,23 +418,7 @@ button.stopButtonB {
 
 
 /* Screen */
-@media all and (max-width: 400px) {
-    header nav .divMailingContent .stopInputTextA {
-        padding: 0 60px 0 20px !important;
-        width: 240px !important;
-        height: 46px !important;
-        font-size: 13px !important;
-        letter-spacing: 0.09em !important;
-        opacity: 1 !important;
-    }
-
-    .stopSelectA {
-        width: 60px;
-        background-position: 40px center;
-    }
-}
-
-@media all and (min-width: 401px) and (max-width: 700px) {
+@media all and (max-width: 700px) {
     header nav .divMailingContent .stopInputTextA {
         padding: 0 60px 0 20px !important;
         width: 240px !important;

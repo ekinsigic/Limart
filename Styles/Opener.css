@@ -1,9 +1,7 @@
 ﻿
 .sixtythreeOpener{
-    position:fixed;
     z-index:18;
     width:100%;
-    height:376px;
     overflow: visible;
     background-color:#ececef;
 }
@@ -22,7 +20,7 @@
 
 .sixtythreeOpener .divLoginContent,
 .sixtythreeOpener .divNewMemberContent{
-    margin:45px auto 0 auto;
+    margin: 0px auto 0 auto;
 }
 
 .sixtythreeOpener .divLogin{
@@ -464,7 +462,10 @@
     .sixtythreeOpener .divLoginContent,
     .sixtythreeOpener .divNewMemberContent{
         width:960px;
-    }
+    
+        padding-bottom: 30px;
+        padding-top: 30px;
+}
 
     .sixtythreeOpener .divLoginContent .divOr{
         margin:37px 0 0 135px;

@@ -1,4 +1,22 @@
-﻿
+﻿#divOpenerFrame.on {
+    -webkit-transform:translate3d(0px,100%,0px);
+}
+#divOpenerFrame {
+    -webkit-transition: -webkit-transform 0.7s;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+#divOpenerFrame .sixtythreeOpener {
+    display: none;
+}
+
+#divOpenerFrame .sixtythreeOpener.on {
+    display: block;
+}
+
 nav{
     width:100%;
     height:100%;

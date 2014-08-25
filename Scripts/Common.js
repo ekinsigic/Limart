@@ -35,14 +35,16 @@ if (isMobile)
 $(document).ready(function () {
     $('body').css('opacity','1');
     $('a').click(function(e){
-        e.preventDefault();
-        $('body').css('opacity','0');
-        setTimeout(function(){
-            console.log($(this).attr('href'));
-            //window.location.replace($(this).attr('href'));
-        },950);
+        destination = $(this).attr('href');
+        if (destination !== '#') {
+            e.preventDefault();
+            $('body').css('opacity','0');
+            setTimeout(function(){
+                window.location.replace(destination);
+            },950);
+        };
     });
-    fullscreen();
+    //fullscreen();
     scrollEvents();
     setGlobals();
     smartphoneLandscape();

@@ -69,23 +69,29 @@
                     <div class="divNavIconBg"></div>
                 </div>
 
-                <div class="divMenuIcon triggerDiv" id="menuTrigger">
+                <div class="divMenuIcon triggerDiv" data-trigger-type="menu" id="menuTrigger">
                     <img data-sixtythree="icon-mobile-nav" class="imgMenu" />
                 </div>
-                <div class="divSearchIcon triggerDiv" id="searchTrigger">
+                <div class="divSearchIcon triggerDiv" data-trigger-type="search" id="searchTrigger">
                     <img data-sixtyThree="icon-search" class="imgSearch">
                 </div>
-                <div class="divUserIcon triggerDiv" id="userTrigger">
+                <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
                     <img data-sixtyThree="icon-user" class="imgUser">
                 </div>
-                <div class="divBasketIcon triggerDiv" id="basketTrigger">
+                <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
                     <img data-sixtyThree="icon-basket" class="imgBasket">
                 </div>
             </nav>
         </div>
-    </header>
 
 
+<div id="divOpenerFrame" class="divOpenerFrame">
+
+
+
+
+    <div class="divNav sixtythreeOpener" id="menuOpener">
+    </div>
 
     <section id="searchOpener" class="sixtythreeOpener">
         <div class="divSearchContent">
@@ -96,102 +102,98 @@
     </section>
 
 
+    <section class="divUserOpener sixtythreeOpener" id="userOpener">
+        
+        <div id="userOpenerInnerDivLogin" class="userInnerOpener userOpenerInnerOpenerVisible activeInnerOpener divLoginContent">
+            <div class="openerHeader login">
+                <h1 class="faceEE">GİRİŞ YAP</h1>
+            </div>
+            <div class="divLogin">
+                <h1 class="faceFFF login">GİRİŞ YAP</h1>
+                <input type="text" placeholder="KULLANICI ADI" class="inputTextE input" />
+                <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+
+                <button class="buttonB">GİRİŞ YAP</button>
+
+                <a href="#" data-innerOpenerAnchor="userOpenerInnerDivPassword" class="aStyleJ signUp panelInnerLink">ÜYE OLMAK İSTİYORUM</a>
+                <a href="#" data-innerOpenerAnchor="userOpenerInnerDivPassword" class="aStyleJ forgotPassword panelInnerLink">ŞİFREMİ UNUTTUM</a>
+            </div>
 
 
+            <div class="divOr">
+                <span class="spanStyleJ spanOr">VEYA</span>
+            </div>
 
 
-                <section class="divUserOpener sixtythreeOpener" id="userOpener">
-                    
-                    <div id="userOpenerInnerDivLogin" class="userInnerOpener userOpenerInnerOpenerVisible activeInnerOpener divLoginContent">
-                        <div class="openerHeader login">
-                            <h1 class="faceEE">GİRİŞ YAP</h1>
-                        </div>
-                        <div class="divLogin">
-                            <h1 class="faceFFF login">GİRİŞ YAP</h1>
-                            <input type="text" placeholder="KULLANICI ADI" class="inputTextE input" />
-                            <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+            <div class="divSocialIcons">
+                <a href="#" class="aSocialIcon facebook">
+                    <img data-sixtythree="icon-login-facebook"><span class="spanStyleK">FACEBOOK İLE BAĞLAN</span>
+                </a>
 
-                            <button class="buttonB">GİRİŞ YAP</button>
+                <a href="#" class="aSocialIcon twitter">
+                    <img data-sixtythree="icon-login-twitter"><span class="spanStyleK">TWITTER İLE BAĞLAN</span>
+                </a>
 
-                            <a href="#" data-innerOpenerAnchor="userOpenerInnerDivPassword" class="aStyleJ signUp panelInnerLink">ÜYE OLMAK İSTİYORUM</a>
-                            <a href="#" data-innerOpenerAnchor="userOpenerInnerDivPassword" class="aStyleJ forgotPassword panelInnerLink">ŞİFREMİ UNUTTUM</a>
-                        </div>
+                <a href="#" class="aSocialIcon instagram">
+                    <img data-sixtythree="icon-login-instagram"><span class="spanStyleK">INSTAGRAM İLE BAĞLAN</span>
+                </a>
+            </div>
 
 
-                        <div class="divOr">
-                            <span class="spanStyleJ spanOr">VEYA</span>
-                        </div>
+            <div class="separator"></div>
+        </div>
+
+        <div  id="userOpenerInnerDivPassword" class="divNewMemberContent userInnerOpener">
 
 
-                        <div class="divSocialIcons">
-                            <a href="#" class="aSocialIcon facebook">
-                                <img data-sixtythree="icon-login-facebook"><span class="spanStyleK">FACEBOOK İLE BAĞLAN</span>
-                            </a>
+            <div class="openerHeader member">
+                <h1 class="faceEE">KAYIT OL</h1>
+            </div>
+            <div class="divMemberA">
+                <h1 class="faceFFF login">KAYIT OL</h1>
 
-                            <a href="#" class="aSocialIcon twitter">
-                                <img data-sixtythree="icon-login-twitter"><span class="spanStyleK">TWITTER İLE BAĞLAN</span>
-                            </a>
+                <input type="text" placeholder="İSİM" class="inputTextE input" />
+                <input type="text" placeholder="SOYİSİM" class="inputTextE input" />
+            </div>
 
-                            <a href="#" class="aSocialIcon instagram">
-                                <img data-sixtythree="icon-login-instagram"><span class="spanStyleK">INSTAGRAM İLE BAĞLAN</span>
-                            </a>
-                        </div>
+            <div class="divMemberB">
+                <input type="text" placeholder="E-POSTA ADRESİ" class="inputTextE input" />
+                <select class="inputTextE input">
+                    <option>CİNSİYET</option>
+                    <option>KADIN</option>
+                    <option>ERKEK</option>
+                </select>
+            </div>
 
+            <div class="divMemberC">
+                <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+                <input type="text" placeholder="ŞİFRE(TEKRAR)" class="inputTextE input" />
+            </div>
 
-                        <div class="separator"></div>
-                    </div>
-
-                    <div  id="userOpenerInnerDivPassword" class="divNewMemberContent userInnerOpener">
-
-
-                        <div class="openerHeader member">
-                            <h1 class="faceEE">KAYIT OL</h1>
-                        </div>
-                        <div class="divMemberA">
-                            <h1 class="faceFFF login">KAYIT OL</h1>
-
-                            <input type="text" placeholder="İSİM" class="inputTextE input" />
-                            <input type="text" placeholder="SOYİSİM" class="inputTextE input" />
-                        </div>
-
-                        <div class="divMemberB">
-                            <input type="text" placeholder="E-POSTA ADRESİ" class="inputTextE input" />
-                            <select class="inputTextE input">
-                                <option>CİNSİYET</option>
-                                <option>KADIN</option>
-                                <option>ERKEK</option>
-                            </select>
-                        </div>
-
-                        <div class="divMemberC">
-                            <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
-                            <input type="text" placeholder="ŞİFRE(TEKRAR)" class="inputTextE input" />
-                        </div>
-
-                        <div class="separator"></div>
+            <div class="separator"></div>
 
 
-                        <div class="divMemberD">
-                            <button class="buttonB">KAYIT OL</button>
-                            <label for="membershipAgreement" class="labelA"><input type="checkbox" id="membershipAgreement" /><a href="#">Üyelik sözleşmesini okudum.</a></label>
-                            
-                            <div class="separator"></div>
-                        </div>
+            <div class="divMemberD">
+                <button class="buttonB">KAYIT OL</button>
+                <label for="membershipAgreement" class="labelA"><input type="checkbox" id="membershipAgreement" /><a href="#">Üyelik sözleşmesini okudum.</a></label>
+                
+                <div class="separator"></div>
+            </div>
 
 
-                        <div class="separator line"></div>
+            <div class="separator line"></div>
 
 
-                        <a href="#" data-innerOpenerAnchor="userOpenerInnerDivLogin" class="aStyleE contShopping panelInnerLink">
-                            <img data-sixtythree="arrow-previous"><span>ZATEN ÜYEYİM</span>
-                        </a>
+            <a href="#" data-innerOpenerAnchor="userOpenerInnerDivLogin" class="aStyleE contShopping panelInnerLink">
+                <img data-sixtythree="arrow-previous"><span>ZATEN ÜYEYİM</span>
+            </a>
 
-                        <div class="separator"></div>
-                    </div>
-                </section>
-                <section class="divBasketOpener sixtythreeOpener" id="basketOpener">
-                    ALIŞVERİŞ SEPETİ
-                </section>
+            <div class="separator"></div>
+        </div>
+    </section>
+    <section class="divBasketOpener sixtythreeOpener" id="basketOpener">
+        ALIŞVERİŞ SEPETİ
+    </section>
 
 
 
@@ -201,19 +203,9 @@
     <section id="basket" class="sixtyThreeOpener divBasketOpener"></section>
 
 
+</div>
 
-   
-
-
-
-
-
-
-
-
-
-
-
+    </header>
 
     <main>
         <section class="artistWelcome" style="background:url(files/artists/02/background.jpg) center no-repeat; background-size:cover;">

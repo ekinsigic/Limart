@@ -334,6 +334,7 @@ function panelInnerLinks() {
         var otherItemsToSlide = $('main, footer, .filtersInHeader, .listingFilters');
         var slideDistance = 8;
         var animationType = 'ease-out'
+        var scrollTopBeforeOpening = scrollTopVal;
         //
 
         // setup opener trigger functions
@@ -372,16 +373,24 @@ function panelInnerLinks() {
                 $(window).bind('touchstart',function(){
                     if (!isCurrentlyAnimated && isOpenerOn) {
                         closeOpener();
+                        $(window).bind('touchmove',function(e){
+                            e.preventDefault();
+                        })
                     }
                 });
                 $('#divOpenerFrame, .triggerDiv').bind('touchstart',function(e){
                     e.stopPropagation();
+                    if (!($(this).height() > (wH - $('header').outerHeight()))) {
+                        $(window).bind('touchmove',function(e){
+                            e.preventDefault();
+                        });
+                    }
                 });
             }
 
 
             $('.sixtythreeOpener').each(function(){
-                $(this).css('max-height',(wH - $('header').height()));
+                $(this).css('max-height',(wH - $('header').outerHeight()));
             });
             $('.sixtythreeOpener').each(function(){
                 $(this).css('overflow','auto');
@@ -406,12 +415,7 @@ function panelInnerLinks() {
             if (currentTriggerType != lastTriggerType) { // not the same trigger clicked
                 isCurrentlyAnimated = true;
                 var currentOpenerTimer = 0;
-
-                // calculate opener timer based on whether an opener is already opened OR this is the first opener being active
-                if (isOpenerOn) {
-                    currentOpenerTimer = openerTimer // opening and closing takes double time
-                }
-
+                scrollTopBeforeOpening = $(document).scrollTop();
                 var s = setTimeout(function () {
                     isOpenerOn = true;
                     lastTriggerType = currentTriggerType;
@@ -457,6 +461,7 @@ function panelInnerLinks() {
         // Close currently active content
         function closeOpener() {
             if (isOpenerOn) {
+                $(document).scrollTop(scrollTopBeforeOpening);
                     $('#divOpenerFrame').css({
                      '-webkit-transform':'translate3d(0px,0px,0px)',
                      '-moz-transform':'translate3d(0px,0px,0px)',
@@ -485,7 +490,7 @@ function panelInnerLinks() {
                 var s = setTimeout(function () {
                     isOpenerOn = false;
                     lastTriggerType = "";
-
+                    $(window).unbind('touchmove');
                     // after it is closed hide contents
                     $('#divOpenerFrame .sixtythreeOpener').removeClass('on');
                 }, openerTimer);

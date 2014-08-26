@@ -331,6 +331,9 @@ function panelInnerLinks() {
         var isOpenerOn = false;
         var lastTriggerType = "";
         var isCurrentlyAnimated = false;
+        var otherItemsToSlide = $('main, footer, .filtersInHeader, .listingFilters');
+        var slideDistance = 8;
+        var animationType = 'ease-out'
         //
 
         // setup opener trigger functions
@@ -356,6 +359,9 @@ function panelInnerLinks() {
                     var currentTriggerType = $(this).attr('data-trigger-type');
                     triggerFunctions(currentTriggerType);
                 });
+                $(window).tap(function(){
+                    console.log('ok');
+                })
             }
         }
         //
@@ -380,15 +386,42 @@ function panelInnerLinks() {
 
                 // calculate opener timer based on whether an opener is already opened OR this is the first opener being active
                 if (isOpenerOn) {
-                    currentOpenerTimer = openerTimer * 2; // opening and closing takes double time
+                    currentOpenerTimer = openerTimer // opening and closing takes double time
                 }
 
                 var s = setTimeout(function () {
                     isOpenerOn = true;
                     lastTriggerType = currentTriggerType;
 
-                    $('#divOpenerFrame').addClass('on');
                     $('#' + currentTriggerType + 'Opener').addClass('on');
+
+                    var slideDistance = $('#' + currentTriggerType + 'Opener').outerHeight();
+                    $('#divOpenerFrame').css({
+                     '-webkit-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-moz-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-ms-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-o-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     'transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                     'transition':'transform '+(openerTimer/1000)+'s'
+                    });
+
+                    otherItemsToSlide.css({
+                     '-webkit-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-moz-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-ms-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-o-transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     'transform':'translate3d(0px,'+slideDistance+'px,0px)',
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                     'transition':'transform '+(openerTimer/1000)+'s'
+                    });
+
 
                     var s_ = setTimeout(function () {
                         isCurrentlyAnimated = false;
@@ -401,7 +434,30 @@ function panelInnerLinks() {
         // Close currently active content
         function closeOpener() {
             if (isOpenerOn) {
-                $('#divOpenerFrame').removeClass('on');
+                    $('#divOpenerFrame').css({
+                     '-webkit-transform':'translate3d(0px,0px,0px)',
+                     '-moz-transform':'translate3d(0px,0px,0px)',
+                     '-ms-transform':'translate3d(0px,0px,0px)',
+                     '-o-transform':'translate3d(0px,0px,0px)',
+                     'transform':'translate3d(0px,0px,0px)',
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                     'transition':'transform '+(openerTimer/1000)+'s'
+                    });
+                otherItemsToSlide.css({
+                     '-webkit-transform':'translate3d(0px,0px,0px)',
+                     '-moz-transform':'translate3d(0px,0px,0px)',
+                     '-ms-transform':'translate3d(0px,0px,0px)',
+                     '-o-transform':'translate3d(0px,0px,0px)',
+                     'transform':'translate3d(0px,0px,0px)',
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                     'transition':'transform '+(openerTimer/1000)+'s'
+                });
 
                 var s = setTimeout(function () {
                     isOpenerOn = false;
@@ -414,12 +470,29 @@ function panelInnerLinks() {
         }
         //
 
-function carryMenu() {
-	if ((wW) < 1024 ) {
-		$('nav #menuOpener').appendTo('#divOpenerFrame');
-	}
-	else {
-		$('#divOpenerFrame #menuOpener').appendTo('nav');
-	}
-}
+    function panelInnerLinks() {
+        $('.panelInnerLink').click(function(){
+            var panelNow = '#'+$(this).parents('.activeInnerOpener').attr('id');
+            var panelToGo = '#'+$(this).attr('data-innerOpenerAnchor');
+            $(panelNow).removeClass('activeInnerOpener');
+            setTimeout(function(){
+            $(panelNow).removeClass('userOpenerInnerOpenerVisible');
+            $(panelToGo).addClass('userOpenerInnerOpenerVisible');
+            $('.divUserOpener').scrollTop(0);
+                setTimeout(function(){
+                    $(panelToGo).addClass('activeInnerOpener');
+                },10)
+            },500);
+        });
+    }
+
+
+    function carryMenu() {
+    	if ((wW) < 1024 ) {
+    		$('nav #menuOpener').appendTo('#divOpenerFrame');
+    	}
+    	else {
+    		$('#divOpenerFrame #menuOpener').appendTo('nav');
+    	}
+    }
 

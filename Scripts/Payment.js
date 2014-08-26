@@ -22,7 +22,7 @@ function paymentDynamics() {
 		$( "input[name=wireTransferType]:radio" ).change(function(){
 			$(this).parents('.optionBox').find('.divWirePaymentOption.active').removeClass('active');
 			$(this).parents('.divWirePaymentOption').addClass('active');
-		});
+		});5
 	//
 
 

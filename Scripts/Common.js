@@ -27,7 +27,6 @@ if (isMobile)
 
     $(document).on('mobileinit', function () {
         $.mobile.ignoreContentEnabled = true;
-        alert('ok');
     });
 
     document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
@@ -43,7 +42,7 @@ $(document).ready(function () {
             $('body').css('opacity','0');
             setTimeout(function(){
                 window.location.replace(destination);
-            },950);
+            },550);
         };
     });
     //fullscreen();

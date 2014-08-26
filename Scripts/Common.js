@@ -23,14 +23,24 @@ checkDevice();
 if (isMobile)
 {
     // load jQuery Mobile dynamically
-    $('head').append('<link type="text/css" rel="stylesheet" media="screen" href="Scripts/Mobile/jquery.mobile-1.4.3.min.css" />');
-
-    $(document).on('mobileinit', function () {
+    $(document).bind('mobileinit', function () {
         $.mobile.ignoreContentEnabled = true;
+        $.mobile.keepNative = "a,p,select,div,nav"; /* jQuery Mobile 1.4 and higher */
+      //$.mobile.page.prototype.options.keepNative = "select, input"; /* jQuery Mobile 1.4 and lower */
+      console.log('ĞAĞAA')
     });
 
     document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
     //
+
+    $(document).bind('mobileinit', function () {
+        $.mobile.ignoreContentEnabled = true;
+        $.mobile.keepNative = "a,p,select,div,nav"; /* jQuery Mobile 1.4 and higher */
+      //$.mobile.page.prototype.options.keepNative = "select, input"; /* jQuery Mobile 1.4 and lower */
+      console.log('ĞAĞAA')
+    });
+
+    $('*').attr('data-role','none')
 }
 
 $(document).ready(function () {

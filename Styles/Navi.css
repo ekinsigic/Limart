@@ -197,12 +197,11 @@ nav .divNav, main, footer {
 /* Screen */
 @media all and (max-width: 700px) {
     .divNav{
-        position:fixed;
-        top:-300px;
         right:0;
         left:0;
+        padding-top: 20px;
+        padding-bottom: 30px;
         height:370px;
-        padding-top:20px;
         background-color:#fff; 
     }
 

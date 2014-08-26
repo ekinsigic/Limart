@@ -355,14 +355,37 @@ function panelInnerLinks() {
                 });
             }
             else {
-                $('header .divOpenerTriggers .divTrigger').bind("tap", function (e) {
+                $('.triggerDiv').bind("tap", function (e) {
                     var currentTriggerType = $(this).attr('data-trigger-type');
                     triggerFunctions(currentTriggerType);
                 });
-                $(window).tap(function(){
-                    console.log('ok');
-                })
+                $('html').bind('tap',function () {
+                    if (!isCurrentlyAnimated && isOpenerOn) {
+                        closeOpener();
+                    }
+                });
+
+                $('#divOpenerFrame').bind('tap',function (e) {
+                    e.stopPropagation();
+                });
+
+                $(window).bind('touchstart',function(){
+                    if (!isCurrentlyAnimated && isOpenerOn) {
+                        closeOpener();
+                    }
+                });
+                $('#divOpenerFrame, .triggerDiv').bind('touchstart',function(e){
+                    e.stopPropagation();
+                });
             }
+
+
+            $('.sixtythreeOpener').each(function(){
+                $(this).css('max-height',(wH - $('header').height()));
+            });
+            $('.sixtythreeOpener').each(function(){
+                $(this).css('overflow','auto');
+            });
         }
         //
 

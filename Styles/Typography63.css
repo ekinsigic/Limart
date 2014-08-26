@@ -49,7 +49,7 @@ a:active {
     color: #4d4f65;
     font-size: 22px;
     font-weight: 500;
-    line-hfeight: 1.396;
+    line-height: 1.396;
 }
 
 .stopFaceC { 
@@ -343,6 +343,46 @@ a.stopaStyleE {
 
 
 
+.stopaStyleF { 
+    display:block;
+    height:30px;
+    width:170px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.stopaStyleF img { 
+    float:left;
+    width:24px !important;
+    height:11px !important;
+    margin-top:9px;
+    opacity:0.25;
+    transition:all 0.5s;
+}
+
+.stopaStyleF span { 
+    display:inline-block;
+    float:right;
+    margin-top:10px;
+    transition:all 0.5s;
+}
+.stopaStyleF:hover img{ 
+    margin-left:5px;
+}
+
+.stopaStyleF:hover span{ 
+    color:#000;
+}
+
+
+
+
+
+
+
 
 
 
@@ -414,7 +454,7 @@ a.stopaStyleE {
 
 
 /* Screen */
-@media all and (max-width: 700px) {
+@media all and (max-width: 400px) {
 
     .stopFaceI {
         font-size: 13px;
@@ -432,6 +472,12 @@ a.stopaStyleE {
         font-size:13px;
     }
    
+}
+
+@media all and (min-width: 401px) and (max-width: 700px) {
+    .stopFaceI {
+        font-size: 13px;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

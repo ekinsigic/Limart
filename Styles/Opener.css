@@ -190,10 +190,189 @@
 
 
 
-
-#basket{
-    display:none;
+/* basket */
+.sixtythreeOpener.divBasketOpener{
+    padding-bottom:40px;
+    height:auto;
 }
+
+.sixtythreeOpener .divBasketContent{
+    margin:auto;
+    width:1080px;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails{
+    float:right;
+    margin-top:30px;
+    width:586px;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .divBasketItemHeaders{
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom:1px solid #d9d9db;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketItemHeaders .header1{
+    float: left;
+    width:385px;
+    text-align:right;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketItemHeaders .header2{
+    float: right;
+    width:180px;
+    text-align:center;
+}
+
+.sixtythreeOpener .divItem .imgItemPic {
+    float: left;
+    z-index: 10;
+    max-width: 60px;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px #ccc;
+}
+
+
+
+.sixtythreeOpener .divItem .divDescription {
+    z-index: 5;
+    padding-right: 20px;
+    padding-left: 75px;
+}
+
+.sixtythreeOpener .divItem .divDescription,
+.sixtythreeOpener .divItem .divDescription .divInfo,
+.sixtythreeOpener .divItem .divDescription .divQuantity,
+.sixtythreeOpener .divItem .divDescription .divTotalPrice {
+    min-height: 75px;
+}
+
+.sixtythreeOpener .divItem .divDescription .divInfo,
+.sixtythreeOpener .divItem .divDescription .divQuantity,
+.sixtythreeOpener .divItem .divDescription .divTotalPrice {
+    float: left;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+
+
+.sixtythreeOpener .divItem .divDescription .divInfo{
+    width:275px;
+}
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content a {
+        display: table;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content a:link h3.header2 {
+        margin: 5px 0 5px 0;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content span.info1 {
+        display: block;
+    }
+
+.sixtythreeOpener .divItem .divDescription .divQuantity{
+    width:45px;
+}
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span{
+        display:inline-block;
+        margin:auto;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span.spanMobilePrice{
+        display:none;
+    }
+
+.sixtythreeOpener .divItem .divDescription .divTotalPrice{
+    width:145px;
+}
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+        width:100%;
+        text-align: right;
+    }
+
+.sixtythreeOpener .divItem .divDescription .aDelete {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 35px;
+    margin-top: -19px;
+    opacity: 0.25;
+    transition: opacity 0.5s;
+}
+
+.sixtythreeOpener .divItem .divDescription .aDelete:hover {
+    opacity: 1;
+}
+
+.sixtythreeOpener .divItem .divDescription .aDelete img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    margin: -3px 0 0 -3px;
+}
+
+.sixtythreeOpener div.separator.sepA {
+    padding: 5px 0 0 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #d9d9db;
+}
+
+
+.sixtythreeOpener .divBasketContent .divTotal{
+    float:right;
+    margin-top:10px;
+    padding-top:22px;
+    width:100%;
+    border-top:1px solid #d9d9db;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal table{
+    float:right;
+    margin-right:45px;
+    width:248px;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal table tr td{
+    text-align:right;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal .divPaymentButton{
+    float:right;
+    margin:40px 45px 0 0;
+    width:575px;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
+    float:left;
+    margin-top:5px;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
+    float:right;
+    width:242px;
+}
+
+
+
+
 
 
 
@@ -330,6 +509,113 @@
         top: -15px;
 }
 
+
+    /* basket */
+    .sixtythreeOpener .divBasketContent .divBasketDetails{
+        float:none;
+        margin:25px auto 0 auto;
+        width:90%;
+    }
+
+    .sixtythreeOpener .divBasketContent .divBasketItemHeaders {
+        display: none;
+    }
+
+    .sixtythreeOpener .divItem .imgItemPic {
+        max-width: 60px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription {
+        padding-right: 0;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity,
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice {
+        min-height: initial;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo{
+        width:100%;
+        padding-right:20px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content {
+        padding: 5px 0 10px 0;
+        min-width: 150px;
+        max-width: 260px;
+        text-align: left;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity{
+        display:inline-block;
+        width:auto;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span{
+        margin:initial;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span.spanMobilePrice{
+        display:inline-block;
+        padding-left:5px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice{
+        float:right;
+        display:inline-block;
+        width:auto;
+        margin:0;
+        padding:0;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+        width:100%;
+        margin:0;
+        padding:0;
+        text-align: right;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .aDelete {
+        top:10px;
+    }
+
+
+    .sixtythreeOpener div.separator.sepA {
+        padding: 20px 0 0 0;
+        margin: 0 0 20px 0;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal{
+        float:none;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal table{
+        float:none;
+        margin:0 auto 0 auto;
+        width:90%;
+    }
+
+        .sixtythreeOpener .divBasketContent .divTotal table tr td.left{
+            text-align:left;
+        }
+
+
+    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton{
+        float:none;
+        margin:40px 45px 0 0;
+        width:100%;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
+        float:none;
+        margin:5px auto 20px auto;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
+        float:none;
+        margin:auto;
+        width:242px;
+    }
 
 }
 

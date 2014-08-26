@@ -19,6 +19,7 @@ var openOpener = null;
 
 checkDevice();
 
+
 if (isMobile)
 {
     // load jQuery Mobile dynamically
@@ -26,6 +27,7 @@ if (isMobile)
 
     $(document).on('mobileinit', function () {
         $.mobile.ignoreContentEnabled = true;
+        alert('ok');
     });
 
     document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');

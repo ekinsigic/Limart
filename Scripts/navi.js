@@ -319,7 +319,12 @@ function panelInnerLinks() {
         $(document).ready(function () {
             setupTriggers();
 			panelInnerLinks();
+			carryMenu();
         });
+        $(window).resize(function(){
+			carryMenu();
+        });
+
 
         // opener globals
         var openerTimer = 700;
@@ -410,6 +415,11 @@ function panelInnerLinks() {
         //
 
 function carryMenu() {
-	
+	if ((wW) < 1024 ) {
+		$('nav #menuOpener').appendTo('#divOpenerFrame');
+	}
+	else {
+		$('#divOpenerFrame #menuOpener').appendTo('nav');
+	}
 }
 

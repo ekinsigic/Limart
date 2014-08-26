@@ -7,15 +7,12 @@
 }
 
 .sixtythreeOpener.divUserOpener{
-    padding:45px 0 95px 0;
+    padding:40px 0 30px 0;
+    height:360px;
 }
 
 .sixtythreeOpener.member{
     height:auto;
-}
-
-.sixtythreeOpener.divUserOpener .userInnerOpener{
-    width:100%;
 }
 
 .sixtythreeOpener .openerHeader {
@@ -28,17 +25,14 @@
 
 .sixtythreeOpener .divLoginContent,
 .sixtythreeOpener .divNewMemberContent{
-    margin: 0px auto 0 auto;
+    margin: 0 auto 0 auto;
 }
+
 
 .sixtythreeOpener .divLogin{
     float:left;
     width:350px;
 }
-
-
-
-
 
 .sixtythreeOpener h1.login{
     padding:0 0 15px 20px;
@@ -57,16 +51,18 @@
 
 .sixtythreeOpener .divLoginContent .divLogin a{
     float:right;
+    text-align:right;
 }
 
-.sixtythreeOpener .divLoginContent .divLogin a.signUp{
-    margin-top:8px;
-}
+    .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+        margin-top:8px;
+        width:140px;
+    }
 
-.sixtythreeOpener .divLoginContent .divLogin a.forgotPassword{
-    margin-top:10px;
-    color:#b1b1b3;
-}
+    .sixtythreeOpener .divLoginContent .divLogin a.forgotPassword{
+        margin-top:10px;
+        color:#b1b1b3;
+    }
 
 
 
@@ -143,7 +139,6 @@
 
 
 /* NEW MEMBER */
-
 .sixtythreeOpener .divMemberA{
     float:left;
     width:720px;
@@ -162,7 +157,7 @@
 .sixtythreeOpener .divMemberD{
     float:right;
     margin-top:-109px;
-    width:250px;
+    width:255px;
 }
 
 .sixtythreeOpener .divNewMemberContent .input{
@@ -179,7 +174,14 @@
 .sixtythreeOpener .divMemberD label{
     float:left;
     margin-left:-4px;
+    width:210px;
 }
+
+    .sixtythreeOpener .divMemberD label a {
+        position:absolute;
+        top:16px;
+        width:100%;
+    }
 
 .sixtythreeOpener .divNewMemberContent .contShopping{
     padding-left:10px;
@@ -389,6 +391,13 @@
 
 /* Screen */
 @media all and (max-width: 700px) {
+    .sixtythreeOpener{
+        bottom:0;
+        height:auto;
+        overflow: auto;
+        background-color:#fff;
+    }
+
     .sixtythreeOpener .openerHeader{
         height:75px;
         line-height:80px;
@@ -397,16 +406,11 @@
     }
 
     .sixtythreeOpener .openerHeader.login{
-       display:block;
-       margin-bottom: 30px;
+        display:block;
+        margin-bottom: 30px;
     }
 
-    .sixtythreeOpener{
-        bottom:0;
-        height:auto;
-        overflow: auto;
-        background-color:#fff;
-    }
+    
 
     .sixtythreeOpener.divUserOpener{
         padding:0;
@@ -421,6 +425,7 @@
         padding: 0px 0 30px 0;
         width:100%;
         overflow:auto;
+        border:1px solid #f00;
     }
 
     .sixtythreeOpener .divLoginContent .divLogin{
@@ -442,7 +447,14 @@
 
     .sixtythreeOpener .divLoginContent .divLogin a{
         float:none;
+        font-size: 13px !important;
+        text-align:center;
     }
+
+        .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+            margin:15px auto 0 auto;
+            width:250px;
+        }
 
     .sixtythreeOpener .divLoginContent .divOr{
         float:none;
@@ -629,26 +641,26 @@
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    .sixtythreeOpener .openerHeader.login{
-       display:block;
-       margin-bottom: 40px;
-    }
-
-    .sixtythreeOpener{
+   .sixtythreeOpener{
         bottom:0;
         height:auto;
-        overflow: auto;
         background-color:#fff;
+        border:1px solid #f00;
     }
 
     .sixtythreeOpener.divUserOpener{
         padding:0;
     }
 
-    .sixtythreeOpener .divLoginContent,
-    .sixtythreeOpener .divNewMemberContent{
+    .sixtyThreeOpeners .divLoginContent,
+    .sixtyThreeOpeners .divNewMemberContent{
         width:670px;
-        padding-bottom: 20px;
+        border:1px solid #000;
+    }
+
+    .sixtythreeOpener .openerHeader.login{
+       display:block;
+       margin-bottom: 40px;
     }
 
 
@@ -658,7 +670,9 @@
         width:455px;
     }
 
-    
+    .sixtythreeOpener h1.login{
+        display:none;
+    }
 
     .sixtythreeOpener .input{
         height:52px !important;
@@ -679,11 +693,16 @@
         text-align:center;
     }
 
+        .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+            margin:auto;
+            width:250px;
+        }
+
 
     .sixtythreeOpener .divLoginContent .divOr{
         float:none;
-        margin:65px 0 0 0;
-        width:100%;
+        margin:65px auto 0 auto;
+        width:670px;
         height:2px;
         border-bottom:1px solid #f2f2f2;
     }
@@ -718,9 +737,7 @@
         width:455px;
     }
 
-    .sixtythreeOpener h1.login{
-        display:none;
-    }
+    
 
     .sixtythreeOpener .divMemberD{
         float:none;
@@ -759,10 +776,7 @@
     .sixtythreeOpener .divLoginContent,
     .sixtythreeOpener .divNewMemberContent{
         width:960px;
-    
-        padding-bottom: 30px;
-        padding-top: 30px;
-}
+    }
 
     .sixtythreeOpener .divLoginContent .divOr{
         margin:37px 0 0 135px;

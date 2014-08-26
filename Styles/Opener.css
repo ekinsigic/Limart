@@ -6,8 +6,16 @@
     background-color:#ececef;
 }
 
+.sixtythreeOpener.divUserOpener{
+    padding:45px 0 95px 0;
+}
+
 .sixtythreeOpener.member{
     height:auto;
+}
+
+.sixtythreeOpener.divUserOpener .userInnerOpener{
+    width:100%;
 }
 
 .sixtythreeOpener .openerHeader {
@@ -135,7 +143,6 @@
 
 
 /* NEW MEMBER */
-
 
 .sixtythreeOpener .divMemberA{
     float:left;
@@ -385,22 +392,24 @@
     .sixtythreeOpener .openerHeader{
         height:75px;
         line-height:80px;
-    
         display: block;
         margin-bottom: 30px;
-}
+    }
 
     .sixtythreeOpener .openerHeader.login{
        display:block;
-    
        margin-bottom: 30px;
-}
+    }
 
     .sixtythreeOpener{
         bottom:0;
         height:auto;
         overflow: auto;
         background-color:#fff;
+    }
+
+    .sixtythreeOpener.divUserOpener{
+        padding:0;
     }
 
     .sixtythreeOpener .divLoginContent,
@@ -622,9 +631,8 @@
 @media all and (min-width: 701px) and (max-width: 1018px) {
     .sixtythreeOpener .openerHeader.login{
        display:block;
-    
        margin-bottom: 40px;
-}
+    }
 
     .sixtythreeOpener{
         bottom:0;
@@ -633,12 +641,15 @@
         background-color:#fff;
     }
 
+    .sixtythreeOpener.divUserOpener{
+        padding:0;
+    }
+
     .sixtythreeOpener .divLoginContent,
     .sixtythreeOpener .divNewMemberContent{
         width:670px;
-    
         padding-bottom: 20px;
-}
+    }
 
 
     .sixtythreeOpener .divLoginContent .divLogin{

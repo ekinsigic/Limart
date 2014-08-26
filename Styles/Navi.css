@@ -1,22 +1,4 @@
-﻿#divOpenerFrame.on {
-    -webkit-transform:translate3d(0px,100%,0px);
-}
-#divOpenerFrame {
-    -webkit-transition: -webkit-transform 0.7s;
-    bottom: 0px;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
-#divOpenerFrame .sixtythreeOpener {
-    display: none;
-}
-
-#divOpenerFrame .sixtythreeOpener.on {
-    display: block;
-}
-
+﻿
 nav{
     width:100%;
     height:100%;
@@ -24,12 +6,11 @@ nav{
 
 nav .divNav{
     position:absolute;
-    z-index:0;
+    z-index:10;
     top: 40px;
     right: 90px;
     height: auto;
     width: auto;
-    padding-bottom: px;
     background: transparent;
 }
 
@@ -73,6 +54,7 @@ nav .divNavIcon .imgNav{
 
 nav .divSearchIcon {
     position: absolute;
+    z-index:99;
     top: 25px;
     right: -15px;
     width: 40px;
@@ -190,6 +172,26 @@ nav .divNav, main, footer {
 }
 .triggerDiv#searchTrigger {
     display:block;
+}
+
+#divOpenerFrame.on {
+    -webkit-transform:translate3d(0px,100%,0px);
+}
+
+#divOpenerFrame {
+    -webkit-transition: -webkit-transform 0.7s;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#divOpenerFrame .sixtythreeOpener {
+    display: none;
+}
+
+#divOpenerFrame .sixtythreeOpener.on {
+    display: block;
 }
 
 /* Screen */
@@ -347,9 +349,8 @@ nav .divNav, main, footer {
     nav .divMenuIcon .imgMenu {
         top: 10;
         top: 12px;
-    
         left: 10px;
-}
+    }
 
     nav .divUserIcon {
         position: absolute;
@@ -366,10 +367,10 @@ nav .divNav, main, footer {
         position: absolute;
         right: 15px;
         bottom: 11px;
-    
         width: 15px;
         height: 15px;
-}
+    }
+
     nav .divBasketIcon {
         position: absolute;
         top: 16px;
@@ -387,7 +388,7 @@ nav .divNav, main, footer {
         bottom: 13px;
         width: 15px;
         height: 15px;
-}
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -490,11 +491,10 @@ nav .divNav, main, footer {
     }
 
     nav .divMenuIcon .imgMenu {
-        top: 10;
+        top: 10px;
         top: 12px;
-    
         left: 10px;
-}
+    }
 
     nav .divUserIcon {
         position: absolute;
@@ -511,10 +511,10 @@ nav .divNav, main, footer {
         position: absolute;
         right: 15px;
         bottom: 11px;
-    
         width: 15px;
         height: 15px;
-}
+    }
+
     nav .divBasketIcon {
         position: absolute;
         top: 26px;
@@ -532,9 +532,7 @@ nav .divNav, main, footer {
         bottom: 13px;
         width: 15px;
         height: 15px;
-}
-}
-
+    }
 
      /* TABLET & MOBILE MENU ANIMATION ADD STYLE */
     .menuOn.menuOn.menuOn {

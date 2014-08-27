@@ -353,9 +353,8 @@ footer {
 
 	.sticky {
 		top: 70px !important;
-	
 		z-index: 19;
-}
+    }
 
 	.artistInfo img.artistPhoto {
 		width: 100px;
@@ -366,7 +365,7 @@ footer {
 		width: 90%;
 	
 		margin-top: -40px;
-}
+    }
 
 	.artistDetail{
 		display:none;
@@ -386,7 +385,7 @@ footer {
 		margin-top: 80px;
 	
 		height: 4px;
-}
+    }
 	
 	.listingContainer {
 		text-align: center;
@@ -438,8 +437,7 @@ footer {
 	}
 
 	.artistName {
-    font-size: 20px;
-		
+        font-size: 20px;
 	}
 
 	.artistDetail {

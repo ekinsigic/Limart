@@ -19,42 +19,30 @@ var openOpener = null;
 
 checkDevice();
 
-
 if (isMobile)
 {
     // load jQuery Mobile dynamically
-    $(document).bind('mobileinit', function () {
+
+    $(document).on('mobileinit', function () {
         $.mobile.ignoreContentEnabled = true;
-        $.mobile.keepNative = "a,p,select,div,nav"; /* jQuery Mobile 1.4 and higher */
-      //$.mobile.page.prototype.options.keepNative = "select, input"; /* jQuery Mobile 1.4 and lower */
-      console.log('ĞAĞAA')
     });
 
     document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
     //
-
-    $(document).bind('mobileinit', function () {
-        $.mobile.ignoreContentEnabled = true;
-        $.mobile.keepNative = "a,p,select,div,nav"; /* jQuery Mobile 1.4 and higher */
-      //$.mobile.page.prototype.options.keepNative = "select, input"; /* jQuery Mobile 1.4 and lower */
-      console.log('ĞAĞAA')
-    });
-
-    $('*').attr('data-role','none')
 }
 
 $(document).ready(function () {
     $('body').css('opacity','1');
-    $('a').click(function(e){
-        destination = $(this).attr('href');
-        if (destination !== '#') {
-            e.preventDefault();
-            $('body').css('opacity','0');
-            setTimeout(function(){
-                window.location.replace(destination);
-            },550);
-        };
-    });
+    // $('a').click(function(e){
+    //     destination = $(this).attr('href');
+    //     if (destination !== '#') {
+    //         e.preventDefault();
+    //         $('body').css('opacity','0');
+    //         setTimeout(function(){
+    //             window.location.replace(destination);
+    //         },550);
+    //     };
+    // });
     //fullscreen();
     scrollEvents();
     setGlobals();

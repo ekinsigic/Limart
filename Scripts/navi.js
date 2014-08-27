@@ -379,10 +379,20 @@ function panelInnerLinks() {
                     }
                 });
                 $('#divOpenerFrame, .triggerDiv').bind('touchstart',function(e){
-                    e.stopPropagation();
-                    if (!($(this).height() > (wH - $('header').outerHeight()))) {
+                        e.stopPropagation();
+                        console.log($(this).height() + ' element yüksekliği')
+                        console.log(wH + ' ekran yüksekliği')
+                        console.log($('header').outerHeight() + ' header yüksekliği')
+                    if (!($(this).height() == (wH - $('header').outerHeight()))) {
+                        console.log('büyük');
                         $(window).bind('touchmove',function(e){
                             e.preventDefault();
+                        });
+                    }
+                    else {
+                        $(window).bind('touchmove',function(e){
+                        console.log('küçük');
+                            return false();
                         });
                     }
                 });
@@ -496,6 +506,7 @@ function panelInnerLinks() {
                     isOpenerOn = false;
                     lastTriggerType = "";
                     $(window).unbind('touchmove');
+                    console.log('unbinded');
                     // after it is closed hide contents
                     $('#divOpenerFrame .sixtythreeOpener').removeClass('on');
                 }, openerTimer);

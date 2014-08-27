@@ -415,6 +415,11 @@ function panelInnerLinks() {
             if (currentTriggerType != lastTriggerType) { // not the same trigger clicked
                 isCurrentlyAnimated = true;
                 var currentOpenerTimer = 0;
+
+                // calculate opener timer based on whether an opener is already opened OR this is the first opener being active
+                if (isOpenerOn) {
+                    currentOpenerTimer = openerTimer // opening and closing takes double time
+                }
                 scrollTopBeforeOpening = $(document).scrollTop();
                 var s = setTimeout(function () {
                     isOpenerOn = true;

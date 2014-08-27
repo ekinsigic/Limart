@@ -7,7 +7,7 @@
 }
 
 .sixtythreeOpener.divUserOpener{
-    padding:40px 0 30px 0;
+    padding: 50px 0 100px 0;
 }
 
 .sixtythreeOpener.member{
@@ -24,7 +24,7 @@
 
 .sixtythreeOpener .divLoginContent,
 .sixtythreeOpener .divNewMemberContent{
-    margin: 0 auto 0 auto;
+    margin: 0px auto 0 auto;
 }
 
 
@@ -794,6 +794,10 @@
     .sixtythreeOpener .divNewMemberContent,
     .sixtythreeOpener .divBasketContent{
         width:960px;
+    }
+
+    #userOpenerInnerDivPassword {
+        top:60px;
     }
 
     .sixtythreeOpener .divLoginContent .divOr{

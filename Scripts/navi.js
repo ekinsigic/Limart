@@ -331,7 +331,7 @@ function panelInnerLinks() {
         var isOpenerOn = false;
         var lastTriggerType = "";
         var isCurrentlyAnimated = false;
-        var otherItemsToSlide = $('main, footer, .filtersInHeader, .listingFilters');
+        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters');
         var slideDistance = 8;
         var animationType = 'ease-out'
         var scrollTopBeforeOpening = scrollTopVal;
@@ -383,7 +383,7 @@ function panelInnerLinks() {
                         console.log($(this).height() + ' element yüksekliği')
                         console.log(wH + ' ekran yüksekliği')
                         console.log($('header').outerHeight() + ' header yüksekliği')
-                    if (!($(this).height() == (wH - $('header').outerHeight()))) {
+                    if ( !( $(this).height() == ( wH - $('header').outerHeight() ) ) ) {
                         console.log('büyük');
                         $(window).bind('touchmove',function(e){
                             e.preventDefault();
@@ -422,6 +422,15 @@ function panelInnerLinks() {
 
         // Activate opener and its content
         function triggerOpener(currentTriggerType) {
+
+            if (currentTriggerType == 'search') {
+                $('#searchOpener .noCursor').addClass('pseudoCursor');
+                $('#searchOpener input').focus(function(){
+                    $('#searchOpener .noCursor').removeClass('pseudoCursor');
+                })
+            };
+
+
             if (currentTriggerType != lastTriggerType) { // not the same trigger clicked
                 isCurrentlyAnimated = true;
                 var currentOpenerTimer = 0;

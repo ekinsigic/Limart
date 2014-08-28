@@ -151,7 +151,9 @@
 }
 
 #address .divContent .divAddressContent .divAddressOption label{
-    width:100%
+    width:100%;
+    height:25px;
+    margin:15px 0 0 0;
 }
 
 #address .divContent .divAddressContent .divAddressOption h4.name,
@@ -475,16 +477,16 @@ select{
 #payment .divPaymentContent .divWirePaymentOption label{
     display: block;
     position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 4;
 }
 
 #payment .divPaymentContent .divWirePaymentOption img {
     width: 60%;
-    margin: 20px;
+    margin: 10px 20px 20px 20px;
 }
 
 #payment .divPaymentContent .divWirePaymentOption h4 {
@@ -527,6 +529,7 @@ select{
     float: left;
     margin: 14px;
 }
+
 #payment .divPaymentContent .optionBox.paypalOption .paypalButton, 
 #payment .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
     margin: 10px;
@@ -996,10 +999,10 @@ select{
         height:200px;
     }
 
-
     #address .divContent .divAddressContent .divAddressOption label{
         width:200px;
-        margin:5px 0 0 0;
+        height:25px;
+        margin:15px 0 15px 0;
     }
 
     #address .divContent .divAddressContent .divAddressOption h4.name,
@@ -1043,8 +1046,8 @@ select{
 
     #address .divNewAddressContent,
     #address .divInvoiceAddressContent{
-        width:90%;
-        margin:auto;
+        width:100%;
+        margin:25px auto 0 auto;
     }
 
     .divAddNewAddress input[type="text"],
@@ -1055,6 +1058,7 @@ select{
         margin:10px 0 0 0 !important;
     }
 
+    .divAddNewAddress textarea,
     .divAddNewInvoiceAddress textarea{
         margin-bottom:10px;
     }
@@ -1178,6 +1182,25 @@ select{
         margin-bottom:20px;
         width:100%;
     }
+
+
+    #payment .divPaymentContent .optionBox.paypalOption img, 
+    #payment .divPaymentContent .optionBox.bkmexpressOption img{
+        float: right;
+        margin: 14px 0 0 0;
+    }
+
+
+
+    #paymentCreditCard table{
+        width:100%;
+    }
+
+    #paymentCreditCard table tr td label{
+        font-size:11px;
+    }
+
+
 
 
 

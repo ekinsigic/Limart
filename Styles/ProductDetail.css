@@ -18,6 +18,10 @@
     width: 50%;
 }
 
+.artworkImage{
+    cursor:pointer;
+}
+
 .topFullWidth {
     float:left;
     width:100%;

@@ -32,12 +32,12 @@
 
             footer .divContent ul.level1 li a:link,
             footer .divContent ul.level1 li a:visited {
+                padding-bottom:5px;
                 font-size: 12px;
             }
 
             footer .divContent ul.level1 li a:hover,
             footer .divContent ul.level1 li a:active {
-                border-bottom: 2px solid transparent;
             }
 
 

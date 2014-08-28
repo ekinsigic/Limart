@@ -135,12 +135,24 @@
 .artworkInfo {
     padding-left:55px;
     padding-top:44px;
+    border:1px solid #f00;
+}
+
+
+.artworkInfo .artworkHeading{
+    border:1px solid #f00;
 }
 
 .artworkInfo .artworkHeading .artworkName{
     margin-bottom: 6px;
-    
 }
+
+.artworkInfo .artworkHeading .aWorkArtist{
+    display:inline-block;
+    border:1px solid #000;
+}
+
+
 
 .artworkInfo .artworkPrice{
     margin-top: 38px;
@@ -153,6 +165,7 @@
     width: 100%;
     float: left;
 }
+
 .artworkInfo .artworkSelection select {
     opacity: 1;
     float: left;
@@ -322,6 +335,8 @@
     
         z-index: 1;
     }
+
+
     .topFullWidth .artworkHeading {
         margin-top: 35px;
 
@@ -329,19 +344,22 @@
     .artworkHeading .artworkName {
         letter-spacing: 3px;
         margin-bottom: 6px;
-    
-        text-align: right;
         text-align: center;
         line-height: 20px;
         font-size: 18px;
         z-index: 1;
     }
-    .artworkHeading .artworkArtist {
-        text-align: right;
-        text-align: center;
+
+    .artworkHeading .aWorkArtist{
+        display:inline-block;
         top: 5px;
+        text-align: center;
         z-index: 1;
     }
+
+
+
+
     .artworkInfo .artworkDetails h5{
         opacity: 0.5;
         margin-bottom: 11px;
@@ -506,15 +524,22 @@
     }
 
     
-    .topFullWidth .artworkHeading {
+    .artworkHeading {
         margin-top: 56px;
-
+        padding:0 20px 0 20px;
     }
+
     .artworkHeading .artworkName {
-        display:inline-block;
+        display:block;
         letter-spacing: 3px;
         margin-bottom: 6px;
     }
+
+    .artworkHeading .aWorkArtist{
+        display:inline-block;
+    }
+
+
 
     .artworkInfo .artworkDetails h5{
         opacity: 0.5;
@@ -545,7 +570,8 @@
 
 
 
-    .artworkHeading a{
+    .artworkHeading a.aPrev,
+    .artworkHeading a.aNext{
         display:inline-block;
         position:absolute;
         top:5px;

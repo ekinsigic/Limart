@@ -69,13 +69,14 @@ main {
 	border-bottom: 4px solid #f1f1f1;
 
 }
-.listingFilters ul {
-}
+
+
 .listingFilters .listingFilterFirstLayer {
 	display:inline-block;
 	margin: 0 auto;
 	height: 100%;
 }
+
 .listingFilterFirstLayer select {
 	border: 0px;
 	border-left: 1px solid #f0f0f0;
@@ -88,27 +89,31 @@ main {
 	min-width: 160px;
 	padding-left: 30px;
     background: url(../images/arrow-down-form-select-second.png) no-repeat;
-    
 	background-position-x: 85%; 
     background-position-y:50%;
     opacity: 0.6;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
+
 main.menuOn .sticky {
 	-webkit-transform: translate3d(0px,27px,0px);
 }
+
 .listingFilterFirstLayer select:after {
     display: block;
     position: absolute;
     right: 57px !important;
 }
+
 .listingFilterFirstLayer select:focus {
 	opacity: 1;
 }
+
 .listingFilterFirstLayer:first-child select{
 	border-left:0px; 
 }
+
 .listingFilterFirstLayer select option {
 	font-size: 10px;
 	font-weight: 400;
@@ -119,10 +124,12 @@ main.menuOn .sticky {
 	text-align: center;
 	margin-top: 30px;
 }
+
 .listingContainer h1{
 	top:30px;
 	margin-bottom:90px;
 }
+
 .listingList {
 	margin: 0 auto;
 }
@@ -155,12 +162,15 @@ main.menuOn .sticky {
 	opacity: 0;
 	transition:all 0.4s;
 }
+
 .listItem:hover .listItemOverlay{
 	opacity: 1 ;
 }
+
 .listItem.hover .listItemOverlay{
 	opacity: 1 ;
 }
+
 .overlayWrapper {
 	position: absolute;
 	bottom: 27%;
@@ -171,12 +181,15 @@ main.menuOn .sticky {
 	transition:all 0.4s;
 	-webkit-transform:translate3d(0px,5px,0px);
 }
+
 .listItem.hover .overlayWrapper {
 	-webkit-transform:translate3d(0px,0px,0px);
 }
+
 .listItem:hover .overlayWrapper {
 	-webkit-transform:translate3d(0px,0px,0px);
 }
+
 .listItemOverlayDividant{
 	width: 35px;
 	height: 2px;

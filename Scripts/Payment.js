@@ -181,11 +181,20 @@ function paymentDynamics() {
 			$('.divAddNewAddress .addBtn, .divAddNewAddress .cancelAddingNewAddress').click(function(e){
 				e.preventDefault();
 				closeOpenOnOptionDiv('main .divContent .divAddNewAddress');
+				$("#savedAddressRadio").prop("checked", true);
 			});
 
 			$('.divAddNewInvoiceAddress .cancelAddingNewInvoiceAddress, .divAddNewInvoiceAddress .saveAddingNewInvoiceAddress').click(function(e){
 				e.preventDefault();
-				closeOpenOnOptionDiv('main .divContent .divAddNewInvoiceAddress');
+				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
+				$('main .divContent .divInvoiceAddressContent').css({
+					'opacity':'0',
+					'-webkit-transform':'scale(0.95)'
+				});
+				setTimeout(function(){
+					$('.divBillingAddress').height(divBillingAddressClosedHeight);
+				},200);
+				$("#savedAddressInvoiceRadio").prop("checked", true);
 			});
 		}
 	//
@@ -201,12 +210,26 @@ function paymentDynamics() {
 			}
 		});
 
+			var divBillingAddressClosedHeight = null;
 		$( "input[name=addressNewOrSavedInvoice]:radio" ).change(function(){
 			if ($('#newAddressInvoiceRadio').is(':checked')) {
 				openClosedAsDefaultDiv('main .divContent .divInvoiceAddressContent');
+				$('.divBillingAddress').css('height',$('main .divContent .divInvoiceAddressContent').find('.innerWrapper').outerHeight() + $('.divBillingAddress').height());
+				divBillingAddressClosedHeight = $('.divBillingAddress').height();
+				$('main .divContent .divInvoiceAddressContent').css({
+					'opacity':'1',
+					'-webkit-transform':'scale(1)'
+				});
 			}
-			else { 
+			else {
 				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
+				$('main .divContent .divInvoiceAddressContent').css({
+					'opacity':'0',
+					'-webkit-transform':'scale(0.95)'
+				});
+				setTimeout(function(){
+					$('.divBillingAddress').height(divBillingAddressClosedHeight);
+				},200);
 			}
 		});
 

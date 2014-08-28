@@ -13,7 +13,7 @@
 }
 
 .passiveSegment {
-    max-height: 0px;
+    max-height: 0px !important;
     opacity: 0;
     overflow: hidden;
     position: absolute;
@@ -912,7 +912,14 @@ select{
 
 
 
-
+.divNewAddressContent.divAddNewAddress {
+    top:-30px;
+}
+.divInvoiceAddressContent.divAddNewInvoiceAddress{
+    top:-30px;
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+}
 
 
 /* GENEL YAPIYA EKLEMELER */

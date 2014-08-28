@@ -331,7 +331,7 @@ function panelInnerLinks() {
         var isOpenerOn = false;
         var lastTriggerType = "";
         var isCurrentlyAnimated = false;
-        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters');
+        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters, #carriableFilters');
         var slideDistance = 8;
         var animationType = 'ease-out'
         var scrollTopBeforeOpening = scrollTopVal;
@@ -373,28 +373,10 @@ function panelInnerLinks() {
                 $(window).bind('touchstart',function(){
                     if (!isCurrentlyAnimated && isOpenerOn) {
                         closeOpener();
-                        $(window).bind('touchmove',function(e){
-                            e.preventDefault();
-                        })
                     }
                 });
                 $('#divOpenerFrame, .triggerDiv').bind('touchstart',function(e){
                         e.stopPropagation();
-                        console.log($(this).height() + ' element yüksekliği')
-                        console.log(wH + ' ekran yüksekliği')
-                        console.log($('header').outerHeight() + ' header yüksekliği')
-                    if ( !( $(this).height() == ( wH - $('header').outerHeight() ) ) ) {
-                        console.log('büyük');
-                        $(window).bind('touchmove',function(e){
-                            e.preventDefault();
-                        });
-                    }
-                    else {
-                        $(window).bind('touchmove',function(e){
-                        console.log('küçük');
-                            return false();
-                        });
-                    }
                 });
             }
 
@@ -423,12 +405,17 @@ function panelInnerLinks() {
         // Activate opener and its content
         function triggerOpener(currentTriggerType) {
 
-            if (currentTriggerType == 'search') {
-                $('#searchOpener .noCursor').addClass('pseudoCursor');
-                $('#searchOpener input').focus(function(){
-                    $('#searchOpener .noCursor').removeClass('pseudoCursor');
-                })
-            };
+            if (currentTriggerType == 'search' && isMobile) {
+                    $('#searchOpener .noCursor').addClass('pseudoCursor');
+                    $('#searchOpener input').focus(function(){
+                        $('#searchOpener .noCursor').removeClass('pseudoCursor');
+                    })
+            }
+            else if (currentTriggerType == 'search' && !isMobile) {
+                setTimeout(function(){
+                    $('#searchOpener input').focus();
+                },600);
+            }
 
 
             if (currentTriggerType != lastTriggerType) { // not the same trigger clicked
@@ -441,12 +428,35 @@ function panelInnerLinks() {
                 }
                 scrollTopBeforeOpening = $(document).scrollTop();
                 var s = setTimeout(function () {
+
+
+
+
                     isOpenerOn = true;
                     lastTriggerType = currentTriggerType;
 
                     $('#' + currentTriggerType + 'Opener').addClass('on');
 
                     var slideDistance = $('#' + currentTriggerType + 'Opener').outerHeight();
+
+
+                        // Disabling Scroll
+                    if (slideDistance == (wH-$('header').height() )) {
+
+                    }
+                    else {
+                        if (isMobile) {
+                            $(window).bind('touchmove',function(e){
+                                e.preventDefault();
+                            })
+                        }
+                        else {
+                            $(window).bind('mousewheel', function(e){
+                                e.preventDefault();
+                            })
+                        }
+                    }
+
                     $('#divOpenerFrame').css({
                      '-webkit-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      '-moz-transform':'translate3d(0px,'+slideDistance+'px,0px)',
@@ -514,8 +524,14 @@ function panelInnerLinks() {
                 var s = setTimeout(function () {
                     isOpenerOn = false;
                     lastTriggerType = "";
-                    $(window).unbind('touchmove');
-                    console.log('unbinded');
+
+                    // enable scroll back
+                    if (isMobile) {
+                        $(window).unbind('touchmove');
+                    }
+                    else {
+                        $(window).unbind('mousewheel');
+                    }
                     // after it is closed hide contents
                     $('#divOpenerFrame .sixtythreeOpener').removeClass('on');
                 }, openerTimer);

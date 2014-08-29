@@ -629,7 +629,9 @@
     .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
         float:none;
         width:200px;
-    }
+    
+        margin: auto;
+}
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {

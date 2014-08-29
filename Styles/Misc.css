@@ -610,7 +610,7 @@ img[data-sixtythree="arrow-next-short-purple"] {
         height: 17px;
     }
 
-    header nav img[data-sixtythree^="icon-social-"]:not(.white) {
+    header img[data-sixtythree^="icon-social-"]:not(.white) {
         opacity: 1;
     }
 }

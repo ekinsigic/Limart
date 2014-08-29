@@ -134,25 +134,36 @@ function smartphoneLandscape() {
     }
 }
 
+
+
 // misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
 function miscImgLoader() {
-    $('body').find('img[data-sixtyThree]').each(function(){
+
+    var is63 = $('body').hasClass('63');
+
+    var imgFolderPath = (is63 ? '../' : '') + 'Images';
+
+    $('body').find('img[data-sixtyThree]').each(function () {
+
+
         var miscIdentifier = $(this).attr('data-sixtyThree');
+
         if (window.devicePixelRatio >= 1.5) {
             if ($(this).hasClass('white')) {
-                $(this).attr('src','images/@2x/'+miscIdentifier+'-white@2x.png');
+                $(this).attr('src', imgFolderPath + '/@2x/'+miscIdentifier+'-white@2x.png');
             }
             else {
-                $(this).attr('src','images/@2x/'+miscIdentifier+'@2x.png');
+                $(this).attr('src', imgFolderPath + '/@2x/' + miscIdentifier + '@2x.png');
             }
         }
         else {
             if ($(this).hasClass('white')) {
-                $(this).attr('src','images/'+miscIdentifier+'-white.png');
+                $(this).attr('src', imgFolderPath + '/' + miscIdentifier + '-white.png');
             }
             else {
-                $(this).attr('src','images/'+miscIdentifier+'.png');
+                $(this).attr('src', imgFolderPath + '/' + miscIdentifier + '.png');
             }
         }
     });
+
 }

@@ -1,6 +1,4 @@
 ﻿
-
-
 .sixtythreeOpener{
     z-index:18;
     width:100%;
@@ -45,9 +43,9 @@
     margin-bottom:10px;
 }
 
-.sixtythreeOpener .divLoginContent .divLogin button{
+.sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
     float:left;
-    margin-left:0px;
+    margin-left:0;
 }
 
 .sixtythreeOpener .divLoginContent .divLogin a{
@@ -167,9 +165,9 @@
     margin:0 10px 10px 0;
 }
 
-.sixtythreeOpener .divMemberD button{
+.sixtythreeOpener .divMemberD .inputBtn{
     float:left;
-    width:175px;
+    width:125px;
 }
 
 .sixtythreeOpener .divMemberD label{
@@ -214,14 +212,12 @@
 .sixtythreeOpener .divBasketContent .divBasketDetails{
     float:right;
     margin-top:30px;
-    width: 600px;
-    max-height: 360px;
+    width:586px;
 }
 
 .sixtythreeOpener .divBasketContent .divBasketDetails .divBasketItemHeaders{
     padding-bottom: 10px;
     margin-bottom: 25px;
-    margin-top: 40px;
     border-bottom:1px solid #d9d9db;
 }
 
@@ -235,10 +231,6 @@
     float: right;
     width:180px;
     text-align:center;
-}
-
-.sixtythreeOpener .divBasketContent .divBasketDetails .separator.marginCaster{
-    margin-bottom: 40px;
 }
 
 .sixtythreeOpener .divItem .imgItemPic {
@@ -439,7 +431,7 @@
         display:none;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin button{
+    .sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
         float:none;
         margin:10px auto 10px auto;
         font-size: 15px !important;
@@ -504,13 +496,17 @@
         display:none;
     }
 
+    .sixtythreeOpener .divMemberB select{
+        margin-bottom:10px !important;
+    }
+
     .sixtythreeOpener .divMemberD{
         float:none;
         margin:20px auto 0 auto !important;
         width:250px;
     }
 
-    .sixtythreeOpener .divMemberD button{
+    .sixtythreeOpener .divMemberD .inputBtn{
         float:none;
         width:150px !important;
         margin-left:10px;
@@ -638,9 +634,7 @@
     .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
         float:none;
         width:200px;
-    
-        margin: auto;
-}
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -680,7 +674,7 @@
         text-align:center;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin button{
+    .sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
         float:none;
         margin:20px 0 20px 85px;
         width:200px;
@@ -750,7 +744,7 @@
         margin:0 10px 10px 0;
     }
 
-    .sixtythreeOpener .divMemberD button{
+    .sixtythreeOpener .divMemberD .inputBtn{
         float:none;
         width:225px;
         height:15px;
@@ -761,9 +755,9 @@
         margin-left:40px;
     }
 
-    .sixtythreeOpener .divNewMemberContent .contShopping,
-    .sixtythreeOpener .divNewMemberContent .separator.line{
-        display:none;
+    .sixtythreeOpener .divNewMemberContent .contShopping{
+        display: block;
+        margin:auto;
     }
 
 
@@ -827,7 +821,7 @@
         width:205px;
     }
 
-    .sixtythreeOpener .divMemberD button{
+    .sixtythreeOpener .divMemberD .inputBtn{
         width:130px;
     }
 

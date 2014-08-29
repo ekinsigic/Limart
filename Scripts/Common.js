@@ -138,21 +138,23 @@ function smartphoneLandscape() {
 
 // misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
 function miscImgLoader() {
+    var is63 = false;
 
-    var is63 = $('body').hasClass('63');
+    if ($('#input63').length > 0) {
+        is63 = ($('#input63').val() == '63');
+    }
 
-    var imgFolderPath = (is63 ? '../' : '') + 'Images';
+    var imgFolderPath = (is63 ? '../Images/63' : 'Images');
 
     $('body').find('img[data-sixtyThree]').each(function () {
 
-
         var miscIdentifier = $(this).attr('data-sixtyThree');
 
-        if (window.devicePixelRatio >= 1.5) {
+        if (isMobile) {
             if ($(this).hasClass('white')) {
-                $(this).attr('src', imgFolderPath + '/@2x/'+miscIdentifier+'-white@2x.png');
+                $(this).attr('src', imgFolderPath + '/@2x/' + miscIdentifier + '-white@2x.png');
             }
-            else {
+            else {
                 $(this).attr('src', imgFolderPath + '/@2x/' + miscIdentifier + '@2x.png');
             }
         }
@@ -160,10 +162,48 @@ function miscImgLoader() {
             if ($(this).hasClass('white')) {
                 $(this).attr('src', imgFolderPath + '/' + miscIdentifier + '-white.png');
             }
-            else {
+            else {
                 $(this).attr('src', imgFolderPath + '/' + miscIdentifier + '.png');
             }
         }
     });
-
 }
+
+
+
+
+
+
+// misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
+//function miscImgLoaderOLD() {
+//    var is63 = false;
+
+//    if ($('#input63').length > 0) {
+//        is63 = ($('#input63').val() == '63');
+//    }
+
+//    var imgFolderPath = (is63 ? '../Images/63' : 'Images');
+
+//    $('body').find('img[data-sixtyThree]').each(function () {
+
+//        var miscIdentifier = $(this).attr('data-sixtyThree');
+//        var isSubFolder = $(this).attr('data-isSubFolder');
+
+//        if (isMobile) {
+//            if ($(this).hasClass('white')) {
+//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/@2x/' + miscIdentifier + '-white@2x.png');
+//            }
+//            else {
+//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/@2x/' + miscIdentifier + '@2x.png');
+//            }
+//        }
+//        else {
+//            if ($(this).hasClass('white')) {
+//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/' + miscIdentifier + '-white.png');
+//            }
+//            else {
+//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/' + miscIdentifier + '.png');
+//            }
+//        }
+//    });
+//}

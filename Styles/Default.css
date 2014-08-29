@@ -214,6 +214,7 @@
                 }
 
                 #artists #artistSlider .divArtists .divArtist .aArtist .divArtistInfo h5 span {
+                    border-bottom: 1px solid transparent;
                     transition: all 0.5s;
                 }
 

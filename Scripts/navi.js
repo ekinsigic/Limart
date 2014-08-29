@@ -23,7 +23,6 @@
 
         // setup opener trigger functions
         function setupTriggers() {
-            contentScrollers();
             if (!isMobile) {
                 $('.triggerDiv').click(function () {
                     var currentTriggerType = $(this).attr('data-trigger-type');
@@ -69,6 +68,7 @@
             $('.sixtythreeOpener').each(function(){
                 $(this).css('max-height',(wH - $('header').outerHeight()));
             });
+            $(this).mCustomScrollbar();
             $('.sixtythreeOpener').each(function(){
                 $(this).css('overflow','auto');
             });
@@ -122,14 +122,13 @@
 
                     $('#' + currentTriggerType + 'Opener').addClass('on');
 
+
                     var slideDistance = $('#' + currentTriggerType + 'Opener').outerHeight();
+                    contentScrollers();
 
 
                         // Disabling Scroll
-                    if (slideDistance == (wH-$('header').height() )) {
 
-                    }
-                    else {
                         if (isMobile) {
                             $(window).bind('touchmove',function(e){
                                 e.preventDefault();
@@ -140,7 +139,7 @@
                                 e.preventDefault();
                             })
                         }
-                    }
+
 
                     $('#divOpenerFrame').css({
                      '-webkit-transform':'translate3d(0px,'+slideDistance+'px,0px)',
@@ -268,5 +267,9 @@
 
     function contentScrollers() {
         $(".divBasketDetails").mCustomScrollbar();
+        if (slideDistance == (wH-$('header').height() )) {
+            $('#divOpenerFrame').mCustomScrollbar();
+            console.log(slideDistance);
+        }
     }
 

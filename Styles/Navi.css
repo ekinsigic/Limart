@@ -182,6 +182,7 @@ nav .divNav, main, footer {
 
 #divOpenerFrame.on {
     -webkit-transform:translate3d(0px,100%,0px);
+    overflow: hidden;
 }
 
 #divOpenerFrame {

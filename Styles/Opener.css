@@ -212,11 +212,13 @@
 .sixtythreeOpener .divBasketContent .divBasketDetails{
     float:right;
     margin-top:30px;
-    width:586px;
+    width: 600px;
+    max-height: 360px;
 }
 
 .sixtythreeOpener .divBasketContent .divBasketDetails .divBasketItemHeaders{
     padding-bottom: 10px;
+    margin-top: 40px;
     margin-bottom: 25px;
     border-bottom:1px solid #d9d9db;
 }
@@ -231,6 +233,10 @@
     float: right;
     width:180px;
     text-align:center;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .separator.marginCaster{
+    margin-bottom: 40px;
 }
 
 .sixtythreeOpener .divItem .imgItemPic {

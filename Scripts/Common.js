@@ -27,6 +27,10 @@ if (isMobile)
         $.mobile.ignoreContentEnabled = true;
     });
 
+    if ($('#input63').length > 0) {
+    document.write('<script type="text/javascript" src="../Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
+    };
+
     document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
     //
 }

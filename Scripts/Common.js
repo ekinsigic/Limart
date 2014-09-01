@@ -36,39 +36,17 @@ if (isMobile)
 }
 
 $(document).ready(function () {
-    $('body').css('opacity','1');
-    // $('a').click(function(e){
-    //     destination = $(this).attr('href');
-    //     if (destination !== '#') {
-    //         e.preventDefault();
-    //         $('body').css('opacity','0');
-    //         setTimeout(function(){
-    //             window.location.replace(destination);
-    //         },550);
-    //     };
-    // });
-    //fullscreen();
     scrollEvents();
     setGlobals();
     smartphoneLandscape();
     miscImgLoader();
-//    aggregateHeader();
 
-    // PPI = getPPI();
-
-    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
     if(deviceIs == 'smartphone' && sH <= 500){
         $('nav .divNav').css({ overflow: 'auto' });
         $('nav .divNav .divMenuContent').css({height:230});
     }
 
 });
-
-function fullscreen() {  
-    if (isMobile) {
-          document.body.requestFullscreen();
-    };
-}
 
 var orientationChangeTimer = null;
 $(window).on("orientationchange", function () {
@@ -83,10 +61,6 @@ $(window).on("orientationchange", function () {
 
 $(window).resize(function () {
     setGlobals();
-    // closeMenu();
-    // closeSearch();
-    // closeBasket();
-    // closeUser();
 });
 
 function setGlobals() {
@@ -172,42 +146,3 @@ function miscImgLoader() {
         }
     });
 }
-
-
-
-
-
-
-// misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
-//function miscImgLoaderOLD() {
-//    var is63 = false;
-
-//    if ($('#input63').length > 0) {
-//        is63 = ($('#input63').val() == '63');
-//    }
-
-//    var imgFolderPath = (is63 ? '../Images/63' : 'Images');
-
-//    $('body').find('img[data-sixtyThree]').each(function () {
-
-//        var miscIdentifier = $(this).attr('data-sixtyThree');
-//        var isSubFolder = $(this).attr('data-isSubFolder');
-
-//        if (isMobile) {
-//            if ($(this).hasClass('white')) {
-//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/@2x/' + miscIdentifier + '-white@2x.png');
-//            }
-//            else {
-//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/@2x/' + miscIdentifier + '@2x.png');
-//            }
-//        }
-//        else {
-//            if ($(this).hasClass('white')) {
-//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/' + miscIdentifier + '-white.png');
-//            }
-//            else {
-//                $(this).attr('src', imgFolderPath + (!is63 && isSubFolder ? '/63' : '') + '/' + miscIdentifier + '.png');
-//            }
-//        }
-//    });
-//}

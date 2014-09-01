@@ -211,15 +211,18 @@
 
 .sixtythreeOpener .divBasketContent .divBasketDetails{
     float:right;
-    margin-top:30px;
+    margin-top: 0px;
     width: 600px;
-    max-height: 360px;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .basketDetailsScroller {
+    max-height: 299px;
+    overflow: auto;
 }
 
 .sixtythreeOpener .divBasketContent .divBasketDetails .divBasketItemHeaders{
     padding-bottom: 10px;
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin-top: 30px;
     border-bottom:1px solid #d9d9db;
 }
 
@@ -237,6 +240,14 @@
 
 .sixtythreeOpener .divBasketContent .divBasketDetails .separator.marginCaster{
     margin-bottom: 40px;
+}
+
+.sixtythreeOpener .divBasketDetails .divItem:first-child {
+    padding-top: 27px;
+}
+
+.sixtythreeOpener .divBasketDetails .divItem:last-child {
+    padding-bottom: 12px;
 }
 
 .sixtythreeOpener .divItem .imgItemPic {
@@ -353,7 +364,7 @@
 
 .sixtythreeOpener .divBasketContent .divTotal{
     float:right;
-    margin-top:10px;
+    margin-top: 0px;
     padding-top:22px;
     width:100%;
     border-top:1px solid #d9d9db;
@@ -542,7 +553,15 @@
         float:none;
         margin:25px auto 0 auto;
         width:90%;
-    }
+    
+        height: auto;
+        max-height: none;
+}
+
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .basketDetailsScroller {
+    max-height: none;
+}
 
     .sixtythreeOpener .divBasketContent .divBasketItemHeaders {
         display: none;

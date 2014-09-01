@@ -7,39 +7,68 @@
         });
         $(window).resize(function(){
             carryMenu();
+            // Eğer opener'ın boyutu ekran boyunu geçecekse, açıksa, ve ekran boyutu değişiyorsa:
+            if (isOpenerOn || $('#divOpenerFrame').height() == (wH-hH)) {
+
+                $('#divOpenerFrame').css({// Opener'ımızın yüksekliğini tekrar ekran boyuna göre ayarlıyoruz,
+                    'max-height':(wH-hH),
+                    'overflow':'auto'
+                });
+
+                $('#divOpenerFrame').css({
+                 '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 'transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-webkit-transition':'-webkit-transform '+0+'s',
+                 '-moz-transition':'-moz-transform '+0+'s',
+                 '-ms-transition':'-ms-transform '+0+'s',
+                 '-o-transition':'-o-transform '+0+'s',
+                 'transition':'transform '+0+'s'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
+                });
+                otherItemsToSlide.css({
+                 '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                 'transform':'translate3d(0px,'+(wH-hH)+'px,0px)'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
+                });
+
+                //$('#divOpenerFrame').mCustomScrollbar("update");//Scrollbar plug-in'imizi baştan başlatıyoruz.
+            };
         });
-
-
         // opener globals
-        var openerTimer = 700;
-        var isOpenerOn = false;
-        var lastTriggerType = "";
-        var isCurrentlyAnimated = false;
-        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters, #carriableFilters');
-        var slideDistance = 8;
-        var animationType = 'ease-out'
-        var scrollTopBeforeOpening = scrollTopVal;
+        var openerTimer = 700; //Opener'ın açılış ve kapanış süresi
+        var isOpenerOn = false; //Opener açık mı değil mi boolean'ı
+        var lastTriggerType = ""; //En son açık olan opener adı
+        var isCurrentlyAnimated = false; //Opener o sırada animasyon halinde mi
+        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters, #carriableFilters'); //Opener açılırken yarılma efektini verebilmek için Slide edecek diğer elementler
+        var slideDistance = 8; //opener'ın kayacağı mesafe, 8 yalnızca temsili bir rakam, bu rakam opener açılacağı an kendini yeniliyor
+        var animationType = 'ease-out' //opener'ın animasyon tipi, ease-in, ease-out, ease-in-out variable'ları verebiliriz.
+        var scrollTopBeforeOpening = scrollTopVal; //opener açıldığında ekranın ne kadar scroll edildiği, animasyon sırasında anlık olarak değişecek
         //
 
         // setup opener trigger functions
         function setupTriggers() {
-            if (!isMobile) {
-                $('.triggerDiv').click(function () {
-                    var currentTriggerType = $(this).attr('data-trigger-type');
-                    triggerFunctions(currentTriggerType);
+            setUpFrame();
+            if (!isMobile) {//Desktop için 
+                $('.triggerDiv').click(function () { //opener'ı açacak butonlardan birine tıkandığında..
+                    var currentTriggerType = $(this).attr('data-trigger-type'); //bu butonlara atadığımız trigger-type data attribute'undan, hangi opener'ı açacağımız verisini alıyoruz
+                    triggerFunctions(currentTriggerType); // bu veriyi, triggerFunctions isimli, opener'ı açacak fonksiyon hub'ının içine atıyoruz.
                 });
 
-                $('html').click(function () {
+                $('html').click(function () { // sayfanın herhangi bir yerine tıkladığımızda opener'ları kapatacağımızı belirtiyoruz
                     if (!isCurrentlyAnimated && isOpenerOn) {
                         closeOpener();
                     }
                 });
 
-                $('#divOpenerFrame').click(function (e) {
+                $('#divOpenerFrame').click(function (e) { //opener'larımızın kapsayıcısını yukarıda belirttiğimiz fonksiyondan muaf tutuyoruz
                     e.stopPropagation();
                 });
             }
-            else {
+            else { //Tabletler ve telefonlar için(touchscreen)
                 $('.triggerDiv').bind("tap", function (e) {
                     var currentTriggerType = $(this).attr('data-trigger-type');
                     triggerFunctions(currentTriggerType);
@@ -63,15 +92,6 @@
                         e.stopPropagation();
                 });
             }
-
-
-            $('.sixtythreeOpener').each(function(){
-                $(this).css('max-height',(wH - $('header').outerHeight()));
-            });
-            $('.sixtythreeOpener.on').mCustomScrollbar();
-            $('.sixtythreeOpener').each(function(){
-                $(this).css('overflow','auto');
-            });
         }
         //
 
@@ -89,13 +109,18 @@
 
         // Activate opener and its content
         function triggerOpener(currentTriggerType) {
+            //Eğer açılmakta olan opener search opener'ı ise
 
+            //Mobilde focus yapıp kullanıcıyı rahatsız etmemek, yine de dikkati input'un üzerine çekmek için
+            //input üzerinde yanıp sönen, sahte bir cursor oluşturuyoruz
             if (currentTriggerType == 'search' && isMobile) {
                     $('#searchOpener .noCursor').addClass('pseudoCursor');
                     $('#searchOpener input').focus(function(){
+                        //ve input'a tıklandığında bunu kaldırıyoruz
                         $('#searchOpener .noCursor').removeClass('pseudoCursor');
                     })
             }
+            //Eğer cihazımız mobil cihaz değilse, input'u üzerine tıklanmış olarak açıyoruz
             else if (currentTriggerType == 'search' && !isMobile) {
                 setTimeout(function(){
                     $('#searchOpener input').focus();
@@ -124,20 +149,29 @@
 
 
                     var slideDistance = $('#' + currentTriggerType + 'Opener').outerHeight();
+                    if (slideDistance > (wH - hH)) {
+                        slideDistance = (wH-hH);
+                    };
                     contentScrollers();
 
 
                         // Disabling Scroll
-
-                        if (isMobile) {
-                            $(window).bind('touchmove',function(e){
-                                e.preventDefault();
-                            })
+                        if ($('#divOpenerFrame').height() == (wH-hH)) {
+                            $(window).unbind('touchmove');
                         }
                         else {
-                            $(window).bind('mousewheel', function(e){
-                                e.preventDefault();
-                            })
+                            
+                            if (isMobile) {
+                                $(window).bind('touchmove',function(e){
+                                    e.preventDefault();
+                                })
+                            }
+                            else {
+                                $(window).bind('mousewheel', function(e){
+                                    e.preventDefault();
+                                })
+                            }
+
                         }
 
 
@@ -169,7 +203,11 @@
 
 
                     var s_ = setTimeout(function () {
+                        //animasyon süresi geçtikten sonra, elementin anime halinde olup olmadığını gösteren global'ımızı false'a çekiyoruz.
                         isCurrentlyAnimated = false;
+                        if ($('#divOpenerFrame').height() == (wH-hH)) {//Eğer opener kapsayıcımız bütün ekranı kapatıyorsa, altındaki her şeyi display:none'a çekiyoruz
+                            otherItemsToSlide.css('display','none');
+                        };
                     }, openerTimer);
                 }, currentOpenerTimer);
             }
@@ -179,31 +217,42 @@
         // Close currently active content
         function closeOpener() {
             if (isOpenerOn) {
-                $(document).scrollTop(scrollTopBeforeOpening);
+
+                if ($('#divOpenerFrame').height() == (wH-hH)) {//Eğer opener'ımızın altındaki elementler display:none'daysa, tekrar görünür yapıyoruz
+                    otherItemsToSlide.css('display','block');
                     $('#divOpenerFrame').css({
-                     '-webkit-transform':'translate3d(0px,0px,0px)',
-                     '-moz-transform':'translate3d(0px,0px,0px)',
-                     '-ms-transform':'translate3d(0px,0px,0px)',
-                     '-o-transform':'translate3d(0px,0px,0px)',
-                     'transform':'translate3d(0px,0px,0px)',
-                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
-                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
-                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
-                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
-                     'transition':'transform '+(openerTimer/1000)+'s'
+                        'height': 'auto',
                     });
-                otherItemsToSlide.css({
-                     '-webkit-transform':'translate3d(0px,0px,0px)',
-                     '-moz-transform':'translate3d(0px,0px,0px)',
-                     '-ms-transform':'translate3d(0px,0px,0px)',
-                     '-o-transform':'translate3d(0px,0px,0px)',
-                     'transform':'translate3d(0px,0px,0px)',
-                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
-                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
-                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
-                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
-                     'transition':'transform '+(openerTimer/1000)+'s'
-                });
+                };
+
+                $(document).scrollTop(scrollTopBeforeOpening); //eğer opener açıkken site display:none'a çekilmişse, açıldığında başa dönecektir
+                                                               //bu yüzden opener'ı kapatırken scroll'u eski haline döndürüyoruz.
+                // kayma animasyonları
+                    $('#divOpenerFrame').css({
+                         '-webkit-transform':'translate3d(0px,0px,0px)',
+                         '-moz-transform':'translate3d(0px,0px,0px)',
+                         '-ms-transform':'translate3d(0px,0px,0px)',
+                         '-o-transform':'translate3d(0px,0px,0px)',
+                         'transform':'translate3d(0px,0px,0px)',
+                         '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                         '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                         '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                         '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                         'transition':'transform '+(openerTimer/1000)+'s'
+                        });
+                    otherItemsToSlide.css({
+                         '-webkit-transform':'translate3d(0px,0px,0px)',
+                         '-moz-transform':'translate3d(0px,0px,0px)',
+                         '-ms-transform':'translate3d(0px,0px,0px)',
+                         '-o-transform':'translate3d(0px,0px,0px)',
+                         'transform':'translate3d(0px,0px,0px)',
+                         '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                         '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                         '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                         '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                         'transition':'transform '+(openerTimer/1000)+'s'
+                    });
+                //
 
                 var s = setTimeout(function () {
                     isOpenerOn = false;
@@ -266,10 +315,32 @@
     }
 
     function contentScrollers() {
-        $(".divBasketDetails").mCustomScrollbar();
+        $(".basketDetailsScroller").mCustomScrollbar();
         if (slideDistance == (wH-$('header').height() )) {
-            $('#divOpenerFrame').mCustomScrollbar();
+            //$('#divOpenerFrame').mCustomScrollbar();
             console.log(slideDistance);
         }
     }
+
+    function setUpFrame() {
+            $('#divOpenerFrame').css({
+                'max-height':(wH-hH),
+                'overflow':'auto',
+                'overflow-y': 'scroll',
+                '-webkit-overflow-scrolling': 'touch'
+            });
+            //$('#divOpenerFrame').mCustomScrollbar();
+
+
+            // $('#divOpenerFrame').bind('touchmove',function(e){
+            //     e.preventDefault();
+            // })
+            $('#divOpenerFrame .mCSB_container').css('margin-right','0px');
+            $('#divOpenerFrame .mCSB_scrollTools').css('opacity','0');
+    }
+
+
+
+
+
 

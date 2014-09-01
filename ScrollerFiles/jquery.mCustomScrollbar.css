@@ -97,6 +97,7 @@ y-axis
 		width: 2px;
 		height: 100%;
 		margin: 0 auto;
+		margin-left: 12px;
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
 	}
 
@@ -105,13 +106,16 @@ y-axis
 		width: 100%;
 		height: 30px; /* minimum dragger height */
 		z-index: 1;
-	}
+	
+		
+}
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
 		position: relative;
 		width: 4px;
 		height: 100%;
-		margin: 0 auto;
+		
+ margin-left: 12px;
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
 		text-align: center;
 	}
@@ -354,13 +358,14 @@ yx-axis
 		filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
 	}
 
-	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-		background-color: #fff; background-color: rgba(255,255,255,0.75);
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ 
+		background-color: rgba(0,0,0,1);
+		border-radius: 0px;
 		filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; 
 	}
 
 	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-		background-color: #fff; background-color: rgba(255,255,255,0.85);
+		background-color: rgba(0,0,0,0.9); 
 		filter: "alpha(opacity=85)"; -ms-filter: "alpha(opacity=85)"; 
 	}
 	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,

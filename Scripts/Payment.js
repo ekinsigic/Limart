@@ -7,8 +7,6 @@ $(document).ready(function () {
 $(window).load(function(){
 });
 
-
-var activePaymentOption = null;
 function paymentDynamics() {
 	// ADDRESS SELECT ADDRESS BOXES ACTIVE PASSIVE STATES
 		$( "input[name=addressSelect]:radio" ).change(function(){
@@ -37,37 +35,32 @@ function paymentDynamics() {
 					isScroll = true;
 				});
 				$(this).bind('touchend',function(){
+					$('.paymentOptions .singlePaymentOption').each(function(){
+						$(this).removeClass('activeOption');
+					});
+					$(this).addClass('activeOption');
 					var selectedOption = $(this).attr('data-payment-selection');
-					if (selectedOption !== activePaymentOption) {
-						activePaymentOption = selectedOption
-						$('.paymentOptions .singlePaymentOption').each(function(){
-							$(this).removeClass('activeOption');
+					$('.divPaymentContent .optionBox').each(function(){
+						$(this).css({
+							'opacity':'0',
+							'transition':'all 0.7s',
+							'-webkit-transform':'scale(0.95)'
 						});
-						$(this).addClass('activeOption');
-						var selectedOption = $(this).attr('data-payment-selection');
-						$('.divPaymentContent .optionBox').each(function(){
-							$(this).css({
-								'opacity':'0',
-								'transition':'all 0.7s',
-								'-webkit-transform':'scale(0.95)'
-							});
+					});
+					setTimeout(function(){
+						$('.divPaymentContent .optionBox').each(function(e){
+							$(this).removeClass('activePayment');
 						});
+						$('.divPaymentContent').find('.'+selectedOption).addClass('activePayment');
 						setTimeout(function(){
-							$('.divPaymentContent .optionBox').each(function(e){
-								$(this).removeClass('activePayment');
-							});
-							$('.divPaymentContent').find('.'+selectedOption).addClass('activePayment');
-							setTimeout(function(){
-								$('.divPaymentContent .optionBox').each(function(){
-									$(this).css({
-										'opacity':'1',
-										'-webkit-transform':'scale(1)'
-									});
+							$('.divPaymentContent .optionBox').each(function(){
+								$(this).css({
+									'opacity':'1',
+									'-webkit-transform':'scale(1)'
 								});
-							},10)
-						},900);
-					};
-
+							});
+						},10)
+					},700);
 				});
 			});
 
@@ -132,36 +125,32 @@ function paymentDynamics() {
 		else {
 
 			$('.paymentOptions .singlePaymentOption').click(function(e){
+				$('.paymentOptions .singlePaymentOption').each(function(){
+					$(this).removeClass('activeOption');
+				});
+				$(this).addClass('activeOption');
 				var selectedOption = $(this).attr('data-payment-selection');
-				if (activePaymentOption !== selectedOption) {
-					activePaymentOption = selectedOption
-					$('.paymentOptions .singlePaymentOption').each(function(){
-						$(this).removeClass('activeOption');
+				$('.divPaymentContent .optionBox').each(function(){
+					$(this).css({
+						'opacity':'0',
+						'transition':'all 0.7s',
+						'-webkit-transform':'scale(0.95)'
 					});
-					$(this).addClass('activeOption');
+				});
+				setTimeout(function(){
 					$('.divPaymentContent .optionBox').each(function(){
-						$(this).css({
-							'opacity':'0',
-							'transition':'all 0.7s',
-							'-webkit-transform':'scale(0.95)'
-						});
+						$(this).removeClass('activePayment');
 					});
+					$('.divPaymentContent').find('.'+selectedOption).addClass('activePayment');
 					setTimeout(function(){
 						$('.divPaymentContent .optionBox').each(function(){
-							$(this).removeClass('activePayment');
-						});
-						$('.divPaymentContent').find('.'+selectedOption).addClass('activePayment');
-						setTimeout(function(){
-							$('.divPaymentContent .optionBox').each(function(){
-								$(this).css({
-									'opacity':'1',
-									'-webkit-transform':'scale(1)'
-								});
+							$(this).css({
+								'opacity':'1',
+								'-webkit-transform':'scale(1)'
 							});
-						},10)
-					},900);
-				};
-
+						});
+					},10)
+				},700);
 
 			});
 
@@ -246,10 +235,7 @@ function paymentDynamics() {
 
 		$('#differentBillingAddress').change(function(){
 			if ($(this).is(':checked')) {
-				setTimeout(function(){
-					openClosedAsDefaultDiv('.divAddressContent .divBillingAddress.closedAsDefault');
-				},450);
-				scrollUserTo('.divAddressContent .divBillingAddress.closedAsDefault');
+				openClosedAsDefaultDiv('.divAddressContent .divBillingAddress.closedAsDefault');
 			}
 			else {
 				closeOpenOnOptionDiv('.divAddressContent .divBillingAddress.closedAsDefault');
@@ -259,10 +245,7 @@ function paymentDynamics() {
 
 		$('#someoneElse').change(function(){
 			if ($(this).is(':checked')) {
-				setTimeout(function(){
-					openClosedAsDefaultDiv('.sendToSomeoneElse .sendToSomeoneElseDetails');
-				},350)
-				scrollSanitizer('.sendToSomeoneElse .sendToSomeoneElseDetails');
+				openClosedAsDefaultDiv('.sendToSomeoneElse .sendToSomeoneElseDetails');
 			}
 			else {
 				closeOpenOnOptionDiv('.sendToSomeoneElse .sendToSomeoneElseDetails');
@@ -271,10 +254,7 @@ function paymentDynamics() {
 
 		$('#giftNoteThis').change(function(){
 			if ($(this).is(':checked')) {
-				setTimeout(function(){
-					openClosedAsDefaultDiv('.giftNoteTextareaWrapper');
-				},350);
-				scrollSanitizer('.giftNoteTextareaWrapper')
+				openClosedAsDefaultDiv('.giftNoteTextareaWrapper');
 			}
 			else {
 				closeOpenOnOptionDiv('.giftNoteTextareaWrapper');
@@ -293,22 +273,5 @@ function paymentDynamics() {
 				$(divOpenOnOption).css('height','');
 				$(divOpenOnOption).removeClass('openOnOption');
 		}
-	//
-
-	//MANAGE PAGE SCROLLING
-	function scrollUserTo(scrolledElement) {
-		var scrollDestination = $(scrolledElement).offset().top -80;
-		$('html,body').animate({scrollTop: scrollDestination }, '300');
-	}
-	function scrollSanitizer(sanitizedElement) {
-		var elementDestination = $(sanitizedElement).offset().top + 200;
-		var windowDestination = scrollTopVal+wH;
-		var sanitizingDestination = elementDestination-wH+100;
-
-		if (elementDestination > windowDestination) {
-			$('html,body').animate({scrollTop: sanitizingDestination }, '300');
-		};
-		//$('html,body').animate({scrollTop: scrollDestination }, '500');
-	}
 	//
 }

@@ -1,10 +1,4 @@
-﻿body {
-    opacity: 0;
-    transition: opacity 0.2s;
-    transition-delay: 0.1s;
-}
-
-#smartphoneLandscape{
+﻿#smartphoneLandscape{
     display:none;
     position:fixed;
     z-index:200;

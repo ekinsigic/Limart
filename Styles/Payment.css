@@ -151,9 +151,7 @@
 }
 
 #address .divContent .divAddressContent .divAddressOption label{
-    width:100%;
-    height:25px;
-    margin:15px 0 0 0;
+    width:100%
 }
 
 #address .divContent .divAddressContent .divAddressOption h4.name,
@@ -325,23 +323,18 @@ select{
 
 
 #payment .divPaymentContent ul.paymentOptions {
-    height: 40px;
-    box-sizing: content-box;
-    display: flex;
+    height:42px;
     margin-bottom:30px;
-    border-bottom: 4px solid #6d6e89;
-    padding-bottom: 0px;
 }
 
 #payment .divPaymentContent .paymentOptions .singlePaymentOption {
     display:block;
     float:left;
-    min-width: calc(25% - 1px);
+    min-width:130px;
     height:40px;
     line-height:45px;
     text-align:center;
     background-color:#f0f0f0;
-    border-bottom: 3px solid #f0f0f0;
     margin-left:1px;
     padding-left:20px;
     padding-right:20px;
@@ -353,11 +346,6 @@ select{
     background-color: #F8F8F8;
     color: rgb(163, 163, 163);
     border-bottom: 3px solid #6d6e89;
-} 
-
-#payment .divPaymentContent .paymentOptions .singlePaymentOption:first-child{
-    margin-left:0px;
-    width: 25%;
 } 
 
 #payment .divPaymentContent .paymentOptions .singlePaymentOption img {
@@ -380,7 +368,7 @@ select{
 
 #payment .optionBox.creditCardOption .cardLogo {
     position: absolute;
-    top: 128px;
+    top:72px;
     left: 400px;
     width: 80px;
 }
@@ -441,7 +429,7 @@ select{
 
 
 #payment .divPaymentContent .divPay{
-    float: right;
+    float:left;
     margin-top:70px;
     width:260px;
 }
@@ -487,16 +475,16 @@ select{
 #payment .divPaymentContent .divWirePaymentOption label{
     display: block;
     position: absolute;
-    z-index: 4;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
 }
 
 #payment .divPaymentContent .divWirePaymentOption img {
-    width: 45%;
-    margin: 20px 20px 20px 20px;
+    width: 60%;
+    margin: 20px;
 }
 
 #payment .divPaymentContent .divWirePaymentOption h4 {
@@ -514,7 +502,6 @@ select{
 #payment .divPaymentContent .optionBox {
     display: none;
     float: left;
-    width: 100%;
     transition: all 0.7s;
 }
 
@@ -540,11 +527,9 @@ select{
     float: left;
     margin: 14px;
 }
-
 #payment .divPaymentContent .optionBox.paypalOption .paypalButton, 
 #payment .divPaymentContent .optionBox.bkmexpressOption .bkmButton{
     margin: 10px;
-    float: right;
     margin-top: 20px;
     width: 120px;
 }
@@ -557,7 +542,6 @@ select{
 #paymentCreditCard table{
     margin:30px 0 0 0;
     float: left;
-    width: 100%;
 }
 
 #paymentCreditCard table tr td{
@@ -641,7 +625,7 @@ select{
 }
 
 #paymentCreditCard .tableInstalment tr td label input[type="radio"]{
-    top: 4px;
+    top:4px;
 }
 
 #paymentCreditCard .tableInstalment tr:hover td{
@@ -1012,10 +996,10 @@ select{
         height:200px;
     }
 
+
     #address .divContent .divAddressContent .divAddressOption label{
         width:200px;
-        height:25px;
-        margin:15px 0 15px 0;
+        margin:5px 0 0 0;
     }
 
     #address .divContent .divAddressContent .divAddressOption h4.name,
@@ -1059,8 +1043,8 @@ select{
 
     #address .divNewAddressContent,
     #address .divInvoiceAddressContent{
-        width:100%;
-        margin:25px auto 0 auto;
+        width:90%;
+        margin:auto;
     }
 
     .divAddNewAddress input[type="text"],
@@ -1071,7 +1055,6 @@ select{
         margin:10px 0 0 0 !important;
     }
 
-    .divAddNewAddress textarea,
     .divAddNewInvoiceAddress textarea{
         margin-bottom:10px;
     }
@@ -1195,25 +1178,6 @@ select{
         margin-bottom:20px;
         width:100%;
     }
-
-
-    #payment .divPaymentContent .optionBox.paypalOption img, 
-    #payment .divPaymentContent .optionBox.bkmexpressOption img{
-        float: right;
-        margin: 14px 0 0 0;
-    }
-
-
-
-    #paymentCreditCard table{
-        width:100%;
-    }
-
-    #paymentCreditCard table tr td label{
-        font-size:11px;
-    }
-
-
 
 
 

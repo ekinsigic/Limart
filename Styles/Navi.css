@@ -156,7 +156,9 @@ nav .divBasketIcon .imgBasket {
     margin-top:20px;
     margin-left:16px;
 }
-
+.divContent .divNav {
+    box-shadow:none;
+}
 
 nav .divNav, main, footer {
     transition:transform 0.5s ease;
@@ -199,6 +201,7 @@ nav .divNav, main, footer {
 
 #divOpenerFrame .sixtythreeOpener.on {
     display: block;
+    box-shadow: inset 0px -22px 15px -13px rgba(0,0,0,0.2);
 }
 
 /* Screen */

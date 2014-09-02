@@ -90,7 +90,7 @@ function paymentDynamics() {
 						$('#payment').removeClass('adressInfo');
 						$('#payment').addClass('paymentOptions');
 					},600);
-					$('main .divContent').addClass('passiveSegment');
+					$('main .divAddressContent').addClass('passiveSegment');
 				});
 			});
 
@@ -106,7 +106,7 @@ function paymentDynamics() {
 						$('main').css('height','');
 						$('#payment').addClass('adressInfo');
 						$('#payment').removeClass('paymentOptions');
-						$('main .divContent').removeClass('passiveSegment');
+						$('main .divAddressContent').removeClass('passiveSegment');
 					},600);
 					$('.divPaymentContent').addClass('passiveSegment');
 				});
@@ -119,7 +119,7 @@ function paymentDynamics() {
 				});
 				$(this).bind('touchend',function(){
 					e.preventDefault();
-					closeOpenOnOptionDiv('main .divContent .divAddNewAddress');
+					closeOpenOnOptionDiv('main .divAddressContent .divAddNewAddress');
 				});
 			});
 
@@ -130,7 +130,7 @@ function paymentDynamics() {
 				});
 				$(this).bind('touchend',function(){
 					e.preventDefault();
-					closeOpenOnOptionDiv('main .divContent .divAddNewInvoiceAddress');
+					closeOpenOnOptionDiv('main .divAddressContent .divAddNewInvoiceAddress');
 				});
 			});
 		}
@@ -173,41 +173,41 @@ function paymentDynamics() {
 
 			$('.divAddressContent .saveBtn, .divAddressContent .saveBtnA').click(function(e){
 				e.preventDefault();
-				$('.divOverallPaymentWrapper').height($('.divOverallPaymentWrapper').height());
-				setTimeout(function(){
-					$('.divOverallPaymentWrapper').css('height','');
-					$('.divPaymentContent').removeClass('passiveSegment');
+				$('.divWholePaymentWrapper.divContent').height($('.divWholePaymentWrapper.divContent').height());
+				$('main .divAddressContent').addClass('passiveSegment');
 					$('#payment').removeClass('adressInfo');
 					$('#payment').addClass('paymentOptions');
+				setTimeout(function(){
+					$('.divWholePaymentWrapper.divContent').css('height','');
+					$('.divPaymentContent').removeClass('passiveSegment');
 				},600);
-				$('main .divContent').addClass('passiveSegment');
 			});
 
 			$('#payment a.edit').click(function(e){
 				e.preventDefault();
-				$('.divOverallPaymentWrapper').height($('.divOverallPaymentWrapper').height());
-				setTimeout(function(){
-					$('.divOverallPaymentWrapper').css('height','');
+				$('.divWholePaymentWrapper.divContent').height($('.divWholePaymentWrapper.divContent').height());
+				$('.divPaymentContent').addClass('passiveSegment');
 					$('#payment').addClass('adressInfo');
 					$('#payment').removeClass('paymentOptions');
-					$('main .divContent').removeClass('passiveSegment');
+				setTimeout(function(){
+					$('.divWholePaymentWrapper.divContent').css('height','');
+					$('main .divAddressContent').removeClass('passiveSegment');
 				},600);
-				$('.divPaymentContent').addClass('passiveSegment');
 			});
 
 			$('.divAddNewAddress .addBtn, .divAddNewAddress .cancelAddingNewAddress').click(function(e){
 				e.preventDefault();
-				closeOpenOnOptionDiv('main .divContent .divAddNewAddress');
+				closeOpenOnOptionDiv('main .divAddressContent .divAddNewAddress');
 				$("#savedAddressRadio").prop("checked", true);
 				openClosedAsDefaultDiv('.divAddressOptionsWrapper');
 				$('.pDescription').css({'-webkit-transform':'scale(1)','opacity':'1'});
-				removeProhibitor('main .divContent .divAddNewAddress');
+				removeProhibitor('main .divAddressContent .divAddNewAddress');
 			});
 
 			$('.divAddNewInvoiceAddress .cancelAddingNewInvoiceAddress, .divAddNewInvoiceAddress .saveAddingNewInvoiceAddress').click(function(e){
 				e.preventDefault();
-				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
-				$('main .divContent .divInvoiceAddressContent').css({
+				closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
+				$('main .divAddressContent .divInvoiceAddressContent').css({
 					'opacity':'0',
 					'-webkit-transform':'scale(0.95)'
 				});
@@ -219,7 +219,7 @@ function paymentDynamics() {
 				})
 				openClosedAsDefaultDiv('.divBillingAddressOptionsWrapper');
 				setTimeout(function(){
-					removeProhibitor('main .divContent .divAddNewAddress');
+					removeProhibitor('main .divAddressContent .divAddNewAddress');
 					$('.pDescription').css({'-webkit-transform':'scale(1)','opacity':'1'});
 					$('.divBillingAddress').height($('.divBillingAddress').find('.innerWrapper').outerHeight());
 				},900);
@@ -237,10 +237,10 @@ function paymentDynamics() {
 				})
 				$('#differentBillingAddress').attr('checked', false);
 				closeOpenOnOptionDiv('.divAddressContent .divBillingAddress.closedAsDefault');
-				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
+				closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
 				scrollUserTo('.divAddressText');
-				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
-				$('main .divContent .divInvoiceAddressContent').css({
+				closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
+				$('main .divAddressContent .divInvoiceAddressContent').css({
 					'opacity':'0',
 					'-webkit-transform':'scale(0.95)'
 				});
@@ -258,7 +258,7 @@ function paymentDynamics() {
 
 
 				setTimeout(function(){
-					openClosedAsDefaultDiv('main .divContent .divAddNewAddress');
+					openClosedAsDefaultDiv('main .divAddressContent .divAddNewAddress');
 					closeOpenOnOptionDiv('.divAddressOptionsWrapper');
 				},450);
 				$('.pDescription.parentOriented').css({'-webkit-transform':'scale(0.95)','opacity':'0'});
@@ -266,7 +266,7 @@ function paymentDynamics() {
 			}
 			else {
 				scrollUserTo('.divAddressText');
-				closeOpenOnOptionDiv('main .divContent .divAddNewAddress');
+				closeOpenOnOptionDiv('main .divAddressContent .divAddNewAddress');
 				openClosedAsDefaultDiv('.divAddressOptionsWrapper');
 				setTimeout(function(){
 					$('.divAddressOptionsWrapper').css({
@@ -291,11 +291,11 @@ function paymentDynamics() {
 				var billingAddressOptionsWrapper = $('.divBillingAddressOptionsWrapper').height()
 				setTimeout(function(){
 					closeOpenOnOptionDiv('.divBillingAddressOptionsWrapper');
-					openClosedAsDefaultDiv('main .divContent .divInvoiceAddressContent');
-					$('.divBillingAddress').css('height',$('main .divContent .divInvoiceAddressContent').find('.innerWrapper').height() + $('.divBillingAddress').height() - billingAddressOptionsWrapper);
+					openClosedAsDefaultDiv('main .divAddressContent .divInvoiceAddressContent');
+					$('.divBillingAddress').css('height',$('main .divAddressContent .divInvoiceAddressContent').find('.innerWrapper').height() + $('.divBillingAddress').height() - billingAddressOptionsWrapper);
 					divBillingAddressClosedHeight = $('.divBillingAddress').height();
 					setTimeout(function(){
-						$('main .divContent .divInvoiceAddressContent').css({
+						$('main .divAddressContent .divInvoiceAddressContent').css({
 							'opacity':'1',
 							'-webkit-transform':'scale(1)'
 						});
@@ -308,16 +308,16 @@ function paymentDynamics() {
 				},700);
 			}
 			else {
-				$('main .divContent .divInvoiceAddressContent').css({
+				$('main .divAddressContent .divInvoiceAddressContent').css({
 					'opacity':'0',
 					'-webkit-transform':'scale(0.95)'
 				});
 				setTimeout(function(){
-					closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
+					closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
 					scrollUserTo('.divBillingAddress');
 					openClosedAsDefaultDiv('.divBillingAddressOptionsWrapper');
 					setTimeout(function(){
-						removeProhibitor('main .divContent .divAddNewAddress');
+						removeProhibitor('main .divAddressContent .divAddNewAddress');
 						$('.divBillingAddressOptionsWrapper').css({
 							'position':'relative',
 							'opacity':'1',
@@ -334,7 +334,7 @@ function paymentDynamics() {
 
 		$('#differentBillingAddress').change(function(){
 			if ($(this).is(':checked')) {
-				if ($('main .divContent .divAddNewAddress').height() == 0) {
+				if ($('main .divAddressContent .divAddNewAddress').height() == 0) {
 					openClosedAsDefaultDiv('.divAddressContent .divBillingAddress.closedAsDefault');
 					setTimeout(function(){
 						scrollUserTo('.divAddressContent .divBillingAddress.closedAsDefault');
@@ -347,14 +347,14 @@ function paymentDynamics() {
 							scrollUserTo('.divAddressContent .divBillingAddress.closedAsDefault');
 						},450)
 					},450);
-					closeOpenOnOptionDiv('main .divContent .divAddNewAddress');
+					closeOpenOnOptionDiv('main .divAddressContent .divAddNewAddress');
 					$('.pDescription').css({'-webkit-transform':'scale(1)','opacity':'1'});
 					$("#savedAddressRadio").prop("checked", true);
 					$('divAddressContent .divBillingAddress').height( $('divAddressContent .divBillingAddress').height() + $('.divBillingAddressOptionsWrapper').height() );
 
 
 					scrollUserTo('.divAddressText');
-					closeOpenOnOptionDiv('main .divContent .divAddNewAddress');
+					closeOpenOnOptionDiv('main .divAddressContent .divAddNewAddress');
 					openClosedAsDefaultDiv('.divAddressOptionsWrapper');
 					$('.pDescription').css({'-webkit-transform':'scale(1)','opacity':'1'});
 					setTimeout(function(){
@@ -368,10 +368,10 @@ function paymentDynamics() {
 			}
 			else {
 				closeOpenOnOptionDiv('.divAddressContent .divBillingAddress.closedAsDefault');
-				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
+				closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
 				scrollUserTo('.divAddressText');
-				closeOpenOnOptionDiv('main .divContent .divInvoiceAddressContent');
-				$('main .divContent .divInvoiceAddressContent').css({
+				closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
+				$('main .divAddressContent .divInvoiceAddressContent').css({
 					'opacity':'0',
 					'-webkit-transform':'scale(0.95)'
 				});
@@ -409,7 +409,6 @@ function paymentDynamics() {
 				},350);
 				scrollSanitizer('.giftNoteTextareaWrapper')
 			}
-
 			else {
 				closeOpenOnOptionDiv('.giftNoteTextareaWrapper');
 			}
@@ -452,9 +451,10 @@ function paymentDynamics() {
 		$('div.divAddressContent').append('<div class="prohibitorOverlay">');
 		$('.prohibitorOverlay').css({
 			'opacity':'1',
-			'height': ($('.divAddress-Payment-Content div.divContent').outerHeight() - actualOffset - $(activeElement).height() + customHeightValue),
+			'height': ($('.divAddress-Payment-Content div.divAddressContent').outerHeight() - actualOffset - $(activeElement).height() + customHeightValue),
 			'top': (actualOffset + $(activeElement).height() + customTopValue)
 		});
+
 		if (upperProhibitor) {
 			$('div.divAddressContent').append('<div class="prohibitorOverlay prohibitorOverlayUpper">');
 			$('.prohibitorOverlay.prohibitorOverlayUpper').css({
@@ -463,6 +463,7 @@ function paymentDynamics() {
 				'top': (0)
 			})
 		}
+
 		else {
 			$('.saveBtn').first().after('<div class="miniProhibitorOverlay">');
 			$('.miniProhibitorOverlay').css({
@@ -471,6 +472,7 @@ function paymentDynamics() {
 				'width':( $('.saveBtn').outerWidth()+30 ),
 			});
 		}
+
 	}
 	function removeProhibitor(activeElement) {
 		$('.prohibitorOverlay, .miniProhibitorOverlay').css('opacity','0')

@@ -19,34 +19,51 @@ var openOpener = null;
 
 checkDevice();
 
-if (isMobile)
-{
+if (isMobile) {
     // load jQuery Mobile dynamically
-
     $(document).on('mobileinit', function () {
-        $.mobile.ignoreContentEnabled = true;
+        $.mobile.ignoreContentEnabled = true; // disable jqm styling
     });
 
-    if ($('#input63').length > 0) {
-    document.write('<script type="text/javascript" src="../Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
-    };
-
-    document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
+    var pathPrefix = ($('#input63').length > 0 ? "../" : "");
+    document.write('<script type="text/javascript" src="' + pathPrefix + 'Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
     //
 }
 
 $(document).ready(function () {
+    $('body').css('opacity', '1');
+    // $('a').click(function(e){
+    //     destination = $(this).attr('href');
+    //     if (destination !== '#') {
+    //         e.preventDefault();
+    //         $('body').css('opacity','0');
+    //         setTimeout(function(){
+    //             window.location.replace(destination);
+    //         },550);
+    //     };
+    // });
+    //fullscreen();
     scrollEvents();
     setGlobals();
     smartphoneLandscape();
     miscImgLoader();
+    //    aggregateHeader();
 
-    if(deviceIs == 'smartphone' && sH <= 500){
+    // PPI = getPPI();
+
+    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
+    if (deviceIs == 'smartphone' && sH <= 500) {
         $('nav .divNav').css({ overflow: 'auto' });
-        $('nav .divNav .divMenuContent').css({height:230});
+        $('nav .divNav .divMenuContent').css({ height: 230 });
     }
 
 });
+
+function fullscreen() {
+    if (isMobile) {
+        document.body.requestFullscreen();
+    };
+}
 
 var orientationChangeTimer = null;
 $(window).on("orientationchange", function () {
@@ -106,7 +123,7 @@ function smartphoneLandscape() {
         $('#smartphoneLandscape').show();
         $('.divPreloader').addClass('loading');
     }
-    else if(deviceIs == 'smartphone' && isPortrait) {
+    else if (deviceIs == 'smartphone' && isPortrait) {
         $('#smartphoneLandscape').hide();
         $('.divPreloader').removeClass('loading');
     }

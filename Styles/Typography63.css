@@ -238,6 +238,53 @@ a:active {
     font-weight:400;
 }
 
+.stopFaceEE{ 
+    color:#000;
+    font-size:34px;
+    font-weight:100;
+}
+
+.stopFaceFF{ 
+    color:#404040;
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:0.030em;
+}
+
+.stopFaceGG{
+    color:#6d6e89;
+    font-size:16px;
+    font-weight:400;
+    letter-spacing:0.040em;
+}
+
+.stopFaceHH{
+    color:#6d6e89;
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:0.050em;
+}
+
+.stopFaceII{
+    color:#000;
+    font-size:24px;
+    font-weight:400;
+    letter-spacing:0.010em;
+}
+
+.stopFaceJJ{
+    color:#404040;
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:0.010em;
+}
+
+
+.stopFaceKK {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+}
 
 
 
@@ -377,6 +424,54 @@ a.stopaStyleE {
 }
 
 
+.stopaStyleG:link,
+.stopaStyleG:visited{
+    color:#7f7f7f;
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:0.040em;
+    transition:color 0.5s;
+}
+
+.stopaStyleG:hover,
+.stopaStyleG:active{
+    color:#4f4f4f;
+}
+
+
+.stopaStyleH:link,
+.stopaStyleH:visited{
+    text-decoration:underline;
+    color:#686b83;
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:0.040em;
+    transition:all 0.5s;
+}
+
+.stopaStyleH:hover,
+.stopaStyleH:active{
+    color:#4b4d63;
+}
+
+
+
+.stopaStyleI:link,
+.stopaStyleI:visited {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    transition:all 0.5s;
+}
+
+.stopaStyleI:hover,
+.stopaStyleI:active {
+    color: #737373;
+}
+
+
+
 
 
 
@@ -436,6 +531,14 @@ a.stopaStyleE {
     color:#7f7f7f;
     font-size:12px;
     font-weight:400;
+}
+
+.stopSpanStyleH{ 
+    display: block;
+    color:#999999;
+    font-size:11px;
+    font-weight:400;
+    letter-spacing: 0.040em;
 }
 
 

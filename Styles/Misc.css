@@ -204,6 +204,42 @@ img[data-sixtythree="arrow-next-short-purple"] {
 /* END LOGOTYPE */
 
 
+
+
+
+
+/*account icons */
+
+img[data-sixtythree="icon-my-account"]{
+    width: 81px;
+    height: 99px;
+}
+
+img[data-sixtythree="icon-order-account"]{
+    width: 91px;
+    height: 78px;
+}
+
+img[data-sixtythree="icon-services-account"]{
+    width: 66px;
+    height: 91px;
+}
+
+img[data-sixtythree="icon-contact-account"]{
+    width: 77px;
+    height: 80px;
+}
+
+
+
+/* end - account icons */
+
+
+
+
+
+
+
 /* THIN DESIGN LINES */
 .divLineA {
     width: 1px;

@@ -22,12 +22,11 @@
     <link rel="stylesheet" type="text/css" href="../Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="../Styles/PopUp.css" />
     <link rel="stylesheet" type="text/css" href="../Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="../Styles/63/Basket.css" />
-
+    <link rel="stylesheet" type="text/css" href="../Styles/63/AccountNavi.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/63/AccountDetails.css" />
 
 </head>
 <body>
-
     <input id="input63" type="hidden" value="63" />
 
     <section id="smartphoneLandscape">
@@ -360,258 +359,115 @@
 
 
 
+
     <main>
 
-        <section id="pageHeader">
-            <h1 class="faceEE">SEPET</h1>
-        </section>
-
-
-        <section id="basketDetails">
-
-            <!-- BASKET HEADERS -->
-            <div class="divBasketItemHeaders">
-                <div class="stopFaceL header1">ÜRÜN AÇIKLAMA</div>
-                <div class="stopFaceL header2">BİRİM FİYAT</div>
-                <div class="stopFaceL header3">ADET</div>
-                <div class="stopFaceL header4">ARA TOPLAM</div>
+        <section id="accountDetails" >
+            <div id="breadcrumbs">
+                <ul class="stopFaceKK">
+                    <li><h3>JOHN DOE</h3></li>
+                    <li>/</li>
+                    <li><a href="#" class="stopaStyleI">HESABIM</a></li>
+                    <li>/</li>
+                    <li>ÜYELİK BİLGİLERİM</li>
+                </ul>
                 <div class="separator"></div>
             </div>
-            <!-- END - BASKET HEADERS -->
 
 
+            <aside>
+                <ul class="level3">
+                    <li><a href="#" class="aMenuItem">
+                            <span class="stopFaceHH">HESAP BİLGİLERİ</span>
+                            <img src="../Images/63/icon-my-account.png" class="one" />
+                        </a>
+                        <ul class="level4">
+                            <li><a href="AccountProfile.html" class="stopaStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ÜYELİK BİLGİLERİM</a></li>
+                            <li><a href="AccountAddress.html" class="stopaStyleG aSubMenuItem">ADRESLERİM</a></li>
+                            <li><a href="AccountPassword.html" class="stopaStyleG aSubMenuItem">ŞİFRE İŞLEMLERİ</a></li>
+                        </ul>
+                    </li>
 
-            <!-- BASKET ITEMS -->
-            <div class="divItem">
+                    <li><a href="#" class="aMenuItem">
+                        <span class="stopFaceHH">SİPARİŞ BİLGİLERİ</span>
+                        <img src="../Images/63/icon-order-account.png" class="two" />
+                    </a>
+                    </li>
+                    <li><a href="#" class="aMenuItem">
+                        <span class="stopFaceHH">SERVİSLER</span>
+                        <img src="../Images/63/icon-services-account.png" class="three" />
+                    </a>
+                    </li>
+                    <li><a href="#" class="aMenuItem">
+                        <span class="stopFaceHH">İLETİŞİM</span>
+                        <img src="../Images/63/icon-contact-account.png" class="four" />
+                    </a>
+                    </li>
+                </ul>
+            </aside>
 
-                <img src="../Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
 
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
+            <div class="divDetail">
 
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="stopFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="stopFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="stopFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
+                <a href="#" class="aNav">
+                    <img src="../Images/63/dot.png" class="dot" />
+                    <img src="../Images/63/dot.png" class="dot" />
+                    <img src="../Images/63/dot.png" class="dot" />
+                
+                    <div class="separator"></div>
+                </a>
 
-                    <div class="divUnitPrice">
-                        <div class="stopFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
+                <h1 class="stopFaceII">Üyelik Bilgilerim</h1>
+                <p class="stopFaceJJ">
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                </p>
 
-                    <div class="divQuantity">
-                        <div class="content">
-                            <select class="stopSelectA">
-                                <option>1</option>
-                                <option>5</option>
-                                <option>10</option>
-                                <option>15</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="separator line"></div>
 
-                    <div class="divTotalPrice">
-                        <div class="stopFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
+                <div class="divLeft">
+                    <input type="text" class="stopInputTextA input" placeholder="İSİM" />
+                    <input type="text" class="stopInputTextA input" placeholder="SOYİSİM" />
+                    <input type="text" class="stopInputTextA input" placeholder="E-POSTA" />
+                    <input type="text" class="stopInputTextA input" placeholder="TELEFON" />
+
+                </div>
+                <div class="divRight">
+                    <span class="stopSpanStyleH">DOĞUM<br /> TARİHİ</span>
+                    <select class="stopSelectA">
+                        <option>GÜN</option>
+                        <option>GÜN</option>
+                    </select>
+
+                    <select class="stopSelectA">
+                        <option>AY</option>
+                        <option>AY</option>
+                    </select>
+
+                    <select class="stopSelectA">
+                        <option>YIL</option>
+                        <option>YIL</option>
+                    </select>
+
+                    <input type="text" class="stopInputTextA input" placeholder="TCK NO" />
+
+                    <label for="maleRadio" class="stopLabelB"><input type="radio" name="gender" id="maleRadio" />KADIN</label>
+                    <label for="femaleRadio" class="stopLabelB"><input type="radio" name="gender" id="femaleRadio" />ERKEK</label>
+
                 </div>
 
-            </div>
-
-
-            <div class="separator sepA"></div>
-
-
-            <div class="divItem">
-
-                <img src="../Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="stopFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="stopFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="stopFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="stopFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="content">
-                            <select class="stopSelectA">
-                                <option>1</option>
-                                <option>5</option>
-                                <option>10</option>
-                                <option>15</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="stopFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
+                <input type="button" class="stopButtonA button" value="KAYDET" />
 
             </div>
-
-
-
-            <div class="separator sepA"></div>
-
-
-            <div class="divItem">
-
-                <img src="../Files/Products/03/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="stopFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="stopFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="stopFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="stopFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="content">
-                            <select class="stopSelectA">
-                                <option>1</option>
-                                <option>5</option>
-                                <option>10</option>
-                                <option>15</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="stopFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="separator sepA"></div>
-
-
-            <div class="divItem">
-
-                <img src="../Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="stopFaceF header1">METAMOR asdas das da sd asd asdPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="stopFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="stopFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="stopFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="content">
-                            <select class="stopSelectA">
-                                <option>1</option>
-                                <option>5</option>
-                                <option>10</option>
-                                <option>15</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="stopFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- END - BASKET ITEMS -->
 
 
             <div class="separator"></div>
-
-
-            <!-- TOTAL SUMMARY -->
-            <div class="divTotal">
-                <div class="divDiscount">
-                    <p class="stopFaceK">İNDİRİM KUPONU KULLANMAK YA DA KAMPANYA KODU MU GİRMEK İSTİYORSUNUZ?</p>
-
-                    <div class="divDiscountInput">
-                        <input type="text" class="stopInputTextA inputDiscount" />
-                        <input type="image" src="../Images/@2x/arrow-next@2x.png" />
-                    </div>
-                </div>
-
-                <table class="tableOrderTotal">
-                    <tr>
-                        <td class="stopFaceH">SİPARİŞ TUTARI</td>
-                        <td class="stopFaceJ"><span class=" amount">1.260.47</span> <span class="currency">TL</span></td>
-                    </tr>
-                    <tr>
-                        <td class="stopFaceH">KARGO BEDELİ</td>
-                        <td class="stopFaceJ"><span class="amount">4.99</span> <span class="currency">TL</span></td>
-                    </tr>
-                    <tr>
-                        <td class="stopFaceH">İNDİRİMLER</td>
-                        <td class="stopFaceJ"><span class="amount">-10.49</span> <span class="currency">TL</span></td>
-                    </tr>
-                    <tr class="trSep">
-                        <td colspan="2"><div class="separator sepB"></div></td>
-                    </tr>
-                    <tr>
-                        <td class="stopFaceH">GENEL TOPLAM</td>
-                        <td class="stopFaceJ"><span class="amount">1.820.00</span> <span class="currency">TL</span></td>
-                    </tr>
-                </table>
-            </div>
-            <!-- END - TOTAL SUMMARY -->
-
-
-            <!-- BOTTOM BUTTONS -->
-            <a href="#" class="stopaStyleA contShopping">
-                <img data-sixtythree="arrow-previous"> <span>ALIŞVERİŞE DEVAM ET</span>
-            </a>
-            <a href="Payment.html" class="stopaStyleB btnCompleteOrder" >SİPARİŞİ TAMAMLA</a>
-            <!-- END - BOTTOM BUTTONS -->
-
-
-            <div class="separator"></div>
-
         </section>
+        
+
+
     </main>
+
+
 
 
 
@@ -672,11 +528,14 @@
 
 
 
+
+
     <!-- SCRIPTS -->
     <script type="text/javascript" src="../Scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../Scripts/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="../Scripts/jquery-ui.js"></script>
-    <script type="text/javascript" src="../Scripts/Common.js"></script>
     <script type="text/javascript" src="../ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../Scripts/Common.js"></script>
     <script type="text/javascript" src="../Scripts/Navi.js"></script>
     <!-- END - SCRIPTS -->
 

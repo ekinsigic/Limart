@@ -1,4 +1,9 @@
-﻿
+﻿.divAddNewInvoiceAddress .innerWrapper {
+    margin-top: -20px;
+}
+
+
+
 #payment{
     margin:50px auto 0 auto;
 }
@@ -94,7 +99,6 @@
     max-height: 999999px;
     padding:0 40px 50px 40px;
     background-color:#fff;
-    border:1px solid #e5e5e5;
     transition: all 0.7s;
 }
 
@@ -110,12 +114,13 @@
 }
         
 #address .divContent .divAddressContent h3{
-    padding:40px 0 0 0;
+    padding: 40px 0 15px 0;
 }
 
 #address .divContent .divAddressContent .pDescription{
     width:350px;
-    margin: 20px 0 10px 0;
+    transition: all 0.5s;
+    margin: 0px 0 10px 0;
 }
 
 #address .divContent .divAddressContent .saveBtn{
@@ -124,6 +129,13 @@
     width:200px;
 }
 
+
+h3.subH3 {
+    color: #000;
+    
+    font-size: 18px;
+    display: none;
+}
 
 
 
@@ -147,7 +159,6 @@
 }
 
 #address .divContent .divAddressContent label{
-    margin-top:10px;
 }
 
 #address .divContent .divAddressContent .divAddressOption label{
@@ -189,8 +200,6 @@
 
 #address .divContent .divAddressContent .divPhoneNumber {
     margin-top: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f0f0f0;
 }
 
 #address .divContent .divAddressContent .divPhoneNumber p {
@@ -227,6 +236,7 @@
 
 #address .divContent .divAddressContent .orderDetailNotes label{
     width:220px;
+    margin-top: 10px;
 }
 
 #address .divContent .divAddressContent .orderDetailNotes textarea{
@@ -268,7 +278,18 @@ textarea {
     float: left;    
     margin-top: 28px;
 }
-
+a.contShopping {
+    width:100px !important;
+    left: 5px;
+    float: left;
+    top: 12px;
+}
+a.contShopping span {
+    line-height:20px;
+}
+a.contShopping img {
+    margin-top:13px;
+}
 .divAddNewInvoiceAddress input[type="text"], 
 select{
     float: left;
@@ -827,9 +848,7 @@ select{
     -o-transform: scale(0.95);
     transform: scale(0.95);
     opacity: 0;
-    transition: all 0.7s;
-    margin-top: 0px !important
-}
+    transition: all 0.7s;}
 
 .openOnOption {
     transition: all 0.7s;
@@ -904,7 +923,13 @@ select{
 .divBillingAddress {
     margin-top: 0px !important;
 }
+.divAddressOptionsWrapper, .divBillingAddressOptionsWrapper {
+    float: left;
+}
 
+.divAddressOptionsWrapper .innerWrapper, .divBillingAddressOptionsWrapper .innerWrapper{
+    float: left;
+}
 .divAddressOption {
     transition:all 0.5s;
 }
@@ -929,10 +954,9 @@ select{
 
 
 .divNewAddressContent.divAddNewAddress {
-    top:-30px;
+    top: 0px;
 }
 .divInvoiceAddressContent.divAddNewInvoiceAddress{
-    top:-30px;
     opacity: 0;
     -webkit-transform: scale(0.9);
 }
@@ -940,12 +964,11 @@ select{
 
 /* GENEL YAPIYA EKLEMELER */
 .addressNewOrSaved {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 #address .divContent .divAddressContent .addressNewOrSavedInvoice label{
-    margin-bottom:20px
-}
+    margin-bottom: 0px;}
 
 #address .divContent .divAddressContent .addressNewOrSavedInvoice label:last-child{
     margin-left: 30px;
@@ -953,6 +976,28 @@ select{
 
 #address .divContent .divAddressContent .addressNewOrSaved label:last-child{
     margin-left: 30px;
+}
+
+.divOverallPaymentWrapper {
+    border: 1px solid #e5e5e5;
+}
+
+.prohibitorOverlay {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    opacity: 0;
+    transition:opacity 0.3s;
+}
+.miniProhibitorOverlay {
+    position: absolute;
+    margin: 33px 0 0 0;
+    width: 200px;
+    right: -15px;
+    top: -20px;
+    background-color: rgba(255,255,255,0.9);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 /* END GENEL YAPIYA EKLEMELER */
 
@@ -1236,8 +1281,9 @@ select{
 
 
 
-
-
+.divInvoiceAddressContent .innerWrapper{
+    top: -20px;
+} 
 
     #orderSummary{
         display:none;
@@ -1262,7 +1308,9 @@ select{
 
     #address .divContent .divAddressContent .divAddressOption{
         width:294px;
-    }
+    
+        margin-bottom: 8px;
+}
 
     #address .divContent .saveBtnA{
         margin-left:35px;

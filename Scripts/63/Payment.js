@@ -452,7 +452,7 @@ function paymentDynamics() {
 		$('div.divAddressContent').append('<div class="prohibitorOverlay">');
 		$('.prohibitorOverlay').css({
 			'opacity':'1',
-			'height':( $('#address div.divContent').outerHeight() - actualOffset - $(activeElement).height() + customHeightValue),
+			'height': ($('.divAddress-Payment-Content div.divContent').outerHeight() - actualOffset - $(activeElement).height() + customHeightValue),
 			'top': (actualOffset + $(activeElement).height() + customTopValue)
 		});
 		if (upperProhibitor) {

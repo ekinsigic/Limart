@@ -302,7 +302,24 @@ a.contShopping {
     width: 291px;
 }
 
-.divAddress-Payment-Content .divContent .addBtn,
+
+.divNewAddressContent input[type="text"].v1,
+.divNewAddressContent select.v1,
+.divAddNewInvoiceAddress input[type="text"].v1,
+.divAddNewInvoiceAddress select.v1{
+    margin-right:5px;
+}
+
+.divNewAddressContent input[type="text"].v2,
+.divNewAddressContent select.v2,
+.divAddNewInvoiceAddress input[type="text"].v2,
+.divAddNewInvoiceAddress select.v2{
+    margin-left:5px;
+}
+
+
+
+.divAddress-Payment-Content .divContent .saveAddingNewAddress,
 .divAddress-Payment-Content .divContent .saveAddingNewInvoiceAddress {
     float: right;
     margin-top: 10px;
@@ -943,11 +960,8 @@ a.contShopping {
     transition: all 0.5s;
 }
 
-.addBtn {
-    float: right;
-}
-
-.addBtn {
+#payment .saveAddingNewInvoiceAddress,
+#payment .saveAddingNewAddress {
     float: right;
 }
 
@@ -1137,8 +1151,8 @@ a.contShopping {
         margin-top: 25px;
     }
 
-    .divAddress-Payment-Content .divContent .addBtn,
-    .divAddress-Payment-Content .divContent .saveAddingNewInvoiceAddress {
+    .divAddress-Payment-Content .divContent .saveAddingNewInvoiceAddress,
+    .divAddress-Payment-Content .divContent .saveAddingNewAddress{
         width: 180px;
     }
 

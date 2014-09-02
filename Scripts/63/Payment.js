@@ -130,7 +130,7 @@ function paymentDynamics() {
 				});
 			});
 
-			$('.divAddNewInvoiceAddress .cancelAddingNewInvoiceAddress, .divAddNewInvoiceAddress .saveAddingNewInvoiceAddress').bind('touchstart',function(e){
+			$('.divAddNewInvoiceAddress .cancelAddingNewInvoiceAddress, .divAddNewInvoiceAddress .addBtn').bind('touchstart',function(e){
 				isScroll = false;
 				$(this).bind('touchmove',function(){
 					isScroll = true;
@@ -211,7 +211,7 @@ function paymentDynamics() {
 				removeProhibitor('main .divAddressContent .divNewAddressContent');
 			});
 
-			$('.divAddNewInvoiceAddress .cancelAddingNewInvoiceAddress, .divAddNewInvoiceAddress .saveAddingNewInvoiceAddress').click(function(e){
+			$('.addBtn').click(function(e){
 				e.preventDefault();
 				closeOpenOnOptionDiv('main .divAddressContent .divInvoiceAddressContent');
 				$('main .divAddressContent .divInvoiceAddressContent').css({

@@ -1,4 +1,17 @@
 ﻿
+#menuActiveOverlay{
+    display:none;
+    position:absolute;
+    z-index:15;
+    top:50px;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:#5e5f79;
+    opacity:0.5;
+}
+
+
 #accountDetails{
     margin:0 auto 0 auto;
     padding-top:50px;
@@ -16,8 +29,13 @@
     float:left;
     width:auto;
     line-height:50px;
+    margin-top:2px;
     margin-right:8px;
     letter-spacing:0.6px;
+}
+
+#breadcrumbs li span{
+    font-weight:600;
 }
 
 #breadcrumbs li a{
@@ -37,12 +55,11 @@
 }
 
 
-
-#accountDetails .divDetail .aNav{
+.aAccountNav{
     display:none;
 }
 
-#accountDetails .divDetail .aNav .dot{
+.aAccountNav .dot{
     float:left;
     margin-right:4px;
 }
@@ -203,6 +220,14 @@
 
 /* Screen */
 @media all and (max-width: 700px) {
+    body{
+        overflow-x:hidden;
+    }
+
+    #menuActiveOverlay{
+        /*display:block;*/
+    }
+
     #accountDetails{
         margin-top:0;
         padding-top:0;
@@ -211,19 +236,17 @@
     }
 
     #breadcrumbs {
-        float:none;
-        margin:auto;
-        width:90%;
+        display:none;
     }
 
-    #accountDetails .divDetail{
-        padding-top:25px !important;
-        border:0 !important;
-    }
-
-    #accountDetails .divDetail .aNav{
+    .aAccountNav{
         display:inline-block;
-        margin-bottom:30px;
+        z-index:30;
+        position:fixed;
+        top:80px;
+        left:15px;
+        padding:10px 0 10px 0;
+        border:1px solid #f00;
     }
 
     #accountDetails .divDetail p{
@@ -231,8 +254,26 @@
     }
 
     #accountDetails .divDetail{
-        padding:54px 5% 75px 5%;
+        z-index:5;
+        margin-top:50px;
+        padding:25px 5% 75px 5% !important;
         width:100%;
+        background-color:#fff;
+        border:0 !important;
+    }
+
+    #accountDetails .divDetail.activeMenu{
+        transition:transform 0.5s;
+        -webkit-transition:-webkit-transform 0.5s;
+        -moz-transition:-moz-transform 0.5s;
+        -ms-transition:-ms-transform 0.5s;
+        -o-transition:-o-transform 0.5s;
+
+        transform:translate3d(70px,0px,0px);
+        -webkit-transform:translate3d(70px,0px,0px);
+        -moz-transform:translate3d(70px,0px,0px);
+        -ms-transform:translate3d(70px,0px,0px);
+        -o-transform:translate3d(70px,0px,0px);
     }
 
     #accountDetails .divDetail .divLeft,
@@ -295,7 +336,17 @@
     }
 
     #breadcrumbs {
+        padding-left:90px;
         width:100%;
+        background-color:#333333;
+    }
+
+    #breadcrumbs li{
+        line-height:37px;
+    }
+
+    #breadcrumbs li span{
+        color:#fff;
     }
 
     #accountDetails .divDetail{

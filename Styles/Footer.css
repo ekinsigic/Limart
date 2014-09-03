@@ -114,12 +114,6 @@
     }
     
     footer.activeMenu{
-        transition:transform 0.5s;
-        -webkit-transition:-webkit-transform 0.5s;
-        -moz-transition:-moz-transform 0.5s;
-        -ms-transition:-ms-transform 0.5s;
-        -o-transition:-o-transform 0.5s;
-
         transform:translate3d(70px,0px,0px);
         -webkit-transform:translate3d(70px,0px,0px);
         -moz-transform:translate3d(70px,0px,0px);

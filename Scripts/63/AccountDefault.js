@@ -9,9 +9,9 @@ $(window).resize(function () {
 $(document).ready(function () {
     if (isMobile) {
         $('#welcomeAccount .divAccount .divAcountItem .aHeader').removeAttr('onclick')
-                                                     .bind("tap", function (e) {
-                                                         setupHomeAccountMenu(this);
-                                                     });
+                                                                 .bind("tap", function (e) {
+                                                                     setupHomeAccountMenu(this);
+                                                                 });
     }
 });
 

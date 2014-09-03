@@ -156,17 +156,11 @@ nav .divBasketIcon .imgBasket {
     margin-top:20px;
     margin-left:16px;
 }
+
 .divContent .divNav {
     box-shadow:none;
 }
 
-nav .divNav, main, footer {
-    transition:transform 0.5s ease;
-    -webkit-transition:-webkit-transform 0.5s ease;
-    -moz-transition:-moz-transform 0.5s ease;
-    -ms-transition:-ms-transform 0.5s ease;
-    -o-transition:-o-transform 0.5s ease;
-}
 
 .triggerDiv#menuTrigger {
     top: 25px;

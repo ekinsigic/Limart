@@ -1,14 +1,45 @@
 ﻿
-#menuActiveOverlay{
-    display:none;
+header nav .innerHtml{
     position:absolute;
-    z-index:15;
-    top:50px;
+    z-index:100;
+    top:0;
     right:0;
     bottom:0;
+    left:100px;
+    background-color:#fff;
+    opacity:0;
+    transition:opacity 0.5s;
+}
+
+header nav .innerHtml.activeMenu{
+    opacity:0.7;
+}
+
+
+#menuActiveOverlay{
+    display:none;
+    position:fixed;
+    z-index:16;
+    top:70px;
+    right:0;
+    bottom:-200px;
     left:0;
-    background-color:#5e5f79;
-    opacity:0.5;
+    background-color:#fff;
+    opacity:0;
+    transition:transform 0.5s, opacity 0.5s;
+    -webkit-transition:-webkit-transform 0.5s, opacity 0.5s;
+    -moz-transition:-moz-transform 0.5s, opacity 0.5s;
+    -ms-transition:-ms-transform 0.5s, opacity 0.5s;
+    -o-transition:-o-transform 0.5s, opacity 0.5s;
+}
+
+#menuActiveOverlay.activeMenu{
+    opacity:0.9;
+    transform:translate3d(70px,40px,0px);
+    -webkit-transform:translate3d(70px,40px,0px);
+    -moz-transform:translate3d(70px,40px,0px);
+    -ms-transform:translate3d(70px,40px,0px);
+    -o-transform:translate3d(70px,40px,0px);
 }
 
 
@@ -59,9 +90,19 @@
     display:none;
 }
 
-.aAccountNav .dot{
+.aAccountNav .spanDot{
+    display:block;
     float:left;
-    margin-right:4px;
+    margin-left:4px;
+    width:6px;
+    height:6px;
+    background-color:#000;
+    border-radius:100%;
+    transition:all 0.5s;
+}
+
+.aAccountNav .spanDot.activeMenu{
+    background-color:#fff;
 }
 
 
@@ -151,14 +192,8 @@
 /* address information */
 #accountDetails .divDetail.address .newAddress{
     display:inline-block;
-    text-decoration:underline;
-    color:#404040;
-    font-weight:500;
-}
-
-#accountDetails .divDetail.address .newAddress2{
-    display:inline-block;
     margin-bottom:30px;
+    width:140px;
 }
 
 #accountDetails .divDetail.address .divAddressOption {
@@ -220,12 +255,8 @@
 
 /* Screen */
 @media all and (max-width: 700px) {
-    body{
+    #divMainWrapper{
         overflow-x:hidden;
-    }
-
-    #menuActiveOverlay{
-        /*display:block;*/
     }
 
     #accountDetails{
@@ -235,45 +266,80 @@
         width:100%;
     }
 
+
+
+
     #breadcrumbs {
-        display:none;
+        position:fixed;
+        z-index:0;
+        width:100%;
+        background-color:#fff;
+        transition:opacity 0.5s;
+        background-color:#333333;
     }
+
+    #breadcrumbs li{
+        display:none;
+        float:none;
+        width:100%;
+        line-height:36px;
+    }
+
+    #breadcrumbs li.mobileName{
+        display:block;
+        text-align:right;
+    }
+
+    #breadcrumbs li.mobileName span{
+        display:block;
+        margin-right:20px;
+        color:#cccccc;
+        font-weight:100;
+        font-size:11px;
+    }
+
+    
+
+
+
+
 
     .aAccountNav{
         display:inline-block;
-        z-index:30;
+        z-index:18;
         position:fixed;
-        top:80px;
-        left:15px;
-        padding:10px 0 10px 0;
-        border:1px solid #f00;
+        top:70px;
+        width:70px;
+        height:40px;
+        padding:16px 0 16px 18px;
     }
 
-    #accountDetails .divDetail p{
-        width:100%;
-    }
+
 
     #accountDetails .divDetail{
         z-index:5;
-        margin-top:50px;
-        padding:25px 5% 75px 5% !important;
+        padding:65px 5% 75px 5% !important;
         width:100%;
         background-color:#fff;
         border:0 !important;
-    }
-
-    #accountDetails .divDetail.activeMenu{
         transition:transform 0.5s;
         -webkit-transition:-webkit-transform 0.5s;
         -moz-transition:-moz-transform 0.5s;
         -ms-transition:-ms-transform 0.5s;
         -o-transition:-o-transform 0.5s;
+    }
 
-        transform:translate3d(70px,0px,0px);
-        -webkit-transform:translate3d(70px,0px,0px);
-        -moz-transform:translate3d(70px,0px,0px);
-        -ms-transform:translate3d(70px,0px,0px);
-        -o-transform:translate3d(70px,0px,0px);
+
+    #accountDetails .divDetail.activeMenu{
+        transform:translate3d(70px,40px,0px);
+        -webkit-transform:translate3d(70px,40px,0px);
+        -moz-transform:translate3d(70px,40px,0px);
+        -ms-transform:translate3d(70px,40px,0px);
+        -o-transform:translate3d(70px,40px,0px);
+    }
+
+    #accountDetails .divDetail p{
+        width:100%;
     }
 
     #accountDetails .divDetail .divLeft,

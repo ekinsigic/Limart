@@ -64,62 +64,12 @@
 
 
 
-
-
-#searchOpener{
-    z-index:15;
-    width:100%;
-    height:60px;
-    top: auto;
-    background-color:#ececef;
+nav .divNav, main, footer {
     transition:transform 0.5s ease;
     -webkit-transition:-webkit-transform 0.5s ease;
     -moz-transition:-moz-transform 0.5s ease;
     -ms-transition:-ms-transform 0.5s ease;
     -o-transition:-o-transform 0.5s ease;
-}
-
-#searchOpener .divSearchContent{
-    margin:auto;
-    width:960px;
-}
-
-#searchOpener .divSearchContent .inputTextB{
-    position:absolute;
-    top:12px;
-    right:40px;
-    border: 0;
-}
-
-#searchOpener .aSearchButton{
-    position:absolute;
-    top:23px;
-    right:0;
-    width:12px;
-    height:12px;
-}
-
-#searchOpener .aSearchButton img{
-    width:100%;
-    height:auto;
-}
-
-.topSearch {
-    -webkit-transform:translate3d(0px,60px,0px);
-    -moz-transform:translate3d(0px,60px,0px);
-    -ms-transform:translate3d(0px,60px,0px);
-    -o-transform:translate3d(0px,60px,0px);
-    transform:translate3d(0px,60px,0px);
-}
-
-#searchOpener .pseudoCursor {
-    position: absolute;
-    width: 1px;
-    height: 17px;
-    background: rgba(0,0,0,1);
-    top: 21px;
-    right: 40px;
-    -webkit-animation:pseudoCursor 0.6s infinite alternate
 }
 
 main{
@@ -133,6 +83,8 @@ main{
     width: 100%;
     height: 100%;
 }
+
+
 
 @-webkit-keyframes pseudoCursor {
     from {
@@ -188,10 +140,10 @@ main{
 /* ADDITIONAL PANELS CSS */
 .sixtythreeOpener {
     transition:transform 0.7s;
-    -webkit-transition:-webkit-transform 0.7s
-    -moz-transition:-moz-transform 0.7s
-    -ms-transition:-ms-transform 0.7s
-    -o-transition:-o-transform 0.7s
+    -webkit-transition:-webkit-transform 0.7s;
+    -moz-transition:-moz-transform 0.7s;
+    -ms-transition:-ms-transform 0.7s;
+    -o-transition:-o-transform 0.7s;
     overflow: auto;
     z-index: 31;
 }
@@ -201,8 +153,6 @@ main{
     left: 0px;
 }
 
-.divBasketOpener {
-}
 
 .userInnerOpener{
     display: none;
@@ -229,13 +179,6 @@ main{
 
 /* Screen */
 @media all and (max-width: 700px) {
-    #searchOpener {
-    }
-
-    #searchOpener .divSearchContent{
-        width:90%;
-    }
-
     main{
         margin:70px auto 0 auto;
     }
@@ -245,7 +188,8 @@ main{
         line-height: 80px;     
     }
 
-    .breadcrumbsWrapper, .divDetailWrapper {
+    .breadcrumbsWrapper, 
+    .divDetailWrapper {
         width:90%;
         margin:0 auto;
         text-align: center;
@@ -264,23 +208,9 @@ main{
     .breadcrumbs ul li:last-child{
         display: none;
     }
-
-    #searchOpener .aSearchButton{
-        position:absolute;
-        top:23px;
-        right: 25px;
-        width:12px;
-        height:12px;
-    }
-
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #searchOpener .divSearchContent{
-        width:670px;
-        position: relative;
-    }
-
     .breadcrumbsWrapper, .divDetailWrapper {
         width:670px;
         margin:0 auto;
@@ -295,44 +225,14 @@ main{
         margin:0 auto;
         display: inline-block;
     }
-
-    #searchOpener .aSearchButton{
-        position:absolute;
-        top:23px;
-        right: 25px;
-        width:12px;
-        height:12px;
-    }
-
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    #searchOpener .divSearchContent{
-        width:960px;
-    }
-
-    #searchOpener .aSearchButton{
-        position:absolute;
-        top:23px;
-        right:0;
-        width:12px;
-        height:12px;
-    }
-
+    
 }
 
 @media all and (min-width: 1435px) {
-    #searchOpener .divSearchContent{
-        width:1080px;
-    }
-
-    #searchOpener .aSearchButton{
-        position:absolute;
-        top:23px;
-        right:0;
-        width:12px;
-        height:12px;
-    }
+    
 }
 
 

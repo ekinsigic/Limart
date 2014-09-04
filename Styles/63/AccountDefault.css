@@ -170,6 +170,74 @@
         background-color:#8e8fa1;
     }
 
+    #welcomeAccount .divAccount .divAcountItem .aHeader{
+        position:absolute;
+        top:0;
+        left:0;
+        padding-top:25px;
+        padding-left:88px;
+        margin:0;
+        width:100%;
+        height:100%;
+        line-height:20px;
+        text-align:left;
+    }
+
+    #welcomeAccount .divAccount .divAcountItem .aHeader h3{
+        color:#d7d7dd;
+    }
+
+    #welcomeAccount .divAccount .divAccountSubMenu{
+        height:0;
+        background-color:#fff;
+        overflow:hidden;
+        transition:height 0.5s;
+        -webkit-transform:translate3d(0px,0px,0px);
+        -moz-transform:translate3d(0px,0px,0px);
+        -ms-transform:translate3d(0px,0px,0px);
+        -o-transform:translate3d(0px,0px,0px);
+        transform:translate3d(0px,0px,0px);
+    }
+
+    #welcomeAccount .divAccount .divAccountSubMenu .aSubHeader{
+        margin:0;
+        padding:20px 0 20px 88px;
+        text-align:left;
+        border-bottom:1px solid #f2f2f2;
+        opacity:0;
+        transition:opacity 0.2s, transform 0.4s;
+        -webkit-transform:translate3d(0px,0px,0px);
+        -moz-transform:translate3d(0px,0px,0px);
+        -ms-transform:translate3d(0px,0px,0px);
+        -o-transform:translate3d(0px,0px,0px);
+        transform:translate3d(0px,0px,0px);
+    }
+
+    #welcomeAccount .divAccount div.activeSubMenu .divAccountSubMenu .aSubHeader{
+        opacity:1;
+        -webkit-transform:translate3d(0px,0px,0px);
+        -moz-transform:translate3d(0px,0px,0px);
+        -ms-transform:translate3d(0px,0px,0px);
+        -o-transform:translate3d(0px,0px,0px);
+        transform:translate3d(0px,0px,0px);
+    }
+
+    #welcomeAccount .divAccount .divAcountItem .divIcon img{
+        transition:opacity 0.5s;
+    }
+
+    #welcomeAccount .divAccount div.activeSubMenu img.white{
+        left:0 !important;
+        opacity:1;
+    }
+
+    #welcomeAccount .divAccount .divAcountItem .aSubHeader img{
+        display:block;
+        position:absolute;
+        left:70px;
+        margin-top:1px;
+    }
+
     #welcomeAccount .divAccount .divIcon{
         height:70px;
         border-radius:0;
@@ -229,72 +297,6 @@
     #divContact .divIcon img.white{
         margin-top:22px;
     }
-
-    
-
-    #welcomeAccount .divAccount .divAcountItem .aHeader{
-        position:absolute;
-        top:0;
-        left:0;
-        padding-top:25px;
-        padding-left:88px;
-        margin:0;
-        width:100%;
-        height:100%;
-        line-height:20px;
-        text-align:left;
-    }
-
-    #welcomeAccount .divAccount .divAcountItem .aHeader h3{
-        color:#d7d7dd;
-    }
-
-    #welcomeAccount .divAccount .divAccountSubMenu{
-        height:0;
-        background-color:#fff;
-        overflow:hidden;
-        transition:height 0.5s;
-        -webkit-transform:translate3d(0px,0px,0px);
-        -moz-transform:translate3d(0px,0px,0px);
-        -ms-transform:translate3d(0px,0px,0px);
-        -o-transform:translate3d(0px,0px,0px);
-        transform:translate3d(0px,0px,0px);
-    }
-
-    #welcomeAccount .divAccount .divAccountSubMenu .aSubHeader{
-        margin:0;
-        padding:20px 0 20px 88px;
-        text-align:left;
-        border-bottom:1px solid #f2f2f2;
-        opacity:0;
-        transition:opacity 0.2s, transform 0.4s;
-        -webkit-transform:translate3d(0px,0px,0px);
-        -moz-transform:translate3d(0px,0px,0px);
-        -ms-transform:translate3d(0px,0px,0px);
-        -o-transform:translate3d(0px,0px,0px);
-        transform:translate3d(0px,0px,0px);
-    }
-
-    #welcomeAccount .divAccount div.activeSubMenu .divAccountSubMenu .aSubHeader{
-        opacity:1;
-        -webkit-transform:translate3d(0px,0px,0px);
-        -moz-transform:translate3d(0px,0px,0px);
-        -ms-transform:translate3d(0px,0px,0px);
-        -o-transform:translate3d(0px,0px,0px);
-        transform:translate3d(0px,0px,0px);
-    }
-
-    #welcomeAccount .divAccount div.activeSubMenu img.white{
-        left:0 !important;
-        opacity:1;
-    }
-
-    #welcomeAccount .divAccount .divAcountItem .aSubHeader img{
-        display:block;
-        position:absolute;
-        left:70px;
-        margin-top:1px;
-    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -329,14 +331,11 @@
     }
 
     #welcomeAccount .divAccount .divIcon{
+        height:200px;
         transition:background-color 0.5s, border 0.5s;
     }
 
-    #welcomeAccount .divAccount .divIcon{
-        height:200px;
-    }
-
-    #welcomeAccount .divAccount .account:hover .divIcon{
+    #welcomeAccount .divAccount .divAcountItem:hover .divIcon{
         background-color:#62637b;
         border:12px solid #6d6e89;
     }
@@ -352,8 +351,6 @@
     #welcomeAccount .divAccount .divAcountItem:hover img.white{
         opacity:1;
     }
-
-
 
 
     #divAccountDetails .divIcon img{
@@ -408,13 +405,13 @@
         width:960px;
     }
 
+    #welcomeAccount .divAccount .divIcon{
+        transition:background-color 0.5s, border 0.5s;
+    }
+
     #welcomeAccount .divAccount .divAcountItem:hover .divIcon{
         background-color:#62637b;
         border:12px solid #6d6e89;
-    }
-
-    #welcomeAccount .divAccount .divIcon{
-        transition:background-color 0.5s, border 0.5s;
     }
 
     #welcomeAccount .divAccount .divIcon img{
@@ -435,13 +432,13 @@
         width:1080px;
     }
 
+    #welcomeAccount .divAccount .divIcon{
+        transition:background-color 0.5s, border 0.5s;
+    }
+
     #welcomeAccount .divAccount .divAcountItem:hover .divIcon{
         background-color:#62637b;
         border:12px solid #6d6e89;
-    }
-
-    #welcomeAccount .divAccount .divIcon{
-        transition:background-color 0.5s, border 0.5s;
     }
 
     #welcomeAccount .divAccount .divIcon img{

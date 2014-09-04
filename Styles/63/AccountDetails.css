@@ -1,174 +1,151 @@
-﻿
-header nav .innerHtml{
-    position:absolute;
-    z-index:100;
-    top:0;
-    right:0;
-    bottom:0;
-    left:100px;
-    background-color:#fff;
-    opacity:0;
-    transition:opacity 0.5s;
+﻿header nav .innerWrapper {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100px;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-header nav .innerHtml.activeMenu{
-    opacity:0.7;
-}
+    header nav .innerWrapper.activeMenu {
+        opacity: 0.7;
+    }
 
 
-#menuActiveOverlay{
-    display:none;
-    position:fixed;
-    z-index:16;
-    top:70px;
-    right:0;
-    bottom:-200px;
-    left:0;
-    background-color:#fff;
-    opacity:0;
-    transition:transform 0.5s, opacity 0.5s;
-    -webkit-transition:-webkit-transform 0.5s, opacity 0.5s;
-    -moz-transition:-moz-transform 0.5s, opacity 0.5s;
-    -ms-transition:-ms-transform 0.5s, opacity 0.5s;
-    -o-transition:-o-transform 0.5s, opacity 0.5s;
-}
-
-#menuActiveOverlay.activeMenu{
-    opacity:0.9;
-    transform:translate3d(70px,40px,0px);
-    -webkit-transform:translate3d(70px,40px,0px);
-    -moz-transform:translate3d(70px,40px,0px);
-    -ms-transform:translate3d(70px,40px,0px);
-    -o-transform:translate3d(70px,40px,0px);
+#menuActiveOverlay {
+    display: none;
 }
 
 
-#accountDetails{
-    margin:0 auto 0 auto;
-    padding-top:50px;
-    padding-bottom:20px;
+#accountDetails {
+    margin: 0 auto 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 
 /* BREADCRUMBS */
 #breadcrumbs {
-    float:right;
-    width:730px;
+    float: right;
+    width: 730px;
 }
 
-#breadcrumbs li{
-    float:left;
-    width:auto;
-    line-height:50px;
-    margin-top:2px;
-    margin-right:8px;
-    letter-spacing:0.6px;
-}
+    #breadcrumbs li {
+        float: left;
+        width: auto;
+        line-height: 50px;
+        margin-top: 2px;
+        margin-right: 8px;
+        letter-spacing: 0.6px;
+    }
 
-#breadcrumbs li span{
-    font-weight:600;
-}
+        #breadcrumbs li span {
+            font-weight: 600;
+        }
 
-#breadcrumbs li a{
-    float:left;
-}
+        #breadcrumbs li a {
+            float: left;
+        }
 /* END - BREADCRUMBS */
 
 
 
 
 
-#accountDetails .divDetail{
-    float:right;
-    padding:54px 40px 75px 40px;
-    width:730px;
-    border:1px solid #e5e5e5;
+#accountDetails .divDetail {
+    float: right;
+    padding: 54px 40px 75px 40px;
+    width: 730px;
+    border: 1px solid #e5e5e5;
 }
 
 
-.aAccountNav{
-    display:none;
+#aMainAccountMenuOpener {
+    display: none;
 }
 
-.aAccountNav .spanDot{
-    display:block;
-    float:left;
-    margin-left:4px;
-    width:6px;
-    height:6px;
-    background-color:#000;
-    border-radius:100%;
-    transition:all 0.5s;
+    #aMainAccountMenuOpener .spanDot {
+        display: block;
+        float: left;
+        margin-left: 4px;
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 100%;
+        transition: all 0.5s;
+    }
+
+        #aMainAccountMenuOpener .spanDot.activeMenu {
+            background-color: #fff;
+        }
+
+
+
+
+#accountDetails .divDetail p {
+    width: 320px;
+    margin-top: 25px;
 }
 
-.aAccountNav .spanDot.activeMenu{
-    background-color:#fff;
-}
-
-
-
-
-#accountDetails .divDetail p{
-    width:320px;
-    margin-top:25px;
-}
-
-#accountDetails .divDetail .line{
-    margin:22px 0 46px 0;
-    border-bottom:1px solid #e5e5e5;
+#accountDetails .divDetail .line {
+    margin: 22px 0 46px 0;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 
 
 /* profile */
 #accountDetails .divDetail .divLeft,
-#accountDetails .divDetail .divRight{
-    float:left;
-    width:318px;
-    height:220px;
+#accountDetails .divDetail .divRight {
+    float: left;
+    width: 318px;
+    height: 220px;
 }
 
-#accountDetails .divDetail .input{
-    margin-bottom:10px;
-    width:100% !important;
-    height:45px !important;
+#accountDetails .divDetail .input {
+    margin-bottom: 10px;
+    width: 100% !important;
+    height: 45px !important;
 }
 
-#accountDetails .divDetail .divRight{
-    float:right;
-    margin-left:10px;
+#accountDetails .divDetail .divRight {
+    float: right;
+    margin-left: 10px;
 }
 
-#accountDetails .divDetail .divRight span{
-    float:left;
-    margin:5px 24px 0 20px;
-    line-height:17px;
-}
+    #accountDetails .divDetail .divRight span {
+        float: left;
+        margin: 5px 24px 0 20px;
+        line-height: 17px;
+    }
 
-#accountDetails .divDetail .divRight select{
-    float:left;
-    margin-left:7px;
-    margin-bottom:10px;
-    padding-left:10px;
-    height:45px !important;
-    font-size:12px;
-    font-weight:500;
-    background-position: 50px center;
-}
+    #accountDetails .divDetail .divRight select {
+        float: left;
+        margin-left: 7px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        height: 45px !important;
+        font-size: 12px;
+        font-weight: 500;
+        background-position: 50px center;
+    }
 
-#accountDetails .divDetail .divRight label{
-    margin-left:18px;
-    font-size:12px;
-}
+    #accountDetails .divDetail .divRight label {
+        margin-left: 18px;
+        font-size: 12px;
+    }
 
-#accountDetails .divDetail .divRight label input{
-    top:5px;
-}
+        #accountDetails .divDetail .divRight label input {
+            top: 5px;
+        }
 
-#accountDetails .divDetail .button{
-    float:right;
-    margin-top:60px;
-    width:130px;
+#accountDetails .divDetail .button {
+    float: right;
+    margin-top: 60px;
+    width: 130px;
 }
 /* end - profile */
 
@@ -177,304 +154,403 @@ header nav .innerHtml.activeMenu{
 
 /* password */
 #accountDetails .divDetail.password .divLeft,
-#accountDetails .divDetail.password .divRight{
-    height:auto;
+#accountDetails .divDetail.password .divRight {
+    height: auto;
 }
 
-#accountDetails .divDetail.password .divRight .input{
-    margin-top:55px;
-}
+    #accountDetails .divDetail.password .divRight .input {
+        margin-top: 55px;
+    }
 /* end - password */
 
 
 
 
 /* address information */
-#accountDetails .divDetail.address .newAddress{
-    display:inline-block;
-    margin-bottom:30px;
-    width:140px;
+#accountDetails .divDetail.address .divTabber{
+    border-bottom:5px solid #66687a;
+    margin:55px 0 30px 0;
+}
+
+#accountDetails .divDetail.address .divTabber .aTab{
+    float:left;
+    padding:14px 28px 12px 28px;
+    margin:0 !important;
+    border:1px solid #f0f0f0;
+    -moz-text-decoration-color: red; /* Code for Firefox */
+    text-decoration-color: red;
+}
+
+#accountDetails .divDetail.address .divTabber .aTab.activeTab{
+    color:#fff;
+    background-color:#66687a;
+    border:1px solid #66687a;
+}
+
+#accountDetails .divDetail.address .aNewAddress {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    width: 132px;
+    border-bottom:1px solid #bfbfbf;
 }
 
 #accountDetails .divDetail.address .divAddressOption {
-    float:left;
-    padding-left:15px;
-    margin-bottom:10px;
-    width:318px;
-    height:200px;
-    background-color:#fff;
-    border:1px solid #f2f2f2;
+    float: left;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    width: 318px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
 }
 
-#accountDetails .divDetail.address .divAddressOption.address2{
-    margin-left:10px;
+    #accountDetails .divDetail.address .divAddressOption.address {
+        margin-left: 10px;
+    }
+
+#accountDetails .divDetail.address .active {
+    background-color: #f2f2f2 !important;
+    border: 1px solid #f8f8f8;
 }
 
-#accountDetails .divDetail.address .active{
-    background-color:#f2f2f2 !important;
-    border:1px solid #f8f8f8;
+#accountDetails .divDetail.address label {
+    margin-top: 10px;
 }
 
-#accountDetails .divDetail.address label{
-    margin-top:10px;
-}
-
-#accountDetails .divDetail.address .divAddressOption h4.name{
-    display:inline-block;
-    margin:10px 0 0 30px;
+#accountDetails .divDetail.address .divAddressOption h4.name {
+    display: inline-block;
+    margin: 10px 0 0 30px;
 }
 
 #accountDetails .divDetail.address .divAddressOption .aNumber {
-    display:inline-block;
+    display: inline-block;
 }
 
 #accountDetails .divDetail.address .divAddressOption .number {
-    display:inline-block;
-    margin:0;
+    display: inline-block;
+    margin: 0;
 }
 
 #accountDetails .divDetail.address .divAddressOption p {
-    margin:15px 0 0 31px;
-    width:200px;
-    line-height:15px;
+    margin: 15px 0 0 31px;
+    width: 200px;
+    line-height: 15px;
 }
 
-#accountDetails .divDetail.address .divAddressOption a.icon{
-    float:right;
-    margin:25px 20px 0 0;
+#accountDetails .divDetail.address .divAddressOption a.icon {
+    float: right;
+    margin: 25px 20px 0 0;
 }
 
-#accountDetails .divDetail.address .divAddressOption a.icon img{
-    float:left;
-    margin:2px 6px 0 0;
-}
+    #accountDetails .divDetail.address .divAddressOption a.icon img {
+        float: left;
+        margin: 2px 6px 0 0;
+    }
 /* end - address information */
 
 
 
 
-/* Screen */
+
 @media all and (max-width: 700px) {
-    #divMainWrapper{
-        overflow-x:hidden;
+    #divMainWrapper {
+        overflow-x: hidden;
     }
 
-    #accountDetails{
-        margin-top:0;
-        padding-top:0;
-        padding-bottom:0;
-        width:100%;
+    #menuActiveOverlay {
+        position: fixed;
+        z-index: 16;
+        top: 70px;
+        right: 0;
+        bottom: -200px;
+        left: 0;
+        background-color: #fff;
+        opacity: 0;
+        transition: transform 0.5s, opacity 0.5s;
+        -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+        -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+        -ms-transition: -ms-transform 0.5s, opacity 0.5s;
+        -o-transition: -o-transform 0.5s, opacity 0.5s;
+        box-shadow: 0px 0 20px 5px rgba(0,0,0,0.20);
+    }
+
+        #menuActiveOverlay.activeMenu {
+            opacity: 0.9;
+            transform: translate3d(70px,38px,0px);
+            -webkit-transform: translate3d(70px,38px,0px);
+            -moz-transform: translate3d(70px,38px,0px);
+            -ms-transform: translate3d(70px,38px,0px);
+            -o-transform: translate3d(70px,38px,0px);
+        }
+
+        #menuActiveOverlay.fullActive {
+            transition: transform 0.5s ease-out;
+            -webkit-transition: -webkit-transform 0.5s ease-out;
+            -moz-transition: -moz-transform 0.5s ease-out;
+            -ms-transition: -ms-transform 0.5s ease-out;
+            -o-transition: -o-transform 0.5s ease-out;
+            transform: translate3d(100%,38px,0px);
+            -webkit-transform: translate3d(100%,38px,0px);
+            -moz-transform: translate3d(100%,38px,0px);
+            -ms-transform: translate3d(100%,38px,0px);
+            -o-transform: translate3d(100%,38px,0px);
+        }
+
+    #aMainAccountMenuOpener {
+        display: inline-block;
+        z-index: 18;
+        position: fixed;
+        top: 70px;
+        width: 70px;
+        height: 40px;
+        padding: 16px 0 16px 18px;
+        background-color: rgba(255,255,255,0);
+    }
+
+
+
+    #accountDetails {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
     }
 
 
 
 
     #breadcrumbs {
-        position:fixed;
-        z-index:0;
-        width:100%;
-        background-color:#fff;
-        transition:opacity 0.5s;
-        background-color:#333333;
+        display: none;
+        position: fixed;
+        z-index: 0;
+        width: 100%;
+        background-color: #fff;
+        transition: opacity 0.5s;
+        background-color: #333333;
     }
 
-    #breadcrumbs li{
-        display:none;
-        float:none;
-        width:100%;
-        line-height:36px;
-    }
+        #breadcrumbs li {
+            display: none;
+            float: none;
+            width: 100%;
+            line-height: 36px;
+        }
 
-    #breadcrumbs li.mobileName{
-        display:block;
-        text-align:right;
-    }
+            #breadcrumbs li.mobileName {
+                display: block;
+                text-align: right;
+            }
 
-    #breadcrumbs li.mobileName span{
-        display:block;
-        margin-right:20px;
-        color:#cccccc;
-        font-weight:100;
-        font-size:11px;
-    }
-
-    
+                #breadcrumbs li.mobileName span {
+                    display: block;
+                    margin-right: 20px;
+                    color: #cccccc;
+                    font-weight: 100;
+                    font-size: 11px;
+                }
 
 
 
 
 
-    .aAccountNav{
-        display:inline-block;
-        z-index:18;
-        position:fixed;
-        top:70px;
-        width:70px;
-        height:40px;
-        padding:16px 0 16px 18px;
-    }
 
-
-
-    #accountDetails .divDetail{
-        z-index:5;
-        padding:65px 5% 75px 5% !important;
-        width:100%;
-        background-color:#fff;
-        border:0 !important;
-        transition:transform 0.5s;
-        -webkit-transition:-webkit-transform 0.5s;
-        -moz-transition:-moz-transform 0.5s;
-        -ms-transition:-ms-transform 0.5s;
-        -o-transition:-o-transform 0.5s;
+    #accountDetails .divDetail {
+        z-index: 5;
+        padding: 65px 5% 75px 5% !important;
+        width: 100%;
+        background-color: #fff;
+        border: 0 !important;
+        transition: transform 0.5s;
+        -webkit-transition: -webkit-transform 0.5s;
+        -moz-transition: -moz-transform 0.5s;
+        -ms-transition: -ms-transform 0.5s;
+        -o-transition: -o-transform 0.5s;
     }
 
 
-    #accountDetails .divDetail.activeMenu{
-        transform:translate3d(70px,40px,0px);
-        -webkit-transform:translate3d(70px,40px,0px);
-        -moz-transform:translate3d(70px,40px,0px);
-        -ms-transform:translate3d(70px,40px,0px);
-        -o-transform:translate3d(70px,40px,0px);
-    }
+        #accountDetails .divDetail.activeMenu {
+            transform: translate3d(70px,38px,0px);
+            -webkit-transform: translate3d(70px,38px,0px);
+            -moz-transform: translate3d(70px,38px,0px);
+            -ms-transform: translate3d(70px,38px,0px);
+            -o-transform: translate3d(70px,38px,0px);
+        }
 
-    #accountDetails .divDetail p{
-        width:100%;
-    }
-
-    #accountDetails .divDetail .divLeft,
-    #accountDetails .divDetail .divRight{
-        width:100%;
-        height:auto;
-    }
-
-    #accountDetails .divDetail .divRight{
-    }
-
-    #accountDetails .divDetail .divRight span{
-        float:left;
-        margin:5px 0 0 0;
-        padding-left:15px;
-        width:25%;
-        line-height:17px;
-    }
-
-    #accountDetails .divDetail .divRight select{
-        margin-left:1%;
-        padding-left:5px;
-        width:24% !important;
-        background-position: right 15% center;
-    }
+        #accountDetails .divDetail.fullActive {
+            transition: transform 0.5s ease-out;
+            -webkit-transition: -webkit-transform 0.5s ease-out;
+            -moz-transition: -moz-transform 0.5s ease-out;
+            -ms-transition: -ms-transform 0.5s ease-out;
+            -o-transition: -o-transform 0.5s ease-out;
+            transform: translate3d(100%,38px,0px);
+            -webkit-transform: translate3d(100%,38px,0px);
+            -moz-transform: translate3d(100%,38px,0px);
+            -ms-transform: translate3d(100%,38px,0px);
+            -o-transform: translate3d(100%,38px,0px);
+        }
 
 
 
-    #accountDetails .divDetail .button{
-        float:none;
-        padding:12px 0 12px 0;
-        margin:10px auto 0 auto;
-        width:100%;
-    }
+        #accountDetails .divDetail p {
+            width: 100%;
+        }
+
+        #accountDetails .divDetail .divLeft,
+        #accountDetails .divDetail .divRight {
+            width: 100%;
+            height: auto;
+        }
+
+        #accountDetails .divDetail .divRight {
+        }
+
+            #accountDetails .divDetail .divRight span {
+                float: left;
+                margin: 5px 0 0 0;
+                padding-left: 15px;
+                width: 25%;
+                line-height: 17px;
+            }
+
+            #accountDetails .divDetail .divRight select {
+                margin-left: 1%;
+                padding-left: 5px;
+                width: 24% !important;
+                background-position: right 15% center;
+            }
 
 
-    /* password */
-    #accountDetails .divDetail.password .divRight .input{
-        margin-top:0;
-    }
-    /* end - password */
+
+        #accountDetails .divDetail .button {
+            float: none;
+            padding: 12px 0 12px 0;
+            margin: 10px auto 0 auto;
+            width: 100%;
+        }
 
 
-    /* address */
-    #accountDetails .divDetail.address .divAddressOption {
-        width:100% !important;
-    }
+        /* password */
+        #accountDetails .divDetail.password .divRight .input {
+            margin-top: 0;
+        }
+        /* end - password */
 
-    #accountDetails .divDetail.address .divAddressOption.address2{
-        margin-left:0;
-    }
-    /* end - address */
+
+        /* address */
+         #accountDetails .divDetail.address .divTabber .aTab{
+             width:50%;
+             text-align:center;
+         }
+
+            #accountDetails .divDetail.address .divTabber .aTab span{
+                display:none;
+            }
+
+        #accountDetails .divDetail.address .divAddressOption {
+            width: 100% !important;
+        }
+
+            #accountDetails .divDetail.address .divAddressOption.address {
+                margin-left: 0;
+            }
+        /* end - address */
 
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    #accountDetails{
-        margin-top:10px;
-        width:670px;
+    #accountDetails {
+        margin-top: 10px;
+        width: 670px;
+        overflow: hidden;
     }
 
     #breadcrumbs {
-        padding-left:90px;
-        width:100%;
-        background-color:#333333;
+        position: absolute;
+        z-index: 0;
+        padding-left: 90px;
+        width: 670px;
+        background-color: #fff;
+        transition: opacity 0.5s;
+        background-color: #333333;
     }
 
-    #breadcrumbs li{
-        line-height:37px;
+        #breadcrumbs li {
+            line-height: 37px;
+        }
+
+            #breadcrumbs li span {
+                color: #fff;
+            }
+
+    #accountDetails .divDetail {
+        width: 600px;
+        background-color: #fff;
+        padding: 54px 20px 75px 20px;
+        margin-top: 39px;
     }
 
-    #breadcrumbs li span{
-        color:#fff;
-    }
+        #accountDetails .divDetail .divLeft,
+        #accountDetails .divDetail .divRight {
+            width: 100%;
+        }
 
-    #accountDetails .divDetail{
-        width:600px;
-        padding:54px 20px 75px 20px;
-    }
+        #accountDetails .divDetail .divRight {
+            height: auto;
+        }
 
-    #accountDetails .divDetail .divLeft,
-    #accountDetails .divDetail .divRight{
-        width:100%;
-    }
+            #accountDetails .divDetail .divRight span {
+                float: left;
+                margin: 5px 0 0 0;
+                padding-left: 20px;
+                width: 25%;
+                line-height: 17px;
+            }
 
-    #accountDetails .divDetail .divRight{
-        height:auto;
-    }
+            #accountDetails .divDetail .divRight select {
+                margin-left: 1%;
+                padding-left: 20px;
+                width: 24% !important;
+                background-position: right 15% center;
+            }
 
-    #accountDetails .divDetail .divRight span{
-        float:left;
-        margin:5px 0 0 0;
-        padding-left:20px;
-        width:25%;
-        line-height:17px;
-    }
+        #accountDetails .divDetail .button {
+            float: none;
+            padding: 12px 0 12px 0;
+            margin: 30px auto 0 auto;
+            width: 100%;
+        }
 
-    #accountDetails .divDetail .divRight select{
-        margin-left:1%;
-        padding-left:20px;
-        width:24% !important;
-        background-position: right 15% center;
-    }
-
-    #accountDetails .divDetail .button{
-        float:none;
-        padding:12px 0 12px 0;
-        margin:30px auto 0 auto;
-        width:100%;
-    }
+        /* password */
+        #accountDetails .divDetail.password .divRight .input {
+            margin-top: 0;
+        }
+        /* end - password */
 
 
-    /* address */
-    #accountDetails .divDetail.address .divAddressOption{
-        width:274px;
-    }
+        /* address */
+        #accountDetails .divDetail.address .divAddressOption {
+            width: 274px;
+        }
 
-    #accountDetails .divDetail.address .divAddressOption h4.name{
-        margin:10px 0 0 6px;
-    }
+            #accountDetails .divDetail.address .divAddressOption h4.name {
+                margin: 10px 0 0 6px;
+            }
 
-    #accountDetails .divDetail.address .divAddressOption p {
-        margin:15px 0 0 7px;
-    }
+            #accountDetails .divDetail.address .divAddressOption p {
+                margin: 15px 0 0 7px;
+            }
     /* end - address */
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    #accountDetails{
-        width:960px;
+    #accountDetails {
+        width: 960px;
     }
 }
 
 @media all and (min-width: 1435px) {
     #accountDetails {
-        width:1080px;
+        width: 1080px;
     }
 }

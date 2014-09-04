@@ -441,8 +441,7 @@ a.stop63AStyleE {
 
 .stop63AStyleH:link,
 .stop63AStyleH:visited{
-    text-decoration:underline;
-    color:#686b83;
+    color:#000;
     font-size:18px;
     font-weight:400;
     letter-spacing:0.040em;
@@ -468,6 +467,23 @@ a.stop63AStyleE {
 .stop63AStyleI:hover,
 .stop63AStyleI:active {
     color: #737373;
+}
+
+
+
+
+.stop63AStyleJ:link,
+.stop63AStyleJ:visited {
+    display:inline-block;
+    color: #404040;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.stop63AStyleJ:hover,
+.stop63AStyleJ:active {
+ 
 }
 
 
@@ -572,6 +588,10 @@ a.stop63AStyleE {
 
     .stop63SpanStyleF{
         font-size:13px;
+    }
+
+    .stop63AStyleG {
+        font-size:14px !important;
     }
    
 }

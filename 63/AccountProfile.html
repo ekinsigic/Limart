@@ -360,7 +360,7 @@
         <section id="menuActiveOverlay"></section>
 
 
-        <a href="javascript:openOrCloseAccountMenu();" class="aAccountNav">
+        <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
             <span class="spanDot"></span>
             <span class="spanDot"></span>
             <span class="spanDot"></span>
@@ -372,6 +372,7 @@
         <main>
 
             <section id="accountDetails">
+
                 <div id="breadcrumbs">
                     <ul class="stop63FaceKK">
                         <li class="mobileName"><span>JOHN DOE</span></li>
@@ -385,13 +386,14 @@
 
 
                 <aside>
-                    <ul class="level3">
+                    <ul class="level1">
                         <li>
-                            <a href="#" class="aMenuItem activeBg">
+                            <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
                                 <span class="stop63FaceHH">HESAP BİLGİLERİ</span>
-                                <img data-sixtythree="icon-my-account-white" class="small one" >
+                                <img data-sixtythree="icon-my-account" class="small one">
+                                <img data-sixtythree="icon-my-account" class="white small one">
                             </a>
-                            <ul class="level4">
+                            <ul class="level2">
                                 <li><a href="AccountProfile.html" class="stop63AStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ÜYELİK BİLGİLERİM</a></li>
                                 <li><a href="AccountAddress.html" class="stop63AStyleG aSubMenuItem">ADRESLERİM</a></li>
                                 <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">ŞİFRE İŞLEMLERİ</a></li>
@@ -399,22 +401,37 @@
                         </li>
 
                         <li>
-                            <a href="#" class="aMenuItem">
+                            <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
                                 <span class="stop63FaceHH">SİPARİŞ BİLGİLERİ</span>
                                 <img data-sixtythree="icon-order-account" class="small two" />
+                                <img data-sixtythree="icon-order-account" class="white small two">
                             </a>
+                            <ul class="level2">
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">SİPARİŞ İŞLEMLERİ</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="#" class="aMenuItem">
+                            <a id="divServices" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
                                 <span class="stop63FaceHH">SERVİSLER</span>
                                 <img data-sixtythree="icon-services-account" class="small three" />
+                                <img data-sixtythree="icon-services-account" class="white small three" />
                             </a>
+                            <ul class="level2">
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">MESAFELİ SÖZLEŞMELER</a></li>
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">GÖNDERİM VE İADE</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="#" class="aMenuItem">
+                            <a id="divContact" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
                                 <span class="stop63FaceHH">İLETİŞİM</span>
                                 <img data-sixtythree="icon-contact-account" class="small four" />
+                                <img data-sixtythree="icon-contact-account" class="white small four" />
                             </a>
+                            <ul class="level2">
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">ADRES BİLGİLERİ</a></li>
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">İLETİŞİM BİLGİLERİ</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </aside>
@@ -467,8 +484,6 @@
 
                 <div class="separator"></div>
             </section>
-
-
 
         </main>
 

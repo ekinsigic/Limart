@@ -292,7 +292,7 @@
 
 
     function carryMenu() {
-        if ((wW) < 1024 ) {
+        if ($('header .divContent').width() < 671 ) {//this if query is not about header, it is rather about the media query state of website
             $('nav #menuOpener').appendTo('#divOpenerFrame');
         }
         else {

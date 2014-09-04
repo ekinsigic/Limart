@@ -211,7 +211,7 @@
                             otherItemsToSlide.css('display','none');
                         };
                     }, openerTimer);
-                }, currentOpenerTimer);
+                }, openerTimer);
             }
         }
         //

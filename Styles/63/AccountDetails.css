@@ -253,6 +253,42 @@
 
 
 
+/* order summary */
+#accountDetails .divDetail.orderHistory .divOrderItemHeaders {
+    padding-bottom: 25px;
+    margin: 0 0 25px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+    #accountDetails .divDetail.orderHistory .divOrderItemHeaders .header1,
+    #accountDetails .divDetail.orderHistory .divOrderItemHeaders .header2,
+    #accountDetails .divDetail.orderHistory .divOrderItemHeaders .header3 {
+        float: left;
+        margin-left:30px;
+        text-align: left;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderItemHeaders .header1 {
+        width:172px;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderItemHeaders .header2 {
+        width:174px;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderItemHeaders .header3 {
+        width:100px;
+    }
+
+       
+
+
+
+
+
+
+
+
 @media all and (max-width: 700px) {
     #divMainWrapper {
         overflow-x: hidden;

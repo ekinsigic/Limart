@@ -36,7 +36,7 @@
 
 
 
-    <header data-enhance="false">
+    <header>
         <div class="divContent">
             <a href="../Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
 
@@ -357,78 +357,124 @@
         </div>
     </header>
 
+    <section id="menuActiveOverlay"></section>
+
+
+    <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
+        <span class="spanDot"></span>
+        <span class="spanDot"></span>
+        <span class="spanDot"></span>
+
+        <div class="separator"></div>
+    </a>
+
 
     <main>
 
         <section id="accountDetails">
 
-            <aside>
-                <a href="#" class="header"><h3></h3></a>
+            <div id="breadcrumbs">
+                <ul class="stop63FaceKK">
+                    <li class="mobileName"><span>JOHN DOE</span></li>
+                    <li>/</li>
+                    <li><a href="#" class="stop63AStyleI">HESABIM</a></li>
+                    <li>/</li>
+                    <li>SİPARİŞ İŞLEMLERİM</li>
+                </ul>
+                <div class="separator"></div>
+            </div>
 
-                <ul class="level3">
+
+            <aside>
+                <ul class="level1">
                     <li>
-                        <a href="#" class="aHeader">
-                            <h3 class="stopFaceHH">HESAP BİLGİLERİ</h3>
-                            <img src="../Images/63/icon-my-account.png" class="one" />
+                        <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
+                            <span class="stop63FaceHH">HESAP BİLGİLERİ</span>
+                            <img data-sixtythree="icon-my-account" class="small one">
+                            <img data-sixtythree="icon-my-account" class="white small one">
                         </a>
-                        <ul class="level4">
-                            <li><a href="AccountProfile.html" class="stopaStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ÜYELİK BİLGİLERİM</a></li>
-                            <li><a href="AccountAddress.html" class="stopaStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ADRESLERİM</a></li>
-                            <li><a href="AccountPassword.html" class="stopaStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ŞİFRE İŞLEMLERİ</a></li>
+                        <ul class="level2">
+                            <li><a href="AccountProfile.html" class="stop63AStyleG aSubMenuItem">ÜYELİK BİLGİLERİM</a></li>
+                            <li><a href="AccountAddress.html" class="stop63AStyleG aSubMenuItem">ADRESLERİM</a></li>
+                            <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">ŞİFRE İŞLEMLERİ</a></li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#" class="aHeader">
-                            <h3 class="stopFaceHH">SİPARİŞ BİLGİLERİ</h3>
-                            <img src="../Images/63/icon-order-account.png" class="two" />
+                        <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
+                            <span class="stop63FaceHH">SİPARİŞ BİLGİLERİ</span>
+                            <img data-sixtythree="icon-order-account" class="small two" />
+                            <img data-sixtythree="icon-order-account" class="white small two">
                         </a>
+                        <ul class="level2">
+                            <li><a href="AccountOrderHistory.html" class="stop63AStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />SİPARİŞ İŞLEMLERİ</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#" class="aHeader">
-                            <h3 class="stopFaceHH">SERVİSLER</h3>
-                            <img src="../Images/63/icon-services-account.png" class="three" />
+                        <a id="divServices" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
+                            <span class="stop63FaceHH">SERVİSLER</span>
+                            <img data-sixtythree="icon-services-account" class="small three" />
+                            <img data-sixtythree="icon-services-account" class="white small three" />
                         </a>
+                        <ul class="level2">
+                            <li><a href="#" class="stop63AStyleG aSubMenuItem">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+                            <li><a href="#" class="stop63AStyleG aSubMenuItem">MESAFELİ SÖZLEŞMELER</a></li>
+                            <li><a href="#" class="stop63AStyleG aSubMenuItem">GÖNDERİM VE İADE</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#" class="aHeader">
-                            <h3 class="stopFaceHH">İLETİŞİM</h3>
-                            <img src="../Images/63/icon-contact-account.png" class="four" />
+                        <a id="divContact" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
+                            <span class="stop63FaceHH">İLETİŞİM</span>
+                            <img data-sixtythree="icon-contact-account" class="small four" />
+                            <img data-sixtythree="icon-contact-account" class="white small four" />
                         </a>
+                        <ul class="level2">
+                            <li><a href="#" class="stop63AStyleG aSubMenuItem">ADRES BİLGİLERİ</a></li>
+                            <li><a href="#" class="stop63AStyleG aSubMenuItem">İLETİŞİM BİLGİLERİ</a></li>
+                        </ul>
                     </li>
                 </ul>
             </aside>
 
-
+            
             <div class="divDetail orderHistory">
 
-                <a href="#" class="aNav">
-                    <img src="../Images/63/dot.png" class="dot" />
-                    <img src="../Images/63/dot.png" class="dot" />
-                    <img src="../Images/63/dot.png" class="dot" />
-
-                    <div class="separator"></div>
-                </a>
-
-
-                <h4 class="stopFaceII">Sipariş Geçmişi</h4>
-                <p class="stopFaceJJ">
+                <h1 class="stop63FaceII">Sipariş Geçmişi</h1>
+                <p class="stop63FaceJJ">
                     The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
                 </p>
 
                 <div class="separator line"></div>
 
 
-                <input type="button" class="stopButtonA button" value="KAYDET" />
+                <!-- ORDER HEADERS -->
+                <div class="divOrderItemHeaders">
+                    <div class="stop63FaceL header1">BİLGİ</div>
+                    <div class="stop63FaceL header2">TUTAR</div>
+                    <div class="stop63FaceL header3">DURUM</div>
+                    <div class="separator"></div>
+                </div>
+                <!-- END - ORDER HEADERS -->
 
+
+                <div class="divRow">
+                    <div class="divDescription"></div>
+                    <div class="divPrice"></div>
+
+                </div>
+
+
+
+
+
+
+
+                <input type="button" class="stop63ButtonA button" value="KAYDET" />
             </div>
 
             <div class="separator"></div>
         </section>
-
     </main>
-
-
 
 
 
@@ -490,7 +536,6 @@
 
 
 
-
     <!-- SCRIPTS -->
     <script type="text/javascript" src="../Scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../Scripts/masonry.pkgd.min.js"></script>
@@ -498,6 +543,7 @@
     <script type="text/javascript" src="../ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="../Scripts/Common.js"></script>
     <script type="text/javascript" src="../Scripts/Navi.js"></script>
+    <script type="text/javascript" src="../Scripts/63/AccountDetails.js"></script>
     <!-- END - SCRIPTS -->
 
 

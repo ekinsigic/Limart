@@ -85,7 +85,7 @@ select {
     display: block;
     width: 100px;
     height: 40px;
-    background: url(../images/arrow-down-form-select.png);
+    background: url(../../images/arrow-down-form-select.png);
     background-repeat: no-repeat;
     background-position: 90% center;
     padding: 0 15px 0 15px;
@@ -103,7 +103,7 @@ select {
 }
 
     select:after {
-        content: url(../images/arrow-down-form-select.png);
+        content: url(../../images/arrow-down-form-select.png);
         display: block;
         position: absolute;
         right: 3px;

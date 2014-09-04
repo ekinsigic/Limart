@@ -280,7 +280,11 @@
         width:100px;
     }
 
-       
+#accountDetails .divDetail.orderHistory .divRow .arrowDown  {
+    position:absolute;
+    top:0;
+    right:30px;
+}
 
 
 

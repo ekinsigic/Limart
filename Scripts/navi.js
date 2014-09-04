@@ -127,6 +127,9 @@ function triggerOpener(currentTriggerType) {
 
                 // Disabling Scroll
 
+                if ($('#divOpenerFrame').height() == wH) {
+                    console.log('ok');
+                };
                 if (isMobile) {
                     $(window).bind('touchmove',function(e){
                         e.preventDefault();

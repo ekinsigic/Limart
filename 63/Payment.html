@@ -298,7 +298,7 @@
                     <span class="stop63SpanStyleA addressName">EV ADRESİ</span>
                     <h3 class="stop63FaceT">BAMBİ TERLİK</h3>
                     <a href="tel:0212 637 00 00" class="aNumber">
-                        <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
+                        <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
                     </a>
                     <p class="stop63FaceU">
                         Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
@@ -336,8 +336,12 @@
 
                             <!-- selection between adding new address and using same address -->
                             <div class="addressNewOrSaved">
-                                <label for="savedAddressRadio" class="stop63LabelB"><input name="addressNewOrSaved" type="radio" id="savedAddressRadio" checked />Kayıtlı Adres</label>
-                                <label for="newAddressRadio" class="stop63LabelB"><input name="addressNewOrSaved" type="radio" id="newAddressRadio" />Yeni Adres</label>
+                                <label for="savedAddressRadio" class="stop63LabelB">
+                                    <input id="savedAddressRadio" name="addressNewOrSaved" type="radio" checked />Kayıtlı Adres
+                                </label>
+                                <label for="newAddressRadio" class="stop63LabelB">
+                                    <input id="newAddressRadio" name="addressNewOrSaved" type="radio" />Yeni Adres
+                                </label>
                             </div>
                             <!-- END - selection between adding new address and using same address -->
                         </div>
@@ -348,12 +352,75 @@
 
                         <!-- Delivery address section -->
                         <div class="deliveryAddressWrapper">
+
+                            <!-- Delivery Address options section -->
+                            <div class="divAddressOptionsWrapper  ">
+                                <p class="stop63FaceX pDescription parentOriented">
+                                    Siparişinizin teslim edilmesini istediğiniz adresi seçiniz.
+                                </p>
+                                <div class="divAddressOption active">
+                                    <label for="sampleA" class="stop63LabelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
+                                    <div class="separator"></div>
+                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
+                                    <a href="tel:0212 637 00 00" class="aNumber">
+                                        <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
+                                    </a>
+                                    <p class="stop63FaceZ">
+                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                    </p>
+                                        <a href="#" onclick="deleteAddressInfo(this, 1)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 1)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                </div>
+
+                                <div class="divAddressOption">
+                                    <label for="sampleC" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
+                                    <div class="separator"></div>
+                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
+                                    <a href="tel:0212 637 00 00" class="aNumber">
+                                        <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
+                                    </a>
+                                    <p class="stop63FaceZ">
+                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                    </p>
+                                        <a href="#" onclick="deleteAddressInfo(this, 2)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 2)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                </div>
+                                <div class="divAddressOption">
+                                    <label for="sampleB" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleB" />İş Adresi</label>
+                                    <div class="separator"></div>
+                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
+                                    <a href="tel:0212 637 00 00" class="aNumber">
+                                        <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
+                                    </a>
+                                    <p class="stop63FaceZ">
+                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                    </p>
+                                        <a href="#" onclick="deleteAddressInfo(this, 3)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 3)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                </div>
+                                <div class="divAddressOption">
+                                    <label for="sampleD" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleD" />İş Adresi</label>
+                                    <div class="separator"></div>
+                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
+                                    <a href="tel:0212 637 00 00" class="aNumber">
+                                        <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
+                                    </a>
+                                    <p class="stop63FaceZ">
+                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                    </p>
+                                        <a href="#" onclick="deleteAddressInfo(this, 4)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 4)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                </div>
+                            </div>
+                            <div class="separator"></div>
+                            <!-- END - Delivery Address options section -->
+
+
                             <!-- Add a new delivery address section -->
-                            <div class="divNewAddressContent closedAsDefault">
+                            <div class="divNewAddressContent  ">
                                 <p class="stop63FaceX pDescription">
                                     Yeni teslimat adresi eklemek için aşağıdaki formu doldurun.
                                 </p>
-                                <div class="separator"></div>
                                 <!-- Add new delivery address form starts here -->
                                 <input type="text" class="stop63InputTextD v1" placeholder="AD,SOYAD" />
                                 <input type="text" class="stop63InputTextD v2" placeholder="TCKN" />
@@ -370,7 +437,6 @@
                                 <input type="text" class="stop63InputTextD v2" placeholder="GSM" />
                                 <input type="text" class="stop63InputTextD v1" placeholder="VERGİ DAİRESİ" />
                                 <input type="text" class="stop63InputTextD v2" placeholder="VERGİ NUMARASI" />
-                                <div class="separator"></div>
                                 <div class="separator" style="height:40px;"></div>
                                 <a href="#" data-inneropeneranchor="userOpenerInnerDivLogin" class="aStyleE contShopping">
                                     <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
@@ -380,68 +446,6 @@
                                 <!-- Add new delivery address form ends here -->
                             </div>
                             <!-- END - Add a new delivery address section -->
-
-                            <!-- Delivery Address options section -->
-                            <div class="divAddressOptionsWrapper closedAsDefault">
-                                <p class="stop63FaceX pDescription parentOriented">
-                                    Siparişinizin teslim edilmesini istediğiniz adresi seçiniz.
-                                </p>
-                                <div class="divAddressOption active">
-                                    <label for="sampleA" class="stop63LabelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
-                                    <div class="separator"></div>
-                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-                                    <p class="stop63FaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-                                    <a href="#" class="stop63AStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="stop63AStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption">
-                                    <label for="sampleC" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
-                                    <div class="separator"></div>
-                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-                                    <p class="stop63FaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-                                    <a href="#" class="stop63AStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="stop63AStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-                                <div class="divAddressOption">
-                                    <label for="sampleC" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
-                                    <div class="separator"></div>
-                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-                                    <p class="stop63FaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-                                    <a href="#" class="stop63AStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="stop63AStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-                                <div class="divAddressOption">
-                                    <label for="sampleC" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleC" />İş Adresi</label>
-                                    <div class="separator"></div>
-                                    <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-                                    <p class="stop63FaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-                                    <a href="#" class="stop63AStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="stop63AStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-                            </div>
-                            <div class="separator"></div>
-                            <!-- END - Delivery Address options section -->
                         </div>
                         <!-- END - Delivery address section -->
 
@@ -460,56 +464,19 @@
 
                         <!-- Billing Address Section -->
                         <div class="billingAddressWrapper">
-                            <div class="divBillingAddress closedAsDefault">
-                                <h3 class="stop63FaceW">Fatura Adresi</h3>
-                                <!-- Selection between adding new billing address or using saved invoice address  -->
-                                <div class="addressNewOrSavedInvoice">
-                                    <label for="savedAddressInvoiceRadio" class="stop63LabelB"><input name="addressNewOrSavedInvoice" type="radio" id="savedAddressInvoiceRadio" checked />Kayıtlı Adres</label>
-                                    <label for="newAddressInvoiceRadio" class="stop63LabelB"><input name="addressNewOrSavedInvoice" type="radio" id="newAddressInvoiceRadio" />Yeni Adres</label>
-                                </div>
-                                <!-- END -selection between adding new billing address or using saved invoice address  -->
 
-                                <!-- Add a new billing address section -->
-                                <div class="divInvoiceAddressContent divAddNewInvoiceAddress closedAsDefault">
-                                    <p class="stop63FaceX pDescription">
-                                        Yeni fatura adresi eklemek için aşağıdaki formu doldurun.
-                                    </p>
-                                    <div class="separator"></div>
-                                    <input type="text" class="stop63InputTextD" placeholder="AD,SOYAD" />
-                                    <input type="text" class="stop63InputTextD paymentInput" placeholder="TCKN" />
-                                    <select class="stop63SelectB">
-                                        <option>
-                                            İL
-                                        </option>
-                                        <option>
-                                            İL
-                                        </option>
-                                    </select>
-                                    <select class="stop63SelectB paymentInput">
-                                        <option>
-                                            İLÇE
-                                        </option>
-                                        <option>
-                                            İL
-                                        </option>
-                                    </select>
-                                    <textarea class="stop63TextareaStyleA" placeholder="ADRES"></textarea>
-                                    <input type="text" class="stop63InputTextD" placeholder="TELEFON" />
-                                    <input type="text" class="stop63InputTextD paymentInput" placeholder="GSM" />
-                                    <input type="text" class="stop63InputTextD" placeholder="VERGİ DAİRESİ" />
-                                    <input type="text" class="stop63InputTextD paymentInput" placeholder="VERGİ NUMARASI" />
-                                    <div class="separator"></div>
-                                    <div class="separator" style="height:40px;"></div>
-                                    <a href="javascript:void(0);" data-inneropeneranchor="userOpenerInnerDivLogin" class="aStyleE contShopping">
-                                        <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
-                                    </a>
-                                    <a href="#" class="stop63AStyleB saveAddingNewInvoiceAddress">YENİ ADRESİ KAYDET</a>
-                                    <div class="separator"></div>
-                                </div>
-                                <!-- END - Add a new billing address section -->
+
+                            <h3 class="stop63FaceW">Fatura Adresi</h3>
+                            <!-- Biling address and invoice address checkbox  -->
+                            <div class="addressNewOrSavedInvoice">
+                                <label for="savedAddressInvoiceRadio" class="stop63LabelB"><input id="savedAddressInvoiceRadio" name="addressNewOrSavedInvoice" type="radio" checked />Kayıtlı Adres</label>
+                                <label for="newAddressInvoiceRadio" class="stop63LabelB"><input id="newAddressInvoiceRadio" name="addressNewOrSavedInvoice" type="radio" />Yeni Adres</label>
+                            </div>
+                            <!-- END -->
+                            <div class="divBillingAddress  ">
 
                                 <!-- Billing address options section -->
-                                <div class="divBillingAddressOptionsWrapper closedAsDefault">
+                                <div class="divBillingAddressOptionsWrapper  ">
                                     <p class="stop63FaceX pDescription parentOriented">
                                         Faturanızın teslim edilmesini istediğiniz adresi seçiniz.
                                     </p>
@@ -518,13 +485,13 @@
                                         <div class="separator"></div>
                                         <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
                                         <a href="tel:0212 637 00 00" class="aNumber">
-                                            <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
+                                            <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
                                         </a>
                                         <p class="stop63FaceZ">
                                             Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                         </p>
-                                        <a href="#" class="stop63AStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                        <a href="#" class="stop63AStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                        <a href="#" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                     </div>
 
                                     <div class="divAddressOption">
@@ -532,63 +499,90 @@
                                         <div class="separator"></div>
                                         <h4 class="stop63FaceY name">BAMBİ TERLİK</h4>
                                         <a href="tel:0212 637 00 00" class="aNumber">
-                                            <span class="stop63SpanStyleB number">- 0212 637 00 00</span><br />
+                                            <span class="stop63SpanStyleB number">0212 637 00 00</span><br />
                                         </a>
                                         <p class="stop63FaceZ">
                                             Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                         </p>
-                                        <a href="#" class="stop63AStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                        <a href="#" class="stop63AStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                        <a href="#" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                     </div>
                                 </div>
                                 <div class="separator"></div>
-                                <!-- END - Billing address options section -->
+                                <!-- END -->
+
+                                <!-- Add new billing address section -->
+                                <div class="divInvoiceAddressContent divAddNewInvoiceAddress  ">
+                                    <p class="stop63FaceX pDescription">
+                                        Yeni fatura adresi eklemek için aşağıdaki formu doldurun.
+                                    </p>
+                                    <input type="text" class="stop63InputTextD v1" placeholder="AD,SOYAD" />
+                                    <input type="text" class="stop63InputTextD v2" placeholder="TCKN" />
+                                    <select class="stop63SelectB v1">
+                                        <option>İL</option>
+                                        <option>İL</option>
+                                    </select>
+                                    <select class="stop63SelectB v2">
+                                        <option>İLÇE</option>
+                                        <option>İLÇE</option>
+                                    </select>
+                                    <textarea class="stop63TextareaStyleA" placeholder="ADRES"></textarea>
+                                    <input type="text" class="stop63InputTextD v1" placeholder="TELEFON" />
+                                    <input type="text" class="stop63InputTextD v2" placeholder="GSM" />
+                                    <input type="text" class="stop63InputTextD v1" placeholder="VERGİ DAİRESİ" />
+                                    <input type="text" class="stop63InputTextD v2" placeholder="VERGİ NUMARASI" />
+                                    <div class="separator" style="height:40px;"></div>
+                                    <a href="javascript:void(0);" data-inneropeneranchor="userOpenerInnerDivLogin" class="aStyleE contShopping">
+                                        <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
+                                    </a>
+                                    <a href="#" class="stop63AStyleB saveAddingNewInvoiceAddress">YENİ ADRESİ KAYDET</a>
+                                    <div class="separator"></div>
+                                </div>
+                                <!-- END - Add new billing address section -->
                             </div>
                         </div>
                         <!-- Billing Address Section -->
 
-                        <!-- Asking user of her phone number -->
+                        <!-- Kullanıcıya telefon numarasını soruyoruz -->
                         <div class="divPhoneNumber">
                             <p class="demandPhoneNumberDescription">SİPARİŞİNİZİN SİZE HIZLI BİR ŞEKİLDE ULAŞABİLMESİ İÇİN MOBİL TELEFON NUMARANIZ:</p>
-                            <input class="stop63InputTextC phoneNumberInput" type="text" placeholder="TELEFON NUMARASI" />
+                            <input class="stop63InputTextC" type="text" placeholder="TELEFON NUMARASI" />
                         </div>
-                        <div class="separator"></div>
-                        <!-- END - Asking user of her phone number -->
+                        <!-- END  -->
 
-                        <!-- Check if user is sending this item to someone else -->
-                        <div class="sendToSomeoneElse">
-                            <label for="someoneElse" class="stop63LabelA"><input class="stopCheckboxTypeA" type="checkbox" id="someoneElse" />Siparişimi başka birinin teslim almasını istiyorum.</label>
-                            <div class="sendToSomeoneElseDetails closedAsDefault">
+                        <!-- Kullanıcı bu ürünü başkasına mı yollayacak -->
+                        <div class="divAnotherRecipient">
+                            <label for="anotherRecipient" class="stop63LabelA"><input id="anotherRecipient" type="checkbox" class="stopCheckboxTypeA" />Siparişimi başka birinin teslim almasını istiyorum.</label>
+                            <div class="divAnotherRecipientContent  ">
                                 <p class="stop63FaceX">Siparişinizi sizin dışınızda teslim alabilecek kişinin adı:</p>
-                                <input class="stop63InputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+                                <input type="text" placeholder="İSİM,SOYAD" class="stop63InputTextC" />
                                 <p class="stop63FaceX">Siparişinizi başka bir kişiye göndermek istiyorsanız lütfen ismini giriniz:</p>
-                                <input class="stop63InputTextC someoneElseInput" type="text" placeholder="İSİM,SOYAD" />
+                                <input type="text" placeholder="İSİM,SOYAD"  class="stop63InputTextC"/>
                             </div>
                         </div>
-                        <!-- END - Check if user is sending this item to someone else -->
+                        <!-- END -->
 
-                        <!-- Details and notes about order -->
-                        <div class="orderDetailNotes">
+                        <!-- Sipariş hakkındaki detay ve notlar -->
+                        <div class="divOrderNotes">
                             <h3 class="stop63FaceW">Ürün ve Sipariş Notları</h3>
-                            <label for="giftWrapThis" class="stop63LabelA"><input class="stopCheckboxTypeA" type="checkbox" id="giftWrapThis" />Hediye paketi istiyorum</label>
-                            <label for="giftNoteThis" class="stop63LabelA giftNoteThis"><input class="stopCheckboxTypeA" type="checkbox" id="giftNoteThis" />Hediye notu eklemek istiyorum</label>
-                            <div class="giftNoteTextareaWrapper closedAsDefault">
-                                <textarea class="stop63TextareaStyleA giftNoteTextarea" placeholder="NOTUNUZ"></textarea>
+                            <label for="giftWrapThis" class="stop63LabelA"><input id="giftWrapThis" type="checkbox" class="stopCheckboxTypeA"/>Hediye paketi istiyorum</label>
+                            <label for="giftNoteThis" class="stop63LabelA giftNoteThis"><input id="giftNoteThis" type="checkbox" class="stopCheckboxTypeA"/>Hediye notu eklemek istiyorum</label>
+                            <div class="divGiftNoteTextareaWrapper  ">
+                                <textarea placeholder="NOTUNUZ" class="stop63TextareaStyleA"></textarea>
                             </div>
                         </div>
-                        <div class="separator"></div>
-                        <!-- Details and notes about order -->
+                        <!-- END -->
 
-                        <a href="#" class="stop63AStyleB saveBtnA">KAYDET VE DEVAM ET</a><!-- Save Button -->
-                        <div class="separator"></div>
+                        <a href="#" class="stop63AStyleB saveBtn">KAYDET VE DEVAM ET</a><!-- Save Button -->
                     </div>
-
-                    <div class="separator"></div>
                     <!-- END - ADDRESSES CONTENT -->
 
 
+                    <div class="separator"></div>
+
+
                     <!-- PAYMENT CONTENT -->
-                    <div class="divPaymentContent passiveSegment">
+                    <div class="divPaymentContent passiveTab">
                         <!-- Payment Content Intro -->
                         <div class="divPaymentText">
                             <h3 class="stop63FaceW">Ödeme Seçenekleri</h3>
@@ -598,27 +592,25 @@
                         </div>
                         <!-- END - Payment Content Intro -->
 
-                        <div class="separator"></div>
-
                         <!-- Payment option tabs -->
-                        <ul class="paymentOptions">
-                            <li class="singlePaymentOption activeOption stop63FaceM" data-payment-selection="creditCardOption">KREDİ KARTI</li>
-                            <li class="singlePaymentOption stop63FaceM" data-payment-selection="wireTransferOption">HAVALE</li>
-                            <li class="singlePaymentOption" data-payment-selection="paypalOption"><img src="../Images/63/paypal.png" /></li>
-                            <li class="singlePaymentOption" data-payment-selection="bkmexpressOption"><img src="../Images/63/bkmexpress.png" /></li>
+                        <ul class="ulPaymentOptions">
+                            <li class="stop63FaceM  activeOption" data-payment-selection="creditCardOption">KREDİ KARTI</li>
+                            <li class="stop63FaceM" data-payment-selection="wireTransferOption">HAVALE</li>
+                            <li data-payment-selection="paypalOption"><img src="../Images/63/paypal.png" /></li>
+                            <li data-payment-selection="bkmExpressOption"><img src="../Images/63/bkmexpress.png" /></li>
                         </ul>
                         <div class="separator"></div>
                         <!-- END - Payment option tabs -->
 
                         <!-- Credit card option tab -->
-                        <div class="optionBox creditCardOption activePayment">
+                        <div class="divPaymentOption creditCardOption activePayment">
                             <!-- Credit card form starts here -->
-                            <div class="divCartName">
-                                <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="stop63InputTextC inputCart" />
+                            <div class="divcardName">
+                                <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="stop63InputTextC inputcard" />
                             </div>
                             <img src="../Images/63/bonuslogo.png" class="cardLogo">
-                            <div class="divCartNumber credit-card-group">
-                                <input pattern="[0-9]*" type="text" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="stop63InputTextC inputCart card-number" id="card-number" />
+                            <div class="divCardNumber credit-card-group">
+                                <input id="card-number" type="text"  pattern="[0-9]*" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="stop63InputTextC inputCard card-number"/>
                                 <div class="divBankCard">
                                     <img data-sixtythree="logotype-card-visa">
                                     <img data-sixtythree="logotype-card-master">
@@ -626,7 +618,6 @@
                                 </div>
                                 <div class="separator"></div>
                             </div>
-                            <img src="../Images/63/bonuslogo.png" class="cardLogo">
                             <div class="divExpirationDate">
                                 <span class="stop63SpanStyleC">SON KULLANMA TARİHİ</span>
                                 <select class="stop63SelectA selectExpirationDate">
@@ -645,7 +636,7 @@
                             </div>
                             <!-- Credit card form ends here -->
 
-                            <!-- Credit card installment options -->
+                            <!-- Credit card instalment options -->
                             <div id="paymentCreditCard">
                                 <table class="tableInstalment">
                                     <tbody>
@@ -708,23 +699,23 @@
                                 </table>
                             </div>
                             <div class="separator"></div>
-                            <!-- END - Credit card installment options -->
+                            <!-- END - Credit card instalment options -->
 
                             <!-- Pay button and confirmative checkbox -->
                             <div class="divPay">
-                                <input type="button" value="ÖDEME YAP" class="stop63ButtonA paymentBtn" />
+                                <input type="button" value="ÖDEME YAP" class="stop63ButtonA" />
                                 <label for="sampleD" class="stop63LabelA stop63LabelC">
-                                    <input class="stopCheckboxTypeA input" type="checkbox" id="sampleD" />
+                                    <input class="stopCheckboxTypeA" type="checkbox" id="sampleD" />
                                     <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum.
                                 </label>
                             </div>
-                            <!-- END - Pay button and confirmative checkbox -->
+                            <!-- END -->
                         </div>
                         <!-- END Credit card option tab -->
 
 
                         <!-- Wire transfer option tab -->
-                        <div class="optionBox wireTransferOption">
+                        <div class="divPaymentOption wireTransferOption">
                             <div class="divWirePaymentOption active">
                                 <label for="wirePaymentA" class="stop63LabelB"><input class="" name="wireTransferType" type="radio" id="wirePaymentA" checked /></label>
                                 <div class="separator"></div>
@@ -752,9 +743,9 @@
                                 </h4>
                             </div>
                             <div class="divPay">
-                                <input type="button" value="ÖDEME YAP" class="stop63ButtonA paymentBtn" />
+                                <input type="button" value="ÖDEME YAP" class="stop63ButtonA" />
                                 <label for="sampleD" class="stop63LabelA stop63LabelC">
-                                    <input class="stopCheckboxTypeA input" type="checkbox" id="sampleD" />
+                                    <input class="stopCheckboxTypeA" type="checkbox" id="sampleD" />
                                     <a href="#">Ön Bilgilendirme Koşulları</a>'nı ve
                                     <a href="#">Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum
                                 </label>
@@ -763,18 +754,18 @@
                         <!-- END - Wire transfer option tab -->
 
                         <!-- Paypal option tab -->
-                        <div class="optionBox paypalOption">
+                        <div class="divPaymentOption paypalOption">
                             <p>
                                 79,90 TL tutarındaki ödemeniz <a href="https://www.paypal.com/tr/webapps/mpp/home">PayPal</a> ile yapılacaktır.<br>
                                 Lütfen, bir sonraki adıma geçmek için "aşağıdaki" butona tıklayınız.
                             </p>
                             <img class="paypalLogo" src="../Images/63/paypal.png">
-                            <input type="button" class="stop63ButtonA paypalButton" value="PAYPAL İLE ÖDE" />
+                            <input type="button" class="stop63ButtonA" value="PAYPAL İLE ÖDE" />
                         </div>
                         <!-- END - Paypal option tab -->
 
                         <!-- BKM Express option tab -->
-                        <div class="optionBox bkmexpressOption">
+                        <div class="divPaymentOption bkmExpressOption">
                             <p>
                                 BKM Express ile ödeme yaparken <a href="https://www.bkmexpress.com.tr/BKMExpress/">www.bkmexpress.com.tr</a> sayfasına yönlendirileceksiniz.
                                 <br>BKM Express sitesine üye olurken kullandığınız kullanıcı adı ve şifreniz ile uygulamaya giriş yapmanız gerekmektedir.
@@ -782,19 +773,20 @@
                                 <br>Alışverişinizi tamamladıktan sonra otomatik olarak LIMART'a döneceksiniz.
                             </p>
                             <img class="bkmLogo" src="../Images/63/bkmexpress.png">
-                            <input type="button" class="stop63ButtonA bkmButton" value="BKM İLE ÖDE" />
+                            <input type="button" class="stop63ButtonA" value="BKM İLE ÖDE" />
                         </div>
                         <div class="separator"></div>
                         <!-- END - BKM Express option tab -->
                     </div>
                     <!-- END - PAYMENT CONTENT -->
+                    <div class="separator"></div>
                 </div>
                 <!-- END - ADDRESS & PAYMENT CONTENT -->
 
             </div>
             <!-- END - ADDRESS & PAYMENT SECTIONS - LEFT COLUMN -->
 
-
+            <div class="separator"></div>
             <!-- ORDER SUMMARY - RIGHT COLUMN -->
             <div id="orderSummary">
                 <h3 class="stop63FaceAA order">SİPARİŞ ÖZETİ</h3>

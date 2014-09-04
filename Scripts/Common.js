@@ -23,46 +23,12 @@ if (isMobile) {
     // load jQuery Mobile dynamically
     $(document).on('mobileinit', function () {
         $.mobile.ignoreContentEnabled = true; // disable jqm styling
+        $.mobile.ajaxEnabled = false; // disable ajax loading
     });
 
     var pathPrefix = ($('#input63').length > 0 ? "../" : "");
     document.write('<script type="text/javascript" src="' + pathPrefix + 'Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
     //
-}
-
-$(document).ready(function () {
-    $('body').css('opacity', '1');
-    // $('a').click(function(e){
-    //     destination = $(this).attr('href');
-    //     if (destination !== '#') {
-    //         e.preventDefault();
-    //         $('body').css('opacity','0');
-    //         setTimeout(function(){
-    //             window.location.replace(destination);
-    //         },550);
-    //     };
-    // });
-    //fullscreen();
-    scrollEvents();
-    setGlobals();
-    smartphoneLandscape();
-    miscImgLoader();
-    //    aggregateHeader();
-
-    // PPI = getPPI();
-
-    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
-    if (deviceIs == 'smartphone' && sH <= 500) {
-        $('nav .divNav').css({ overflow: 'auto' });
-        $('nav .divNav .divMenuContent').css({ height: 230 });
-    }
-
-});
-
-function fullscreen() {
-    if (isMobile) {
-        document.body.requestFullscreen();
-    };
 }
 
 var orientationChangeTimer = null;
@@ -78,6 +44,20 @@ $(window).on("orientationchange", function () {
 
 $(window).resize(function () {
     setGlobals();
+});
+
+$(document).ready(function () {
+    scrollEvents();
+    setGlobals();
+    smartphoneLandscape();
+    miscImgLoader();
+
+    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
+    if (deviceIs == 'smartphone' && sH <= 500) {
+        $('nav .divNav').css({ overflow: 'auto' });
+        $('nav .divNav .divMenuContent').css({ height: 230 });
+    }
+
 });
 
 function setGlobals() {
@@ -162,4 +142,44 @@ function miscImgLoader() {
             }
         }
     });
+}
+
+
+function scrollTop63(scrollLocation,scrollTime,selectedElement) {
+    var topDistance = $(document).scrollTop();
+
+    if (scrollLocation > ($(document).height() - wH)) {
+        scrollLocation = ($(document).height() - wH)
+    };
+    if (scrollLocation < 0) {
+        scrollLocation = 0
+    };
+
+    var scrollDistance = scrollLocation - topDistance 
+
+    if (selectedElement == null) {
+        selectedElement = 'body'
+    };
+    $(window).bind('mousewheel', function(e){
+        e.preventDefault();
+    });
+    $(window).bind('touchmove', function(e){
+        e.preventDefault();
+    });
+    $(selectedElement).css({
+        '-webkit-transform':'translate3d(0px,'+(-scrollDistance)+'px,0px)',
+        'transition':'transform 0.'+(scrollTime/100)+'s'
+    });
+
+    setTimeout(function(){
+        $(document).scrollTop(topDistance + scrollDistance);
+        $(selectedElement).css({
+            '-webkit-transform':'none',
+            'transition':'transform 0s'
+        });
+        setTimeout(function(){
+            $(window).unbind('mousewheel');
+            $(window).unbind('touchmove');
+        })
+    },scrollTime);
 }

@@ -183,10 +183,10 @@ nav .divBasketIcon .imgBasket {
 
 #divOpenerFrame {
     -webkit-transition: -webkit-transform 0.7s;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
 }
 
 #divOpenerFrame .sixtythreeOpener {
@@ -196,6 +196,10 @@ nav .divBasketIcon .imgBasket {
 #divOpenerFrame .sixtythreeOpener.on {
     display: block;
     box-shadow: inset 0px -22px 15px -13px rgba(0,0,0,0.2);
+}
+
+#divOpenerFrame input {
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Screen */

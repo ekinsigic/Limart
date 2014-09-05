@@ -1,0 +1,90 @@
+﻿header{
+    position:fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+    width:100%; 
+    height:90px;
+    background-color:#fff;
+}
+header:before {
+    content:'';
+    display:block;
+    position:absolute;
+    background-color:#fff;
+    width:100%;
+    height:100%;
+    z-index: 2;
+}
+
+header .divContent{
+    margin:auto;
+    height:100%;
+}
+
+header .divContent .aLogo:link,
+header .divContent .aLogo:visited{
+    display:block;
+    position:absolute;
+    z-index:15;
+    top:25px;
+    left:0;
+}
+
+header:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 70px;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.15);
+    z-index: 99999999999;
+    transition:box-shadow 0.3s ease;
+}
+
+/* Screen */
+@media all and (max-width: 700px) {
+    header{
+        height:70px !important;
+    }
+
+    header .divContent{
+        width:90%;
+    }
+
+    header .divContent .aLogo:link,
+    header .divContent .aLogo:visited{
+        top:18px;
+    }
+
+    header .divContent .aLogo img {
+        width: 90px;
+        height: auto;
+    }
+    header:after {
+    top: 50px;
+    }
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+    header .divContent{
+        width:670px;
+    }
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    header .divContent{
+        width:960px;
+    
+        background: white;
+        z-index: 2;
+}
+}
+
+@media all and (min-width: 1435px) {
+    header .divContent{
+        width:1080px;
+    }
+}

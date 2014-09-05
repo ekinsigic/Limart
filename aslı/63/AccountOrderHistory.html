@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
+<head>
+    <title>LIMART</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+
+    <link rel="stylesheet" type="text/css" href="../Styles/Reset.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Common.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Header.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Navi.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Footer.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Typography.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/63/Typography63.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Form.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/63/Form63.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Misc.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/PopUp.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Opener.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/63/AccountNavi.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/63/AccountDetails.css" />
+
+</head>
+<body>
+    <input id="input63" type="hidden" value="63" />
+
+    <section id="smartphoneLandscape">
+        <div class="divPreloader"><img data-sixtythree="logotype-symbol" /></div>
+        <p class="faceA">LÜTFEN TELEFONUNUZU DİKEY KONUMUNDA TUTUNUZ.</p>
+    </section>
+
+    <div id="divMainWrapper">
+
+        <header>
+            <div class="divContent">
+                <a href="../Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
+
+                <nav>
+                    <div class="divNav sixtythreeOpener" id="menuOpener">
+                        <ul class="level1">
+                            <li><a href="#" class="aStyleA">BİZ KİMİZ?</a></li>
+                            <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                            <li><a href="Artists.html" class="aStyleA">SANATÇILAR</a></li>
+                            <li><a href="Listing.html" class="aStyleA">E-SHOP</a></li>
+                            <li><a href="Contact.html" class="aStyleA">İLETİŞİM</a></li>
+                        </ul>
+
+                        <div class="divMenuContent">
+                            <p>
+                                LIMART HAKKINDAKİ TÜM GELİŞMELERİ TAKİP EDEBİLMEK İÇİN MAIL LISTEMIZE KAYIT OLUN.
+                            </p>
+
+                            <div class="divMailingContent">
+                                <input type="text" placeholder="MAIL ZİNCİRİ" class="inputTextA" />
+                                <a href="#" class="aButton"><img data-sixtythree="arrow-next"></a>
+                            </div>
+
+                            <!-- social icons -->
+                            <ul class="socialsA">
+                                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+                                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+                                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+                                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+                            </ul>
+                            <!-- end - social icons -->
+                        </div>
+                    </div>
+
+                    <div class="divNavIcon">
+                        <div class="divNavIconBg"></div>
+                    </div>
+                    <div class="divMenuIcon triggerDiv" data-trigger-type="menu" id="menuTrigger">
+                        <img data-sixtythree="icon-mobile-nav" class="imgMenu" />
+                    </div>
+                    <div class="divSearchIcon triggerDiv" data-trigger-type="search" id="searchTrigger">
+                        <img data-sixtythree="icon-search" class="imgSearch">
+                    </div>
+                    <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
+                        <img data-sixtythree="icon-user" class="imgUser">
+                    </div>
+                    <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
+                        <img data-sixtythree="icon-basket" class="imgBasket">
+                    </div>
+                </nav>
+            </div>
+
+            <div id="divOpenerFrame" class="divOpenerFrame">
+
+                <section id="searchOpener" class="sixtythreeOpener">
+                    <div class="divSearchContent">
+                        <input type="text" class="inputTextB" />
+                        <div class="noCursor"></div>
+                        <a href="#" class="aSearchButton"><img data-sixtythree="icon-search"></a>
+                    </div>
+                </section>
+
+
+                <section class="divUserOpener sixtythreeOpener" id="userOpener">
+
+                    <div id="userOpenerInnerDivLogin" class="userInnerOpener userOpenerInnerOpenerVisible activeInnerOpener divLoginContent">
+                        <div class="openerHeader login">
+                            <h1 class="faceEE">GİRİŞ YAP</h1>
+                        </div>
+                        <div class="divLogin">
+                            <h1 class="faceFFF login">GİRİŞ YAP</h1>
+                            <input type="text" placeholder="KULLANICI ADI" class="inputTextE input" />
+                            <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+
+                            <input type="button" class="buttonB inputLoginBtn" value="GİRİŞ YAP">
+
+                            <a href="#" data-inneropeneranchor="userOpenerInnerDivPassword" class="aStyleJ signUp panelInnerLink">ÜYE OLMAK İSTİYORUM</a>
+                            <a href="#" data-inneropeneranchor="userOpenerInnerDivPassword" class="aStyleJ forgotPassword panelInnerLink">ŞİFREMİ UNUTTUM</a>
+
+                        </div>
+
+
+                        <div class="divOr">
+                            <span class="spanStyleJ spanOr">VEYA</span>
+                        </div>
+
+
+                        <div class="divSocialIcons">
+                            <a href="#" class="aSocialIcon facebook">
+                                <img data-sixtythree="icon-login-facebook"><span class="spanStyleK">FACEBOOK İLE BAĞLAN</span>
+                            </a>
+
+                            <a href="#" class="aSocialIcon twitter">
+                                <img data-sixtythree="icon-login-twitter"><span class="spanStyleK">TWITTER İLE BAĞLAN</span>
+                            </a>
+
+                            <a href="#" class="aSocialIcon instagram">
+                                <img data-sixtythree="icon-login-instagram"><span class="spanStyleK">INSTAGRAM İLE BAĞLAN</span>
+                            </a>
+                        </div>
+
+
+                        <div class="separator"></div>
+                    </div>
+
+
+
+
+                    <div id="userOpenerInnerDivPassword" class="userInnerOpener divNewMemberContent">
+
+                        <div class="openerHeader member">
+                            <h1 class="faceEE">KAYIT OL</h1>
+                        </div>
+
+                        <div class="divMemberA">
+                            <h1 class="faceFFF login">KAYIT OL</h1>
+
+                            <input type="text" placeholder="İSİM" class="inputTextE input" />
+                            <input type="text" placeholder="SOYİSİM" class="inputTextE input" />
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="divMemberB">
+                            <input type="text" placeholder="E-POSTA ADRESİ" class="inputTextE input" />
+                            <select class="inputTextE input">
+                                <option>CİNSİYET</option>
+                                <option>KADIN</option>
+                                <option>ERKEK</option>
+                            </select>
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="divMemberC">
+                            <input type="text" placeholder="ŞİFRE" class="inputTextE input" />
+                            <input type="text" placeholder="ŞİFRE(TEKRAR)" class="inputTextE input" />
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="separator"></div>
+
+
+                        <div class="divMemberD">
+                            <input type="button" class="buttonB inputBtn" value="KAYIT OL">
+                            <label for="membershipAgreement" class="labelA"><input type="checkbox" id="membershipAgreement" /><a href="#">Üyelik sözleşmesini okudum.</a></label>
+
+                            <div class="separator"></div>
+                        </div>
+
+
+                        <div class="separator line"></div>
+
+
+                        <a href="#" data-inneropeneranchor="userOpenerInnerDivLogin" class="aStyleE contShopping panelInnerLink">
+                            <img data-sixtythree="arrow-previous"><span>ZATEN ÜYEYİM</span>
+                        </a>
+
+                        <div class="separator"></div>
+                    </div>
+                </section>
+
+
+                <section class="divBasketOpener sixtythreeOpener" id="basketOpener">
+
+                    <div class="divBasketContent">
+
+                        <div class="divBasketDetails">
+
+                            <!-- BASKET HEADERS -->
+                            <div class="divBasketItemHeaders">
+                                <div class="stop63FaceL header1">ADET</div>
+                                <div class="stop63FaceL header2">ARA TOPLAM</div>
+                                <div class="separator"></div>
+                            </div>
+                            <!-- END - BASKET HEADERS -->
+                            <!-- BASKET ITEMS -->
+                            <div class="divItem">
+
+                                <img src="../Files/Products/03/Pictures/thumbnail.jpg" class="imgItemPic" />
+
+                                <div class="divDescription">
+                                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
+
+                                    <div class="divInfo">
+                                        <div class="content">
+                                            <a href="ProductDetail.html"><h2 class="stop63FaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
+                                            <a href="ArtistsDetail.html"><h3 class="stop63FaceG header2">SALVADOR DALI</h3></a>
+                                            <span class="stop63FaceH info1">26x30, SİYAH ÇERÇEVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divQuantity">
+                                        <div class="content stop63FaceI">
+                                            <span>100</span><span class="spanMobilePrice">ADET</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divTotalPrice">
+                                        <div class="stop63FaceI content">
+                                            <span class="amount">95000,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="separator"></div>
+                                </div>
+                            </div>
+
+                            <div class="separator sepA"></div>
+
+                            <div class="divItem">
+
+                                <img src="../Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
+
+                                <div class="divDescription">
+                                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
+
+                                    <div class="divInfo">
+                                        <div class="content">
+                                            <a href="ProductDetail.html"><h2 class="stop63FaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
+                                            <a href="ArtistsDetail.html"><h3 class="stop63FaceG header2">SALVADOR DALI</h3></a>
+                                            <span class="stop63FaceH info1">26x30, SİYAH ÇERÇEVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divQuantity">
+                                        <div class="content stop63FaceI">
+                                            <span>100</span><span class="spanMobilePrice">ADET</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divTotalPrice">
+                                        <div class="stop63FaceI content">
+                                            <span class="amount">95000,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="separator sepA"></div>
+
+                            <div class="divItem">
+
+                                <img src="../Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
+
+                                <div class="divDescription">
+                                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
+
+                                    <div class="divInfo">
+                                        <div class="content">
+                                            <a href="ProductDetail.html"><h2 class="stop63FaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
+                                            <a href="ArtistsDetail.html"><h3 class="stop63FaceG header2">SALVADOR DALI</h3></a>
+                                            <span class="stop63FaceH info1">26x30, SİYAH ÇERÇEVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divQuantity">
+                                        <div class="content stop63FaceI">
+                                            <span>100</span><span class="spanMobilePrice">ADET</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divTotalPrice">
+                                        <div class="stop63FaceI content">
+                                            <span class="amount">950,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="separator"></div>
+                                </div>
+
+                            </div>
+                            <!-- END - BASKET ITEMS -->
+
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="separator"></div>
+
+
+                        <!-- TOTAL SUMMARY -->
+                        <div class="divTotal">
+
+                            <table class="tableOrderTotal">
+                                <tr>
+                                    <td class="stop63FaceH left">ARA TOPLAM</td>
+                                    <td class="stop63FaceJ"><span class=" amount">1.260.47</span> <span class="currency">TL</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="stop63FaceH left">KARGO TOPLAM</td>
+                                    <td class="stop63FaceJ"><span class="amount">6.99</span> <span class="currency">TL</span></td>
+                                </tr>
+                            </table>
+
+                            <div class="separator"></div>
+
+                            <div class="divPaymentButton">
+
+                                <!-- BOTTOM BUTTONS -->
+                                <a href="#" class="stop63AStyleF contShopping">
+                                    <img data-sixtythree="arrow-next"> <span>SEPETİ GÖRÜNTÜLE</span>
+                                </a>
+
+                                <input type="button" class="buttonB btnCompleteOrder" value="ÖDEME YAP">
+                                <!-- END - BOTTOM BUTTONS -->
+
+                                <div class="separator"></div>
+                            </div>
+
+                        </div>
+                        <!-- END - TOTAL SUMMARY -->
+
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="separator"></div>
+                </section>
+            </div>
+        </header>
+
+        <section id="menuActiveOverlay"></section>
+
+
+        <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
+            <span class="spanDot"></span>
+            <span class="spanDot"></span>
+            <span class="spanDot"></span>
+
+            <div class="separator"></div>
+        </a>
+
+
+        <main>
+
+            <section id="accountDetails">
+
+                <div id="breadcrumbs">
+                    <ul class="stop63FaceKK">
+                        <li class="mobileName"><span>JOHN DOE</span></li>
+                        <li>/</li>
+                        <li><a href="#" class="stop63AStyleI">HESABIM</a></li>
+                        <li>/</li>
+                        <li>SİPARİŞ İŞLEMLERİM</li>
+                    </ul>
+                    <div class="separator"></div>
+                </div>
+
+
+                <aside>
+                    <ul class="level1">
+                        <li>
+                            <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
+                                <span class="stop63FaceHH">HESAP BİLGİLERİ</span>
+                                <img data-sixtythree="icon-my-account" class="small one">
+                                <img data-sixtythree="icon-my-account" class="white small one">
+                            </a>
+                            <ul class="level2">
+                                <li><a href="AccountProfile.html" class="stop63AStyleG aSubMenuItem">ÜYELİK BİLGİLERİM</a></li>
+                                <li><a href="AccountAddress.html" class="stop63AStyleG aSubMenuItem">ADRESLERİM</a></li>
+                                <li><a href="AccountPassword.html" class="stop63AStyleG aSubMenuItem">ŞİFRE İŞLEMLERİ</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
+                                <span class="stop63FaceHH">SİPARİŞ BİLGİLERİ</span>
+                                <img data-sixtythree="icon-order-account" class="small two" />
+                                <img data-sixtythree="icon-order-account" class="white small two">
+                            </a>
+                            <ul class="level2">
+                                <li><a href="AccountOrderHistory.html" class="stop63AStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />SİPARİŞ İŞLEMLERİ</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a id="divServices" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
+                                <span class="stop63FaceHH">SERVİSLER</span>
+                                <img data-sixtythree="icon-services-account" class="small three" />
+                                <img data-sixtythree="icon-services-account" class="white small three" />
+                            </a>
+                            <ul class="level2">
+                                <li><a href="#" class="stop63AStyleG aSubMenuItem">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+                                <li><a href="#" class="stop63AStyleG aSubMenuItem">MESAFELİ SÖZLEŞMELER</a></li>
+                                <li><a href="#" class="stop63AStyleG aSubMenuItem">GÖNDERİM VE İADE</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a id="divContact" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
+                                <span class="stop63FaceHH">İLETİŞİM</span>
+                                <img data-sixtythree="icon-contact-account" class="small four" />
+                                <img data-sixtythree="icon-contact-account" class="white small four" />
+                            </a>
+                            <ul class="level2">
+                                <li><a href="#" class="stop63AStyleG aSubMenuItem">ADRES BİLGİLERİ</a></li>
+                                <li><a href="#" class="stop63AStyleG aSubMenuItem">İLETİŞİM BİLGİLERİ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+
+
+                <div class="divDetail orderHistory">
+
+                    <h1 class="stop63FaceII">Sipariş Geçmişi</h1>
+                    <p class="stop63FaceJJ">
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    </p>
+
+                    <div class="separator line"></div>
+
+
+                    <!-- ORDER HEADERS -->
+                    <div class="divOrderColumnHeaders">
+                        <div class="stop63FaceL header1">BİLGİ</div>
+                        <div class="stop63FaceL header2">TUTAR</div>
+                        <div class="stop63FaceL header3">DURUM</div>
+                        <div class="separator"></div>
+                    </div>
+                    <!-- END - ORDER HEADERS -->
+
+
+                    <div class="divOrderRow">
+
+                        <div class="divOrderNumber">
+                            <span class="stop63SpanStyleI">#3242342</span>
+                            <span class="stop63SpanStyleK spanDate">10 Mar 2014 - 11:10</span>
+                        </div>
+                        <div class="divOrderTotalPrice">
+                            <span class="stop63SpanStyleJ">980.0000 TL</span>
+                        </div>
+                        <div class="divOrderStatus">
+                            <img data-sixtythree="icon-order-01" />
+                            <img data-sixtythree="icon-order-white-01" class="whiteIcon" />
+                            <span class="stop63SpanStyleJ">SİPARİŞİNİZ ALINDI</span>
+                        </div>
+
+                        <img data-sixtythree="arrow-down-short-purple" class="arrowDown" />
+
+                        <div class="separator"></div>
+                    </div>
+
+
+
+
+                    <div class="divOrderRow activeOrder">
+
+                        <div class="divOrderNumber">
+                            <span class="stop63SpanStyleI spanOrderNumber activeOrder">#3242342</span>
+                            <span class="stop63SpanStyleK spanDate activeOrder">10 Mar 2014 - 11:10</span>
+                        </div>
+                        <div class="divOrderTotalPrice">
+                            <span class="stop63SpanStyleJ activeOrder">980.0000 TL</span>
+                        </div>
+                        <div class="divOrderStatus">
+                            <img data-sixtythree="icon-order-01" class="blackIcon activeOrder" />
+                            <img data-sixtythree="icon-order-white-01" class="whiteIcon activeOrder" />
+                            <span class="stop63SpanStyleJ activeOrder">SİPARİŞİNİZ ALINDI</span>
+                        </div>
+
+                        <img data-sixtythree="arrow-down-short-purple" class="arrowDown purpleArrow" />
+                        <img data-sixtythree="arrow-down-short-white" class="arrowDown whiteArrow activeOrder" />
+
+                        <div class="separator"></div>
+
+
+
+
+
+
+                        <div class="divOrderDetails">
+
+
+                            <div class="divItem">
+                                <img src="../Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
+
+                                <div class="divDescription">
+
+                                    <div class="divInfo">
+                                        <div class="divContent">
+                                            <a href="ProductDetail.html"><h2 class="stop63FaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
+                                            <span class="stop63FaceH info1">26x30, SİYAH ÇERÇEVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divUnitPrice">
+                                        <div class="stop63SpanStyleL content">
+                                            <span class="spanPiece">4</span>x<span class="amount">95000,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divTotalPrice">
+                                        <div class="stop63SpanStyleM content">
+                                            <span class="amount">95000,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="separator sepA"></div>
+
+                            <div class="divItem">
+                                <img src="../Files/Products/03/Pictures/thumbnail.jpg" class="imgItemPic" />
+
+                                <div class="divDescription">
+
+                                    <div class="divInfo">
+                                        <div class="divContent">
+                                            <a href="ProductDetail.html"><h2 class="stop63FaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
+                                            <span class="stop63FaceH info1">26x30, SİYAH ÇERÇEVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divUnitPrice">
+                                        <div class="stop63SpanStyleL content">
+                                            <span class="spanPiece">4</span>x<span class="amount">95000,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="divTotalPrice">
+                                        <div class="stop63SpanStyleM content">
+                                            <span class="amount">95000,98</span> <span class="currency">TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="separator sepA"></div>
+
+                            <div class="divBillingAddressDetail">
+                                <div class="divAdressDetails">
+
+                                    <span class="stop63SpanStyleE header5">FATURA ADRESİ</span>
+                                    <p class="stop63FaceDD address">
+                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                    </p>
+
+                                    <span class="stop63SpanStyleE header5">TESLİMAT ADRESİ</span>
+                                    <p class="stop63FaceDD address">
+                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                    </p>
+
+                                    <span class="stop63SpanStyleE header5">ÖDEME ŞEKLİ</span>
+                                    <p class="stop63FaceDD address">
+                                        Kredi Kartı - 3 Taksit
+                                    </p>
+                                </div>
+
+
+
+
+                                <div class="divTotalDetail">
+                                    <div class="divSubTotal">
+                                        <div class="divTotalLeft">
+                                            <span class="stop63SpanStyleG subTotal">ARA TOPLAM</span>
+                                            <span class="stop63SpanStyleG subTotal">KARGO TOPLAM</span>
+                                        </div>
+                                        <div class="divTotalRight">
+                                            <span class="stopSpanSyleF ">450,00 TL</span>
+                                            <span class="stopSpanSyleF ">6,99 TL</span>
+                                        </div>
+                                        <div class="separator"></div>
+                                    </div>
+
+                                    <div class="divTotal">
+                                        <span class="stop63FaceO">TOPLAM: <span class="stop63FaceP">344.98 TL</span></span>
+                                        <p class="stop63FaceQ date">TESLİM TARİHİ: 14.08.2014 - 21.08.2014</p>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="separator"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="divOrderRow">
+
+                        <div class="divOrderNumber">
+                            <span class="stop63SpanStyleI">#3242342</span>
+                            <span class="stop63SpanStyleK spanDate">10 Mar 2014 - 11:10</span>
+                        </div>
+                        <div class="divOrderTotalPrice">
+                            <span class="stop63SpanStyleJ">980.0000 TL</span>
+                        </div>
+                        <div class="divOrderStatus">
+                            <img data-sixtythree="icon-order-01" />
+                            <span class="stop63SpanStyleJ">SİPARİŞİNİZ ALINDI</span>
+                        </div>
+
+                        <img data-sixtythree="arrow-down-short-purple" class="arrowDown" />
+
+                        <div class="separator"></div>
+                    </div>
+
+
+
+
+
+
+
+                        <input type="button" class="stop63ButtonA button" value="KAYDET" />
+                    </div>
+
+                <div class="separator"></div>
+            </section>
+        </main>
+
+
+
+        <footer>
+            <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
+
+            <div class="divLine one"></div>
+
+            <div class="divContent first">
+                <ul class="level1">
+                    <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
+                    <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                    <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
+                    <li><a href="#" class="aStyleA">E-SHOP</a></li>
+                    <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
+                </ul>
+
+
+                <div class="divMailingContent">
+                    <input type="text" placeholder="MAIL ZİNCİRİ" class="stopInputTextA" />
+                    <input type="image" src="../Images/arrow-next.png" class="inputButton" />
+                </div>
+
+                <div class="separator"></div>
+            </div>
+
+            <div class="divLine two"></div>
+
+            <div class="divContent">
+                <span class="spanStyleA">© 2014 LIMART.COM</span>
+
+                <ul class="level2">
+                    <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
+                    <li class="liSeparator"><span></span></li>
+                    <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
+                    <li class="liSeparator"><span></span></li>
+                    <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
+                    <li class="liSeparator"><span></span></li>
+                    <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+                </ul>
+
+                <div class="separator"></div>
+            </div>
+
+            <div class="divLine three"></div>
+
+
+            <!-- social icons -->
+            <ul class="socialsA">
+                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+            </ul>
+            <!-- end - social icons -->
+            <div class="separator"></div>
+        </footer>
+
+    </div>
+
+
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="../Scripts/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../Scripts/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="../Scripts/jquery-ui.js"></script>
+        <script type="text/javascript" src="../ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="../Scripts/Common.js"></script>
+        <script type="text/javascript" src="../Scripts/Navi.js"></script>
+        <script type="text/javascript" src="../Scripts/63/AccountDetails.js"></script>
+        <!-- END - SCRIPTS -->
+
+
+</body>
+</html>

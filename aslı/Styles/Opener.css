@@ -1,0 +1,920 @@
+﻿
+.sixtythreeOpener{
+    z-index:18;
+    width:100%;
+    overflow: visible;
+    background-color:#ececef;
+}
+
+/* search */
+#searchOpener .divSearchContent{
+    margin:auto;
+    height:60px;
+}
+
+#searchOpener .divSearchContent .inputTextB{
+    position:absolute;
+    top:12px;
+    right:40px;
+    border: 0;
+}
+
+#searchOpener .aSearchButton{
+    position:absolute;
+    top:23px;
+    right:0;
+    width:12px;
+    height:12px;
+}
+
+#searchOpener .aSearchButton img{
+    width:100%;
+    height:auto;
+}
+
+.topSearch {
+    -webkit-transform:translate3d(0px,60px,0px);
+    -moz-transform:translate3d(0px,60px,0px);
+    -ms-transform:translate3d(0px,60px,0px);
+    -o-transform:translate3d(0px,60px,0px);
+    transform:translate3d(0px,60px,0px);
+}
+
+#searchOpener .pseudoCursor {
+    position: absolute;
+    width: 1px;
+    height: 17px;
+    background: rgba(0,0,0,1);
+    top: 21px;
+    right: 40px;
+    -webkit-animation:pseudoCursor 0.6s infinite alternate
+}
+
+/* search */
+
+
+
+/* login */
+.sixtythreeOpener.divUserOpener{
+    padding: 50px 0 100px 0;
+}
+
+.sixtythreeOpener.member{
+    height:auto;
+}
+
+.sixtythreeOpener .openerHeader {
+    height: 100px;
+    line-height: 100px;
+    background-color: #f0f0f0;
+    text-align: center;
+    display:none;
+}
+
+.sixtythreeOpener .divLoginContent,
+.sixtythreeOpener .divNewMemberContent{
+    margin: 0px auto 0 auto;
+}
+
+
+.sixtythreeOpener .divLogin{
+    float:left;
+    width:350px;
+}
+
+.sixtythreeOpener h1.login{
+    padding:0 0 15px 20px;
+    margin-bottom:30px;
+    border-bottom:1px solid #d9d9db;
+}
+
+.sixtythreeOpener .divLoginContent .divLogin .input{
+    margin-bottom:10px;
+}
+
+.sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
+    float:left;
+    margin-left:0;
+}
+
+.sixtythreeOpener .divLoginContent .divLogin a{
+    float:right;
+    text-align:right;
+}
+
+    .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+        margin-top:8px;
+        width:140px;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin a.forgotPassword{
+        margin-top:10px;
+        color:#b1b1b3;
+    }
+
+
+
+
+.sixtythreeOpener .divLoginContent .divOr{
+    float:left;
+    margin:37px 0 0 160px;
+    height:180px;
+    border-left:2px solid #d9d9db;
+}
+
+.sixtythreeOpener .divLoginContent .spanOr{
+    position:absolute;
+    left:-23px;
+    top:63px;
+    padding:20px 0 20px 0;
+    background-color:#ececef;
+}
+
+
+
+/* login social icons */
+.sixtythreeOpener .divLoginContent .divSocialIcons{
+    float:right;
+    width:400px;
+    margin-top:53px;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon{
+    width:224px;
+    height:42px;
+    margin-bottom:10px;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.facebook{
+    background-color:#0b66af;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.facebook img{
+    margin:11px 0 0 31px;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.twitter{
+    background-color:#26b1df;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.twitter img{
+    margin-top:13px;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.instagram{
+    background-color:#61534e;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.instagram img{
+    margin-top:10px;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon img{
+    float:left;
+    margin-left:25px;
+}
+
+.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon span{
+    position:absolute;
+    left:62px;
+    height:100%;
+    padding-top:15px;
+}
+/* end - login social icons */
+
+
+
+
+
+/* NEW MEMBER */
+.sixtythreeOpener .divMemberA{
+    float:left;
+    width:720px;
+}
+
+.sixtythreeOpener .divMemberB{
+    float:left;
+    width:720px;
+}
+
+.sixtythreeOpener .divMemberC{
+    float:left;
+    width:720px;
+}
+
+.sixtythreeOpener .divMemberD{
+    float:right;
+    margin-top:-109px;
+    width:255px;
+}
+
+.sixtythreeOpener .divNewMemberContent .input{
+    float:left;
+    width:350px !important;
+    margin:0 10px 10px 0;
+}
+
+.sixtythreeOpener .divMemberD .inputBtn{
+    float:left;
+    width:125px;
+}
+
+.sixtythreeOpener .divMemberD label{
+    float:left;
+    margin-left:-4px;
+    width:210px;
+}
+
+    .sixtythreeOpener .divMemberD label a {
+        position:absolute;
+        top:16px;
+        width:100%;
+    }
+
+.sixtythreeOpener .divNewMemberContent .contShopping{
+    padding-left:10px;
+    width:150px;
+}
+
+.sixtythreeOpener .divNewMemberContent .separator.line{
+    margin: 0 0 5px 0;
+    padding-top:25px;
+    border-bottom:1px solid #d9d9db;
+}
+/* END - NEW MEMBER */
+
+
+
+
+
+/* basket */
+.sixtythreeOpener.divBasketOpener{
+    padding-bottom:40px;
+    height:auto;
+}
+
+.sixtythreeOpener .divBasketContent{
+    margin:auto;
+    width:1080px;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails{
+    float:right;
+    margin-top: 0px;
+    width: 600px;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .basketDetailsScroller {
+    max-height: 299px;
+    overflow: auto;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .divBasketItemHeaders{
+    padding-bottom: 10px;
+    margin-top: 30px;
+    border-bottom:1px solid #d9d9db;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketItemHeaders .header1{
+    float: left;
+    width:385px;
+    text-align:right;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketItemHeaders .header2{
+    float: right;
+    width:180px;
+    text-align:center;
+}
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .separator.marginCaster{
+    margin-bottom: 40px;
+}
+
+.sixtythreeOpener .divBasketDetails .divItem:first-child {
+    padding-top: 27px;
+}
+
+.sixtythreeOpener .divBasketDetails .divItem:last-child {
+    padding-bottom: 12px;
+}
+
+.sixtythreeOpener .divItem .imgItemPic {
+    float: left;
+    z-index: 10;
+    max-width: 60px;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px #ccc;
+}
+
+
+
+.sixtythreeOpener .divItem .divDescription {
+    z-index: 5;
+    padding-right: 20px;
+    padding-left: 75px;
+}
+
+.sixtythreeOpener .divItem .divDescription,
+.sixtythreeOpener .divItem .divDescription .divInfo,
+.sixtythreeOpener .divItem .divDescription .divQuantity,
+.sixtythreeOpener .divItem .divDescription .divTotalPrice {
+    min-height: 60px;
+}
+
+.sixtythreeOpener .divItem .divDescription .divInfo,
+.sixtythreeOpener .divItem .divDescription .divQuantity,
+.sixtythreeOpener .divItem .divDescription .divTotalPrice {
+    float: left;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+
+
+.sixtythreeOpener .divItem .divDescription .divInfo{
+    width:275px;
+}
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content a {
+        display: table;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content a:link h3.header2 {
+        margin: 5px 0 5px 0;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content span.info1 {
+        display: block;
+    }
+
+.sixtythreeOpener .divItem .divDescription .divQuantity{
+    width:45px;
+}
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span{
+        display:inline-block;
+        margin:auto;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span.spanMobilePrice{
+        display:none;
+    }
+
+.sixtythreeOpener .divItem .divDescription .divTotalPrice{
+    width:145px;
+}
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+        width:100%;
+        text-align: right;
+    }
+
+.sixtythreeOpener .divItem .divDescription .aDelete {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 35px;
+    margin-top: -19px;
+    opacity: 0.25;
+    transition: opacity 0.5s;
+}
+
+.sixtythreeOpener .divItem .divDescription .aDelete:hover {
+    opacity: 1;
+}
+
+.sixtythreeOpener .divItem .divDescription .aDelete img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    margin: -3px 0 0 -3px;
+}
+
+
+.sixtythreeOpener div.separator.sepA {
+    padding: 10px 0 0 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #d9d9db;
+}
+
+
+.sixtythreeOpener .divBasketContent .divTotal{
+    float:right;
+    margin-top: 0px;
+    padding-top:22px;
+    width:100%;
+    border-top:1px solid #d9d9db;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal table{
+    float:right;
+    margin-right:45px;
+    width:248px;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal table tr td{
+    text-align:right;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal .divPaymentButton{
+    float:right;
+    margin:40px 45px 0 0;
+    width:575px;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
+    float:left;
+    margin-top:5px;
+}
+
+.sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
+    float:right;
+    width:140px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Screen */
+@media all and (max-width: 700px) {
+    .sixtythreeOpener{
+        bottom:0;
+        height:auto;
+        overflow: auto;
+        background-color:#fff;
+    }
+
+    .sixtythreeOpener .divSearchContent{
+        width:90%;
+    }
+
+    .sixtythreeOpener .openerHeader{
+        display:block;
+        margin-bottom: 30px;
+        height:75px;
+        line-height:80px;
+    }
+
+    .sixtythreeOpener.divUserOpener{
+        padding:0;
+    }
+
+    .sixtythreeOpener .divLoginContent,
+    .sixtythreeOpener .divNewMemberContent{
+        position: relative;
+        top:0;
+        bottom:0;
+        margin-top: 0;
+        padding: 0px 0 30px 0;
+        width:100%;
+        overflow:auto;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin{
+        float:none;
+        width:90%;
+        margin:auto;
+        text-align:center;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin h1.login{
+        display:none;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
+        float:none;
+        margin:10px auto 10px auto;
+        font-size: 15px !important;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin a{
+        float:none;
+        font-size: 13px !important;
+        text-align:center;
+    }
+
+        .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+            margin:15px auto 0 auto;
+            width:250px;
+        }
+
+    .sixtythreeOpener .divLoginContent .divOr{
+        float:none;
+        margin:65px auto 0 auto;
+        width:90%;
+        height:2px;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    .sixtythreeOpener .divLoginContent .spanOr{
+        top:-6px;
+        left:50%;
+        margin-left:-45px;
+        padding:0 20px 0 20px;
+        background-color:#fff;
+    }
+
+    .sixtythreeOpener .divLoginContent .divSocialIcons{
+        float:none;
+        width:90%;
+        margin:53px auto 0 auto;
+    }
+
+    .sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon{
+        margin:0 auto 10px auto;
+    }
+
+
+
+    
+
+    .sixtythreeOpener .divMemberA,
+    .sixtythreeOpener .divMemberB,
+    .sixtythreeOpener .divMemberC{
+        float:none;
+        margin:auto !important;
+        width:90%;
+    }
+
+    .sixtythreeOpener .divNewMemberContent .input{
+        float:none;
+        margin:0 auto 10px auto;
+        width:100% !important;
+    }
+
+    .sixtythreeOpener h1.login{
+        display:none;
+    }
+
+    .sixtythreeOpener .divMemberB select{
+        margin-bottom:10px !important;
+    }
+
+    .sixtythreeOpener .divMemberD{
+        float:none;
+        margin:20px auto 0 auto !important;
+        width:250px;
+    }
+
+    .sixtythreeOpener .divMemberD .inputBtn{
+        float:none;
+        width:150px !important;
+        margin-left:10px;
+    }
+
+    .sixtythreeOpener .divMemberD label{
+        float:none;
+        margin-left:18px;
+    }
+
+    .sixtythreeOpener .divNewMemberContent .contShopping{
+        display: block;
+        margin:auto;
+    }
+
+
+
+
+
+    /* basket */
+    .sixtythreeOpener .divBasketContent{
+        margin:auto;
+        width:100%;
+    }
+
+    .sixtythreeOpener .divBasketContent .divBasketDetails{
+        float:none;
+        margin:25px auto 0 auto;
+        width:90%;
+    
+        height: auto;
+        max-height: none;
+}
+
+
+.sixtythreeOpener .divBasketContent .divBasketDetails .basketDetailsScroller {
+    max-height: none;
+}
+
+    .sixtythreeOpener .divBasketContent .divBasketItemHeaders {
+        display: none;
+    }
+
+    .sixtythreeOpener .divItem .imgItemPic {
+        max-width: 60px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription {
+        padding-right: 0;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity,
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice {
+        min-height: initial;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo{
+        width:100%;
+        padding-right:20px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divInfo div.content {
+        padding: 5px 0 10px 0;
+        min-width: 150px;
+        max-width: 260px;
+        text-align: left;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity{
+        display:inline-block;
+        width:auto;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span{
+        margin:initial;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity span.spanMobilePrice{
+        display:inline-block;
+        padding-left:3px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice{
+        float:right;
+        display:inline-block;
+        width:auto;
+        margin:0;
+        padding:0;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+        width:100%;
+        margin:0;
+        padding:0;
+        text-align: right;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .aDelete {
+        top:10px;
+    }
+
+    .sixtythreeOpener div.separator.sepA {
+        padding: 20px 0 0 0;
+        margin: 0 0 20px 0;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal{
+        float:none;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal table{
+        float:none;
+        margin:0 auto 0 auto;
+        width:90%;
+    }
+
+        .sixtythreeOpener .divBasketContent .divTotal table tr td.left{
+            text-align:left;
+        }
+
+    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton{
+        float:none;
+        margin:40px auto 0 auto;
+        width:90%;
+        text-align:center;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
+        float:none;
+        margin:5px auto 20px auto;
+    }
+
+    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
+        float:none;
+        width:200px;
+    }
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {
+   .sixtythreeOpener{
+        bottom:0;
+        height:auto;
+        background-color:#fff;
+    }
+
+    .sixtythreeOpener .divSearchContent{
+        width:670px;
+        position: relative;
+    }
+
+    .sixtythreeOpener.divUserOpener{
+        padding:0 0 30px 0;
+    }
+
+    .sixtythreeOpener .divLoginContent,
+    .sixtythreeOpener .divNewMemberContent{
+        width:100%;
+    }
+
+    .sixtythreeOpener .openerHeader{
+       display:block;
+       margin-bottom: 40px;
+    }
+
+    .sixtythreeOpener h1.login{
+        display:none;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin{
+        float:none;
+        margin:auto;
+        width:455px;
+    }
+
+    .sixtythreeOpener .input{
+        height:52px !important;
+        font-size: 13px !important;
+        text-align:center;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
+        float:none;
+        margin:20px 0 20px 85px;
+        width:200px;
+        font-size: 15px !important;
+    }
+
+    .sixtythreeOpener .divLoginContent .divLogin a{
+        float:none;
+        font-size: 13px !important;
+        text-align:center;
+    }
+
+        .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+            margin:auto;
+            width:250px;
+        }
+
+
+    .sixtythreeOpener .divLoginContent .divOr{
+        float:none;
+        margin:65px auto 0 auto;
+        width:670px;
+        height:2px;
+        border-bottom:1px solid #f2f2f2;
+    }
+
+    .sixtythreeOpener .divLoginContent .spanOr{
+        top:-6px;
+        left:50%;
+        margin-left:-45px;
+        padding:0 20px 0 20px;
+        background-color:#fff;
+    }
+
+
+    .sixtythreeOpener .divLoginContent .divSocialIcons{
+        float:none;
+        margin:60px auto 0 auto;
+
+    }
+
+    .sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon{
+        margin:0 auto 10px auto;
+    }
+
+
+
+
+
+    .sixtythreeOpener .divMemberA,
+    .sixtythreeOpener .divMemberB,
+    .sixtythreeOpener .divMemberC{
+        float:none;
+        margin:auto !important;
+        width:455px;
+    }
+
+    .sixtythreeOpener .divMemberD{
+        float:none;
+        margin:50px auto 0 auto !important;
+        width:300px;
+    }
+
+    .sixtythreeOpener .divNewMemberContent .input{
+        float:left;
+        width:100% !important;
+        margin:0 10px 10px 0;
+    }
+
+    .sixtythreeOpener .divMemberD .inputBtn{
+        float:none;
+        width:225px;
+        height:15px;
+    }
+
+    .sixtythreeOpener .divMemberD label{
+        float:none;
+        margin-left:40px;
+    }
+
+    .sixtythreeOpener .divNewMemberContent .contShopping{
+        display: block;
+        margin:auto;
+    }
+
+
+
+
+
+
+
+    /* basket */
+    .sixtythreeOpener .divBasketContent{
+        width:670px;
+        padding-bottom: 20px;
+    }
+
+    .sixtythreeOpener .divBasketContent .divBasketDetails{
+        float:none;
+        width:100%;
+    }
+
+    .sixtythreeOpener .divBasketContent .divBasketItemHeaders .header2{
+        float:left;
+        margin-left:28px;
+        width:148px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divQuantity{
+        width:65px;
+    }
+
+    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+        text-align: center;
+    }
+
+
+}
+
+@media all and (min-width: 1019px) and (max-width: 1434px) {
+    .sixtythreeOpener .divLoginContent,
+    .sixtythreeOpener .divNewMemberContent,
+    .sixtythreeOpener .divBasketContent,
+    .sixtythreeOpener .divSearchContent{
+        width:960px;
+    }
+
+    #userOpenerInnerDivPassword {
+        top:60px;
+    }
+
+    .sixtythreeOpener .divLoginContent .divOr{
+        margin:37px 0 0 135px;
+    }
+
+    .sixtythreeOpener .divLoginContent .divSocialIcons{
+        width:340px;
+    }
+
+
+
+
+    
+    .sixtythreeOpener .divMemberD{
+        width:205px;
+    }
+
+    .sixtythreeOpener .divMemberD .inputBtn{
+        width:130px;
+    }
+
+}
+
+@media all and (min-width: 1435px) {
+    .sixtythreeOpener .divLoginContent,
+    .sixtythreeOpener .divNewMemberContent,
+    .sixtythreeOpener .divSearchContent{
+        width:1080px;
+    }
+}

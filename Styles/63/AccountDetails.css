@@ -84,7 +84,7 @@
 
 
 
-#accountDetails .divDetail p {
+#accountDetails .divDetail > p {
     width: 320px;
     margin-top: 25px;
 }
@@ -282,6 +282,68 @@
         float: left;
         margin: 2px 6px 0 0;
     }
+
+
+/* YENİ ADRES EKLEME FORMU */
+#accountDetails .divNewAddressWrapper {
+    display:block;
+    float: left;
+}
+
+#accountDetails .divNewAddressWrapper input[type="text"], 
+#accountDetails .divNewAddressWrapper select {
+    float: left;
+    margin-top: 10px;
+    width: calc(50% - 5px);
+}
+
+#accountDetails .divNewAddressWrapper .pDescription{
+    width: 350px;
+    margin: 20px 0 10px 0;
+}
+
+#accountDetails .divNewAddressWrapper textarea {
+    width: calc(100%);
+    height: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#accountDetails .divNewAddressWrapper a.contShopping {
+    width: 100px !important;
+    left: 5px;
+    float: left;
+    top: 12px;
+}
+
+    #accountDetails .divNewAddressWrapper a.contShopping span {
+        line-height: 20px;
+    }
+
+    #accountDetails .divNewAddressWrapper a.contShopping img {
+        margin-top: 13px;
+    }
+
+
+#accountDetails .divNewAddressWrapper input[type="text"].v1,
+#accountDetails .divNewAddressWrapper select.v1{
+    margin-right:5px;
+}
+
+#accountDetails .divNewAddressWrapper input[type="text"].v2,
+#accountDetails .divNewAddressWrapper select.v2{
+    margin-left:5px;
+}
+
+#accountDetails .divNewAddressWrapper .saveAddingNewAddress{
+    float: right;
+    margin-top: 10px;
+    width: 200px;
+}
+/* END - YENİ ADRES EKLEME FORMU */
+
+
 /* end - address information */
 
 
@@ -323,47 +385,40 @@
     background-color:#f7f7f7;
 }
 
-#accountDetails .divDetail.orderHistory .divOrderRow .divDescription,
-#accountDetails .divDetail.orderHistory .divOrderRow .divPrice,
-#accountDetails .divDetail.orderHistory .divOrderRow .divStatus{
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber,
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice,
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus{
     float:left;
     padding-top:26px;
     margin-right:30px;
     height:80px;
 }
 
-#accountDetails .divDetail.orderHistory .divOrderRow .divDescription{
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber{
     width:130px;
     margin-left:30px;
 }
 
-<<<<<<< HEAD
-#accountDetails .divDetail.orderHistory .divOrderRow .divDescription .spanDate{
+
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber .spanDate{
     margin-top:5px;
 }
 
-#accountDetails .divDetail.orderHistory .divOrderRow .divPrice{
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice{
     width:140px;
     text-align:center;
 }
 
-#accountDetails .divDetail.orderHistory .divOrderRow .divStatus{
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus{
     width:180px;
     margin-right:0;
 }
 
 
-#accountDetails .divDetail.orderHistory .divOrderRow .divStatus img{
+#accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img{
     float:left;
     margin-top:-5px;
     margin-right:12px;
-}
-
-#accountDetails .divDetail.orderHistory .divOrderDetails{
-    width:calc(100%-4px);
-    height:300px;
-    margin-left:4px;
-    background-color:#fff;
 }
 
 #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown  {
@@ -372,74 +427,180 @@
     right:30px;
 }
 
-/* YENİ ADRES EKLEME FORMU */
 
-#accountDetails .divNewAddressWrapper {
+
+
+#accountDetails .divDetail.orderHistory .divOrderDetails{
+    width:calc(100%-4px);
+    padding-top:30px;
+    margin-left:4px;
+    background-color:#fff;
+}
+
+
+#accountDetails .divDetail.orderHistory .divItem {
+    width: 100%;
+    padding-left:20px;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .imgItemPic {
+    float:left;
+    z-index: 10;
+    max-width: 58px;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription {
+    z-index: 5;
+    padding-right: 30px;
+    padding-left:65px;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription,
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo,
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice,
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice {
+    min-height: 70px;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo,
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice,
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice {
+    float: left;
+
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo{
+    width:270px;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo .divContent {
+    padding-left: 10px;
+}
+
+    #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo .divContent a {
+        display: table;
+    }
+
+    #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo .divContent span.info1 {
+        display: block;
+        margin: 5px 0 0 0;
+    }
+
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice{
+    width:150px;
+}
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice div.content span.amount {
+    margin-left:4px;
+}
+
+
+#accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice{
+    width:110px;
+}
+
+    #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice div.content {
+        width:100%;
+        text-align:right;
+    }
+
+
+#accountDetails .divDetail.orderHistory div.separator.sepA {
+    padding: 20px 0 0 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+
+#accountDetails .divDetail.orderHistory .divOrderDetails .divBillingAddressDetail{
+    padding:10px 0 45px 0;
+    width:100%;
+    border:1px solid #f00;
+}
+
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divAdressDetails{
+    float:left;
+    margin:0 0 0 30px;
+    width:200px;
+    border:1px solid #f00;
+}
+
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divAdressDetails span.header5{
     display:block;
-    float: left;
 }
 
-#accountDetails .divNewAddressWrapper input[type="text"], 
-#accountDetails .divNewAddressWrapper select {
-    float: left;
-    margin-top: 10px;
-    width: calc(50% - 5px);
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divAdressDetails p.address{
+    margin-top:5px;
+    margin-bottom:15px;
 }
 
-#accountDetails .divNewAddressWrapper .pDescription{
-    width: 350px;
-    margin: 20px 0 10px 0;
+
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail{
+    float:right;
+    margin:0 60px 0 0;
+    padding:52px 32px 0 32px;
+    width:330px;
+    text-align:center;
+    border:1px solid #f00;
 }
 
-#accountDetails .divNewAddressWrapper textarea {
-    width: calc(100%);
-    height: 100px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal{
+    width:100%;
+    background-color:#00ffff;
 }
 
-#accountDetails .divNewAddressWrapper a.cancelAddingNewAddress{
-    display: table;
-    float: left;
-    margin-top: 28px;
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal span{
+    display:block;
+    background-color:#000;
 }
 
-#accountDetails .divNewAddressWrapper a.contShopping {
-    width: 100px !important;
-    left: 5px;
-    float: left;
-    top: 12px;
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal .divLeft{
+    float:left;
+    width:49%;
+    text-align:left;
+    background-color:#ff0;
 }
 
-    #accountDetails .divNewAddressWrapper a.contShopping span {
-        line-height: 20px;
-    }
-
-
-    #accountDetails .divNewAddressWrapper a.contShopping img {
-        margin-top: 13px;
-    }
-
-
-#accountDetails .divNewAddressWrapper input[type="text"].v1,
-#accountDetails .divNewAddressWrapper select.v1{
-    margin-right:5px;
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal .divLeft .subTotal{
+    margin-bottom:8px;
 }
 
-#accountDetails .divNewAddressWrapper input[type="text"].v2,
-#accountDetails .divNewAddressWrapper select.v2{
-    margin-left:5px;
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal .divRight{
+    float:right;
+    width:49%;
+    text-align:right;
+    background-color:#ff0;
+}
+
+#accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal .divRight span{
+    margin-bottom:5px;
 }
 
 
 
-#accountDetails .divNewAddressWrapper .saveAddingNewAddress{
-    float: right;
-    margin-top: 10px;
-    width: 200px;
-}
-/* END - YENİ ADRES EKLEME FORMU */
+
+
+
+
+
+
+
 
 
 

@@ -6,10 +6,10 @@
     margin-top: 20px;
 }
 
-#payment .divGiftNoteTextareaWrapper textarea {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+    #payment .divGiftNoteTextareaWrapper textarea {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 
 #payment {
     margin: 50px auto 0 auto;
@@ -47,10 +47,10 @@
     transition: all 0.7s;
 }
 
-.divAddress-Payment-Content .divAddress * ,
-.divAddress-Payment-Content .divPayment * {
-    transition: all 0.7s;
-}
+    .divAddress-Payment-Content .divAddress *,
+    .divAddress-Payment-Content .divPayment * {
+        transition: all 0.7s;
+    }
 
     .divAddress-Payment-Content .divAddress .addressName {
         margin: 30px 0 5px 0;
@@ -113,109 +113,109 @@
     background-color: #fff;
 }
 
-.divWholePaymentWrapper.divContent{
+.divWholePaymentWrapper.divContent {
     border: 1px solid #e5e5e5;
-} 
-
-
-
-    /* ADRES İÇERİK */
-    .divAddress-Payment-Content .divContent .divAddressContent {
-        width: 100%;
-        transition: all 0.7s;
-    }
-
-        .divAddress-Payment-Content .divContent .divAddressContent .divAddressText {
-            float: left;
-        }
-
-        .divAddress-Payment-Content .divContent .divAddressContent h3 {
-            padding: 40px 0 15px 0;
-        }
-
-        .divAddress-Payment-Content .divContent .divAddressContent .pDescription {
-            width: 350px;
-            transition: all 0.5s;
-            margin: 0px 0 10px 0;
-        }
-
-        .divAddress-Payment-Content .divContent .divAddressContent .saveBtn {
-            float: right;
-            margin: 33px 0 0 0;
-            width: 200px;
-        }
-
-
-
-/* OPTION */
-.divAddress-Payment-Content .divContent .divAddressContent .divAddressOption,
-.divPaymentOption .divWirePaymentOption {
-    float: left;
-    margin-right: 8px;
-    padding-left: 15px;
-    margin-top: 8px;
-    width: 286px;
-    height: 200px;
-    background-color: #fff;
-    border: 1px solid #f2f2f2;
 }
 
-    .divAddress-Payment-Content .divContent .active,
-    .divPaymentOption .divWirePaymentOption.active {
-        background-color: #f2f2f2 !important;
-        border: 1px solid #f8f8f8;
-    }
 
-.divAddress-Payment-Content .divContent .divAddressContent .divAddressOption label {
+
+/* ADRES İÇERİK */
+.divAddress-Payment-Content .divContent .divAddressContent {
     width: 100%;
-    height: 25px;
-    margin: 15px 0 0 0;
+    transition: all 0.7s;
 }
 
-.divAddress-Payment-Content .divContent .divAddressContent .divAddressOption h4.name,
-.divAddress-Payment-Content .divContent .divWirePaymentOption h4.name {
-    display:block;
-    margin: 10px 0 0 30px;
-}
-
-.divAddress-Payment-Content .divContent .divAddressContent .divAddressOption .aNumber,
-.divAddress-Payment-Content .divContent .divWirePaymentOption .aNumber {
-    display: inline-block;
-    margin: 5px 0 0 30px;
-}
-
-.divAddress-Payment-Content .divContent .divAddressContent .divAddressOption .aNumber .number,
-.divAddress-Payment-Content .divContent .divWirePaymentOption .aNumber .number{
-    display: inline-block;
-    margin: 0;
-}
-
-
-
-.divAddress-Payment-Content .divContent .divAddressContent .divAddressOption p,
-.divAddress-Payment-Content .divContent .divWirePaymentOption p {
-    margin: 15px 0 10px 31px;
-    width: 200px;
-    line-height: 15px;
-}
-
-    #payment .aEditAddress, 
-    #payment .aDeleteAddress {
-        display:inline-block;
-        float: right;
-        margin-right:20px;
-    }
-
-    .divAddress-Payment-Content .divContent .divAddressOption a img {
+    .divAddress-Payment-Content .divContent .divAddressContent .divAddressText {
         float: left;
-        margin: 2px 6px 0 0;
+    }
+
+    .divAddress-Payment-Content .divContent .divAddressContent h3 {
+        padding: 40px 0 15px 0;
+    }
+
+    .divAddress-Payment-Content .divContent .divAddressContent .pDescription {
+        width: 350px;
+        transition: all 0.5s;
+        margin: 0px 0 10px 0;
+    }
+
+    .divAddress-Payment-Content .divContent .divAddressContent .saveBtn {
+        float: right;
+        margin: 33px 0 0 0;
+        width: 200px;
     }
 
 
 
-    
+    /* OPTION */
+    .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption,
+    .divPaymentOption .divWirePaymentOption {
+        float: left;
+        margin-right: 8px;
+        padding-left: 15px;
+        margin-top: 8px;
+        width: 286px;
+        height: 200px;
+        background-color: #fff;
+        border: 1px solid #f2f2f2;
+    }
+
+        .divAddress-Payment-Content .divContent .active,
+        .divPaymentOption .divWirePaymentOption.active {
+            background-color: #f2f2f2 !important;
+            border: 1px solid #f8f8f8;
+        }
+
+        .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption label {
+            width: 100%;
+            height: 25px;
+            margin: 15px 0 0 0;
+        }
+
+        .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption h4.name,
+        .divAddress-Payment-Content .divContent .divWirePaymentOption h4.name {
+            display: block;
+            margin: 10px 0 0 30px;
+        }
+
+        .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption .aNumber,
+        .divAddress-Payment-Content .divContent .divWirePaymentOption .aNumber {
+            display: inline-block;
+            margin: 5px 0 0 30px;
+        }
+
+            .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption .aNumber .number,
+            .divAddress-Payment-Content .divContent .divWirePaymentOption .aNumber .number {
+                display: inline-block;
+                margin: 0;
+            }
+
+
+
+        .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption p,
+        .divAddress-Payment-Content .divContent .divWirePaymentOption p {
+            margin: 15px 0 10px 31px;
+            width: 200px;
+            line-height: 15px;
+        }
+
+#payment .aEditAddress,
+#payment .aDeleteAddress {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+
+.divAddress-Payment-Content .divContent .divAddressOption a img {
+    float: left;
+    margin: 2px 6px 0 0;
+}
+
+
+
+
 /* YENİ ADRES EKLEME FORMU */
-.divNewAddressContent input[type="text"], 
+.divNewAddressContent input[type="text"],
 #payment select {
     float: left;
     margin-top: 10px;
@@ -266,19 +266,19 @@ a.contShopping {
 }
 
 
-.divNewAddressContent input[type="text"].v1,
-.divNewAddressContent select.v1,
-.divAddNewInvoiceAddress input[type="text"].v1,
-.divAddNewInvoiceAddress select.v1{
-    margin-right:5px;
-}
+    .divNewAddressContent input[type="text"].v1,
+    .divNewAddressContent select.v1,
+    .divAddNewInvoiceAddress input[type="text"].v1,
+    .divAddNewInvoiceAddress select.v1 {
+        margin-right: 5px;
+    }
 
-.divNewAddressContent input[type="text"].v2,
-.divNewAddressContent select.v2,
-.divAddNewInvoiceAddress input[type="text"].v2,
-.divAddNewInvoiceAddress select.v2{
-    margin-left:5px;
-}
+    .divNewAddressContent input[type="text"].v2,
+    .divNewAddressContent select.v2,
+    .divAddNewInvoiceAddress input[type="text"].v2,
+    .divAddNewInvoiceAddress select.v2 {
+        margin-left: 5px;
+    }
 
 
 
@@ -433,7 +433,7 @@ a.contShopping {
 }
 
 #card-number {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 #payment .divPaymentContent .divCardNumber {
@@ -947,23 +947,23 @@ a.contShopping {
 }
 
 #payment .divBillingAddress.savedAddress .divBillingAddressOptionsWrapper {
-    display:block;
+    display: block;
 }
 
 #payment .divBillingAddress .divBillingAddressOptionsWrapper {
-    display:none;
+    display: none;
 }
 
-    .divAddressOptionsWrapper .innerWrapper, .divBillingAddressOptionsWrapper .innerWrapper {
-        float: left;
-    }
+.divAddressOptionsWrapper .innerWrapper, .divBillingAddressOptionsWrapper .innerWrapper {
+    float: left;
+}
 
 #payment .deliveryAddressWrapper .divAddressOptionsWrapper {
-    display:none;
+    display: none;
 }
 
 #payment .deliveryAddressWrapper.savedAddress .divAddressOptionsWrapper {
-    display:block;
+    display: block;
 }
 
 .divAddressOption {
@@ -991,19 +991,19 @@ a.contShopping {
 }
 
 #payment .deliveryAddressWrapper .divNewAddressContent {
-    display:none;
+    display: none;
 }
 
 #payment .deliveryAddressWrapper.newAddress .divNewAddressContent {
-    display:block;
+    display: block;
 }
 
 #payment .divBillingAddress.newAddress .divAddNewInvoiceAddress {
-    display:block;
+    display: block;
 }
 
 #payment .divBillingAddress .divAddNewInvoiceAddress {
-    display:none;
+    display: none;
 }
 
 /* GENEL YAPIYA EKLEMELER */
@@ -1083,12 +1083,12 @@ a.contShopping {
 
                 .divAddress-Payment-Content .divContent .divAddressContent h3 {
                     padding: 0;
-                    margin-bottom:15px;
+                    margin-bottom: 15px;
                 }
 
-                .divAddress-Payment-Content .divContent .divAddressContent .divAddressText label ,
+                .divAddress-Payment-Content .divContent .divAddressContent .divAddressText label,
                 .divAddress-Payment-Content .divContent .divAddressContent .billingAddressWrapper label {
-                    margin:0 !important;
+                    margin: 0 !important;
                 }
 
                 .divAddress-Payment-Content .divContent .divAddressContent .pDescription {
@@ -1132,19 +1132,19 @@ a.contShopping {
                         width: 95%;
                     }
 
-                .divAddress-Payment-Content .divContent .divAddressOption a img {
-                    margin: 1px 6px 0 0;
-                }
+            .divAddress-Payment-Content .divContent .divAddressOption a img {
+                margin: 1px 6px 0 0;
+            }
 
 
-                .divAddress-Payment-Content .divContent select.v2{
-                    margin-bottom:10px !important;
-                }
+            .divAddress-Payment-Content .divContent select.v2 {
+                margin-bottom: 10px !important;
+            }
 
 
 
-            .divAddress-Payment-Content .divContent .divAddressContent .billingAddressWrapper{
-                margin:20px 0 0 0 !important;
+            .divAddress-Payment-Content .divContent .divAddressContent .billingAddressWrapper {
+                margin: 20px 0 0 0 !important;
             }
 
             .divAddress-Payment-Content .divContent .divAddressContent .divAnotherRecipient {
@@ -1246,13 +1246,13 @@ a.contShopping {
             width: 100% !important;
         }
 
-        #payment .divPaymentOption.creditCardOption .cardLogo {
-            top: 17px;
-            left: 120px;
-            width: 70px;
-        }
+    #payment .divPaymentOption.creditCardOption .cardLogo {
+        top: 17px;
+        left: 120px;
+        width: 70px;
+    }
 
-    #payment .divPaymentContent input.inputcard ,
+    #payment .divPaymentContent input.inputcard,
     #payment .divPaymentContent input.card-number {
         width: 100% !important;
         height: 40px !important;
@@ -1292,10 +1292,10 @@ a.contShopping {
         width: 100%;
     }
 
-    #payment .divPaymentContent .divPaymentOption .divWirePaymentOption img{
-        margin-top:10px;
-        width: 100px;
-    }
+        #payment .divPaymentContent .divPaymentOption .divWirePaymentOption img {
+            margin-top: 10px;
+            width: 100px;
+        }
 
     #payment .divPaymentContent .divPaymentOption.paypalOption img,
     #payment .divPaymentContent .divPaymentOption.bkmExpressOption img {
@@ -1311,9 +1311,9 @@ a.contShopping {
             font-size: 11px;
         }
 
-        #paymentCreditCard table tr td label input{
-            margin-right:0;
-        }
+            #paymentCreditCard table tr td label input {
+                margin-right: 0;
+            }
 
     #payment .divPaymentContent .divPay {
         float: none;
@@ -1355,10 +1355,10 @@ a.contShopping {
             padding: 0 30px 50px 30px;
         }
 
-                .divAddress-Payment-Content .divContent .divAddressOption {
-                    width: 294px;
-                    margin-bottom: 8px;
-                }
+            .divAddress-Payment-Content .divContent .divAddressOption {
+                width: 294px;
+                margin-bottom: 8px;
+            }
 
             .divAddress-Payment-Content .divContent .saveBtnA {
                 margin-left: 35px;
@@ -1417,13 +1417,6 @@ a.contShopping {
 
 
 
-
-
-
-
-
-
-
 #payment .divAddress {
     float: left;
     height: 246px;
@@ -1431,45 +1424,41 @@ a.contShopping {
     border-bottom: 10px solid #fff !important;
 }
 
+    #payment .divAddress h2,
+    #payment .divAddress h3,
+    #payment .divAddress a,
+    #payment .divAddress p,
+    #payment .divAddress span {
+        color: #cacaca !important;
+    }
 
-#payment .divAddress h2, 
-#payment .divAddress h3, 
-#payment .divAddress a, 
-#payment .divAddress p, 
-#payment .divAddress span{
-    color:#cacaca !important;
-}
+        #payment .divAddress a.edit {
+            display: block;
+        }
 
+    #payment .divAddress.selectedTab,
+    #payment .divPayment.selectedTab {
+        background-color: #4b4d63 !important;
+        border-bottom: 10px solid #6d6e89 !important;
+    }
 
+        #payment .divAddress.selectedTab a.edit {
+            display: none;
+            opacity: 0;
+        }
 
+        #payment .divAddress.selectedTab h2 {
+            color: white !important;
+        }
 
-
-#payment .divAddress a.edit {
-    display:block;
-}
-
-#payment .divAddress.selectedTab,
-#payment .divPayment.selectedTab {
-    background-color: #4b4d63 !important;
-    border-bottom: 10px solid #6d6e89 !important;
-}
-
-#payment .divAddress.selectedTab a.edit {
-    display:none;
-    opacity: 0;
-}
-
-#payment .divAddress.selectedTab h2 {
-    color:white !important;
-}
-#payment .divAddress.selectedTab h3,
-#payment .divAddress.selectedTab a,
-#payment .divAddress.selectedTab p,
-#payment .divAddress.selectedTab span,
-#payment .divPayment.selectedTab h2,
-#payment .divPayment.selectedTab h3,
-#payment .divPayment.selectedTab a,
-#payment .divPayment.selectedTab p,
-#payment .divPayment.selectedTab span{
-    color:#f2f2f2 !important;
-}
+        #payment .divAddress.selectedTab h3,
+        #payment .divAddress.selectedTab a,
+        #payment .divAddress.selectedTab p,
+        #payment .divAddress.selectedTab span,
+        #payment .divPayment.selectedTab h2,
+        #payment .divPayment.selectedTab h3,
+        #payment .divPayment.selectedTab a,
+        #payment .divPayment.selectedTab p,
+        #payment .divPayment.selectedTab span {
+            color: #f2f2f2 !important;
+        }

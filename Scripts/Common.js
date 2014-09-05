@@ -113,13 +113,9 @@ function smartphoneLandscape() {
 
 // misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
 function miscImgLoader() {
-    var is63 = false;
 
-    if ($('#input63').length > 0) {
-        is63 = ($('#input63').val() == '63');
-    }
 
-    var imgFolderPath = (is63 ? '../Images/63' : 'Images');
+    var imgFolderPath = 'Images'
 
     $('body').find('img[data-sixtyThree]').each(function () {
 

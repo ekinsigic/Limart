@@ -1,7 +1,7 @@
 ﻿/* MAIN ENTRY */
 #mainEntry {
     width: 100%;
-    background-image: url('../Files/Sliders/Home/01.jpg');
+    background-image: url('Files/Sliders/Home/01.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

@@ -371,7 +371,7 @@
     top:26px;
     right:30px;
 }
-=======
+
 /* YENİ ADRES EKLEME FORMU */
 
 #accountDetails .divNewAddressWrapper {
@@ -415,7 +415,7 @@
     #accountDetails .divNewAddressWrapper a.contShopping span {
         line-height: 20px;
     }
->>>>>>> origin/master
+
 
     #accountDetails .divNewAddressWrapper a.contShopping img {
         margin-top: 13px;

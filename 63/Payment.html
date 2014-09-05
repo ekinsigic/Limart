@@ -336,17 +336,16 @@
 
                             <!-- selection between adding new address and using same address -->
                             <div class="addressNewOrSaved">
-                                <label for="savedAddressRadio" class="stop63LabelB">
-                                    <input id="savedAddressRadio" name="addressNewOrSaved" type="radio" checked />Kayıtlı Adres
-                                </label>
-                                <label for="newAddressRadio" class="stop63LabelB">
-                                    <input id="newAddressRadio" name="addressNewOrSaved" type="radio" />Yeni Adres
-                                </label>
+                                <label for="savedAddressRadio" class="stop63LabelB"><input id="savedAddressRadio" name="addressNewOrSaved" type="radio" checked />Kayıtlı Adres</label>
+                                <label for="newAddressRadio" class="stop63LabelB"><input id="newAddressRadio" name="addressNewOrSaved" type="radio" />Yeni Adres</label>
                             </div>
                             <!-- END - selection between adding new address and using same address -->
+
                         </div>
                         <!-- END - Intro to delivery address content -->
-                        <a href="#" class="stop63AStyleB saveBtn">KAYDET VE DEVAM ET</a><!-- Save Button -->
+
+
+                        <a href="#" class="stop63AStyleB saveBtn first">KAYDET VE DEVAM ET</a><!-- Save Button -->
 
                         <div class="separator"></div>
 
@@ -368,8 +367,9 @@
                                     <p class="stop63FaceZ">
                                         Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                     </p>
-                                        <a href="#" onclick="deleteAddressInfo(this, 1)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 1)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+
+                                    <a href="#" onclick="deleteAddressInfo(this, 1)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                    <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 1)" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                 </div>
 
                                 <div class="divAddressOption">
@@ -382,9 +382,10 @@
                                     <p class="stop63FaceZ">
                                         Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                     </p>
-                                        <a href="#" onclick="deleteAddressInfo(this, 2)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 2)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    <a href="#" onclick="deleteAddressInfo(this, 2)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                    <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 2)" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                 </div>
+
                                 <div class="divAddressOption">
                                     <label for="sampleB" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleB" />İş Adresi</label>
                                     <div class="separator"></div>
@@ -395,9 +396,10 @@
                                     <p class="stop63FaceZ">
                                         Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                     </p>
-                                        <a href="#" onclick="deleteAddressInfo(this, 3)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 3)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    <a href="#" onclick="deleteAddressInfo(this, 3)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                    <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 3)" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                 </div>
+
                                 <div class="divAddressOption">
                                     <label for="sampleD" class="stop63LabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleD" />İş Adresi</label>
                                     <div class="separator"></div>
@@ -408,9 +410,10 @@
                                     <p class="stop63FaceZ">
                                         Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
                                     </p>
-                                        <a href="#" onclick="deleteAddressInfo(this, 4)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                        <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 4)" class="stop63AStyleD aDeleteAddress" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    <a href="#" onclick="deleteAddressInfo(this, 4)" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                    <a href="#" onclick="editAddressInfo('#payment .deliveryAddressWrapper', 'newAddress,savedAddress', 4)" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                 </div>
+
                             </div>
                             <div class="separator"></div>
                             <!-- END - Delivery Address options section -->
@@ -453,9 +456,6 @@
                         <label for="differentBillingAddress" class="stop63LabelA"><input type="checkbox" id="differentBillingAddress" />Fatura Adresim ile teslimat adresim farklı.</label>
 
                         <div class="separator"></div>
-
-
-
  
 
 
@@ -465,21 +465,24 @@
                         <!-- Billing Address Section -->
                         <div class="billingAddressWrapper">
 
-
                             <h3 class="stop63FaceW">Fatura Adresi</h3>
+
                             <!-- Biling address and invoice address checkbox  -->
                             <div class="addressNewOrSavedInvoice">
                                 <label for="savedAddressInvoiceRadio" class="stop63LabelB"><input id="savedAddressInvoiceRadio" name="addressNewOrSavedInvoice" type="radio" checked />Kayıtlı Adres</label>
                                 <label for="newAddressInvoiceRadio" class="stop63LabelB"><input id="newAddressInvoiceRadio" name="addressNewOrSavedInvoice" type="radio" />Yeni Adres</label>
                             </div>
                             <!-- END -->
-                            <div class="divBillingAddress  ">
+
+                            <div class="divBillingAddress">
 
                                 <!-- Billing address options section -->
                                 <div class="divBillingAddressOptionsWrapper  ">
                                     <p class="stop63FaceX pDescription parentOriented">
                                         Faturanızın teslim edilmesini istediğiniz adresi seçiniz.
                                     </p>
+
+
                                     <div class="divAddressOption active">
                                         <label for="invoiceAddressOne" class="stop63LabelB"><input class="radioTypeA" name="invoiceAddressSelect" type="radio" id="invoiceAddressOne" checked />Fatura Ev Adresi</label>
                                         <div class="separator"></div>
@@ -507,6 +510,7 @@
                                         <a href="#" class="stop63AStyleD aDeleteAddress"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
                                         <a href="#" class="stop63AStyleD aEditAddress"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
                                     </div>
+
                                 </div>
                                 <div class="separator"></div>
                                 <!-- END -->
@@ -608,16 +612,21 @@
                             <div class="divcardName">
                                 <input type="text" placeholder="KART ÜZERİNDEKİ İSİM" class="stop63InputTextC inputcard" />
                             </div>
+
                             <img src="../Images/63/bonuslogo.png" class="cardLogo">
+
                             <div class="divCardNumber credit-card-group">
                                 <input id="card-number" type="text"  pattern="[0-9]*" placeholder="KREDİ KARTI / BANKA KARTI NUMARASI" class="stop63InputTextC inputCard card-number"/>
-                                <div class="divBankCard">
+                               
+                                 <div class="divBankCard">
                                     <img data-sixtythree="logotype-card-visa">
                                     <img data-sixtythree="logotype-card-master">
                                     <div class="separator"></div>
                                 </div>
                                 <div class="separator"></div>
                             </div>
+
+
                             <div class="divExpirationDate">
                                 <span class="stop63SpanStyleC">SON KULLANMA TARİHİ</span>
                                 <select class="stop63SelectA selectExpirationDate">

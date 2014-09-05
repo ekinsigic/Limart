@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	openOrCloseNewAddress('input[name=addressNewOrSaved]:radio', '#payment .deliveryAddressWrapper', 'newAddress,savedAddress');
-	openOrCloseNewAddress('input[name=addressNewOrSavedInvoice]:radio', '#payment .divBillingAddress', 'newAddress,savedAddress');
-	openClosedSections('#differentBillingAddress','#payment .billingAddressWrapper',20);
-	openClosedSections('#anotherRecipient','#payment .divAnotherRecipientContent',0);
-	openClosedSections('#giftNoteThis','#payment .divGiftNoteTextareaWrapper',0);
+	openOrCloseNewAddress('input[name=group1]:radio', '#payment .deliveryAddressWrapper', 'newAddress,savedAddress');
+	openOrCloseNewAddress('input[name=group2]:radio', '#payment .divBillingAddress', 'newAddress,savedAddress');
+	openClosedSections('#cbAddressSelection2','#payment .billingAddressWrapper',20);
+	openClosedSections('#cbDifferentPerson','#payment .divAnotherRecipientContent',0);
+	openClosedSections('#cbGiftNote','#payment .divGiftNoteTextareaWrapper',0);
 	radioActions();
 });
 

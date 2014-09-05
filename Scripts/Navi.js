@@ -5,49 +5,20 @@
         });
         $(window).resize(function(){
             carryMenu();
-            // Eğer opener'ın boyutu ekran boyunu geçecekse, açıksa, ve ekran boyutu değişiyorsa:
-            if (isMobile && isOpenerOn && $('#divOpenerFrame').height() >= (wH-hH)) {
-
-
+            if (ismobile && isOpenerOn) {
                 $('#divOpenerFrame').css({
                     'position':'absolute',
                     'bottom': 'auto',
                     'top': -($('#divOpenerFrame').height()-hH),
                     'overflow':'visible'
                 });
-                // $('#divOpenerFrame').css({// Opener'ımızın yüksekliğini tekrar ekran boyuna göre ayarlıyoruz,
-                //     'max-height':(wH-hH),
-                //     'overflow':'auto'
-                // });
-
-                // $('#divOpenerFrame').css({
-                //  '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  'transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-webkit-transition':'-webkit-transform '+0+'s',
-                //  '-moz-transition':'-moz-transform '+0+'s',
-                //  '-ms-transition':'-ms-transform '+0+'s',
-                //  '-o-transition':'-o-transform '+0+'s',
-                //  'transition':'transform '+0+'s'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
-                // });
-                // otherItemsToSlide.css({
-                //  '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                //  'transform':'translate3d(0px,'+(wH-hH)+'px,0px)'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
-                // });
-
-                //$('#divOpenerFrame').mCustomScrollbar("update");//Scrollbar plug-in'imizi baştan başlatıyoruz.
-            }
-            else if (!isMobile) {
-                closeOpener();
+            };
+            if (!isMobile) {
+                closeOpener()
             }
         });
         // opener globals
-        var openerTimer = 200; //Opener'ın açılış ve kapanış süresi
+        var openerTimer = 700; //Opener'ın açılış ve kapanış süresi
         var isOpenerOn = false; //Opener açık mı değil mi boolean'ı
         var lastTriggerType = ""; //En son açık olan opener adı
         var isCurrentlyAnimated = false; //Opener o sırada animasyon halinde mi
@@ -143,6 +114,7 @@
 
                 // calculate opener timer based on whether an opener is already opened OR this is the first opener being active
                 if (isOpenerOn) {
+                    closeOpener();
                     currentOpenerTimer = openerTimer // opening and closing takes double time
                 }
                 scrollTopBeforeOpening = $(document).scrollTop();
@@ -190,11 +162,11 @@
                      '-ms-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      '-o-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      'transform':'translate3d(0px,'+slideDistance+'px,0px)',
-                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
-                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
-                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
-                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
-                     'transition':'transform '+(openerTimer/1000)+'s'
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
+                     'transition':'transform '+(openerTimer/1300)+'s'
                     });
 
                     otherItemsToSlide.css({
@@ -203,11 +175,11 @@
                      '-ms-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      '-o-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      'transform':'translate3d(0px,'+slideDistance+'px,0px)',
-                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
-                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
-                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
-                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
-                     'transition':'transform '+(openerTimer/1000)+'s'
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
+                     'transition':'transform '+(openerTimer/1300)+'s'
                     });
 
 
@@ -231,11 +203,12 @@
 
         // Close currently active content
         function closeOpener() {
-            if (isOpenerOn) {
-
-                if ($('#divOpenerFrame').height() == (wH-hH)) {//Eğer opener'ımızın altındaki elementler display:none'daysa, tekrar görünür yapıyoruz
+            if (isOpenerOn && !isCurrentlyAnimated) {
+                isCurrentlyAnimated = true;
+                if ($('#divOpenerFrame').height() >= (wH-hH)) {//Eğer opener'ımızın altındaki elementler display:none'daysa, tekrar görünür yapıyoruz
+                    
                     otherItemsToSlide.css('display','block');
-                    scrollTopBeforeOpening = $(window).scrollTop();
+                    var scrollTopMiniBeforeOpening = $(window).scrollTop();
                     $('#divOpenerFrame').css({
                         'height': 'auto',
                         'position':'fixed',
@@ -246,7 +219,7 @@
                         'overflow-y': 'visible',
                         '-webkit-overflow-scrolling': 'touch'
                     });
-                    $('#divOpenerFrame').scrollTop(scrollTopBeforeOpening)
+                    $('#divOpenerFrame').scrollTop(scrollTopMiniBeforeOpening)
                 }
                 else {
                     $('.divOpenerBodyOverlay').remove();
@@ -261,11 +234,11 @@
                          '-ms-transform':'translate3d(0px,0px,0px)',
                          '-o-transform':'translate3d(0px,0px,0px)',
                          'transform':'translate3d(0px,0px,0px)',
-                         '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
-                         '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
-                         '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
-                         '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
-                         'transition':'transform '+(openerTimer/1000)+'s'
+                         '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
+                         '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
+                         '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
+                         '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
+                         'transition':'transform '+(openerTimer/1300)+'s'
                         });
                     otherItemsToSlide.css({
                          '-webkit-transform':'translate3d(0px,0px,0px)',
@@ -273,18 +246,18 @@
                          '-ms-transform':'translate3d(0px,0px,0px)',
                          '-o-transform':'translate3d(0px,0px,0px)',
                          'transform':'translate3d(0px,0px,0px)',
-                         '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
-                         '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
-                         '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
-                         '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
-                         'transition':'transform '+(openerTimer/1000)+'s'
+                         '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
+                         '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
+                         '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
+                         '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
+                         'transition':'transform '+(openerTimer/1300)+'s'
                     });
                 //
 
                 var s = setTimeout(function () {
                     isOpenerOn = false;
                     lastTriggerType = "";
-
+                    isCurrentlyAnimated = false;
                     // enable scroll back
                     if (isMobile) {
                         $(window).unbind('touchmove');

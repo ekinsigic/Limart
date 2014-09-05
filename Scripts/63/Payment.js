@@ -2,8 +2,8 @@ $(document).ready(function(){
 	openOrCloseNewAddress('input[name=addressNewOrSaved]:radio', '#payment .deliveryAddressWrapper', 'newAddress,savedAddress');
 	openOrCloseNewAddress('input[name=addressNewOrSavedInvoice]:radio', '#payment .divBillingAddress', 'newAddress,savedAddress');
 	openClosedSections('#differentBillingAddress','#payment .billingAddressWrapper',20);
-	openClosedSections('#anotherRecipient','#payment .divAnotherRecipientContent',20);
-	openClosedSections('#giftNoteThis','#payment .divGiftNoteTextareaWrapper',20);
+	openClosedSections('#anotherRecipient','#payment .divAnotherRecipientContent',0);
+	openClosedSections('#giftNoteThis','#payment .divGiftNoteTextareaWrapper',0);
 	radioActions();
 });
 

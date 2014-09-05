@@ -8,30 +8,37 @@
             // Eğer opener'ın boyutu ekran boyunu geçecekse, açıksa, ve ekran boyutu değişiyorsa:
             if (isMobile && isOpenerOn && $('#divOpenerFrame').height() >= (wH-hH)) {
 
-                $('#divOpenerFrame').css({// Opener'ımızın yüksekliğini tekrar ekran boyuna göre ayarlıyoruz,
-                    'max-height':(wH-hH),
-                    'overflow':'auto'
-                });
 
                 $('#divOpenerFrame').css({
-                 '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 'transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-webkit-transition':'-webkit-transform '+0+'s',
-                 '-moz-transition':'-moz-transform '+0+'s',
-                 '-ms-transition':'-ms-transform '+0+'s',
-                 '-o-transition':'-o-transform '+0+'s',
-                 'transition':'transform '+0+'s'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
+                    'position':'absolute',
+                    'bottom': 'auto',
+                    'top': -($('#divOpenerFrame').height()-hH),
+                    'overflow':'visible'
                 });
-                otherItemsToSlide.css({
-                 '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
-                 'transform':'translate3d(0px,'+(wH-hH)+'px,0px)'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
-                });
+                // $('#divOpenerFrame').css({// Opener'ımızın yüksekliğini tekrar ekran boyuna göre ayarlıyoruz,
+                //     'max-height':(wH-hH),
+                //     'overflow':'auto'
+                // });
+
+                // $('#divOpenerFrame').css({
+                //  '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  'transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-webkit-transition':'-webkit-transform '+0+'s',
+                //  '-moz-transition':'-moz-transform '+0+'s',
+                //  '-ms-transition':'-ms-transform '+0+'s',
+                //  '-o-transition':'-o-transform '+0+'s',
+                //  'transition':'transform '+0+'s'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
+                // });
+                // otherItemsToSlide.css({
+                //  '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-moz-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-ms-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  '-o-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                //  'transform':'translate3d(0px,'+(wH-hH)+'px,0px)'//Animasyonla aşağı kaydırılmış panelleri tekrar ekranın dibine çekiyoruz
+                // });
 
                 //$('#divOpenerFrame').mCustomScrollbar("update");//Scrollbar plug-in'imizi baştan başlatıyoruz.
             }
@@ -40,7 +47,7 @@
             }
         });
         // opener globals
-        var openerTimer = 700; //Opener'ın açılış ve kapanış süresi
+        var openerTimer = 200; //Opener'ın açılış ve kapanış süresi
         var isOpenerOn = false; //Opener açık mı değil mi boolean'ı
         var lastTriggerType = ""; //En son açık olan opener adı
         var isCurrentlyAnimated = false; //Opener o sırada animasyon halinde mi
@@ -151,7 +158,7 @@
 
 
                     var slideDistance = $('#' + currentTriggerType + 'Opener').outerHeight();
-                    if (slideDistance > (wH - hH)) {
+                    if (slideDistance > (wH-hH)) {
                         slideDistance = (wH-hH);
                     };
                     contentScrollers();
@@ -209,9 +216,15 @@
                         isCurrentlyAnimated = false;
                         if ($('#divOpenerFrame').height() == (wH-hH)) {//Eğer opener kapsayıcımız bütün ekranı kapatıyorsa, altındaki her şeyi display:none'a çekiyoruz
                             otherItemsToSlide.css('display','none');
+                            $('#divOpenerFrame').css({
+                                'position':'absolute',
+                                'bottom': 'auto',
+                                'top': -($('#divOpenerFrame').height()-hH),
+                                'overflow':'visible'
+                            });
                         };
                     }, openerTimer);
-                }, openerTimer);
+                }, currentOpenerTimer);
             }
         }
         //
@@ -222,10 +235,22 @@
 
                 if ($('#divOpenerFrame').height() == (wH-hH)) {//Eğer opener'ımızın altındaki elementler display:none'daysa, tekrar görünür yapıyoruz
                     otherItemsToSlide.css('display','block');
+                    scrollTopBeforeOpening = $(window).scrollTop();
                     $('#divOpenerFrame').css({
                         'height': 'auto',
+                        'position':'fixed',
+                        'max-height':(wH-hH),
+                        'bottom': (wH - hH),
+                        'top':'auto',
+                        'overflow':'auto',
+                        'overflow-y': 'visible',
+                        '-webkit-overflow-scrolling': 'touch'
                     });
-                };
+                    $('#divOpenerFrame').scrollTop(scrollTopBeforeOpening)
+                }
+                else {
+                    $('.divOpenerBodyOverlay').remove();
+                }
 
                 $(document).scrollTop(scrollTopBeforeOpening); //eğer opener açıkken site display:none'a çekilmişse, açıldığında başa dönecektir
                                                                //bu yüzden opener'ı kapatırken scroll'u eski haline döndürüyoruz.
@@ -331,6 +356,7 @@
         if (isMobile) {};
             $('#divOpenerFrame').css({
                 'max-height':(wH-hH),
+                'bottom': (wH - hH),
                 'overflow':'auto',
                 'overflow-y': 'visible',
                 '-webkit-overflow-scrolling': 'touch'

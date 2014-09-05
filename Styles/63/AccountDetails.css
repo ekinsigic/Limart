@@ -584,6 +584,9 @@
 #accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail .divSubTotal .divRight{
     float:right;
     width:49%;
+
+
+
     text-align:right;
     background-color:#ff0;
 }

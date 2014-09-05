@@ -49,6 +49,7 @@ function jqmSwipeEvents() {
     jQuery(document).on("scrollstart", function (event) {
         isMobileScrolling = true;
     });
+
     jQuery(document).on("scrollstop", function (event) {
         isMobileScrolling = false;
     });
@@ -264,12 +265,7 @@ function openOrCloseAccountSubMenu(sender) {
 function openAccountSubMenu(sender) {
     $(sender).addClass('fullActive');
     $(sender).find('img.white').addClass('fullActive');
-
-    setULLevel2(sender, false);
-
-    setTimeout(function () {
-        $(sender).parent().find('ul.level2').addClass('fullActive');
-    }, isTabletPortrait ? 20 : 0);
+    $(sender).parent().find('ul.level2').addClass('fullActive');
 
     setTimeout(function () {
         $('#menuActiveOverlay').addClass('fullActive');
@@ -294,16 +290,6 @@ function closeAccountSubMenu() {
 
     setTimeout(function () {
         $('aside ul.level2').removeClass('fullActive');
-
-        if (isTabletPortrait) {
-            $('aside ul.level2').css({
-                transform: 'translate3d(0,0,0)',
-                '-webkit-transform': 'translate3d(0,0,0)',
-                '-moz-transform': 'translate3d(0,0,0)',
-                '-ms-transform': 'translate3d(0,0,0)',
-                '-o-transform': 'translate3d(0,0,0)'
-            }).addClass('fullActive');
-        }
 
         isAccountSubMenuActive = false;
         isAccountSubMenuCurrAnimated = false;
@@ -334,11 +320,8 @@ function accountSubMenuSwitch(sender) {
         // 6. yeni (gonderene bagli) UL yi aktif kilmadan once LI lerinin opacity degerini sifirla
         $(sender).parent().find('ul.level2 li').css({ opacity: 0 });
 
-        // 6*. yeni (gonderene bagli) UL nin stilini düzenle
-        setULLevel2(sender, true);
-
         // 7. yeni (gonderene bagli) UL yi aktif kil ama yukaridaki (6 daki) durumdan dolayi LI ler gorunmeyecektir
-        //$(sender).parent().find('ul.level2').addClass('fullActive');
+        $(sender).parent().find('ul.level2').addClass('fullActive');
 
         // 8. yukaridaki (3.deki) UL yi lerini artik pasifize et
         $(alreadyActiveSubMenuUL).removeClass('fullActive');
@@ -360,34 +343,5 @@ function accountSubMenuSwitch(sender) {
     }, 500);
 }
 // //
-
-
-function setULLevel2(sender, isSwitch) {
-    if (isTabletPortrait) {
-        var senderUL = $(sender).parents('ul.level1');
-        var senderLI = $(sender).parent();
-        var indexOfLI = $(senderLI).index();
-        var heightOfLI = $(senderLI).height() + 1;
-        var newTopValOfLI = -parseInt(indexOfLI * heightOfLI);
-
-        $(senderLI).find('ul.level2').css({
-            top: newTopValOfLI,
-            height: parseInt($(senderUL).height())
-        });
-
-        if (isSwitch) {
-            $(senderLI).find('ul.level2').css({ left: 70 });
-        }
-        else {
-            $(sender).parent().find('ul.level2').css({
-                transform: 'translate3d(300px,0,0)',
-                '-webkit-transform': 'translate3d(300px,0,0)',
-                '-moz-transform': 'translate3d(300px,0,0)',
-                '-ms-transform': 'translate3d(300px,0,0)',
-                '-o-transform': 'translate3d(300px,0,0)'
-            }).addClass('fullActive');
-        }
-    }
-}
 
 // ****** END

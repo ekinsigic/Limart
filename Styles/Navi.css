@@ -204,6 +204,9 @@ nav .divBasketIcon .imgBasket {
 
 /* Screen */
 @media all and (max-width: 700px) {
+    header .divNav {
+        display: none;
+    }
     .divNav{
         right:0;
         left:0;

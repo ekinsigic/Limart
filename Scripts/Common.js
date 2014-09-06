@@ -51,13 +51,6 @@ $(document).ready(function () {
     setGlobals();
     smartphoneLandscape();
     miscImgLoader();
-
-    //özellikle iphone4 için menüyü scroll edilebilir kıldık.
-    if (deviceIs == 'smartphone' && sH <= 500) {
-        $('nav .divNav').css({ overflow: 'auto' });
-        $('nav .divNav .divMenuContent').css({ height: 230 });
-    }
-
 });
 
 function setGlobals() {

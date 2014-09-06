@@ -5,12 +5,17 @@
         });
         $(window).resize(function(){
             carryMenu();
-            if (ismobile && isOpenerOn) {
+            if (isMobile && isOpenerOn) {
                 $('#divOpenerFrame').css({
                     'position':'absolute',
                     'bottom': 'auto',
-                    'top': -($('#divOpenerFrame').height()-hH),
-                    'overflow':'visible'
+                    'overflow':'visible',
+                    'top': -((wH-hH)-(hH)),
+                    '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)',
+                    'transition':'all 0s'
+                });
+                otherItemsToSlide.css({
+                    '-webkit-transform':'translate3d(0px,'+(wH-hH)+'px,0px)'
                 });
             };
             if (!isMobile) {
@@ -189,6 +194,7 @@
                         if ($('#divOpenerFrame').height() == (wH-hH)) {//Eğer opener kapsayıcımız bütün ekranı kapatıyorsa, altındaki her şeyi display:none'a çekiyoruz
                             otherItemsToSlide.css('display','none');
                             $('#divOpenerFrame').css({
+                                'max-height':'',
                                 'position':'absolute',
                                 'bottom': 'auto',
                                 'top': -($('#divOpenerFrame').height()-hH),
@@ -213,10 +219,9 @@
                         'height': 'auto',
                         'position':'fixed',
                         'max-height':(wH-hH),
-                        'bottom': (wH - hH),
+                        'bottom': (wH-hH),
                         'top':'auto',
-                        'overflow':'auto',
-                        'overflow-y': 'visible',
+                        'overflow':'hidden',
                         '-webkit-overflow-scrolling': 'touch'
                     });
                     $('#divOpenerFrame').scrollTop(scrollTopMiniBeforeOpening)

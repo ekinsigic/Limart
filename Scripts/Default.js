@@ -7,9 +7,7 @@
 
 
 $(window).resize(function () {
-    if (!isMobile) {
-        mainHeight();
-    }
+    mainHeight();
 
     triggerArtistSlider(false);
 });

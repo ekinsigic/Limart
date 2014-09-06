@@ -189,11 +189,11 @@ nav .divBasketIcon .imgBasket {
     z-index: 999;
 }
 
-#divOpenerFrame .sixtythreeOpener {
+#divOpenerFrame .SSTOpener {
     display: none;
 }
 
-#divOpenerFrame .sixtythreeOpener.on {
+#divOpenerFrame .SSTOpener.on {
     display: block;
     box-shadow: inset 0px -22px 15px -13px rgba(0,0,0,0.2);
 }
@@ -406,6 +406,10 @@ nav .divBasketIcon .imgBasket {
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
+
+    header .divNav {
+        display: none;
+    }
     .divNav{
         top: auto;
         overflow: scroll;

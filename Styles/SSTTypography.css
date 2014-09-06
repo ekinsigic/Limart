@@ -1,3 +1,43 @@
+body {
+    font-family: 'Nova';
+}
+.subFont {
+    font-family: Roboto;
+}
+
+b, strong {
+    font-weight: 500;
+}
+
+i, em {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+p {
+    color: #808080;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+a:link,
+a:visited {
+    display: block;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+}
+
+
 .SSTFaceA { 
     color: #000;
     font-size: 16px;
@@ -421,7 +461,7 @@ a.SSTAStyleE {
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.08em;
-    transition:all 0.5s;
+    transition:color 0.5s;
 }
 
 .SSTAStyleI:hover,
@@ -533,7 +573,7 @@ a.SSTAStyleE {
     display: block;
     color:#000;
     font-size:12px;
-    font-weight:500;
+    font-weight:400;
     letter-spacing: 0.040em;
 }
 
@@ -541,7 +581,7 @@ a.SSTAStyleE {
     display: block;
     color:#7b7b7b;
     font-size:12px;
-    font-weight:500;
+    font-weight:400;
     letter-spacing: 0.040em;
 }
 
@@ -602,12 +642,24 @@ a.SSTAStyleE {
     .SSTSpanStyleJ{
         font-size:11px;
     }
+
+    .SSTSpanStyleM{
+        font-size:12px;
+    }
+
+    .SSTSpanStyleL{
+        font-size:11px;
+    }
    
 }
 
 @media all and (min-width: 401px) and (max-width: 700px) {
     .SSTFaceI {
         font-size: 13px;
+    }
+
+    .SSTSpanStyleL{
+        font-size:11px;
     }
 }
 

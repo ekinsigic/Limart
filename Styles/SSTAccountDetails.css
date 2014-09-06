@@ -168,7 +168,7 @@
 
 /* address information */
 
-#accountDetails .divDetail.address .deliveryAddressesWrapper, 
+#accountDetails .divDetail.address .deliveryAddressesWrapper,
 #accountDetails .divDetail.address .billingAddressesWrapper {
     float: left;
 }
@@ -383,10 +383,10 @@
 #accountDetails .divDetail.orderHistory .divOrderRow {
     background-color: #f7f7f7;
     margin-bottom: 5px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-    #accountDetails .divDetail.orderHistory .divOrderRow.activeOrder{
+    #accountDetails .divDetail.orderHistory .divOrderRow.activeOrder {
         background-color: #4b4d63;
     }
 
@@ -404,19 +404,19 @@
         margin-left: 30px;
     }
 
-    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber .spanOrderNumber.activeOrder,
-    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice span.activeOrder,
-    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus span.activeOrder{
-        color:#fff;
-    }
+        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber .spanOrderNumber.activeOrder,
+        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice span.activeOrder,
+        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus span.activeOrder {
+            color: #fff;
+        }
 
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber .spanDate {
             margin-top: 5px;
         }
 
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber .spanDate.activeOrder{
-            color:#a5a6b1;
-        }
+            #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber .spanDate.activeOrder {
+                color: #a5a6b1;
+            }
 
     #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice {
         width: 140px;
@@ -436,21 +436,21 @@
             margin-right: 12px;
         }
 
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img.blackIcon.activeOrder {
-            opacity:0;
-        }
+            #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img.blackIcon.activeOrder {
+                opacity: 0;
+            }
 
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img.whiteIcon {
-            position:absolute;
-            margin-top: -5px;
-            opacity:0;
-        }
+            #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img.whiteIcon {
+                position: absolute;
+                margin-top: -5px;
+                opacity: 0;
+            }
 
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img.whiteIcon.activeOrder {
-            opacity:1;
-        }
+                #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img.whiteIcon.activeOrder {
+                    opacity: 1;
+                }
 
-       
+
 
 
     #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {
@@ -459,18 +459,18 @@
         right: 30px;
     }
 
-    #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown.activeOrder{
-        opacity:0;
-    }
+        #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown.activeOrder {
+            opacity: 0;
+        }
 
 
-    #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown.whiteArrow{
-        opacity:0;
-    }
+        #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown.whiteArrow {
+            opacity: 0;
+        }
 
-    #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown.whiteArrow.activeOrder {
-        opacity:1;
-    }
+            #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown.whiteArrow.activeOrder {
+                opacity: 1;
+            }
 
 
 
@@ -727,7 +727,7 @@
 
 
 
-
+    /* breadcrumbs */
     #breadcrumbs {
         display: none;
         position: fixed;
@@ -753,15 +753,13 @@
                 #breadcrumbs li.mobileName span {
                     display: block;
                     margin-right: 20px;
-                    color: #cccccc;
-                    font-weight: 100;
-                    font-size: 11px;
                 }
 
+    /* end - breadcrumbs */
 
 
 
-
+    /* profile */
 
     #accountDetails .divDetail {
         z-index: 5;
@@ -811,6 +809,7 @@
         }
 
         #accountDetails .divDetail .divRight {
+            padding-bottom: 20px;
         }
 
             #accountDetails .divDetail .divRight span {
@@ -837,6 +836,7 @@
             width: 100%;
             border: 0;
         }
+    /* profile */
 
 
         /* password */
@@ -856,6 +856,10 @@
                 display: none;
             }
 
+        #accountDetails .divDetail.address .aNewAddress {
+            margin-left: 20px;
+        }
+
         #accountDetails .divDetail.address .divAddressOption {
             width: 100% !important;
         }
@@ -863,131 +867,156 @@
             #accountDetails .divDetail.address .divAddressOption.address {
                 margin-left: 0;
             }
-        /* end - address */
 
 
+    #accountDetails .deliveryAddressesWrapper {
+        width: 100% !important;
+    }
 
+    #accountDetails .divNewAddressWrapper {
+        float: none;
+        width: 100% !important;
+    }
 
-
-        /* order history */
-        #accountDetails .divDetail.orderHistory .divOrderColumnHeaders {
-            display: none;
-        }
-
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber,
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice,
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
-            margin: 0 0 0 0;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            text-align: left;
-            height: 50px;
-        }
-
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber {
-            width: 49%;
-            padding-left: 10px;
-        }
-
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice {
-            float: right;
-            padding-right: 10px;
-            width: 49%;
-            text-align: right;
-        }
-
-        #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
-            padding-left: 10px;
+        #accountDetails .divNewAddressWrapper input[type="text"],
+        #accountDetails .divNewAddressWrapper select {
+            float: none;
+            margin: 0 0 10px 0 !important;
             width: 100%;
         }
 
-        #accountDetails .divDetail.orderHistory .divOrderRow .divStatus img {
-            margin-top: -3px;
-            width: 20px;
+        #accountDetails .divNewAddressWrapper .pDescription {
+            width: 100%;
         }
 
-        #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {
-            display: none;
+        #accountDetails .divNewAddressWrapper .saveAddingNewAddress {
+            width: 100%;
+            margin-top: 50px;
+        }
+        k
+    /* end - address */
+
+
+
+
+
+    /* order history */
+    #accountDetails .divDetail.orderHistory .divOrderColumnHeaders {
+        display: none;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber,
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice,
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
+        margin: 0 0 0 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: left;
+        height: 50px;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber {
+        width: 49%;
+        padding-left: 10px;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice {
+        float: right;
+        padding-right: 10px;
+        width: 49%;
+        text-align: right;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderRow .divStatus img {
+        margin-top: -3px;
+        width: 20px;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {
+        display: none;
+    }
+
+    #accountDetails .divDetail.orderHistory .divOrderDetails {
+        width: calc(100%-4px);
+        padding-top: 15px;
+    }
+
+    #accountDetails .divDetail.orderHistory .divItem {
+        padding-left: 10px;
+    }
+
+        #accountDetails .divDetail.orderHistory .divItem .imgItemPic {
+            max-width: 50px;
         }
 
-        #accountDetails .divDetail.orderHistory .divOrderDetails {
-            width: calc(100%-4px);
-            padding-top: 15px;
+        #accountDetails .divDetail.orderHistory .divItem .divDescription {
+            padding-right: 0;
+            padding-left: 50px;
         }
 
-        #accountDetails .divDetail.orderHistory .divItem {
-            padding-left: 10px;
-        }
-
-            #accountDetails .divDetail.orderHistory .divItem .imgItemPic {
-                max-width: 50px;
+            #accountDetails .divDetail.orderHistory .divItem .divDescription,
+            #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo,
+            #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice,
+            #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice {
+                min-height: initial;
             }
 
-            #accountDetails .divDetail.orderHistory .divItem .divDescription {
-                padding-right: 0;
-                padding-left: 50px;
-            }
-
-                #accountDetails .divDetail.orderHistory .divItem .divDescription,
-                #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo,
-                #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice,
-                #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice {
-                    min-height: initial;
+                #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo .divContent,
+                #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice div.content,
+                #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice div.content {
+                    text-align: left;
+                    padding-left: 10px;
                 }
 
-                    #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo .divContent,
-                    #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice div.content,
+                #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo {
+                    width: 90%;
+                    padding-top: 5px;
+                }
+
+                #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice {
+                    float: left;
+                    width: auto;
+                }
+
+                    #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice div.content {
+                        padding-top: 24px;
+                    }
+
+                #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice {
+                    float: right;
+                    width: auto;
+                    margin-top: 24px;
+                }
+
                     #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice div.content {
-                        text-align: left;
-                        padding-left: 10px;
+                        min-width: initial;
+                        padding-left: 0;
                     }
 
-                    #accountDetails .divDetail.orderHistory .divItem .divDescription .divInfo {
-                        width: 90%;
-                        min-width: 150px;
-                        max-width: 260px;
-                        padding-top: 5px;
-                    }
 
-                    #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice {
-                        float: left;
-                        width: auto;
-                    }
-
-                        #accountDetails .divDetail.orderHistory .divItem .divDescription .divUnitPrice div.content {
-                            padding-top: 24px;
-                        }
-
-                    #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice {
-                        float: right;
-                        width: auto;
-                        margin-top: 24px;
-                    }
-
-                        #accountDetails .divDetail.orderHistory .divItem .divDescription .divTotalPrice div.content {
-                            min-width: initial;
-                            padding-left: 0;
-                        }
+    #accountDetails .divDetail.orderHistory .divOrderDetails .divBillingAddressDetail {
+        padding: 20px 10px 40px 10px;
+    }
 
 
-        #accountDetails .divDetail.orderHistory .divOrderDetails .divBillingAddressDetail {
-            padding: 20px 10px 40px 10px;
-        }
+    #accountDetails .divDetail.orderHistory .divBillingAddressDetail .divAdressDetails {
+        float: none;
+        margin: 0 10px 0 0;
+        width: 100%;
+    }
 
 
-        #accountDetails .divDetail.orderHistory .divBillingAddressDetail .divAdressDetails {
-            float: none;
-            margin: 0 10px 0 0;
-            width: 100%;
-        }
-
-
-        #accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail {
-            float: none;
-            margin: 40px auto 0 auto;
-            padding: 52px 10px 50px 10px;
-            width: 100%;
-        }
+    #accountDetails .divDetail.orderHistory .divBillingAddressDetail .divTotalDetail {
+        float: none;
+        margin: 40px auto 0 auto;
+        padding: 52px 10px 50px 10px;
+        width: 100%;
+    }
 
     /* end - order history */
 
@@ -1013,6 +1042,7 @@
 
 
 
+    /* profile */
     #accountDetails {
         margin-top: 10px;
         width: 670px;
@@ -1076,12 +1106,19 @@
             width: 100%;
             border: 0;
         }
+        /* end - profile */
+
+
+
+
 
         /* password */
         #accountDetails .divDetail.password .divRight .input {
             margin-top: 0;
         }
         /* end - password */
+
+
 
 
         /* address */
@@ -1097,6 +1134,8 @@
                 margin: 15px 0 0 7px;
             }
         /* end - address */
+
+
 
 
 
@@ -1154,7 +1193,7 @@
             width: 100%;
         }
 
-        /* end - order history */
+    /* end - order history */
 
 
 }

@@ -172,5 +172,3 @@ function scrollTop63(scrollLocation,scrollTime,selectedElement) {
         })
     },scrollTime);
 }
-
-});

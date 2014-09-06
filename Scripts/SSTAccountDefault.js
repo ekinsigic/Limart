@@ -42,7 +42,7 @@ function setupHomeAccountMenu(sender) {
             }
             else {
                 var isSenderSame = ($(currActiveHomeAccountMenu).attr('id') == $(subMenu).attr('id'));
-                closeActiveHomeAccountMenu();
+                closeActiveHomeAccountMenu(isSenderSame);
 
                 if (!isSenderSame) {
                     isHomeAccountMenuCurrAnimated = true;
@@ -70,13 +70,13 @@ function openHomeAccountMenu(parent, subMenu) {
 }
 
 
-function closeActiveHomeAccountMenu() {
+function closeActiveHomeAccountMenu(isSenderSame) {
     $(currActiveHomeAccountMenu).css({ height: 0 });
     $(currActiveHomeAccountMenu).parent().removeClass('activeSubMenu');
 
     setTimeout(function () {
         isHomeAccountMenuActive = false;
         currActiveHomeAccountMenu = null;
-        isHomeAccountMenuCurrAnimated = false;
+        isHomeAccountMenuCurrAnimated = isSenderSame ? false : true;
     }, homeAccountMenuTimer);
 }

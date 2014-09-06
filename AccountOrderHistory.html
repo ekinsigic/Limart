@@ -22,7 +22,8 @@
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/PopUp.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountDefault.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountNavi.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountDetails.css" />
 
 </head>
 <body>
@@ -32,9 +33,9 @@
         <p class="faceA">LÜTFEN TELEFONUNUZU DİKEY KONUMUNDA TUTUNUZ.</p>
     </section>
 
+    <div id="divMainWrapper">
 
-
-    <div id="divOpenerFrame" class="divOpenerFrame">
+        <div id="divOpenerFrame" class="divOpenerFrame">
 
             <section id="searchOpener" class="sixtythreeOpener">
                 <div class="divSearchContent">
@@ -368,7 +369,7 @@
             </section>
         </div>
 
-    <header>
+        <header>
         <div class="divContent">
             <a href="../Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
 
@@ -422,92 +423,6 @@
         </div>
     </header>
 
-
-    <main>
-
-
-        <section id="welcomeAccount">
-
-            <h1 class="SSTFaceEE name"><span>Merhaba,</span> John Doe</h1>
-
-            <p class="SSTFaceFF">
-                "Hesabım" sayfasından siparişlerinizi ve arıza/iade/değişim işlemlerinizi takip edebilir; kazandığınız hediye çekini görüntüleyebilir.
-            </p>
-
-            <div class="divAccount">
-
-                <div id="divAccountDetails" class="divAcountItem">
-                    <div class="divIcon">
-                        <img data-sixtythree="icon-my-account" class="purple">
-                        <img data-sixtythree="icon-my-account" class="white">
-                    </div>
-
-                    <a href="javascript:void(0);" onclick="setupHomeAccountMenu(this);" class="aHeader"><h3 class="SSTFaceGG">HESAP BİLGİLERİ</h3></a>
-
-                    <div id="divAccountDetailsSubMenu" class="divAccountSubMenu">
-                        <div class="divAccountSubMenuContent">
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ÜYELİK BİLGİLERİM</a>
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ADRESLERİM</a>
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ŞİFRE İŞLEMLERİ</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="divOrder" class="divAcountItem">
-                    <div class="divIcon">
-                        <img data-sixtythree="icon-order-account" class="purple">
-                        <img data-sixtythree="icon-order-account" class="white">
-                    </div>
-
-                    <a href="javascript:void(0);" onclick="setupHomeAccountMenu(this);" class="aHeader"><h3 class="SSTFaceGG">SİPARİŞ BİLGİLERİ</h3></a>
-
-                    <div id="divOrderSubMenu" class="divAccountSubMenu">
-                        <div class="divAccountSubMenuContent">
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />SİPARİŞ İŞLEMLERİ</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="divServices" class="divAcountItem">
-                    <div class="divIcon">
-                        <img data-sixtythree="icon-services-account" class="purple">
-                        <img data-sixtythree="icon-services-account" class="white">
-                    </div>
-
-                    <a href="javascript:void(0);" onclick="setupHomeAccountMenu(this);" class="aHeader"><h3 class="SSTFaceGG">SERVİSLER</h3></a>
-
-                    <div id="divServicesSubMenu" class="divAccountSubMenu">
-                        <div class="divAccountSubMenuContent">
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />BİLGİ TOPLUMU HİZMETLERİ</a>
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />MESAFELİ SÖZLEŞMELER</a>
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />GÖNDERİM VE İADE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="divContact" class="divAcountItem">
-                    <div class="divIcon">
-                        <img data-sixtythree="icon-contact-account" class="purple">
-                        <img data-sixtythree="icon-contact-account" class="white">
-                    </div>
-
-                    <a href="javascript:void(0);" onclick="setupHomeAccountMenu(this);" class="aHeader"><h3 class="SSTFaceGG">İLETİŞİM</h3></a>
-
-                    <div id="divContactSubMenu" class="divAccountSubMenu">
-                        <div class="divAccountSubMenuContent">
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ADRES BİLGİLERİ</a>
-                            <a href="#" class="SSTAStyleG aSubHeader"><img data-sixtythree="arrow-next-short-purple" class="arrow" />İLETİŞİM BİLGİLERİ</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="separator"></div>
-            </div>
-
-            <div class="separator"></div>
-        </section>
-    </main>
-
         <section id="menuActiveOverlay"></section>
 
 
@@ -558,7 +473,7 @@
                                 <img data-sixtythree="icon-order-account" class="white small two">
                             </a>
                             <ul class="level2">
-                                <li><a href="AccountOrderHistory.html" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />SİPARİŞ İŞLEMLERİ</a></li>
+                                <li><a href="AccountOrderHistory.html" class="stop63AStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />SİPARİŞ İŞLEMLERİ</a></li>
                             </ul>
                         </li>
                         <li>
@@ -619,10 +534,12 @@
                         </div>
                         <div class="divOrderStatus">
                             <img data-sixtythree="icon-order-01" />
+                            <img data-sixtythree="icon-order-white-01" class="whiteIcon" />
                             <span class="SSTSpanStyleJ">SİPARİŞİNİZ ALINDI</span>
                         </div>
 
-                        <img data-sixtythree="arrow-down-short-purple" class="arrowDown" />
+                        <img data-sixtythree="arrow-down-short-purple" class="arrowDown purpleArrow" />
+                        <img data-sixtythree="arrow-down-short-white" class="arrowDown whiteArrow activeOrder" />
 
                         <div class="separator"></div>
 
@@ -634,7 +551,7 @@
                         <div class="divOrderDetails">
 
                             <div class="divItem">
-                                <img src="Files/Products/03/Pictures/thumbnail.jpg" class="imgItemPic" />
+                                <img src="Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
 
                                 <div class="divDescription">
                                    
@@ -750,6 +667,11 @@
                                         <div class="separator"></div>
                                     </div>
 
+                                    <div class="divTotal">
+                                        <span class="SSTFaceO">TOPLAM: <span class="SSTFaceP">344.98 TL</span></span>
+                                        <p class="SSTFaceO date">TESLİM TARİHİ: 14.08.2014 - 21.08.2014</p>
+                                    </div>
+
 
                                 </div>
 
@@ -781,73 +703,74 @@
 
 
 
-    <footer>
-        <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
+        <footer>
+            <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
 
-        <div class="divLine one"></div>
+            <div class="divLine one"></div>
 
-        <div class="divContent first">
-            <ul class="level1">
-                <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
-                <li><a href="#" class="aStyleA">NEDEN?</a></li>
-                <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
-                <li><a href="#" class="aStyleA">E-SHOP</a></li>
-                <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
-            </ul>
+            <div class="divContent first">
+                <ul class="level1">
+                    <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
+                    <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                    <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
+                    <li><a href="#" class="aStyleA">E-SHOP</a></li>
+                    <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
+                </ul>
 
 
-            <div class="divMailingContent">
-                <input type="text" placeholder="MAIL ZİNCİRİ" class="stopInputTextA" />
-                <input type="image" src="Images/SST/arrow-next.jpg" class="inputButton" />
+                <div class="divMailingContent">
+                    <input type="text" placeholder="MAIL ZİNCİRİ" class="stopInputTextA" />
+                    <input type="image" src="../Images/arrow-next.png" class="inputButton" />
+                </div>
+
+                <div class="separator"></div>
             </div>
 
-            <div class="separator"></div>
-        </div>
+            <div class="divLine two"></div>
 
-        <div class="divLine two"></div>
+            <div class="divContent">
+                <span class="spanStyleA">© 2014 LIMART.COM</span>
 
-        <div class="divContent">
-            <span class="spanStyleA">© 2014 LIMART.COM</span>
+                <ul class="level2">
+                    <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
+                    <li class="liSeparator"><span></span></li>
+                    <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
+                    <li class="liSeparator"><span></span></li>
+                    <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
+                    <li class="liSeparator"><span></span></li>
+                    <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+                </ul>
 
-            <ul class="level2">
-                <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
-                <li class="liSeparator"><span></span></li>
-                <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
-                <li class="liSeparator"><span></span></li>
-                <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
-                <li class="liSeparator"><span></span></li>
-                <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+                <div class="separator"></div>
+            </div>
+
+            <div class="divLine three"></div>
+
+
+            <!-- social icons -->
+            <ul class="socialsA">
+                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
             </ul>
-
+            <!-- end - social icons -->
             <div class="separator"></div>
-        </div>
+        </footer>
 
-        <div class="divLine three"></div>
-
-
-        <!-- social icons -->
-        <ul class="socialsA">
-            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
-            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
-            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
-            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
-        </ul>
-        <!-- end - social icons -->
-        <div class="separator"></div>
-    </footer>
+    </div>
 
 
-    <!-- SCRIPTS -->
-    <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
-    <script type="text/javascript" src="Scripts/jquery-ui.js"></script>
-    <script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="Scripts/Common.js"></script>
-    <script type="text/javascript" src="Scripts/Navi.js"></script>
-    <script type="text/javascript" src="Scripts/SSTAccountDefault.js"></script>
-    <!-- END - SCRIPTS -->
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="Scripts/jquery-ui.js"></script>
+        <script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="Scripts/Common.js"></script>
+        <script type="text/javascript" src="Scripts/Navi.js"></script>
+        <script type="text/javascript" src="Scripts/SSTAccountDetails.js"></script>
+        <!-- END - SCRIPTS -->
 
 
 </body>
 </html>
-

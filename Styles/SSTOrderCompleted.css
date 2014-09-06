@@ -306,6 +306,10 @@
         display:inline-block;
     }
 
+    #orderSummaryDetail .divItem .divDescription .divInfo{
+        width:90%;
+    }
+
     #orderSummaryDetail .divItem .divDescription .divInfo div.content {
         width: 90%;
         min-width: 150px;

@@ -266,6 +266,10 @@
                     padding-left: 10px;
                 }
 
+                #basketDetails .divItem .divDescription .divInfo{
+                    width: 95%;
+                }
+
                 #basketDetails .divItem .divDescription .divInfo div.content {
                     width: 90%;
                     min-width: 150px;

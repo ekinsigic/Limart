@@ -442,7 +442,7 @@ a.SSTAStyleE {
 .SSTAStyleH:link,
 .SSTAStyleH:visited{
     color:#000;
-    font-size:18px;
+    font-size:16px;
     font-weight:400;
     letter-spacing:0.040em;
     transition:all 0.5s;
@@ -631,11 +631,22 @@ a.SSTAStyleE {
         font-size:24px;
     }
 
+    .SSTFaceKK {
+        color: #cccccc;
+        font-weight: 100;
+        font-size: 11px;
+    }
+
+
     .SSTSpanStyleF{
         font-size:13px;
     }
 
     .SSTAStyleG {
+        font-size:14px !important;
+    }
+
+    .SSTAStyleH{
         font-size:14px !important;
     }
 
@@ -656,6 +667,16 @@ a.SSTAStyleE {
 @media all and (min-width: 401px) and (max-width: 700px) {
     .SSTFaceI {
         font-size: 13px;
+    }
+
+    .SSTFaceKK {
+        color: #cccccc;
+        font-weight: 100;
+        font-size: 11px;
+    }
+
+    .SSTAStyleH{
+        font-size:14px !important;
     }
 
     .SSTSpanStyleL{

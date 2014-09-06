@@ -20,12 +20,7 @@ $(document).ready(function () {
 
 // Ekran boyutu degistirildiginde acik menuleri kapat
 function resetFunctionsAndGlobals() {
-    if (isAccountMainMenuActive && isAccountSubMenuActive) { // *1* 'smartphone' lara ozgu bir durum cunku 'isAccountMainMenuActive' degiskenin 'true' olabilecegi tek cihaz 'smartphone' lardir
-        closeMainAndSubMenuTogether();
-    }
-    else if (isAccountMainMenuActive) {
-        closeAccountMainMenu();
-    }
+    closeMenuByOutsideActivityNOW();
 }
 // 
 
@@ -80,21 +75,11 @@ function jqmSwipeEvents() {
 //
 
 
-// Ekranin herhangi bir yerine tiklandiginda cagirilacak fonksiyonlar
+// Ekranin herhangi bir yerine tiklandiginda menuyu kapatma eventlerinin belirlendigi fonksiyon
 function closeMenuByOutsideActivity() {
     if (isMobile) {
         $("html").bind("tap", function (e) {
-            if (isAccountMainMenuActive && isAccountSubMenuActive) { // *1* 'smartphone' lara ozgu bir durum cunku 'isAccountMainMenuActive' degiskenin 'true' olabilecegi tek cihaz 'smartphone' lardir
-                closeMainAndSubMenuTogether();
-            }
-            else if (!isAccountMainMenuActive && isAccountSubMenuActive) { // 'tablet dikey' konumunda sub menunun acik olma durumu
-                if (!isAccountSubMenuCurrAnimated) {
-                    openOrCloseAccountSubMenu($('#' + currActiveAccountSubMenu)); // *2* son gondereni paslayarak kapatabiliriz
-                }
-            }
-            else if (isAccountMainMenuActive) {
-                closeAccountMainMenu();
-            }
+            closeMenuByOutsideActivityNOW();
         })
 
         $("#aMainAccountMenuOpener, aside ul li").bind("tap", function (e) { e.stopPropagation(); });
@@ -102,35 +87,29 @@ function closeMenuByOutsideActivity() {
     else {
         $(document).keydown(function (e) {
             if (e.keyCode == 27) {
-                if (isAccountMainMenuActive && isAccountSubMenuActive) { // bkz *1*
-                    closeMainAndSubMenuTogether();
-                }
-                else if (!isAccountMainMenuActive && isAccountSubMenuActive) { // 'tablet dikey' konumunda sub menunun acik olma durumu
-                    if (!isAccountSubMenuCurrAnimated) {
-                        openOrCloseAccountSubMenu($('#' + currActiveAccountSubMenu)); // bkz *2*
-                    }
-                }
-                else if (isAccountMainMenuActive) {
-                    closeAccountMainMenu();
-                }
+                closeMenuByOutsideActivityNOW();
             }
         });
 
         $("html").click(function () {
-            if (isAccountMainMenuActive && isAccountSubMenuActive) { // bkz *1*
-                closeMainAndSubMenuTogether();
-            }
-            else if (!isAccountMainMenuActive && isAccountSubMenuActive) { // 'tablet dikey' konumunda sub menunun acik olma durumu
-                if (!isAccountSubMenuCurrAnimated) {
-                    openOrCloseAccountSubMenu($('#' + currActiveAccountSubMenu)); // bkz *2*
-                }
-            }
-            else if (isAccountMainMenuActive) {
-                closeAccountMainMenu();
-            }
+            closeMenuByOutsideActivityNOW();
         });
 
         $("#aMainAccountMenuOpener, aside ul li").click(function (e) { e.stopPropagation(); });
+    }
+}
+//
+
+// Ekranin herhangi bir yerine tiklandiginda menuyu kapatma eventlerinin belirlenmesinden sonra cagrilan asil kapatma fonksiyonu
+function closeMenuByOutsideActivityNOW() {
+    if (isAccountMainMenuActive && isAccountSubMenuActive) { // bkz *1*
+        closeMainAndSubMenuTogether();
+    }
+    else if (!isAccountMainMenuActive && isAccountSubMenuActive) { // bkz *2*
+        openOrCloseAccountSubMenu($('#' + currActiveAccountSubMenu)); // bkz *2a*
+    }
+    else if (isAccountMainMenuActive) {
+        openOrCloseAccountMainMenu();
     }
 }
 //
@@ -147,10 +126,11 @@ var isAccountSubMenuActive = false;
 // // Ana-menulerin acilip kapanmasini cagiran ana fonksiyon. 
 // Bu fonksiyon sadece smartphone boyutunda, sol ustteki "3 daire ikon" tarafindan cagirilmaktadir.
 function openOrCloseAccountMainMenu() {
-    if (!isAccountMainMenuCurrAnimated) {
-        isAccountMainMenuCurrAnimated = true;
+    if (!isAccountMainMenuCurrAnimated && !isAccountSubMenuCurrAnimated) {
+
 
         if (!isAccountSubMenuActive) { // eger alt-menu acik degilse devam et 
+            isAccountMainMenuCurrAnimated = true;
             if (!isAccountMainMenuActive) {
                 isAccountMainMenuActive = true;
 
@@ -182,12 +162,19 @@ function openOrCloseAccountMainMenu() {
 
 // // Hem ana hem de alt menuyu beraber kapatan fonksiyon. Smartphone lar icin cunku ana ve alt menunun 
 // // beraber acik olabilecegi tek cihaz.
+var currClosingTogetherAnimated = false;
 function closeMainAndSubMenuTogether() {
-    closeAccountSubMenu(); // ilk once alt-menuyu kapat
+    if (!isAccountSubMenuCurrAnimated) {
+        currClosingTogetherAnimated = true;
+        openOrCloseAccountSubMenu($('#' + currActiveAccountSubMenu)); // bkz *2a* -- ilk once alt-menuyu kapat
 
-    setTimeout(function () {
-        closeAccountMainMenu(); // sonra ana-menuyu
-    }, 550);
+        setTimeout(function () {
+            closeAccountMainMenu(); // sonra ana-menuyu
+            setTimeout(function () {
+                currClosingTogetherAnimated = false;
+            }, 500);
+        }, 550);
+    }
 }
 // //
 
@@ -252,9 +239,9 @@ function openOrCloseAccountSubMenu(sender) {
     var asideWidth = $('main section aside').width();
     isTabletPortrait = (asideWidth == 70 && isAccountMainMenuActive == false)
     isTabletLandscape_Desktop = (asideWidth > 70 && isAccountMainMenuActive == false); // 'Tablet yatay' ve masaustu boyutunun saptanmasi
-    
+
     if (!isTabletLandscape_Desktop) { // Masaustu surumunde bu fonksiyon islememeli
-        if (!isAccountSubMenuCurrAnimated) {
+        if (!isAccountSubMenuCurrAnimated && !isAccountMainMenuCurrAnimated) {
             isAccountSubMenuCurrAnimated = true;
 
             var isSenderSame = (currActiveAccountSubMenu == $(sender).attr('id'));
@@ -348,7 +335,7 @@ function closeAccountSubMenu() {
             isAccountSubMenuActive = false;
             isAccountSubMenuCurrAnimated = false;
             currActiveAccountSubMenu = null;
-        }, 500);
+        }, (!currClosingTogetherAnimated ? 500 : 1100));
     }
     else { // tablet dikey konum ise
         var senderSubMenuUL = $('aside ul.level2.fullActive');

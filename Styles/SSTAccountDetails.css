@@ -147,6 +147,8 @@
     margin-top: 60px;
     width: 130px;
 }
+
+
 /* end - profile */
 
 
@@ -381,11 +383,11 @@
 
 
 #accountDetails .divDetail.orderHistory .divOrderRow {
-    background-color: #f7f7f7;
+    padding-left: 4px;
     margin-bottom: 5px;
+    background-color: #f7f7f7;
     cursor: pointer;
     transition: background-color 0.5s;
-    padding-left: 4px;
 }
 
     #accountDetails .divDetail.orderHistory .divOrderRow.activeOrder {
@@ -849,6 +851,10 @@
             width: 100%;
             border: 0;
         }
+
+        #accountDetails .divDetail .button:hover {
+            border:0 !important;
+        }
         /* profile */
 
 
@@ -906,9 +912,9 @@
             width: 100%;
             margin-top: 50px;
         }
-
-    k
     /* end - address */
+
+
     /* order history */
     #accountDetails .divDetail.orderHistory .divOrderColumnHeaders {
         display: none;
@@ -917,7 +923,7 @@
     #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber,
     #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice,
     #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
-        margin: 0 0 0 0;
+        margin: 0;
         padding-top: 15px;
         padding-bottom: 15px;
         text-align: left;
@@ -948,11 +954,6 @@
 
     #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {
         display: none;
-    }
-
-    #accountDetails .divDetail.orderHistory .divOrderDetails {
-        width: calc(100%-4px);
-        padding-top: 15px;
     }
 
     #accountDetails .divDetail.orderHistory .divItem {
@@ -1115,6 +1116,12 @@
             width: 100%;
             border: 0;
         }
+
+        #accountDetails .divDetail .button:hover {
+            border: 0 !important;
+        }
+        
+
         /* end - profile */
 
 
@@ -1166,7 +1173,7 @@
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber,
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice,
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
-            margin-right: 25px;
+            margin-right: 22px;
         }
 
         #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {

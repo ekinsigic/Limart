@@ -172,3 +172,21 @@ function scrollTop63(scrollLocation,scrollTime,selectedElement) {
         })
     },scrollTime);
 }
+
+
+
+function selectCustomizer() {
+    $(document).find('.SSTCustomSelectOriginal').each(function(){
+        $(this).after('<ul class="SSTCustomSelectMirror">')
+        var numberOfOptions = $(this).find('option').length()
+        
+    })
+}
+
+
+
+
+
+
+
+

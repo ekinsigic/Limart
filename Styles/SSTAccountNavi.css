@@ -45,9 +45,9 @@
 @media all and (max-width: 700px) {
     aside {
         display: none;
-        position: fixed;
+        position: absolute;
         z-index: 0;
-        top: 108px;
+        top: 38px;
         right: 0;
         bottom: -200px;
         left: 0;

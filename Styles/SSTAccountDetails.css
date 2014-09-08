@@ -1166,7 +1166,7 @@
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderNumber,
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice,
         #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus {
-            margin-right: 25px;
+            margin-right: 22px;
         }
 
         #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {

@@ -1,13 +1,12 @@
 $(document).ready(function(){
     loginPageAjaxCall();
-    signUpPageAjaxCall();
 })
 
 
 function loginPageAjaxCall() {
-        var innerLink = $('.signUp, .forgotPassword')
+        var innerLinkSignUp = $('.signUp');
 
-        innerLink.on('click',function(e){
+        innerLinkSignUp.on('click',function(e){
             e.preventDefault();
 
             var panelNow = '#'+$(this).parents('.activeInnerOpener').attr('id');
@@ -18,21 +17,53 @@ function loginPageAjaxCall() {
                                                     '-webkit-transform':'scale(0.95)',
                                                     'transition':'opacity 0.3s, transform 0.3s'});
             setTimeout(function(){
-            $('#userOpenerInnerDivLogin').scrollTop(0);
+            $('html, body').scrollTop(0);
                 $.get( 'signup.html', function(data){
-                    $('.loginPage').append($(data).find('#userOpenerInnerDivPassword'));
-                    $('#userOpenerInnerDivPassword').css({'display':'block',
+                    $('.loginPage').append($(data).find('#userOpenerInnerDivSignUp'));
+                    $('#userOpenerInnerDivSignUp').css({'display':'block',
                                                             'opacity':'0',
                                                             '-webkit-transform':'scale(0.95)',
                                                             'transition':'opacity 0.3s, transform 0.3s'});
                 })
                 setTimeout(function(){
-                    $('#userOpenerInnerDivPassword').css({'display':'block',
+                    $('#userOpenerInnerDivSignUp').css({'display':'block',
                                                             'opacity':'1',
                                                             '-webkit-transform':'scale(1)',
                                                             'transition':'opacity 0.3s, transform 0.3s'});
                     $('#userOpenerInnerDivLogin').remove();
                     signUpPageAjaxCall();
+                },200)
+            },500);
+        });
+
+        var innerLinkPassword = $('.forgotPassword')
+
+        innerLinkPassword.on('click',function(e){
+            e.preventDefault();
+
+            var panelNow = '#'+$(this).parents('.activeInnerOpener').attr('id');
+            var panelToGo = '#'+$(this).attr('data-innerOpenerAnchor');
+            $(panelNow).removeClass('activeInnerOpener');
+            $('main').css('height',$('main').height());
+            $('#userOpenerInnerDivLogin').css({'opacity':'0',
+                                                    '-webkit-transform':'scale(0.95)',
+                                                    'transition':'opacity 0.3s, transform 0.3s'});
+            setTimeout(function(){
+            $('html, body').scrollTop(0);
+                $.get( 'ForgotPassword.html', function(data){
+                    $('.loginPage').append($(data).find('#userOpenerInnerDivForgotPassword'));
+                    $('#userOpenerInnerDivForgotPassword').css({'display':'block',
+                                                            'opacity':'0',
+                                                            '-webkit-transform':'scale(0.95)',
+                                                            'transition':'opacity 0.3s, transform 0.3s'});
+                })
+                setTimeout(function(){
+                    $('#userOpenerInnerDivForgotPassword').css({'display':'block',
+                                                            'opacity':'1',
+                                                            '-webkit-transform':'scale(1)',
+                                                            'transition':'opacity 0.3s, transform 0.3s'});
+                    $('#userOpenerInnerDivLogin').remove();
+                    forgotPasswordPageAjaxCall();
                 },200)
             },500);
         });
@@ -49,11 +80,11 @@ function signUpPageAjaxCall() {
             var panelToGo = '#'+$(this).attr('data-innerOpenerAnchor');
             $(panelNow).removeClass('activeInnerOpener');
             $('main').css('height',$('main').height());
-            $('#userOpenerInnerDivPassword').css({'opacity':'0',
+            $('#userOpenerInnerDivSignUp').css({'opacity':'0',
                                                     '-webkit-transform':'scale(0.95)',
                                                     'transition':'opacity 0.3s, transform 0.3s'});
             setTimeout(function(){
-            $('#userOpenerInnerDivPassword').scrollTop(0);
+            $('html, body').scrollTop(0);
                 $.get( 'login.html', function(data){
                     $('.loginPage').append($(data).find('#userOpenerInnerDivLogin'));
                     $('#userOpenerInnerDivLogin').css({'display':'block',
@@ -66,7 +97,41 @@ function signUpPageAjaxCall() {
                                                             'opacity':'1',
                                                             '-webkit-transform':'scale(1)',
                                                             'transition':'opacity 0.3s, transform 0.3s'});
-                    $('#userOpenerInnerDivPassword').remove();
+                    $('#userOpenerInnerDivSignUp').remove();
+                    loginPageAjaxCall();
+                },200)
+            },500);
+        });
+}
+
+function forgotPasswordPageAjaxCall() {
+        var innerLink = $('.contShopping');
+
+        innerLink.on('click', function(e){
+            e.preventDefault();
+
+            var panelNow = '#'+$(this).parents('.activeInnerOpener').attr('id');
+            var panelToGo = '#'+$(this).attr('data-innerOpenerAnchor');
+            $(panelNow).removeClass('activeInnerOpener');
+            $('main').css('height',$('main').height());
+            $('#userOpenerInnerDivForgotPassword').css({'opacity':'0',
+                                                    '-webkit-transform':'scale(0.95)',
+                                                    'transition':'opacity 0.3s, transform 0.3s'});
+            setTimeout(function(){
+            $('html, body').scrollTop(0);
+                $.get( 'login.html', function(data){
+                    $('.loginPage').append($(data).find('#userOpenerInnerDivLogin'));
+                    $('#userOpenerInnerDivLogin').css({'display':'block',
+                                                            'opacity':'0',
+                                                            '-webkit-transform':'scale(0.95)',
+                                                            'transition':'opacity 0.3s, transform 0.3s'});
+                })
+                setTimeout(function(){
+                    $('#userOpenerInnerDivLogin').css({'display':'block',
+                                                            'opacity':'1',
+                                                            '-webkit-transform':'scale(1)',
+                                                            'transition':'opacity 0.3s, transform 0.3s'});
+                    $('#userOpenerInnerDivForgotPassword').remove();
                     loginPageAjaxCall();
                 },200)
             },500);

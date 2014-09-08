@@ -194,6 +194,15 @@
 
 
 
+/*PASSWORD RESET PAGE */
+.loginPage #userOpenerInnerDivPassword{
+    display: block;
+    opacity: 1;
+    -webkit-transform: scale(1);
+} 
+/* END - PASSWORD RESET PAGE */
+
+
 
 
 /* Screen */
@@ -626,7 +635,7 @@
         width:960px;
     }
 
-    #userOpenerInnerDivPassword {
+    #userOpenerInnerDivSignUp {
         top: 0px;
     }
 

@@ -189,13 +189,6 @@
 }
 /* END - NEW MEMBER */
 
-
-
-
-
-
-
-
 /* Screen */
 @media all and (max-width: 700px) {
     .sixtythreeOpener{
@@ -584,12 +577,6 @@
         margin:auto;
     }
 
-
-
-
-
-
-
     /* basket */
     .sixtythreeOpener .divBasketContent{
         width:670px;
@@ -626,7 +613,7 @@
         width:960px;
     }
 
-    #userOpenerInnerDivPassword {
+    #userOpenerInnerDivSignUp {
         top:60px;
     }
 

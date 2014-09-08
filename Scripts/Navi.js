@@ -26,7 +26,7 @@
         var isOpenerOn = false; //Opener açık mı değil mi boolean'ı
         var lastTriggerType = ""; //En son açık olan opener adı
         var isCurrentlyAnimated = false; //Opener o sırada animasyon halinde mi
-        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters, #carriableFilters'); //Opener açılırken yarılma efektini verebilmek için Slide edecek diğer elementler
+        var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters, #carriableFilters, #aMainAccountMenuOpener'); //Opener açılırken yarılma efektini verebilmek için Slide edecek diğer elementler
         var slideDistance = 8; //opener'ın kayacağı mesafe, 8 yalnızca temsili bir rakam, bu rakam opener açılacağı an kendini yeniliyor
         var animationType = 'ease-out' //opener'ın animasyon tipi, ease-in, ease-out, ease-in-out variable'ları verebiliriz.
         var scrollTopBeforeOpening = scrollTopVal; //opener açıldığında ekranın ne kadar scroll edildiği, animasyon sırasında anlık olarak değişecek
@@ -199,7 +199,10 @@
                                 'top': -($('#divOpenerFrame').height()-hH),
                                 'overflow':'visible'
                             });
-                        };
+                        }
+                        else {
+                            $('body').append('<div class="divOpenerBodyOverlay" style="position:fixed; width:100%; height:'+((wH-hH)-$('#divOpenerFrame').height())+'px; top:'+(hH+$('#divOpenerFrame').height())+'px; background-color:rgba(0,0,0,0); z-index:999999;">');
+                        }
                     }, openerTimer);
                 }, currentOpenerTimer);
             }

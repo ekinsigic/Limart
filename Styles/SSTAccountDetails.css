@@ -424,6 +424,7 @@
 
     #accountDetails .divDetail.orderHistory .divOrderRow .divOrderTotalPrice {
         width: 140px;
+        margin-right: 10px;
         text-align: center;
     }
 

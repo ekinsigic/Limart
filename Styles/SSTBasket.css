@@ -110,12 +110,20 @@
                     #basketDetails .divItem .divDescription .divUnitPrice div.content span.currency {
                     }
 
-            #basketDetails .divItem .divDescription .divQuantity {
-            }
-
                 #basketDetails .divItem .divDescription .divQuantity div.content {
+                    text-align:center;
                 }
 
+                #basketDetails .divItem .divDescription .divQuantity div.content .aQuantity{
+                    display:inline-block;
+                }
+
+                #basketDetails .divItem .divDescription .divQuantity div.content .spanQuantity{
+                    display:inline-block;
+                    margin:0 3px 0 3px;
+                }
+
+                
                     #basketDetails .divItem .divDescription .divQuantity div.content select {
                         margin: 0 auto 0 auto;
                     }
@@ -284,15 +292,18 @@
 
             #basketDetails .divItem .divDescription .divQuantity {
                 float: right;
-                margin-top: 10px;
                 margin-right: -20px;
             }
 
                 #basketDetails .divItem .divDescription .divQuantity div.content {
                     width: auto;
                     min-width: initial;
+                    padding-top: 23px;
                     padding-left: 0;
                 }
+               
+
+
 
             #basketDetails .divItem .divDescription .divTotalPrice {
                 display: none;

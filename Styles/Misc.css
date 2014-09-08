@@ -210,71 +210,103 @@ img[data-sixtythree="arrow-next-short-purple"] {
 
 /*account icons */
 
-img[data-sixtythree="SST-icon-my-account"]{
+img[data-sixtythree="icon-account-profile"]{
     width: 81px;
     height: 99px;
 }
 
-img[data-sixtythree="SST-icon-order-account"]{
+img[data-sixtythree="icon-account-orders"]{
     width: 91px;
     height: 78px;
 }
 
-img[data-sixtythree="SST-icon-services-account"]{
-    width: 66px;
-    height: 91px;
-}
-
-img[data-sixtythree="SST-icon-contact-account"]{
+img[data-sixtythree="icon-account-coupons"]{
     width: 77px;
     height: 80px;
 }
 
 
 /* purple image*/
-img[data-sixtythree="SST-icon-my-account"].small{
+img[data-sixtythree="icon-account-profile"].small{
     width: 24px;
     height: 29px;
 }
 
-img[data-sixtythree="SST-icon-order-account"].small{
+img[data-sixtythree="icon-account-orders"].small{
     width: 31px;
     height: 27px;
 }
 
-img[data-sixtythree="SST-icon-services-account"].small{
-    width: 26px;
-    height: 35px;
-}
-
-img[data-sixtythree="SST-icon-contact-account"].small{
-    width: 27px;
-    height: 28px;
+img[data-sixtythree="icon-account-coupons"].small{
+    width: 32px;
+    height: 30px;
 }
 
 
 
 /* white image*/
-img[data-sixtythree="SST-icon-my-account-white"].small{
+img[data-sixtythree="icon-account-profile-white"].small{
     width: 24px;
     height: 29px;
 }
 
-img[data-sixtythree="SST-icon-order-account-white"].small{
+img[data-sixtythree="icon-account-orders-white"].small{
     width: 31px;
     height: 27px;
 }
 
-img[data-sixtythree="SST-icon-services-account-white"].small{
-    width: 26px;
-    height: 35px;
-}
-
-img[data-sixtythree="SST-icon-contact-account-white"].small{
-    width: 27px;
-    height: 28px;
+img[data-sixtythree="icon-account-coupons"].small{
+    width: 32px;
+    height: 30px;
 }
 /* end - account icons */
+
+
+
+
+
+/* account order history */
+img[data-sixtythree^="icon-order-received-"]{
+    width: 46px;
+    height: 21px;
+}
+
+img[data-sixtythree^="icon-order-preparing-"]{
+    width: 46px;
+    height: 21px;
+}
+
+img[data-sixtythree^="icon-order-delivery-"]{
+    width: 46px;
+    height: 21px;
+}
+
+img[data-sixtythree^="icon-order-on-shipping-"]{
+    width: 46px;
+    height: 21px;
+}
+
+img[data-sixtythree^="icon-order-completed-"]{
+    width: 46px;
+    height: 21px;
+}
+/* end - account order history */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

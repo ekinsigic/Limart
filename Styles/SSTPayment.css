@@ -151,10 +151,10 @@
     .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption,
     .divPaymentOption .divWirePaymentOption {
         float: left;
-        margin-right: 0px;
+        margin-right: 0;
         padding-left: 15px;
         margin-top: 8px;
-        width: 295px;
+        width: 290px;
         height: 200px;
         background-color: #fff;
         border: 1px solid #f2f2f2;
@@ -162,7 +162,7 @@
 
     .divAddress-Payment-Content .divContent .divAddressContent .divAddressOption:nth-child(2n),
     .divPaymentOption .divWirePaymentOption:nth-child(2n) {
-        margin-right: 16px;
+        margin-right: 10px;
     }
 
         .divAddress-Payment-Content .divContent .active,
@@ -363,18 +363,26 @@ a.contShopping {
 #payment .divPaymentContent {
     width: 100%;
     max-height: 999999px;
-    padding: 0 0px 50px 0px;
+    padding: 0 0 50px 0px;
     transition: all 0.7s;
 }
 
     #payment .divPaymentContent .divPaymentText {
+        float:left;
         margin: 40px 0 0 0;
     }
 
         #payment .divPaymentContent .divPaymentText .pDescription {
-            width: 100%;
+            width:300px;
             margin: 20px 0 35px 0;
         }
+
+
+    #payment .divPaymentContent .aInstallments{
+        float:right;
+        margin-top:50px;
+        text-decoration:underline;
+    }
 
     #payment .divPaymentContent ul.ulPaymentOptions {
         height: 40px;
@@ -1223,6 +1231,11 @@ a.contShopping {
         #payment .divPaymentContent .pDescription {
             width: 100% !important;
             margin: 10px 0 35px 0 !important;
+        }
+
+        #payment .divPaymentContent .aInstallments{
+            float:none;
+            margin:0 0 30px 0;
         }
 
 

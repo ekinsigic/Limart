@@ -19,7 +19,7 @@
 
 #welcomeAccount .divAccount{
     margin:40px auto 0 auto;
-    width:915px;
+    width:680px;
 }
 
 #welcomeAccount .divAccount .divAcountItem{
@@ -30,9 +30,11 @@
     cursor:pointer;
 }
 
-#divContact.divAcountItem{
+#divDiscount.divAcountItem{
     margin-right:0 !important;
+
 }
+
 
 #welcomeAccount .divAccount .divIcon{
     width:100%;
@@ -56,13 +58,11 @@
     margin-top:56px;
 }
 
-#divServices .divIcon img{
-    margin-top:43px;
+#divDiscount .divIcon img{
+    margin-top:52px;
 }
 
-#divContact .divIcon img{
-    margin-top:55px;
-}
+
 
 
 
@@ -72,24 +72,20 @@
 }
 
 #divAccountDetails .divIcon img.white{
-    left:53px;
+    left:52px;
     margin-top:43px;
 }
 
 #divOrder .divIcon img.white{
-    left:48px;
+    left:47px;
     margin-top:56px;
 }
 
-#divServices .divIcon img.white{
-    left:60px;
-    margin-top:43px;
+#divDiscount .divIcon img.white{
+    left:54px;
+    margin-top:52px;
 }
 
-#divContact .divIcon img.white{
-    left:55px;
-    margin-top:55px;
-}
 
 
 #welcomeAccount .divAccount .divAcountItem .aHeader{
@@ -162,12 +158,8 @@
         background-color:#6e6f86;
     }
 
-    #divServices{
+    #divDiscount{
         background-color:#7e7f94;
-    }
-
-    #divContact{
-        background-color:#8e8fa1;
     }
 
     #welcomeAccount .divAccount .divAcountItem .aHeader{
@@ -227,7 +219,7 @@
     }
 
     #welcomeAccount .divAccount div.activeSubMenu img.white{
-        left:0 !important;
+        left: !important;
         opacity:1;
     }
 
@@ -249,53 +241,37 @@
         float:left;
     }
 
+    #welcomeAccount .divAccount .divIcon img.purple {
+        opacity:0;
+    }
+    
+    #welcomeAccount .divAccount .divIcon img.white{
+        opacity:0.3;
+        left:0 !important;
+    }
 
-    #divAccountDetails .divIcon img{
+    #divAccountDetails .divIcon img,
+    #divAccountDetails .divIcon img.white{
         margin-top:20px;
         margin-left:34px;
         width:24px;
         height:29px;
     }
 
-    #divOrder .divIcon img{
+    #divOrder .divIcon img,
+    #divOrder .divIcon img.white{
         margin-top:22px;
-        margin-left:28px;
+        margin-left:30px;
         width:31px;
         height:27px;
     }
 
-    #divServices .divIcon img{
-        margin-top:16px;
-        margin-left:33px;
-        width:26px;
-        height:35px;
-    }
-
-    #divContact .divIcon img{
-        margin-top:22px;
-        margin-left:35px;
-        width:27px;
-        height:28px;
-    }
-
-     #welcomeAccount .divAccount .divIcon img.white{
-         left:0 !important;
-     }
-
-     #divAccountDetails .divIcon img.white{
-        margin-top:20px;
-    }
-
-    #divOrder .divIcon img.white{
-        margin-top:22px;
-    }
-
-    #divServices .divIcon img.white{
-        margin-top:16px;
-    }
-
-    #divContact .divIcon img.white{
-        margin-top:22px;
+    #divDiscount .divIcon img,
+    #divDiscount .divIcon img.white{
+        margin-top:18px;
+        margin-left:31px;
+        width:32px;
+        height:30px;
     }
 }
 
@@ -310,28 +286,12 @@
     }
 
     #welcomeAccount .divAccount .divAcountItem{
-        width:200px;
+        width:206px;
         height:330px;
     }
 
-    #divAccountDetails{
-        margin-right:45px;
-        margin-bottom:20px;
-        margin-left:100px;
-    }
-
-    #divOrder{
-        margin-bottom:20px;
-    }
-
-    #divServices{
-        clear:left;
-        margin-left:100px;
-        margin-right:45px !important;
-    }
-
     #welcomeAccount .divAccount .divIcon{
-        height:200px;
+        height:206px;
         transition:background-color 0.5s, border 0.5s;
     }
 
@@ -358,36 +318,28 @@
     }
 
     #divOrder .divIcon img{
-        margin-top:51px;
+        margin-top:54px;
     }
 
-    #divServices .divIcon img{
-        margin-top:38px;
-    }
-
-    #divContact .divIcon img{
-        margin-top:50px;
+    #divDiscount .divIcon img{
+        margin-top:48px;
     }
 
     #divAccountDetails .divIcon img.white{
-        left:48px;
+        left:51px;
         margin-top:38px;
     }
 
     #divOrder .divIcon img.white{
-        left:43px;
-        margin-top:51px;
+        left:46px;
+        margin-top:54px;
     }
 
-    #divServices .divIcon img.white{
-        left:55px;
-        margin-top:38px;
+    #divDiscount .divIcon img.white{
+        left:53px;
+        margin-top:48px;
     }
 
-    #divContact .divIcon img.white{
-        left:50px;
-        margin-top:50px;
-    }
 
 
 

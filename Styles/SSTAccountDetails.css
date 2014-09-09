@@ -70,10 +70,11 @@
     #aMainAccountMenuOpener .spanDot {
         display: block;
         float: left;
-        margin-left: 4px;
-        width: 6px;
-        height: 6px;
-        background-color: #000;
+        margin-top: 17px;
+        margin-left: 3px;
+        width: 4px;
+        height: 4px;
+        background-color: #dd354b;
         border-radius: 100%;
         transition: all 0.5s;
     }
@@ -82,16 +83,18 @@
             background-color: #fff;
         }
 
-    #aMainAccountMenuOpener .spanDot {
+    #aMainAccountMenuOpener .spanMenu {
         display: block;
         float: left;
-        margin-left: 4px;
-        width: 6px;
-        height: 6px;
-        background-color: #000;
-        border-radius: 100%;
+        margin-top: 15px;
+        margin-left: 10px;
         transition: all 0.5s;
+        opacity:1;
     }
+
+        #aMainAccountMenuOpener .spanMenu.activeMenu {
+            opacity:0;
+        }
 
 
 
@@ -854,10 +857,15 @@
         z-index: 18;
         position: fixed;
         top: 70px;
-        width: 70px;
-        height: 40px;
-        padding: 16px 0 16px 18px;
-        background-color: #dd354b;
+        left:5%;
+        width: 90px;
+        height: 38px;
+        padding: 0 0 16px 0;
+        background-color: rgba(255,255,255,0.9);
+    }
+
+    #aMainAccountMenuOpener.activeMenu{
+        background-color: rgba(255,255,255,0);
     }
 
 
@@ -1044,6 +1052,7 @@
     /* end - address */
 
 
+
     /* order history */
     #accountDetails .divDetail.orderHistory .divOrderColumnHeaders {
         display: none;
@@ -1076,9 +1085,9 @@
         width: 100%;
     }
 
-    #accountDetails .divDetail.orderHistory .divOrderRow .divStatus img {
-        margin-top: -3px;
-        width: 20px;
+    #accountDetails .divDetail.orderHistory .divOrderRow .divOrderStatus img {
+        width: 35px;
+        height:16px;
     }
 
     #accountDetails .divDetail.orderHistory .divOrderRow .arrowDown {

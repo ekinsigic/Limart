@@ -1,11 +1,7 @@
         $(document).ready(function () {
             setupTriggers();
             carryMenu();
-            if ($('#userIsLoggedIn').length > 0) {
-                userIsLoggedIn = true;
-            };
             loginActions();
-                console.log(userIsLoggedIn)
         });
         $(window).resize(function(){
             carryMenu();
@@ -28,7 +24,7 @@
         });
         // opener globals
         var openerTimer = 700; //Opener'ın açılış ve kapanış süresi
-        var isOpenerOn = false; //Opener açık mı değil mi boolean'ı
+        var isOpenerOn = false; //Opener açık mı değil mi boolean'i
         var lastTriggerType = ""; //En son açık olan opener adı
         var isCurrentlyAnimated = false; //Opener o sırada animasyon halinde mi
         var otherItemsToSlide = $('main, footer, .filtersInHeader, .artistDetailListingFilters, #carriableFilters, #aMainAccountMenuOpener'); //Opener açılırken yarılma efektini verebilmek için Slide edecek diğer elementler
@@ -362,49 +358,38 @@
     function loginActions() {
         $('.divUserOpener').css('display','none');
         enableDisableUserButton();
-        if (userIsLoggedIn) {
-            $('header .divContent').wrap('<section>');
-            $('.divUserOpener').css('display','');
+        $('.divUserOpener').css('display','');
+        carryUserNav();
+        $(window).resize(function(){
             carryUserNav();
-            $(window).resize(function(){
-                carryUserNav();
-            });
-        }
-        else {
-            $('.divUserIcon.triggerDiv').append('<a href="login.html" style="position:absolute; width:100%; height:100%">');
-        }
+        });
 
         function carryUserNav() {
-                //if screen width is big...
-                if ($('nav #menuOpener').length > 0) {
-                    $('header').addClass('withUserOpener');
-                    $('#divOpenerFrame .divUserOpener').prependTo('header');
-                    if (!userIsLoggedIn) {
-                        $('.divUserIcon.triggerDiv a').click(function(e){
-                            e.stopPropagation();
-                        })
-                    }
-                    $('.divUserIcon.triggerDiv').css('display','none');
-                    //
-                    $('.divUserOpener').css('display','block');
-                }
-                else {
-                    $('header').removeClass('withUserOpener');
-                    $('header .divUserOpener').prependTo('#divOpenerFrame');
-                    $('.divUserIcon.triggerDiv').css('display','block');
-                    //
-                    $('.divUserOpener').css('display','');
-                }
+            if ($('nav #menuOpener').length > 0) {
+                $('header').addClass('withUserOpener');
+                $('#divOpenerFrame .divUserOpener').prependTo('header');
+                $('.divUserIcon.triggerDiv a').click(function(e){
+                    e.stopPropagation();
+                })
+                $('.divUserIcon.triggerDiv').css('display','none');
+                //
+                $('.divUserOpener').css('display','block');
+            }
+            else {
+                $('header').removeClass('withUserOpener');
+                $('header .divUserOpener').prependTo('#divOpenerFrame');
+                $('.divUserIcon.triggerDiv').css('display','block');
+                //
+                $('.divUserOpener').css('display','');
+            }
         }
 
         function enableDisableUserButton() {
-                if (userIsLoggedIn) {
-                    $('.divUserIcon.triggerDiv a').click(function(e){
-                        e.preventDefault();
-                        if ($('nav #menuOpener').length > 0) {
-                            $('.divUserIcon.triggerDiv').css('display','block;')
-                        };
-                    });
+            $('.divUserIcon.triggerDiv a').click(function(e){
+                e.preventDefault();
+                if ($('nav #menuOpener').length > 0) {
+                    $('.divUserIcon.triggerDiv').css('display','block;')
                 };
+            });
         }
     }

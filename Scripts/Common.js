@@ -44,6 +44,11 @@ $(window).on("orientationchange", function () {
 
 $(window).resize(function () {
     setGlobals();
+    setMainMargin();
+});
+
+$(window).load(function(){
+    setMainMargin();
 });
 
 $(document).ready(function () {
@@ -106,7 +111,6 @@ function smartphoneLandscape() {
 
 // misc imajlarını sayfa açılışında retina olup olmadığına göre yükleme fonksiyonu
 function miscImgLoader() {
-
 
     var imgFolderPath = 'Images'
 
@@ -179,8 +183,13 @@ function selectCustomizer() {
     $(document).find('.SSTCustomSelectOriginal').each(function(){
         $(this).after('<ul class="SSTCustomSelectMirror">')
         var numberOfOptions = $(this).find('option').length()
-        
+
     })
+}
+
+
+function setMainMargin() {
+    $('main').css('margin-top',$('header').outerHeight());
 }
 
 

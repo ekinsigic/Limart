@@ -192,6 +192,11 @@
 
 
 
+    .forgotPasswordDescription {
+        margin-bottom:20px;
+        padding:0px;
+        text-align:center;
+    }s
 
 
 
@@ -580,11 +585,7 @@
         margin:auto !important;
         width:455px;
     }
-    .forgotPasswordDescription {
-        margin-bottom:20px;
-        padding:0px;
-        text-align:center;
-    }
+
     .loginPage .divMemberD{
         float:none;
         margin: 50px auto 0 auto !important;
@@ -687,7 +688,13 @@
         width:130px;
     
         top: 150px;
-}
+    }
+
+    .forgotPasswordDescription {
+        text-align: left;
+        width:600px;
+    }
+
 
 }
 
@@ -696,5 +703,10 @@
     .loginPage .divNewMemberContent,
     .loginPage .divSearchContent{
         width:1080px;
+    }
+
+    .forgotPasswordDescription {
+        text-align: left;
+        width:600px;
     }
 }

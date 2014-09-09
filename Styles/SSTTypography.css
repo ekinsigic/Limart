@@ -661,6 +661,11 @@ a.SSTAStyleE {
     .SSTSpanStyleL{
         font-size:11px;
     }
+
+    .divDetail.discount .SSTFaceL,
+    .divDetail.discount .SSTSpanStyleJ{
+        font-size:10.5px;
+    }
    
 }
 
@@ -682,6 +687,14 @@ a.SSTAStyleE {
     .SSTSpanStyleL{
         font-size:11px;
     }
+
+    .divDetail.discount .SSTFaceL,
+    .divDetail.discount .SSTSpanStyleJ{
+        font-size:10.5px;
+    }
+
+
+    
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -693,5 +706,10 @@ a.SSTAStyleE {
     .SSTFaceJ {
         font-size: 15px;
         letter-spacing: 0.5px;
+    }
+
+    .divDetail.discount .SSTFaceL,
+    .divDetail.discount .SSTSpanStyleJ{
+        font-size:10.5px;
     }
 }

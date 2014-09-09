@@ -671,6 +671,124 @@
 
 
 
+/* discount */
+#accountDetails .divDetail.discount .divDiscountColumnHeaders{
+    /*background-color:#ff0;*/
+    padding-bottom: 25px;
+    margin: 0 0 25px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#accountDetails .divDetail.discount .divDiscountColumnHeaders .header{
+    /*background-color:#ff0;*/
+    float:left;
+    text-align:center;
+}
+
+#accountDetails .divDetail.discount .divDiscountColumnHeaders .header.one{
+    /*background-color:#00ffff;*/
+    padding-left:15px;
+    width:115px;
+    text-align:left;
+}
+
+#accountDetails .divDetail.discount .divDiscountColumnHeaders .header.two{
+    /*background-color:rgb(255, 106, 0);*/
+    width:90px;
+}
+
+#accountDetails .divDetail.discount .divDiscountColumnHeaders .header.three{
+    /*background-color:#812828;*/
+    width:210px;
+}
+
+#accountDetails .divDetail.discount .divDiscountColumnHeaders .header.four{
+    /*background-color:#82dc68;*/
+    width:163px;
+}
+
+#accountDetails .divDetail.discount .divDiscountColumnHeaders .header.five{
+    /*background-color:rgb(0, 255, 255);*/
+    padding-right:15px;
+    width:70px;
+    text-align:right;
+}
+
+
+
+#accountDetails .divDetail.discount .divDiscountRow{
+    margin-bottom:5px;
+    width:100%;
+    background-color:#f6f6f6;
+    cursor:pointer;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow:hover{
+    background-color:#eee;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow .divContent span.mobile{
+    display:none;
+}
+
+
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountNumber,
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount,
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountExpiration,
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit,
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus{
+    min-height: 50px;
+    float: left;
+
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+
+    text-align:center;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountNumber .divContent{
+    padding-left:15px;
+    width:115px;
+    text-align:left;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount .divContent{
+    width:90px;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountExpiration .divContent{
+    width:210px;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit .divContent{
+    width:163px;
+}
+
+#accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus .divContent{
+    padding-right:15px;
+    width:70px;
+    text-align:right;
+}
+
+
+
+/* end - discount */
+
+
+
+
+
+
+
 
 
 
@@ -1031,6 +1149,55 @@
 
     /* end - order history */
 
+
+
+    #accountDetails .divDetail.discount .divDiscountColumnHeaders{
+        display:none;
+    }
+
+    
+    #accountDetails .divDetail.discount .divDiscountRow .divContent span.mobile{
+        display:block;
+        color:#a3a3a3;
+        margin-bottom:4px;
+    }
+
+
+    
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountNumber,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountExpiration,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus{
+        text-align:left;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountNumber,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus{
+        width:50%;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount .divContent,
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus .divContent{
+        padding:0 15px 0 0 !important;
+        width:100%;
+        text-align:right !important;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount{
+        text-align:right;
+    }
+
+
+    #accountDetails .divDetail.discount .divDiscountRow .divContent{
+        padding:0 0 0 15px !important;
+        text-align:left !important;
+    }
+    
+   
+
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -1211,6 +1378,61 @@
         }
 
     /* end - order history */
+
+
+
+    /* discount */
+    #accountDetails .divDetail.discount .divDiscountColumnHeaders .header.one{
+        padding-left:10px;
+        width:100px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountColumnHeaders .header.two{
+        width:80px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountColumnHeaders .header.three{
+        width:180px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountColumnHeaders .header.four{
+        width:140px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountColumnHeaders .header.five{
+        padding-right:10px;
+        width:58px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountNumber .divContent{
+        padding-left:10px;
+        width:100px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount .divContent{
+        width:80px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountExpiration .divContent{
+        width:180px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit .divContent{
+        width:140px;
+    }
+
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus .divContent{
+        padding-right:10px;
+        width:58px;
+    }
+
+
+
+
+
+    /* end - discount */
+
+
 
 
 }

@@ -448,7 +448,7 @@
                         <li>/</li>
                         <li><a href="#" class="SSTAStyleI">HESABIM</a></li>
                         <li>/</li>
-                        <li>SİPARİŞ İŞLEMLERİM</li>
+                        <li>İNDİRİM KUPONLARIM</li>
                     </ul>
                     <div class="separator"></div>
                 </div>
@@ -478,7 +478,7 @@
                                 <img data-sixtythree="icon-account-orders" class="white small two">
                             </a>
                             <ul class="level2">
-                                <li><a href="AccountOrderHistory.html" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />SİPARİŞ İŞLEMLERİ</a></li>
+                                <li><a href="AccountOrderHis.html" class="SSTAStyleG aSubMenuItem">SİPARİŞ İŞLEMLERİ</a></li>
                             </ul>
                         </li>
                         <li>
@@ -487,16 +487,18 @@
                                 <img data-sixtythree="icon-account-coupons" class="small three" />
                                 <img data-sixtythree="icon-account-coupons" class="white small three" />
                             </a>
+                            <ul class="level2">
+                                <li><a href="#" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />KUPONLAR</a></li>
+                            </ul>
                         </li>
-
                     </ul>
                 </aside>
                 <!-- END - ASIDE -->
 
 
-                <div class="divDetail orderHistory">
+                <div class="divDetail discount">
 
-                    <h1 class="SSTFaceII">Sipariş Geçmişi</h1>
+                    <h1 class="SSTFaceII">İndirim Kuponlarım</h1>
                     <p class="SSTFaceJJ">
                         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
                     </p>
@@ -504,18 +506,157 @@
                     <div class="separator line"></div>
 
 
-                    <!-- ORDER HEADERS -->
-                    <div class="divOrderColumnHeaders">
-                        <div class="SSTFaceL header1">BİLGİ</div>
-                        <div class="SSTFaceL header2">TUTAR</div>
-                        <div class="SSTFaceL header3">DURUM</div>
+                    <!-- DISCOUNT HEADERS -->
+                    <div class="divDiscountColumnHeaders">
+                        <div class="SSTFaceL header one">İNDİRİM KODU</div>
+                        <div class="SSTFaceL header two">TUTAR</div>
+                        <div class="SSTFaceL header three">BAŞLANGIÇ - SON KULLANIM</div>
+                        <div class="SSTFaceL header four">ALT - ÜST LİMİT</div>
+                        <div class="SSTFaceL header five">DURUM</div>
+
                         <div class="separator"></div>
                     </div>
-                    <!-- END - ORDER HEADERS -->
-       
-                 
+                    <!-- END - DISCOUNT HEADERS -->
 
-                    <input type="button" class="SSTButtonA button" value="KAYDET" />
+
+                    <div class="divDiscountRow SSTSpanStyleJ">
+                        <div class="divDiscountNumber">
+                            <div class="divContent">
+                                <span class="mobile">İNDİRİM KODU</span>
+                                <span>258ihy548</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountAmount">
+                            <div class="divContent">
+                                <span class="mobile">TUTAR</span>
+                                <span>20.00 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountExpiration">
+                            <div class="divContent">
+                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
+                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountUpperLimit">
+                            <div class="divContent">
+                                <span class="mobile">ALT - ÜST LİMİT</span>
+                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountStatus">
+                            <div class="divContent">
+                                <span class="mobile">DURUM</span>
+                                <span>Aktif</span>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="divDiscountRow SSTSpanStyleJ">
+                        <div class="divDiscountNumber">
+                            <div class="divContent">
+                                <span class="mobile">İNDİRİM KODU</span>
+                                <span>258ihy548</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountAmount">
+                            <div class="divContent">
+                                <span class="mobile">TUTAR</span>
+                                <span>20.00 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountExpiration">
+                            <div class="divContent">
+                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
+                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountUpperLimit">
+                            <div class="divContent">
+                                <span class="mobile">ALT - ÜST LİMİT</span>
+                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountStatus">
+                            <div class="divContent">
+                                <span class="mobile">DURUM</span>
+                                <span>Aktif</span>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="divDiscountRow SSTSpanStyleJ">
+                        <div class="divDiscountNumber">
+                            <div class="divContent">
+                                <span class="mobile">İNDİRİM KODU</span>
+                                <span>258ihy548</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountAmount">
+                            <div class="divContent">
+                                <span class="mobile">TUTAR</span>
+                                <span>20.00 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountExpiration">
+                            <div class="divContent">
+                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
+                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountUpperLimit">
+                            <div class="divContent">
+                                <span class="mobile">ALT - ÜST LİMİT</span>
+                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountStatus">
+                            <div class="divContent">
+                                <span class="mobile">DURUM</span>
+                                <span>Aktif</span>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="divDiscountRow SSTSpanStyleJ">
+                        <div class="divDiscountNumber">
+                            <div class="divContent">
+                                <span class="mobile">İNDİRİM KODU</span>
+                                <span>258ihy548</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountAmount">
+                            <div class="divContent">
+                                <span class="mobile">TUTAR</span>
+                                <span>20.00 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountExpiration">
+                            <div class="divContent">
+                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
+                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountUpperLimit">
+                            <div class="divContent">
+                                <span class="mobile">ALT - ÜST LİMİT</span>
+                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
+                            </div>
+                        </div>
+                        <div class="divDiscountStatus">
+                            <div class="divContent">
+                                <span class="mobile">DURUM</span>
+                                <span>Aktif</span>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+
+
+
                 </div>
 
                 <div class="separator"></div>
@@ -580,6 +721,8 @@
         </footer>
 
     </div>
+
+
 
 
     <!-- SCRIPTS -->

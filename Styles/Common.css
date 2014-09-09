@@ -65,11 +65,11 @@
 
 
 nav .divNav, main, footer {
-    transition:transform 0.5s ease;
-    -webkit-transition:-webkit-transform 0.5s ease;
-    -moz-transition:-moz-transform 0.5s ease;
-    -ms-transition:-ms-transform 0.5s ease;
-    -o-transition:-o-transform 0.5s ease;
+    transition:transform 0.7s ease;
+    -webkit-transition:-webkit-transform 0.7s ease;
+    -moz-transition:-moz-transform 0.7s ease;
+    -ms-transition:-ms-transform 0.7s ease;
+    -o-transition:-o-transform 0.7s ease;
 }
 
 main{

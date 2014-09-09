@@ -29,7 +29,7 @@
 }
 
 .loginPage h1.login{
-    padding:0 0 15px 20px;
+    padding: 0 0 15px 0px;
     margin-bottom:30px;
     border-bottom:1px solid #d9d9db;
 }
@@ -135,7 +135,8 @@
 /* NEW MEMBER */
 .loginPage .divMemberA{
     float:left;
-    width:720px;
+    width: 960px;
+    padding-top: 0px;
 }
 
 .loginPage .divMemberB{
@@ -179,13 +180,13 @@
 
 .loginPage .divNewMemberContent .contShopping{
     padding-left:10px;
-    width:150px;
+    width: 140px;
+    top: 20px;
 }
 
 .loginPage .divNewMemberContent .separator.line{
     margin: 0 0 5px 0;
     padding-top:25px;
-    border-bottom:1px solid #d9d9db;
 }
 /* END - NEW MEMBER */
 
@@ -322,7 +323,7 @@
 
     .loginPage .divMemberD{
         float:none;
-        margin:20px auto 0 auto !important;
+        margin: 35px auto 0 auto !important;
         width:250px;
     }
 
@@ -340,7 +341,9 @@
     .loginPage .divNewMemberContent .contShopping{
         display: block;
         margin:auto;
-    }
+    
+        top: 0px;
+}
 
 
 
@@ -458,6 +461,18 @@
         float:none;
         margin:5px auto 20px auto;
     }
+    .loginPage .divNewMemberContent .contShopping{
+        display: block;
+        margin:auto;
+        position: absolute;
+        left: 5%;
+        margin-left: -6px;
+        top: 24px;
+    }
+
+    .loginPage .divNewMemberContent .contShopping span{
+        display: none;
+    }
 
     .loginPage .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
         float:none;
@@ -488,7 +503,7 @@
 
     .loginPage .openerHeader{
        display:block;
-       margin-bottom: 40px;
+       margin-bottom: 35px;
     }
 
     .loginPage h1.login{
@@ -504,7 +519,7 @@
     .loginPage .input{
         height:52px !important;
         font-size: 13px !important;
-        text-align:center;
+        text-align: left;
     }
 
     .loginPage .divLoginContent .divLogin .inputLoginBtn{
@@ -567,7 +582,7 @@
 
     .loginPage .divMemberD{
         float:none;
-        margin:50px auto 0 auto !important;
+        margin: 50px auto 0 auto !important;
         width:300px;
     }
 
@@ -591,6 +606,11 @@
     .loginPage .divNewMemberContent .contShopping{
         display: block;
         margin:auto;
+    
+        position: absolute;
+        left: 50%;
+        margin-left: -345px;
+        top: 36px;
     }
 
 
@@ -629,10 +649,11 @@
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
     .loginPage .divLoginContent,
-    .loginPage .divNewMemberContent,
-    .loginPage .divBasketContent,
-    .loginPage .divSearchContent{
+    .loginPage .divNewMemberContent{
         width:960px;
+    }
+    .loginPage .divLoginContent {
+        padding-top: 70px;
     }
 
     #userOpenerInnerDivSignUp {
@@ -657,7 +678,9 @@
 
     .loginPage .divMemberD .inputBtn{
         width:130px;
-    }
+    
+        top: 150px;
+}
 
 }
 

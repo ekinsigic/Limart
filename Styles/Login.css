@@ -1,15 +1,15 @@
 
 
 /* login */
-.sixtythreeOpener.divUserOpener{
+.loginPage.divUserOpener{
     padding: 50px 0 100px 0;
 }
 
-.sixtythreeOpener.member{
+.loginPage.member{
     height:auto;
 }
 
-.sixtythreeOpener .openerHeader {
+.loginPage .openerHeader {
     height: 100px;
     line-height: 100px;
     background-color: #f0f0f0;
@@ -17,43 +17,43 @@
     display:none;
 }
 
-.sixtythreeOpener .divLoginContent,
-.sixtythreeOpener .divNewMemberContent{
+.loginPage .divLoginContent,
+.loginPage .divNewMemberContent{
     margin: 0px auto 0 auto;
 }
 
 
-.sixtythreeOpener .divLogin{
+.loginPage .divLogin{
     float:left;
     width:350px;
 }
 
-.sixtythreeOpener h1.login{
-    padding:0 0 15px 20px;
+.loginPage h1.login{
+    padding: 0 0 15px 0px;
     margin-bottom:30px;
     border-bottom:1px solid #d9d9db;
 }
 
-.sixtythreeOpener .divLoginContent .divLogin .input{
+.loginPage .divLoginContent .divLogin .input{
     margin-bottom:10px;
 }
 
-.sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
+.loginPage .divLoginContent .divLogin .inputLoginBtn{
     float:left;
     margin-left:0;
 }
 
-.sixtythreeOpener .divLoginContent .divLogin a{
+.loginPage .divLoginContent .divLogin a{
     float:right;
     text-align:right;
 }
 
-    .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+    .loginPage .divLoginContent .divLogin a.signUp{
         margin-top:8px;
         width:140px;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin a.forgotPassword{
+    .loginPage .divLoginContent .divLogin a.forgotPassword{
         margin-top:10px;
         color:#b1b1b3;
     }
@@ -61,66 +61,66 @@
 
 
 
-.sixtythreeOpener .divLoginContent .divOr{
+.loginPage .divLoginContent .divOr{
     float:left;
     margin:37px 0 0 160px;
     height:180px;
-    border-left:2px solid #d9d9db;
+    border-left: 1px solid #000;
 }
 
-.sixtythreeOpener .divLoginContent .spanOr{
+.loginPage .divLoginContent .spanOr{
     position:absolute;
     left:-23px;
     top:63px;
     padding:20px 0 20px 0;
-    background-color:#ececef;
+    background-color: white;
 }
 
 
 
 /* login social icons */
-.sixtythreeOpener .divLoginContent .divSocialIcons{
+.loginPage .divLoginContent .divSocialIcons{
     float:right;
     width:400px;
     margin-top:53px;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon{
     width:224px;
     height:42px;
     margin-bottom:10px;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.facebook{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon.facebook{
     background-color:#0b66af;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.facebook img{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon.facebook img{
     margin:11px 0 0 31px;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.twitter{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon.twitter{
     background-color:#26b1df;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.twitter img{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon.twitter img{
     margin-top:13px;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.instagram{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon.instagram{
     background-color:#61534e;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon.instagram img{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon.instagram img{
     margin-top:10px;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon img{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon img{
     float:left;
     margin-left:25px;
 }
 
-.sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon span{
+.loginPage .divLoginContent .divSocialIcons .aSocialIcon span{
     position:absolute;
     left:62px;
     height:100%;
@@ -133,88 +133,106 @@
 
 
 /* NEW MEMBER */
-.sixtythreeOpener .divMemberA{
+.loginPage .divMemberA{
+    float:left;
+    width: 960px;
+    padding-top: 50px;
+}
+
+.loginPage .divMemberB{
     float:left;
     width:720px;
 }
 
-.sixtythreeOpener .divMemberB{
+.loginPage .divMemberC{
     float:left;
     width:720px;
 }
 
-.sixtythreeOpener .divMemberC{
-    float:left;
-    width:720px;
-}
-
-.sixtythreeOpener .divMemberD{
+.loginPage .divMemberD{
     float:right;
     margin-top:-109px;
     width:255px;
 }
 
-.sixtythreeOpener .divNewMemberContent .input{
+.loginPage .divNewMemberContent .input{
     float:left;
     width:350px !important;
     margin:0 10px 10px 0;
 }
 
-.sixtythreeOpener .divMemberD .inputBtn{
+.loginPage .divMemberD .inputBtn{
     float:left;
     width:125px;
 }
 
-.sixtythreeOpener .divMemberD label{
+.loginPage .divMemberD label{
     float:left;
     margin-left:-4px;
     width:210px;
 }
 
-    .sixtythreeOpener .divMemberD label a {
+    .loginPage .divMemberD label a {
         position:absolute;
         top:16px;
         width:100%;
     }
 
-.sixtythreeOpener .divNewMemberContent .contShopping{
+.loginPage .divNewMemberContent .contShopping{
     padding-left:10px;
-    width:150px;
+    width: 140px;
+    top: 20px;
 }
 
-.sixtythreeOpener .divNewMemberContent .separator.line{
+.loginPage .divNewMemberContent .separator.line{
     margin: 0 0 5px 0;
     padding-top:25px;
     border-bottom:1px solid #d9d9db;
 }
 /* END - NEW MEMBER */
 
+
+
+
+
+
+/*PASSWORD RESET PAGE */
+.loginPage #userOpenerInnerDivPassword{
+    display: block;
+    opacity: 1;
+    -webkit-transform: scale(1);
+} 
+/* END - PASSWORD RESET PAGE */
+
+
+
+
 /* Screen */
 @media all and (max-width: 700px) {
-    .sixtythreeOpener{
+    .loginPage{
         bottom:0;
         height:auto;
         overflow: auto;
         background-color:#fff;
     }
 
-    .sixtythreeOpener .divSearchContent{
+    .loginPage .divSearchContent{
         width:90%;
     }
 
-    .sixtythreeOpener .openerHeader{
+    .loginPage .openerHeader{
         display:block;
         margin-bottom: 30px;
         height:75px;
         line-height:80px;
     }
 
-    .sixtythreeOpener.divUserOpener{
+    .loginPage.divUserOpener{
         padding:0;
     }
 
-    .sixtythreeOpener .divLoginContent,
-    .sixtythreeOpener .divNewMemberContent{
+    .loginPage .divLoginContent,
+    .loginPage .divNewMemberContent{
         position: relative;
         top:0;
         bottom:0;
@@ -224,35 +242,35 @@
         overflow:auto;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin{
+    .loginPage .divLoginContent .divLogin{
         float:none;
         width:90%;
         margin:auto;
         text-align:center;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin h1.login{
+    .loginPage .divLoginContent .divLogin h1.login{
         display:none;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
+    .loginPage .divLoginContent .divLogin .inputLoginBtn{
         float:none;
         margin:10px auto 10px auto;
         font-size: 15px !important;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin a{
+    .loginPage .divLoginContent .divLogin a{
         float:none;
         font-size: 13px !important;
         text-align:center;
     }
 
-        .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+        .loginPage .divLoginContent .divLogin a.signUp{
             margin:15px auto 0 auto;
             width:250px;
         }
 
-    .sixtythreeOpener .divLoginContent .divOr{
+    .loginPage .divLoginContent .divOr{
         float:none;
         margin:65px auto 0 auto;
         width:90%;
@@ -260,7 +278,7 @@
         border-bottom:1px solid #f2f2f2;
     }
 
-    .sixtythreeOpener .divLoginContent .spanOr{
+    .loginPage .divLoginContent .spanOr{
         top:-6px;
         left:50%;
         margin-left:-45px;
@@ -268,13 +286,13 @@
         background-color:#fff;
     }
 
-    .sixtythreeOpener .divLoginContent .divSocialIcons{
+    .loginPage .divLoginContent .divSocialIcons{
         float:none;
         width:90%;
         margin:53px auto 0 auto;
     }
 
-    .sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon{
+    .loginPage .divLoginContent .divSocialIcons .aSocialIcon{
         margin:0 auto 10px auto;
     }
 
@@ -282,61 +300,63 @@
 
     
 
-    .sixtythreeOpener .divMemberA,
-    .sixtythreeOpener .divMemberB,
-    .sixtythreeOpener .divMemberC{
+    .loginPage .divMemberA,
+    .loginPage .divMemberB,
+    .loginPage .divMemberC{
         float:none;
         margin:auto !important;
         width:90%;
     }
 
-    .sixtythreeOpener .divNewMemberContent .input{
+    .loginPage .divNewMemberContent .input{
         float:none;
         margin:0 auto 10px auto;
         width:100% !important;
     }
 
-    .sixtythreeOpener h1.login{
+    .loginPage h1.login{
         display:none;
     }
 
-    .sixtythreeOpener .divMemberB select{
+    .loginPage .divMemberB select{
         margin-bottom:10px !important;
     }
 
-    .sixtythreeOpener .divMemberD{
+    .loginPage .divMemberD{
         float:none;
         margin:20px auto 0 auto !important;
         width:250px;
     }
 
-    .sixtythreeOpener .divMemberD .inputBtn{
+    .loginPage .divMemberD .inputBtn{
         float:none;
         width:150px !important;
         margin-left:10px;
     }
 
-    .sixtythreeOpener .divMemberD label{
+    .loginPage .divMemberD label{
         float:none;
         margin-left:18px;
     }
 
-    .sixtythreeOpener .divNewMemberContent .contShopping{
+    .loginPage .divNewMemberContent .contShopping{
         display: block;
         margin:auto;
-    }
+    
+        top: 0px;
+}
 
 
 
 
 
     /* basket */
-    .sixtythreeOpener .divBasketContent{
+    .loginPage .divBasketContent{
         margin:auto;
         width:100%;
     }
 
-    .sixtythreeOpener .divBasketContent .divBasketDetails{
+    .loginPage .divBasketContent .divBasketDetails{
         float:none;
         margin:25px auto 0 auto;
         width:90%;
@@ -346,54 +366,54 @@
 }
 
 
-.sixtythreeOpener .divBasketContent .divBasketDetails .basketDetailsScroller {
+.loginPage .divBasketContent .divBasketDetails .basketDetailsScroller {
     max-height: none;
 }
 
-    .sixtythreeOpener .divBasketContent .divBasketItemHeaders {
+    .loginPage .divBasketContent .divBasketItemHeaders {
         display: none;
     }
 
-    .sixtythreeOpener .divItem .imgItemPic {
+    .loginPage .divItem .imgItemPic {
         max-width: 60px;
     }
 
-    .sixtythreeOpener .divItem .divDescription {
+    .loginPage .divItem .divDescription {
         padding-right: 0;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divQuantity,
-    .sixtythreeOpener .divItem .divDescription .divTotalPrice {
+    .loginPage .divItem .divDescription .divQuantity,
+    .loginPage .divItem .divDescription .divTotalPrice {
         min-height: initial;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divInfo{
+    .loginPage .divItem .divDescription .divInfo{
         width:100%;
         padding-right:20px;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divInfo div.content {
+    .loginPage .divItem .divDescription .divInfo div.content {
         padding: 5px 0 10px 0;
         min-width: 150px;
         max-width: 260px;
         text-align: left;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divQuantity{
+    .loginPage .divItem .divDescription .divQuantity{
         display:inline-block;
         width:auto;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divQuantity span{
+    .loginPage .divItem .divDescription .divQuantity span{
         margin:initial;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divQuantity span.spanMobilePrice{
+    .loginPage .divItem .divDescription .divQuantity span.spanMobilePrice{
         display:inline-block;
         padding-left:3px;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divTotalPrice{
+    .loginPage .divItem .divDescription .divTotalPrice{
         float:right;
         display:inline-block;
         width:auto;
@@ -401,116 +421,116 @@
         padding:0;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+    .loginPage .divItem .divDescription .divTotalPrice div.content {
         width:100%;
         margin:0;
         padding:0;
         text-align: right;
     }
 
-    .sixtythreeOpener .divItem .divDescription .aDelete {
+    .loginPage .divItem .divDescription .aDelete {
         top:10px;
     }
 
-    .sixtythreeOpener div.separator.sepA {
+    .loginPage div.separator.sepA {
         padding: 20px 0 0 0;
         margin: 0 0 20px 0;
     }
 
-    .sixtythreeOpener .divBasketContent .divTotal{
+    .loginPage .divBasketContent .divTotal{
         float:none;
     }
 
-    .sixtythreeOpener .divBasketContent .divTotal table{
+    .loginPage .divBasketContent .divTotal table{
         float:none;
         margin:0 auto 0 auto;
         width:90%;
     }
 
-        .sixtythreeOpener .divBasketContent .divTotal table tr td.left{
+        .loginPage .divBasketContent .divTotal table tr td.left{
             text-align:left;
         }
 
-    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton{
+    .loginPage .divBasketContent .divTotal .divPaymentButton{
         float:none;
         margin:40px auto 0 auto;
         width:90%;
         text-align:center;
     }
 
-    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
+    .loginPage .divBasketContent .divTotal .divPaymentButton .contShopping{
         float:none;
         margin:5px auto 20px auto;
     }
 
-    .sixtythreeOpener .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
+    .loginPage .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
         float:none;
         width:200px;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-   .sixtythreeOpener{
+   .loginPage{
         bottom:0;
         height:auto;
         background-color:#fff;
     }
 
-    .sixtythreeOpener .divSearchContent{
+    .loginPage .divSearchContent{
         width:670px;
         position: relative;
     }
 
-    .sixtythreeOpener.divUserOpener{
+    .loginPage.divUserOpener{
         padding:0 0 30px 0;
     }
 
-    .sixtythreeOpener .divLoginContent,
-    .sixtythreeOpener .divNewMemberContent{
+    .loginPage .divLoginContent,
+    .loginPage .divNewMemberContent{
         width:100%;
     }
 
-    .sixtythreeOpener .openerHeader{
+    .loginPage .openerHeader{
        display:block;
        margin-bottom: 40px;
     }
 
-    .sixtythreeOpener h1.login{
+    .loginPage h1.login{
         display:none;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin{
+    .loginPage .divLoginContent .divLogin{
         float:none;
         margin:auto;
         width:455px;
     }
 
-    .sixtythreeOpener .input{
+    .loginPage .input{
         height:52px !important;
         font-size: 13px !important;
         text-align:center;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin .inputLoginBtn{
+    .loginPage .divLoginContent .divLogin .inputLoginBtn{
         float:none;
         margin:20px 0 20px 85px;
         width:200px;
         font-size: 15px !important;
     }
 
-    .sixtythreeOpener .divLoginContent .divLogin a{
+    .loginPage .divLoginContent .divLogin a{
         float:none;
         font-size: 13px !important;
         text-align:center;
     }
 
-        .sixtythreeOpener .divLoginContent .divLogin a.signUp{
+        .loginPage .divLoginContent .divLogin a.signUp{
             margin:auto;
             width:250px;
         }
 
 
-    .sixtythreeOpener .divLoginContent .divOr{
+    .loginPage .divLoginContent .divOr{
         float:none;
         margin:65px auto 0 auto;
         width:670px;
@@ -518,7 +538,7 @@
         border-bottom:1px solid #f2f2f2;
     }
 
-    .sixtythreeOpener .divLoginContent .spanOr{
+    .loginPage .divLoginContent .spanOr{
         top:-6px;
         left:50%;
         margin-left:-45px;
@@ -527,13 +547,13 @@
     }
 
 
-    .sixtythreeOpener .divLoginContent .divSocialIcons{
+    .loginPage .divLoginContent .divSocialIcons{
         float:none;
         margin:60px auto 0 auto;
 
     }
 
-    .sixtythreeOpener .divLoginContent .divSocialIcons .aSocialIcon{
+    .loginPage .divLoginContent .divSocialIcons .aSocialIcon{
         margin:0 auto 10px auto;
     }
 
@@ -541,64 +561,75 @@
 
 
 
-    .sixtythreeOpener .divMemberA,
-    .sixtythreeOpener .divMemberB,
-    .sixtythreeOpener .divMemberC{
+    .loginPage .divMemberA,
+    .loginPage .divMemberB,
+    .loginPage .divMemberC{
         float:none;
         margin:auto !important;
         width:455px;
     }
 
-    .sixtythreeOpener .divMemberD{
+    .loginPage .divMemberD{
         float:none;
-        margin:50px auto 0 auto !important;
+        margin: 10px auto 0 auto !important;
         width:300px;
     }
 
-    .sixtythreeOpener .divNewMemberContent .input{
+    .loginPage .divNewMemberContent .input{
         float:left;
         width:100% !important;
         margin:0 10px 10px 0;
     }
 
-    .sixtythreeOpener .divMemberD .inputBtn{
+    .loginPage .divMemberD .inputBtn{
         float:none;
         width:225px;
         height:15px;
     }
 
-    .sixtythreeOpener .divMemberD label{
+    .loginPage .divMemberD label{
         float:none;
         margin-left:40px;
     }
 
-    .sixtythreeOpener .divNewMemberContent .contShopping{
+    .loginPage .divNewMemberContent .contShopping{
         display: block;
         margin:auto;
-    }
+    
+        position: absolute;
+        left: 50%;
+        margin-left: -345px;
+        top: 36px;
+}
+
+
+
+
+
+
 
     /* basket */
-    .sixtythreeOpener .divBasketContent{
+    .loginPage .divBasketContent{
         width:670px;
         padding-bottom: 20px;
     }
 
-    .sixtythreeOpener .divBasketContent .divBasketDetails{
+    .loginPage .divBasketContent .divBasketDetails{
         float:none;
         width:100%;
     }
 
-    .sixtythreeOpener .divBasketContent .divBasketItemHeaders .header2{
+    .loginPage .divBasketContent .divBasketItemHeaders .header2{
         float:left;
         margin-left:28px;
         width:148px;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divQuantity{
+    .loginPage .divItem .divDescription .divQuantity{
         width:65px;
     }
 
-    .sixtythreeOpener .divItem .divDescription .divTotalPrice div.content {
+    .loginPage .divItem .divDescription .divTotalPrice div.content {
         text-align: center;
     }
 
@@ -606,22 +637,23 @@
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    .sixtythreeOpener .divLoginContent,
-    .sixtythreeOpener .divNewMemberContent,
-    .sixtythreeOpener .divBasketContent,
-    .sixtythreeOpener .divSearchContent{
+    .loginPage .divLoginContent,
+    .loginPage .divNewMemberContent{
         width:960px;
+    }
+    .loginPage .divLoginContent {
+        padding-top: 70px;
     }
 
     #userOpenerInnerDivSignUp {
-        top:60px;
+        top: 0px;
     }
 
-    .sixtythreeOpener .divLoginContent .divOr{
+    .loginPage .divLoginContent .divOr{
         margin:37px 0 0 135px;
     }
 
-    .sixtythreeOpener .divLoginContent .divSocialIcons{
+    .loginPage .divLoginContent .divSocialIcons{
         width:340px;
     }
 
@@ -629,20 +661,22 @@
 
 
     
-    .sixtythreeOpener .divMemberD{
+    .loginPage .divMemberD{
         width:205px;
     }
 
-    .sixtythreeOpener .divMemberD .inputBtn{
+    .loginPage .divMemberD .inputBtn{
         width:130px;
-    }
+    
+        top: 150px;
+}
 
 }
 
 @media all and (min-width: 1435px) {
-    .sixtythreeOpener .divLoginContent,
-    .sixtythreeOpener .divNewMemberContent,
-    .sixtythreeOpener .divSearchContent{
+    .loginPage .divLoginContent,
+    .loginPage .divNewMemberContent,
+    .loginPage .divSearchContent{
         width:1080px;
     }
 }

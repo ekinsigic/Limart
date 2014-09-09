@@ -517,6 +517,41 @@
         float:none;
         width:200px;
     }
+
+
+    #divOpenerFrame .divUserOpener{
+        width: 100%;
+        text-align: center;
+    }
+
+    #divOpenerFrame .divUserOpener a,
+    #divOpenerFrame .divUserOpener p {
+        padding-top: 20px;
+    }  
+
+    #divOpenerFrame .divUserOpener p {
+        padding-top: 70px;
+    
+        font-size: 19px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 15px;
+    }
+        #divOpenerFrame .divUserOpener p span {
+            font-weight: 600;
+        
+            color: #585a71;
+            font-size: 21px;
+    }
+
+    #divOpenerFrame .divUserOpener a {
+        padding-top: 20px;
+    
+        font-weight: 600; 
+        color: #000; font-size: 21px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        margin-bottom: 70px;
+    }    
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -679,6 +714,40 @@
     }
 
 
+
+    #divOpenerFrame .divUserOpener{
+        width: 100%;
+        text-align: center;
+    }
+
+    #divOpenerFrame .divUserOpener a,
+    #divOpenerFrame .divUserOpener p {
+        padding-top: 20px;
+    }  
+
+    #divOpenerFrame .divUserOpener p {
+        padding-top: 70px;
+    
+        font-size: 19px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 15px;
+    }
+        #divOpenerFrame .divUserOpener p span {
+            font-weight: 600;
+        
+            color: #585a71;
+            font-size: 21px;
+    }
+
+    #divOpenerFrame .divUserOpener a {
+        padding-top: 20px;
+    
+        font-weight: 600; 
+        color: #000; font-size: 21px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        margin-bottom: 70px;
+    }    
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {

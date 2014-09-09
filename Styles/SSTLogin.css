@@ -192,6 +192,11 @@
 
 
 
+    .forgotPasswordDescription {
+        margin-bottom:20px;
+        padding:0px;
+        text-align:center;
+    }s
 
 
 
@@ -345,7 +350,9 @@
         top: 0px;
 }
 
-
+    #userOpenerInnerDivForgotPassword .contShopping {
+        top: -79px;
+    }
 
 
 
@@ -569,8 +576,9 @@
     }
 
 
-
-
+    #userOpenerInnerDivForgotPassword .contShopping {
+        top:-100px;
+    }
 
     .loginPage .divMemberA,
     .loginPage .divMemberB,
@@ -651,13 +659,15 @@
     .loginPage .divLoginContent,
     .loginPage .divNewMemberContent{
         width:960px;
-    }
+    
+        top: 30px;
+}
     .loginPage .divLoginContent {
-        padding-top: 70px;
+        padding-top: 20px;
     }
 
     #userOpenerInnerDivSignUp {
-        top: 0px;
+        top: 30px;
     }
 
     .loginPage .divLoginContent .divOr{
@@ -680,7 +690,13 @@
         width:130px;
     
         top: 150px;
-}
+    }
+
+    .forgotPasswordDescription {
+        text-align: left;
+        width:600px;
+    }
+
 
 }
 
@@ -689,5 +705,10 @@
     .loginPage .divNewMemberContent,
     .loginPage .divSearchContent{
         width:1080px;
+    }
+
+    .forgotPasswordDescription {
+        text-align: left;
+        width:600px;
     }
 }

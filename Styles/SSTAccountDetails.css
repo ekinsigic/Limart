@@ -82,6 +82,16 @@
             background-color: #fff;
         }
 
+    #aMainAccountMenuOpener .spanDot {
+        display: block;
+        float: left;
+        margin-left: 4px;
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 100%;
+        transition: all 0.5s;
+    }
 
 
 
@@ -847,7 +857,7 @@
         width: 70px;
         height: 40px;
         padding: 16px 0 16px 18px;
-        background-color: rgba(255,255,255,0);
+        background-color: #dd354b;
     }
 
 
@@ -1161,14 +1171,9 @@
         color:#a3a3a3;
         margin-bottom:4px;
     }
-
-
     
-    #accountDetails .divDetail.discount .divDiscountRow .divDiscountNumber,
-    #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount,
-    #accountDetails .divDetail.discount .divDiscountRow .divDiscountExpiration,
-    #accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit,
-    #accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus{
+    #accountDetails .divDetail.discount .divDiscountRow .divDiscountExpiration{
+        width:100%;
         text-align:left;
     }
 
@@ -1177,6 +1182,7 @@
     #accountDetails .divDetail.discount .divDiscountRow .divDiscountUpperLimit,
     #accountDetails .divDetail.discount .divDiscountRow .divDiscountStatus{
         width:50%;
+        text-align:left;
     }
 
     #accountDetails .divDetail.discount .divDiscountRow .divDiscountAmount .divContent,

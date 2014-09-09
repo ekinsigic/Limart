@@ -491,6 +491,26 @@ a.SSTAStyleE {
 
 
 
+.SSTAStyleK:link,
+.SSTAStyleK:visited {
+    padding: 10px 25px;
+    padding-top: 12px;
+    color: #fff;
+    font-weight: 400;
+    background-color: #dd354b;
+    border: 3px solid #dd354b;
+}
+
+.SSTAStyleK:hover,
+.SSTAStyleK:active {
+ 
+}
+
+
+
+
+
+
 
 
 

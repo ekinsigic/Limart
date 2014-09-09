@@ -976,6 +976,7 @@ a.contShopping {
 
 #payment .deliveryAddressWrapper .divAddressOptionsWrapper {
     display: none;
+    margin-bottom: 20px;
 }
 
 #payment .deliveryAddressWrapper.savedAddress .divAddressOptionsWrapper {
@@ -1466,7 +1467,9 @@ a.contShopping {
 
         #payment .divAddress a.edit {
             display: block;
-        }
+        
+            color: #4b4d63 !important;
+}
 
     #payment .divAddress.selectedTab,
     #payment .divPayment.selectedTab {

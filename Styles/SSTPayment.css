@@ -253,11 +253,13 @@ a.contShopping {
     left: 5px;
     float: left;
     top: 12px;
+    display: none !important;
 }
 
     a.contShopping span {
         line-height: 20px;
-    }
+    
+}
 
     a.contShopping img {
         margin-top: 13px;
@@ -957,6 +959,7 @@ a.contShopping {
 
 .divAddressOptionsWrapper, .divBillingAddressOptionsWrapper {
     float: left;
+    transition:opacity 0.3s transform 0.3;
 }
 
 #payment .divBillingAddress.savedAddress .divBillingAddressOptionsWrapper {
@@ -1000,7 +1003,8 @@ a.contShopping {
 
 
 .divNewAddressContent {
-    top: -20px;
+    top: 20px;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 #payment .deliveryAddressWrapper .divNewAddressContent {
@@ -1013,6 +1017,7 @@ a.contShopping {
 
 #payment .divBillingAddress.newAddress .divAddNewInvoiceAddress {
     display: block;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 #payment .divBillingAddress .divAddNewInvoiceAddress {
@@ -1162,6 +1167,7 @@ a.contShopping {
 
             .divAddress-Payment-Content .divContent .divAddressContent .billingAddressWrapper {
                 margin: 20px 0 0 0 !important;
+                transition: opacity 0.3s, transform 0.3s;
             }
 
             .divAddress-Payment-Content .divContent .divAddressContent .divAnotherRecipient {
@@ -1382,7 +1388,7 @@ a.contShopping {
         }
 
             .divAddress-Payment-Content .divContent .divAddressOption {
-                width: 294px;
+                width: 299px !important;
                 margin-bottom: 10px;
             }
 

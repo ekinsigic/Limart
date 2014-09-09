@@ -72,19 +72,144 @@ header:after {
     header .divContent{
         width:670px;
     }
+
+    #divOpenerFrame .divUserOpener{
+        width: 100%;
+        text-align: center;
+    }
+
+    #divOpenerFrame .divUserOpener a,
+    #divOpenerFrame .divUserOpener p {
+        padding-top: 20px;
+    }  
+
+    #divOpenerFrame .divUserOpener p {
+        padding-top: 70px;
+    
+        font-size: 19px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 15px;
+}
+        #divOpenerFrame .divUserOpener p span {
+            font-weight: 600;
+        
+            color: #585a71;
+            font-size: 21px;
+}
+
+    #divOpenerFrame .divUserOpener a {
+        padding-top: 20px;
+    
+        font-weight: 600; 
+        color: #000; font-size: 21px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        margin-bottom: 70px;
+}    
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
     header .divContent{
         width:960px;
-    
         background: white;
         z-index: 2;
-}
+    }
+
+    header .divUserOpener {
+        display: none;
+        height: 40px;
+    }
+
+    header .divUserOpener .userOpenerWrapper {
+        width: 960px;
+        margin: auto;
+    }
+
+    header .divUserOpener .userOpenerContent {
+        float: right;
+    }
+
+    header .divUserOpener .userOpenerContent a,
+    header .divUserOpener .userOpenerContent p{
+        float:left;
+        color: #202132;
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 44px;
+        margin-right: 20px;
+        opacity: 0.7;
+    }
+
+    header .divUserOpener .userOpenerContent p span {
+        font-weight: 500;
+    }
+
+    header .divUserOpener .userOpenerContent a {
+        padding-left: 20px;
+        margin-right: 0px;
+        border-left: 1px solid rgba(0,0,0,0.3);
+        height: 20px;
+        top: 10px;
+        line-height: 24px;
+    }
+
+    header.withUserOpener {
+        height: 130px;
+    }
+    header.withUserOpener:after {
+        top: 110px;
+        left: 0px;
+    }  
 }
 
 @media all and (min-width: 1435px) {
     header .divContent{
         width:1080px;
     }
+
+    header .divUserOpener {
+        display: none;
+        height: 40px;
+    }
+
+    header .divUserOpener .userOpenerWrapper {
+        width: 960px;
+        margin: auto;
+    }
+
+    header .divUserOpener .userOpenerContent {
+        float: right;
+    }
+
+    header .divUserOpener .userOpenerContent a,
+    header .divUserOpener .userOpenerContent p{
+        float:left;
+        color: #202132;
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 44px;
+        margin-right: 20px;
+        opacity: 0.7;
+    }
+
+    header .divUserOpener .userOpenerContent p span {
+        font-weight: 500;
+    }
+
+    header .divUserOpener .userOpenerContent a {
+        padding-left: 20px;
+        margin-right: 0px;
+        border-left: 1px solid rgba(0,0,0,0.3);
+        height: 20px;
+        top: 10px;
+        line-height: 24px;
+    }
+
+    header.withUserOpener {
+        height: 130px;
+    }
+    header.withUserOpener:after {
+        top: 110px;
+        left: 0px;
+    }  
 }

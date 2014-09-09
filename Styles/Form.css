@@ -569,6 +569,14 @@ button.buttonF {
 
 
 
+/*VALIDATION*/
+
+input[type="text"].error {
+    
+}
+
+
+/* END - VALIDATION*/
 
 
 

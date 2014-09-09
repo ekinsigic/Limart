@@ -796,7 +796,7 @@ a.aStyleI {
     .aStyleA:visited {
         margin: 0 !important;
         font-size: 13px;
-        letter-spacing: 0.09em;
+        letter-spacing: 0.2em;
         text-align: center;
         border: 0;
     }

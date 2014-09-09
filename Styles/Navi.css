@@ -195,7 +195,7 @@ nav .divBasketIcon .imgBasket {
 
 #divOpenerFrame .SSTOpener.on {
     display: block;
-    box-shadow: inset 0px -22px 15px -13px rgba(0,0,0,0.2);
+    box-shadow: inset 0px -22px 15px -15px rgba(0,0,0,0.2);
 }
 
 #divOpenerFrame input {
@@ -230,7 +230,7 @@ nav .divBasketIcon .imgBasket {
     }
 
     .divNav ul.level1 li a{
-        padding:12px 0 12px 0;
+        padding: 23px 0 20px 0;
     }
 
     .divNav .divMenuContent{

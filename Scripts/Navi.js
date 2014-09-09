@@ -1,6 +1,11 @@
         $(document).ready(function () {
             setupTriggers();
             carryMenu();
+            if ($('#userIsLoggedIn').length > 0) {
+                userIsLoggedIn = true;
+            };
+            loginActions();
+                console.log(userIsLoggedIn)
         });
         $(window).resize(function(){
             carryMenu();
@@ -31,6 +36,8 @@
         var animationType = 'ease-out' //opener'ın animasyon tipi, ease-in, ease-out, ease-in-out variable'ları verebiliriz.
         var scrollTopBeforeOpening = scrollTopVal; //opener açıldığında ekranın ne kadar scroll edildiği, animasyon sırasında anlık olarak değişecek
         //
+
+        var userIsLoggedIn = false;
 
         // setup opener trigger functions
         function setupTriggers() {
@@ -68,7 +75,10 @@
 
                 $(window).bind('touchstart',function(){
                     if (!isCurrentlyAnimated && isOpenerOn) {
-                        closeOpener();
+                        //closeOpener();
+                        $(window).bind('touchmove',function(e){
+                            e.preventDefault();
+                        })
                     }
                 });
                 $('#divOpenerFrame, .triggerDiv').bind('touchstart',function(e){
@@ -142,14 +152,11 @@
 
                         // Disabling Scroll
                         if ($('#divOpenerFrame').height() == (wH-hH)) {
-                            $(window).unbind('touchmove');
+                            //$(window).unbind('touchmove');
                         }
                         else {
                             
                             if (isMobile) {
-                                $(window).bind('touchmove',function(e){
-                                    e.preventDefault();
-                                })
                             }
                             else {
                                 $(window).bind('mousewheel', function(e){
@@ -166,11 +173,11 @@
                      '-ms-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      '-o-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      'transform':'translate3d(0px,'+slideDistance+'px,0px)',
-                     '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
-                     '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
-                     '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
-                     '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
-                     'transition':'transform '+(openerTimer/1300)+'s'
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                     'transition':'transform '+(openerTimer/1000)+'s'
                     });
 
                     otherItemsToSlide.css({
@@ -179,11 +186,11 @@
                      '-ms-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      '-o-transform':'translate3d(0px,'+slideDistance+'px,0px)',
                      'transform':'translate3d(0px,'+slideDistance+'px,0px)',
-                     '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
-                     '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
-                     '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
-                     '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
-                     'transition':'transform '+(openerTimer/1300)+'s'
+                     '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                     '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                     '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                     '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                     'transition':'transform '+(openerTimer/1000)+'s'
                     });
 
 
@@ -241,11 +248,11 @@
                          '-ms-transform':'translate3d(0px,0px,0px)',
                          '-o-transform':'translate3d(0px,0px,0px)',
                          'transform':'translate3d(0px,0px,0px)',
-                         '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
-                         '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
-                         '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
-                         '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
-                         'transition':'transform '+(openerTimer/1300)+'s'
+                         '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                         '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                         '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                         '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                         'transition':'transform '+(openerTimer/1000)+'s'
                         });
                     otherItemsToSlide.css({
                          '-webkit-transform':'translate3d(0px,0px,0px)',
@@ -253,11 +260,11 @@
                          '-ms-transform':'translate3d(0px,0px,0px)',
                          '-o-transform':'translate3d(0px,0px,0px)',
                          'transform':'translate3d(0px,0px,0px)',
-                         '-webkit-transition':'-webkit-transform '+(openerTimer/1300)+'s',
-                         '-moz-transition':'-moz-transform '+(openerTimer/1300)+'s',
-                         '-ms-transition':'-ms-transform '+(openerTimer/1300)+'s',
-                         '-o-transition':'-o-transform '+(openerTimer/1300)+'s',
-                         'transition':'transform '+(openerTimer/1300)+'s'
+                         '-webkit-transition':'-webkit-transform '+(openerTimer/1000)+'s',
+                         '-moz-transition':'-moz-transform '+(openerTimer/1000)+'s',
+                         '-ms-transition':'-ms-transform '+(openerTimer/1000)+'s',
+                         '-o-transition':'-o-transform '+(openerTimer/1000)+'s',
+                         'transition':'transform '+(openerTimer/1000)+'s'
                     });
                 //
 
@@ -349,4 +356,55 @@
             // })
             $('#divOpenerFrame .mCSB_container').css('margin-right','0px');
             $('#divOpenerFrame .mCSB_scrollTools').css('opacity','0');
+    }
+
+
+    function loginActions() {
+        $('.divUserOpener').css('display','none');
+        enableDisableUserButton();
+        if (userIsLoggedIn) {
+            $('header .divContent').wrap('<section>');
+            $('.divUserOpener').css('display','');
+            carryUserNav();
+            $(window).resize(function(){
+                carryUserNav();
+            });
+        }
+        else {
+            $('.divUserIcon.triggerDiv').append('<a href="login.html" style="position:absolute; width:100%; height:100%">');
+        }
+
+        function carryUserNav() {
+                //if screen width is big...
+                if ($('nav #menuOpener').length > 0) {
+                    $('header').addClass('withUserOpener');
+                    $('#divOpenerFrame .divUserOpener').prependTo('header');
+                    if (!userIsLoggedIn) {
+                        $('.divUserIcon.triggerDiv a').click(function(e){
+                            e.stopPropagation();
+                        })
+                    }
+                    $('.divUserIcon.triggerDiv').css('display','none');
+                    //
+                    $('.divUserOpener').css('display','block');
+                }
+                else {
+                    $('header').removeClass('withUserOpener');
+                    $('header .divUserOpener').prependTo('#divOpenerFrame');
+                    $('.divUserIcon.triggerDiv').css('display','block');
+                    //
+                    $('.divUserOpener').css('display','');
+                }
+        }
+
+        function enableDisableUserButton() {
+                if (userIsLoggedIn) {
+                    $('.divUserIcon.triggerDiv a').click(function(e){
+                        e.preventDefault();
+                        if ($('nav #menuOpener').length > 0) {
+                            $('.divUserIcon.triggerDiv').css('display','block;')
+                        };
+                    });
+                };
+        }
     }

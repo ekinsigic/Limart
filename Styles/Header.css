@@ -36,7 +36,8 @@ header:after {
     position: fixed;
     top: 70px;
     height: 20px;
-    width: 100%;
+    left: -10%;
+    width: 120%;
     background-color: transparent;
     box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.15);
     z-index: 99999999999;
@@ -140,7 +141,7 @@ header:after {
     }
 
     header .divUserOpener .userOpenerWrapper {
-        width: 960px;
+        width: 1080px;
         margin: auto;
     }
 
@@ -165,12 +166,18 @@ header:after {
 
     header .divUserOpener .userOpenerContent a {
         padding-left: 20px;
-        margin-right: 0px;
+        margin-right: 20px;
         border-left: 1px solid rgba(0,0,0,0.3);
         height: 20px;
         top: 10px;
         line-height: 24px;
     }
+
+
+    header .divUserOpener .userOpenerContent a:last-child {
+        margin-right:0px
+    }
+
 
     header.withUserOpener {
         height: 130px;

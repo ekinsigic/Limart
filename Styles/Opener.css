@@ -284,7 +284,7 @@
     }
 
     .SSTOpener .divLoginContent,
-    .SSTOpener .divNewMemberContent{
+    .SSTOpener .divSignUpContent{
         position: relative;
         top:0;
         bottom:0;
@@ -360,7 +360,7 @@
         width:90%;
     }
 
-    .SSTOpener .divNewMemberContent .input{
+    .SSTOpener .divSignUpContent .input{
         float:none;
         margin:0 auto 10px auto;
         width:100% !important;
@@ -391,7 +391,7 @@
         margin-left:18px;
     }
 
-    .SSTOpener .divNewMemberContent .contShopping{
+    .SSTOpener .divSignUpContent .contShopping{
         display: block;
         margin:auto;
     }
@@ -571,7 +571,7 @@
     }
 
     .SSTOpener .divLoginContent,
-    .SSTOpener .divNewMemberContent{
+    .SSTOpener .divSignUpContent{
         width:100%;
     }
 
@@ -660,7 +660,7 @@
         width:300px;
     }
 
-    .SSTOpener .divNewMemberContent .input{
+    .SSTOpener .divSignUpContent .input{
         float:left;
         width:100% !important;
         margin:0 10px 10px 0;
@@ -677,7 +677,7 @@
         margin-left:40px;
     }
 
-    .SSTOpener .divNewMemberContent .contShopping{
+    .SSTOpener .divSignUpContent .contShopping{
         display: block;
         margin:auto;
     }
@@ -752,13 +752,13 @@
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
     .SSTOpener .divLoginContent,
-    .SSTOpener .divNewMemberContent,
+    .SSTOpener .divSignUpContent,
     .SSTOpener .divBasketContent,
     .SSTOpener .divSearchContent{
         width:960px;
     }
 
-    #userOpenerInnerDivSignUp {
+    #divSignUpWrapper {
         top:60px;
     }
 
@@ -786,7 +786,7 @@
 
 @media all and (min-width: 1435px) {
     .SSTOpener .divLoginContent,
-    .SSTOpener .divNewMemberContent,
+    .SSTOpener .divSignUpContent,
     .SSTOpener .divSearchContent{
         width:1080px;
     }

@@ -149,7 +149,6 @@
                     if (slideDistance > (wH-hH)) {
                         slideDistance = (wH-hH);
                     };
-                    contentScrollers();
 
 
                         // Disabling Scroll

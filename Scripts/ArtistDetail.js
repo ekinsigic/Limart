@@ -17,6 +17,7 @@ $(document).load(function(){
 });
 
 $(window).resize(function () {
+filterSticky();
 styleArtist();
 });
 

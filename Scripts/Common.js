@@ -31,10 +31,6 @@ if (isMobile) {
     //
 }
 
-else {
-    document.write('<script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script><\/script>');
-}
-
 var orientationChangeTimer = null;
 $(window).on("orientationchange", function () {
     setMainMargin();
@@ -197,3 +193,8 @@ function selectCustomizer() {
 function setMainMargin() {
     $('main').css('margin-top',$('header').outerHeight());
 }
+
+
+$('.error').focus(function(){
+    $(this).removeClass('error');
+})

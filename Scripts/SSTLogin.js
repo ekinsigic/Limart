@@ -28,7 +28,7 @@ function loginPageAjaxCall() {
                             '-webkit-transform':'scale(1)',
                             'transition':'opacity 0.3s, transform 0.3s'});
                         $('.divLoginContent').remove();
-                    },500)
+                    },200)
                 })
             },500);
         });
@@ -55,7 +55,7 @@ function loginPageAjaxCall() {
                             '-webkit-transform':'scale(1)',
                             'transition':'opacity 0.3s, transform 0.3s'});
                         $('.divLoginContent').remove();
-                    },500)
+                    },200)
                 })
             },500);
         });
@@ -73,7 +73,7 @@ function signUpPageAjaxCall() {
             $('html, body').scrollTop(0);
                 $.get( 'login.html', function(data){
                     $('#login').append($(data).find('#divLoginWrapper'));
-                    $('#divSignUpWrapper').css({'display':'block',
+                    $('#divLoginWrapper').css({'display':'block',
                         'opacity':'0',
                         '-webkit-transform':'scale(0.95)',
                         'transition':'opacity 0.3s, transform 0.3s'});
@@ -81,12 +81,12 @@ function signUpPageAjaxCall() {
                 getSocialIcons();
                 miscImgLoader();
                     setTimeout(function(){
-                        $('#divSignUpWrapper').css({'display':'block',
+                        $('#divLoginWrapper').css({'display':'block',
                             'opacity':'1',
                             '-webkit-transform':'scale(1)',
                             'transition':'opacity 0.3s, transform 0.3s'});
                         $('#divSignUpWrapper').remove();
-                    },500)
+                    },200)
                 })
             },500);
         });
@@ -103,7 +103,7 @@ function forgotPasswordPageAjaxCall() {
             $('html, body').scrollTop(0);
                 $.get( 'login.html', function(data){
                     $('#login').append($(data).find('#divLoginWrapper'));
-                    $('#divSignUpWrapper').css({'display':'block',
+                    $('#divLoginWrapper').css({'display':'block',
                         'opacity':'0',
                         '-webkit-transform':'scale(0.95)',
                         'transition':'opacity 0.3s, transform 0.3s'});
@@ -111,12 +111,12 @@ function forgotPasswordPageAjaxCall() {
                     getSocialIcons();
                     miscImgLoader();
                     setTimeout(function(){
-                        $('#divSignUpWrapper').css({'display':'block',
+                        $('#divLoginWrapper').css({'display':'block',
                             'opacity':'1',
                             '-webkit-transform':'scale(1)',
                             'transition':'opacity 0.3s, transform 0.3s'});
                         $('#forgotPasswordWrapper').remove();
-                    },500)
+                    },200)
                 })
             },500);
         });

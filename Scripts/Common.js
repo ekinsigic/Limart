@@ -27,8 +27,12 @@ if (isMobile) {
     });
 
     var pathPrefix = ($('#input63').length > 0 ? "../" : "");
-    document.write('<script type="text/javascript" src="' + pathPrefix + 'Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
+    document.write('<script type="text/javascript" src="Scripts/Mobile/jquery.mobile-1.4.3.min.js"><\/script>');
     //
+}
+
+else {
+    document.write('<script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script><\/script>');
 }
 
 var orientationChangeTimer = null;

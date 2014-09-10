@@ -131,6 +131,7 @@ img[data-sixtythree="icon-login-instagram"] {
     width: 22px;
     height: 22px;
 }
+
 img[data-sixtythree="icon-login-facebook-black"] {
     display: block;
     width: 10px;
@@ -148,7 +149,11 @@ img[data-sixtythree="icon-login-instagram-black"] {
     width: 22px;
     height: 22px;
 }
-
+img[data-sixtythree="icon-login-pinterest-black"] {
+    display: block;
+    width: 16px;
+    height: 23px;
+}
 
         
 /*  END - SOCIAL MEDIA ICONS STYLES */
@@ -191,7 +196,7 @@ img[data-sixtythree="logotype-white"] {
 
 
 
-img[data-sixtythree^="logotype-card-"] {
+img[data-sixtythree^="SST-logotype-card-"] {
     width: 49px;
     height: 31px;
 }

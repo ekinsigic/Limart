@@ -10,10 +10,12 @@
     border-bottom: 1px solid #E4E4E4;
 }
 
-.product, .artworkImage, .artworkInfo {
+.product, .artworkImage, 
+.artworkInfo {
     float:left;
 }
-.artworkImage, .artworkInfo {
+.artworkImage, 
+.artworkInfo {
     float:left;
     width: 50%;
 }

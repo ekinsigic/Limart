@@ -16,7 +16,7 @@ nav .divNav{
 
 nav .divNav ul.level1{
     display:table;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 nav .divNav ul.level1 li{
@@ -29,7 +29,7 @@ nav .divNav ul.level1 li a{
 
 nav .divNavIcon{
     display:none;
-    position:absolute;
+    position:relative;
     z-index:10;
     top:0;
     right:0;
@@ -47,16 +47,16 @@ nav .divNavIcon .divNavIconBg {
 }
 
 nav .divNavIcon .imgNav{
-    position:absolute;
+    position:relative;
     top: 10px;
     right: -25px;
 }
 
 nav .divSearchIcon {
-    position: absolute;
+    position: relative;
     z-index:99;
-    top: 25px;
-    right: -15px;
+    top: 0px;
+    right: 0px;
     width: 40px;
     height: 40px;
     opacity: 0.2;
@@ -64,13 +64,13 @@ nav .divSearchIcon {
 }
 
 nav .divSearchIcon .imgSearch {
-    position: absolute;
-    right: 14px;
-    bottom: 13px;
+    position: relative;
+    top: 14px;
+    left: 14px;
 }
 
 nav .divMenuIcon {
-    position: absolute;
+    position: relative;
     top: 26px;
     right: 68px;
     display: none;
@@ -82,11 +82,11 @@ nav .divMenuIcon {
 }
 
 nav .divMenuIcon .imgMenu {
-    position: absolute;
+    position: relative;
 }
 
 nav .divUserIcon {
-    position: absolute;
+    position: relative;
     top: 25px;
     right: 60px;
     width: 40px;
@@ -97,14 +97,11 @@ nav .divUserIcon {
 }
 
 nav .divUserIcon .imgUser {
-    position: absolute;
+    position: relative;
     right: 15px;
     bottom: 13px;
 }
 nav .divBasketIcon {
-    position: absolute;
-    top: 25px;
-    right: 23px;
     width: 40px;
     height: 40px;
     z-index: 99;
@@ -113,9 +110,9 @@ nav .divBasketIcon {
 }
 
 nav .divBasketIcon .imgBasket {
-    position: absolute;
-    right: 14px;
-    bottom: 13px;
+    position: relative;
+    left: 14px;
+    top: 14px;
 }
 .divNav .divMenuContent {
     display:none;
@@ -162,6 +159,9 @@ nav .divBasketIcon .imgBasket {
 }
 
 
+.triggerDiv {
+    float: right;
+}
 .triggerDiv#menuTrigger {
     top: 25px;
     right: 10px;
@@ -368,7 +368,7 @@ nav .divBasketIcon .imgBasket {
 
     nav .divUserIcon {
         position: absolute;
-        top: 13px;
+        top: 15px;
         right: 131px;
         width: 40px;
         z-index: 99;
@@ -387,7 +387,7 @@ nav .divBasketIcon .imgBasket {
 
     nav .divBasketIcon {
         position: absolute;
-        top: 16px;
+        top: 15px;
         right: 95px;
         width: 40px;
         height: 40px;
@@ -482,7 +482,7 @@ nav .divBasketIcon .imgBasket {
 
     nav .divSearchIcon {
         position: absolute;
-        top: 27px;
+        top: 23px;
         right: 52px;
         width: 40px;
         height: 40px;
@@ -535,7 +535,7 @@ nav .divBasketIcon .imgBasket {
 
     nav .divBasketIcon {
         position: absolute;
-        top: 26px;
+        top: 24px;
         right: 95px;
         width: 40px;
         height: 40px;

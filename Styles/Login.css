@@ -1,15 +1,15 @@
 
 
 /* login */
-.loginPage.divUserOpener{
+#login.divUserOpener{
     padding: 50px 0 100px 0;
 }
 
-.loginPage.member{
+#login.member{
     height:auto;
 }
 
-.loginPage .openerHeader {
+#login .openerHeader {
     height: 100px;
     line-height: 100px;
     background-color: #f0f0f0;
@@ -17,43 +17,43 @@
     display:none;
 }
 
-.loginPage .divLoginContent,
-.loginPage .divNewMemberContent{
+#login .divLoginContent,
+#login .divSignUpContent{
     margin: 0px auto 0 auto;
 }
 
 
-.loginPage .divLogin{
+#login .divLogin{
     float:left;
     width:350px;
 }
 
-.loginPage h1.login{
+#login h1.login{
     padding: 0 0 15px 0px;
     margin-bottom:30px;
     border-bottom:1px solid #d9d9db;
 }
 
-.loginPage .divLoginContent .divLogin .input{
+#login .divLoginContent .divLogin .input{
     margin-bottom:10px;
 }
 
-.loginPage .divLoginContent .divLogin .inputLoginBtn{
+#login .divLoginContent .divLogin .inputLoginBtn{
     float:left;
     margin-left:0;
 }
 
-.loginPage .divLoginContent .divLogin a{
+#login .divLoginContent .divLogin a{
     float:right;
     text-align:right;
 }
 
-    .loginPage .divLoginContent .divLogin a.signUp{
+    #login .divLoginContent .divLogin a.signUp{
         margin-top:8px;
         width:140px;
     }
 
-    .loginPage .divLoginContent .divLogin a.forgotPassword{
+    #login .divLoginContent .divLogin a.forgotPassword{
         margin-top:10px;
         color:#b1b1b3;
     }
@@ -61,14 +61,14 @@
 
 
 
-.loginPage .divLoginContent .divOr{
+#login .divLoginContent .divOr{
     float:left;
     margin:37px 0 0 160px;
     height:180px;
     border-left: 1px solid #000;
 }
 
-.loginPage .divLoginContent .spanOr{
+#login .divLoginContent .spanOr{
     position:absolute;
     left:-23px;
     top:63px;
@@ -79,48 +79,48 @@
 
 
 /* login social icons */
-.loginPage .divLoginContent .divSocialIcons{
+#login .divLoginContent .divSocialIcons{
     float:right;
     width:400px;
     margin-top:53px;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon{
+#login .divLoginContent .divSocialIcons .aSocialIcon{
     width:224px;
     height:42px;
     margin-bottom:10px;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon.facebook{
+#login .divLoginContent .divSocialIcons .aSocialIcon.facebook{
     background-color:#0b66af;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon.facebook img{
+#login .divLoginContent .divSocialIcons .aSocialIcon.facebook img{
     margin:11px 0 0 31px;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon.twitter{
+#login .divLoginContent .divSocialIcons .aSocialIcon.twitter{
     background-color:#26b1df;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon.twitter img{
+#login .divLoginContent .divSocialIcons .aSocialIcon.twitter img{
     margin-top:13px;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon.instagram{
+#login .divLoginContent .divSocialIcons .aSocialIcon.instagram{
     background-color:#61534e;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon.instagram img{
+#login .divLoginContent .divSocialIcons .aSocialIcon.instagram img{
     margin-top:10px;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon img{
+#login .divLoginContent .divSocialIcons .aSocialIcon img{
     float:left;
     margin-left:25px;
 }
 
-.loginPage .divLoginContent .divSocialIcons .aSocialIcon span{
+#login .divLoginContent .divSocialIcons .aSocialIcon span{
     position:absolute;
     left:62px;
     height:100%;
@@ -133,58 +133,58 @@
 
 
 /* NEW MEMBER */
-.loginPage .divMemberA{
+#login .divMemberA{
     float:left;
     width: 960px;
     padding-top: 50px;
 }
 
-.loginPage .divMemberB{
+#login .divMemberB{
     float:left;
     width:720px;
 }
 
-.loginPage .divMemberC{
+#login .divMemberC{
     float:left;
     width:720px;
 }
 
-.loginPage .divMemberD{
+#login .divMemberD{
     float:right;
     margin-top:-109px;
     width:255px;
 }
 
-.loginPage .divNewMemberContent .input{
+#login .divSignUpContent .input{
     float:left;
     width:350px !important;
     margin:0 10px 10px 0;
 }
 
-.loginPage .divMemberD .inputBtn{
+#login .divMemberD .inputBtn{
     float:left;
     width:125px;
 }
 
-.loginPage .divMemberD label{
+#login .divMemberD label{
     float:left;
     margin-left:-4px;
     width:210px;
 }
 
-    .loginPage .divMemberD label a {
+    #login .divMemberD label a {
         position:absolute;
         top:16px;
         width:100%;
     }
 
-.loginPage .divNewMemberContent .contShopping{
+#login .divSignUpContent .contShopping{
     padding-left:10px;
     width: 140px;
     top: 20px;
 }
 
-.loginPage .divNewMemberContent .separator.line{
+#login .divSignUpContent .separator.line{
     margin: 0 0 5px 0;
     padding-top:25px;
     border-bottom:1px solid #d9d9db;
@@ -197,7 +197,7 @@
 
 
 /*PASSWORD RESET PAGE */
-.loginPage #userOpenerInnerDivPassword{
+#login #userOpenerInnerDivPassword{
     display: block;
     opacity: 1;
     -webkit-transform: scale(1);
@@ -209,30 +209,30 @@
 
 /* Screen */
 @media all and (max-width: 700px) {
-    .loginPage{
+    #login{
         bottom:0;
         height:auto;
         overflow: auto;
         background-color:#fff;
     }
 
-    .loginPage .divSearchContent{
+    #login .divSearchContent{
         width:90%;
     }
 
-    .loginPage .openerHeader{
+    #login .openerHeader{
         display:block;
         margin-bottom: 30px;
         height:75px;
         line-height:80px;
     }
 
-    .loginPage.divUserOpener{
+    #login.divUserOpener{
         padding:0;
     }
 
-    .loginPage .divLoginContent,
-    .loginPage .divNewMemberContent{
+    #login .divLoginContent,
+    #login .divSignUpContent{
         position: relative;
         top:0;
         bottom:0;
@@ -242,35 +242,35 @@
         overflow:auto;
     }
 
-    .loginPage .divLoginContent .divLogin{
+    #login .divLoginContent .divLogin{
         float:none;
         width:90%;
         margin:auto;
         text-align:center;
     }
 
-    .loginPage .divLoginContent .divLogin h1.login{
+    #login .divLoginContent .divLogin h1.login{
         display:none;
     }
 
-    .loginPage .divLoginContent .divLogin .inputLoginBtn{
+    #login .divLoginContent .divLogin .inputLoginBtn{
         float:none;
         margin:10px auto 10px auto;
         font-size: 15px !important;
     }
 
-    .loginPage .divLoginContent .divLogin a{
+    #login .divLoginContent .divLogin a{
         float:none;
         font-size: 13px !important;
         text-align:center;
     }
 
-        .loginPage .divLoginContent .divLogin a.signUp{
+        #login .divLoginContent .divLogin a.signUp{
             margin:15px auto 0 auto;
             width:250px;
         }
 
-    .loginPage .divLoginContent .divOr{
+    #login .divLoginContent .divOr{
         float:none;
         margin:65px auto 0 auto;
         width:90%;
@@ -278,7 +278,7 @@
         border-bottom:1px solid #f2f2f2;
     }
 
-    .loginPage .divLoginContent .spanOr{
+    #login .divLoginContent .spanOr{
         top:-6px;
         left:50%;
         margin-left:-45px;
@@ -286,13 +286,13 @@
         background-color:#fff;
     }
 
-    .loginPage .divLoginContent .divSocialIcons{
+    #login .divLoginContent .divSocialIcons{
         float:none;
         width:90%;
         margin:53px auto 0 auto;
     }
 
-    .loginPage .divLoginContent .divSocialIcons .aSocialIcon{
+    #login .divLoginContent .divSocialIcons .aSocialIcon{
         margin:0 auto 10px auto;
     }
 
@@ -300,46 +300,46 @@
 
     
 
-    .loginPage .divMemberA,
-    .loginPage .divMemberB,
-    .loginPage .divMemberC{
+    #login .divMemberA,
+    #login .divMemberB,
+    #login .divMemberC{
         float:none;
         margin:auto !important;
         width:90%;
     }
 
-    .loginPage .divNewMemberContent .input{
+    #login .divSignUpContent .input{
         float:none;
         margin:0 auto 10px auto;
         width:100% !important;
     }
 
-    .loginPage h1.login{
+    #login h1.login{
         display:none;
     }
 
-    .loginPage .divMemberB select{
+    #login .divMemberB select{
         margin-bottom:10px !important;
     }
 
-    .loginPage .divMemberD{
+    #login .divMemberD{
         float:none;
         margin:20px auto 0 auto !important;
         width:250px;
     }
 
-    .loginPage .divMemberD .inputBtn{
+    #login .divMemberD .inputBtn{
         float:none;
         width:150px !important;
         margin-left:10px;
     }
 
-    .loginPage .divMemberD label{
+    #login .divMemberD label{
         float:none;
         margin-left:18px;
     }
 
-    .loginPage .divNewMemberContent .contShopping{
+    #login .divSignUpContent .contShopping{
         display: block;
         margin:auto;
     
@@ -351,12 +351,12 @@
 
 
     /* basket */
-    .loginPage .divBasketContent{
+    #login .divBasketContent{
         margin:auto;
         width:100%;
     }
 
-    .loginPage .divBasketContent .divBasketDetails{
+    #login .divBasketContent .divBasketDetails{
         float:none;
         margin:25px auto 0 auto;
         width:90%;
@@ -366,54 +366,54 @@
 }
 
 
-.loginPage .divBasketContent .divBasketDetails .basketDetailsScroller {
+#login .divBasketContent .divBasketDetails .basketDetailsScroller {
     max-height: none;
 }
 
-    .loginPage .divBasketContent .divBasketItemHeaders {
+    #login .divBasketContent .divBasketItemHeaders {
         display: none;
     }
 
-    .loginPage .divItem .imgItemPic {
+    #login .divItem .imgItemPic {
         max-width: 60px;
     }
 
-    .loginPage .divItem .divDescription {
+    #login .divItem .divDescription {
         padding-right: 0;
     }
 
-    .loginPage .divItem .divDescription .divQuantity,
-    .loginPage .divItem .divDescription .divTotalPrice {
+    #login .divItem .divDescription .divQuantity,
+    #login .divItem .divDescription .divTotalPrice {
         min-height: initial;
     }
 
-    .loginPage .divItem .divDescription .divInfo{
+    #login .divItem .divDescription .divInfo{
         width:100%;
         padding-right:20px;
     }
 
-    .loginPage .divItem .divDescription .divInfo div.content {
+    #login .divItem .divDescription .divInfo div.content {
         padding: 5px 0 10px 0;
         min-width: 150px;
         max-width: 260px;
         text-align: left;
     }
 
-    .loginPage .divItem .divDescription .divQuantity{
+    #login .divItem .divDescription .divQuantity{
         display:inline-block;
         width:auto;
     }
 
-    .loginPage .divItem .divDescription .divQuantity span{
+    #login .divItem .divDescription .divQuantity span{
         margin:initial;
     }
 
-    .loginPage .divItem .divDescription .divQuantity span.spanMobilePrice{
+    #login .divItem .divDescription .divQuantity span.spanMobilePrice{
         display:inline-block;
         padding-left:3px;
     }
 
-    .loginPage .divItem .divDescription .divTotalPrice{
+    #login .divItem .divDescription .divTotalPrice{
         float:right;
         display:inline-block;
         width:auto;
@@ -421,116 +421,116 @@
         padding:0;
     }
 
-    .loginPage .divItem .divDescription .divTotalPrice div.content {
+    #login .divItem .divDescription .divTotalPrice div.content {
         width:100%;
         margin:0;
         padding:0;
         text-align: right;
     }
 
-    .loginPage .divItem .divDescription .aDelete {
+    #login .divItem .divDescription .aDelete {
         top:10px;
     }
 
-    .loginPage div.separator.sepA {
+    #login div.separator.sepA {
         padding: 20px 0 0 0;
         margin: 0 0 20px 0;
     }
 
-    .loginPage .divBasketContent .divTotal{
+    #login .divBasketContent .divTotal{
         float:none;
     }
 
-    .loginPage .divBasketContent .divTotal table{
+    #login .divBasketContent .divTotal table{
         float:none;
         margin:0 auto 0 auto;
         width:90%;
     }
 
-        .loginPage .divBasketContent .divTotal table tr td.left{
+        #login .divBasketContent .divTotal table tr td.left{
             text-align:left;
         }
 
-    .loginPage .divBasketContent .divTotal .divPaymentButton{
+    #login .divBasketContent .divTotal .divPaymentButton{
         float:none;
         margin:40px auto 0 auto;
         width:90%;
         text-align:center;
     }
 
-    .loginPage .divBasketContent .divTotal .divPaymentButton .contShopping{
+    #login .divBasketContent .divTotal .divPaymentButton .contShopping{
         float:none;
         margin:5px auto 20px auto;
     }
 
-    .loginPage .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
+    #login .divBasketContent .divTotal .divPaymentButton .btnCompleteOrder{
         float:none;
         width:200px;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-   .loginPage{
+   #login{
         bottom:0;
         height:auto;
         background-color:#fff;
     }
 
-    .loginPage .divSearchContent{
+    #login .divSearchContent{
         width:670px;
         position: relative;
     }
 
-    .loginPage.divUserOpener{
+    #login.divUserOpener{
         padding:0 0 30px 0;
     }
 
-    .loginPage .divLoginContent,
-    .loginPage .divNewMemberContent{
+    #login .divLoginContent,
+    #login .divSignUpContent{
         width:100%;
     }
 
-    .loginPage .openerHeader{
+    #login .openerHeader{
        display:block;
        margin-bottom: 40px;
     }
 
-    .loginPage h1.login{
+    #login h1.login{
         display:none;
     }
 
-    .loginPage .divLoginContent .divLogin{
+    #login .divLoginContent .divLogin{
         float:none;
         margin:auto;
         width:455px;
     }
 
-    .loginPage .input{
+    #login .input{
         height:52px !important;
         font-size: 13px !important;
         text-align:center;
     }
 
-    .loginPage .divLoginContent .divLogin .inputLoginBtn{
+    #login .divLoginContent .divLogin .inputLoginBtn{
         float:none;
         margin:20px 0 20px 85px;
         width:200px;
         font-size: 15px !important;
     }
 
-    .loginPage .divLoginContent .divLogin a{
+    #login .divLoginContent .divLogin a{
         float:none;
         font-size: 13px !important;
         text-align:center;
     }
 
-        .loginPage .divLoginContent .divLogin a.signUp{
+        #login .divLoginContent .divLogin a.signUp{
             margin:auto;
             width:250px;
         }
 
 
-    .loginPage .divLoginContent .divOr{
+    #login .divLoginContent .divOr{
         float:none;
         margin:65px auto 0 auto;
         width:670px;
@@ -538,7 +538,7 @@
         border-bottom:1px solid #f2f2f2;
     }
 
-    .loginPage .divLoginContent .spanOr{
+    #login .divLoginContent .spanOr{
         top:-6px;
         left:50%;
         margin-left:-45px;
@@ -547,13 +547,13 @@
     }
 
 
-    .loginPage .divLoginContent .divSocialIcons{
+    #login .divLoginContent .divSocialIcons{
         float:none;
         margin:60px auto 0 auto;
 
     }
 
-    .loginPage .divLoginContent .divSocialIcons .aSocialIcon{
+    #login .divLoginContent .divSocialIcons .aSocialIcon{
         margin:0 auto 10px auto;
     }
 
@@ -561,38 +561,38 @@
 
 
 
-    .loginPage .divMemberA,
-    .loginPage .divMemberB,
-    .loginPage .divMemberC{
+    #login .divMemberA,
+    #login .divMemberB,
+    #login .divMemberC{
         float:none;
         margin:auto !important;
         width:455px;
     }
 
-    .loginPage .divMemberD{
+    #login .divMemberD{
         float:none;
         margin: 10px auto 0 auto !important;
         width:300px;
     }
 
-    .loginPage .divNewMemberContent .input{
+    #login .divSignUpContent .input{
         float:left;
         width:100% !important;
         margin:0 10px 10px 0;
     }
 
-    .loginPage .divMemberD .inputBtn{
+    #login .divMemberD .inputBtn{
         float:none;
         width:225px;
         height:15px;
     }
 
-    .loginPage .divMemberD label{
+    #login .divMemberD label{
         float:none;
         margin-left:40px;
     }
 
-    .loginPage .divNewMemberContent .contShopping{
+    #login .divSignUpContent .contShopping{
         display: block;
         margin:auto;
     
@@ -609,27 +609,27 @@
 
 
     /* basket */
-    .loginPage .divBasketContent{
+    #login .divBasketContent{
         width:670px;
         padding-bottom: 20px;
     }
 
-    .loginPage .divBasketContent .divBasketDetails{
+    #login .divBasketContent .divBasketDetails{
         float:none;
         width:100%;
     }
 
-    .loginPage .divBasketContent .divBasketItemHeaders .header2{
+    #login .divBasketContent .divBasketItemHeaders .header2{
         float:left;
         margin-left:28px;
         width:148px;
     }
 
-    .loginPage .divItem .divDescription .divQuantity{
+    #login .divItem .divDescription .divQuantity{
         width:65px;
     }
 
-    .loginPage .divItem .divDescription .divTotalPrice div.content {
+    #login .divItem .divDescription .divTotalPrice div.content {
         text-align: center;
     }
 
@@ -637,23 +637,23 @@
 }
 
 @media all and (min-width: 1019px) and (max-width: 1434px) {
-    .loginPage .divLoginContent,
-    .loginPage .divNewMemberContent{
+    #login .divLoginContent,
+    #login .divSignUpContent{
         width:960px;
     }
-    .loginPage .divLoginContent {
+    #login .divLoginContent {
         padding-top: 70px;
     }
 
-    #userOpenerInnerDivSignUp {
+    #divSignUpWrapper {
         top: 0px;
     }
 
-    .loginPage .divLoginContent .divOr{
+    #login .divLoginContent .divOr{
         margin:37px 0 0 135px;
     }
 
-    .loginPage .divLoginContent .divSocialIcons{
+    #login .divLoginContent .divSocialIcons{
         width:340px;
     }
 
@@ -661,11 +661,11 @@
 
 
     
-    .loginPage .divMemberD{
+    #login .divMemberD{
         width:205px;
     }
 
-    .loginPage .divMemberD .inputBtn{
+    #login .divMemberD .inputBtn{
         width:130px;
     
         top: 150px;
@@ -674,9 +674,9 @@
 }
 
 @media all and (min-width: 1435px) {
-    .loginPage .divLoginContent,
-    .loginPage .divNewMemberContent,
-    .loginPage .divSearchContent{
+    #login .divLoginContent,
+    #login .divSignUpContent,
+    #login .divSearchContent{
         width:1080px;
     }
 }

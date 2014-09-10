@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
 <head>
     <title>LIMART</title>
@@ -15,28 +15,24 @@
     <link rel="stylesheet" type="text/css" href="Styles/Header.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Navi.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Footer.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/Typography.css" />
     <link rel="stylesheet" type="text/css" href="Styles/SSTTypography.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Typography.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Form.css" />
     <link rel="stylesheet" type="text/css" href="Styles/SSTForm.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountNavi.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountDetails.css" />
-
+    <link rel="stylesheet" type="text/css" href="Styles/SSTPayment.css" />
 </head>
 <body>
-
 
     <section id="smartphoneLandscape">
         <div class="divPreloader"><img data-sixtythree="logotype-symbol" /></div>
         <p class="faceA">LÜTFEN TELEFONUNUZU DİKEY KONUMUNDA TUTUNUZ.</p>
     </section>
 
-
     <div id="divOpenerFrame" class="divOpenerFrame">
 
-        <section id="searchOpener" class="sixtythreeOpener">
+        <section id="searchOpener" class="SSTOpener">
             <div class="divSearchContent">
                 <input type="text" class="inputTextB" />
                 <div class="noCursor"></div>
@@ -45,7 +41,7 @@
         </section>
 
 
-        <section class="divUserOpener sixtythreeOpener" id="userOpener">
+        <section class="divUserOpener SSTOpener" id="userOpener">
 
             <div id="userOpenerInnerDivLogin" class="userInnerOpener userOpenerInnerOpenerVisible activeInnerOpener divLoginContent">
                 <div class="openerHeader login">
@@ -143,7 +139,7 @@
         </section>
 
 
-        <section class="divBasketOpener sixtythreeOpener" id="basketOpener">
+        <section class="divBasketOpener SSTOpener" id="basketOpener">
 
             <div class="divBasketContent">
 
@@ -373,7 +369,7 @@
             <a href="Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
 
             <nav>
-                <div class="divNav sixtythreeOpener" id="menuOpener">
+                <div class="divNav SSTOpener" id="menuOpener">
                     <ul class="level1">
                         <li><a href="#" class="aStyleA">BİZ KİMİZ?</a></li>
                         <li><a href="#" class="aStyleA">NEDEN?</a></li>
@@ -423,319 +419,81 @@
     </header>
 
 
-    <div id="divMainWrapper">
 
-        <section id="menuActiveOverlay"></section>
+    <main>
 
+        <select class="SSTCustomSelectOriginal">
+            <option>BİR</option>
+            <option>İKİ</option>
+            <option>ÜÇ</option>
+            <option>DÖRT</option>
+        </select>
+        <div class="separator"></div>
+    </main>
 
-        <a id="aMainAccountMenuOpener" class="SSTAStyleK" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-
-            <span class="spanMenu">MENU</span>
-
-            <div class="separator"></div>
-        </a>
-
-
-        <main>
-
-            <section id="accountDetails">
-
-                <!-- BREADCRUMBS -->
-                <div id="breadcrumbs">
-                    <ul class="SSTFaceKK">
-                        <li class="mobileName"><span>JOHN DOE</span></li>
-                        <li>/</li>
-                        <li><a href="#" class="SSTAStyleI">HESABIM</a></li>
-                        <li>/</li>
-                        <li>İNDİRİM KUPONLARIM</li>
-                    </ul>
-                    <div class="separator"></div>
-                </div>
-                <!-- END - BREADCRUMBS -->
-                <!-- ASIDE -->
-                <aside>
-                    <ul class="level1">
-                        <li>
-                            <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
-                                <span class="SSTFaceHH">HESAP BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-profile" class="small one">
-                                <img data-sixtythree="icon-account-profile" class="white small one">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountProfile.html" class="SSTAStyleG aSubMenuItem">ÜYELİK BİLGİLERİM</a></li>
-                                <li><a href="AccountAddress.html" class="SSTAStyleG aSubMenuItem">ADRESLERİM</a></li>
-                                <li><a href="AccountPassword.html" class="SSTAStyleG aSubMenuItem">ŞİFRE İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">SİPARİŞ BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-orders" class="small two" />
-                                <img data-sixtythree="icon-account-orders" class="white small two">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountOrderHis.html" class="SSTAStyleG aSubMenuItem">SİPARİŞ İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a id="divDiscount" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">İNDİRİM KUPONLARIM</span>
-                                <img data-sixtythree="icon-account-coupons" class="small three" />
-                                <img data-sixtythree="icon-account-coupons" class="white small three" />
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountDiscount.html" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />KUPONLAR</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </aside>
-                <!-- END - ASIDE -->
+    <div class="separator"></div>
 
 
-                <div class="divDetail discount">
-
-                    <h1 class="SSTFaceII">İndirim Kuponlarım</h1>
-                    <p class="SSTFaceJJ">
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    </p>
-
-                    <div class="separator line"></div>
-
-
-                    <!-- DISCOUNT HEADERS -->
-                    <div class="divDiscountColumnHeaders">
-                        <div class="SSTFaceL header one">İNDİRİM KODU</div>
-                        <div class="SSTFaceL header two">TUTAR</div>
-                        <div class="SSTFaceL header three">BAŞLANGIÇ - SON KULLANIM</div>
-                        <div class="SSTFaceL header four">ALT - ÜST LİMİT</div>
-                        <div class="SSTFaceL header five">DURUM</div>
-
-                        <div class="separator"></div>
-                    </div>
-                    <!-- END - DISCOUNT HEADERS -->
-
-
-                    <div class="divDiscountRow SSTSpanStyleJ">
-                        <div class="divDiscountNumber">
-                            <div class="divContent">
-                                <span class="mobile">İNDİRİM KODU</span>
-                                <span>258ihy548</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountAmount">
-                            <div class="divContent">
-                                <span class="mobile">TUTAR</span>
-                                <span>20.00 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountExpiration">
-                            <div class="divContent">
-                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
-                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountUpperLimit">
-                            <div class="divContent">
-                                <span class="mobile">ALT - ÜST LİMİT</span>
-                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountStatus">
-                            <div class="divContent">
-                                <span class="mobile">DURUM</span>
-                                <span>Aktif</span>
-                            </div>
-                        </div>
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="divDiscountRow SSTSpanStyleJ">
-                        <div class="divDiscountNumber">
-                            <div class="divContent">
-                                <span class="mobile">İNDİRİM KODU</span>
-                                <span>258ihy548</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountAmount">
-                            <div class="divContent">
-                                <span class="mobile">TUTAR</span>
-                                <span>20.00 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountExpiration">
-                            <div class="divContent">
-                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
-                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountUpperLimit">
-                            <div class="divContent">
-                                <span class="mobile">ALT - ÜST LİMİT</span>
-                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountStatus">
-                            <div class="divContent">
-                                <span class="mobile">DURUM</span>
-                                <span>Aktif</span>
-                            </div>
-                        </div>
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="divDiscountRow SSTSpanStyleJ">
-                        <div class="divDiscountNumber">
-                            <div class="divContent">
-                                <span class="mobile">İNDİRİM KODU</span>
-                                <span>258ihy548</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountAmount">
-                            <div class="divContent">
-                                <span class="mobile">TUTAR</span>
-                                <span>20.00 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountExpiration">
-                            <div class="divContent">
-                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
-                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountUpperLimit">
-                            <div class="divContent">
-                                <span class="mobile">ALT - ÜST LİMİT</span>
-                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountStatus">
-                            <div class="divContent">
-                                <span class="mobile">DURUM</span>
-                                <span>Aktif</span>
-                            </div>
-                        </div>
-                        <div class="separator"></div>
-                    </div>
-
-                    <div class="divDiscountRow SSTSpanStyleJ">
-                        <div class="divDiscountNumber">
-                            <div class="divContent">
-                                <span class="mobile">İNDİRİM KODU</span>
-                                <span>258ihy548</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountAmount">
-                            <div class="divContent">
-                                <span class="mobile">TUTAR</span>
-                                <span>20.00 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountExpiration">
-                            <div class="divContent">
-                                <span class="mobile">BAŞLANGIÇ - SON KULLANIM</span>
-                                <span>04 Nis 2014</span>&nbsp;-&nbsp;<span>04 Nis 2015</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountUpperLimit">
-                            <div class="divContent">
-                                <span class="mobile">ALT - ÜST LİMİT</span>
-                                <span>10.00 TL</span>&nbsp;-&nbsp;<span>100.000 TL</span>
-                            </div>
-                        </div>
-                        <div class="divDiscountStatus">
-                            <div class="divContent">
-                                <span class="mobile">DURUM</span>
-                                <span>Aktif</span>
-                            </div>
-                        </div>
-                        <div class="separator"></div>
-                    </div>
-
-
-
-                </div>
-
-                <div class="separator"></div>
-            </section>
-        </main>
-
-
-
-        <footer>
-            <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
-
-            <div class="divLine one"></div>
-
-            <div class="divContent first">
-                <ul class="level1">
-                    <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
-                    <li><a href="#" class="aStyleA">NEDEN?</a></li>
-                    <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
-                    <li><a href="#" class="aStyleA">E-SHOP</a></li>
-                    <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
-                </ul>
-
-
-                <div class="divMailingContent">
-                    <input type="text" placeholder="MAIL ZİNCİRİ" class="SSTInputTextA" />
-                    <input type="image" src="Images/arrow-next.png" class="inputButton" />
-                </div>
-
-                <div class="separator"></div>
-            </div>
-
-            <div class="divLine two"></div>
-
-            <div class="divContent">
-                <span class="spanStyleA">© 2014 LIMART.COM</span>
-
-                <ul class="level2">
-                    <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
-                </ul>
-
-                <div class="separator"></div>
-            </div>
-
-            <div class="divLine three"></div>
-
-
-            <!-- social icons -->
-            <ul class="socialsA">
-                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+    <footer>
+        <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
+        <div class="divLine one"></div>
+        <div class="divContent first">
+            <ul class="level1">
+                <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
+                <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
+                <li><a href="#" class="aStyleA">E-SHOP</a></li>
+                <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
             </ul>
-            <!-- end - social icons -->
+            <div class="divMailingContent">
+                <input type="text" placeholder="MAIL ZİNCİRİ" class="SSTInputTextA" />
+                <input type="image" src="Images/arrow-next.png" class="inputButton" />
+            </div>
             <div class="separator"></div>
-        </footer>
+        </div>
+        <div class="divLine two"></div>
+        <div class="divContent">
+            <span class="spanStyleA">© 2014 LIMART.COM</span>
+            <ul class="level2">
+                <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+            </ul>
+            <div class="separator"></div>
+        </div>
+        <div class="divLine three"></div>
 
-    </div>
-
+        <!-- social icons -->
+        <ul class="socialsA">
+            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+        </ul>
+        <!-- end - social icons -->
+        <div class="separator"></div>
+    </footer>
 
 
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
-    <script type="text/javascript" src="Scripts/SSTAccountDetails.js"></script>
-    <script type="text/javascript" src="Scripts/SSTAccountOrderHistory.js"></script>
+    <script type="text/javascript" src="Scripts/SSTPayment.js"></script>
     <!-- END - SCRIPTS -->
 
-
+    <!-- CREDIT CARD INPUT SCRIPTS -->
+    <script src="Scripts/CreditCard/modernizr.js"></script>
+    <script src="Scripts/CreditCard/jquery.inputmask.js"></script>
+    <script src="Scripts/CreditCard/jquery.inputmask.date.extensions.js"></script>
+    <script src="Scripts/CreditCard/app.js"></script>
+    <!-- END - CREDIT CARD INPUT SCRIPTS -->
 
 </body>
 </html>

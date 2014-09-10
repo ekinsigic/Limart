@@ -87,7 +87,7 @@ select {
     height: 40px;
     background: url(../images/arrow-down-form-select.png);
     background-repeat: no-repeat;
-    background-position: 90% center;
+    background-position: 95% center;
     padding: 0 15px 0 15px;
     border: 3px solid #000;
     color: #000;
@@ -101,15 +101,15 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-select:active {
-    opacity:1;
-}
+
     select:after {
         content: url(../images/arrow-down-form-select.png);
         display: block;
         position: absolute;
         right: 3px;
     }
+
+    
 
 textarea {
     width: 200px;
@@ -133,7 +133,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-input[type="checkbox"].checkboxTypeA {
+input[type="checkbox"].SSTCheckboxTypeA {
     width: 12px;
     height: 12px;
     top: 5px;
@@ -144,7 +144,7 @@ input[type="checkbox"].checkboxTypeA {
         background-size: 60%;
     }
 
-.labelA {
+.SSTLabelA {
     display: inline-block;
     height: 38px;
     font-size: 12px;
@@ -154,12 +154,12 @@ input[type="checkbox"].checkboxTypeA {
     transition: all 0.2s;
 }
 
-    .labelA:hover:after {
+    .SSTLabelA:hover:after {
         opacity: 1;
     }
 
 
-.labelA a {
+.SSTLabelA a {
     display: inline-block;
     color:#000;
 }
@@ -186,14 +186,14 @@ input[type="radio"] {
         background-size: 60%;
     }
 
-input[type="radio"].radioTypeA {
+input[type="radio"].SSTRadioTypeA {
     height: 12px;
 
     width: 12px;
     top: 2px;
 }
 
-.labelB {
+.SSTLabelB {
     display: inline-block;
     height: 38px;
     font-size: 16px;
@@ -210,7 +210,7 @@ input[type="radio"].radioTypeA {
 
 
 
-.labelC {
+.SSTLabelC {
     padding:0 5px 0 60px;
     height: 50px;
     font-size: 12px;
@@ -218,7 +218,7 @@ input[type="radio"].radioTypeA {
     letter-spacing: 0.030em;
 }
 
-    .labelC:after {
+    .SSTLabelC:after {
         top: 7px;
         left: 31px;
     }
@@ -228,7 +228,7 @@ input[type="radio"].radioTypeA {
 
 
 /* Customized */
-.inputTextA {
+.SSTInputTextA {
     padding: 0 40px 0 20px !important;
     width: 205px !important;
     height: 36px !important;
@@ -240,22 +240,22 @@ input[type="radio"].radioTypeA {
     border: 1px solid #000 !important;
 }
 
-    .inputTextA::-webkit-input-placeholder { /* WebKit browsers */
+    .SSTInputTextA::-webkit-input-placeholder { /* WebKit browsers */
     }
 
-    .inputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    .SSTInputTextA:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     }
 
-    .inputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
+    .SSTInputTextA::-moz-placeholder { /* Mozilla Firefox 19+ */
     }
 
-    .inputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
+    .SSTInputTextA:-ms-input-placeholder { /* Internet Explorer 10+ */
     }
 
 
 
 
-.inputTextB {
+.SSTInputTextB {
     padding: 0 0 0 20px !important;
     width: 205px !important;
     height: 36px !important;
@@ -272,7 +272,7 @@ input[type="radio"].radioTypeA {
 
 
 
-.inputTextC {
+.SSTInputTextC {
     padding: 0 20px 0 20px !important;
     width:388px !important;
     height:45px !important;
@@ -285,7 +285,7 @@ input[type="radio"].radioTypeA {
 }
 
    
-input.inputTextD{
+input.SSTInputTextD{
         display: block;
         height: 48px;
         background-color: transparent;
@@ -301,144 +301,17 @@ input.inputTextD{
         opacity: 0.7;
 }
 
-input.inputTextD:focus{
+input.SSTInputTextD:focus{
         width: 50%;
 }
-
-
-.inputTextE {
-    padding: 0 20px 0 20px !important;
-    width:100% !important;
-    height:45px !important;
-    color: #000 !important;
-    font-size: 12px !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.05em !important;
-    background-color: transparent;
-    border: 1px solid #000 !important;
-}
-
-    .inputTextE::-webkit-input-placeholder { /* WebKit browsers */
-        color: #000 !important;
-    }
-
-    .inputTextE:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: #000 !important;
-    }
-
-    .inputTextE::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: #000 !important;
-    }
-
-    .inputTextE:-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: #000 !important;
-    }
-
-
-
-
-
 
 
 
 /* BUTTON STARTS HERE */
 
-/*BLACK BUTTON STYLE */
-input[type="button"].buttonA,
-button.buttonA {
-    color: #000;
-}
 
-    input[type="button"].buttonA:hover,
-    button.buttonA:hover {
-        background: #000;
-        color: #fff;
-        border: 3px solid #000;
-    }
-
-    input[type="button"].buttonA:active,
-    button.buttonA:active {
-        background: #404040 !important;
-        border: 3px solid #404040 !important;
-    }
-/*END BLACK BUTTON STYLE*/
-
-
-
-
-
-/*PURPLE BUTTON STYLE */
-input[type="button"].buttonB,
-button.buttonB {
-    color: #4b4d63;
-}
-
-    input[type="button"].buttonB:hover,
-    button.buttonB:hover {
-        background: #4b4d63;
-        color: #fff;
-        border: 3px solid #4b4d63;
-    }
-
-    input[type="button"].buttonB:active,
-    button.buttonB:active {
-        background: #6f7182 !important;
-        border: 3px solid #6f7182 !important;
-    }
-/* END PURPLE BUTTON STYLE */
-
-
-
-
-
-/*RED BUTTON STYLE */
-input[type="button"].buttonC,
-button.buttonC {
-    color: #dd354b;
-}
-
-    input[type="button"].buttonC:hover,
-    button.buttonC:hover {
-        background: #dd354b;
-        color: #fff;
-        border: 3px solid #dd354b;
-    }
-
-    input[type="button"].buttonC:active,
-    button.buttonC:active {
-        background: #e0495d !important;
-        border: 3px solid #e0495d !important;
-    }
-/* SMALL RED BUTTON STYLE */
-
-
-
-
-
-/* SMALL BUTTON STYLES */
-input[type="button"].buttonD,
-button.buttonD {
-    background: #000;
-    color: #fff;
-    border: 3px solid #000;
-    font-weight: 400;
-    padding: 10px 25px;
-    padding-top: 12px;
-}
-
-    input[type="button"].buttonD:hover,
-    button.buttonD {
-        background: #404040;
-        color: #fff;
-        border: 3px solid #404040;
-    }
-
-
-
-
-
-input[type="button"].buttonE,
-button.buttonE {
+input[type="button"].SSTButtonA,
+button.SSTButtonA {
     padding: 10px 25px;
     color: #fff;
     font-weight: 400;
@@ -446,8 +319,8 @@ button.buttonE {
     border: 3px solid #4b4d63;
 }
 
-    input[type="button"].buttonE:hover,
-    button.buttonE {
+    input[type="button"].SSTButtonA:hover,
+    button.SSTButtonA {
         color: #fff;
         background: #6f7182;
         border: 3px solid #6f7182;
@@ -457,8 +330,8 @@ button.buttonE {
 
 
 
-input[type="button"].buttonF,
-button.buttonF {
+input[type="button"].SSTButtonB,
+button.SSTButtonB {
     padding: 10px 25px;
     padding-top: 12px;
     color: #fff;
@@ -467,8 +340,8 @@ button.buttonF {
     border: 3px solid #dd354b;
 }
 
-    input[type="button"].buttonF:hover,
-    button.buttonF {
+    input[type="button"].SSTButtonB:hover,
+    button.SSTButtonB {
         background: #e0495d;
         color: #fff;
         border: 3px solid #e0495d;
@@ -479,7 +352,7 @@ button.buttonF {
 
 
 
-.selectA {
+.SSTSelectA {
     display: block;
     width: 70px;
     height: 40px;
@@ -499,7 +372,7 @@ button.buttonF {
     -moz-appearance: none;
 }
 
-.selectB{
+.SSTSelectB{
         display: block;
         height: 48px;
         background-color: transparent;
@@ -515,94 +388,34 @@ button.buttonF {
         padding-left: 15px;
         opacity: 0.7;
 }
-.selectC {
-        display: block;
-        width: 50%;
-        height: 48px;
-        background-color: transparent;
-        padding: 0 15px 0 15px;
-        border: 1px solid rgba(0,0,0,0.2);
-        color: #000;
-        line-height: 15px;
-        font-size: 11px;
-        letter-spacing: 1px;
-        font-weight: 500;
-        transition: all 0.2s, width 0.2s;
-        padding-left: 15px;
-        opacity: 0.7;
-}
 
-.textareaStyleA {
+.SSTTextareaStyleA {
         display: block;
+        left:-10px;
         width: 100%;
         height: 110px;
-        left: -10px;
         background-color: transparent;
         padding: 15px 15px 0 15px;
-        border: 1px solid rgba(0,0,0,0.2);
+        border: 1px solid rgba(0,0,0,0.13);
         color: #000;
         line-height: 15px;
         font-size: 11px;
         letter-spacing: 1px;
         font-weight: 500;
         transition: all 0.2s, width 0.2s;
-        padding-left: 15px;
         opacity: 1;
         resize: none;
 }
 
-.textareaStyleB {
-}
 
 
-
-
-
-.labelStyleA {
-    display: inline-block;
-    padding: 0 0 0 25px;
-    color: #a3a3a3;
-}
-
-.labelStyleB {
-}
-
-
-
-/*VALIDATION*/
-
-input[type="text"].error {
-    border: 1px solid #e25957 !important;
-    opacity: 1;
-    color: #e25957 !important;
-    background: url(../images/icon-validation@2x.png) no-repeat 96% 50%;
-    background-size: 9px;
-}
-
-    input.error::-webkit-input-placeholder { /* WebKit browsers */
-        color: #e25957 !important;
-    }
-
-    input.error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: #e25957 !important;
-    }
-
-    input.error::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: #e25957 !important;
-    }
-
-    input.error:-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: #e25957 !important;
-    }
-
-/* END - VALIDATION*/
 
 
 
 
 /* Screen */
 @media all and (max-width: 700px) {
-    header nav .divMailingContent .inputTextA {
+    header nav .divMailingContent .SSTInputTextA {
         padding: 0 60px 0 20px !important;
         width: 240px !important;
         height: 46px !important;
@@ -611,14 +424,14 @@ input[type="text"].error {
         opacity: 1 !important;
     }
 
-    .selectA {
+    .SSTSelectA {
         width: 60px;
         background-position: 40px center;
     }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
-    header nav .divMailingContent .inputTextA {
+    header nav .divMailingContent .SSTInputTextA {
         padding: 0 60px 0 20px !important;
         width: 270px !important;
         height: 52px !important;
@@ -627,7 +440,7 @@ input[type="text"].error {
         opacity: 1 !important;
     }
 
-    .selectA {
+    .SSTSelectA {
         width: 60px;
         background-position: 40px center;
     }
@@ -637,16 +450,8 @@ input[type="text"].error {
         top:6px;
     }
 
-    .labelB:after {
+    .SSTLabelB:after {
         top: 14px;
         left: 7px;
     }
-}
-
-@media all and (min-width: 1019px) and (max-width: 1434px) {
-
-    
-}
-
-@media all and (min-width: 1435px) {
 }

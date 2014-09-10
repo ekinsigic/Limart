@@ -266,27 +266,34 @@ img[data-sixtythree="icon-account-coupons"].small{
 
 
 /* account order history */
-img[data-sixtythree^="icon-order-received-"]{
+
+img[data-sixtythree^="SST-arrow-down-short-"] {
+    width: 11px;
+    height: 6px;
+}
+
+
+img[data-sixtythree="icon-order-received"]{
     width: 46px;
     height: 21px;
 }
 
-img[data-sixtythree^="icon-order-preparing-"]{
+img[data-sixtythree="icon-order-preparing"]{
     width: 46px;
     height: 21px;
 }
 
-img[data-sixtythree^="icon-order-delivery-"]{
+img[data-sixtythree="icon-order-delivery"]{
     width: 46px;
     height: 21px;
 }
 
-img[data-sixtythree^="icon-order-on-shipping-"]{
+img[data-sixtythree="icon-order-on-shipping"]{
     width: 46px;
     height: 21px;
 }
 
-img[data-sixtythree^="icon-order-completed-"]{
+img[data-sixtythree="icon-order-completed"]{
     width: 46px;
     height: 21px;
 }

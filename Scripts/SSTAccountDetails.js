@@ -190,7 +190,7 @@ function showAccountMainMenu() {
     $('#breadcrumbs').show();
 
     setTimeout(function () {
-        $('header nav .innerWrapper, #breadcrumbs, #aMainAccountMenuOpener, #aMainAccountMenuOpener .spanDot, #menuActiveOverlay, #accountDetails .divDetail, footer').addClass('activeMenu');
+        $('header nav .innerWrapper, #breadcrumbs, #aMainAccountMenuOpener, #aMainAccountMenuOpener .spanDot, #aMainAccountMenuOpener .spanMenu, #menuActiveOverlay, #accountDetails .divDetail, footer').addClass('activeMenu');
         isAccountMainMenuCurrAnimated = false;
     }, 10);
 }
@@ -199,7 +199,7 @@ function showAccountMainMenu() {
 
 // // Ana-menuyu kapamaya yarayan ara fonksiyon
 function closeAccountMainMenu() {
-    $('header nav .innerWrapper, #breadcrumbs, #aMainAccountMenuOpener, #aMainAccountMenuOpener .spanDot, #menuActiveOverlay, #accountDetails .divDetail, footer').removeClass('activeMenu');
+    $('header nav .innerWrapper, #breadcrumbs, #aMainAccountMenuOpener, #aMainAccountMenuOpener .spanDot, #aMainAccountMenuOpener .spanMenu, #menuActiveOverlay, #accountDetails .divDetail, footer').removeClass('activeMenu');
 
     setTimeout(function () {
         if (isMobile) {

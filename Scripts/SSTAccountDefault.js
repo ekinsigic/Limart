@@ -1,14 +1,8 @@
 ﻿$(window).load(function () {
-
 });
-
-
 
 $(window).resize(function () {
-
 });
-
-
 
 $(document).ready(function () {
     if (isMobile) {

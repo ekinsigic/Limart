@@ -90,8 +90,6 @@
                     background-color: #5e5f79;
                 }
 
-
-
                 aside ul.level1 li .aMenuItem span {
                     display: none;
                 }
@@ -99,8 +97,6 @@
                 aside ul.level1 li .aMenuItem img {
                     display: block;
                 }
-
-
 
                     aside ul.level1 li .aMenuItem img.white {
                         position: absolute;
@@ -112,25 +108,20 @@
                             opacity: 1;
                         }
 
-
-
                     aside ul.level1 li .aMenuItem img.one {
                         margin-top: 20px;
-                        margin-left: 22px;
+                        margin-left: 23px;
                     }
 
                     aside ul.level1 li .aMenuItem img.two {
-                        margin-top: 22px;
-                        margin-left: 18px;
+                        margin-top: 21px;
+                        margin-left: 19px;
                     }
 
                     aside ul.level1 li .aMenuItem img.three {
                         margin-top: 19px;
                         margin-left: 19px;
                     }
-
-
-
 
 
             aside ul.level1 li ul.level2 {
@@ -248,13 +239,13 @@
 
                     aside ul.level1 li .aMenuItem img.three {
                         margin-top: 19px;
-                        margin-left: 19px;
+                        margin-left: 17px;
                     }
 
-                    
+
 
             aside ul.level1 li ul.level2 {
-                display:none;
+                display: none;
                 position: absolute;
                 z-index: -1;
                 top: 0;

@@ -199,8 +199,8 @@
 #forgotPasswordWrapper .contShopping{
     padding-left:10px;
     float: left;
-    width: 110px;
-    margin-top: 8px;
+    width: 110px !important;
+    margin-top: -8px !important;
 }
 
 #login .divSignUpContent .separator.line{
@@ -221,7 +221,9 @@
 
     #forgotPasswordWrapper .divMemberD{
     width: 202px;
+    margin-top: -82px !important;
     display: block;
+    margin-left: 38px !important;
 }
 
 
@@ -716,18 +718,27 @@
 
     
     #login .divMemberD{
-        width:205px;
+        width: 431px;
     
-    }
+    
+        margin-left: 138px;
+        margin-top: -4px;
+}
 
     #login .divMemberD .inputBtn{
         width:130px;
     
-    }
+    
+        float: right;
+}
 
     .forgotPasswordDescription {
         text-align: left;
         width:600px;
+    }
+
+    .forgotPasswordWrapper .divMemberD {
+
     }
 
 
@@ -745,5 +756,9 @@
     .forgotPasswordDescription {
         text-align: left;
         width:600px;
+    }
+
+    .forgotPasswordWrapper .divMemberD {
+        
     }
 }

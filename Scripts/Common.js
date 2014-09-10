@@ -37,6 +37,7 @@ else {
 
 var orientationChangeTimer = null;
 $(window).on("orientationchange", function () {
+    setMainMargin();
     if (orientationChangeTimer == null) {
         clearTimeout(orientationChangeTimer);
     }
@@ -53,6 +54,7 @@ $(window).resize(function () {
 
 $(window).load(function(){
     setMainMargin();
+    hH = $('header').height();
 });
 
 $(document).ready(function () {

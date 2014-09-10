@@ -4,7 +4,9 @@
     triggerArtistSlider(true);
 });
 
-
+$(window).load(function(){
+    mainHeight();
+});
 
 $(window).resize(function () {
     mainHeight();

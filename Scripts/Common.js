@@ -195,11 +195,3 @@ function selectCustomizer() {
 function setMainMargin() {
     $('main').css('margin-top',$('header').outerHeight());
 }
-
-
-
-
-
-
-
-

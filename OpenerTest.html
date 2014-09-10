@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
 <head>
     <title>LIMART</title>
@@ -29,8 +29,104 @@
     <link type="text/css" media="screen" href="SliderFiles/rs-custom-nearby.css" rel="stylesheet">
     <!-- END - STYLESHEET FILES -->
     <!-- CONTENT SCROLLER FILES -->
-    <link rel="stylesheet" href="ScrollerFiles/jquery.mCustomScrollbar.css" />
+    
     <!-- END - CONTENT SCROLLER FILES -->
+        <style type="text/css">
+        * {
+            position: relative;
+        }
+
+        body {
+            font-family: Arial;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: block;
+            position: fixed;
+            z-index:5;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #efefef;
+        }
+
+            header .divOpenerTriggers {
+                z-index: 10;
+                height: 100px;
+                background-color: blue;
+            }
+
+                header .divOpenerTriggers .divTrigger {
+                    width: 100px;
+                    height: 60px;
+                    background-color: tomato;
+                    float: left;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    text-align: center;
+                    padding: 40px 0 0 0;
+                    font-size: 13px;
+                    color: white;
+                }
+
+        main {
+            display: block;
+            position: relative;
+            height: 100px;
+            margin-top: 100px;
+            background-color: purple;
+            transition: all 0.5s;
+        }
+
+        #divOpenerFrame {
+            background-color: lightblue;
+            padding: 20px;
+            width: 700px;
+            height: 300px;
+            position: absolute;
+            z-index: 1;
+            top: -340px;
+            transition: all 0.5s;
+        }
+
+            #divOpenerFrame .divOpenerContent {
+                padding: 20px;
+                font-size: 17px;
+                display: none;
+                transition: all 0.5s;
+            }
+
+                #divOpenerFrame .divOpenerContent.on {
+                    display: block;
+                }
+
+            #divOpenerFrame #divAccount {
+                background-color: orange;
+            }
+
+            #divOpenerFrame #divSearch {
+                background-color: purple;
+            }
+
+            #divOpenerFrame #divBasket {
+                background-color: pink;
+            }
+
+            #divOpenerFrame #divMenu {
+                background-color: green;
+            }
+
+        .separator {
+            clear: both;
+            width: 0;
+            height: 0;
+            font-size: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -39,243 +135,26 @@
         <p class="faceA">LÜTFEN TELEFONUNUZU DİKEY KONUMUNDA TUTUNUZ.</p>
     </section>
 
-    <div id="divOpenerFrame" class="divOpenerFrame">
+    <div id="divOpenerFrame">
+        <div id="divBasket" class="divOpenerContent">
+            This is the quick basket...
+        </div>
 
-        <section id="searchOpener" class="SSTOpener">
-            <div class="divSearchContent">
-                <input type="text" placeholder="BURADA ARAMA YAPIN     " class="inputTextB" />
-                <div class="noCursor"></div>
-                <a href="#" class="aSearchButton"><img data-sixtythree="icon-search"></a>
-            </div>
-        </section>
+        <div id="divAccount" class="divOpenerContent">
+            This is the account...
+        </div>
 
-        <section class="divBasketOpener SSTOpener" id="basketOpener">
+        <div id="divSearch" class="divOpenerContent">
+            This is the search panel...
+        </div>
 
-            <div class="divBasketContent">
-
-                <div class="divBasketDetails">
-
-                    <!-- BASKET HEADERS -->
-                    <div class="divBasketItemHeaders">
-                        <div class="SSTFaceL header1">ADET</div>
-                        <div class="SSTFaceL header2">ARA TOPLAM</div>
-                        <div class="separator"></div>
-                    </div>
-                    <!-- END - BASKET HEADERS -->
-                    <!-- BASKET ITEMS -->
-                    <div class="basketDetailsScroller">
-                        <div class="divItem">
-
-                            <img src="Files/Products/03/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                            <div class="divDescription">
-                                <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                                <div class="divInfo">
-                                    <div class="content">
-                                        <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                                        <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                                        <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                                    </div>
-                                </div>
-
-                                <div class="divQuantity">
-                                    <div class="content SSTFaceI">
-                                        <span>100</span><span class="spanMobilePrice">ADET</span>
-                                    </div>
-                                </div>
-
-                                <div class="divTotalPrice">
-                                    <div class="SSTFaceI content">
-                                        <span class="amount">95000,98</span> <span class="currency">TL</span>
-                                    </div>
-                                </div>
-
-                                <div class="separator"></div>
-                            </div>
-                        </div>
-
-                        <div class="separator sepA"></div>
-
-                        <div class="divItem">
-
-                            <img src="Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                            <div class="divDescription">
-                                <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                                <div class="divInfo">
-                                    <div class="content">
-                                        <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                                        <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                                        <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                                    </div>
-                                </div>
-
-                                <div class="divQuantity">
-                                    <div class="content SSTFaceI">
-                                        <span>100</span><span class="spanMobilePrice">ADET</span>
-                                    </div>
-                                </div>
-
-                                <div class="divTotalPrice">
-                                    <div class="SSTFaceI content">
-                                        <span class="amount">95000,98</span> <span class="currency">TL</span>
-                                    </div>
-                                </div>
-                                <div class="separator"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="separator sepA"></div>
-
-                        <div class="divItem">
-
-                            <img src="Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                            <div class="divDescription">
-                                <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                                <div class="divInfo">
-                                    <div class="content">
-                                        <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                                        <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                                        <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                                    </div>
-                                </div>
-
-                                <div class="divQuantity">
-                                    <div class="content SSTFaceI">
-                                        <span>100</span><span class="spanMobilePrice">ADET</span>
-                                    </div>
-                                </div>
-
-                                <div class="divTotalPrice">
-                                    <div class="SSTFaceI content">
-                                        <span class="amount">950,98</span> <span class="currency">TL</span>
-                                    </div>
-                                </div>
-
-                                <div class="separator"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="separator sepA"></div>
-
-                        <div class="divItem">
-
-                            <img src="Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                            <div class="divDescription">
-                                <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                                <div class="divInfo">
-                                    <div class="content">
-                                        <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                                        <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                                        <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                                    </div>
-                                </div>
-
-                                <div class="divQuantity">
-                                    <div class="content SSTFaceI">
-                                        <span>100</span><span class="spanMobilePrice">ADET</span>
-                                    </div>
-                                </div>
-
-                                <div class="divTotalPrice">
-                                    <div class="SSTFaceI content">
-                                        <span class="amount">95000,98</span> <span class="currency">TL</span>
-                                    </div>
-                                </div>
-                                <div class="separator"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="separator sepA"></div>
-
-                        <div class="divItem">
-
-                            <img src="Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-
-                            <div class="divDescription">
-                                <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                                <div class="divInfo">
-                                    <div class="content">
-                                        <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                                        <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                                        <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                                    </div>
-                                </div>
-
-                                <div class="divQuantity">
-                                    <div class="content SSTFaceI">
-                                        <span>100</span><span class="spanMobilePrice">ADET</span>
-                                    </div>
-                                </div>
-
-                                <div class="divTotalPrice">
-                                    <div class="SSTFaceI content">
-                                        <span class="amount">950,98</span> <span class="currency">TL</span>
-                                    </div>
-                                </div>
-
-                                <div class="separator"></div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <!-- END - BASKET ITEMS -->
-
-                    <div class="separator"></div>
-                </div>
-
-                <div class="separator"></div>
-
-
-                <!-- TOTAL SUMMARY -->
-                <div class="divTotal">
-
-                    <table class="tableOrderTotal">
-                        <tr>
-                            <td class="SSTFaceH left">ARA TOPLAM</td>
-                            <td class="SSTFaceJ"><span class=" amount">1.260.47</span> <span class="currency">TL</span></td>
-                        </tr>
-                    </table>
-
-                    <div class="separator"></div>
-
-                    <div class="divPaymentButton">
-
-                        <!-- BOTTOM BUTTONS -->
-                        <a href="#" class="SSTAStyleF contShopping">
-                            <img data-sixtythree="arrow-next"> <span>SEPETİ GÖRÜNTÜLE</span>
-                        </a>
-
-                        <input type="button" class="buttonB btnCompleteOrder" value="ÖDEME YAP">
-                        <!-- END - BOTTOM BUTTONS -->
-
-                        <div class="separator"></div>
-                    </div>
-
-                </div>
-                <!-- END - TOTAL SUMMARY -->
-
-                <div class="separator"></div>
-            </div>
-
-            <div class="separator"></div>
-        </section>
+        <div id="divMenu" class="divOpenerContent">
+            This is the menu options...
+        </div>
     </div>
 
     <header>
-        <section class="divUserOpener SSTOpener" id="userOpener" style="display:block;">
+<!--         <section class="divUserOpener SSTOpener" id="userOpener" style="display:block;">
             <div class="userOpenerWrapper">
                 <div class="userOpenerContent">
                     <p>HOŞGELDİNİZ, <span>JOHN DOE</span></p>
@@ -283,7 +162,7 @@
                     <a href="#">ÇIKIŞ</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <div class="divContent">
             <a href="Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
@@ -336,6 +215,12 @@
                     <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
                         <img data-sixtythree="icon-basket" class="imgBasket">
                     </div>
+                </div>
+                <div class="divOpenerTriggers">
+                    <div id="divTrigger01" class="divTrigger" data-trigger-type="Basket">BASKET</div>
+                    <div id="divTrigger02" class="divTrigger" data-trigger-type="Account">ACCOUNT</div>
+                    <div id="divTrigger03" class="divTrigger" data-trigger-type="Search">SEARCH</div>
+                    <div id="divTrigger04" class="divTrigger" data-trigger-type="Menu">MENU</div>
                 </div>
             </nav>
         </div>
@@ -641,9 +526,9 @@
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="SliderFiles/jquery.royalslider.min.js"></script>
-    <script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
+    
     <script type="text/javascript" src="Scripts/Common.js"></script>
-    <script type="text/javascript" src="Scripts/Navi.js"></script>
+    <script type="text/javascript" src="Scripts/NaviTest.js"></script>
     <script type="text/javascript" src="Scripts/Default.js"></script>
     <!-- END - SCRIPTS -->
 

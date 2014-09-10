@@ -1,7 +1,5 @@
-        $(document).ready(function () {
-            setupTriggers();
-            carryMenu();
-            loginActions();
+        $(window).on("orientationchange", function () {
+            closeOpener();
         });
         $(window).resize(function(){
             carryMenu();
@@ -20,6 +18,14 @@
             };
             if (!isMobile) {
                 closeOpener()
+            }
+        });
+        $(document).ready(function () {
+            setupTriggers();
+            carryMenu();
+
+            if ( $('#userOpener').length > 0 && $('#userOpener').css('display') != 'none' ) {
+                loginActions();
             }
         });
         // opener globals
@@ -292,14 +298,6 @@
         }
     }
 
-    function contentScrollers() {
-        $(".basketDetailsScroller").mCustomScrollbar();
-        if ( slideDistance == (wH-$('header').height() )) {
-            //$('#divOpenerFrame').mCustomScrollbar();
-            console.log(slideDistance);
-        }
-    }
-
     function setUpFrame() {
         if (isMobile) {};
             $('#divOpenerFrame').css({
@@ -309,7 +307,6 @@
                 'overflow-y': 'visible',
                 '-webkit-overflow-scrolling': 'touch'
             });
-            //$('#divOpenerFrame').mCustomScrollbar();
 
 
             // $('#divOpenerFrame').bind('touchmove',function(e){
@@ -321,6 +318,7 @@
 
 
     function loginActions() {
+        $('nav #userTrigger a.goToLogin').addClass('dont');
         $('.divUserOpener').css('display','none');
         enableDisableUserButton();
         $('.divUserOpener').css('display','');

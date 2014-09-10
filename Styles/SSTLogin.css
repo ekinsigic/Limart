@@ -133,6 +133,14 @@
     height:100%;
     padding-top:15px;
 }
+
+
+.divMemberD .savePasswordLink {
+    width: 200px;
+    margin-left: 372px;
+    margin-bottom: -35px;
+    top: 30px;
+}
 /* end - login social icons */
 
 
@@ -243,7 +251,7 @@
     #login{
         bottom:0;
         height:auto;
-        overflow: auto;
+        overflow: visible;
         background-color:#fff;
     
         padding-top: 0px !important;
@@ -272,7 +280,7 @@
         margin-top: 0;
         padding: 0px 0 30px 0;
         width:100%;
-        overflow:auto;
+        overflow: visible;
     }
 
     #login .divLoginContent .divLogin{
@@ -381,10 +389,8 @@
 }
 
     #forgotPasswordWrapper .contShopping {
-        top: -79px;
+        top: -91px !important;
     }
-
-
 
     /* basket */
     #login .divBasketContent{
@@ -504,8 +510,9 @@
         position: absolute;
         left: 5%;
         margin-left: -6px;
-        top: 24px;
-    }
+        top: -98px;
+    
+}
 
     #login .divSignUpContent .contShopping span{
         display: none;
@@ -609,7 +616,7 @@
 
 
     #forgotPasswordWrapper .contShopping {
-        top:-100px;
+        top: -106px !important;
     }
 
     #login .divMemberA,
@@ -650,7 +657,7 @@
         position: absolute;
         left: 50%;
         margin-left: -345px;
-        top: 36px;
+        top: -115px;
     }
 
 

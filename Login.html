@@ -34,7 +34,7 @@
 
         <section id="searchOpener" class="SSTOpener">
             <div class="divSearchContent">
-                <input type="text" class="inputTextB" />
+                <input type="text" placeholder="BURADA ARAMA YAPIN     " class="inputTextB" />
                 <div class="noCursor"></div>
                 <a href="#" class="aSearchButton"><img data-sixtythree="icon-search"></a>
             </div>
@@ -266,7 +266,7 @@
     </div>
 
     <header>
-        <section class="divUserOpener SSTOpener" id="userOpener">
+        <section class="divUserOpener SSTOpener" id="userOpener" style="display:block;">
             <div class="userOpenerWrapper">
                 <div class="userOpenerContent">
                     <p>HOŞGELDİNİZ, <span>JOHN DOE</span></p>
@@ -320,28 +320,23 @@
                     <div class="divSearchIcon triggerDiv" data-trigger-type="search" id="searchTrigger">
                         <img data-sixtythree="icon-search" class="imgSearch">
                     </div>
-                    <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
-                        <img data-sixtythree="icon-user" class="imgUser">
-                    </div>
                     <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
                         <img data-sixtythree="icon-basket" class="imgBasket">
+                    </div>
+                    <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
+                        <img data-sixtythree="icon-user" class="imgUser">
+                        <a href="login.html" class="goToLogin"></a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-
-
-
-
-
     <main>
 
         <section id="pageHeader">
             <h1 class="faceEE">GİRİŞ YAP</h1>
         </section>
-
         <section id="login">
 
             <div id="divLoginWrapper" class="divLoginContent">
@@ -435,7 +430,7 @@
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
+    
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
     <script type="text/javascript" src="Scripts/SSTLogin.js"></script>

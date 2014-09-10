@@ -31,11 +31,13 @@
         <p class="faceA">LÜTFEN TELEFONUNUZU DİKEY KONUMUNDA TUTUNUZ.</p>
     </section>
 
+
+
     <div id="divOpenerFrame" class="divOpenerFrame">
 
         <section id="searchOpener" class="SSTOpener">
             <div class="divSearchContent">
-                <input type="text" class="inputTextB" />
+                <input type="text" placeholder="BURADA ARAMA YAPIN     " class="inputTextB" />
                 <div class="noCursor"></div>
                 <a href="#" class="aSearchButton"><img data-sixtythree="icon-search"></a>
             </div>
@@ -267,7 +269,7 @@
     </div>
 
     <header>
-        <section class="divUserOpener SSTOpener" id="userOpener">
+        <section class="divUserOpener SSTOpener" id="userOpener" style="display:block;">
             <div class="userOpenerWrapper">
                 <div class="userOpenerContent">
                     <p>HOŞGELDİNİZ, <span>JOHN DOE</span></p>
@@ -321,12 +323,79 @@
                     <div class="divSearchIcon triggerDiv" data-trigger-type="search" id="searchTrigger">
                         <img data-sixtythree="icon-search" class="imgSearch">
                     </div>
-                    <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
-                        <img data-sixtythree="icon-user" class="imgUser">
-                    </div>
                     <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
                         <img data-sixtythree="icon-basket" class="imgBasket">
                     </div>
+                    <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
+                        <img data-sixtythree="icon-user" class="imgUser">
+                        <a href="login.html" class="goToLogin"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+            <section class="divUserOpener SSTOpener" id="userOpener">
+                <div class="userOpenerWrapper">
+                    <div class="userOpenerContent">
+                        <p>HOŞGELDİNİZ, <span>JOHN DOE</span></p>
+                        <a href="accountDefault.html">HESABIM</a>
+                        <a href="#">ÇIKIŞ YAP</a>
+                    </div>
+                </div>
+            </section>
+
+        <div class="divContent">
+            <a href="Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
+
+            <nav>
+                <div class="divNav SSTOpener" id="menuOpener">
+                    <ul class="level1">
+                        <li><a href="#" class="aStyleA">BİZ KİMİZ?</a></li>
+                        <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                        <li><a href="Artists.html" class="aStyleA">SANATÇILAR</a></li>
+                        <li><a href="Listing.html" class="aStyleA">E-SHOP</a></li>
+                        <li><a href="Contact.html" class="aStyleA">İLETİŞİM</a></li>
+                    </ul>
+
+                    <div class="divMenuContent">
+                        <p>
+                            LIMART HAKKINDAKİ TÜM GELİŞMELERİ TAKİP EDEBİLMEK İÇİN MAIL LISTEMIZE KAYIT OLUN.
+                        </p>
+
+                        <div class="divMailingContent">
+                            <input type="text" placeholder="MAIL ZİNCİRİ" class="inputTextA" />
+                            <a href="#" class="aButton"><img data-sixtythree="arrow-next"></a>
+                        </div>
+
+                        <!-- social icons -->
+                        <ul class="socialsA">
+                            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+                            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+                            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+                            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+                        </ul>
+                        <!-- end - social icons -->
+                    </div>
+                </div>
+
+                <div class="divNavIcon">
+                    <div class="divNavIconBg"></div>
+                </div>
+                <div class="divMenuIcon triggerDiv" data-trigger-type="menu" id="menuTrigger">
+                    <img data-sixtythree="icon-mobile-nav" class="imgMenu" />
+                </div>
+                <div class="divSearchIcon triggerDiv" data-trigger-type="search" id="searchTrigger">
+                    <img data-sixtythree="icon-search" class="imgSearch">
+                </div>
+                <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
+                    <img data-sixtythree="icon-user" class="imgUser">
+                </div>
+                <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
+                    <img data-sixtythree="icon-basket" class="imgBasket">
                 </div>
             </nav>
         </div>
@@ -524,6 +593,8 @@
 
 
 
+
+
     <footer>
         <div class="preloader"><img data-sixtythree="logotype-symbol" class="smallLogo" /></div>
         <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
@@ -542,7 +613,7 @@
 
             <div class="divMailingContent">
                 <input type="text" placeholder="MAIL ZİNCİRİ" class="inputTextA" />
-                <input type="image" src="Images/SST-arrow-next.png" class="inputButton" />
+                <input type="image" src="Images/SST-arrow-next.jpg" class="inputButton" />
             </div>
 
             <div class="separator"></div>
@@ -582,11 +653,13 @@
 
 
 
+
+
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery-ui.js"></script>
-    <script type="text/javascript" src="ScrollerFiles/jquery.mCustomScrollbar.concat.min.js"></script>
+    
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
     <script type="text/javascript" src="Scripts/listing.js"></script>

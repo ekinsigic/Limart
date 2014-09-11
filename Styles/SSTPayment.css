@@ -236,7 +236,7 @@
 #payment textarea {
     width: calc(100%);
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -953,11 +953,11 @@ a.contShopping {
         color: #cacaca;
     }
 
-.divBillingAddress {
+ #payment .divBillingAddress {
     margin-top: 0px !important;
 }
 
-.divAddressOptionsWrapper, .divBillingAddressOptionsWrapper {
+ #payment .divAddressOptionsWrapper,  #payment .divBillingAddressOptionsWrapper {
     float: left;
     transition:opacity 0.3s transform 0.3;
 }
@@ -970,7 +970,7 @@ a.contShopping {
     display: none;
 }
 
-.divAddressOptionsWrapper .innerWrapper, .divBillingAddressOptionsWrapper .innerWrapper {
+#payment .divAddressOptionsWrapper .innerWrapper, #payment .divBillingAddressOptionsWrapper .innerWrapper {
     float: left;
 }
 
@@ -1003,7 +1003,7 @@ a.contShopping {
 
 
 
-.divNewAddressContent {
+#payment .divNewAddressContent {
     top: 20px;
     transition: opacity 0.3s, transform 0.3s;
 }
@@ -1026,27 +1026,27 @@ a.contShopping {
 }
 
 /* GENEL YAPIYA EKLEMELER */
-.addressNewOrSaved {
+#payment .addressNewOrSaved {
     margin-bottom: 0px;
 }
 
-.divAddress-Payment-Content .divContent .divAddressContent .addressNewOrSavedInvoice label {
+#payment .divAddress-Payment-Content .divContent .divAddressContent .addressNewOrSavedInvoice label {
     margin-bottom: 20px;
 }
 
-    .divAddress-Payment-Content .divContent .divAddressContent .addressNewOrSavedInvoice label:last-child {
+    #payment .divAddress-Payment-Content .divContent .divAddressContent .addressNewOrSavedInvoice label:last-child {
         margin-left: 30px;
     }
 
-.divAddress-Payment-Content .divContent .divAddressContent .addressNewOrSaved label:last-child {
+#payment .divAddress-Payment-Content .divContent .divAddressContent .addressNewOrSaved label:last-child {
     margin-left: 30px;
 }
 
-.divOverallPaymentWrapper {
+#payment .divOverallPaymentWrapper {
     border: 1px solid #e5e5e5;
 }
 
-.prohibitorOverlay {
+#payment .prohibitorOverlay {
     position: absolute;
     width: 100%;
     background-color: rgba(255,255,255,0.9);
@@ -1054,7 +1054,7 @@ a.contShopping {
     transition: opacity 0.3s;
 }
 
-.miniProhibitorOverlay {
+#payment .miniProhibitorOverlay {
     position: absolute;
     margin: 33px 0 0 0;
     width: 200px;
@@ -1064,6 +1064,19 @@ a.contShopping {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
+
+#payment .personalOrCorporate {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#payment .personalOrCorporate input[type="radio"] {
+    top: 4px;
+} 
+
 /* END GENEL YAPIYA EKLEMELER */
 
 

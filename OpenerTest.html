@@ -46,22 +46,22 @@
         header {
             display: block;
             position: fixed;
-            z-index:5;
+            z-index:999;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100px;
+            height: 70px;
             background-color: #efefef;
         }
 
             header .divOpenerTriggers {
-                z-index: 10;
-                height: 100px;
+                z-index: 999;
+                height: 70px;
                 background-color: blue;
             }
 
                 header .divOpenerTriggers .divTrigger {
-                    width: 100px;
+                    width: 60px;
                     height: 60px;
                     background-color: tomato;
                     float: left;
@@ -76,8 +76,6 @@
         main {
             display: block;
             position: relative;
-            height: 100px;
-            margin-top: 100px;
             background-color: purple;
             transition: all 0.5s;
         }
@@ -176,45 +174,6 @@
                         <li><a href="Listing.html" class="aStyleA">E-SHOP</a></li>
                         <li><a href="Contact.html" class="aStyleA">İLETİŞİM</a></li>
                     </ul>
-
-                    <div class="divMenuContent">
-                        <p>
-                            LIMART HAKKINDAKİ TÜM GELİŞMELERİ TAKİP EDEBİLMEK İÇİN MAIL LISTEMIZE KAYIT OLUN.
-                        </p>
-
-                        <div class="divMailingContent">
-                            <input type="text" placeholder="MAIL ZİNCİRİ" class="inputTextA" />
-                            <a href="#" class="aButton"><img data-sixtythree="arrow-next"></a>
-                        </div>
-
-                        <!-- social icons -->
-                        <ul class="socialsA">
-                            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
-                            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
-                            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
-                            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
-                        </ul>
-                        <!-- end - social icons -->
-                    </div>
-                </div>
-
-                <div class="divIconsWrapper">
-                    <div class="divNavIcon">
-                        <div class="divNavIconBg"></div>
-                    </div>
-                    <div class="divMenuIcon triggerDiv" data-trigger-type="menu" id="menuTrigger">
-                        <img data-sixtythree="icon-mobile-nav" class="imgMenu" />
-                    </div>
-                    <div class="divSearchIcon triggerDiv" data-trigger-type="search" id="searchTrigger">
-                        <img data-sixtythree="icon-search" class="imgSearch">
-                    </div>
-                    <div class="divUserIcon triggerDiv" data-trigger-type="user" id="userTrigger">
-                        <img data-sixtythree="icon-user" class="imgUser">
-                        <a href="login.html" class="goToLogin"></a>
-                    </div>
-                    <div class="divBasketIcon triggerDiv" data-trigger-type="basket" id="basketTrigger">
-                        <img data-sixtythree="icon-basket" class="imgBasket">
-                    </div>
                 </div>
                 <div class="divOpenerTriggers">
                     <div id="divTrigger01" class="divTrigger" data-trigger-type="Basket">BASKET</div>

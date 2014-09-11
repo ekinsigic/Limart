@@ -428,7 +428,7 @@
                     var slidingDistance = $('#divOpenerFrame').outerHeight();
 
                     $('#divOpenerFrame').css({
-                        '-webkit-transform': 'translate3d(0,100%,0)'
+                        '-webkit-transform': 'translate3d(0,'+ slidingDistance +'px,0)'
                     });
 
                     $('#div' + currentTriggerType).addClass('on');

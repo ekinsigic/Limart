@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	deliveryAddressRadioChange();
 	invoiceAddressRadioChange();
+	personalOrCorporateRadioChange();
 	openCloseElements('#cbAddressSelection2','.billingAddressWrapper');
 	openCloseElements('#cbDifferentPerson','.divAnotherRecipientContent');
 	openCloseElements('#cbGiftNote','.divGiftNoteTextareaWrapper');
@@ -14,6 +15,11 @@ $(document).ready(function(){
 	$('input[name="group2"]').each(function(){
 		$(this).change(function(){
 			invoiceAddressRadioChange();
+		})
+	});
+	$('input[name="personalOrCorporate"]').each(function(){
+		$(this).change(function(){
+			personalOrCorporateRadioChange();
 		})
 	});
 
@@ -39,6 +45,19 @@ function deliveryAddressRadioChange() {
 	else if ($('#rbAddress1').is(':checked')) { // yeni teslimat adresi seçilirse
 		selectedOption = '.deliveryAddressWrapper .divNewAddressContent'
 		nonSelectedOption = '.deliveryAddressWrapper .divAddressOptionsWrapper'
+	};
+
+	switchOptions(selectedOption, nonSelectedOption);
+}
+
+function personalOrCorporateRadioChange() {
+	if ($('#personalRadio').is(':checked')) { // kayıtlı teslimat adresleri seçilirse
+		selectedOption = '.divBillingAddress .divPersonalOptionInput'
+		nonSelectedOption = '.divBillingAddress .divCorporateOptionInput'
+	}
+	else if ($('#corporateRadio').is(':checked')) { // yeni teslimat adresi seçilirse
+		selectedOption = '.divBillingAddress .divCorporateOptionInput'
+		nonSelectedOption = '.divBillingAddress .divPersonalOptionInput'
 	};
 
 	switchOptions(selectedOption, nonSelectedOption);

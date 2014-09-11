@@ -474,7 +474,10 @@
                                 </p>
                                 <!-- Add new delivery address form starts here -->
                                 <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="TCKN" />
+                                <select class="SSTSelectB v2">
+                                    <option>ÜLKE</option>
+                                    <option>ÜLKE</option>
+                                </select>
                                 <select class="SSTSelectB v1">
                                     <option>İL</option>
                                     <option>İL</option>
@@ -484,10 +487,8 @@
                                     <option>İLÇE</option>
                                 </select>
                                 <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
-                                <input type="text" class="SSTInputTextD v1" placeholder="TELEFON" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="GSM" />
-                                <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
+                                <input type="text" class="SSTInputTextD v1" placeholder="POSTA KODU" />
+                                <input type="text" class="SSTInputTextD v2" placeholder="TELEFON" />
                                 <div class="separator" style="height:40px;"></div>
                                 <a href="#" data-inneropeneranchor="userOpenerInnerDivLogin" class="aStyleE contShopping">
                                     <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
@@ -566,21 +567,33 @@
                                     <p class="SSTFaceX pDescription">
                                         Yeni fatura adresi eklemek için aşağıdaki formu doldurun.
                                     </p>
-                                    <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
-                                    <input type="text" class="SSTInputTextD v2" placeholder="TCKN" />
+                                    <input type="text" class="SSTInputTextD v1" placeholder="FATURA ADI" />
+                                    <select class="SSTSelectB v2">
+                                        <option>İL</option>
+                                        <option>İL</option>
+                                    </select>
                                     <select class="SSTSelectB v1">
-                                        <option>İL</option>
-                                        <option>İL</option>
+                                        <option>İLÇE</option>
+                                        <option>İLÇE</option>
                                     </select>
                                     <select class="SSTSelectB v2">
                                         <option>İLÇE</option>
                                         <option>İLÇE</option>
                                     </select>
                                     <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
-                                    <input type="text" class="SSTInputTextD v1" placeholder="TELEFON" />
-                                    <input type="text" class="SSTInputTextD v2" placeholder="GSM" />
-                                    <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
-                                    <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
+                                    <input type="text" class="SSTInputTextD v1" placeholder="POSTA KODU" />
+                                    <input type="text" class="SSTInputTextD v2" placeholder="TELEFON" />
+                                    <div class="personalOrCorporate">
+                                        <label for="personalRadio" class="SSTFaceX"><input id="personalRadio" class="radioTypeA" name="personalOrCorporate" type="radio" checked />Bireysel</label>
+                                        <label for="corporateRadio" class="SSTFaceX"><input id="corporateRadio" class="radioTypeA" name="personalOrCorporate" type="radio" />Kurumsal</label>
+                                    </div>
+                                    <div class="divPersonalOptionInput">
+                                        <input type="text" class="SSTInputTextD v1" placeholder="TCKN" />
+                                    </div>
+                                    <div class="divCorporateOptionInput">
+                                        <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
+                                        <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
+                                    </div>
                                     <div class="separator" style="height:40px;"></div>
                                     <a href="javascript:void(0);" data-inneropeneranchor="userOpenerInnerDivLogin" class="aStyleE contShopping">
                                         <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>

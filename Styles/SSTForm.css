@@ -152,6 +152,7 @@ input[type="checkbox"].SSTCheckboxTypeA {
     line-height: 21px;
     letter-spacing: 0.040em;
     transition: all 0.2s;
+    top: -15px;
 }
 
     .SSTLabelA:hover:after {

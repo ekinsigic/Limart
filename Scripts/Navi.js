@@ -350,7 +350,7 @@
             $('.divUserIcon.triggerDiv a').click(function(e){
                 e.preventDefault();
                 if ($('nav #menuOpener').length > 0) {
-                    $('.divUserIcon.triggerDiv').css('display','block;')
+                    $('.divUserIcon.triggerDiv').css('display','block;');
                 };
             });
         }

@@ -70,7 +70,7 @@ function openPopUps(elementSelector) {
 }
 
 function productDetailPopUps() {
-    $('.zoomArtwork, .artworkImage img').click(function(){
+    $('.zoomArtwork, .artworkImage .artworkImageActual').click(function(){
         openPopUps('.zoomWindow');
     });
 

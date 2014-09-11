@@ -249,7 +249,7 @@ function deleteAddressInfo(sender, addressId) {
 
 function radioActions() {
 	$('.divAddressOption').find('input[type="radio"]').change(function(){
-		$('.divAddressOption').each(function(){
+		$(this).parent().parent().parent().find('.divAddressOption').each(function(){
 			$(this).removeClass('active');	
 		})
 		$(this).parents('.divAddressOption').addClass('active');

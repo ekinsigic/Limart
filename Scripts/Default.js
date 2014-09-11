@@ -51,6 +51,20 @@ function triggerGallerySlider() {
             navigateByCenterClick: false
         }
     });
+
+    gallerySlider = $('#gallerySlider').data('royalSlider');
+
+    setTimeout(function(){
+        var slideLink = $('#sectionGallerySlider .rsGCaption h3').attr('data-slide-link');
+        $('#gallerySlider .rsSlide.rsActiveSlide').append('<a href="'+slideLink+'" class="gallerySliderLink">');
+    },500);
+
+    gallerySlider.ev.on('rsAfterSlideChange', function(event) {
+        var slideLink = $('#sectionGallerySlider .rsGCaption h3').attr('data-slide-link');
+        $('#gallerySlider .rsSlide a').remove();
+        $('#gallerySlider .rsSlide.rsActiveSlide').append('<a href="'+slideLink+'" class="gallerySliderLink">');
+    });
+
 }
 
 

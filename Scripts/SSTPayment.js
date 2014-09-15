@@ -249,9 +249,10 @@ function deleteAddressInfo(sender, addressId) {
 
 
 function radioActions() {
+	$('.divAddressOption input[checked]').parents('.divAddressOption').addClass('active');
 	$('.divAddressOption').find('input[type="radio"]').change(function(){
 		$(this).parent().parent().parent().find('.divAddressOption').each(function(){
-			$(this).removeClass('active');	
+			$(this).removeClass('active');
 		})
 		$(this).parents('.divAddressOption').addClass('active');
 	});

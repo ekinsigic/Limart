@@ -72,6 +72,7 @@ section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer {
 }
 section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer {
 	width: 100%;
+	max-width: 700px;
 	margin: 0 auto;
 }
 
@@ -89,7 +90,15 @@ section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtwo
 	height: 100%;
 	width: auto;
 	margin: 0 auto;
+	box-shadow: 3px 0px 10px rgba(0,0,0,0.30);
+	-webkit-transform: rotateX(0.5deg);
 }
+section.sixtyThreeOverlay.demoWindow .demoArtworkImageContainer .demoSingleArtworkImageContainer .artworkDemoActualImageCenterer .artworkDemoActualImageWrap {
+    box-shadow: inset -2px 2px 4px rgba(0,0,0,0.20);
+	
+}
+
+
 
 section.sixtyThreeOverlay.demoWindow select {
 	position: absolute;

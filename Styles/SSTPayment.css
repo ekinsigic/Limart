@@ -248,7 +248,7 @@
     margin-top: 28px;
 }
 
-a.contShopping {
+#payment a.contShopping {
     width: 100px !important;
     left: 5px;
     float: left;
@@ -256,12 +256,12 @@ a.contShopping {
     display: none !important;
 }
 
-    a.contShopping span {
+    #payment a.contShopping span {
         line-height: 20px;
     
 }
 
-    a.contShopping img {
+    #payment a.contShopping img {
         margin-top: 13px;
     }
 

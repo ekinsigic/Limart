@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
 <head>
     <title>LIMART</title>
@@ -20,18 +20,47 @@
     <link rel="stylesheet" type="text/css" href="Styles/Header.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Navi.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Footer.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/Typography.css" />
     <link rel="stylesheet" type="text/css" href="Styles/SSTTypography.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Typography.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Form.css" />
     <link rel="stylesheet" type="text/css" href="Styles/SSTForm.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTBasket.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/SSTLogin.css" />
 
-
+    <style type="text/css">
+    .hovered {
+        background:rgba(0,0,0,0.05);
+        color:black;
+    }
+    .SSTSelect:focus {
+        background-color: orange;
+    }
+    .SSTSelectMirror a:focus{
+        background-color: rgba(0,0,0,0.1);
+    }
+    .SSTSelectMirror a{
+        line-height: 28px;
+        height: 30px;
+        transition: background-color 0.3s;
+    }
+    .SSTSelectMirror a:active{
+        color:black;
+    }
+    .SSTSelectMirror {
+        border: 2px solid rgba(0,0,0,0.1);
+        width: 200px;
+        text-align: center;
+        margin: 20px auto;
+        transition: height 0.2s;
+    }
+    .SSTSelectMirror ul li{
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+    </style>
 </head>
 <body>
-
 
     <section id="smartphoneLandscape">
         <div class="divPreloader"><img data-sixtythree="logotype-symbol" /></div>
@@ -270,11 +299,13 @@
             </div>
 
             <div class="separator"></div>
+
+
         </section>
     </div>
 
     <header>
-        <section class="divUserOpener SSTOpener" id="userOpener" style="display:block;">
+<!--         <section class="divUserOpener SSTOpener" id="userOpener" style="display:block;">
             <div class="userOpenerWrapper">
                 <div class="userOpenerContent">
                     <p>HOŞGELDİNİZ, <span>JOHN DOE</span></p>
@@ -282,7 +313,7 @@
                     <a href="#">ÇIKIŞ</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <div class="divContent">
             <a href="Default.html" class="aLogo"><img data-sixtythree="logotype" /></a>
@@ -340,249 +371,45 @@
         </div>
     </header>
 
-
-
     <main>
+<select class="SSTSelect">
+<option>
+    NUMBERS
+</option>
+<option val="taş">
+    ONE
+</option>
+<option val="tahta">
+    TWO
+</option>
+<option val="three">
+    THREE
+</option>
+</select>
 
-        <section id="pageHeader">
-            <h1 class="faceEE">SEPET</h1>
-        </section>
+<select class="SSTSelect">
+<option>
+    COLORS
+</option>
+<option>
+    red
+</option>
+<option>
+    blue
+</option>
+<option>
+    white
+</option>
+</select>
 
-        <section id="basketDetails">
-
-            <!-- BASKET HEADERS -->
-            <div class="divBasketItemHeaders">
-                <div class="SSTFaceL header1">ÜRÜN AÇIKLAMA</div>
-                <div class="SSTFaceL header2">BİRİM FİYAT</div>
-                <div class="SSTFaceL header3">ADET</div>
-                <div class="SSTFaceL header4">ARA TOPLAM</div>
-                <div class="separator"></div>
-            </div>
-            <!-- END - BASKET HEADERS -->
-            <!-- BASKET ITEMS -->
-            <div class="divItem">
-
-                <img src="Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="SSTFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="SSTFaceI content">
-                            <a href="#" class="SSTFaceI aQuantity">-</a>
-                            <span class="spanQuantity">100</span>
-                            <a href="#" class="SSTFaceI aQuantity">+</a>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="SSTFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="separator sepA"></div>
-
-
-            <div class="divItem">
-
-                <img src="Files/Products/02/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="SSTFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="SSTFaceI content">
-                            <a href="#" class="SSTFaceI aQuantity">-</a>
-                            <span class="spanQuantity">100</span>
-                            <a href="#" class="SSTFaceI aQuantity">+</a>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="SSTFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="separator sepA"></div>
-
-
-            <div class="divItem">
-
-                <img src="Files/Products/03/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMORPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="SSTFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="SSTFaceI content">
-                            <a href="#" class="SSTFaceI aQuantity">-</a>
-                            <span class="spanQuantity">100</span>
-                            <a href="#" class="SSTFaceI aQuantity">+</a>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="SSTFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="separator sepA"></div>
-
-
-            <div class="divItem">
-
-                <img src="Files/Products/01/Pictures/thumbnail.jpg" class="imgItemPic" />
-
-                <div class="divDescription">
-                    <a href="#" class="aDelete"><img data-sixtythree="icon-close" /></a>
-
-                    <div class="divInfo">
-                        <div class="content">
-                            <a href="ProductDetail.html"><h2 class="SSTFaceF header1">METAMOR asdas das da sd asd asdPHOSIS OF NARCISUS</h2></a>
-                            <a href="ArtistsDetail.html"><h3 class="SSTFaceG header2">SALVADOR DALI</h3></a>
-                            <span class="SSTFaceH info1">26x30, SİYAH ÇERÇEVE</span>
-                        </div>
-                    </div>
-
-                    <div class="divUnitPrice">
-                        <div class="SSTFaceI content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-
-                    <div class="divQuantity">
-                        <div class="SSTFaceI content">
-                            <a href="#" class="SSTFaceI aQuantity">-</a>
-                            <span class="spanQuantity">100</span>
-                            <a href="#" class="SSTFaceI aQuantity">+</a>
-                        </div>
-                    </div>
-
-                    <div class="divTotalPrice">
-                        <div class="SSTFaceJ content">
-                            <span class="amount">95000,98</span> <span class="currency">TL</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- END - BASKET ITEMS -->
-
-
-            <div class="separator"></div>
-
-
-            <!-- TOTAL SUMMARY -->
-            <div class="divTotal">
-                <div class="divDiscount">
-                    <p class="SSTFaceK">İNDİRİM KUPONU KULLANMAK YA DA KAMPANYA KODU MU GİRMEK İSTİYORSUNUZ?</p>
-
-                    <div class="divDiscountInput">
-                        <input type="text" class="SSTInputTextA inputDiscount" />
-                        <input type="image" src="Images/@2x/arrow-next@2x.png" />
-                    </div>
-                </div>
-
-                <table class="tableOrderTotal">
-                    <tr>
-                        <td class="SSTFaceH">SİPARİŞ TUTARI</td>
-                        <td class="SSTFaceJ"><span class=" amount">1.260.47</span> <span class="currency">TL</span></td>
-                    </tr>
-                    <tr>
-                        <td class="SSTFaceH">KARGO BEDELİ</td>
-                        <td class="SSTFaceJ"><span class="amount">4.99</span> <span class="currency">TL</span></td>
-                    </tr>
-                    <tr>
-                        <td class="SSTFaceH">İNDİRİMLER</td>
-                        <td class="SSTFaceJ"><span class="amount">-10.49</span> <span class="currency">TL</span></td>
-                    </tr>
-                    <tr class="trSep">
-                        <td colspan="2"><div class="separator sepB"></div></td>
-                    </tr>
-                    <tr>
-                        <td class="SSTFaceH">GENEL TOPLAM</td>
-                        <td class="SSTFaceJ"><span class="amount">1.820.00</span> <span class="currency">TL</span></td>
-                    </tr>
-                </table>
-            </div>
-            <!-- END - TOTAL SUMMARY -->
-            <!-- BOTTOM BUTTONS -->
-            <a href="#" class="SSTAStyleA contShopping">
-                <img data-sixtythree="arrow-previous"> <span>ALIŞVERİŞE DEVAM ET</span>
-            </a>
-            <a href="Payment.html" class="SSTAStyleB btnCompleteOrder">SİPARİŞİ TAMAMLA</a>
-            <!-- END - BOTTOM BUTTONS -->
-
-
-            <div class="separator"></div>
-
-        </section>
     </main>
 
+    <div class="separator"></div>
 
 
     <footer>
         <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
-
         <div class="divLine one"></div>
-
         <div class="divContent first">
             <ul class="level1">
                 <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
@@ -591,21 +418,15 @@
                 <li><a href="#" class="aStyleA">E-SHOP</a></li>
                 <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
             </ul>
-
-
             <div class="divMailingContent">
                 <input type="text" placeholder="MAIL ZİNCİRİ" class="SSTInputTextA" />
                 <input type="image" src="Images/arrow-next.png" class="inputButton" />
             </div>
-
             <div class="separator"></div>
         </div>
-
         <div class="divLine two"></div>
-
         <div class="divContent">
             <span class="spanStyleA">© 2014 LIMART.COM</span>
-
             <ul class="level2">
                 <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
                 <li class="liSeparator"><span></span></li>
@@ -615,12 +436,9 @@
                 <li class="liSeparator"><span></span></li>
                 <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
             </ul>
-
             <div class="separator"></div>
         </div>
-
         <div class="divLine three"></div>
-
 
         <!-- social icons -->
         <ul class="socialsA">
@@ -640,8 +458,15 @@
     
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
+    <script type="text/javascript" src="Scripts/SSTLogin.js"></script>
     <!-- END - SCRIPTS -->
 
+    <!-- CREDIT CARD INPUT SCRIPTS -->
+    <script src="Scripts/CreditCard/modernizr.js"></script>
+    <script src="Scripts/CreditCard/jquery.inputmask.js"></script>
+    <script src="Scripts/CreditCard/jquery.inputmask.date.extensions.js"></script>
+    <script src="Scripts/CreditCard/app.js"></script>
+    <!-- END - CREDIT CARD INPUT SCRIPTS -->
 
 </body>
 </html>

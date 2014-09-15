@@ -13,7 +13,7 @@ var scrollTopVal = 0;
 var scrollDir;
 var lastScrollAmount = 0;
 var openOpener = null;
-
+var SSTInteraction = 'click'
 
 
 
@@ -58,6 +58,7 @@ $(document).ready(function () {
     setGlobals();
     smartphoneLandscape();
     miscImgLoader();
+    SSTSelectCustomizer();
 });
 
 function setGlobals() {
@@ -68,6 +69,7 @@ function setGlobals() {
     hH = $('header').height();
     isLandscape = (wW >= wH);
     isPortrait = (wW < wH);
+    SSTInteraction = (isMobile ? 'tap' : 'click');
 }
 
 function checkDevice() {
@@ -198,3 +200,190 @@ function setMainMargin() {
 $('.error').focus(function(){
     $(this).removeClass('error');
 })
+
+
+//SST SELECT CUSTOMIZER PLUG-IN TESTING
+    var SSTInteraction = (isMobile ? 'tap' : 'click');
+    var thereIsAnOpenSSTSelect = false;
+
+    function SSTSelectCustomizer() {
+
+        //For every element that has the class called SSTSelect
+        $('select.SSTSelect').each(function(index,element){
+
+            //firstly, we name our element by index number
+            var validIndex = index + 1
+
+            $(element).attr('data-SSTID','SSTSelect'+validIndex);
+            var elementID = $(element).attr('data-SSTID');
+            //
+
+            var selectHeading = $(element).find('option:first-child').html();
+            $(element).attr('data-SSTID','SSTSelect'+validIndex);
+            $(element).after('<ul class="SSTSelectMirror" data-SSTID="'+elementID+'">'+
+                                '<li>'+
+                                    '<a href="#">'+
+                                        selectHeading+
+                                    '</a>'+
+                                    '<ul></ul>'+
+                                '</li>'+
+                            '</ul>');
+
+
+
+            ///////hidden/////////////////////////////////////hidden////////////
+            //////////////////////////////////hidden////////////////////////////
+            ////////////hidden//////////////////////////////////////////////////
+            //$(element).hide();
+            ///////////////////////////////////////////////hidden///////////////
+            ///////hidden//////////////////////hidden///////////////////////////
+            /////////////////hidden//////////////////////////////////////hidden/
+
+
+
+
+            $('.SSTSelectMirror').css({
+                'overflow':'hidden',
+                'height': $('ul[data-SSTID="'+elementID+'"] a').height(),
+                'cursor':'pointer'
+            })
+
+
+            $(element).find('option').each(function(innerIndex,innerElement) {
+                innerElementContent = $(innerElement).html()
+                if (innerIndex > 0) {// if this is not the header
+                    $('ul[data-SSTID="'+elementID+'"] ul').append('<li>'+innerElementContent+'</li>');
+                    if ($(this).attr('selected')) {};
+                };
+            });
+
+        });
+
+            $('.SSTSelectMirror').each(function(){
+                $(this).addClass('off');
+            })
+
+            $(window).bind(SSTInteraction, function(){
+                $('.SSTSelectMirror.on').css({
+                    'height': $('.SSTSelectMirror.on').find('a').height()
+                });
+                $('.SSTSelectMirror.on').toggleClass('off on');
+            });
+
+            $('.SSTSelectMirror').bind(SSTInteraction, function(e){
+                e.stopPropagation();
+                if ($(this).hasClass('off')) {
+
+                    $(this).css({
+                        'height': $(this).find('li').height()
+                    });
+                    $(this).toggleClass('off on');
+
+                }
+                else {
+                    $(this).css({
+                        'height': $(this).find('a').height()
+                    });
+                    $(this).toggleClass('off on');
+                }
+            });
+
+            $(window).keydown(function(e){
+                if (e.which == 27 || e.which == 13) {
+                    if (e.which == 13) {
+                        var currentSSTID = $('.SSTSelectMirror.on ul li.hovered').parents('.SSTSelectMirror').attr('data-SSTID');
+                        var currentIndex = $('.SSTSelectMirror.on ul li.hovered').index() + 1;
+                        var currentVal = $('select[data-SSTID="'+currentSSTID+'"] option:nth-child('+(currentIndex+1)+')').val();
+                        var currentContent = $('.SSTSelectMirror.on ul li.hovered').html();
+                        $('select[data-SSTID=' + currentSSTID + ']').trigger('change');
+                        $('select[data-SSTID=' + currentSSTID + '] option').removeAttr('selected');
+                        $('select[data-SSTID=' + currentSSTID + '] option:nth-child(' + (currentIndex + 1 ) + ')').attr('selected','selected');
+
+                        $('.SSTSelectMirror.on ul li.hovered').parents('.SSTSelectMirror').find('a').html(currentContent);
+                    };
+                    if (e.which == 27) {
+                        setTimeout(function(){
+                            $('.SSTSelectMirror.on').css({
+                                'height': $('.SSTSelectMirror.on').find('a').height()
+                            });
+                            $('.SSTSelectMirror.on').toggleClass('off on');
+                        },50)
+                    };
+                };
+            });
+
+        $('.SSTSelectMirror ul li').bind(SSTInteraction, function(){
+            var currentSSTID = $(this).parents('.SSTSelectMirror').attr('data-SSTID');
+            var currentIndex = $(this).index() + 1;
+            var currentVal = $('select[data-SSTID="'+currentSSTID+'"] option:nth-child('+(currentIndex+1)+')').val();
+            var currentContent = $(this).html();
+            $('select[data-SSTID=' + currentSSTID + ']').trigger('change');
+            $('select[data-SSTID=' + currentSSTID + '] option').removeAttr('selected');
+            $('select[data-SSTID=' + currentSSTID + '] option:nth-child(' + (currentIndex + 1 ) + ')').attr('selected','selected');
+
+            $(this).parents('.SSTSelectMirror').find('a').html(currentContent);
+        });
+
+        $( '.SSTSelectMirror ul li' ).bind( 'mouseenter mouseleave', function() {
+          $( this ).toggleClass( 'hovered' );
+        });
+
+        $( '.SSTSelectMirror ul li' ).bind( 'mouseleave', function() {
+          $( this ).removeClass( 'hovered' );
+        });
+
+        $(window).keydown(function(e){
+            if (e.which == 40) {
+                e.preventDefault();
+                $(window).unbind('mouseenter');
+                var hoveredElementNow = $('.SSTSelectMirror.on ul li.hovered').index();
+
+                if (hoveredElementNow + 1 == $('.SSTSelectMirror.on ul li').length) {
+                    $('.SSTSelectMirror.on ul li').each(function(){
+                        $(this).removeClass('hovered');
+                    });
+                    $('.SSTSelectMirror.on ul li:first-child').addClass('hovered');
+                }
+                else {
+                    $('.SSTSelectMirror.on ul li').each(function(){
+                        $(this).removeClass('hovered');
+                    });
+                    $('.SSTSelectMirror.on ul li:nth-child('+(hoveredElementNow + 2)+')').addClass('hovered');
+                }
+
+
+            };
+        });
+
+        $(window).keydown(function(e){
+            if (e.which == 38) {
+                e.preventDefault();
+                $(window).unbind('mouseenter');
+                var hoveredElementNow = $('.SSTSelectMirror.on ul li.hovered').index();
+
+                if (hoveredElementNow == 0) {
+                    $('.SSTSelectMirror.on ul li').each(function(){
+                        $(this).removeClass('hovered');
+                    });
+                    $('.SSTSelectMirror.on ul li:last-child').addClass('hovered');
+                }
+                else {
+                    $('.SSTSelectMirror.on ul li').each(function(){
+                        $(this).removeClass('hovered');
+                    });
+                    $('.SSTSelectMirror.on ul li:nth-child('+(hoveredElementNow)+')').addClass('hovered');
+                }
+            };
+        });
+
+
+        $('.SSTSelect').change(function(){
+            var elementID = $(this).attr('data-SSTID');
+            var currentContent = $(this).val();
+            $('ul.SSTSelectMirror[data-SSTID="'+elementID+'"]').find('a').html(currentContent);
+        });
+
+
+    }
+//
+

@@ -27,6 +27,9 @@ p {
     font-weight: 400;
     line-height: 18px;
 }
+ul {
+    line-height: 18px;
+}
 
 a:link,
 a:visited {

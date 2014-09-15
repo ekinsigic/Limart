@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
     
-    <link rel="apple-touch-startup-image" href="/s01.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="shortcut icon" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
     <link rel="shortcut icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
@@ -14,6 +13,7 @@
     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+
     <link rel="stylesheet" type="text/css" href="Styles/Reset.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Fonts.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Common.css" />
@@ -254,7 +254,7 @@
                             <img data-sixtythree="arrow-next"> <span>SEPETİ GÖRÜNTÜLE</span>
                         </a>
 
-                        <input type="submit" class="buttonB btnCompleteOrder" value="ÖDEME YAP">
+                        <a href="#" class="SSTAStyleL basketOpenerPayButton">ÖDEME YAP</a>
                         <!-- END - BOTTOM BUTTONS -->
 
                         <div class="separator"></div>
@@ -374,7 +374,7 @@
 
                 <div class="divMemberD">
                     <input type="submit" class="buttonB inputBtn" value="KAYIT OL">
-                    <label for="membershipAgreement" class="labelA"><input type="checkbox" id="membershipAgreement" /><a href="#">Üyelik sözleşmesini okudum.</a></label>
+                    <label for="membershipAgreement" class="labelA"><input type="checkbox" id="membershipAgreement" /><a href="javascript:SSTPopUp('#membershipAgreement');">Üyelik sözleşmesini okudum.</a></label>
 
                     <div class="separator"></div>
                 </div>
@@ -431,13 +431,143 @@
         <div class="separator"></div>
     </footer>
 
+<div class="SSTPopUpOverlay"></div>
+<div class="popUpContent">   
+    <div class="layoutA" id="membershipAgreement">
+        <h1 class="faceD">ÜYELİK SÖZLEŞMESİ</h1>
 
+        <h2 class="faceX">Sözleşmenin onaylanması</h2>
+        <p class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş. Sanal Mağazasından (<a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>) alışveriş yapmak istiyorsanız önce kayıt formunu doldurmak suretiyle üye olmak ve kullanıcı şifresi edinmek gerekmektedir. Siteye üye olmanız, <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> üyelik sözleşmesi hükümlerine uymayı kabul ve taahhüt etmeniz demektir. Kullanıcı, üyelik işlemlerini başarıyla tamamladığı ve bu sistemi kullanarak herhangi bir hizmet aldığı ya da sipariş verdiği andan itibaren <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> kullanım sözleşmesine uymayı taahhüt etmiş kabul edilir. </p>
+
+        <p class="SSTFaceJJ">Eğer bu sayfada belirtilen şartların herhangi biri sizin için uygun değilse lütfen <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> sitesini kullanmayınız . </p>
+
+        <p class="SSTFaceJJ">Desa aşağıda belirtilen genel ve özel koşulları dilediği zaman değiştirme hakkını saklı tutmaktadır. <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>'yi her ziyaret ettiğinizde bu sayfayı da tekrar ziyaret etmeniz değişebilecek üyelik ve kullanım şartlarını görmeniz açısından önemlidir. </p>
+
+        <h2 class="faceX">Hizmetlerin Tanımı</h2>
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> sözleşmeyi onaylayan üyelerine internet ortamında değişik iletişim servisleri (oylama, hediye paketi siparişi verebilme, özel üretim siparişi alma, duyuru isteme, promosyon bildirisi isteme gibi) ve elektronik ortamda alışveriş imkanı sunar. </p>
+
+        <h2 class="faceX"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> Üyelik Sistemi</h2>
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> üyesi kendisinin belirleyeceği bir "şifre"ye sahip olur. </p>
+
+        <p class="SSTFaceJJ">Kayıt sırasında vermiş olduğunuz e-mail adresi üyeye özeldir ve tek üyelik oluşturma imkanına sahiptir; aynı e-mail adresi ile iki farklı üyeliğin olması mümkün değildir. "Şifre" sadece kullanıcı tarafından bilinir.</p> 
+
+        <p class="SSTFaceJJ">Kullanıcı dilediği zaman şifresini değiştirebilir. Şifre'nin seçimi ve korunması tamamı ile kullanıcının sorumluluğundadır. </p>
+
+        <p class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş., şifre kullanımından doğacak problemlerden kesinlikle sorumlu değildir. Kullanıcının <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> üyeliği gerektiren servislere bağlanabilmesi için kayıt sırasında girdiği e-mail adresi ve şifresini girmesi gereklidir. </p>
+
+        <h2 class="faceX"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> Kullanım ve Güvenlik Kuralları</h2>
+        <p class="SSTFaceJJ">Aşağıdaki yazılı durumlarda, site yönetimi üyenin site kullanımını engelleyebilir ve aşağıdaki girişimlere karışan kişi veya kişiler hakkında kanuni haklarını saklı tutar. Siteyi kullanan kişi ve/veya kişiler siteyi kullanarak aşağıdaki maddeleri kabul ve taahüt ederler.</p>
+        <ul class="typeA">
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> tarafından verilen servislerin ve yazılımların telif hakkının DESA Deri Sanayi ve Ticaret A.Ş.’ye ait olduğunu, bu yazılımları hiçbir şekilde çoğaltıp, dağıtmayacağını,</li>
+
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> servislerini kullandığında ileri sürdüğü şahsi fikir, düşünce, ifade, eklenen dosya ve gönderdiği kişisel bilgilerinin sorumluluğunun kendisine ait olduğunu ve DESA Deri Sanayi ve Ticaret A.Ş.’nin bu dosyalardan dolayı hiçbir şekilde sorumlu tutulamayacağını, bu gibi durumların ortaya çıkması sonucu DESA Deri Sanayi ve Ticaret A.Ş. tarafında oluşabilecek tüm zararların karşılanması zorunluluğunun kullanıcıya ait olacağını,</li>
+
+            <li class="SSTFaceJJ">Servislerinin kullanımı sırasında kaybolacak, ve/veya eksik alınacak, yanlış adrese iletilecek bilgi mesaj ve dosyalardan DESA Deri Sanayi ve Ticaret A.Ş.’nin sorumlu olmayacağını,</li>
+
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’de sunulan hizmetlere <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> tarafından belirlenen şekil dışında ve yetkisiz şekilde ulaşmamayı ve yazılımı hiçbir şekilde değiştirmemeyi, değiştirilmiş olduğu belli olanları kullanmamayı ve sözü geçen maddelere uymadığı durumlarda DESA Deri Sanayi ve Ticaret A.Ş.’nin uğrayabileceği tüm maddi ve manevi zararları ödemeyi,</li>
+
+            <li class="SSTFaceJJ">Üye verilerinin yetkisiz kişilerce okunmasından dolayı gelebilecek zararlardan ötürü DESA Deri Sanayi ve Ticaret A.Ş.'nin sorumlu olmayacağını,</li>
+
+            <li class="SSTFaceJJ">Tehdit edici, ahlak dışı, ırkçı, Türkiye Cumhuriyeti Yasalarına, Uluslararası anlaşmalara aykırı mesajlar göndermemeyi,</li>
+
+            <li class="SSTFaceJJ">Ortama eklenecek yazışma, konu başlıkları, rumuzları genel ahlak, görgü ve hukuk kurallarına uygun olmasını,</li>
+
+            <li class="SSTFaceJJ">Diğer kullanıcıların servisi kullanmasını etkileyecek şekilde davranmamayı,</li>
+
+            <li class="SSTFaceJJ">Kişi ya da kurumların isimlerini lekeleyici, çiğneyici, ahlaka aykırı, yakışıksız ya da kanun dışı materyal ya da bilgiler yayımlamamayı, basmamayı, dağıtmamayı, reklam yapmamayı, herhangi bir mal ya da hizmet satmamayı ya da satılmasına yönelik teklifte bulunmamayı,</li>
+
+            <li class="SSTFaceJJ">Anket, yarışma ya da zincir mektup faaliyetlerinde bulunmamayı,</li>
+
+            <li class="SSTFaceJJ">Diğer kullanıcıların bilgisayarındaki bilgilere ya da yazılıma zarar verecek bilgi veya programlar göndermemeyi,</li>
+
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> servislerini kullanarak elde edilen herhangi bir kayıt veya elde edilmiş malzemelerin tamamı ile kullanıcının rızası dahilinde olduğunu, kullanıcı bilgisayarında yaratacağı arızalar, bilgi kaybı ve diğer kayıpların sorumluluğunun tamamı ile kendisine ait olduğunu, servisin kullanımından dolayı uğrayabileceği zararlardan dolayı DESA Deri Sanayi ve Ticaret A.Ş.’den tazminat talep etmemeyi,</li>
+
+            <li class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş.’den izin almadan <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> servislerini ticari ya da reklam amacıyla kullanmamayı,</li>
+
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’nin, dilediği zaman veya sürekli olarak tüm sistemi izleyebileceğini, kurallara aykırı davrandığı takdirde DESA Deri Sanayi ve Ticaret A.Ş.’nin gerekli müdahalelerde bulunma ve üyeyi servis dışına çıkarma ve üyeliğe son verme hakkına sahip olduğunu,</li>
+
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’nin, kendi sistemini ticari amaçla kullanabileceğini,</li>
+
+            <li class="SSTFaceJJ">Kanunlara göre postalanması yasak olan bilgileri postalamamayı ve zincir posta(chain mail), yazılım virüsü (vb.) gibi gönderilme yetkisi olmayan postaları dağıtmamayı,</li>
+
+            <li class="SSTFaceJJ">Başkalarına ait olan kişisel bilgileri kayıt etmemeyi, kötüye kullanmamayı,</li>
+
+            <li class="SSTFaceJJ">Üye kayıt sırasında belirtmiş olduğu e-mail adresi ile yapacağı her türlü işlemden bizzat kendisinin sorumlu olduğunu,</li>
+
+            <li class="SSTFaceJJ">Müşteri sistem üzerindeki satın alma işlemini geçerli bir kredi kartı aracılığı ile yapmak zorunda olduğunu, kredi kartı geçerliliği onaylanmadığında sistemden alışveriş yapamayacağını,</li>
+
+            <li class="SSTFaceJJ">Müşteriler mal teslimi sırasında istenildiği takdirde geçerli bir kimlik kartı göstermek, ilgili kimlik bilgilerinin kaydedilmesine izin vermek ve ilgili yerlere imza atmak zorunda olduklarını, imza atmadıkları takdirde ürünün kendilerine teslim edilmeyebileceğini, ürün bir başka şahıs tarafından teslim alınıyor ise ürünü teslim alan kişi, DESA Deri Sanayi ve Ticaret A.Ş. adına ürünü kendisine teslim eden kişinin "ürünü kendisine gönderen kişiyi tanıdığına dair" ibraz edebileceği belgeyi imzalamak zorunda olduğunu, belge imzalanmadığı takdirde ürünün teslim edilmeyebileceğini ve dolayısı ile siparişin gerçekleşmemiş sayılacağını.</li>
+
+            <li class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’de sunulan görsel, yazısal içerik kişisel kullanım içindir. <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>'nin içeriğinde yer alan bütün yazıların, grafiklerin, fotoğrafların, videoların, animasyonların seslerin her hakkı saklıdır. Aksi belirtilmedikçe ticari ya da kişisel amaçlarla izinsiz ve kaynak göstermeden kullanılamaz. Bu sitede yer alan herhangi bir unsuru diğer bir mecrada veya internet sitesinde yayınlamak veya <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>'un izni olmadan link vermek yasaktır. Bu sayfaların tasarımında ve veri tabanı oluşturulmasında kullanılan ve her hakkı <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>'ye ait olan yazılımın kopyalanması veya kullanılması kesinlikle yasaktır.</li>
+        </ul>
+
+        <h2 class="faceX"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’nin Hak ve Yükümlülükleri</h2>
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> herhangi bir zamanda sistemin çalışmasını geçici bir süre askıya alabilir veya tamamen durdurabilir. Sistemin geçici bir süre askıya alınması veya tamamen durdurulmasından dolayı DESA Deri Sanayi ve Ticaret A.Ş.’nin <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> üyelerine veya üçüncü şahıslara karşı hiçbir sorumluluğu olmayacaktır. </p>
+
+        <p class="SSTFaceJJ">Kullanıcı tarafından kayıt sırasında girilen e-mail adresi ve şifresi <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> tarafından müşteriye sunulacak başvuru alanlarının doldurulmasından sonra görüntülenecek ve onaylanacaktır. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> tüm alanları doldurmuş olan müşterilerinin ya da şifresi olduğu halde bağlanmakta olan müşterilerin yeni bir şifreye sahip olmalarını ya da şifrelerini kullanmalarını keyfiyen süresiz olarak engelleyebilir. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> servislerinin zamanında, güvenli ve hatasız olarak sunulacağını, servis kullanımından elde edilen sonuçların doğru ve güvenilir olduğunu, servis kalitesinin beklentilere cevap vereceğini taahhüt etmez. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> kendi ürettiği ve/veya dışardan satın aldığı bilgi, belge, yazılım, tasarım, grafik vb. eserlerin mülkiyet ve mülkiyetten doğan telif haklarına sahiptir. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’nin satışları, kendi stokları ile sınırlıdır. <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> stoğu bulunmayan ürünlerin teslimatını yapmayabilir, siparişi iptal ederek, sipariş tutarını müşteri hesabına iade edebilir. Ürünlerin <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’de teşhir edilmesiyle DESA Deri Sanayi ve Ticaret A.Ş. ürünlerin stokta bulunmasını taahhüt etmez. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> üyelerinin ürettiği ve yayınlanmak üzere kendi iradesiyle sisteme yüklediği belge, yazılım, tasarım, grafik vb. eserlerin yayınlanma ve/veya site içerisinde DESA Deri Sanayi ve Ticaret A.Ş. tarafından uygun görülecek başka bir adrese taşıma haklarına sahiptir. Yayınlanan bu bilgilerin başka kullanıcılar tarafından kopyalanması ve/veya yayınlanması ihtimal dahilindedir. Bu hallerde üye, DESA Deri Sanayi ve Ticaret A.Ş.’den hiçbir telif ücreti talep etmeyecektir. </p>
+
+        <p class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş. üyenin ilettiği kişisel bilgilerin içerik sağlayıcılar ve web servisleri kullanıcılarına gerekli iletişim, tanıtım, mal teslimi, reklam vb. ticari amaçlar için kullandırılması konusunda tam yetkilidir. </p>
+
+        <p class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş. müşterinin onayı olmadan <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> bünyesinde ürünü bulunan şirketlerin, müşteriye yönelik her türlü reklam ve promosyon faaliyetlerinde bulunmasını, <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> bünyesinde bulunan müşteri bilgilerini kullanarak gerçekleştirilmesini destekleyebilir ya da bu faaliyetleri bizzat yürütebilir. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’de satışa sunulan ürünlerin fiyat ve ürün özellik bilgilerini değiştirme yükümlülüğü DESA Deri Sanayi ve Ticaret A.Ş.' ye aittir. Fiyat ve ürün özellik bilgilerinde hata oluştuğu takdirde DESA Deri Sanayi ve Ticaret A.Ş. hatayı düzeltecek şekilde ürün teslimatı yapabilir veya siparişi iptal ederek, sipariş tutarını müşteri hesabına iade edebilir. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>, sitesinden üyenin başka web-sitelerine geçişini sağlayabilir. Bu taktirde üye geçiş yapacağı sitelerin içeriğinden DESA Deri Sanayi ve Ticaret A.Ş.’nin sorumlu olmadığını kabul eder. </p>
+
+        <p class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş., ileride doğacak teknik zaruretler ve mevzuata uyum amacıyla işbu sözleşmenin uygulamasında değişiklikler yapabileceği gibi mevcut maddelerini değiştirebilir veya yeni maddeler ilave edebilir. <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> üyelik gerektirmeyen servisleri zaman içerisinde üyelik gerektiren bir duruma dönüştürülebilir. <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> sitesi ilave servisler açabilir, bazı servislerini kısmen veya tamamen değiştirebilir, veya ücretli hale dönüştürebilir. </p>
+
+        <h2 class="faceX">Kisisel ve Ticari olmayan kullanım sınırlaması</h2>
+        <p class="SSTFaceJJ">Müşteriler yapılan tüm alışverişlerin kişisel kullanım amaçlı olduğunu, alışverişin tekrar satış amaçlı olmadığını kabul eder. </p>
+
+        <h2 class="faceX">Vergilendirme</h2>
+        <p class="SSTFaceJJ">Bu sözleşme kapsamı dışında gerçekleşecek tüm kanuni değişikliklerden kaynaklanan işlemler DESA Deri Sanayi ve Ticaret A.Ş. sorumluluğu dışındadır ve aynen sözleşmeye yansıtılır. </p>
+
+        <h2 class="faceX">Ürün Teslimatı</h2>
+        <p class="SSTFaceJJ">Kargo ile gerçekleştirilen ürün teslimatı sürecinde müşteri sistemde belirtilen adreste bulunamaz ise müşteriye kargo elemanı tarafından ziyaret notu bırakılır. Adresine ihbar notu bırakılan müşterinin 3 gün içerisinde irtibata geçmemesi durumunda kargo göndericiye iade edilir. </p>
+
+        <h2 class="faceX">Ürün İadesi</h2>
+        <p class="SSTFaceJJ">Ürün iadesi ile ilgili olarak tüketici kanunu maddeleri geçerlidir. </p>
+
+        <h2 class="faceX"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> kayıtlarının geçerliliği</h2>
+        <p class="SSTFaceJJ">Üye bu sözleşmeden doğabilecek itilaflarda <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’nin defter kayıtlarıyla, mikrofilm, mikrofiş, ve bilgisayar kayıtlarının HUMK 287. Madde anlamında muteber, bağlayıcı, kesin ve münhasır delil teşkil edeceğini ve bu maddenin delil sözleşmesi niteliğinde olduğunu, belirten <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> kayıtlarına her türlü itiraz ve bunların usulüne uygun tutulduğu hususunda yemin teklif hakkından peşinen feragat ettiğini kabul, beyan ve taahhüt eder. </p>
+
+        <h2 class="faceX">Uygulanacak Hükümler</h2>
+        <p class="SSTFaceJJ">Bu sözleşmeyle ilgili olarak çıkabilecek ihtilaflarda öncelikle bu sözleşmedeki hükümler, hüküm bulunmayan hallerde ise Türk Kanunları (BK, TTK, HUMK, MK vesair) uygulanacaktır. </p>
+
+        <h2 class="faceX">Yetkili Mahkeme ve İcra Daireleri</h2>
+        <p class="SSTFaceJJ">İşbu sözleşmenin uygulanmasından doğabilecek her türlü uyuşmazlıkların çözümünde İstanbul Mahkemeleri ile İcra Müdürlükleri yetkili olacaktır.</p> 
+
+        <h2 class="faceX">Yürürlük</h2>
+        <p class="SSTFaceJJ">Kullanıcı kayıt formunu doldurduktan, sistemi kullanarak hizmet aldıktan ya da sipariş verdikten itibaren bu sözleşme taraflar arasında süresiz olarak yürürlüğe girer. </p>
+
+        <h2 class="faceX">Fesih</h2>
+        <p class="SSTFaceJJ">DESA Deri Sanayi ve Ticaret A.Ş. dilediği zaman bu sözleşmeyi sona erdirebilir. </p>
+
+        <h2 class="faceX">Tebligat adresleri</h2>
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> sitesi üyelerinden peşinen posta adreslerini istememektedir. Ancak üyenin <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’ye bildirdiği eposta adresi, bu sözleşme ile ilgili olarak yapılacak her türlü bildirim için yasal adresin isteneceği elektronik posta olarak kabul edilir. </p>
+
+        <p class="SSTFaceJJ">Taraflar, mevcut epostalarındaki değişiklikleri yazılı olarak diğer tarafa 3 (üç) gün içinde bildirmedikçe, eski epostalara yapılacak isteklerin geçerli olacağını ve kendilerine yapılmış sayılacağını kabul ederler. </p>
+
+        <p class="SSTFaceJJ"><a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a>’nin üyenin kayıtlı eposta adresini kullanarak yapacağı her türlü bildirim e-postanın <a class="SSTAStyleM" href=="desa.com.tr"><span>desa.com.tr</span></a> tarafından yollanmasından 1 (bir) gün sonra üyeye ulaştığı kabul edilecektir. ÜYE, bu katılım sözleşmesinde yer alan maddelerin tümünü okuduğunu, anladığını, kabul ettiğini ve kendisiyle ilgili olarak verdiği bilgilerin doğruluğunu onayladığını beyan, kabul ve taahhüt eder.</p>
+        </div>
+</div>
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
     
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
+    <script type="text/javascript" src="Scripts/SSTPopUp.js"></script>
     <script type="text/javascript" src="Scripts/SSTLogin.js"></script>
     <!-- END - SCRIPTS -->
 

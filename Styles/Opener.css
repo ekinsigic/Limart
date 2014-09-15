@@ -235,8 +235,8 @@
 
 .SSTOpener .divBasketContent .divTotal .divPaymentButton{
     float:right;
-    margin:40px 45px 0 0;
-    width:575px;
+    margin: 40px 0px 0 0;
+    width: 675px;
 }
 
 .SSTOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
@@ -250,9 +250,9 @@
 }
 
 
-
-
-
+.SSTOpener .divBasketContent .basketOpenerPayButton {
+float: right;
+}
 
 
 
@@ -509,7 +509,7 @@
     }
 
     .SSTOpener .divBasketContent .divTotal .divPaymentButton .contShopping{
-        float:none;
+        float:left;
         margin:5px auto 20px auto;
     }
 

@@ -320,6 +320,9 @@
         $('nav #userTrigger a.goToLogin').addClass('dont');
         $('.divUserOpener').css('display','none');
         enableDisableUserButton();
+        $('.divUserIcon.triggerDiv a').click(function(e){
+            e.stopPropagation();
+        });
         $('.divUserOpener').css('display','');
         carryUserNav();
         $(window).resize(function(){

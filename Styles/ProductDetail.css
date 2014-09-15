@@ -126,6 +126,10 @@
     transition-delay: 0.3s;
 }
 
+.artworkImage .artworkImageUtilities .shareArtwork .shareArtworkContents a:hover {
+    opacity:0.5;
+}
+
 .topFullWidth img:first-child{
 }
 

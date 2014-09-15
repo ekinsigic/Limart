@@ -3,6 +3,7 @@ var isScroll = false;
 $(document).ready(function () {
 stylelisting();
 filterSticky();
+SSTPopUp();
 if (!isMobile) {
 	listLoad();
 }

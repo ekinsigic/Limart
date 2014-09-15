@@ -6,6 +6,7 @@ $(document).ready(function(){
 	openCloseElements('#cbDifferentPerson','.divAnotherRecipientContent');
 	openCloseElements('#cbGiftNote','.divGiftNoteTextareaWrapper');
 	radioActions();
+	SSTPopUp('#membershipAgreement');
 
 	$('input[name="group1"]').each(function(){
 		$(this).change(function(){

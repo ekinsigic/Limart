@@ -116,7 +116,10 @@
 
                 #basketDetails .divItem .divDescription .divQuantity div.content .aQuantity{
                     display:inline-block;
-                }
+                
+                    padding: 7px;
+                    margin: 0px -7px;
+}
 
                 #basketDetails .divItem .divDescription .divQuantity div.content .spanQuantity{
                     display:inline-block;
@@ -298,7 +301,7 @@
                 #basketDetails .divItem .divDescription .divQuantity div.content {
                     width: auto;
                     min-width: initial;
-                    padding-top: 23px;
+                    padding-top: 16px;
                     padding-left: 0;
                 }
                

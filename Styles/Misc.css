@@ -711,6 +711,13 @@ img[data-sixtythree="icon-order-completed"]{
     .divLineB {
         height: 50px;
     }
+
+    .SSTPopUpOverlay .closeWindow {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -721,6 +728,13 @@ img[data-sixtythree="icon-order-completed"]{
 
     header img[data-sixtythree^="icon-social-"]:not(.white) {
         opacity: 1;
+    }
+
+    .SSTPopUpOverlay .closeWindow {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
     }
 }
 

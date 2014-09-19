@@ -273,13 +273,15 @@ nav .divBasketIcon .imgBasket {
     }
 
     .divMenuContent .socialsA{
-        width:145px;
+        width: 100%;
         margin-top:20px !important;
     }
 
     .divMenuContent .socialsA li{
-        margin-left:5px;
-    }
+        margin-left: 0px;
+    
+        padding: 1px;
+}
 
     .divMenuContent .socialsA li img{
         width:30px;

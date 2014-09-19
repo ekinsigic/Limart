@@ -67,6 +67,12 @@ img[data-sixtythree="icon-search"] {
     width: 12px;
     height: 12px;
 }
+
+img[data-sixtythree="icon-close"] {
+    width: 13px;
+    height: 13px;
+}
+
 img[data-sixtythree="icon-user"] {
     width: 12px;
     height: 12px;
@@ -399,6 +405,12 @@ img[data-sixtythree="icon-order-completed"]{
     height: 1px;
     background-color: #4b4b4b;
 }
+
+.divLineI {
+    width: 30px;
+    height: 6px;
+    background-color: #dd354b;
+}
 /* END - THIN DESIGN LINES */
 
 
@@ -486,13 +498,16 @@ img[data-sixtythree="icon-order-completed"]{
 
 .socialsA {
     margin: 50px auto 0 auto !important;
-    width: 195px;
+    width: 100%;
+    text-align: center;
 }
 
     .socialsA li {
-        float: left;
-        margin-left: 10px;
-    }
+        margin: 0 auto;
+    
+        display: inline-block;
+        padding: 2px;
+}
 
         .socialsA li a:link,
         .socialsA li a:visited {

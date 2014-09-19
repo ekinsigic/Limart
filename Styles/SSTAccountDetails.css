@@ -159,6 +159,7 @@
     float: right;
     margin-top: 60px;
     width: 130px;
+    margin-left: 145px;
 }
 
 
@@ -191,9 +192,7 @@
 /* address action styles */
 
 #accountDetails .divDetail.address .wholeAddressesWrapper .deliveryAddressesWrapper,
-#accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper,
-#accountDetails .divDetail.address .wholeAddressesWrapper .divAddressOptionsWrapper,
-#accountDetails .divDetail.address .wholeAddressesWrapper .divNewAddressWrapper {
+#accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper{
     display: none;
 }
 
@@ -235,7 +234,7 @@
 #accountDetails .divDetail.address .aNewAddress {
     display: inline-block;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-left: 0px;
     width: 210px;
     text-decoration: underline;
 }
@@ -265,7 +264,8 @@
 }
 
 #accountDetails .divDetail.address label {
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-left: 5px;
 }
 
 #accountDetails .divDetail.address .divAddressOption h4.name {
@@ -301,14 +301,14 @@
 
 /* YENİ ADRES EKLEME FORMU */
 #accountDetails .divNewAddressWrapper {
-    display: block;
-    float: left;
+    display: none;
+    margin-top: 20px;
 }
 
     #accountDetails .divNewAddressWrapper input[type="text"],
     #accountDetails .divNewAddressWrapper select {
         float: left;
-        margin-top: 10px;
+        margin-top: 0px;
         width: calc(50% - 5px);
     }
 
@@ -793,12 +793,23 @@
 
 /* end - discount */
 
+.personalOrCorporate {
+    float:left;
+    width:100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.divPersonalOptionInput, .divCorporateOptionInput {
+    float:left;
+    width:100%;
+    display: none;
+}
 
 
-
-
-
-
+.saveAddingNewInvoiceAddress {
+    float: right;
+}
 
 
 
@@ -806,8 +817,8 @@
 
 
 @media all and (max-width: 700px) {
-    #divMainWrapper {
-        overflow-x: hidden;
+    div[data-role="page"] {
+        overflow-x: hidden;/*Smartphone'da yatay scrollbar'ın çıkmaması için JQM'nin hali hazırda oluşturmuş olduğu div'e sesleniyoruz.*/
     }
 
     #menuActiveOverlay {

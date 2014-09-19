@@ -428,9 +428,77 @@ a:active {
     letter-spacing:0.060em;
 }
 
+.faceGGG{
+    color:#fff;
+    font-size:52px;
+    letter-spacing: 14px;
+    font-weight:900;
+}
 
+.faceHHH{
+    color:#000;
+    font-size:22px;
+    font-weight: 500;
+    letter-spacing: 6.6px;
+    border-top: 2px solid black;
+}
 
+.faceIII {
+    color: #fff;
+    opacity: 0.35;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
 
+.faceJJJ {
+    color: #dd354b;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    line-height: 50px;
+    text-decoration: underline;
+}
+
+.faceKKK {
+    opacity: 0.75;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 25px;
+}
+
+.faceLLL {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.faceMMM {
+    font-size: 21px;
+    font-weight: 300;
+    letter-spacing: 1.9px;
+    line-height: 35px;
+}
+
+.faceNNN {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 9px;
+    line-height: 35px;
+    }
+
+.faceOOO {
+    color: black;
+    opacity: 0.5;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1.9px;
+    line-height: 21px;
+    }
 
 
 
@@ -677,12 +745,62 @@ a.aStyleI {
 
 
 
+.aStyleL{
+    display: inline-block;
+    width: auto;
+    height: 43px;
+    margin-top: 1px;
+    border: 3px solid black;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    line-height: 39px;
+    padding-left: 35px;
+    color: black;
+    padding-right: 35px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+    .aStyleL:hover { 
+        color: #fff;
+        background: #000;
+        border: 3px solid #000;
+    }
 
 
+.aStyleM{
+    display: inline-block;
+    width: auto;
+    height: 43px;
+    margin-top: 1px;
+    border: 3px solid #dd354b;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    line-height: 39px;
+    padding-left: 35px;
+    color: #dd354b;
+    padding-right: 35px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+    .aStyleM:hover { 
+        color: #fff;
+        background: #dd354b;
+        border: 3px solid #dd354b;
+    }
 
 
+a.aStyleN {
+    color: #000;
+    display: inline !important;
+}
 
-
+a.aStyleN:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -856,7 +974,55 @@ a.aStyleI {
     .spanStyleF{
         font-size:13px;
     }
+    
+    .faceGGG {
+        line-height: 31px;
+    
+        font-size: 22px; font-weight: 700; letter-spacing: 5px;
+}
+    
+    .faceHHH {
+        font-size:19px;
+        line-height: 22px;
+    
+        font-size: 19px; 
+        letter-spacing: 5px;
+}
+    
+    .faceIII {
+        display:none;
+    }
+   .faceJJJ {
+       font-size:22px;
+       line-height:30px;
+       font-size: 19px; 
+       letter-spacing: 3px;
+}
    
+   .faceKKK {
+       letter-spacing:2px;
+       color: #a8a8ac; font-size: 12px; font-weight: 400; 
+       letter-spacing: 1.40px;
+       line-height: 22px;
+}
+
+    .faceLLL {
+        color: #000000;
+        line-height: 20px;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+    
+    .faceNNN {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    a.aStyleN {
+        font-weight: 600;
+        display: inline !important;
+    }
 }
 
 @media all and (min-width: 701px) and (max-width: 1018px) {
@@ -896,6 +1062,10 @@ a.aStyleI {
     .faceJJ {
         font-size: 15px;
         letter-spacing: 0.5px;
+    }
+
+    .faceGGG {
+        line-height: 70px;
     }
 }
 

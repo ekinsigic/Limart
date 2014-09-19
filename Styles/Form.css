@@ -94,23 +94,58 @@ textarea {
         }
 
 
-    input::-webkit-input-placeholder { /* WebKit browsers */
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit browsers */
         position: relative;
         top: 2px;
         color: #000;
     }
 
-    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
         color: #000;
     }
 
-    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
         color: #000;
     }
 
-    input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
         color: #000;
     }
+
+
+    textarea::-webkit-input-placeholder {
+        opacity: 0.2;
+    }
+
+    textarea:-moz-placeholder {
+        opacity: 0.2;
+    }
+
+    textarea::-moz-placeholder {
+        opacity: 0.2;
+    }
+
+    textarea:-ms-input-placeholder {
+        opacity: 0.2;
+    }
+
+
+    textarea:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
+
+    textarea:focus:-moz-placeholder {
+        opacity: 1;
+    }
+
+    textarea:focus::-moz-placeholder {
+        opacity: 1;
+    }
+
+    textarea:focus:-ms-input-placeholder {
+        opacity: 1;
+    }
+
 
 select {
     display: block;
@@ -400,6 +435,7 @@ button.buttonA {
 
 /*PURPLE BUTTON STYLE */
 input[type="button"].buttonB,
+input[type="submit"].buttonB,
 button.buttonB {
     color: #4b4d63;
 }
@@ -469,6 +505,7 @@ button.buttonD {
 
 
 input[type="button"].buttonE,
+input[type="submit"].buttonE,
 button.buttonE {
     padding: 10px 25px;
     color: #fff;

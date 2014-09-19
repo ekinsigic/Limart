@@ -94,21 +94,21 @@ textarea {
             border: 3px solid #404040 !important;
         }
 
-    input::-webkit-input-placeholder { /* WebKit browsers */
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit browsers */
         position: relative;
         top: 2px;
         color: #000;
     }
 
-    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
         color: #000;
     }
 
-    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
         color: #000;
     }
 
-    input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
         color: #000;
     }
 
@@ -343,7 +343,8 @@ input.SSTInputTextD:focus{
 
 
 input[type="button"].SSTButtonA,
-button.SSTButtonA {
+button.SSTButtonA,
+input[type="submit"].SSTButtonA {
     padding: 10px 25px;
     color: #fff;
     font-weight: 400;
@@ -352,7 +353,8 @@ button.SSTButtonA {
 }
 
     input[type="button"].SSTButtonA:hover,
-    button.SSTButtonA {
+    button.SSTButtonA,
+input[type="submit"].SSTButtonA:hover {
         color: #fff;
         background: #6f7182;
         border: 3px solid #6f7182;
@@ -363,7 +365,8 @@ button.SSTButtonA {
 
 
 input[type="button"].SSTButtonB,
-button.SSTButtonB {
+button.SSTButtonB,
+input[type="submit"].SSTButtonB {
     padding: 10px 25px;
     padding-top: 12px;
     color: #fff;
@@ -373,7 +376,8 @@ button.SSTButtonB {
 }
 
     input[type="button"].SSTButtonB:hover,
-    button.SSTButtonB {
+    button.SSTButtonB,
+input[type="submit"].SSTButtonB:hover {
         background: #e0495d;
         color: #fff;
         border: 3px solid #e0495d;

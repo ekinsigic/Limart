@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
 <head>
     <title>LIMART</title>
@@ -26,11 +26,12 @@
     <link rel="stylesheet" type="text/css" href="Styles/SSTForm.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountNavi.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountDetails.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/SSTStatic.css" />
+
 
 </head>
 <body>
+
 
     <section id="smartphoneLandscape">
         <div class="divPreloader"><img data-sixtythree="logotype-symbol" /></div>
@@ -338,170 +339,100 @@
         </div>
     </header>
 
-        <section id="menuActiveOverlay"></section>
 
 
-        <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-
-            <div class="separator"></div>
-        </a>
-
-
-        <main>
-
-            <section id="accountDetails">
-
-                <div id="breadcrumbs">
-                    <ul class="SSTFaceKK">
-                        <li class="mobileName"><span>JOHN DOE</span></li>
-                        <li>/</li>
-                        <li><a href="#" class="SSTAStyleI">HESABIM</a></li>
-                        <li>/</li>
-                        <li>ŞİFRE İŞLEMLERİM</li>
+    <main id="static">
+        <section id="pageHeader">
+            <h1 class="faceEE">BİLGİ TOPLUMU HİZMETLERİ</h1>
+        </section>
+        <div class="divContent">
+            <aside>
+                <div class="divAsideInner">
+                    <ul>
+                        <li>GİZLİLİK VE GÜVENLİK</li>
+                        <li>ÜYELİK SÖZLEŞMESİ</li>
+                        <li>MÜŞTERİ HİZMETLERİ</li>
+                        <li>BİLGİ TOPLUMU HİZMETLERİ</li>
                     </ul>
-                    <div class="separator"></div>
                 </div>
-
-
-                <aside>
-                    <ul class="level1">
-                        <li>
-                            <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
-                                <span class="SSTFaceHH">HESAP BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-profile" class="small one">
-                                <img data-sixtythree="icon-account-profile" class="white small one">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountProfile.html" class="SSTAStyleG aSubMenuItem">ÜYELİK BİLGİLERİM</a></li>
-                                <li><a href="AccountAddress.html" class="SSTAStyleG aSubMenuItem">ADRESLERİM</a></li>
-                                <li><a href="AccountPassword.html" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ŞİFRE İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">SİPARİŞ BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-orders" class="small two" />
-                                <img data-sixtythree="icon-account-orders" class="white small two">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountOrderHis.html" class="SSTAStyleG aSubMenuItem">SİPARİŞ İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a id="divDiscount" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">İNDİRİM KUPONLARIM</span>
-                                <img data-sixtythree="icon-account-coupons" class="small three" />
-                                <img data-sixtythree="icon-account-coupons" class="white small three" />
-                            </a>
-                            <ul class="level2">
-                                <li><a href="#" class="SSTAStyleG aSubMenuItem">KUPONLAR</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </aside>
-
-
-                <div class="divDetail password">
-
-                    <h1 class="SSTFaceII">Şifre İşlemleri</h1>
-                    <p class="SSTFaceJJ">
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    </p>
-
-                    <div class="separator line"></div>
-
-                    <div class="divLeft">
-                        <input type="text" class="SSTInputTextA input" placeholder="ESKİ ŞİFRENİZ" />
-                        <input type="text" class="SSTInputTextA input" placeholder="YENİ ŞİFRE" />
-                    </div>
-
-                    <div class="divRight">
-                        <input type="text" class="SSTInputTextA input" placeholder="YENİ ŞİFRE(TEKRAR)" />
-
-                    </div>
-
-                    <input type="submit" class="SSTButtonA button" value="KAYDET" />
-
-                </div>
-
-
-                <div class="separator"></div>
-            </section>
-
-        </main>
-
-
-
-
-
-        <footer>
-            <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
-
-            <div class="divLine one"></div>
-
-            <div class="divContent first">
-                <ul class="level1">
-                    <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
-                    <li><a href="#" class="aStyleA">NEDEN?</a></li>
-                    <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
-                    <li><a href="#" class="aStyleA">E-SHOP</a></li>
-                    <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
-                </ul>
-
-
-                <div class="divMailingContent">
-                    <input type="text" placeholder="MAIL ZİNCİRİ" class="stopInputTextA" />
-                    <input type="image" src="Images/SST-arrow-next.png" class="inputButton" />
-                </div>
-
-                <div class="separator"></div>
+            </aside>
+            <div class="rightColumn">
+                <h2 class="faceD">BİRBİRİNDEN DEĞERLİ SANATÇILAR</h2>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <h3>BİRBİRİNDEN DEĞERLİ SANATÇILAR</h3>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <h4>BİRBİRİNDEN DEĞERLİ SANATÇILAR</h4>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </div>
+        <div class="separator"></div>
+        </div>
 
-            <div class="divLine two"></div>
-
-            <div class="divContent">
-                <span class="spanStyleA">© 2014 LIMART.COM</span>
-
-                <ul class="level2">
-                    <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
-                </ul>
-
-                <div class="separator"></div>
-            </div>
-
-            <div class="divLine three"></div>
+    </main>
 
 
-            <!-- social icons -->
-            <ul class="socialsA">
-                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+
+    <footer>
+        <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
+
+        <div class="divLine one"></div>
+
+        <div class="divContent first">
+            <ul class="level1">
+                <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
+                <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
+                <li><a href="#" class="aStyleA">E-SHOP</a></li>
+                <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
             </ul>
-            <!-- end - social icons -->
+
+
+            <div class="divMailingContent">
+                <input type="text" placeholder="MAIL ZİNCİRİ" class="SSTInputTextA" />
+                <input type="image" src="Images/arrow-next.png" class="inputButton" />
+            </div>
+
             <div class="separator"></div>
-        </footer>
+        </div>
+
+        <div class="divLine two"></div>
+
+        <div class="divContent">
+            <span class="spanStyleA">© 2014 LIMART.COM</span>
+
+            <ul class="level2">
+                <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+            </ul>
+
+            <div class="separator"></div>
+        </div>
+
+        <div class="divLine three"></div>
+
+
+        <!-- social icons -->
+        <ul class="socialsA">
+            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+        </ul>
+        <!-- end - social icons -->
+        <div class="separator"></div>
+    </footer>
+
 
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
-    
     
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
-    <script type="text/javascript" src="Scripts/SSTAccountDetails.js"></script>
     <!-- END - SCRIPTS -->
 
 

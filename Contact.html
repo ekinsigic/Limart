@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
 <head>
     <title>LIMART</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-    
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="shortcut icon" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
     <link rel="shortcut icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
@@ -26,9 +25,18 @@
     <link rel="stylesheet" type="text/css" href="Styles/SSTForm.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountNavi.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountDetails.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Contact.css" />
+    <link rel="icon" href="images/favicon.ico">
 
+    <!-- SLIDER - STYLESHEET FILES -->
+    <link type="text/css" media="screen" href="SliderFiles/royalslider.css" rel="stylesheet" />
+    <link type="text/css" media="screen" href="SliderFiles/rs-minimal-white.css" rel="stylesheet">
+    <link type="text/css" media="screen" href="SliderFiles/rs-custom-nearby.css" rel="stylesheet">
+    <!-- END - STYLESHEET FILES -->
+
+    <!-- CONTENT SCROLLER FILES -->
+    
+    <!-- END - CONTENT SCROLLER FILES -->
 </head>
 <body>
 
@@ -338,172 +346,118 @@
         </div>
     </header>
 
-        <section id="menuActiveOverlay"></section>
 
 
-        <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-
-            <div class="separator"></div>
-        </a>
-
-
-        <main>
-
-            <section id="accountDetails">
-
-                <div id="breadcrumbs">
-                    <ul class="SSTFaceKK">
-                        <li class="mobileName"><span>JOHN DOE</span></li>
-                        <li>/</li>
-                        <li><a href="#" class="SSTAStyleI">HESABIM</a></li>
-                        <li>/</li>
-                        <li>ŞİFRE İŞLEMLERİM</li>
-                    </ul>
-                    <div class="separator"></div>
-                </div>
-
-
-                <aside>
-                    <ul class="level1">
-                        <li>
-                            <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
-                                <span class="SSTFaceHH">HESAP BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-profile" class="small one">
-                                <img data-sixtythree="icon-account-profile" class="white small one">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountProfile.html" class="SSTAStyleG aSubMenuItem">ÜYELİK BİLGİLERİM</a></li>
-                                <li><a href="AccountAddress.html" class="SSTAStyleG aSubMenuItem">ADRESLERİM</a></li>
-                                <li><a href="AccountPassword.html" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ŞİFRE İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">SİPARİŞ BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-orders" class="small two" />
-                                <img data-sixtythree="icon-account-orders" class="white small two">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountOrderHis.html" class="SSTAStyleG aSubMenuItem">SİPARİŞ İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a id="divDiscount" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">İNDİRİM KUPONLARIM</span>
-                                <img data-sixtythree="icon-account-coupons" class="small three" />
-                                <img data-sixtythree="icon-account-coupons" class="white small three" />
-                            </a>
-                            <ul class="level2">
-                                <li><a href="#" class="SSTAStyleG aSubMenuItem">KUPONLAR</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </aside>
-
-
-                <div class="divDetail password">
-
-                    <h1 class="SSTFaceII">Şifre İşlemleri</h1>
-                    <p class="SSTFaceJJ">
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+    <main id="contact">
+        <section id="pageHeader">
+            <h1 class="faceEE">İLETİŞİM BİLGİLERİ</h1>
+        </section>
+        <section id="entryText">
+            <p class="faceE">THE STANDART CHUNK OF LOREM IPSUM USED SINCE THE 1500'S IS REPRODUCED BELOW FOR THOSE INTERESTED.</p>
+        </section>
+        <section id="contactDetails">
+            <div class="divContent">
+                <div class="contactText">
+                    <h3 class="faceMMM">BİZE ULAŞIN</h3>
+    
+                    <p class="faceLLL">
+                        Defterdar Mah. Otakçılar Cad. No:78, FlatOfis Sera Court Kat:4 B-Blok No:67, 34050 Eyüp/İSTANBUL
                     </p>
 
-                    <div class="separator line"></div>
+                    <p class="faceLLL"><a class="faceLLL" href="tel:+902122801614">+90 212 280 16 14</a></p>
 
-                    <div class="divLeft">
-                        <input type="text" class="SSTInputTextA input" placeholder="ESKİ ŞİFRENİZ" />
-                        <input type="text" class="SSTInputTextA input" placeholder="YENİ ŞİFRE" />
-                    </div>
-
-                    <div class="divRight">
-                        <input type="text" class="SSTInputTextA input" placeholder="YENİ ŞİFRE(TEKRAR)" />
-
-                    </div>
-
-                    <input type="submit" class="SSTButtonA button" value="KAYDET" />
-
+                    <p class="faceLLL"><a class="faceLLL" href="mailto:INFO@LIMART.COM">info@limart.com</a></p>
                 </div>
-
-
-                <div class="separator"></div>
-            </section>
-
-        </main>
-
-
-
-
-
-        <footer>
-            <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
-
-            <div class="divLine one"></div>
-
-            <div class="divContent first">
-                <ul class="level1">
-                    <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
-                    <li><a href="#" class="aStyleA">NEDEN?</a></li>
-                    <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
-                    <li><a href="#" class="aStyleA">E-SHOP</a></li>
-                    <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
-                </ul>
-
-
-                <div class="divMailingContent">
-                    <input type="text" placeholder="MAIL ZİNCİRİ" class="stopInputTextA" />
-                    <input type="image" src="Images/SST-arrow-next.png" class="inputButton" />
+                <div class="contactForm">
+                    <input type="text" class="inputTextA" placeholder="AD, SOYAD">
+                    <input type="text" class="inputTextA" placeholder="MAIL ADRESİ">
+                    <input type="text" class="inputTextA" placeholder="KONU">
+                    <textarea class="textareaStyleA" placeholder="MESAJ"></textarea>
+                    <input type="submit"  class="buttonE" value="GÖNDER" />
                 </div>
-
-                <div class="separator"></div>
+                <img data-sixtythree="arrow-down" />
             </div>
+        </section>
 
-            <div class="divLine two"></div>
+        <section id="contactMap">
+            <div id="map-canvas"></div>
+            <a id="mapLink" href="https://www.google.com/maps/place/Cicekci+Taxi/@41.0078399,29.0344913,14z/data=!4m2!3m1!1s0x0:0x3018fb193ebaa7d1"></a>
+        </section>
 
-            <div class="divContent">
-                <span class="spanStyleA">© 2014 LIMART.COM</span>
-
-                <ul class="level2">
-                    <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
-                </ul>
-
-                <div class="separator"></div>
-            </div>
-
-            <div class="divLine three"></div>
+    </main>
 
 
-            <!-- social icons -->
-            <ul class="socialsA">
-                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+
+    <div class="separator"></div>
+
+
+
+    <footer>
+        <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
+
+        <div class="divLine one"></div>
+
+        <div class="divContent first">
+            <ul class="level1">
+                <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
+                <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
+                <li><a href="#" class="aStyleA">E-SHOP</a></li>
+                <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
             </ul>
-            <!-- end - social icons -->
+
+            <div class="divMailingContent">
+                <input type="text" placeholder="MAIL ZİNCİRİ" class="inputTextA" />
+                <input type="image" src="Images/SST-arrow-next.png" class="inputButton" />
+            </div>
+
             <div class="separator"></div>
-        </footer>
+        </div>
+
+        <div class="divLine two"></div>
+
+        <div class="divContent">
+            <span class="spanStyleA">© 2014 LIMART.COM</span>
+
+            <ul class="level2">
+                <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+            </ul>
+
+            <div class="separator"></div>
+        </div>
+
+        <div class="divLine three"></div>
+
+
+        <!-- social icons -->
+        <ul class="socialsA">
+            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+        </ul>
+        <!-- end - social icons -->
+        <div class="separator"></div>
+    </footer>
+
 
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
-    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5HShSVcU6V7AGCQKhULxuhiMle-7NovY&sensor=false"></script>
+    <script type="text/javascript" src="Scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="SliderFiles/jquery.royalslider.min.js"></script>
     
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
-    <script type="text/javascript" src="Scripts/SSTAccountDetails.js"></script>
+    <script type="text/javascript" src="Scripts/Contact.js"></script>
     <!-- END - SCRIPTS -->
-
 
 </body>
 </html>

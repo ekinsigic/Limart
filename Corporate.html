@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" data-enhance="false">
 <head>
     <title>LIMART</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-    
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="shortcut icon" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
     <link rel="shortcut icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
@@ -26,9 +25,18 @@
     <link rel="stylesheet" type="text/css" href="Styles/SSTForm.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Misc.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Opener.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountNavi.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/SSTAccountDetails.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Corporate.css" />
+    <link rel="icon" href="images/favicon.ico">
 
+    <!-- SLIDER - STYLESHEET FILES -->
+    <link type="text/css" media="screen" href="SliderFiles/royalslider.css" rel="stylesheet" />
+    <link type="text/css" media="screen" href="SliderFiles/rs-minimal-white.css" rel="stylesheet">
+    <link type="text/css" media="screen" href="SliderFiles/rs-custom-nearby.css" rel="stylesheet">
+    <!-- END - STYLESHEET FILES -->
+
+    <!-- CONTENT SCROLLER FILES -->
+    
+    <!-- END - CONTENT SCROLLER FILES -->
 </head>
 <body>
 
@@ -338,172 +346,143 @@
         </div>
     </header>
 
-        <section id="menuActiveOverlay"></section>
 
 
-        <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
-            <span class="spanDot"></span>
+    <main id="corporate">
+        <section id="mainEntry">
+            <div class="divBg"></div>
 
-            <div class="separator"></div>
-        </a>
+            <div class="divText">
 
-
-        <main>
-
-            <section id="accountDetails">
-
-                <div id="breadcrumbs">
-                    <ul class="SSTFaceKK">
-                        <li class="mobileName"><span>JOHN DOE</span></li>
-                        <li>/</li>
-                        <li><a href="#" class="SSTAStyleI">HESABIM</a></li>
-                        <li>/</li>
-                        <li>ŞİFRE İŞLEMLERİM</li>
-                    </ul>
-                    <div class="separator"></div>
-                </div>
-
-
-                <aside>
-                    <ul class="level1">
-                        <li>
-                            <a id="divAccountDetails" href="javascript:void(0);" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem active">
-                                <span class="SSTFaceHH">HESAP BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-profile" class="small one">
-                                <img data-sixtythree="icon-account-profile" class="white small one">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountProfile.html" class="SSTAStyleG aSubMenuItem">ÜYELİK BİLGİLERİM</a></li>
-                                <li><a href="AccountAddress.html" class="SSTAStyleG aSubMenuItem">ADRESLERİM</a></li>
-                                <li><a href="AccountPassword.html" class="SSTAStyleG aSubMenuItem"><img data-sixtythree="arrow-next-short-purple" class="arrow" />ŞİFRE İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a id="divOrder" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">SİPARİŞ BİLGİLERİ</span>
-                                <img data-sixtythree="icon-account-orders" class="small two" />
-                                <img data-sixtythree="icon-account-orders" class="white small two">
-                            </a>
-                            <ul class="level2">
-                                <li><a href="AccountOrderHis.html" class="SSTAStyleG aSubMenuItem">SİPARİŞ İŞLEMLERİ</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a id="divDiscount" href="#" onclick="openOrCloseAccountSubMenu(this);" class="aMenuItem">
-                                <span class="SSTFaceHH">İNDİRİM KUPONLARIM</span>
-                                <img data-sixtythree="icon-account-coupons" class="small three" />
-                                <img data-sixtythree="icon-account-coupons" class="white small three" />
-                            </a>
-                            <ul class="level2">
-                                <li><a href="#" class="SSTAStyleG aSubMenuItem">KUPONLAR</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </aside>
-
-
-                <div class="divDetail password">
-
-                    <h1 class="SSTFaceII">Şifre İşlemleri</h1>
-                    <p class="SSTFaceJJ">
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    </p>
-
-                    <div class="separator line"></div>
-
-                    <div class="divLeft">
-                        <input type="text" class="SSTInputTextA input" placeholder="ESKİ ŞİFRENİZ" />
-                        <input type="text" class="SSTInputTextA input" placeholder="YENİ ŞİFRE" />
-                    </div>
-
-                    <div class="divRight">
-                        <input type="text" class="SSTInputTextA input" placeholder="YENİ ŞİFRE(TEKRAR)" />
-
-                    </div>
-
-                    <input type="submit" class="SSTButtonA button" value="KAYDET" />
-
-                </div>
-
-
-                <div class="separator"></div>
-            </section>
-
-        </main>
-
-
-
-
-
-        <footer>
-            <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
-
-            <div class="divLine one"></div>
-
-            <div class="divContent first">
-                <ul class="level1">
-                    <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
-                    <li><a href="#" class="aStyleA">NEDEN?</a></li>
-                    <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
-                    <li><a href="#" class="aStyleA">E-SHOP</a></li>
-                    <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
-                </ul>
-
-
-                <div class="divMailingContent">
-                    <input type="text" placeholder="MAIL ZİNCİRİ" class="stopInputTextA" />
-                    <input type="image" src="Images/SST-arrow-next.png" class="inputButton" />
-                </div>
-
-                <div class="separator"></div>
+                <h1 class="faceGGG">SANAT HERKES İÇİNDİR</h1>
+                <h2 class="faceHHH">NEQUE PORRO QUISQUAM EST QUI QUIA</h2>
+                <p class="faceIII">LİMART POSTERLERİ TÜRK ÇAĞDAŞ SANATINI DUVARINDA GÖRMEK İSTEYENLER İÇİN SEVİLEN ESERLERİ TEK DUVARDAN DAHA ÇOK DUVARA TAŞIMA AMACI TAŞIR. SEVDİĞİNİZ RESMİ, BEĞENDİĞİNİZ GÖRSELİ SEÇİN, BİR DAHA ÜRETİLMEYECEK SINIRLI BASKILARDAN BİRİNE SAHİP OLUN.</p>
             </div>
 
-            <div class="divLine two"></div>
+            <img data-sixtythree="arrow-down" class="white arrowDown">
+        </section>
 
+
+
+        <section id="welcomeText">
             <div class="divContent">
-                <span class="spanStyleA">© 2014 LIMART.COM</span>
+                <img src="Files/Pages/Corporate/02.jpg" />
+                <div class="sectionHeading">
+                    <div class="divLineI"></div>
+                    <h3 class="faceJJJ">SINIRLI SAYIDA ÖZEL<br /> ÜRETİM POSTERLER</h3>
+                </div>
+                <p class="faceKKK">LİMART POSTERLERİNİN ÜRETİLİŞ AMACI SANATI HERKESE ULAŞTIRABİLMEKTİR. ORJİNAL ESERLER SADECE BELLİ SAYIDA KİŞİYE HİTAP EDERKEN, LİMART SINIRLI SAYIDA ÜRETİLMİŞ POSTERLERİ İLE O ESERLERİ TEKRAR HAYATA GEÇİREREK DAHA GENİŞ KİTLELERE TAŞIYOR.</p>
+            </div>
+            <div class="separator"></div>
+        </section>
+        <section id="fullWidthText">
+            <div class="divContent">
+                <p class="faceLLL">Anlaşmalı sanatçılarımızın seçkin eserleri, özel üretim bu posterler ile sanatseven, sanatla yaşamak isteyen herkesin o esere sahip olabileceği bu platformda yer almaktadır.</p>
 
-                <ul class="level2">
-                    <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
-                    <li class="liSeparator"><span></span></li>
-                    <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
-                </ul>
+                <p class="faceLLL">Seçkin çağdaş Türk sanatçıların eserlerinin fotoğrafı baskı kalitesine uygun şekilde çekildikten sonra özel Hahnemuhle kağıtlara basılmaktadır. Sanatçı ile ortak verilen poster ebatı ve kağıt tipi kararlarından sonra sınırlı sayıda üretilen bu posterlerden sadece belirtilen adetlerde üretilmektedir. Taşıdıkları özel seri numaralı hologramlar posterlerin orjinalliğinin ve sanatçıların telif haklarının korunduğunun garantisini vermektedir.</p>
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="asideColumnText">
+            <div class="divContent">
+                <div class="headingColumn">
+                    <h3 class="faceMMM">KOLEKSİYONERLER İÇİN<br />KATALOG HİZMETİ</h3>
+                    <a class="aStyleL">DETAYLI BİLGİ EDİNİN</a>
+                </div>
+                <div class="textColumn">
+                    <p class="faceLLL">Koleksiyonerler için tasarlanmış bu hizmet sanat eseri toplayan ve eserlerinin bir dökümünü bulundurmak isteyen koleksiyonerler için düşünülmüştür. Anlaşmalı fotoğrafçılarımız tarafından eserlerinizin görselleri alındıktan sonra yalın ve şık bir tasarımla katalog haline getirilecektir. Bilgi için <a class="aStyleN" href="mailto:infokoleksiyoner@limart.com">infokoleksiyoner@limart.com</a> adresine mail atmanız yeterlidir.</p>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="fullWidthParallax">
+            <div class="parallaxObject">
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="fareWellText">
+            <div class="divContent">
+                <h3 class="faceNNN">
+                    KENDİ KOLEKSİYONUNUZU OLUŞTURUN
+                </h3>
+                <p class="faceOOO">SANATSEVERLER İÇİN MODERN, SEÇKİN VE ÖZGÜN KOLEKSİYONUMUZDAN ESERLERİN POSTERLERİNE GÖZ ATIN.</p>
+                <img data-sixtythree="arrow-down" class="arrowDown">
+                <a href="#" class="aStyleM">KOLEKSİYONU KEŞFEDİN</a>
+            </div>
+        </section>
+    </main>
 
-                <div class="separator"></div>
+
+
+    <div class="separator"></div>
+
+
+
+    <footer>
+        <a href="#" class="aLogo"><img data-sixtythree="logotype" class="smallLogo" /></a>
+
+        <div class="divLine one"></div>
+
+        <div class="divContent first">
+            <ul class="level1">
+                <li><a href="#" class="aStyleA" style="margin-left:0;">BİZ KİMİZ?</a></li>
+                <li><a href="#" class="aStyleA">NEDEN?</a></li>
+                <li><a href="#" class="aStyleA">SANATÇILAR</a></li>
+                <li><a href="#" class="aStyleA">E-SHOP</a></li>
+                <li><a href="#" class="aStyleA">İLETİŞİM</a></li>
+            </ul>
+
+            <div class="divMailingContent">
+                <input type="text" placeholder="MAIL ZİNCİRİ" class="inputTextA" />
+                <input type="image" src="Images/SST-arrow-next.png" class="inputButton" />
             </div>
 
-            <div class="divLine three"></div>
-
-
-            <!-- social icons -->
-            <ul class="socialsA">
-                <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
-                <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
-            </ul>
-            <!-- end - social icons -->
             <div class="separator"></div>
-        </footer>
+        </div>
+
+        <div class="divLine two"></div>
+
+        <div class="divContent">
+            <span class="spanStyleA">© 2014 LIMART.COM</span>
+
+            <ul class="level2">
+                <li><a href="#" class="aStyleB">GİZLİLİK VE GÜVENLİK</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">ÜYELİK SÖZLEŞMESİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">MÜŞTERİ HİZMETLERİ</a></li>
+                <li class="liSeparator"><span></span></li>
+                <li><a href="#" class="aStyleB">BİLGİ TOPLUMU HİZMETLERİ</a></li>
+            </ul>
+
+            <div class="separator"></div>
+        </div>
+
+        <div class="divLine three"></div>
+
+
+        <!-- social icons -->
+        <ul class="socialsA">
+            <li><a href="#" style="margin-left:0;"><img data-sixtythree="icon-social-facebook"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-twitter"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-pinterest"></a></li>
+            <li><a href="#"><img data-sixtythree="icon-social-instagram" class="miscImg"></a></li>
+        </ul>
+        <!-- end - social icons -->
+        <div class="separator"></div>
+    </footer>
+
 
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="Scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="Scripts/masonry.pkgd.min.js"></script>
-    
+    <script type="text/javascript" src="Scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="SliderFiles/jquery.royalslider.min.js"></script>
     
     <script type="text/javascript" src="Scripts/Common.js"></script>
     <script type="text/javascript" src="Scripts/Navi.js"></script>
-    <script type="text/javascript" src="Scripts/SSTAccountDetails.js"></script>
+    <script type="text/javascript" src="Scripts/Corporate.js"></script>
     <!-- END - SCRIPTS -->
-
 
 </body>
 </html>

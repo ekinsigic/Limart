@@ -1103,6 +1103,10 @@
             border: 0;
         }
 
+        #payment .deliveryAddressWrapper {
+            margin-bottom:40px;
+        }
+
             .divAddress-Payment-Content .divContent .divAddressContent {
                 margin: auto;
                 width: 90%;
@@ -1385,6 +1389,11 @@
     #miniProhibitor {
         display: none;
     }
+    
+    #payment .divPersonalOptionInput, #payment .divCorporateOptionInput {
+        float:left;
+        width:100%;
+    }
 }
 
 
@@ -1425,6 +1434,12 @@
 
     #orderSummary {
         display: none;
+    }
+    
+    
+    #payment .divPersonalOptionInput, #payment .divCorporateOptionInput {
+        float:left;
+        width:100%;
     }
 }
 

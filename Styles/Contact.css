@@ -1,0 +1,227 @@
+#contact .divContent {
+	width: 960px;
+	margin: auto;
+}
+
+#contact #entryText {
+	text-align: center;
+	margin-top: 58px;
+	margin-bottom: 60px;
+}
+#contact #entryText h2 {
+    text-decoration: underline;
+}
+#contact #entryText h2 a {
+    text-decoration: underline;
+    width: 100%;
+    height: 100%;
+}
+#contact #entryText p {
+    margin: auto;
+    width: 600px;
+    margin-top: 31px;
+    line-height: 21px;
+    color: #a8a8ac;
+    max-width: 90%;
+}
+
+#contact #contactMap .divContent {
+	border-top: 1px solid #e8e8e8;
+	height: 70px;
+}
+
+#contact #contactMap #map-canvas {
+	height: 320px;
+	width: 960px;
+	margin:auto;
+	border:3px solid #e8e8e8;
+}
+
+#contactMap #mapLink {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+#contact #contactDetails{
+	margin-top: 50px;
+	padding-bottom: 22px;
+}
+
+#contact #contactDetails .divContent{
+	padding-top: 10px;
+}
+
+#contact #contactDetails .contactText{
+	width: 510px;
+	float: left;
+	padding-right:95px; 
+}
+
+#contact #contactDetails .contactText h3{
+    margin-top: -9px;
+    margin-bottom: 10px;
+}
+
+
+#contact #contactDetails .contactText p{
+    font-size: 14px;
+    text-align: justify;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+}
+
+#contact #contactDetails .contactForm {
+	width: 449px;
+	float: left;
+}
+
+#contact #contactDetails .contactForm input[type="text"], #contact #contactDetails .contactForm textarea {
+	width: 100% !important;
+	left: 0px;
+	height: 47px !important;
+	margin-bottom: 9px;
+}
+#contact #contactDetails .contactForm textarea {
+	height: 104px !important;
+	margin-bottom: 20px;
+}
+#contact #contactDetails .contactForm input[type="submit"] {
+	float: right;
+	height: 17px;
+	width: 134px;
+}
+
+#contact #contactDetails img {
+    margin:auto;
+    margin-top: 389px;
+    margin-bottom: 50px;
+}
+
+
+/* Screen */
+@media all and (max-width: 700px) {
+	#contact .divContent {
+		width: 90%;
+	
+		padding-top: 0px !important;
+}
+
+	#contact #entryText {
+		max-width: 90%;
+		margin: auto;
+		margin-top: 108px;
+	}
+
+	#contact #contactMap #map-canvas {
+		height: 420px;
+		width: 100%;
+		border: 0px;
+		border-bottom: 3px solid #e8e8e8;
+		border-top: 3px solid #e8e8e8;
+	}
+
+	#contact #contactDetails .contactText p {
+		text-align:center;
+	}
+
+	#contactMap #mapLink {
+		display: block;
+	}
+
+	#contact #contactDetails{
+		padding-bottom: 100px;
+	}
+
+	#contact #contactDetails .contactText{
+		width: 90%;
+		float: none;
+		margin: auto;
+		padding-right: 0px; 
+		text-align: center;
+	}
+
+	#contact #contactDetails .contactText h3{
+	    margin: auto;
+	    margin-top: 30px;
+	   	
+	    margin-bottom: 10px;
+	    width: 80%;
+	}
+
+	#contact #contactDetails .contactForm {
+		width: 90%;
+		float: none;
+		margin: auto;
+		margin-top: 40px;
+	}
+	#contact #contactDetails .contactForm input[type="submit"] {
+		width: 100%;
+		float: none;
+		padding: 15px;
+		padding-left: 0px;
+		padding-right: 0px;
+		border: 0px;
+	}
+}
+
+@media all and (min-width: 701px) and (max-width: 1018px) {   /* MAIN ENTRY */
+	#contact .divContent {
+		width: 90%;
+	}
+
+	#contact #entryText {
+		max-width: 90%;
+		margin: auto;
+		margin-top: 108px;
+	}
+
+	#contact #contactMap #map-canvas {
+		height: 420px;
+		width: 100%;
+		border: 0px;
+		border-bottom: 3px solid #e8e8e8;
+		border-top: 3px solid #e8e8e8;
+	}
+
+	#contactMap #mapLink {
+		display: block;
+	}
+
+	#contact #contactDetails{
+		padding-bottom: 80px;
+	}
+
+	#contact #contactDetails .contactText{
+		width: 90%;
+		float: none;
+		margin: auto;
+		padding-right: 0px; 
+		text-align: center;
+	}
+
+	#contact #contactDetails .contactText h3{
+	    margin: auto;
+	    margin-top: -25px;
+	    margin-bottom: 0px;
+	    width: 60%;
+	}
+
+	#contact #contactDetails .contactText p {
+		text-align:center;
+		width: 300px;
+		margin: auto;
+		margin-bottom: 30px;
+}
+
+	#contact #contactDetails .contactForm {
+		width: 90%;
+		float: none;
+		margin: auto;
+		margin-top: 40px;
+	}
+}

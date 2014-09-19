@@ -383,7 +383,7 @@ function closeAccountSubMenu() {
             setTimeout(function () {
                 $('aside ul.level2.fullActive').removeClass('fullActive');
                 $('#menuActiveOverlay').remove(); // menuActiveOverlay elementini disaridan main icine tasimistik, eskiye dondur
-                $('#divMainWrapper').prepend('<section id="menuActiveOverlay"></section>');
+                $('main').before('<section id="menuActiveOverlay"></section>');
 
                 isAccountSubMenuActive = false;
                 isAccountSubMenuCurrAnimated = false;

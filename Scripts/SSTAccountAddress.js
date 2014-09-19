@@ -1,11 +1,17 @@
 $(document).ready(function(){
-	openOrCloseNewAddress('#accountDetails .divDetail.address .divTabber .aTab', '#accountDetails .divDetail.address .wholeAddressesWrapper', 'billing,delivery');
-	openOrCloseNewAddress('#accountDetails .divDetail.address .wholeAddressesWrapper .deliveryAddressesWrapper .aNewAddress, #accountDetails .divDetail.address .wholeAddressesWrapper .deliveryAddressesWrapper .contShopping, #accountDetails .divDetail.address .wholeAddressesWrapper .deliveryAddressesWrapper .saveAddingNewAddress', '#accountDetails .divDetail.address .wholeAddressesWrapper .deliveryAddressesWrapper', 'new,saved');
-	openOrCloseNewAddress('#accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper .aNewAddress, #accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper .contShopping, #accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper .saveAddingNewAddress', '#accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper', 'new,saved');
+	openOrCloseTabs('#accountDetails .divDetail.address .divTabber .aTab', '#accountDetails .divDetail.address .wholeAddressesWrapper', 'billing,delivery');
 	// openOrCloseNewAddress('input[name=addressNewOrSavedInvoice]:radio', '#payment .divBillingAddress', 'newAddress,savedAddress');
 	radioActions();
+	personalOrCorporateRadioChange();
+	openOrCloseNewAddress();
 });
-function openOrCloseNewAddress(triggerInput,affectedElement,classNamesToggle) {
+
+	$('input[name="personalOrCorporate"]').each(function(){
+		$(this).change(function(){
+			personalOrCorporateRadioChange();
+		})
+	});
+function openOrCloseTabs(triggerInput,affectedElement,classNamesToggle) {
 	$(affectedElement).wrapInner('<div class="innerWrapper">');
 	var classNames = (classNamesToggle).split(',');
 	$(affectedElement).addClass(classNames[1]);
@@ -66,7 +72,7 @@ function showNewAddressForm(triggerInput, affectedElement, classNamesToggle, swi
 					$(affectedElement).css({
 						'height':'auto'
 					});
-				},6000)
+				},100)
 			},100);
 		},500);
 }
@@ -80,3 +86,122 @@ function radioActions() {
 	});
 }
 
+
+function personalOrCorporateRadioChange() {
+	if ($('#personalRadio').is(':checked')) { // kayıtlı teslimat adresleri seçilirse
+		selectedOption = '.divPersonalOptionInput'
+		nonSelectedOption = '.divCorporateOptionInput'
+	}
+	else if ($('#corporateRadio').is(':checked')) { // yeni teslimat adresi seçilirse
+		selectedOption = '.divCorporateOptionInput'
+		nonSelectedOption = '.divPersonalOptionInput'
+	};
+
+	switchOptions(selectedOption, nonSelectedOption);
+}
+
+
+function switchOptions(selectedOption, nonSelectedOption) {
+	$(nonSelectedOption).css({
+		'opacity':'0',
+		'-webkit-transform':'scale(0.95)',
+		'transition':'transform 0.3s, opacity 0.3s',
+		'-webkit-transition':'transform 0.3s, opacity 0.3s',
+		'-moz-transition':'transform 0.3s, opacity 0.3s',
+		'-ms-transition':'transform 0.3s, opacity 0.3s'
+	});
+	setTimeout(function(){
+		$(nonSelectedOption).css('display','none');
+		$(selectedOption).css({
+			'display':'block',
+			'opacity':'0',
+			'-webkit-transform':'scale(0.95)',
+			'transition':'transform 0.3s, opacity 0.3s',
+			'-webkit-transition':'transform 0.3s, opacity 0.3s',
+			'-moz-transition':'transform 0.3s, opacity 0.3s',
+			'-ms-transition':'transform 0.3s, opacity 0.3s'
+		});
+		setTimeout(function(){
+			$(selectedOption).css({
+				'opacity':'1',
+				'-webkit-transform':'scale(1)'
+			});
+		},300);
+	},300);
+}
+
+
+var newAddressIsOpen = false
+var newAddressType = null
+function openOrCloseNewAddress() {
+	$('#accountDetails  a.SSTAStyleH.aNewAddress, .divAddressOption a.edit').click(function(e){
+		e.preventDefault();
+		if  ($(this).parent().attr('class') == 'deliveryAddressesWrapper' || $(this).parent().parent().parent().attr('class') == 'deliveryAddressesWrapper') {
+			newAddressType = 'delivery'
+		}
+		else {
+			newAddressType = 'billing'
+		}
+
+		if (newAddressType == 'delivery') {
+			$('#accountDetails .divNewAddressWrapper  .personalOrCorporate,'+
+				' #accountDetails .divNewAddressWrapper .divPersonalOptionInput,'+
+				' #accountDetails .divNewAddressWrapper .divCorporateOptionInput').hide();
+
+			$('.divNewAddressWrapper input[placeholder="FATURA ADI"]').attr('placeholder','AD,SOYAD');
+		}
+		else {
+			$('#accountDetails .divNewAddressWrapper  .personalOrCorporate,'+
+				' #accountDetails .divNewAddressWrapper .divPersonalOptionInput,'+
+				' #accountDetails .divNewAddressWrapper .divCorporateOptionInput').show();
+			$('#accountDetails .divNewAddressWrapper input[placeholder="AD,SOYAD"]').attr('placeholder','FATURA ADI');
+		}
+		$('#accountDetails .addressSelections').css({
+			'opacity':'0',
+			'-webkit-transform':'scale(0.95)',
+			'transition':'opacity 0.5s, transform 0.5s'
+		});
+		setTimeout(function(){
+			$('#accountDetails .divNewAddressWrapper').css({
+				'opacity':'0',
+				'-webkit-transform':'scale(0.95)',
+				'display':'block'
+			});
+			setTimeout(function(){
+				$('#accountDetails .divNewAddressWrapper').css({
+				'opacity':'1',
+				'-webkit-transform':'scale(1)',
+				'transition':'opacity 0.5s, transform 0.5s'
+				});
+			},55);
+		},505);
+	});
+
+	$('#accountDetails .divNewAddressWrapper a.contShopping').click(function(e){
+		e.preventDefault();
+		$('#accountDetails .divNewAddressWrapper').css({
+			'opacity':'0',
+			'-webkit-transform':'scale(0.95)',
+			'transition':'opacity 0.5s, transform 0.5s'
+		});
+		setTimeout(function(){
+			$('#accountDetails .addressSelections').css({
+				'opacity':'0',
+				'-webkit-transform':'scale(0.95)',
+				'display':'block'
+			});
+
+			$('#accountDetails .divNewAddressWrapper').css({
+				'display':'none'
+			});
+			setTimeout(function(){
+				$('#accountDetails .addressSelections').css({
+				'opacity':'1',
+				'-webkit-transform':'scale(1)',
+				'transition':'opacity 0.8s, transform 0.8s'
+				});
+			},55);
+		},505);
+	})
+
+}

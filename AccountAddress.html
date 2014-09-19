@@ -290,7 +290,6 @@
                 <div class="divNav SSTOpener" id="menuOpener">
                     <ul class="level1">
                         <li><a href="#" class="aStyleA">BİZ KİMİZ?</a></li>
-                        <li><a href="#" class="aStyleA">NEDEN?</a></li>
                         <li><a href="Artists.html" class="aStyleA">SANATÇILAR</a></li>
                         <li><a href="Listing.html" class="aStyleA">E-SHOP</a></li>
                         <li><a href="Contact.html" class="aStyleA">İLETİŞİM</a></li>
@@ -338,8 +337,6 @@
             </nav>
         </div>
     </header>
-
-    <div id="divMainWrapper">
 
         <section id="menuActiveOverlay"></section>
 
@@ -419,264 +416,248 @@
                     </p>
 
 
-                    <!-- TABBER -->
-                    <div class="divTabber">
-                        <a href="#" data-selection='0' class="SSTAStyleJ aTab activeTab">TESLİMAT <span>ADRESLERİ</span></a>
-                        <a href="#" data-selection='1' class="SSTAStyleJ aTab">FATURA <span>ADRESLERİ</span></a>
+
+                    <!-- NEW ADDRESS -->
+                    <div class="divNewAddressWrapper">
+                        <h2 class="SSTFaceII">Yeni Adres Ekleme</h2>
+                        <p class="SSTFaceX pDescription">
+                            Yeni adres eklemek için aşağıdaki formu doldurun.
+                        </p>
+
+                        <!-- Add new delivery address form starts here -->
+                        <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
+                        <select class="SSTSelectB v2">
+                            <option>ÜLKE</option>
+                            <option>ÜLKE</option>
+                        </select>
+                        <select class="SSTSelectB v1">
+                            <option>İL</option>
+                            <option>İL</option>
+                        </select>
+                        <select class="SSTSelectB v2">
+                            <option>İLÇE</option>
+                            <option>İLÇE</option>
+                        </select>
+                        <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
+                        <input type="text" class="SSTInputTextD v1" placeholder="POSTA KODU" />
+                        <input type="text" class="SSTInputTextD v2" placeholder="TELEFON" />
+                        <!-- BURASI YALNIZCA KURUMSAL FATURALARDA GELECEK -->
+                        <div class="personalOrCorporate">
+                            <label for="personalRadio" class="SSTFaceX"><input id="personalRadio" class="radioTypeA" name="personalOrCorporate" type="radio" checked />Bireysel</label>
+                            <label for="corporateRadio" class="SSTFaceX"><input id="corporateRadio" class="radioTypeA" name="personalOrCorporate" type="radio" />Kurumsal</label>
+                        </div>
+                        <div class="divPersonalOptionInput">
+                            <input type="text" class="SSTInputTextD v1" placeholder="TCKN" />
+                        </div>
+                        <div class="divCorporateOptionInput">
+                            <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
+                            <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
+                        </div>
+                        <!-- BURASI YALNIZCA KURUMSAL FATURALARDA GELECEK -->
+
+
+                        <div class="separator" style="height:10px;"></div>
+                        <a href="#" class="aStyleE contShopping">
+                            <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
+                        </a>
+                        <a href="#" class="SSTAStyleB saveAddingNewAddress">YENİ ADRESİ KAYDET</a>
                         <div class="separator"></div>
+                        <!-- Add new delivery address form ends here -->
                     </div>
-                    <!-- END - TABBER -->
-                    <!-- ADDRESS WRAPPER -->
-                    <div class="wholeAddressesWrapper">
+                    <!-- END - NEW ADDRESS -->
 
-                        <!-- DELIVERY ADDRESS -->
-                        <div class="deliveryAddressesWrapper">
-
-                            <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Teslimat Adresi Ekle</a>
-
+                    <div class="addressSelections">
+                        <!-- TABBER -->
+                        <div class="divTabber">
+                            <a href="#" data-selection='0' class="SSTAStyleJ aTab activeTab">TESLİMAT <span>ADRESLERİ</span></a>
+                            <a href="#" data-selection='1' class="SSTAStyleJ aTab">FATURA <span>ADRESLERİ</span></a>
                             <div class="separator"></div>
+                        </div>
+                        <!-- END - TABBER -->
+                        <!-- ADDRESS WRAPPER -->
+                        <div class="wholeAddressesWrapper">
 
-                            <!-- ADDRESS OPTION -->
-                            <div class="divAddressOptionsWrapper">
+                            <!-- DELIVERY ADDRESS -->
+                            <div class="deliveryAddressesWrapper">
 
-                                <div class="divAddressOption active">
-                                    <label for="sampleA" class="SSTLabelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
+                                <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Teslimat Adresi Ekle</a>
 
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption address">
-                                    <label for="sampleB" class="SSTLabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleB" />İş Adresi</label>
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption">
-                                    <label for="sampleC" class="SSTLabelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleC" />Ev Adresi</label>
-
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption address">
-                                    <label for="sampleD" class="SSTLabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleD" />İş Adresi</label>
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <input type="submit" class="SSTButtonA button" value="KAYDET" />
-
-                            </div>
-                            <!-- END - ADDRESS OPTION -->
-                            <!-- NEW ADDRESS -->
-                            <div class="divNewAddressWrapper">
-                                <p class="SSTFaceX pDescription">
-                                    Yeni teslimat adresi eklemek için aşağıdaki formu doldurun.
-                                </p>
-
-                                <!-- Add new delivery address form starts here -->
-                                <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="TCKN" />
-                                <select class="SSTSelectB v1">
-                                    <option>İL</option>
-                                    <option>İL</option>
-                                </select>
-                                <select class="SSTSelectB v2">
-                                    <option>İLÇE</option>
-                                    <option>İLÇE</option>
-                                </select>
-                                <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
-                                <input type="text" class="SSTInputTextD v1" placeholder="TELEFON" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="GSM" />
-                                <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
-
-                                <div class="separator" style="height:40px;"></div>
-
-                                <a href="#" data-selection="0" class="aStyleE contShopping">
-                                    <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
-                                </a>
-                                <a href="#" class="SSTAStyleB saveAddingNewAddress">YENİ ADRESİ KAYDET</a>
                                 <div class="separator"></div>
-                                <!-- Add new delivery address form ends here -->
+
+                                <!-- ADDRESS OPTION -->
+                                <div class="divAddressOptionsWrapper">
+
+                                    <div class="divAddressOption active">
+                                        <label for="sampleA" class="SSTLabelB">Ev Adresi</label>
+
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="divAddressOption address">
+                                        <label for="sampleB" class="SSTLabelB">İş Adresi</label>
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="divAddressOption">
+                                        <label for="sampleC" class="SSTLabelB">Ev Adresi</label>
+
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="divAddressOption address">
+                                        <label for="sampleD" class="SSTLabelB">İş Adresi</label>
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                </div>
+                                <!-- END - ADDRESS OPTION -->
+
                             </div>
-                            <!-- END - NEW ADDRESS -->
+                            <!-- END - DELIVERY ADDRESS -->
+                            <!-- BILLING ADDRESS -->
+                            <div class="billingAddressesWrapper">
+
+                                <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Fatura Adresi Ekle</a>
+
+                                <div class="separator"></div>
+
+                                <!-- ADDRESS OPTION -->
+                                <div class="divAddressOptionsWrapper">
+
+                                    <div class="divAddressOption active">
+                                        <label for="sampleA" class="SSTLabelB">Ev Adresi</label>
+
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="divAddressOption address">
+                                        <label for="sampleB" class="SSTLabelB">İş Adresi</label>
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="divAddressOption">
+                                        <label for="sampleC" class="SSTLabelB">Ev Adresi</label>
+
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                    <div class="divAddressOption address">
+                                        <label for="sampleD" class="SSTLabelB">İş Adresi</label>
+                                        <div class="separator"></div>
+
+                                        <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
+
+                                        <a href="tel:0212 637 00 00" class="aNumber">
+                                            <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
+                                        </a>
+
+                                        <p class="SSTFaceZ">
+                                            Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
+                                        </p>
+
+                                        <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
+                                        <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
+                                    </div>
+
+                                </div>
+                                <!-- END - ADDRESS OPTION -->
+                            </div>
+                            <!-- END - BILLING ADDRESS -->
 
                         </div>
-                        <!-- END - DELIVERY ADDRESS -->
-                        <!-- BILLING ADDRESS -->
-                        <div class="billingAddressesWrapper">
-
-                            <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Fatura Adresi Ekle</a>
-
-                            <div class="separator"></div>
-
-                            <!-- ADDRESS OPTION -->
-                            <div class="divAddressOptionsWrapper">
-
-                                <div class="divAddressOption active">
-                                    <label for="sampleA" class="SSTLabelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleA" checked />Ev Adresi</label>
-
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption address">
-                                    <label for="sampleB" class="SSTLabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleB" />İş Adresi</label>
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption">
-                                    <label for="sampleC" class="SSTLabelB"><input class="radioTypeA" name="addressSelect" type="radio" id="sampleC" />Ev Adresi</label>
-
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <div class="divAddressOption address">
-                                    <label for="sampleD" class="SSTLabelB"><input class="radioTypeA" type="radio" name="addressSelect" id="sampleD" />İş Adresi</label>
-                                    <div class="separator"></div>
-
-                                    <h4 class="SSTFaceY name">BAMBİ TERLİK</h4>
-
-                                    <a href="tel:0212 637 00 00" class="aNumber">
-                                        <span class="SSTSpanStyleB number">- 0212 637 00 00</span><br />
-                                    </a>
-
-                                    <p class="SSTFaceZ">
-                                        Keresteciler sitesi kalender sokak germi iş merkezi No: 14 Güngören - Merter / İSTANBUL
-                                    </p>
-
-                                    <a href="#" class="SSTAStyleD icon delete"><img data-sixtythree="arrow-next-short-purple" />SİL</a>
-                                    <a href="#" class="SSTAStyleD icon edit"><img data-sixtythree="arrow-next-short-purple" />DÜZENLE</a>
-                                </div>
-
-                                <input type="submit" class="SSTButtonA button" value="KAYDET" />
-
-                            </div>
-                            <!-- END - ADDRESS OPTION -->
-                            <!-- NEW ADDRESS -->
-                            <div class="divNewAddressWrapper">
-                                <p class="SSTFaceX pDescription">
-                                    Yeni fatura adresi eklemek için aşağıdaki formu doldurun.
-                                </p>
-                                <!-- Add new delivery address form starts here -->
-                                <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="TCKN" />
-                                <select class="SSTSelectB v1">
-                                    <option>İL</option>
-                                    <option>İL</option>
-                                </select>
-                                <select class="SSTSelectB v2">
-                                    <option>İLÇE</option>
-                                    <option>İLÇE</option>
-                                </select>
-                                <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
-                                <input type="text" class="SSTInputTextD v1" placeholder="TELEFON" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="GSM" />
-                                <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
-                                <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
-                                <div class="separator" style="height:40px;"></div>
-                                <a href="#" data-selection="0" class="aStyleE contShopping">
-                                    <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
-                                </a>
-                                <a href="#" class="SSTAStyleB saveAddingNewAddress">YENİ ADRESİ KAYDET</a>
-                                <div class="separator"></div>
-                                <!-- Add new delivery address form ends here -->
-                            </div>
-                            <!-- END - NEW ADDRESS -->
-
-                        </div>
-                        <!-- END - BILLING ADDRESS -->
-
+                        <!-- END - ADDRESS WRAPPER -->
                     </div>
-                    <!-- END - ADDRESS WRAPPER -->
 
                 </div>
 
@@ -743,8 +724,6 @@
             <!-- end - social icons -->
             <div class="separator"></div>
         </footer>
-
-    </div>
 
 
     <!-- SCRIPTS -->

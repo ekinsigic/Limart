@@ -1,7 +1,7 @@
 ﻿/* MAIN ENTRY */
 #mainEntry {
     width: 100%;
-    background-image: url('Files/Sliders/Home/01.jpg');
+    background-image: url(../files/sliders/home/01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -13,17 +13,18 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: url('../Images/overlay-purple.png');
         background-repeat: no-repeat;
         background-size: cover;
-    }
+        background-color:rgba(57,57,68,0.9);
+        box-shadow: inset 0px 0px 600px black;
+}
 
     #mainEntry .divText {
         position: absolute;
         z-index: 5;
         top: 50%;
         left: 50%;
-        margin: -140px 0 0 -540px;
+        margin: -150px 0 0 -540px;
         padding-top: 70px;
         width: 1080px;
         text-align: center;

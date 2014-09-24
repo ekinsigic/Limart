@@ -1,3 +1,5 @@
+var whereIsRequestComingFrom = null
+var addressForm = $('.divNewAddressWrapper').clone();
 $(document).ready(function(){
 	openOrCloseTabs('#accountDetails .divDetail.address .divTabber .aTab', '#accountDetails .divDetail.address .wholeAddressesWrapper', 'billing,delivery');
 	// openOrCloseNewAddress('input[name=addressNewOrSavedInvoice]:radio', '#payment .divBillingAddress', 'newAddress,savedAddress');
@@ -6,7 +8,7 @@ $(document).ready(function(){
 	openOrCloseNewAddress();
 });
 
-	$('input[name="personalOrCorporate"]').each(function(){
+	$('input[name="IsPersonalBillingAddress"]').each(function(){
 		$(this).change(function(){
 			personalOrCorporateRadioChange();
 		})
@@ -55,7 +57,7 @@ function showNewAddressForm(triggerInput, affectedElement, classNamesToggle, swi
 				$(affectedElement).removeClass(classNames[0]);
 				$(affectedElement).addClass(classNames[1]);
 			}
-			console.log(switchState);
+
 			var currentHeight = $(affectedElement).find('.innerWrapper').outerHeight();
 			$(affectedElement).find('.innerWrapper > *').unwrap();
 			$(affectedElement).height(currentHeight);
@@ -137,12 +139,28 @@ function openOrCloseNewAddress() {
 	$('#accountDetails  a.SSTAStyleH.aNewAddress, .divAddressOption a.edit').click(function(e){
 		e.preventDefault();
 		if  ($(this).parent().attr('class') == 'deliveryAddressesWrapper' || $(this).parent().parent().parent().attr('class') == 'deliveryAddressesWrapper') {
+			if ($(this).parent().attr('class') == 'deliveryAddressesWrapper') {
+				whereIsRequestComingFrom = 'newForm' 
+			}
+			else {
+				whereIsRequestComingFrom = 'editForm'
+			}
 			newAddressType = 'delivery'
 		}
 		else {
+			if ($(this).parent().attr('class') == 'billingAddressesWrapper') {
+				whereIsRequestComingFrom = 'newForm'
+			}
+			else {
+				whereIsRequestComingFrom = 'editForm'
+			}
 			newAddressType = 'billing'
 		}
-
+		if (whereIsRequestComingFrom == 'newForm') { // YENİ ADRES EKLE BUTONUNA BASILDIĞINDA HAREKETE GEÇECEK FONKSİYON
+				// RESET FONKSİYONU BURAYA GELECEK
+		}
+		else { // DÜZENLE BUTONUNA BASILDIĞINDA HAREKETE GEÇECEK FONKSİYON
+		}
 		if (newAddressType == 'delivery') {
 			$('#accountDetails .divNewAddressWrapper  .personalOrCorporate,'+
 				' #accountDetails .divNewAddressWrapper .divPersonalOptionInput,'+
@@ -205,3 +223,56 @@ function openOrCloseNewAddress() {
 	})
 
 }
+
+// ÖZKAN BUNLAR YERİNE YUKARIDAKİ FONKSİYONLARI KULLANABİLİRSİN,
+// GEREKLİ YERLERİ AÇTIM, İSTERSEN BENİ ARAYABİLİRSİN
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// function showUpdateAdressForm() {
+// 	$('#accountDetails .divNewAddressWrapper input, #accountDetails .divNewAddressWrapper select, #accountDetails .divNewAddressWrapper textarea').val('');
+//     $('#accountDetails .addressSelections').css({
+//         'opacity': '0',
+//         '-webkit-transform': 'scale(0.95)',
+//         'transition': 'opacity 0.5s, transform 0.5s'
+//     });
+//     setTimeout(function () {
+//         $('#accountDetails .divNewAddressWrapper').css({
+//             'opacity': '0',
+//             '-webkit-transform': 'scale(0.95)',
+//             'display': 'block'
+//         });
+//         setTimeout(function () {
+//             $('#accountDetails .divNewAddressWrapper').css({
+//                 'opacity': '1',
+//                 '-webkit-transform': 'scale(1)',
+//                 'transition': 'opacity 0.5s, transform 0.5s'
+//             });
+//         }, 55);
+//     }, 505);
+// }
+
+// function backButton() {
+//     $('#accountDetails .divNewAddressWrapper').css({
+//         'opacity': '0',
+//         '-webkit-transform': 'scale(0.95)',
+//         'transition': 'opacity 0.5s, transform 0.5s'
+//     });
+//     setTimeout(function () {
+//         $('#accountDetails .addressSelections').css({
+//             'opacity': '0',
+//             '-webkit-transform': 'scale(0.95)',
+//             'display': 'block'
+//         });
+
+//         $('#accountDetails .divNewAddressWrapper').css({
+//             'display': 'none'
+//         });
+//         setTimeout(function () {
+//             $('#accountDetails .addressSelections').css({
+//                 'opacity': '1',
+//                 '-webkit-transform': 'scale(1)',
+//                 'transition': 'opacity 0.8s, transform 0.8s'
+//             });
+//         }, 55);
+//     }, 505);
+// }

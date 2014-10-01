@@ -1,278 +1,184 @@
-var whereIsRequestComingFrom = null
-var addressForm = $('.divNewAddressWrapper').clone();
 $(document).ready(function(){
-	openOrCloseTabs('#accountDetails .divDetail.address .divTabber .aTab', '#accountDetails .divDetail.address .wholeAddressesWrapper', 'billing,delivery');
-	// openOrCloseNewAddress('input[name=addressNewOrSavedInvoice]:radio', '#payment .divBillingAddress', 'newAddress,savedAddress');
-	radioActions();
-	personalOrCorporateRadioChange();
-	openOrCloseNewAddress();
+	addNewDeliveryAddress();
+	editNewDeliveryAddress();
+	saveNewDeliveryAddress();
+	saveEditedDeliveryAddress();
+	cancelNewDeliveryAddress();
+	cancelEditedDeliveryAddress();
+
+	addNewBillingAddress();
+	editNewBillingAddress();
+	saveNewBillingAddress();
+	saveEditedBillingAddress();
+	cancelNewBillingAddress();
+	cancelEditedBillingAddress();
+	switchCorporateOrPersonalBilling();
+
+	switchBillingOrDeliveryAddress();
 });
 
-	$('input[name="IsPersonalBillingAddress"]').each(function(){
-		$(this).change(function(){
-			personalOrCorporateRadioChange();
-		})
-	});
-function openOrCloseTabs(triggerInput,affectedElement,classNamesToggle) {
-	$(affectedElement).wrapInner('<div class="innerWrapper">');
-	var classNames = (classNamesToggle).split(',');
-	$(affectedElement).addClass(classNames[1]);
-	$(affectedElement).removeClass(classNames[0]);
-	var currentHeight = $(affectedElement).find('.innerWrapper').outerHeight();
-	$(affectedElement).find('.innerWrapper > *').unwrap();
-	$(affectedElement).height(currentHeight);
-	$(affectedElement).css({
-		'opacity':'1',
-		'overflow':'hidden',
-		'-webkit-transform':'scale(1)s',
-		'transition':'all 0.3s'
-	});
-	setTimeout(function(){
-		$(affectedElement).css('height','');
-	});
-
-
-	$(triggerInput).click(function(e){
-		e.preventDefault();
-		var switchState = $(this).attr('data-selection')
-		//scrollUserTo(affectedElement);
-		showNewAddressForm(triggerInput,affectedElement,classNamesToggle,switchState);
-	});
-}
-
-function showNewAddressForm(triggerInput, affectedElement, classNamesToggle, switchState){
-		$(affectedElement).css({
-			'opacity':'0',
-			'-webkit-transform':'scale(0.95)'
+//TESLİMAT ADRESİ / FATURA ADRESİ GEÇİŞ FONKSİYONU
+	function switchBillingOrDeliveryAddress() {
+		$('.addressSelections .divTabber a[data-selection="0"]').click(function(e){
+			e.preventDefault();
+			$(this).addClass('activeTab');
+			$('.addressSelections .divTabber a[data-selection="1"]').removeClass('activeTab')
+			$('.wholeAddressesWrapper .deliveryAddressesWrapper').css('display','block');
+			$('.wholeAddressesWrapper .billingAddressesWrapper').css('display','none');
+			$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+			$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','none');
 		});
-		$(affectedElement).wrapInner('<div class="innerWrapper">');
-		var classNames = (classNamesToggle).split(',');
-		setTimeout(function(){
 
-			if (switchState == '1') {
-				$(affectedElement).addClass(classNames[0]);
-				$(affectedElement).removeClass(classNames[1]);
-			}
-			else {
-				$(affectedElement).removeClass(classNames[0]);
-				$(affectedElement).addClass(classNames[1]);
-			}
-
-			var currentHeight = $(affectedElement).find('.innerWrapper').outerHeight();
-			$(affectedElement).find('.innerWrapper > *').unwrap();
-			$(affectedElement).height(currentHeight);
-			setTimeout(function(){
-				$(affectedElement).css({
-					'opacity':'1',
-					'-webkit-transform':'scale(1)'
-				});
-				$(triggerInput).each(function(){
-					$(this).removeClass('activeTab');
-				})
-				$(triggerInput).parent().find('[data-selection="'+switchState+'"]').addClass('activeTab');
-				setTimeout(function(){
-					$(affectedElement).css({
-						'height':'auto'
-					});
-				},100)
-			},100);
-		},500);
-}
-
-function radioActions() {
-	$('.divAddressOption').find('input[type="radio"]').change(function(){
-		$('.divAddressOption').each(function(){
-			$(this).removeClass('active');	
-		})
-		$(this).parents('.divAddressOption').addClass('active');
-	});
-}
-
-
-function personalOrCorporateRadioChange() {
-	if ($('#personalRadio').is(':checked')) { // kayıtlı teslimat adresleri seçilirse
-		selectedOption = '.divPersonalOptionInput'
-		nonSelectedOption = '.divCorporateOptionInput'
+		$('.addressSelections .divTabber a[data-selection="1"]').click(function(e){
+			e.preventDefault();
+			$(this).addClass('activeTab');
+			$('.addressSelections .divTabber a[data-selection="0"]').removeClass('activeTab')
+			$('.wholeAddressesWrapper .billingAddressesWrapper').css('display','block');
+			$('.wholeAddressesWrapper .deliveryAddressesWrapper').css('display','none');
+			$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+			$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','none');
+		});
 	}
-	else if ($('#corporateRadio').is(':checked')) { // yeni teslimat adresi seçilirse
-		selectedOption = '.divCorporateOptionInput'
-		nonSelectedOption = '.divPersonalOptionInput'
-	};
+//
 
-	switchOptions(selectedOption, nonSelectedOption);
-}
+//TÜM ADRESLER VE YENİ ADRESLER ARASI GEÇİŞLER
 
+	//TESLİMAT ADRESİ SEKMESİ
 
-function switchOptions(selectedOption, nonSelectedOption) {
-	$(nonSelectedOption).css({
-		'opacity':'0',
-		'-webkit-transform':'scale(0.95)',
-		'transition':'transform 0.3s, opacity 0.3s',
-		'-webkit-transition':'transform 0.3s, opacity 0.3s',
-		'-moz-transition':'transform 0.3s, opacity 0.3s',
-		'-ms-transition':'transform 0.3s, opacity 0.3s'
-	});
-	setTimeout(function(){
-		$(nonSelectedOption).css('display','none');
-		$(selectedOption).css({
-			'display':'block',
-			'opacity':'0',
-			'-webkit-transform':'scale(0.95)',
-			'transition':'transform 0.3s, opacity 0.3s',
-			'-webkit-transition':'transform 0.3s, opacity 0.3s',
-			'-moz-transition':'transform 0.3s, opacity 0.3s',
-			'-ms-transition':'transform 0.3s, opacity 0.3s'
-		});
-		setTimeout(function(){
-			$(selectedOption).css({
-				'opacity':'1',
-				'-webkit-transform':'scale(1)'
-			});
-		},300);
-	},300);
-}
-
-
-var newAddressIsOpen = false
-var newAddressType = null
-function openOrCloseNewAddress() {
-	$('#accountDetails  a.SSTAStyleH.aNewAddress, .divAddressOption a.edit').click(function(e){
-		e.preventDefault();
-		if  ($(this).parent().attr('class') == 'deliveryAddressesWrapper' || $(this).parent().parent().parent().attr('class') == 'deliveryAddressesWrapper') {
-			if ($(this).parent().attr('class') == 'deliveryAddressesWrapper') {
-				whereIsRequestComingFrom = 'newForm' 
-			}
-			else {
-				whereIsRequestComingFrom = 'editForm'
-			}
-			newAddressType = 'delivery'
-		}
-		else {
-			if ($(this).parent().attr('class') == 'billingAddressesWrapper') {
-				whereIsRequestComingFrom = 'newForm'
-			}
-			else {
-				whereIsRequestComingFrom = 'editForm'
-			}
-			newAddressType = 'billing'
-		}
-		if (whereIsRequestComingFrom == 'newForm') { // YENİ ADRES EKLE BUTONUNA BASILDIĞINDA HAREKETE GEÇECEK FONKSİYON
-				// RESET FONKSİYONU BURAYA GELECEK
-		}
-		else { // DÜZENLE BUTONUNA BASILDIĞINDA HAREKETE GEÇECEK FONKSİYON
-		}
-		if (newAddressType == 'delivery') {
-			$('#accountDetails .divNewAddressWrapper  .personalOrCorporate,'+
-				' #accountDetails .divNewAddressWrapper .divPersonalOptionInput,'+
-				' #accountDetails .divNewAddressWrapper .divCorporateOptionInput').hide();
-
-			$('.divNewAddressWrapper input[placeholder="FATURA ADI"]').attr('placeholder','AD,SOYAD');
-		}
-		else {
-			$('#accountDetails .divNewAddressWrapper  .personalOrCorporate,'+
-				' #accountDetails .divNewAddressWrapper .divPersonalOptionInput,'+
-				' #accountDetails .divNewAddressWrapper .divCorporateOptionInput').show();
-			$('#accountDetails .divNewAddressWrapper input[placeholder="AD,SOYAD"]').attr('placeholder','FATURA ADI');
-		}
-		$('#accountDetails .addressSelections').css({
-			'opacity':'0',
-			'-webkit-transform':'scale(0.95)',
-			'transition':'opacity 0.5s, transform 0.5s'
-		});
-		setTimeout(function(){
-			$('#accountDetails .divNewAddressWrapper').css({
-				'opacity':'0',
-				'-webkit-transform':'scale(0.95)',
-				'display':'block'
-			});
-			setTimeout(function(){
-				$('#accountDetails .divNewAddressWrapper').css({
-				'opacity':'1',
-				'-webkit-transform':'scale(1)',
-				'transition':'opacity 0.5s, transform 0.5s'
+		//YENİ TESLİMAT ADRESİ DURUMU
+			function addNewDeliveryAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper .aNewAddress').click(function(e){
+					e.preventDefault();
+					//YENİ TESLİMAT ADRESİ AKTİF DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','none');
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','block');
 				});
-			},55);
-		},505);
-	});
+			}
 
-	$('#accountDetails .divNewAddressWrapper a.contShopping').click(function(e){
-		e.preventDefault();
-		$('#accountDetails .divNewAddressWrapper').css({
-			'opacity':'0',
-			'-webkit-transform':'scale(0.95)',
-			'transition':'opacity 0.5s, transform 0.5s'
-		});
-		setTimeout(function(){
-			$('#accountDetails .addressSelections').css({
-				'opacity':'0',
-				'-webkit-transform':'scale(0.95)',
-				'display':'block'
-			});
-
-			$('#accountDetails .divNewAddressWrapper').css({
-				'display':'none'
-			});
-			setTimeout(function(){
-				$('#accountDetails .addressSelections').css({
-				'opacity':'1',
-				'-webkit-transform':'scale(1)',
-				'transition':'opacity 0.8s, transform 0.8s'
+			function saveNewDeliveryAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress .saveAddingNewAddress').click(function(e){
+					e.preventDefault();
+					//YENİ TESLİMAT ADRESİ KAYDET DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','none');
 				});
-			},55);
-		},505);
-	})
+			}
 
-}
+			function cancelNewDeliveryAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress a.contShopping').click(function(e){
+					e.preventDefault();
+					//YENİ TESLİMAT ADRESİ İPTAL DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','none');
+				});
+			}
+		//
 
-// ÖZKAN BUNLAR YERİNE YUKARIDAKİ FONKSİYONLARI KULLANABİLİRSİN,
-// GEREKLİ YERLERİ AÇTIM, İSTERSEN BENİ ARAYABİLİRSİN
+		//TESLİMAT ADRESİ DÜZENLEME DURUMU
+			function editNewDeliveryAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper .divAddressOption a.edit').click(function(e){
+					e.preventDefault();
+					//TESLİMAT ADRESİ DÜZENLEME AKTİF DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','none');
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','block');
+				});
+			}
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// function showUpdateAdressForm() {
-// 	$('#accountDetails .divNewAddressWrapper input, #accountDetails .divNewAddressWrapper select, #accountDetails .divNewAddressWrapper textarea').val('');
-//     $('#accountDetails .addressSelections').css({
-//         'opacity': '0',
-//         '-webkit-transform': 'scale(0.95)',
-//         'transition': 'opacity 0.5s, transform 0.5s'
-//     });
-//     setTimeout(function () {
-//         $('#accountDetails .divNewAddressWrapper').css({
-//             'opacity': '0',
-//             '-webkit-transform': 'scale(0.95)',
-//             'display': 'block'
-//         });
-//         setTimeout(function () {
-//             $('#accountDetails .divNewAddressWrapper').css({
-//                 'opacity': '1',
-//                 '-webkit-transform': 'scale(1)',
-//                 'transition': 'opacity 0.5s, transform 0.5s'
-//             });
-//         }, 55);
-//     }, 505);
-// }
+			function saveEditedDeliveryAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress .saveAddingNewAddress').click(function(e){
+					e.preventDefault();
+					//TESLİMAT ADRESİ DÜZENLEME KAYDET DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','none');
+				});
+			}
 
-// function backButton() {
-//     $('#accountDetails .divNewAddressWrapper').css({
-//         'opacity': '0',
-//         '-webkit-transform': 'scale(0.95)',
-//         'transition': 'opacity 0.5s, transform 0.5s'
-//     });
-//     setTimeout(function () {
-//         $('#accountDetails .addressSelections').css({
-//             'opacity': '0',
-//             '-webkit-transform': 'scale(0.95)',
-//             'display': 'block'
-//         });
+			function cancelEditedDeliveryAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress a.contShopping').click(function(e){
+					e.preventDefault();
+					//TESLİMAT ADRESİ DÜZENLEME İPTAL DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress').css('display','none');
+				});
+			}
+		//
 
-//         $('#accountDetails .divNewAddressWrapper').css({
-//             'display': 'none'
-//         });
-//         setTimeout(function () {
-//             $('#accountDetails .addressSelections').css({
-//                 'opacity': '1',
-//                 '-webkit-transform': 'scale(1)',
-//                 'transition': 'opacity 0.8s, transform 0.8s'
-//             });
-//         }, 55);
-//     }, 505);
-// }
+	//
+
+	//FATURA ADRESİ SEKMESİ
+
+		//YENİ FATURA ADRESİ DURUMU
+			function addNewBillingAddress(){
+				$('.wholeAddressesWrapper .billingAddressesWrapper .aNewAddress').click(function(e){
+					e.preventDefault();
+					//YENİ FATURA ADRESİ AKTİF DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','none');
+					$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','block');
+				});
+			}
+
+			function saveNewBillingAddress(){
+				$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress .saveAddingNewAddress').click(function(e){
+					e.preventDefault();
+					//YENİ FATURA ADRESİ KAYDET DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','none');
+				});
+			}
+
+			function cancelNewBillingAddress(){
+				$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress a.contShopping').click(function(e){
+					e.preventDefault();
+					//YENİ FATURA ADRESİ İPTAL DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','none');
+				});
+			}
+		//
+
+		//FATURA ADRESİ DÜZENLEME DURUMU
+			function editNewBillingAddress(){
+				$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper .divAddressOption a.edit').click(function(e){
+					e.preventDefault();
+					//FATURA ADRESİ DÜZENLEME AKTİF DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','none');
+					$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','block');
+				});
+			}
+
+			function saveEditedBillingAddress(){
+				$('.wholeAddressesWrapper .deliveryAddressesWrapper #newDeliveryAddress .saveAddingNewAddress').click(function(e){
+					e.preventDefault();
+					//FATURA ADRESİ DÜZENLEME KAYDET DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','none');
+				});
+			}
+
+			function cancelEditedBillingAddress(){
+				$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress a.contShopping').click(function(e){
+					e.preventDefault();
+					//FATURA ADRESİ DÜZENLEME İPTAL DURUMUNDAKİ FONKSİYON BURAYA GELİYOR
+					$('.wholeAddressesWrapper .billingAddressesWrapper .divAddressOptionsWrapper').css('display','block');
+					$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress').css('display','none');
+				});
+			}
+		//
+
+		//FATURA ADRESİ BİREYSEL KURUMSAL GEÇİŞİ
+			function switchCorporateOrPersonalBilling() {
+				$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress input[name="personalOrCorporate"]').change(function(){
+					if($('#corporateRadio').is(':checked')) {
+						$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress .divCorporateOptionInput').css('display','block');
+						$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress .divPersonalOptionInput').css('display','none');
+					}
+					else {
+						$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress .divPersonalOptionInput').css('display','block');
+						$('.wholeAddressesWrapper .billingAddressesWrapper #newBillingAddress .divCorporateOptionInput').css('display','none');
+					}
+				});
+			}
+
+	//
+
+//

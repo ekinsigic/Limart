@@ -341,10 +341,13 @@
         <section id="menuActiveOverlay"></section>
 
 
-        <a id="aMainAccountMenuOpener" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
+
+        <a id="aMainAccountMenuOpener" class="SSTAStyleK" href="javascript:void(0)" onclick="openOrCloseAccountMainMenu();">
             <span class="spanDot"></span>
             <span class="spanDot"></span>
             <span class="spanDot"></span>
+
+            <span class="spanMenu">MENU</span>
 
             <div class="separator"></div>
         </a>
@@ -416,56 +419,6 @@
                     </p>
 
 
-
-                    <!-- NEW ADDRESS -->
-                    <div class="divNewAddressWrapper">
-                        <h2 class="SSTFaceII">Yeni Adres Ekleme</h2>
-                        <p class="SSTFaceX pDescription">
-                            Yeni adres eklemek için aşağıdaki formu doldurun.
-                        </p>
-
-                        <!-- Add new delivery address form starts here -->
-                        <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
-                        <select class="SSTSelectB v2">
-                            <option>ÜLKE</option>
-                            <option>ÜLKE</option>
-                        </select>
-                        <select class="SSTSelectB v1">
-                            <option>İL</option>
-                            <option>İL</option>
-                        </select>
-                        <select class="SSTSelectB v2">
-                            <option>İLÇE</option>
-                            <option>İLÇE</option>
-                        </select>
-                        <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
-                        <input type="text" class="SSTInputTextD v1" placeholder="POSTA KODU" />
-                        <input type="text" class="SSTInputTextD v2" placeholder="TELEFON" />
-                        <!-- BURASI YALNIZCA KURUMSAL FATURALARDA GELECEK -->
-                        <div class="personalOrCorporate">
-                            <label for="personalRadio" class="SSTFaceX"><input id="personalRadio" class="radioTypeA" name="personalOrCorporate" type="radio" checked />Bireysel</label>
-                            <label for="corporateRadio" class="SSTFaceX"><input id="corporateRadio" class="radioTypeA" name="personalOrCorporate" type="radio" />Kurumsal</label>
-                        </div>
-                        <div class="divPersonalOptionInput">
-                            <input type="text" class="SSTInputTextD v1" placeholder="TCKN" />
-                        </div>
-                        <div class="divCorporateOptionInput">
-                            <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
-                            <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
-                        </div>
-                        <!-- BURASI YALNIZCA KURUMSAL FATURALARDA GELECEK -->
-
-
-                        <div class="separator" style="height:10px;"></div>
-                        <a href="#" class="aStyleE contShopping">
-                            <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
-                        </a>
-                        <input type="submit" class="SSTButtonA saveAddingNewAddress" value="YENİ ADRESİ KAYDET">
-                        <div class="separator"></div>
-                        <!-- Add new delivery address form ends here -->
-                    </div>
-                    <!-- END - NEW ADDRESS -->
-
                     <div class="addressSelections">
                         <!-- TABBER -->
                         <div class="divTabber">
@@ -480,12 +433,14 @@
                             <!-- DELIVERY ADDRESS -->
                             <div class="deliveryAddressesWrapper">
 
-                                <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Teslimat Adresi Ekle</a>
-
-                                <div class="separator"></div>
 
                                 <!-- ADDRESS OPTION -->
                                 <div class="divAddressOptionsWrapper">
+
+
+                                    <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Teslimat Adresi Ekle</a>
+
+                                    <div class="separator"></div>
 
                                     <div class="divAddressOption active">
                                         <label for="sampleA" class="SSTLabelB">Ev Adresi</label>
@@ -564,17 +519,52 @@
                                 </div>
                                 <!-- END - ADDRESS OPTION -->
 
+                                <!-- NEW DELIVERY ADDRESS -->
+                                <div class="divNewAddressWrapper" id="newDeliveryAddress">
+                                    <h2 class="SSTFaceLL">Yeni Teslimat Adresi</h2>
+                                    <p class="SSTFaceX pDescription">
+                                        Yeni teslimat adresi eklemek için aşağıdaki formu doldurun.
+                                    </p>
+
+                                    <!-- Add new delivery address form starts here -->
+                                    <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
+                                    <select class="SSTSelectB v2">
+                                        <option>ÜLKE</option>
+                                        <option>ÜLKE</option>
+                                    </select>
+                                    <select class="SSTSelectB v1">
+                                        <option>İL</option>
+                                        <option>İL</option>
+                                    </select>
+                                    <select class="SSTSelectB v2">
+                                        <option>İLÇE</option>
+                                        <option>İLÇE</option>
+                                    </select>
+                                    <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
+                                    <input type="text" class="SSTInputTextD v1" placeholder="POSTA KODU" />
+                                    <input type="text" class="SSTInputTextD v2" placeholder="TELEFON" />
+
+
+                                    <div class="separator" style="height:10px;"></div>
+                                    <a href="#" class="aStyleE contShopping">
+                                        <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
+                                    </a>
+                                    <input type="submit" class="SSTButtonA saveAddingNewAddress" value="KAYDET">
+                                    <div class="separator"></div>
+                                    <!-- Add new delivery address form ends here -->
+                                </div>
+                                <!-- END - NEW DELIVERY ADDRESS -->
                             </div>
                             <!-- END - DELIVERY ADDRESS -->
                             <!-- BILLING ADDRESS -->
                             <div class="billingAddressesWrapper">
 
-                                <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Fatura Adresi Ekle</a>
-
-                                <div class="separator"></div>
-
                                 <!-- ADDRESS OPTION -->
                                 <div class="divAddressOptionsWrapper">
+
+                                    <a href="#" data-selection="1" class="SSTAStyleH aNewAddress">Yeni Fatura Adresi Ekle</a>
+
+                                    <div class="separator"></div>
 
                                     <div class="divAddressOption active">
                                         <label for="sampleA" class="SSTLabelB">Ev Adresi</label>
@@ -652,6 +642,58 @@
 
                                 </div>
                                 <!-- END - ADDRESS OPTION -->
+
+
+                                <!-- NEW BILLING ADDRESS -->
+                                <div class="divNewAddressWrapper" id="newBillingAddress">
+                                    <h2 class="SSTFaceLL">Yeni Fatura Adresi</h2>
+                                    <p class="SSTFaceX pDescription">
+                                        Yeni fatura adresi eklemek için aşağıdaki formu doldurun.
+                                    </p>
+
+                                    <!-- Add new delivery address form starts here -->
+                                    <input type="text" class="SSTInputTextD v1" placeholder="AD,SOYAD" />
+                                    <select class="SSTSelectB v2">
+                                        <option>ÜLKE</option>
+                                        <option>ÜLKE</option>
+                                    </select>
+                                    <select class="SSTSelectB v1">
+                                        <option>İL</option>
+                                        <option>İL</option>
+                                    </select>
+                                    <select class="SSTSelectB v2">
+                                        <option>İLÇE</option>
+                                        <option>İLÇE</option>
+                                    </select>
+                                    <textarea class="SSTTextareaStyleA" placeholder="ADRES"></textarea>
+                                    <input type="text" class="SSTInputTextD v1" placeholder="POSTA KODU" />
+                                    <input type="text" class="SSTInputTextD v2" placeholder="TELEFON" />
+                                    <!-- BURASI YALNIZCA KURUMSAL FATURALARDA GELECEK -->
+                                    <div class="personalOrCorporate">
+                                        <label for="personalRadio" class="SSTFaceX"><input id="personalRadio" class="radioTypeA" name="personalOrCorporate" type="radio" checked />Bireysel</label>
+                                        <label for="corporateRadio" class="SSTFaceX"><input id="corporateRadio" class="radioTypeA" name="personalOrCorporate" type="radio" />Kurumsal</label>
+                                    </div>
+                                    <div class="divPersonalOptionInput" style="display:block">
+                                        <input type="text" class="SSTInputTextD v1" placeholder="TCKN" />
+                                    </div>
+                                    <div class="divCorporateOptionInput">
+                                        <input type="text" class="SSTInputTextD v1" placeholder="VERGİ DAİRESİ" />
+                                        <input type="text" class="SSTInputTextD v2" placeholder="VERGİ NUMARASI" />
+                                    </div>
+                                    <!-- BURASI YALNIZCA KURUMSAL FATURALARDA GELECEK -->
+
+
+                                    <div class="separator" style="height:10px;"></div>
+                                    <a href="#" class="aStyleE contShopping">
+                                        <img data-sixtythree="arrow-previous"><span>GERİ DÖN</span>
+                                    </a>
+                                    <input type="submit" class="SSTButtonA saveAddingNewAddress" value="KAYDET">
+                                    <div class="separator"></div>
+                                    <!-- Add new delivery address form ends here -->
+                                </div>
+                                <!-- END - NEW BILLING ADDRESS -->
+
+
                             </div>
                             <!-- END - BILLING ADDRESS -->
 

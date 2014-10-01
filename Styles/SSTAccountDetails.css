@@ -191,7 +191,6 @@
 
 /* address action styles */
 
-#accountDetails .divDetail.address .wholeAddressesWrapper .deliveryAddressesWrapper,
 #accountDetails .divDetail.address .wholeAddressesWrapper .billingAddressesWrapper{
     display: none;
 }
@@ -234,7 +233,7 @@
 #accountDetails .divDetail.address .aNewAddress {
     display: inline-block;
     margin-bottom: 30px;
-    margin-left: 0px;
+    margin-left: 21px;
     width: 210px;
     text-decoration: underline;
 }
@@ -270,7 +269,7 @@
 
 #accountDetails .divDetail.address .divAddressOption h4.name {
     display: inline-block;
-    margin: 10px 0 0 30px;
+    margin: 10px 0 0 5px;
 }
 
 #accountDetails .divDetail.address .divAddressOption .aNumber {
@@ -283,7 +282,7 @@
 }
 
 #accountDetails .divDetail.address .divAddressOption p {
-    margin: 15px 0 0 31px;
+    margin: 15px 0 0 5px;
     width: 200px;
     line-height: 15px;
 }
@@ -311,10 +310,14 @@
         margin-top: 0px;
         width: calc(50% - 5px);
     }
+    
+    #accountDetails .divNewAddressWrapper h2 {
+        margin: -20px 0 -10px 15px;
+    }
 
     #accountDetails .divNewAddressWrapper .pDescription {
         width: 350px;
-        margin: 20px 0 10px 0;
+        margin: 20px 0 20px 15px;
     }
 
     #accountDetails .divNewAddressWrapper textarea {
@@ -329,12 +332,13 @@
         width: 100px !important;
         left: 5px;
         float: left;
-        top: 12px;
+        top: 32px;
     }
 
         #accountDetails .divNewAddressWrapper a.contShopping span {
             line-height: 20px;
-        }
+        
+}
 
         #accountDetails .divNewAddressWrapper a.contShopping img {
             margin-top: 13px;
@@ -353,8 +357,8 @@
 
     #accountDetails .divNewAddressWrapper .saveAddingNewAddress {
         float: right;
-        margin-top: 10px;
-        width: 200px;
+        margin-top: 30px;
+        width: 120px;
     }
 /* END - YENİ ADRES EKLEME FORMU */
 
@@ -870,10 +874,15 @@
         height: 38px;
         padding: 0 0 16px 0;
         background-color: rgba(255,255,255,0.9);
-    }
+    
+        transition: background-color 0.3s;
+        transition-delay: 0.3s;
+}
 
         #aMainAccountMenuOpener.activeMenu {
             background-color: rgba(255,255,255,0);
+            transition: background-color 0s;
+            transition-delay: 0s;
         }
 
 
@@ -1054,8 +1063,8 @@
         }
 
         #accountDetails .divNewAddressWrapper .saveAddingNewAddress {
-            width: 100%;
-            margin-top: 50px;
+            width: 25%;
+            margin-top: 33px;
         }
     /* end - address */
 
